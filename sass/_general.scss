@@ -1,0 +1,8 @@
+
+/**
+* if set to device-width ie10 built-in scrollbar overflows content. Fix it as of here
+* http://stackoverflow.com/questions/17045132/scrollbar-overlay-in-ie10-how-do-you-stop-that-might-be-bootstrap
+*/
+@-ms-viewport{
+  width: auto;
+}

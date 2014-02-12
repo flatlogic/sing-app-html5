@@ -1,0 +1,11 @@
+a{
+  @include transition(color .2s ease-out);
+}
+
+.btn{
+  @include transition(background-color .2s ease-out);
+}
+
+.form-control{
+  @include transition(border-color .2s ease-out);
+}
