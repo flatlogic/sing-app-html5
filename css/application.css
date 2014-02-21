@@ -9886,56 +9886,74 @@ a {
 /* line 57, D:/projects/sing/sass/_base.scss */
 .sidebar-nav {
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 14px;
 }
-/* line 61, D:/projects/sing/sass/_base.scss */
+@media (min-width: 992px) and (min-height: 670px) {
+  /* line 57, D:/projects/sing/sass/_base.scss */
+  .sidebar-nav {
+    font-size: 16px;
+  }
+}
+/* line 64, D:/projects/sing/sass/_base.scss */
 .sidebar-nav li a {
   display: block;
   color: #aaaaaa;
   text-decoration: none;
 }
-/* line 65, D:/projects/sing/sass/_base.scss */
+/* line 68, D:/projects/sing/sass/_base.scss */
 .sidebar-nav li a:hover {
   background-color: #111111;
 }
-/* line 70, D:/projects/sing/sass/_base.scss */
+/* line 73, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li > a {
   position: relative;
   border-top: 1px solid #2d2d2d;
-  line-height: 44px;
   padding-left: 50px;
+  line-height: 35px;
 }
-/* line 76, D:/projects/sing/sass/_base.scss */
+@media (min-width: 992px) and (min-height: 670px) {
+  /* line 73, D:/projects/sing/sass/_base.scss */
+  .sidebar-nav > li > a {
+    line-height: 44px;
+  }
+}
+/* line 83, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li > a .icon {
   display: block;
   position: absolute;
-  top: 8px;
+  top: 3px;
   left: 11px;
   width: 28px;
   height: 28px;
   line-height: 28px;
   text-align: center;
 }
-/* line 87, D:/projects/sing/sass/_base.scss */
+@media (min-width: 992px) and (min-height: 670px) {
+  /* line 83, D:/projects/sing/sass/_base.scss */
+  .sidebar-nav > li > a .icon {
+    top: 8px;
+  }
+}
+/* line 98, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li > a .fa {
   font-size: 16px;
   vertical-align: middle;
   color: rgba(170, 170, 170, 0.7);
 }
-/* line 94, D:/projects/sing/sass/_base.scss */
+/* line 105, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li:last-child > a {
   border-bottom: 1px solid #2d2d2d;
 }
-/* line 98, D:/projects/sing/sass/_base.scss */
+/* line 109, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a {
   color: #e3bc28;
 }
-/* line 101, D:/projects/sing/sass/_base.scss */
+/* line 112, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a .icon {
   border-radius: 50%;
   background-color: #e3bc28;
 }
-/* line 105, D:/projects/sing/sass/_base.scss */
+/* line 116, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a .icon .fa {
   color: #242424;
 }

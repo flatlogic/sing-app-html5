@@ -56,7 +56,10 @@
 
 .sidebar-nav{
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 14px;
+  @media (min-width: $screen-md) and (min-height: 670px){
+    font-size: 16px;
+  }
 
   li a{
     display: block;
@@ -70,18 +73,26 @@
   > li > a{
     position: relative;
     border-top: 1px solid $sidebar-item-border-color;
-    line-height: 44px;
     padding-left: 50px;
+    line-height: 35px;
+
+    @media (min-width: $screen-md) and (min-height: 670px){
+      line-height: 44px;
+    }
 
     .icon{
       display: block;
       position: absolute;
-      top: 8px;
+      top: 3px;
       left: 11px;
       width: 28px;
       height: 28px;
       line-height: 28px;
       text-align: center;
+
+      @media (min-width: $screen-md) and (min-height: 670px){
+        top: 8px;
+      }
     }
 
     .fa{
