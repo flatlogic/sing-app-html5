@@ -33,33 +33,40 @@
         </li>
     </ul>
 </nav>
-<!--<nav class="controls navbar navbar-default">-->
-    <!--<div class="container-fluid">-->
-        <!--<ul class="nav navbar-nav navbar-right">-->
-            <!--<li><a href="#">Settings</a></li>-->
-            <!--<li class="dropdown">-->
-                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>-->
-                <!--<ul class="dropdown-menu" role="menu">-->
-                    <!--<li><a href="#">Action</a></li>-->
-                    <!--<li><a href="#">Another action</a></li>-->
-                    <!--<li><a href="#">Something else here</a></li>-->
-                    <!--<li class="divider"></li>-->
-                    <!--<li><a href="#">Separated link</a></li>-->
-                <!--</ul>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</div>-->
-<!--</nav>-->
-<main class="content" role="main">
-    <h1>DASHBOARD</h1>
+<nav class="controls navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Settings</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<main id="content" class="content" role="main">
+    <h1>Я нарадзіўся тут</h1>
 </main>
 
 <!-- common libraries -->
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/jquery-pjax/jquery.pjax.js"></script>
+<script src="vendor/underscore/underscore.js"></script>
 
 <!-- app common js -->
 <script src="js/settings.js"></script>
 <script src="js/app.js"></script>
+
+<script id="loader-template" type="text/template">
+    <div class="loader-wrap">
+        <i class="fa fa-spinner fa-spin"></i>
+    </div>
+</script>
 </body>
 </html>

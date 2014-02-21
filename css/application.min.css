@@ -5006,7 +5006,7 @@ input[type="button"].btn-block {
 /* line 11, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar {
   position: relative;
-  min-height: 40px;
+  min-height: 50px;
   margin-bottom: 0;
   border: 1px solid transparent;
 }
@@ -5153,10 +5153,10 @@ input[type="button"].btn-block {
 /* line 153, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 10px 15px;
+  padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 40px;
+  height: 50px;
 }
 /* line 161, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand:hover, .navbar-brand:focus {
@@ -5175,8 +5175,8 @@ input[type="button"].btn-block {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -5206,7 +5206,7 @@ input[type="button"].btn-block {
 
 /* line 218, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 5px -15px;
+  margin: 7.5px -15px;
 }
 /* line 221, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav > li > a {
@@ -5251,8 +5251,8 @@ input[type="button"].btn-block {
   }
   /* line 258, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   /* line 264, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav.navbar-right:last-child {
@@ -5280,8 +5280,8 @@ input[type="button"].btn-block {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 @media (max-width: 767px) {
   /* line 304, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5322,24 +5322,24 @@ input[type="button"].btn-block {
 
 /* line 348, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 /* line 351, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 /* line 354, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-  margin-top: 9px;
-  margin-bottom: 9px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 /* line 364, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   /* line 364, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5356,39 +5356,39 @@ input[type="button"].btn-block {
 
 /* line 383, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default {
-  background-color: #242424;
-  border-color: #131313;
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
 }
 /* line 387, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand {
-  color: #aaaaaa;
+  color: #777777;
 }
 /* line 390, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #909090;
+  color: #5e5e5e;
   background-color: transparent;
 }
 /* line 396, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-text {
-  color: #aaaaaa;
+  color: #777777;
 }
 /* line 401, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a {
-  color: #aaaaaa;
+  color: #777777;
 }
 /* line 405, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #aaaaaa;
+  color: #333333;
   background-color: transparent;
 }
 /* line 413, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #aaaaaa;
-  background-color: #131313;
+  color: #555555;
+  background-color: #e7e7e7;
 }
 /* line 421, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #909090;
+  color: #cccccc;
   background-color: transparent;
 }
 /* line 428, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
@@ -5406,41 +5406,41 @@ input[type="button"].btn-block {
 /* line 440, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #131313;
+  border-color: #e7e7e7;
 }
 /* line 450, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #131313;
-  color: #aaaaaa;
+  background-color: #e7e7e7;
+  color: #555555;
 }
 @media (max-width: 767px) {
   /* line 459, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #aaaaaa;
+    color: #777777;
   }
   /* line 462, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #aaaaaa;
+    color: #333333;
     background-color: transparent;
   }
   /* line 470, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #aaaaaa;
-    background-color: #131313;
+    color: #555555;
+    background-color: #e7e7e7;
   }
   /* line 478, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #909090;
+    color: #cccccc;
     background-color: transparent;
   }
 }
 /* line 492, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link {
-  color: #aaaaaa;
+  color: #777777;
 }
 /* line 494, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link:hover {
-  color: #aaaaaa;
+  color: #333333;
 }
 
 /* line 503, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
@@ -9799,6 +9799,12 @@ html, body {
 /* line 14, D:/projects/sing/sass/_general.scss */
 body {
   font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* line 19, D:/projects/sing/sass/_general.scss */
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
 }
 
 /* line 1, D:/projects/sing/sass/_global-transitions.scss */
@@ -9836,15 +9842,6 @@ a {
 /* line 15, D:/projects/sing/sass/_base.scss */
 .controls, .content {
   margin-left: 50px;
-}
-
-/* line 19, D:/projects/sing/sass/_base.scss */
-.content {
-  position: relative;
-  z-index: 2;
-  min-height: 100%;
-  padding: 40px;
-  background-color: white;
   -webkit-transform: translate(150px, 0);
   -ms-transform: translate(150px, 0);
   transform: translate(150px, 0);
@@ -9853,19 +9850,36 @@ a {
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
-/* line 31, D:/projects/sing/sass/_base.scss */
-.nav-collapsed .content {
+/* line 24, D:/projects/sing/sass/_base.scss */
+.nav-collapsed .controls, .nav-collapsed .content {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
+/* line 29, D:/projects/sing/sass/_base.scss */
+.controls {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+
 /* line 36, D:/projects/sing/sass/_base.scss */
+.content {
+  position: relative;
+  z-index: 0;
+  min-height: 100%;
+  padding: 90px 40px 40px;
+  background-color: white;
+}
+
+/* line 44, D:/projects/sing/sass/_base.scss */
 .logo {
   margin: 10px 0 20px;
-  height: 40px;
+  height: 50px;
   width: 100%;
-  line-height: 40px;
+  line-height: 50px;
   text-align: center;
   vertical-align: middle;
   font-weight: 700;
@@ -9873,38 +9887,38 @@ a {
   -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
-/* line 47, D:/projects/sing/sass/_base.scss */
+/* line 55, D:/projects/sing/sass/_base.scss */
 .logo a {
   color: white;
   text-decoration: none;
 }
-/* line 52, D:/projects/sing/sass/_base.scss */
+/* line 60, D:/projects/sing/sass/_base.scss */
 .nav-collapsed .logo {
   width: 50px;
 }
 
-/* line 57, D:/projects/sing/sass/_base.scss */
+/* line 65, D:/projects/sing/sass/_base.scss */
 .sidebar-nav {
   padding: 10px 0;
   font-size: 14px;
 }
 @media (min-width: 992px) and (min-height: 670px) {
-  /* line 57, D:/projects/sing/sass/_base.scss */
+  /* line 65, D:/projects/sing/sass/_base.scss */
   .sidebar-nav {
     font-size: 16px;
   }
 }
-/* line 64, D:/projects/sing/sass/_base.scss */
+/* line 72, D:/projects/sing/sass/_base.scss */
 .sidebar-nav li a {
   display: block;
   color: #aaaaaa;
   text-decoration: none;
 }
-/* line 68, D:/projects/sing/sass/_base.scss */
+/* line 76, D:/projects/sing/sass/_base.scss */
 .sidebar-nav li a:hover {
   background-color: #111111;
 }
-/* line 73, D:/projects/sing/sass/_base.scss */
+/* line 81, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li > a {
   position: relative;
   border-top: 1px solid #2d2d2d;
@@ -9912,12 +9926,12 @@ a {
   line-height: 35px;
 }
 @media (min-width: 992px) and (min-height: 670px) {
-  /* line 73, D:/projects/sing/sass/_base.scss */
+  /* line 81, D:/projects/sing/sass/_base.scss */
   .sidebar-nav > li > a {
     line-height: 44px;
   }
 }
-/* line 83, D:/projects/sing/sass/_base.scss */
+/* line 91, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li > a .icon {
   display: block;
   position: absolute;
@@ -9929,33 +9943,52 @@ a {
   text-align: center;
 }
 @media (min-width: 992px) and (min-height: 670px) {
-  /* line 83, D:/projects/sing/sass/_base.scss */
+  /* line 91, D:/projects/sing/sass/_base.scss */
   .sidebar-nav > li > a .icon {
     top: 8px;
   }
 }
-/* line 98, D:/projects/sing/sass/_base.scss */
+/* line 106, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li > a .fa {
   font-size: 16px;
   vertical-align: middle;
   color: rgba(170, 170, 170, 0.7);
 }
-/* line 105, D:/projects/sing/sass/_base.scss */
+/* line 113, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li:last-child > a {
   border-bottom: 1px solid #2d2d2d;
 }
-/* line 109, D:/projects/sing/sass/_base.scss */
+/* line 117, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a {
   color: #e3bc28;
 }
-/* line 112, D:/projects/sing/sass/_base.scss */
+/* line 120, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a .icon {
   border-radius: 50%;
   background-color: #e3bc28;
 }
-/* line 116, D:/projects/sing/sass/_base.scss */
+/* line 124, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a .icon .fa {
   color: #242424;
+}
+
+/* line 131, D:/projects/sing/sass/_base.scss */
+.loader-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+}
+/* line 139, D:/projects/sing/sass/_base.scss */
+.loader-wrap .fa {
+  position: absolute;
+  top: 50%;
+  line-height: 30px;
+  margin-top: -15px;
+  font-size: 20px;
+  vertical-align: middle;
 }
 
 /***********************************/

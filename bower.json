@@ -12,7 +12,8 @@
         "jquery-pjax": "latest",
         "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git",
         "font-awesome": ">= 4.0.3",
-        "animate.css": ">= 3.0.0"
+        "animate.css": ">= 3.0.0",
+        "backbone": ">= 1.1.2"
     },
     "private": true,
     "ignore": [

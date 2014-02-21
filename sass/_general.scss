@@ -13,4 +13,9 @@ html, body{
 
 body{
   font-weight: $font-weight-base;
+  overflow-x: hidden;
+}
+
+#{headings(1,5)}{
+  text-transform: uppercase;
 }

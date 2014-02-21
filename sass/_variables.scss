@@ -45,17 +45,8 @@ $headings-font-weight: 300;
 //== Navbar
 //
 
-$navbar-height:                    40px;
 $navbar-margin-bottom:             0;
 $navbar-border-radius:             0;
-
-$navbar-default-color:             $sidebar-color !default;
-$navbar-default-bg: $sidebar-bg-color !default;
-$navbar-default-link-color:        $navbar-default-color !default;
-$navbar-default-link-hover-color:          fade-in($navbar-default-color, 1);
-$navbar-default-link-active-color:         fade-in($navbar-default-color, .9);
-$navbar-default-link-disabled-color:       darken($navbar-default-color, 10%);
-
 
 //-- Iconography
 //
