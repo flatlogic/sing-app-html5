@@ -3,9 +3,10 @@
 @import "variables";
 
 @import "compass";
-@import "lib/bootstrap/bootstrap";
-@import "lib/font-awesome/font-awesome";
-@import "lib/animate/animate";
+
+@import "../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap";
+@import "../vendor/font-awesome/scss/font-awesome";
+@import "../vendor/animate.css/animate.css";
 
 @import "bootstrap-override";
 

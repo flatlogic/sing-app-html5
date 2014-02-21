@@ -1,0 +1,110 @@
+/***********************/
+/*        Layout       */
+/***********************/
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: $sidebar-width;
+  background-color: $sidebar-bg-color;
+  color: $sidebar-color;
+}
+
+.controls, .content{
+  margin-left: $sidebar-icon-state-width;
+}
+
+.content{
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+  padding: 20px;
+  background-color: $body-bg;
+  @include translate(150px, 0);
+  -ms-transition: -ms-transform 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+
+  .nav-collapsed &{
+    @include translate(0, 0);
+  }
+}
+
+.logo{
+  margin: 10px 0 20px;
+  height: $navbar-height;
+  width: 100%;
+  line-height: $navbar-height;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-large;
+
+  @include transition(width .3s ease-in-out);
+  a{
+    color: $white;
+    text-decoration: none;
+  }
+
+  .nav-collapsed &{
+    width: $sidebar-icon-state-width;
+  }
+}
+
+.sidebar-nav{
+  padding: 10px 0;
+  font-size: 16px;
+
+  li a{
+    display: block;
+    color: $sidebar-color;
+    text-decoration: none;
+    &:hover{
+      background-color: $sidebar-item-hover-bg-color;
+    }
+  }
+
+  > li > a{
+    position: relative;
+    border-top: 1px solid $sidebar-item-border-color;
+    line-height: 44px;
+    padding-left: 50px;
+
+    .icon{
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: 11px;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+    }
+
+    .fa{
+      font-size: 16px;
+      vertical-align: middle;
+      color: rgba($sidebar-color, .7);
+    }
+  }
+
+  > li:last-child > a{
+    border-bottom: 1px solid $sidebar-item-border-color;
+  }
+
+  > .active > a{
+    color: $sidebar-item-active-color;
+
+    .icon{
+      border-radius: 50%;
+      background-color: $sidebar-item-active-color;
+
+      .fa{
+        color: $sidebar-bg-color;
+      }
+    }
+  }
+}

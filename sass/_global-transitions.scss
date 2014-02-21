@@ -1,5 +1,5 @@
 a{
-  @include transition(color .2s ease-out);
+  @include transition(all .15s ease-in-out);
 }
 
 .btn{

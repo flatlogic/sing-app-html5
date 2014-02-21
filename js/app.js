@@ -1,15 +1,31 @@
 $(function(){
-    function changeSidebarState(iconsState){
-        if (iconsState){
-            $('body').addClass('sidebar-state-icons')
-        } else {
-            $('body').removeClass('sidebar-state-icons')
+    var SingAppView = function(){
+        this.navCollapseTimeout = 1000;
+        this.$sidebar = $('#sidebar');
+        this.settings = window.SingSettings;
+
+        this.$sidebar.on('mouseover', $.proxy(this.expandNavigation, this));
+        this.$sidebar.on('mouseout', $.proxy(this.collapseNavigation, this));
+
+        this.checkNavigationState();
+    };
+
+    SingAppView.prototype.checkNavigationState = function(){
+        if (this.settings.get('nav-collapsed') === true){
+            var view = this;
+            setTimeout(function(){
+                view.collapseNavigation();
+            }, this.navCollapseTimeout);
         }
-    }
+    };
 
-    $('#sidebar-state-toggle').click(function(){
-        NextOneApp.toggleSidebarState(changeSidebarState);
-    });
+    SingAppView.prototype.collapseNavigation = function(){
+        $('body').addClass('nav-collapsed');
+    };
 
-    changeSidebarState(NextOneApp.isSidebarIconsState());
+    SingAppView.prototype.expandNavigation = function(){
+        $('body').removeClass('nav-collapsed');
+    };
+
+    window.SingApp = new SingAppView();
 });

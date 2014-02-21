@@ -1,27 +1,23 @@
 $(function(){
-    var NextOne = function(){
+    var SingSettingsBundle = function(){
         var defaultSettings =  {
-            sidebarState: 'auto'
+            'nav-collapsed': true
         };
-        this.settingName = 'next-one-settings';
-        this.settings = JSON.parse(localStorage.getItem(this.settingName)) || defaultSettings;
+        this.settingName = 'sing-app-settings';
+        this._settings = JSON.parse(localStorage.getItem(this.settingName)) || defaultSettings;
     };
 
-    NextOne.prototype.save = function(){
-        localStorage.setItem(this.settingName, JSON.stringify(this.settings));
+    SingSettingsBundle.prototype.save = function(){
+        localStorage.setItem(this.settingName, JSON.stringify(this._settings));
     };
 
-    NextOne.prototype.toggleSidebarState = function(callback){
-        this.settings.sidebarState = this.settings.sidebarState == 'icons' ? 'auto' : 'icons'; //new state
-        this.save();
-        if (callback){
-            callback(this.isSidebarIconsState());
-        }
+    SingSettingsBundle.prototype.get = function(key){
+        return this._settings[key];
     };
 
-    NextOne.prototype.isSidebarIconsState = function(){
-        return this.settings.sidebarState == 'icons'
+    SingSettingsBundle.prototype.set = function(key, value){
+        this._settings[key] = value;
     };
 
-    window.NextOneApp = new NextOne();
+    window.SingSettings = new SingSettingsBundle();
 });

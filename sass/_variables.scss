@@ -1,23 +1,67 @@
-// Template variables
+// Sing variables
 // -------------------------
+// -------------------------
+
+// Colors
+// ------------------------
+
+$white: #fff;
+
+
+$sidebar-bg-color: #242424;
+$sidebar-color: #aaa;
+$sidebar-item-border-color: #2d2d2d;
+$sidebar-item-active-color: #E3BC28;
+$sidebar-item-hover-bg-color: #111;
+
+// Typography
+// -------------------------
+
+$font-weight-bold: 700;
+$font-weight-thin: 300;
+$font-weight-base: $font-weight-thin;
+
+// Layout
+// -------------------------
+$sidebar-width: 200px;
+$sidebar-icon-state-width: 50px;
 
 
 // Bootstrap variables
 // ------------------------
+// ------------------------
 
+//== Scaffolding
+//
+$body-bg:               $white;
 
 // Typography
 // -------------------------
 
 $font-family-sans-serif: 'Open Sans', sans-serif;
 
+//== Navbar
+//
+
+$navbar-height:                    40px;
+$navbar-margin-bottom:             0;
+$navbar-border-radius:             0;
+
+$navbar-default-color:             $sidebar-color !default;
+$navbar-default-bg: $sidebar-bg-color !default;
+$navbar-default-link-color:        $navbar-default-color !default;
+$navbar-default-link-hover-color:          fade-in($navbar-default-color, 1);
+$navbar-default-link-active-color:         fade-in($navbar-default-color, .9);
+$navbar-default-link-disabled-color:       darken($navbar-default-color, 10%);
+
+
 //-- Iconography
 //
-//## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-$icon-font-path: "fonts/glyphicons/" !default;
+$icon-font-path: "../vendor/bootstrap-sass/vendor/assets/fonts/bootstrap/" !default;
 
 // Font Awesome variables
-// --------------
+// ------------------------
+// ------------------------
 
-$fa-font-path: "fonts/font-awesome";
+$fa-font-path: "../vendor/font-awesome/fonts" !default;

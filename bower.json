@@ -1,0 +1,21 @@
+{
+    "name": "sing",
+    "version": "1.0.0",
+    "description": "Sing Dashboard App",
+    "main": "index.html",
+    "authors": [
+        "okendoken flatlogic.com"
+    ],
+
+    "dependencies": {
+        "jquery": ">= 2.1.0",
+        "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git",
+        "font-awesome": ">= 4.0.3",
+        "animate.css": ">= 3.0.0"
+    },
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "vendor"
+    ]
+}
