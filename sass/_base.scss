@@ -20,7 +20,7 @@
   position: relative;
   z-index: 2;
   min-height: 100%;
-  padding: 20px;
+  padding: 40px;
   background-color: $body-bg;
   @include translate(150px, 0);
   -ms-transition: -ms-transform 0.3s ease-in-out;
