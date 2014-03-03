@@ -11,7 +11,7 @@ $white: #fff;
 $sidebar-bg-color: #242424;
 $sidebar-color: #aaa;
 $sidebar-item-border-color: #2d2d2d;
-$sidebar-item-active-color: #E3BC28;
+$sidebar-item-active-color: #ffc427;
 $sidebar-item-hover-bg-color: #111;
 
 // Typography
@@ -26,6 +26,10 @@ $font-weight-base: $font-weight-thin;
 $sidebar-width: 200px;
 $sidebar-icon-state-width: 50px;
 
+// Widgets
+// -------------------------
+$widget-bg-color: $white;
+
 
 // Bootstrap variables
 // ------------------------
@@ -33,7 +37,7 @@ $sidebar-icon-state-width: 50px;
 
 //== Scaffolding
 //
-$body-bg:               $white;
+$body-bg:               #f8f8f8;
 
 // Typography
 // -------------------------
@@ -47,6 +51,8 @@ $headings-font-weight: 300;
 
 $navbar-margin-bottom:             0;
 $navbar-border-radius:             0;
+
+$navbar-default-bg:                $white !default;
 
 //-- Iconography
 //
