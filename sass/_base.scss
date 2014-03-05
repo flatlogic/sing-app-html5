@@ -112,6 +112,11 @@
       vertical-align: middle;
       color: rgba($sidebar-color, .7);
     }
+
+    .glyphicon{
+      top: -2px;
+      left: -1px;
+    }
   }
 
   > li:last-child > a{
@@ -145,6 +150,14 @@
   }
 }
 
+.page-title{
+  margin: 0 0 $line-height-computed;
+}
+
+/***********************/
+/*        Loader       */
+/***********************/
+
 .loader-wrap{
   position: absolute;
   left: 0;
@@ -170,11 +183,34 @@
   }
 }
 
-.page-title{
-  margin: 0 0 $line-height-computed;
-}
+/***********************/
+/*       Widgets       */
+/***********************/
 
 .widget{
+  position: relative;
   padding: 15px 20px;
   background: $widget-bg-color;
+}
+
+.widget-controls{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 14px;
+  font-size: $font-size-small;
+  word-spacing: 5px;
+
+  a{
+    color: rgba($black, .25);
+
+    &:hover{
+      color: rgba($black, .1);
+    }
+  }
+
+  .fa-refresh{
+    position: relative;
+    top: -1px;
+  }
 }

@@ -31,11 +31,11 @@ $(function(){
     };
 
     SingAppView.prototype.collapseNavigation = function(){
-        $('body').addClass('nav-collapsed');
+        //$('body').addClass('nav-collapsed');
     };
 
     SingAppView.prototype.expandNavigation = function(){
-        $('body').removeClass('nav-collapsed');
+        //$('body').removeClass('nav-collapsed');
     };
 
     SingAppView.prototype.changeActiveNavigationItem = function(event, xhr, options){

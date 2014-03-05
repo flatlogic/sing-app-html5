@@ -9784,12 +9784,6 @@ button.close {
   font-weight: 500;
 }
 
-/* line 14, D:/projects/sing/sass/_bootstrap-override.scss */
-.glyphicon {
-  top: -2px;
-  left: -1px;
-}
-
 /**
 * if set to device-width ie10 built-in scrollbar overflows content. Fix it as of here
 * http://stackoverflow.com/questions/17045132/scrollbar-overlay-in-ie10-how-do-you-stop-that-might-be-bootstrap
@@ -9961,25 +9955,30 @@ a {
   vertical-align: middle;
   color: rgba(170, 170, 170, 0.7);
 }
-/* line 117, D:/projects/sing/sass/_base.scss */
+/* line 116, D:/projects/sing/sass/_base.scss */
+.sidebar-nav > li > a .glyphicon {
+  top: -2px;
+  left: -1px;
+}
+/* line 122, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > li:last-child > a {
   border-bottom: 1px solid #2d2d2d;
 }
-/* line 121, D:/projects/sing/sass/_base.scss */
+/* line 126, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a {
   color: #ffc427;
 }
-/* line 124, D:/projects/sing/sass/_base.scss */
+/* line 129, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a .icon {
   border-radius: 50%;
   background-color: #ffc427;
 }
-/* line 128, D:/projects/sing/sass/_base.scss */
+/* line 133, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a .icon .fa, .sidebar-nav > .active > a .icon .glyphicon {
   color: #242424;
 }
 
-/* line 135, D:/projects/sing/sass/_base.scss */
+/* line 140, D:/projects/sing/sass/_base.scss */
 .sidebar-nav-title {
   margin: 35px 0 5px 11px;
   font-size: 14px;
@@ -9988,12 +9987,20 @@ a {
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
-/* line 143, D:/projects/sing/sass/_base.scss */
+/* line 148, D:/projects/sing/sass/_base.scss */
 .nav-collapsed .sidebar-nav-title {
   opacity: 0;
 }
 
-/* line 148, D:/projects/sing/sass/_base.scss */
+/* line 153, D:/projects/sing/sass/_base.scss */
+.page-title {
+  margin: 0 0 20px;
+}
+
+/***********************/
+/*        Loader       */
+/***********************/
+/* line 161, D:/projects/sing/sass/_base.scss */
 .loader-wrap {
   position: absolute;
   left: 0;
@@ -10006,11 +10013,11 @@ a {
   -webkit-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
-/* line 159, D:/projects/sing/sass/_base.scss */
+/* line 172, D:/projects/sing/sass/_base.scss */
 .loader-wrap.hiding {
   opacity: 0;
 }
-/* line 163, D:/projects/sing/sass/_base.scss */
+/* line 176, D:/projects/sing/sass/_base.scss */
 .loader-wrap .fa {
   position: absolute;
   top: 50%;
@@ -10020,15 +10027,37 @@ a {
   vertical-align: middle;
 }
 
-/* line 173, D:/projects/sing/sass/_base.scss */
-.page-title {
-  margin: 0 0 20px;
-}
-
-/* line 177, D:/projects/sing/sass/_base.scss */
+/***********************/
+/*       Widgets       */
+/***********************/
+/* line 190, D:/projects/sing/sass/_base.scss */
 .widget {
+  position: relative;
   padding: 15px 20px;
   background: white;
+}
+
+/* line 196, D:/projects/sing/sass/_base.scss */
+.widget-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 14px;
+  font-size: 12px;
+  word-spacing: 5px;
+}
+/* line 204, D:/projects/sing/sass/_base.scss */
+.widget-controls a {
+  color: rgba(0, 0, 0, 0.25);
+}
+/* line 207, D:/projects/sing/sass/_base.scss */
+.widget-controls a:hover {
+  color: rgba(0, 0, 0, 0.1);
+}
+/* line 212, D:/projects/sing/sass/_base.scss */
+.widget-controls .fa-refresh {
+  position: relative;
+  top: -1px;
 }
 
 /***********************************/
