@@ -16,10 +16,10 @@
   margin-left: $sidebar-icon-state-width;
 
   @include translate(150px, 0);
-  -ms-transition: -ms-transform 0.3s ease-in-out;
-  -moz-transition: -moz-transform 0.3s ease-in-out;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+  -ms-transition: -ms-transform $sidebar-transition-time ease-in-out;
+  -moz-transition: -moz-transform $sidebar-transition-time ease-in-out;
+  -webkit-transition: -webkit-transform $sidebar-transition-time ease-in-out;
+  transition: transform $sidebar-transition-time ease-in-out;
 
   .nav-collapsed &{
     @include translate(0, 0);
@@ -69,7 +69,7 @@
 .sidebar-nav{
   padding: 10px 0;
   font-size: 14px;
-  @media (min-width: $screen-md) and (min-height: 670px){
+  @media (min-width: $screen-md){
     font-size: 16px;
   }
 
@@ -88,7 +88,7 @@
     padding-left: 50px;
     line-height: 35px;
 
-    @media (min-width: $screen-md) and (min-height: 670px){
+    @media (min-width: $screen-md) and (min-height: $screen-md-height){
       line-height: 44px;
     }
 
@@ -102,12 +102,12 @@
       line-height: 28px;
       text-align: center;
 
-      @media (min-width: $screen-md) and (min-height: 670px){
+      @media (min-width: $screen-md) and (min-height: $screen-md-height){
         top: 8px;
       }
     }
 
-    .fa{
+    .fa, .glyphicon{
       font-size: 16px;
       vertical-align: middle;
       color: rgba($sidebar-color, .7);
@@ -125,10 +125,23 @@
       border-radius: 50%;
       background-color: $sidebar-item-active-color;
 
-      .fa{
+      .fa, .glyphicon{
         color: $sidebar-bg-color;
       }
     }
+  }
+}
+
+.sidebar-nav-title{
+  margin: 35px 0 5px 11px;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  opacity: 1;
+  @include transition(opacity $sidebar-transition-time ease-in-out);
+
+  .nav-collapsed &{
+    opacity: 0;
   }
 }
 

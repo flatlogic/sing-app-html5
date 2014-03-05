@@ -9784,6 +9784,12 @@ button.close {
   font-weight: 500;
 }
 
+/* line 14, D:/projects/sing/sass/_bootstrap-override.scss */
+.glyphicon {
+  top: -2px;
+  left: -1px;
+}
+
 /**
 * if set to device-width ie10 built-in scrollbar overflows content. Fix it as of here
 * http://stackoverflow.com/questions/17045132/scrollbar-overlay-in-ie10-how-do-you-stop-that-might-be-bootstrap
@@ -9903,7 +9909,7 @@ a {
   padding: 10px 0;
   font-size: 14px;
 }
-@media (min-width: 992px) and (min-height: 670px) {
+@media (min-width: 992px) {
   /* line 69, D:/projects/sing/sass/_base.scss */
   .sidebar-nav {
     font-size: 16px;
@@ -9950,7 +9956,7 @@ a {
   }
 }
 /* line 110, D:/projects/sing/sass/_base.scss */
-.sidebar-nav > li > a .fa {
+.sidebar-nav > li > a .fa, .sidebar-nav > li > a .glyphicon {
   font-size: 16px;
   vertical-align: middle;
   color: rgba(170, 170, 170, 0.7);
@@ -9969,11 +9975,25 @@ a {
   background-color: #ffc427;
 }
 /* line 128, D:/projects/sing/sass/_base.scss */
-.sidebar-nav > .active > a .icon .fa {
+.sidebar-nav > .active > a .icon .fa, .sidebar-nav > .active > a .icon .glyphicon {
   color: #242424;
 }
 
 /* line 135, D:/projects/sing/sass/_base.scss */
+.sidebar-nav-title {
+  margin: 35px 0 5px 11px;
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+/* line 143, D:/projects/sing/sass/_base.scss */
+.nav-collapsed .sidebar-nav-title {
+  opacity: 0;
+}
+
+/* line 148, D:/projects/sing/sass/_base.scss */
 .loader-wrap {
   position: absolute;
   left: 0;
@@ -9986,11 +10006,11 @@ a {
   -webkit-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
 }
-/* line 146, D:/projects/sing/sass/_base.scss */
+/* line 159, D:/projects/sing/sass/_base.scss */
 .loader-wrap.hiding {
   opacity: 0;
 }
-/* line 150, D:/projects/sing/sass/_base.scss */
+/* line 163, D:/projects/sing/sass/_base.scss */
 .loader-wrap .fa {
   position: absolute;
   top: 50%;
@@ -10000,12 +10020,12 @@ a {
   vertical-align: middle;
 }
 
-/* line 160, D:/projects/sing/sass/_base.scss */
+/* line 173, D:/projects/sing/sass/_base.scss */
 .page-title {
   margin: 0 0 20px;
 }
 
-/* line 164, D:/projects/sing/sass/_base.scss */
+/* line 177, D:/projects/sing/sass/_base.scss */
 .widget {
   padding: 15px 20px;
   background: white;
