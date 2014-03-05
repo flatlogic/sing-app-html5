@@ -427,7 +427,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
 }
 
 /* line 39, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -442,12 +442,12 @@ textarea {
 
 /* line 48, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
 a {
-  color: #428bca;
+  color: #218bc3;
   text-decoration: none;
 }
 /* line 53, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:hover, a:focus {
-  color: #2a6496;
+  color: #165c82;
   text-decoration: underline;
 }
 /* line 58, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -483,7 +483,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2168,7 +2168,7 @@ th {
 }
 /* line 56, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_tables.scss */
 .table .table {
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
 }
 
 /* line 70, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_tables.scss */
@@ -3141,7 +3141,7 @@ select[multiple].input-lg,
 
 /* line 85, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-link {
-  color: #428bca;
+  color: #218bc3;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -3158,7 +3158,7 @@ select[multiple].input-lg,
 }
 /* line 105, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-link:hover, .btn-link:focus {
-  color: #2a6496;
+  color: #165c82;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4853,7 +4853,7 @@ input[type="button"].btn-block {
 /* line 48, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #428bca;
+  border-color: #218bc3;
 }
 /* line 59, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav .nav-divider {
@@ -4890,7 +4890,7 @@ input[type="button"].btn-block {
 /* line 98, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -4983,7 +4983,7 @@ input[type="button"].btn-block {
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #f8f8f8;
+    border-bottom-color: #f6f6f6;
   }
 }
 
@@ -5582,7 +5582,7 @@ input[type="button"].btn-block {
   padding: 6px 12px;
   line-height: 1.42857;
   text-decoration: none;
-  color: #428bca;
+  color: #218bc3;
   background-color: white;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -5604,7 +5604,7 @@ input[type="button"].btn-block {
 .pagination > li > a:hover, .pagination > li > a:focus,
 .pagination > li > span:hover,
 .pagination > li > span:focus {
-  color: #2a6496;
+  color: #165c82;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -5848,7 +5848,7 @@ a.badge:hover, a.badge:focus {
 /* line 49, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_badges.scss */
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #428bca;
+  color: #218bc3;
   background-color: white;
 }
 
@@ -5907,7 +5907,7 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -5932,7 +5932,7 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #428bca;
+  border-color: #218bc3;
 }
 
 /* line 9, D:/projects/sing/sass/../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
@@ -9872,7 +9872,7 @@ a {
 .content {
   min-height: 100%;
   padding: 90px 40px 20px;
-  background-color: #f8f8f8;
+  background-color: #f6f6f6;
 }
 
 /* line 48, D:/projects/sing/sass/_base.scss */
@@ -10008,7 +10008,7 @@ a {
   top: 0;
   bottom: 0;
   text-align: center;
-  background: #f8f8f8;
+  background: #f6f6f6;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
