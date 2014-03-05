@@ -1,0 +1,44 @@
+/***********************/
+/*                     */
+/*   Custom Widgets    */
+/*                     */
+/***********************/
+
+
+/***********************/
+/*     Chart Simple    */
+/***********************/
+
+.widget-chart-simple{
+  padding: 30px 40px 20px;
+
+  .widget-body{
+    padding-top: 10px;
+  }
+
+  .chart-title{
+    color: $text-muted;
+    text-align: center;
+  }
+
+  .chart-value{
+    .trend{
+      display: inline-block;
+      margin: -6px 6px 0 -19px;
+      overflow: visible;
+      font-size: 21px;
+      vertical-align: middle;
+    }
+
+    text-align: center;
+    font-size: $font-size-h1;
+  }
+
+  .chart{
+    margin-top: 20px;
+  }
+}
+
+.jqstooltip{
+  @include box-sizing(content-box);
+}

@@ -1,4 +1,12 @@
 $(function(){
+    window.Sing = {
+        _white: '#fff',
+        _black: '#000',
+        _grayLight: '#999',
+        _stateSuccess: '#8bdb63',
+        _stateDanger: '#fb6d5d'
+    };
+
     var SingSettingsBundle = function(){
         var defaultSettings =  {
             'nav-collapsed': true

@@ -2,14 +2,30 @@
 /**            UTILS              **/
 /***********************************/
 
-.text-align-center{
+.text-align-center {
   text-align: center;
 }
 
-.text-align-right{
+.text-align-right {
   text-align: right;
 }
 
-.no-margin{
+.no-margin {
   margin: 0 !important;
+}
+
+.rotate-45 {
+  @include rotate(45deg);
+}
+
+.rotate-135 {
+  @include rotate(135deg);
+}
+
+.rotate-225 {
+  @include rotate(225deg);
+}
+
+.rotate-315 {
+  @include rotate(315deg);
 }
