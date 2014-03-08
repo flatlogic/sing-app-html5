@@ -139,7 +139,8 @@ $(function(){
 
     SingAppView.prototype.extractPageName = function(url){
         //credit: http://stackoverflow.com/a/8497143/1298418
-        return url.split('#')[0].substring(url.lastIndexOf("/") + 1)
+        var pageName = url.split('#')[0].substring(url.lastIndexOf("/") + 1);
+        return pageName === '' ? 'index.html' : pageName;
     };
 
 
