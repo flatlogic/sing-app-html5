@@ -34,8 +34,24 @@
   @include rotate(315deg);
 }
 
+.background-primary{
+  background-color: $brand-primary;
+}
+
 .background-success{
   background-color: $brand-success;
+}
+
+.background-info{
+  background-color: $brand-info;
+}
+
+.background-warning{
+  background-color: $brand-warning;
+}
+
+.background-danger{
+  background-color: $brand-danger;
 }
 
 .text-white{
