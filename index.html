@@ -86,7 +86,7 @@
 <div class="content-wrap">
     <main id="content" class="content" role="main">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <section class="widget widget-chart-simple">
                     <header>
                         <div class="widget-controls">
@@ -110,6 +110,49 @@
                     </div>
                 </section>
             </div>
+            <div class="col-md-3">
+                <section class="widget widget-chart-changes">
+                    <header>
+                        <div class="widget-controls">
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div class="chart background-success">
+                            <p class="chart-value"><i class="fa fa-caret-up"></i> 352.79</p>
+                            <p class="chart-value-change">+2.04 (1.69%)</p>
+                            <div id="chart-changes"></div>
+                        </div>
+                        <h4 class="chart-title">Salt Lake City, Utah</h4>
+                        <p class="deemphasize">Today 13:34</p>
+                        <div class="chart-additional-info">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p class="h4 no-margin">18.7M</p>
+                                    <p class="deemphasize">Shares Traded</p>
+                                </div>
+                                <div class="col-xs-6 text-align-right">
+                                    <p class="h4 no-margin">19.9B</p>
+                                    <p class="deemphasize">Market Cap</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-additional-info">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p class="h3 no-margin text-success">+120.93</p>
+                                    <p class="deemphasize">Yearly Change</p>
+                                </div>
+                                <div class="col-xs-6 text-align-right">
+                                    <span id="chart-changes-year"></span>
+                                    <p class="deemphasize">GOOG</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 </div>
@@ -128,6 +171,8 @@
 
 <!-- page specific libs -->
 <script src="vendor/jquery.sparkline/dist/jquery.sparkline.js"></script>
+<script src="vendor/d3/d3.min.js"></script>
+<script src="vendor/rickshaw/rickshaw.min.js"></script>
 
 <!-- page specific js -->
 <script src="js/index.js"></script>

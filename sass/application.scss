@@ -8,6 +8,11 @@
 @import "../vendor/font-awesome/scss/font-awesome";
 @import "../vendor/animate.css/animate.css";
 
+//custom libs. can be removed
+@import "../vendor/rickshaw/rickshaw.css";
+
+//end custom libs
+
 @import "bootstrap-override";
 
 @import "general";

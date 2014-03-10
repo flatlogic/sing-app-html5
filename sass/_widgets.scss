@@ -42,3 +42,39 @@
 .jqstooltip{
   @include box-sizing(content-box);
 }
+
+/***********************/
+/*    Chart Changes    */
+/***********************/
+
+.widget-chart-changes{
+  .chart{
+    margin: -$widget-padding-vertical (-$widget-padding-horizontal) 0;
+    padding: $widget-padding-vertical 0 0;
+  }
+
+  .chart-title{
+    margin: $line-height-computed 0 0;
+  }
+
+  .chart-value, .chart-value-change{
+    padding: 0 $widget-padding-horizontal;
+  }
+
+  .chart-value{
+    margin-bottom: 0;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-h4 + 3;
+    line-height: 1;
+    color: $white;
+  }
+
+  .chart-value-change{
+    color: rgba($white, .7);
+    font-size: 85%;
+  }
+
+  .chart-additional-info{
+    margin-top: $line-height-computed;
+  }
+}

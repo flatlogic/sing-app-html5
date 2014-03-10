@@ -8,17 +8,25 @@
 $white: #fff;
 $black: #000;
 
+$brand-primary:         #027ac1 !default;
+$brand-success:         #4aaa43 !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #ffc427 !default;
+$brand-danger:          #e31a38 !default;
+
 
 $sidebar-bg-color: #242424;
 $sidebar-color: #aaa;
 $sidebar-item-border-color: #2d2d2d;
-$sidebar-item-active-color: #ffc427;
+$sidebar-item-active-color: $brand-warning;
 $sidebar-item-hover-bg-color: #111;
 
 // Typography
 // -------------------------
 
 $font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-normal: 400;
 $font-weight-thin: 300;
 $font-weight-base: $font-weight-thin;
 
@@ -38,6 +46,9 @@ $screen-md-height: 670px;
 
 // Widgets
 // -------------------------
+
+$widget-padding-vertical: 15px;
+$widget-padding-horizontal: 20px;
 $widget-bg-color: $white;
 
 
@@ -68,7 +79,7 @@ $navbar-default-bg:                $white !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text: #8bdb63 !default;
+$state-success-text:             $brand-success !default;
 $state-success-bg:               #dff0d8 !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
@@ -80,7 +91,7 @@ $state-warning-text:             #8a6d3b !default;
 $state-warning-bg:               #fcf8e3 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text: #fb6d5d !default;
+$state-danger-text:              $brand-danger !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
