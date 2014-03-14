@@ -4,10 +4,10 @@ $(function(){
         _black: '#000',
         _grayLight: '#999',
         _grayLighter: '#eee',
-        _brandPrimary: '#027ac1',
-        _brandSuccess: '#4aaa43',
+        _brandPrimary: '#618fb0',
+        _brandSuccess: '#56bc76',
         _brandWarning: '#ffc427',
-        _brandDanger: '#e31a38',
+        _brandDanger: '#e5603b',
 
         //credit http://stackoverflow.com/questions/1507931/generate-lighter-darker-color-in-css-using-javascript
         changeColor: function(color, ratio, darker) {

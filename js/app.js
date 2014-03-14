@@ -16,7 +16,6 @@ $(function(){
 
         $(document).pjax('#sidebar a', '#content', {
             fragment: '#content',
-            replace: true,
             type: 'POST' //prevents caching
         });
         $(document).on('pjax:start', $.proxy(this.changeActiveNavigationItem, this));
@@ -48,17 +47,25 @@ $(function(){
     };
 
     SingAppView.prototype.collapseNavigation = function(){
-        //$('body').addClass('nav-collapsed');
+        $('body').addClass('nav-collapsed');
     };
 
     SingAppView.prototype.expandNavigation = function(){
-        //$('body').removeClass('nav-collapsed');
+        $('body').removeClass('nav-collapsed');
     };
 
     SingAppView.prototype.changeActiveNavigationItem = function(event, xhr, options){
         this.$sidebar.find('li.active').removeClass('active');
 
         this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').closest('li').addClass('active');
+        // for 2 level menu and more precise finding
+
+//        this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
+//            if (this.href === options.url){
+//                $(this).closest('li').addClass('active')
+//                    .closest('.panel').addClass('active');
+//            }
+//        });
     };
 
     SingAppView.prototype.showLoader = function(){
@@ -145,4 +152,6 @@ $(function(){
 
 
     window.SingApp = new SingAppView();
+
+    SingApp.collapseNavigation();
 });

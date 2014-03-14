@@ -191,6 +191,13 @@
   position: relative;
   padding: $widget-padding-vertical $widget-padding-horizontal;
   background: $widget-bg-color;
+
+  > header{
+    margin-bottom: $line-height-computed/2;
+    #{headings()}{
+      margin: 0;
+    }
+  }
 }
 
 .widget-controls{
@@ -200,6 +207,11 @@
   padding: 14px;
   font-size: $font-size-small;
   word-spacing: 5px;
+
+  &.left{
+    left: 0;
+    right: auto;
+  }
 
   a{
     color: rgba($black, .25);

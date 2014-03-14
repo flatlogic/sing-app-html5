@@ -78,3 +78,31 @@
     margin-top: $line-height-computed;
   }
 }
+
+/***********************/
+/*  Chart Stats Simple */
+/***********************/
+
+.widget-chart-stats-simple{
+  > header{
+    #{headings()}{
+      margin-bottom: $line-height-computed/4;
+    }
+  }
+
+  .chart{
+    height: 260px;
+    margin: $line-height-computed/2 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+    > *{
+      height: 100%;
+    }
+  }
+}
+
+/***********************/
+/*  Part:Chart Stats   */
+/***********************/
+
+.chart-stats{
+  border-top: 1px solid $gray-lighter;
+}

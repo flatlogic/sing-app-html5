@@ -34,28 +34,40 @@
   @include rotate(315deg);
 }
 
-.background-primary{
+.bg-primary{
   background-color: $brand-primary;
 }
 
-.background-success{
+.bg-success{
   background-color: $brand-success;
 }
 
-.background-info{
+.bg-info{
   background-color: $brand-info;
 }
 
-.background-warning{
+.bg-warning{
   background-color: $brand-warning;
 }
 
-.background-danger{
+.bg-danger{
   background-color: $brand-danger;
 }
 
+.bg-body{
+  background-color: $body-bg;
+}
+
+.bg-body-light{
+  background-color: lighten($body-bg, 3%);
+}
+
 .text-white{
-  color: $white;
+  color: $white !important;
+}
+
+.text-light{
+  opacity: .8;
 }
 
 .font-semi-bold{
@@ -74,4 +86,17 @@
 .deemphasize{
   font-size: 85%;
   color: $text-muted;
+}
+
+/* .h* + .font-bold */
+$font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
+$i: 1;
+@each $font-size in $font-sizes{
+
+  .value#{$i}{
+    margin: 0;
+    font-size: $font-size;
+    font-weight: $font-weight-bold;
+  }
+  $i: $i + 1;
 }

@@ -428,7 +428,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
 }
 
 /* line 39, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -484,7 +484,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -674,22 +674,22 @@ cite {
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-primary {
-  color: #027ac1;
+  color: #618fb0;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-primary:hover {
-  color: #015a8f;
+  color: #4a7594;
 }
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-success {
-  color: #4aaa43;
+  color: #56bc76;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-success:hover {
-  color: #3a8535;
+  color: #3fa05e;
 }
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -704,22 +704,22 @@ a.text-info:hover {
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-warning {
-  color: #8a6d3b;
+  color: #ffc427;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-warning:hover {
-  color: #66512c;
+  color: #f3b100;
 }
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-danger {
-  color: #e31a38;
+  color: #e5603b;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-danger:hover {
-  color: #b5152d;
+  color: #d1431c;
 }
 
 /* line 108, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_type.scss */
@@ -729,12 +729,12 @@ a.text-danger:hover {
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-primary {
-  background-color: #027ac1;
+  background-color: #618fb0;
 }
 
 /* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.bg-primary:hover {
-  background-color: #015a8f;
+  background-color: #4a7594;
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2169,7 +2169,7 @@ th {
 }
 /* line 56, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_tables.scss */
 .table .table {
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
 }
 
 /* line 70, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_tables.scss */
@@ -2678,29 +2678,29 @@ select[multiple].input-lg,
 .has-success .checkbox,
 .has-success .radio-inline,
 .has-success .checkbox-inline {
-  color: #4aaa43;
+  color: #56bc76;
 }
 /* line 879, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .form-control {
-  border-color: #4aaa43;
+  border-color: #56bc76;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .form-control:focus {
-  border-color: #3a8535;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #89cf84;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #89cf84;
+  border-color: #3fa05e;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #9fd9b1;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #9fd9b1;
 }
 /* line 889, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .input-group-addon {
-  color: #4aaa43;
-  border-color: #4aaa43;
+  color: #56bc76;
+  border-color: #56bc76;
   background-color: #dff0d8;
 }
 /* line 895, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .form-control-feedback {
-  color: #4aaa43;
+  color: #56bc76;
 }
 
 /* line 875, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2710,29 +2710,29 @@ select[multiple].input-lg,
 .has-warning .checkbox,
 .has-warning .radio-inline,
 .has-warning .checkbox-inline {
-  color: #8a6d3b;
+  color: #ffc427;
 }
 /* line 879, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control {
-  border-color: #8a6d3b;
+  border-color: #ffc427;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control:focus {
-  border-color: #66512c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  border-color: #f3b100;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ffe08d;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ffe08d;
 }
 /* line 889, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .input-group-addon {
-  color: #8a6d3b;
-  border-color: #8a6d3b;
+  color: #ffc427;
+  border-color: #ffc427;
   background-color: #fcf8e3;
 }
 /* line 895, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control-feedback {
-  color: #8a6d3b;
+  color: #ffc427;
 }
 
 /* line 875, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2742,29 +2742,29 @@ select[multiple].input-lg,
 .has-error .checkbox,
 .has-error .radio-inline,
 .has-error .checkbox-inline {
-  color: #e31a38;
+  color: #e5603b;
 }
 /* line 879, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-error .form-control {
-  border-color: #e31a38;
+  border-color: #e5603b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-error .form-control:focus {
-  border-color: #b5152d;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ef7486;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ef7486;
+  border-color: #d1431c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f1a995;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f1a995;
 }
 /* line 889, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-error .input-group-addon {
-  color: #e31a38;
-  border-color: #e31a38;
+  color: #e5603b;
+  border-color: #e5603b;
   background-color: #f2dede;
 }
 /* line 895, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-error .form-control-feedback {
-  color: #e31a38;
+  color: #e5603b;
 }
 
 /* line 303, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
@@ -2958,20 +2958,20 @@ select[multiple].input-lg,
 /* line 60, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-primary {
   color: white;
-  background-color: #027ac1;
-  border-color: #026aa8;
+  background-color: #618fb0;
+  border-color: #5383a5;
 }
 /* line 508, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
   color: white;
-  background-color: #026099;
-  border-color: #01446b;
+  background-color: #4d7a9b;
+  border-color: #3e627c;
 }
 /* line 513, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .open .btn-primary.dropdown-toggle {
   color: white;
-  background-color: #026099;
-  border-color: #01446b;
+  background-color: #4d7a9b;
+  border-color: #3e627c;
 }
 /* line 519, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-primary:active, .btn-primary.active {
@@ -2983,32 +2983,32 @@ select[multiple].input-lg,
 }
 /* line 532, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-  background-color: #027ac1;
-  border-color: #026aa8;
+  background-color: #618fb0;
+  border-color: #5383a5;
 }
 /* line 538, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-primary .badge {
-  color: #027ac1;
+  color: #618fb0;
   background-color: white;
 }
 
 /* line 64, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-success {
   color: white;
-  background-color: #4aaa43;
-  border-color: #42983c;
+  background-color: #56bc76;
+  border-color: #47b268;
 }
 /* line 508, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
   color: white;
-  background-color: #3d8d37;
-  border-color: #2f6c2a;
+  background-color: #42a762;
+  border-color: #35864f;
 }
 /* line 513, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .open .btn-success.dropdown-toggle {
   color: white;
-  background-color: #3d8d37;
-  border-color: #2f6c2a;
+  background-color: #42a762;
+  border-color: #35864f;
 }
 /* line 519, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-success:active, .btn-success.active {
@@ -3020,32 +3020,32 @@ select[multiple].input-lg,
 }
 /* line 532, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
-  background-color: #4aaa43;
-  border-color: #42983c;
+  background-color: #56bc76;
+  border-color: #47b268;
 }
 /* line 538, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-success .badge {
-  color: #4aaa43;
+  color: #56bc76;
   background-color: white;
 }
 
 /* line 68, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-info {
   color: white;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #4ab0ce;
+  border-color: #36a7c8;
 }
 /* line 508, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active {
   color: white;
-  background-color: #39b3d7;
-  border-color: #269abc;
+  background-color: #339dbc;
+  border-color: #297f98;
 }
 /* line 513, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .open .btn-info.dropdown-toggle {
   color: white;
-  background-color: #39b3d7;
-  border-color: #269abc;
+  background-color: #339dbc;
+  border-color: #297f98;
 }
 /* line 519, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-info:active, .btn-info.active {
@@ -3057,12 +3057,12 @@ select[multiple].input-lg,
 }
 /* line 532, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #4ab0ce;
+  border-color: #36a7c8;
 }
 /* line 538, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-info .badge {
-  color: #5bc0de;
+  color: #4ab0ce;
   background-color: white;
 }
 
@@ -3106,20 +3106,20 @@ select[multiple].input-lg,
 /* line 76, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-danger {
   color: white;
-  background-color: #e31a38;
-  border-color: #cc1732;
+  background-color: #e5603b;
+  border-color: #e24e24;
 }
 /* line 508, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active {
   color: white;
-  background-color: #be162f;
-  border-color: #951125;
+  background-color: #da461d;
+  border-color: #b23918;
 }
 /* line 513, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .open .btn-danger.dropdown-toggle {
   color: white;
-  background-color: #be162f;
-  border-color: #951125;
+  background-color: #da461d;
+  border-color: #b23918;
 }
 /* line 519, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-danger:active, .btn-danger.active {
@@ -3131,12 +3131,12 @@ select[multiple].input-lg,
 }
 /* line 532, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled]:active, .btn-danger[disabled].active, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger:hover, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger.active {
-  background-color: #e31a38;
-  border-color: #cc1732;
+  background-color: #e5603b;
+  border-color: #e24e24;
 }
 /* line 538, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-danger .badge {
-  color: #e31a38;
+  color: #e5603b;
   background-color: white;
 }
 
@@ -4339,7 +4339,7 @@ input[type="button"].btn-block {
   color: white;
   text-decoration: none;
   outline: 0;
-  background-color: #027ac1;
+  background-color: #618fb0;
 }
 
 /* line 102, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_dropdowns.scss */
@@ -4891,7 +4891,7 @@ input[type="button"].btn-block {
 /* line 98, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -4912,7 +4912,7 @@ input[type="button"].btn-block {
 /* line 133, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: white;
-  background-color: #027ac1;
+  background-color: #618fb0;
 }
 
 /* line 144, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
@@ -4984,7 +4984,7 @@ input[type="button"].btn-block {
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #f6f6f6;
+    border-bottom-color: #f1f1f1;
   }
 }
 
@@ -5616,8 +5616,8 @@ input[type="button"].btn-block {
 .pagination > .active > span:focus {
   z-index: 2;
   color: white;
-  background-color: #027ac1;
-  border-color: #027ac1;
+  background-color: #618fb0;
+  border-color: #618fb0;
   cursor: default;
 }
 /* line 68, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss */
@@ -5766,29 +5766,29 @@ input[type="button"].btn-block {
 
 /* line 46, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
 .label-primary {
-  background-color: #027ac1;
+  background-color: #618fb0;
 }
 /* line 583, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .label-primary[href]:hover, .label-primary[href]:focus {
-  background-color: #015a8f;
+  background-color: #4a7594;
 }
 
 /* line 50, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
 .label-success {
-  background-color: #4aaa43;
+  background-color: #56bc76;
 }
 /* line 583, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .label-success[href]:hover, .label-success[href]:focus {
-  background-color: #3a8535;
+  background-color: #3fa05e;
 }
 
 /* line 54, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
 .label-info {
-  background-color: #5bc0de;
+  background-color: #4ab0ce;
 }
 /* line 583, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .label-info[href]:hover, .label-info[href]:focus {
-  background-color: #31b0d5;
+  background-color: #3196b4;
 }
 
 /* line 58, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
@@ -5802,11 +5802,11 @@ input[type="button"].btn-block {
 
 /* line 62, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
 .label-danger {
-  background-color: #e31a38;
+  background-color: #e5603b;
 }
 /* line 583, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .label-danger[href]:hover, .label-danger[href]:focus {
-  background-color: #b5152d;
+  background-color: #d1431c;
 }
 
 /* line 7, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_badges.scss */
@@ -5908,7 +5908,7 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -5978,7 +5978,7 @@ a.thumbnail.active {
 .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
-  color: #4aaa43;
+  color: #56bc76;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-success hr {
@@ -5986,7 +5986,7 @@ a.thumbnail.active {
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-success .alert-link {
-  color: #3a8535;
+  color: #3fa05e;
 }
 
 /* line 59, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
@@ -6008,7 +6008,7 @@ a.thumbnail.active {
 .alert-warning {
   background-color: #fcf8e3;
   border-color: #faebcc;
-  color: #8a6d3b;
+  color: #ffc427;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-warning hr {
@@ -6016,14 +6016,14 @@ a.thumbnail.active {
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-warning .alert-link {
-  color: #66512c;
+  color: #f3b100;
 }
 
 /* line 65, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
 .alert-danger {
   background-color: #f2dede;
   border-color: #ebccd1;
-  color: #e31a38;
+  color: #e5603b;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-danger hr {
@@ -6031,7 +6031,7 @@ a.thumbnail.active {
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-danger .alert-link {
-  color: #b5152d;
+  color: #d1431c;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -6078,7 +6078,7 @@ a.thumbnail.active {
   line-height: 20px;
   color: white;
   text-align: center;
-  background-color: #027ac1;
+  background-color: #618fb0;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
@@ -6100,7 +6100,7 @@ a.thumbnail.active {
 
 /* line 66, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress-bar-success {
-  background-color: #4aaa43;
+  background-color: #56bc76;
 }
 /* line 626, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .progress-striped .progress-bar-success {
@@ -6110,7 +6110,7 @@ a.thumbnail.active {
 
 /* line 70, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress-bar-info {
-  background-color: #5bc0de;
+  background-color: #4ab0ce;
 }
 /* line 626, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .progress-striped .progress-bar-info {
@@ -6130,7 +6130,7 @@ a.thumbnail.active {
 
 /* line 78, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress-bar-danger {
-  background-color: #e31a38;
+  background-color: #e5603b;
 }
 /* line 626, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .progress-striped .progress-bar-danger {
@@ -6233,8 +6233,8 @@ a.list-group-item:hover, a.list-group-item:focus {
 a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus {
   z-index: 2;
   color: white;
-  background-color: #027ac1;
-  border-color: #027ac1;
+  background-color: #618fb0;
+  border-color: #618fb0;
 }
 /* line 78, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss */
 a.list-group-item.active .list-group-item-heading, a.list-group-item.active:hover .list-group-item-heading, a.list-group-item.active:focus .list-group-item-heading {
@@ -6242,18 +6242,18 @@ a.list-group-item.active .list-group-item-heading, a.list-group-item.active:hove
 }
 /* line 81, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss */
 a.list-group-item.active .list-group-item-text, a.list-group-item.active:hover .list-group-item-text, a.list-group-item.active:focus .list-group-item-text {
-  color: #91d5fe;
+  color: #e9eff4;
 }
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-success {
-  color: #4aaa43;
+  color: #56bc76;
   background-color: #dff0d8;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success {
-  color: #4aaa43;
+  color: #56bc76;
 }
 /* line 479, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success .list-group-item-heading {
@@ -6261,14 +6261,14 @@ a.list-group-item-success .list-group-item-heading {
 }
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success:hover, a.list-group-item-success:focus {
-  color: #4aaa43;
+  color: #56bc76;
   background-color: #d0e9c6;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success.active, a.list-group-item-success.active:hover, a.list-group-item-success.active:focus {
   color: #fff;
-  background-color: #4aaa43;
-  border-color: #4aaa43;
+  background-color: #56bc76;
+  border-color: #56bc76;
 }
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -6299,13 +6299,13 @@ a.list-group-item-info.active, a.list-group-item-info.active:hover, a.list-group
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-warning {
-  color: #8a6d3b;
+  color: #ffc427;
   background-color: #fcf8e3;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning {
-  color: #8a6d3b;
+  color: #ffc427;
 }
 /* line 479, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning .list-group-item-heading {
@@ -6313,25 +6313,25 @@ a.list-group-item-warning .list-group-item-heading {
 }
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning:hover, a.list-group-item-warning:focus {
-  color: #8a6d3b;
+  color: #ffc427;
   background-color: #faf2cc;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning.active, a.list-group-item-warning.active:hover, a.list-group-item-warning.active:focus {
   color: #fff;
-  background-color: #8a6d3b;
-  border-color: #8a6d3b;
+  background-color: #ffc427;
+  border-color: #ffc427;
 }
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-danger {
-  color: #e31a38;
+  color: #e5603b;
   background-color: #f2dede;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-danger {
-  color: #e31a38;
+  color: #e5603b;
 }
 /* line 479, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-danger .list-group-item-heading {
@@ -6339,14 +6339,14 @@ a.list-group-item-danger .list-group-item-heading {
 }
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-danger:hover, a.list-group-item-danger:focus {
-  color: #e31a38;
+  color: #e5603b;
   background-color: #ebcccc;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
   color: #fff;
-  background-color: #e31a38;
-  border-color: #e31a38;
+  background-color: #e5603b;
+  border-color: #e5603b;
 }
 
 /* line 103, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss */
@@ -6631,21 +6631,21 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 227, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-primary {
-  border-color: #027ac1;
+  border-color: #618fb0;
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-primary > .panel-heading {
   color: white;
-  background-color: #027ac1;
-  border-color: #027ac1;
+  background-color: #618fb0;
+  border-color: #618fb0;
 }
 /* line 412, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-primary > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #027ac1;
+  border-top-color: #618fb0;
 }
 /* line 417, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #027ac1;
+  border-bottom-color: #618fb0;
 }
 
 /* line 230, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
@@ -6654,7 +6654,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-success > .panel-heading {
-  color: #4aaa43;
+  color: #56bc76;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
@@ -6692,7 +6692,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-warning > .panel-heading {
-  color: #8a6d3b;
+  color: #ffc427;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
@@ -6711,7 +6711,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-danger > .panel-heading {
-  color: #e31a38;
+  color: #e5603b;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
@@ -9873,7 +9873,7 @@ a {
 .content {
   min-height: 100%;
   padding: 90px 40px 20px;
-  background-color: #f6f6f6;
+  background-color: #f1f1f1;
 }
 
 /* line 48, D:/projects/sing/sass/_base.scss */
@@ -10009,7 +10009,7 @@ a {
   top: 0;
   bottom: 0;
   text-align: center;
-  background: #f6f6f6;
+  background: #f1f1f1;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
@@ -10037,8 +10037,16 @@ a {
   padding: 15px 20px;
   background: white;
 }
+/* line 195, D:/projects/sing/sass/_base.scss */
+.widget > header {
+  margin-bottom: 10px;
+}
+/* line 197, D:/projects/sing/sass/_base.scss */
+.widget > header h1, .widget > header h2, .widget > header h3, .widget > header h4, .widget > header h5, .widget > header h6 {
+  margin: 0;
+}
 
-/* line 196, D:/projects/sing/sass/_base.scss */
+/* line 203, D:/projects/sing/sass/_base.scss */
 .widget-controls {
   position: absolute;
   top: 0;
@@ -10047,15 +10055,20 @@ a {
   font-size: 12px;
   word-spacing: 5px;
 }
-/* line 204, D:/projects/sing/sass/_base.scss */
+/* line 211, D:/projects/sing/sass/_base.scss */
+.widget-controls.left {
+  left: 0;
+  right: auto;
+}
+/* line 216, D:/projects/sing/sass/_base.scss */
 .widget-controls a {
   color: rgba(0, 0, 0, 0.25);
 }
-/* line 207, D:/projects/sing/sass/_base.scss */
+/* line 219, D:/projects/sing/sass/_base.scss */
 .widget-controls a:hover {
   color: rgba(0, 0, 0, 0.1);
 }
-/* line 212, D:/projects/sing/sass/_base.scss */
+/* line 224, D:/projects/sing/sass/_base.scss */
 .widget-controls .fa-refresh {
   position: relative;
   top: -1px;
@@ -10113,55 +10126,113 @@ a {
 }
 
 /* line 37, D:/projects/sing/sass/_utils.scss */
-.background-primary {
-  background-color: #027ac1;
+.bg-primary {
+  background-color: #618fb0;
 }
 
 /* line 41, D:/projects/sing/sass/_utils.scss */
-.background-success {
-  background-color: #4aaa43;
+.bg-success {
+  background-color: #56bc76;
 }
 
 /* line 45, D:/projects/sing/sass/_utils.scss */
-.background-info {
-  background-color: #5bc0de;
+.bg-info {
+  background-color: #4ab0ce;
 }
 
 /* line 49, D:/projects/sing/sass/_utils.scss */
-.background-warning {
+.bg-warning {
   background-color: #ffc427;
 }
 
 /* line 53, D:/projects/sing/sass/_utils.scss */
-.background-danger {
-  background-color: #e31a38;
+.bg-danger {
+  background-color: #e5603b;
 }
 
 /* line 57, D:/projects/sing/sass/_utils.scss */
-.text-white {
-  color: white;
+.bg-body {
+  background-color: #f1f1f1;
 }
 
 /* line 61, D:/projects/sing/sass/_utils.scss */
+.bg-body-light {
+  background-color: #f9f9f9;
+}
+
+/* line 65, D:/projects/sing/sass/_utils.scss */
+.text-white {
+  color: white !important;
+}
+
+/* line 69, D:/projects/sing/sass/_utils.scss */
+.text-light {
+  opacity: .8;
+}
+
+/* line 73, D:/projects/sing/sass/_utils.scss */
 .font-semi-bold {
   font-weight: 600;
 }
 
-/* line 65, D:/projects/sing/sass/_utils.scss */
+/* line 77, D:/projects/sing/sass/_utils.scss */
 .font-normal {
   font-weight: 400;
 }
 
-/* line 69, D:/projects/sing/sass/_utils.scss */
+/* line 81, D:/projects/sing/sass/_utils.scss */
 .font-bold {
   font-weight: 700;
 }
 
 /* small + .text-muted*/
-/* line 74, D:/projects/sing/sass/_utils.scss */
+/* line 86, D:/projects/sing/sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
+}
+
+/* .h* + .font-bold */
+/* line 96, D:/projects/sing/sass/_utils.scss */
+.value1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* line 96, D:/projects/sing/sass/_utils.scss */
+.value2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* line 96, D:/projects/sing/sass/_utils.scss */
+.value3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* line 96, D:/projects/sing/sass/_utils.scss */
+.value4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* line 96, D:/projects/sing/sass/_utils.scss */
+.value5 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* line 96, D:/projects/sing/sass/_utils.scss */
+.value6 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 @media print {
@@ -10503,4 +10574,29 @@ a {
 /* line 77, D:/projects/sing/sass/_widgets.scss */
 .widget-chart-changes .chart-additional-info {
   margin-top: 20px;
+}
+
+/***********************/
+/*  Chart Stats Simple */
+/***********************/
+/* line 88, D:/projects/sing/sass/_widgets.scss */
+.widget-chart-stats-simple > header h1, .widget-chart-stats-simple > header h2, .widget-chart-stats-simple > header h3, .widget-chart-stats-simple > header h4, .widget-chart-stats-simple > header h5, .widget-chart-stats-simple > header h6 {
+  margin-bottom: 5px;
+}
+/* line 93, D:/projects/sing/sass/_widgets.scss */
+.widget-chart-stats-simple .chart {
+  height: 260px;
+  margin: 10px -20px -15px;
+}
+/* line 96, D:/projects/sing/sass/_widgets.scss */
+.widget-chart-stats-simple .chart > * {
+  height: 100%;
+}
+
+/***********************/
+/*  Part:Chart Stats   */
+/***********************/
+/* line 106, D:/projects/sing/sass/_widgets.scss */
+.chart-stats {
+  border-top: 1px solid #eeeeee;
 }

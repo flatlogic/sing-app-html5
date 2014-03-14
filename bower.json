@@ -16,7 +16,8 @@
         "backbone": ">= 1.1.2",
         "jquery.sparkline": "latest",
         "d3": ">= 3.4.3",
-        "rickshaw": "latest"
+        "rickshaw": "latest",
+        "flot": "latest"
     },
     "private": true,
     "ignore": [
