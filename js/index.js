@@ -188,7 +188,6 @@ function initSalesChart(){
                 fill: false,
                 fillColor: { colors: [{ opacity:1 }, { opacity: 1}] }
             },
-            fillColor: "rgba(0, 0, 0, 1)",
             points: {
                 show: false,
                 fill: true
@@ -208,17 +207,7 @@ function initSalesChart(){
             tickColor: "rgba(255,255,255,1)",
             borderWidth: 0
         },
-        colors: [Sing.darken(Sing._grayLighter,.05), Sing._brandDanger],
-        xaxis: {
-            autoscaleMargin: 0,
-            ticks: 11,
-            tickDecimals: 0
-        },
-        yaxis: {
-            autoscaleMargin: 0.2,
-            ticks: 5,
-            tickDecimals: 0
-        }
+        colors: [Sing.darken(Sing._grayLighter,.05), Sing._brandDanger]
     });
 }
 
