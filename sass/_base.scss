@@ -41,7 +41,7 @@
 
 .content{
   min-height: 100%;
-  padding: (40 + $navbar-height) 40px 20px;
+  padding: (40 + $navbar-height) 40px $line-height-computed*2;
   background-color: $body-bg;
 }
 
@@ -69,7 +69,7 @@
 .sidebar-nav{
   padding: 10px 0;
   font-size: 14px;
-  @media (min-width: $screen-md){
+  @media (min-width: $screen-md) and (min-height: $screen-md-height){
     font-size: 16px;
   }
 
@@ -191,6 +191,7 @@
   position: relative;
   padding: $widget-padding-vertical $widget-padding-horizontal;
   background: $widget-bg-color;
+  border-radius: $border-radius-base;
 
   > header{
     margin-bottom: $line-height-computed/2;
@@ -224,5 +225,20 @@
   .fa-refresh{
     position: relative;
     top: -1px;
+  }
+}
+
+/***********************/
+/*        Forms        */
+/***********************/
+
+.form-actions{
+  margin: $line-height-computed 0 0;
+  padding: $line-height-computed;
+  background-color: $well-bg;
+
+  .form-horizontal & .row{
+    margin-left: ($grid-gutter-width/-2) - $line-height-computed;
+    margin-right: ($grid-gutter-width/-2) - $line-height-computed;
   }
 }

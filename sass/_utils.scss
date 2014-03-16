@@ -84,7 +84,7 @@
 
 /* small + .text-muted*/
 .deemphasize{
-  font-size: 85%;
+  font-size: $font-size-smaller;
   color: $text-muted;
 }
 
@@ -99,4 +99,9 @@ $i: 1;
     font-weight: $font-weight-bold;
   }
   $i: $i + 1;
+}
+
+.help{
+  font-size: $font-size-smaller;
+  color: $text-muted;
 }

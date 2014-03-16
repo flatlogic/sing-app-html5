@@ -427,7 +427,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #333333;
+  color: #555555;
   background-color: #f1f1f1;
 }
 
@@ -477,7 +477,7 @@ img {
 
 /* line 86, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
 .img-rounded {
-  border-radius: 6px;
+  border-radius: 1px;
 }
 
 /* line 93, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -486,7 +486,7 @@ img {
   line-height: 1.42857;
   background-color: #f1f1f1;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: inline-block;
@@ -960,7 +960,7 @@ code {
   color: #c7254e;
   background-color: #f9f2f4;
   white-space: nowrap;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 /* line 25, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_code.scss */
@@ -969,7 +969,7 @@ kbd {
   font-size: 90%;
   color: white;
   background-color: #333333;
-  border-radius: 3px;
+  border-radius: 0;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -985,7 +985,7 @@ pre {
   color: #333333;
   background-color: whitesmoke;
   border: 1px solid #cccccc;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 /* line 49, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_code.scss */
 pre code {
@@ -2398,7 +2398,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: inherit;
-  color: #333333;
+  color: #7c7c7c;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -2473,7 +2473,7 @@ output {
   background-color: white;
   background-image: none;
   border: 1px solid #cccccc;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -2481,10 +2481,10 @@ output {
 }
 /* line 915, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .form-control:focus {
-  border-color: #66afe9;
+  border-color: #218bc3;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(33, 139, 195, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(33, 139, 195, 0.6);
 }
 /* line 57, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .form-control::-moz-placeholder {
@@ -2599,7 +2599,7 @@ input[type="checkbox"],
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 938, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2629,7 +2629,7 @@ select[multiple].input-sm,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
+  border-radius: 1px;
 }
 
 /* line 938, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2777,7 +2777,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #959595;
 }
 
 @media (min-width: 768px) {
@@ -2884,7 +2884,7 @@ select[multiple].input-lg,
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3174,7 +3174,7 @@ select[multiple].input-lg,
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
+  border-radius: 1px;
 }
 
 /* line 128, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
@@ -3182,7 +3182,7 @@ select[multiple].input-lg,
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 132, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
@@ -3190,7 +3190,7 @@ select[multiple].input-lg,
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 140, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
@@ -4299,7 +4299,7 @@ input[type="button"].btn-block {
   background-color: white;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
@@ -4616,13 +4616,13 @@ input[type="button"].btn-block {
 }
 /* line 178, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
 .btn-group-vertical > .btn:first-child:not(:last-child) {
-  border-top-right-radius: 4px;
+  border-top-right-radius: 1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 /* line 182, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
 .btn-group-vertical > .btn:last-child:not(:first-child) {
-  border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 1px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4722,7 +4722,7 @@ input[type="button"].btn-block {
   text-align: center;
   background-color: #eeeeee;
   border: 1px solid #cccccc;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 /* line 81, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon.input-sm,
@@ -4730,7 +4730,7 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 5px 10px;
   font-size: 12px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 /* line 86, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon.input-lg,
@@ -4738,7 +4738,7 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 10px 16px;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 1px;
 }
 /* line 94, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon input[type="radio"],
@@ -4882,7 +4882,7 @@ input[type="button"].btn-block {
   margin-right: 2px;
   line-height: 1.42857;
   border: 1px solid transparent;
-  border-radius: 4px 4px 0 0;
+  border-radius: 1px 1px 0 0;
 }
 /* line 89, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs > li > a:hover {
@@ -4903,7 +4903,7 @@ input[type="button"].btn-block {
 }
 /* line 122, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-pills > li > a {
-  border-radius: 4px;
+  border-radius: 1px;
 }
 /* line 125, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-pills > li + li {
@@ -4962,7 +4962,7 @@ input[type="button"].btn-block {
 /* line 193, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
   margin-right: 0;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 /* line 201, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
@@ -4976,7 +4976,7 @@ input[type="button"].btn-block {
   /* line 206, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
   .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
     border-bottom: 1px solid #dddddd;
-    border-radius: 4px 4px 0 0;
+    border-radius: 1px 1px 0 0;
   }
   /* line 212, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
@@ -5181,7 +5181,7 @@ input[type="button"].btn-block {
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 /* line 192, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-toggle:focus {
@@ -5543,11 +5543,11 @@ input[type="button"].btn-block {
 
 /* line 6, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 8px 0;
   margin-bottom: 20px;
   list-style: none;
-  background-color: whitesmoke;
-  border-radius: 4px;
+  background-color: transparent;
+  border-radius: 1px;
 }
 /* line 13, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb > li {
@@ -5555,13 +5555,13 @@ input[type="button"].btn-block {
 }
 /* line 16, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb > li + li:before {
-  content: "/\00a0";
+  content: ">\00a0";
   padding: 0 5px;
-  color: #cccccc;
+  color: #555555;
 }
 /* line 23, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb > .active {
-  color: #999999;
+  color: #555555;
 }
 
 /* line 4, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss */
@@ -5569,7 +5569,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-left: 0;
   margin: 20px 0;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 /* line 10, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss */
 .pagination > li {
@@ -5592,14 +5592,14 @@ input[type="button"].btn-block {
 .pagination > li:first-child > a,
 .pagination > li:first-child > span {
   margin-left: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
+  border-bottom-left-radius: 1px;
+  border-top-left-radius: 1px;
 }
 /* line 33, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss */
 .pagination > li:last-child > a,
 .pagination > li:last-child > span {
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
 }
 /* line 42, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss */
 .pagination > li > a:hover, .pagination > li > a:focus,
@@ -5642,14 +5642,14 @@ input[type="button"].btn-block {
 /* line 564, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
-  border-bottom-left-radius: 6px;
-  border-top-left-radius: 6px;
+  border-bottom-left-radius: 1px;
+  border-top-left-radius: 1px;
 }
 /* line 570, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .pagination-lg > li:last-child > a,
 .pagination-lg > li:last-child > span {
-  border-bottom-right-radius: 6px;
-  border-top-right-radius: 6px;
+  border-bottom-right-radius: 1px;
+  border-top-right-radius: 1px;
 }
 
 /* line 558, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -5661,14 +5661,14 @@ input[type="button"].btn-block {
 /* line 564, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 /* line 570, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .pagination-sm > li:last-child > a,
 .pagination-sm > li:last-child > span {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 /* line 6, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pager.scss */
@@ -5878,7 +5878,7 @@ a.list-group-item.active > .badge,
 }
 /* line 22, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_jumbotron.scss */
 .container .jumbotron {
-  border-radius: 6px;
+  border-radius: 1px;
 }
 /* line 26, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron .container {
@@ -5910,7 +5910,7 @@ a.list-group-item.active > .badge,
   line-height: 1.42857;
   background-color: #f1f1f1;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -5926,7 +5926,7 @@ a.list-group-item.active > .badge,
 /* line 27, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_thumbnails.scss */
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #555555;
 }
 
 /* line 36, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_thumbnails.scss */
@@ -5941,7 +5941,7 @@ a.thumbnail.active {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 /* line 16, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
 .alert h4 {
@@ -6064,7 +6064,7 @@ a.thumbnail.active {
   height: 20px;
   margin-bottom: 20px;
   background-color: whitesmoke;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -6198,14 +6198,14 @@ a.thumbnail.active {
 }
 /* line 31, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss */
 .list-group-item:first-child {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 1px;
+  border-top-left-radius: 1px;
 }
 /* line 34, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss */
 .list-group-item:last-child {
   margin-bottom: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 1px;
+  border-bottom-left-radius: 1px;
 }
 /* line 40, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss */
 .list-group-item > .badge {
@@ -6366,7 +6366,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   margin-bottom: 20px;
   background-color: white;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -6389,8 +6389,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
 }
 /* line 27, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-heading > .dropdown .dropdown-toggle {
@@ -6414,8 +6414,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   padding: 10px 15px;
   background-color: whitesmoke;
   border-top: 1px solid #dddddd;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 /* line 59, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
@@ -6430,14 +6430,14 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 69, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .list-group:first-child .list-group-item:first-child {
   border-top: 0;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
 }
 /* line 76, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .list-group:last-child .list-group-item:last-child {
   border-bottom: 0;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 /* line 85, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
@@ -6453,8 +6453,8 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 103, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .table:first-child,
 .panel > .table-responsive:first-child > .table:first-child {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
 }
 /* line 110, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .table:first-child > thead:first-child > tr:first-child td:first-child,
@@ -6465,7 +6465,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {
-  border-top-left-radius: 3px;
+  border-top-left-radius: 0px;
 }
 /* line 114, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .table:first-child > thead:first-child > tr:first-child td:last-child,
@@ -6476,13 +6476,13 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,
 .panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {
-  border-top-right-radius: 3px;
+  border-top-right-radius: 0px;
 }
 /* line 122, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .table:last-child,
 .panel > .table-responsive:last-child > .table:last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 /* line 129, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,
@@ -6493,7 +6493,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {
-  border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 0px;
 }
 /* line 133, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,
@@ -6504,7 +6504,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,
 .panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {
-  border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 0px;
 }
 /* line 140, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel > .panel-body + .table,
@@ -6586,7 +6586,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 199, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-group .panel {
   margin-bottom: 0;
-  border-radius: 4px;
+  border-radius: 1px;
   overflow: hidden;
 }
 /* line 203, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
@@ -6731,7 +6731,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   margin-bottom: 20px;
   background-color: whitesmoke;
   border: 1px solid #e3e3e3;
-  border-radius: 4px;
+  border-radius: 1px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -6744,13 +6744,13 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 22, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_wells.scss */
 .well-lg {
   padding: 24px;
-  border-radius: 6px;
+  border-radius: 1px;
 }
 
 /* line 26, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_wells.scss */
 .well-sm {
   padding: 9px;
-  border-radius: 3px;
+  border-radius: 0;
 }
 
 /* line 6, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_close.scss */
@@ -6831,7 +6831,7 @@ button.close {
   background-color: white;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 1px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
@@ -6982,7 +6982,7 @@ button.close {
   text-align: center;
   text-decoration: none;
   background-color: black;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 /* line 35, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_tooltip.scss */
@@ -7069,7 +7069,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 6px;
+  border-radius: 1px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   white-space: normal;
@@ -9778,11 +9778,73 @@ button.close {
   content: "\f196";
 }
 
-/* line 5, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 7, D:/projects/sing/sass/_bootstrap-override.scss */
+h1 small,
+h1 .small, h2 small,
+h2 .small, h3 small,
+h3 .small, h4 small,
+h4 .small, h5 small,
+h5 .small, h6 small,
+h6 .small,
+.h1 small,
+.h1 .small, .h2 small,
+.h2 .small, .h3 small,
+.h3 .small, .h4 small,
+.h4 .small, .h5 small,
+.h5 .small, .h6 small,
+.h6 .small {
+  font-weight: 300;
+}
+
+/* line 18, D:/projects/sing/sass/_bootstrap-override.scss */
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 23, D:/projects/sing/sass/_bootstrap-override.scss */
+label {
+  font-weight: 400;
+}
+
+/* line 27, D:/projects/sing/sass/_bootstrap-override.scss */
+.help-block {
+  margin: 0;
+  font-size: 85%;
+  color: #999999;
+}
+
+/* line 33, D:/projects/sing/sass/_bootstrap-override.scss */
+legend {
+  padding-top: 20px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* line 39, D:/projects/sing/sass/_bootstrap-override.scss */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* line 47, D:/projects/sing/sass/_bootstrap-override.scss */
 .navbar {
   border: none;
   font-size: 13px;
   font-weight: 500;
+}
+
+/* line 58, D:/projects/sing/sass/_bootstrap-override.scss */
+.breadcrumb {
+  color: #999999;
+}
+/* line 61, D:/projects/sing/sass/_bootstrap-override.scss */
+.breadcrumb > .active {
+  font-weight: 600;
+}
+/* line 65, D:/projects/sing/sass/_bootstrap-override.scss */
+.content .breadcrumb {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /**
@@ -9802,6 +9864,7 @@ html, body {
 body {
   font-weight: 300;
   overflow-x: hidden;
+  padding-bottom: 100px;
 }
 
 /* line 1, D:/projects/sing/sass/_global-transitions.scss */
@@ -9872,7 +9935,7 @@ a {
 /* line 42, D:/projects/sing/sass/_base.scss */
 .content {
   min-height: 100%;
-  padding: 90px 40px 20px;
+  padding: 90px 40px 40px;
   background-color: #f1f1f1;
 }
 
@@ -9904,7 +9967,7 @@ a {
   padding: 10px 0;
   font-size: 14px;
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 670px) {
   /* line 69, D:/projects/sing/sass/_base.scss */
   .sidebar-nav {
     font-size: 16px;
@@ -10036,17 +10099,18 @@ a {
   position: relative;
   padding: 15px 20px;
   background: white;
+  border-radius: 1px;
 }
-/* line 195, D:/projects/sing/sass/_base.scss */
+/* line 196, D:/projects/sing/sass/_base.scss */
 .widget > header {
   margin-bottom: 10px;
 }
-/* line 197, D:/projects/sing/sass/_base.scss */
+/* line 198, D:/projects/sing/sass/_base.scss */
 .widget > header h1, .widget > header h2, .widget > header h3, .widget > header h4, .widget > header h5, .widget > header h6 {
   margin: 0;
 }
 
-/* line 203, D:/projects/sing/sass/_base.scss */
+/* line 204, D:/projects/sing/sass/_base.scss */
 .widget-controls {
   position: absolute;
   top: 0;
@@ -10055,23 +10119,38 @@ a {
   font-size: 12px;
   word-spacing: 5px;
 }
-/* line 211, D:/projects/sing/sass/_base.scss */
+/* line 212, D:/projects/sing/sass/_base.scss */
 .widget-controls.left {
   left: 0;
   right: auto;
 }
-/* line 216, D:/projects/sing/sass/_base.scss */
+/* line 217, D:/projects/sing/sass/_base.scss */
 .widget-controls a {
   color: rgba(0, 0, 0, 0.25);
 }
-/* line 219, D:/projects/sing/sass/_base.scss */
+/* line 220, D:/projects/sing/sass/_base.scss */
 .widget-controls a:hover {
   color: rgba(0, 0, 0, 0.1);
 }
-/* line 224, D:/projects/sing/sass/_base.scss */
+/* line 225, D:/projects/sing/sass/_base.scss */
 .widget-controls .fa-refresh {
   position: relative;
   top: -1px;
+}
+
+/***********************/
+/*        Forms        */
+/***********************/
+/* line 235, D:/projects/sing/sass/_base.scss */
+.form-actions {
+  margin: 20px 0 0;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+/* line 240, D:/projects/sing/sass/_base.scss */
+.form-horizontal .form-actions .row {
+  margin-left: -35px;
+  margin-right: -35px;
 }
 
 /***********************************/
@@ -10233,6 +10312,12 @@ a {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
+}
+
+/* line 104, D:/projects/sing/sass/_utils.scss */
+.help {
+  font-size: 85%;
+  color: #999999;
 }
 
 @media print {

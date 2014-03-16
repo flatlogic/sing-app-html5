@@ -1,3 +1,45 @@
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+  small,
+  .small {
+    font-weight: $headings-font-weight;
+  }
+}
+
+//
+// Forms
+// --------------------------------------------------
+
+
+.form-control {
+  &:focus{
+    @include box-shadow(none);
+  }
+}
+
+label {
+  font-weight: $font-weight-normal;
+}
+
+.help-block{
+  margin: 0;
+  font-size: $font-size-smaller;
+  color: $text-muted;
+}
+
+legend {
+  padding-top: $line-height-computed;
+  font-size: $font-size-base + 1;
+  font-weight: $font-weight-normal;
+}
+
+.form-group {
+  margin-bottom: $line-height-computed;
+}
+
 //
 // Navbars
 // --------------------------------------------------
@@ -6,4 +48,22 @@
   border: none;
   font-size: 13px;
   font-weight: 500;
+}
+
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  color: $gray-light;
+
+  > .active {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  .content &{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
