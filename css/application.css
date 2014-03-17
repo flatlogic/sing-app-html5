@@ -1,5 +1,3 @@
-@import url(../vendor/animate.css/animate.css);
-@import url(../vendor/rickshaw/rickshaw.css);
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -426,7 +424,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   color: #555555;
   background-color: #f1f1f1;
 }
@@ -483,7 +481,7 @@ img {
 /* line 93, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
 .img-thumbnail {
   padding: 4px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   background-color: #f1f1f1;
   border: 1px solid #dddddd;
   border-radius: 1px;
@@ -704,12 +702,12 @@ a.text-info:hover {
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-warning {
-  color: #ffc427;
+  color: #f0b518;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-warning:hover {
-  color: #f3b100;
+  color: #c8950d;
 }
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -824,7 +822,7 @@ dl {
 /* line 174, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_type.scss */
 dt,
 dd {
-  line-height: 1.42857;
+  line-height: 1.428571429;
 }
 
 /* line 177, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_type.scss */
@@ -894,7 +892,7 @@ blockquote small,
 blockquote .small {
   display: block;
   font-size: 80%;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   color: #999999;
 }
 /* line 245, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_type.scss */
@@ -942,7 +940,7 @@ blockquote:after {
 address {
   margin-bottom: 20px;
   font-style: normal;
-  line-height: 1.42857;
+  line-height: 1.428571429;
 }
 
 /* line 10, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_code.scss */
@@ -979,7 +977,7 @@ pre {
   padding: 9.5px;
   margin: 0 0 10px;
   font-size: 13px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -1085,12 +1083,12 @@ pre code {
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-1 {
-  width: 8.33333%;
+  width: 8.3333333333%;
 }
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-2 {
-  width: 16.66667%;
+  width: 16.6666666667%;
 }
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1100,12 +1098,12 @@ pre code {
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-4 {
-  width: 33.33333%;
+  width: 33.3333333333%;
 }
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-5 {
-  width: 41.66667%;
+  width: 41.6666666667%;
 }
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1115,12 +1113,12 @@ pre code {
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-7 {
-  width: 58.33333%;
+  width: 58.3333333333%;
 }
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-8 {
-  width: 66.66667%;
+  width: 66.6666666667%;
 }
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1130,12 +1128,12 @@ pre code {
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-10 {
-  width: 83.33333%;
+  width: 83.3333333333%;
 }
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-11 {
-  width: 91.66667%;
+  width: 91.6666666667%;
 }
 
 /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1150,12 +1148,12 @@ pre code {
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-pull-1 {
-  right: 8.33333%;
+  right: 8.3333333333%;
 }
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-pull-2 {
-  right: 16.66667%;
+  right: 16.6666666667%;
 }
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1165,12 +1163,12 @@ pre code {
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-pull-4 {
-  right: 33.33333%;
+  right: 33.3333333333%;
 }
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-pull-5 {
-  right: 41.66667%;
+  right: 41.6666666667%;
 }
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1180,12 +1178,12 @@ pre code {
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-pull-7 {
-  right: 58.33333%;
+  right: 58.3333333333%;
 }
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-pull-8 {
-  right: 66.66667%;
+  right: 66.6666666667%;
 }
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1195,12 +1193,12 @@ pre code {
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-pull-10 {
-  right: 83.33333%;
+  right: 83.3333333333%;
 }
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-pull-11 {
-  right: 91.66667%;
+  right: 91.6666666667%;
 }
 
 /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1215,12 +1213,12 @@ pre code {
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-push-1 {
-  left: 8.33333%;
+  left: 8.3333333333%;
 }
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-push-2 {
-  left: 16.66667%;
+  left: 16.6666666667%;
 }
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1230,12 +1228,12 @@ pre code {
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-push-4 {
-  left: 33.33333%;
+  left: 33.3333333333%;
 }
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-push-5 {
-  left: 41.66667%;
+  left: 41.6666666667%;
 }
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1245,12 +1243,12 @@ pre code {
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-push-7 {
-  left: 58.33333%;
+  left: 58.3333333333%;
 }
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-push-8 {
-  left: 66.66667%;
+  left: 66.6666666667%;
 }
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1260,12 +1258,12 @@ pre code {
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-push-10 {
-  left: 83.33333%;
+  left: 83.3333333333%;
 }
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-push-11 {
-  left: 91.66667%;
+  left: 91.6666666667%;
 }
 
 /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1280,12 +1278,12 @@ pre code {
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-offset-1 {
-  margin-left: 8.33333%;
+  margin-left: 8.3333333333%;
 }
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-offset-2 {
-  margin-left: 16.66667%;
+  margin-left: 16.6666666667%;
 }
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1295,12 +1293,12 @@ pre code {
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-offset-4 {
-  margin-left: 33.33333%;
+  margin-left: 33.3333333333%;
 }
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-offset-5 {
-  margin-left: 41.66667%;
+  margin-left: 41.6666666667%;
 }
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1310,12 +1308,12 @@ pre code {
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-offset-7 {
-  margin-left: 58.33333%;
+  margin-left: 58.3333333333%;
 }
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-offset-8 {
-  margin-left: 66.66667%;
+  margin-left: 66.6666666667%;
 }
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1325,12 +1323,12 @@ pre code {
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-offset-10 {
-  margin-left: 83.33333%;
+  margin-left: 83.3333333333%;
 }
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .col-xs-offset-11 {
-  margin-left: 91.66667%;
+  margin-left: 91.6666666667%;
 }
 
 /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1346,12 +1344,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-1 {
-    width: 8.33333%;
+    width: 8.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-2 {
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1361,12 +1359,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-4 {
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-5 {
-    width: 41.66667%;
+    width: 41.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1376,12 +1374,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-7 {
-    width: 58.33333%;
+    width: 58.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-8 {
-    width: 66.66667%;
+    width: 66.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1391,12 +1389,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-10 {
-    width: 83.33333%;
+    width: 83.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-11 {
-    width: 91.66667%;
+    width: 91.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1411,12 +1409,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-pull-1 {
-    right: 8.33333%;
+    right: 8.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-pull-2 {
-    right: 16.66667%;
+    right: 16.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1426,12 +1424,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-pull-4 {
-    right: 33.33333%;
+    right: 33.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-pull-5 {
-    right: 41.66667%;
+    right: 41.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1441,12 +1439,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-pull-7 {
-    right: 58.33333%;
+    right: 58.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-pull-8 {
-    right: 66.66667%;
+    right: 66.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1456,12 +1454,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-pull-10 {
-    right: 83.33333%;
+    right: 83.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-pull-11 {
-    right: 91.66667%;
+    right: 91.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1476,12 +1474,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-push-1 {
-    left: 8.33333%;
+    left: 8.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-push-2 {
-    left: 16.66667%;
+    left: 16.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1491,12 +1489,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-push-4 {
-    left: 33.33333%;
+    left: 33.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-push-5 {
-    left: 41.66667%;
+    left: 41.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1506,12 +1504,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-push-7 {
-    left: 58.33333%;
+    left: 58.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-push-8 {
-    left: 66.66667%;
+    left: 66.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1521,12 +1519,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-push-10 {
-    left: 83.33333%;
+    left: 83.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-push-11 {
-    left: 91.66667%;
+    left: 91.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1541,12 +1539,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-offset-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-offset-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1556,12 +1554,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-offset-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-offset-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1571,12 +1569,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-offset-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-offset-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1586,12 +1584,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-offset-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-sm-offset-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1607,12 +1605,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-1 {
-    width: 8.33333%;
+    width: 8.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-2 {
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1622,12 +1620,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-4 {
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-5 {
-    width: 41.66667%;
+    width: 41.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1637,12 +1635,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-7 {
-    width: 58.33333%;
+    width: 58.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-8 {
-    width: 66.66667%;
+    width: 66.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1652,12 +1650,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-10 {
-    width: 83.33333%;
+    width: 83.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-11 {
-    width: 91.66667%;
+    width: 91.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1672,12 +1670,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-pull-1 {
-    right: 8.33333%;
+    right: 8.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-pull-2 {
-    right: 16.66667%;
+    right: 16.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1687,12 +1685,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-pull-4 {
-    right: 33.33333%;
+    right: 33.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-pull-5 {
-    right: 41.66667%;
+    right: 41.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1702,12 +1700,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-pull-7 {
-    right: 58.33333%;
+    right: 58.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-pull-8 {
-    right: 66.66667%;
+    right: 66.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1717,12 +1715,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-pull-10 {
-    right: 83.33333%;
+    right: 83.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-pull-11 {
-    right: 91.66667%;
+    right: 91.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1737,12 +1735,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-push-1 {
-    left: 8.33333%;
+    left: 8.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-push-2 {
-    left: 16.66667%;
+    left: 16.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1752,12 +1750,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-push-4 {
-    left: 33.33333%;
+    left: 33.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-push-5 {
-    left: 41.66667%;
+    left: 41.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1767,12 +1765,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-push-7 {
-    left: 58.33333%;
+    left: 58.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-push-8 {
-    left: 66.66667%;
+    left: 66.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1782,12 +1780,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-push-10 {
-    left: 83.33333%;
+    left: 83.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-push-11 {
-    left: 91.66667%;
+    left: 91.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1802,12 +1800,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-offset-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-offset-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1817,12 +1815,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-offset-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-offset-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1832,12 +1830,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-offset-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-offset-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1847,12 +1845,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-offset-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-md-offset-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1868,12 +1866,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-1 {
-    width: 8.33333%;
+    width: 8.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-2 {
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1883,12 +1881,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-4 {
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-5 {
-    width: 41.66667%;
+    width: 41.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1898,12 +1896,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-7 {
-    width: 58.33333%;
+    width: 58.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-8 {
-    width: 66.66667%;
+    width: 66.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1913,12 +1911,12 @@ pre code {
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-10 {
-    width: 83.33333%;
+    width: 83.3333333333%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-11 {
-    width: 91.66667%;
+    width: 91.6666666667%;
   }
 
   /* line 825, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1933,12 +1931,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-pull-1 {
-    right: 8.33333%;
+    right: 8.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-pull-2 {
-    right: 16.66667%;
+    right: 16.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1948,12 +1946,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-pull-4 {
-    right: 33.33333%;
+    right: 33.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-pull-5 {
-    right: 41.66667%;
+    right: 41.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1963,12 +1961,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-pull-7 {
-    right: 58.33333%;
+    right: 58.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-pull-8 {
-    right: 66.66667%;
+    right: 66.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1978,12 +1976,12 @@ pre code {
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-pull-10 {
-    right: 83.33333%;
+    right: 83.3333333333%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-pull-11 {
-    right: 91.66667%;
+    right: 91.6666666667%;
   }
 
   /* line 835, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -1998,12 +1996,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-push-1 {
-    left: 8.33333%;
+    left: 8.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-push-2 {
-    left: 16.66667%;
+    left: 16.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2013,12 +2011,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-push-4 {
-    left: 33.33333%;
+    left: 33.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-push-5 {
-    left: 41.66667%;
+    left: 41.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2028,12 +2026,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-push-7 {
-    left: 58.33333%;
+    left: 58.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-push-8 {
-    left: 66.66667%;
+    left: 66.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2043,12 +2041,12 @@ pre code {
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-push-10 {
-    left: 83.33333%;
+    left: 83.3333333333%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-push-11 {
-    left: 91.66667%;
+    left: 91.6666666667%;
   }
 
   /* line 830, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2063,12 +2061,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-offset-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-offset-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2078,12 +2076,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-offset-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-offset-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2093,12 +2091,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-offset-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-offset-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2108,12 +2106,12 @@ pre code {
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-offset-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.3333333333%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
   .col-lg-offset-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.6666666667%;
   }
 
   /* line 840, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2145,7 +2143,7 @@ th {
 .table > tfoot > tr > th,
 .table > tfoot > tr > td {
   padding: 8px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
@@ -2457,7 +2455,7 @@ output {
   display: block;
   padding-top: 7px;
   font-size: 14px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   color: #555555;
 }
 
@@ -2468,7 +2466,7 @@ output {
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   color: #555555;
   background-color: white;
   background-image: none;
@@ -2710,29 +2708,29 @@ select[multiple].input-lg,
 .has-warning .checkbox,
 .has-warning .radio-inline,
 .has-warning .checkbox-inline {
-  color: #ffc427;
+  color: #f0b518;
 }
 /* line 879, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control {
-  border-color: #ffc427;
+  border-color: #f0b518;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control:focus {
-  border-color: #f3b100;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ffe08d;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ffe08d;
+  border-color: #c8950d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f6d478;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f6d478;
 }
 /* line 889, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .input-group-addon {
-  color: #ffc427;
-  border-color: #ffc427;
+  color: #f0b518;
+  border-color: #f0b518;
   background-color: #fcf8e3;
 }
 /* line 895, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control-feedback {
-  color: #ffc427;
+  color: #f0b518;
 }
 
 /* line 875, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2883,7 +2881,7 @@ select[multiple].input-lg,
   white-space: nowrap;
   padding: 6px 12px;
   font-size: 14px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   border-radius: 1px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2921,19 +2919,19 @@ select[multiple].input-lg,
 /* line 57, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-default {
   color: #333333;
-  background-color: white;
+  background-color: #f8f8f8;
   border-color: #cccccc;
 }
 /* line 508, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
   color: #333333;
-  background-color: #ebebeb;
+  background-color: #e4e4e4;
   border-color: #adadad;
 }
 /* line 513, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .open .btn-default.dropdown-toggle {
   color: #333333;
-  background-color: #ebebeb;
+  background-color: #e4e4e4;
   border-color: #adadad;
 }
 /* line 519, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2946,12 +2944,12 @@ select[multiple].input-lg,
 }
 /* line 532, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
-  background-color: white;
+  background-color: #f8f8f8;
   border-color: #cccccc;
 }
 /* line 538, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-default .badge {
-  color: white;
+  color: #f8f8f8;
   background-color: #333333;
 }
 
@@ -3069,20 +3067,20 @@ select[multiple].input-lg,
 /* line 72, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-warning {
   color: white;
-  background-color: #ffc427;
-  border-color: #ffbd0d;
+  background-color: #f0b518;
+  border-color: #e0a70f;
 }
 /* line 508, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active {
   color: white;
-  background-color: #fdb800;
-  border-color: #cf9700;
+  background-color: #d29c0e;
+  border-color: #a67c0b;
 }
 /* line 513, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .open .btn-warning.dropdown-toggle {
   color: white;
-  background-color: #fdb800;
-  border-color: #cf9700;
+  background-color: #d29c0e;
+  border-color: #a67c0b;
 }
 /* line 519, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-warning:active, .btn-warning.active {
@@ -3094,12 +3092,12 @@ select[multiple].input-lg,
 }
 /* line 532, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled]:active, .btn-warning[disabled].active, fieldset[disabled] .btn-warning, fieldset[disabled] .btn-warning:hover, fieldset[disabled] .btn-warning:focus, fieldset[disabled] .btn-warning:active, fieldset[disabled] .btn-warning.active {
-  background-color: #ffc427;
-  border-color: #ffbd0d;
+  background-color: #f0b518;
+  border-color: #e0a70f;
 }
 /* line 538, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-warning .badge {
-  color: #ffc427;
+  color: #f0b518;
   background-color: white;
 }
 
@@ -4322,8 +4320,8 @@ input[type="button"].btn-block {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.42857;
-  color: #333333;
+  line-height: 1.428571429;
+  color: #555555;
   white-space: nowrap;
 }
 
@@ -4382,7 +4380,7 @@ input[type="button"].btn-block {
   display: block;
   padding: 3px 20px;
   font-size: 12px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   color: #999999;
 }
 
@@ -4880,7 +4878,7 @@ input[type="button"].btn-block {
 /* line 84, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs > li > a {
   margin-right: 2px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   border: 1px solid transparent;
   border-radius: 1px 1px 0 0;
 }
@@ -5581,7 +5579,7 @@ input[type="button"].btn-block {
   position: relative;
   float: left;
   padding: 6px 12px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   text-decoration: none;
   color: #218bc3;
   background-color: white;
@@ -5793,11 +5791,11 @@ input[type="button"].btn-block {
 
 /* line 58, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
 .label-warning {
-  background-color: #ffc427;
+  background-color: #f0b518;
 }
 /* line 583, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .label-warning[href]:hover, .label-warning[href]:focus {
-  background-color: #f3b100;
+  background-color: #c8950d;
 }
 
 /* line 62, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
@@ -5907,7 +5905,7 @@ a.list-group-item.active > .badge,
   display: block;
   padding: 4px;
   margin-bottom: 20px;
-  line-height: 1.42857;
+  line-height: 1.428571429;
   background-color: #f1f1f1;
   border: 1px solid #dddddd;
   border-radius: 1px;
@@ -6008,7 +6006,7 @@ a.thumbnail.active {
 .alert-warning {
   background-color: #fcf8e3;
   border-color: #faebcc;
-  color: #ffc427;
+  color: #f0b518;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-warning hr {
@@ -6016,7 +6014,7 @@ a.thumbnail.active {
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-warning .alert-link {
-  color: #f3b100;
+  color: #c8950d;
 }
 
 /* line 65, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
@@ -6120,7 +6118,7 @@ a.thumbnail.active {
 
 /* line 74, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress-bar-warning {
-  background-color: #ffc427;
+  background-color: #f0b518;
 }
 /* line 626, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .progress-striped .progress-bar-warning {
@@ -6299,13 +6297,13 @@ a.list-group-item-info.active, a.list-group-item-info.active:hover, a.list-group
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-warning {
-  color: #ffc427;
+  color: #f0b518;
   background-color: #fcf8e3;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning {
-  color: #ffc427;
+  color: #f0b518;
 }
 /* line 479, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning .list-group-item-heading {
@@ -6313,14 +6311,14 @@ a.list-group-item-warning .list-group-item-heading {
 }
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning:hover, a.list-group-item-warning:focus {
-  color: #ffc427;
+  color: #f0b518;
   background-color: #faf2cc;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning.active, a.list-group-item-warning.active:hover, a.list-group-item-warning.active:focus {
   color: #fff;
-  background-color: #ffc427;
-  border-color: #ffc427;
+  background-color: #f0b518;
+  border-color: #f0b518;
 }
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -6692,7 +6690,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-warning > .panel-heading {
-  color: #ffc427;
+  color: #f0b518;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
@@ -6863,7 +6861,7 @@ button.close {
 .modal-header {
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
-  min-height: 16.42857px;
+  min-height: 16.428571429px;
 }
 
 /* line 82, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_modals.scss */
@@ -6874,7 +6872,7 @@ button.close {
 /* line 87, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_modals.scss */
 .modal-title {
   margin: 0;
-  line-height: 1.42857;
+  line-height: 1.428571429;
 }
 
 /* line 94, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_modals.scss */
@@ -7659,7 +7657,7 @@ button.close {
 /* makes the font 33% larger relative to the icon container */
 /* line 5, D:/projects/sing/vendor/font-awesome/scss/_larger.scss */
 .fa-lg {
-  font-size: 1.33333em;
+  font-size: 1.3333333333em;
   line-height: 0.75em;
   vertical-align: -15%;
 }
@@ -7686,14 +7684,14 @@ button.close {
 
 /* line 3, D:/projects/sing/vendor/font-awesome/scss/_fixed-width.scss */
 .fa-fw {
-  width: 1.28571em;
+  width: 1.2857142857em;
   text-align: center;
 }
 
 /* line 4, D:/projects/sing/vendor/font-awesome/scss/_list.scss */
 .fa-ul {
   padding-left: 0;
-  margin-left: 2.14286em;
+  margin-left: 2.1428571429em;
   list-style-type: none;
 }
 /* line 8, D:/projects/sing/vendor/font-awesome/scss/_list.scss */
@@ -7704,14 +7702,14 @@ button.close {
 /* line 10, D:/projects/sing/vendor/font-awesome/scss/_list.scss */
 .fa-li {
   position: absolute;
-  left: -2.14286em;
-  width: 2.14286em;
-  top: 0.14286em;
+  left: -2.1428571429em;
+  width: 2.1428571429em;
+  top: 0.1428571429em;
   text-align: center;
 }
 /* line 16, D:/projects/sing/vendor/font-awesome/scss/_list.scss */
 .fa-li.fa-lg {
-  left: -1.85714em;
+  left: -1.8571428571em;
 }
 
 /* line 4, D:/projects/sing/vendor/font-awesome/scss/_bordered-pulled.scss */
@@ -9778,6 +9776,3934 @@ button.close {
   content: "\f196";
 }
 
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+/* line 17, D:/projects/sing/vendor/animate.css/animate.css */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 24, D:/projects/sing/vendor/animate.css/animate.css */
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes bounce {
+  /* line 30, D:/projects/sing/vendor/animate.css/animate.css */
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 35, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  /* line 40, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  /* line 47, D:/projects/sing/vendor/animate.css/animate.css */
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 53, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  /* line 59, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+/* line 66, D:/projects/sing/vendor/animate.css/animate.css */
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+@-webkit-keyframes flash {
+  /* line 72, D:/projects/sing/vendor/animate.css/animate.css */
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  /* line 76, D:/projects/sing/vendor/animate.css/animate.css */
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  /* line 82, D:/projects/sing/vendor/animate.css/animate.css */
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  /* line 86, D:/projects/sing/vendor/animate.css/animate.css */
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+/* line 91, D:/projects/sing/vendor/animate.css/animate.css */
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes pulse {
+  /* line 99, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 104, D:/projects/sing/vendor/animate.css/animate.css */
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* line 109, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  /* line 116, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 122, D:/projects/sing/vendor/animate.css/animate.css */
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* line 128, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 135, D:/projects/sing/vendor/animate.css/animate.css */
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes shake {
+  /* line 141, D:/projects/sing/vendor/animate.css/animate.css */
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 146, D:/projects/sing/vendor/animate.css/animate.css */
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  /* line 151, D:/projects/sing/vendor/animate.css/animate.css */
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  /* line 158, D:/projects/sing/vendor/animate.css/animate.css */
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 164, D:/projects/sing/vendor/animate.css/animate.css */
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  /* line 170, D:/projects/sing/vendor/animate.css/animate.css */
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+/* line 177, D:/projects/sing/vendor/animate.css/animate.css */
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+
+@-webkit-keyframes swing {
+  /* line 183, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  /* line 188, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  /* line 193, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  /* line 198, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  /* line 203, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swing {
+  /* line 210, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+
+  /* line 216, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+
+  /* line 222, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+
+  /* line 228, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+
+  /* line 234, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+/* line 241, D:/projects/sing/vendor/animate.css/animate.css */
+.swing {
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+
+@-webkit-keyframes tada {
+  /* line 250, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 255, D:/projects/sing/vendor/animate.css/animate.css */
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  /* line 260, D:/projects/sing/vendor/animate.css/animate.css */
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  /* line 265, D:/projects/sing/vendor/animate.css/animate.css */
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  /* line 270, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes tada {
+  /* line 277, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 283, D:/projects/sing/vendor/animate.css/animate.css */
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    -ms-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  /* line 289, D:/projects/sing/vendor/animate.css/animate.css */
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  /* line 295, D:/projects/sing/vendor/animate.css/animate.css */
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  /* line 301, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* line 308, D:/projects/sing/vendor/animate.css/animate.css */
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes wobble {
+  /* line 316, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  /* line 321, D:/projects/sing/vendor/animate.css/animate.css */
+  15% {
+    -webkit-transform: translateX(-25%) rotate(-5deg);
+    transform: translateX(-25%) rotate(-5deg);
+  }
+
+  /* line 326, D:/projects/sing/vendor/animate.css/animate.css */
+  30% {
+    -webkit-transform: translateX(20%) rotate(3deg);
+    transform: translateX(20%) rotate(3deg);
+  }
+
+  /* line 331, D:/projects/sing/vendor/animate.css/animate.css */
+  45% {
+    -webkit-transform: translateX(-15%) rotate(-3deg);
+    transform: translateX(-15%) rotate(-3deg);
+  }
+
+  /* line 336, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    -webkit-transform: translateX(10%) rotate(2deg);
+    transform: translateX(10%) rotate(2deg);
+  }
+
+  /* line 341, D:/projects/sing/vendor/animate.css/animate.css */
+  75% {
+    -webkit-transform: translateX(-5%) rotate(-1deg);
+    transform: translateX(-5%) rotate(-1deg);
+  }
+
+  /* line 346, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes wobble {
+  /* line 353, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  /* line 359, D:/projects/sing/vendor/animate.css/animate.css */
+  15% {
+    -webkit-transform: translateX(-25%) rotate(-5deg);
+    -ms-transform: translateX(-25%) rotate(-5deg);
+    transform: translateX(-25%) rotate(-5deg);
+  }
+
+  /* line 365, D:/projects/sing/vendor/animate.css/animate.css */
+  30% {
+    -webkit-transform: translateX(20%) rotate(3deg);
+    -ms-transform: translateX(20%) rotate(3deg);
+    transform: translateX(20%) rotate(3deg);
+  }
+
+  /* line 371, D:/projects/sing/vendor/animate.css/animate.css */
+  45% {
+    -webkit-transform: translateX(-15%) rotate(-3deg);
+    -ms-transform: translateX(-15%) rotate(-3deg);
+    transform: translateX(-15%) rotate(-3deg);
+  }
+
+  /* line 377, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    -webkit-transform: translateX(10%) rotate(2deg);
+    -ms-transform: translateX(10%) rotate(2deg);
+    transform: translateX(10%) rotate(2deg);
+  }
+
+  /* line 383, D:/projects/sing/vendor/animate.css/animate.css */
+  75% {
+    -webkit-transform: translateX(-5%) rotate(-1deg);
+    -ms-transform: translateX(-5%) rotate(-1deg);
+    transform: translateX(-5%) rotate(-1deg);
+  }
+
+  /* line 389, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+/* line 396, D:/projects/sing/vendor/animate.css/animate.css */
+.wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+}
+
+@-webkit-keyframes bounceIn {
+  /* line 402, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+
+  /* line 408, D:/projects/sing/vendor/animate.css/animate.css */
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  /* line 414, D:/projects/sing/vendor/animate.css/animate.css */
+  70% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  /* line 419, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  /* line 426, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+
+  /* line 433, D:/projects/sing/vendor/animate.css/animate.css */
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  /* line 440, D:/projects/sing/vendor/animate.css/animate.css */
+  70% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  /* line 446, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* line 453, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+@-webkit-keyframes bounceInDown {
+  /* line 459, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  /* line 465, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  /* line 471, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  /* line 476, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+  /* line 483, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  /* line 490, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+  /* line 497, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  /* line 503, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 510, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+
+@-webkit-keyframes bounceInLeft {
+  /* line 516, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  /* line 522, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+
+  /* line 528, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  /* line 533, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceInLeft {
+  /* line 540, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  /* line 547, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+
+  /* line 554, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  /* line 560, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 567, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+@-webkit-keyframes bounceInRight {
+  /* line 573, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  /* line 579, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+  /* line 585, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  /* line 590, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceInRight {
+  /* line 597, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  /* line 604, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+  /* line 611, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+
+  /* line 617, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 624, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+
+@-webkit-keyframes bounceInUp {
+  /* line 630, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  /* line 636, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  /* line 642, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  /* line 647, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInUp {
+  /* line 654, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  /* line 661, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+
+  /* line 668, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+
+  /* line 674, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 681, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+
+@-webkit-keyframes bounceOut {
+  /* line 687, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 692, D:/projects/sing/vendor/animate.css/animate.css */
+  25% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  /* line 697, D:/projects/sing/vendor/animate.css/animate.css */
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* line 703, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+}
+
+@keyframes bounceOut {
+  /* line 711, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  /* line 717, D:/projects/sing/vendor/animate.css/animate.css */
+  25% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  /* line 723, D:/projects/sing/vendor/animate.css/animate.css */
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  /* line 730, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+}
+
+/* line 738, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceOut {
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut;
+}
+
+@-webkit-keyframes bounceOutDown {
+  /* line 744, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 749, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  /* line 755, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+@keyframes bounceOutDown {
+  /* line 763, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 769, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  /* line 776, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+/* line 784, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceOutDown {
+  -webkit-animation-name: bounceOutDown;
+  animation-name: bounceOutDown;
+}
+
+@-webkit-keyframes bounceOutLeft {
+  /* line 790, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 795, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  /* line 801, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+@keyframes bounceOutLeft {
+  /* line 809, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 815, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  /* line 822, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+/* line 830, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceOutLeft {
+  -webkit-animation-name: bounceOutLeft;
+  animation-name: bounceOutLeft;
+}
+
+@-webkit-keyframes bounceOutRight {
+  /* line 836, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 841, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  /* line 847, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes bounceOutRight {
+  /* line 855, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 861, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  /* line 868, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+/* line 876, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceOutRight {
+  -webkit-animation-name: bounceOutRight;
+  animation-name: bounceOutRight;
+}
+
+@-webkit-keyframes bounceOutUp {
+  /* line 882, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 887, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  /* line 893, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes bounceOutUp {
+  /* line 901, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 907, D:/projects/sing/vendor/animate.css/animate.css */
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  /* line 914, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+/* line 922, D:/projects/sing/vendor/animate.css/animate.css */
+.bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 928, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 932, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 938, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 942, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 947, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+  /* line 953, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  /* line 959, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  /* line 967, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  /* line 974, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 982, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDownBig {
+  /* line 988, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  /* line 994, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDownBig {
+  /* line 1002, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  /* line 1009, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 1017, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+
+@-webkit-keyframes fadeInLeft {
+  /* line 1023, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  /* line 1029, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  /* line 1037, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  /* line 1044, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 1052, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+  /* line 1058, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  /* line 1064, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeftBig {
+  /* line 1072, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  /* line 1079, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 1087, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+
+@-webkit-keyframes fadeInRight {
+  /* line 1093, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  /* line 1099, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  /* line 1107, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  /* line 1114, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 1122, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInRightBig {
+  /* line 1128, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  /* line 1134, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRightBig {
+  /* line 1142, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  /* line 1149, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 1157, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+@-webkit-keyframes fadeInUp {
+  /* line 1163, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  /* line 1169, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  /* line 1177, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  /* line 1184, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 1192, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  /* line 1198, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  /* line 1204, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpBig {
+  /* line 1212, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+
+  /* line 1219, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 1227, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+
+@-webkit-keyframes fadeOut {
+  /* line 1233, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 1237, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  /* line 1243, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 1247, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 1252, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOutDown {
+  /* line 1258, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 1264, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeOutDown {
+  /* line 1272, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 1279, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+/* line 1287, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeOutDownBig {
+  /* line 1293, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 1299, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+@keyframes fadeOutDownBig {
+  /* line 1307, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 1314, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+    -ms-transform: translateY(2000px);
+    transform: translateY(2000px);
+  }
+}
+
+/* line 1322, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOutDownBig {
+  -webkit-animation-name: fadeOutDownBig;
+  animation-name: fadeOutDownBig;
+}
+
+@-webkit-keyframes fadeOutLeft {
+  /* line 1328, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 1334, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  /* line 1342, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 1349, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+}
+
+/* line 1357, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutLeftBig {
+  /* line 1363, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 1369, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+@keyframes fadeOutLeftBig {
+  /* line 1377, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 1384, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+/* line 1392, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOutLeftBig {
+  -webkit-animation-name: fadeOutLeftBig;
+  animation-name: fadeOutLeftBig;
+}
+
+@-webkit-keyframes fadeOutRight {
+  /* line 1398, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 1404, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+@keyframes fadeOutRight {
+  /* line 1412, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 1419, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}
+
+/* line 1427, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+@-webkit-keyframes fadeOutRightBig {
+  /* line 1433, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 1439, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes fadeOutRightBig {
+  /* line 1447, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 1454, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+/* line 1462, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOutRightBig {
+  -webkit-animation-name: fadeOutRightBig;
+  animation-name: fadeOutRightBig;
+}
+
+@-webkit-keyframes fadeOutUp {
+  /* line 1468, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 1474, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeOutUp {
+  /* line 1482, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 1489, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+/* line 1497, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutUpBig {
+  /* line 1503, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 1509, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  /* line 1517, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 1524, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+/* line 1532, D:/projects/sing/vendor/animate.css/animate.css */
+.fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+}
+
+@-webkit-keyframes flip {
+  /* line 1538, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  /* line 1545, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  /* line 1552, D:/projects/sing/vendor/animate.css/animate.css */
+  50% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  /* line 1559, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  /* line 1566, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip {
+  /* line 1575, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -ms-transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  /* line 1583, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -ms-transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  /* line 1591, D:/projects/sing/vendor/animate.css/animate.css */
+  50% {
+    -webkit-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -ms-transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  /* line 1599, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    -ms-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  /* line 1607, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -ms-transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+/* line 1616, D:/projects/sing/vendor/animate.css/animate.css */
+.animated.flip {
+  -webkit-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+}
+
+@-webkit-keyframes flipInX {
+  /* line 1625, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 1631, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  /* line 1636, D:/projects/sing/vendor/animate.css/animate.css */
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  /* line 1641, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInX {
+  /* line 1649, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+
+  /* line 1656, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: perspective(400px) rotateX(-10deg);
+    -ms-transform: perspective(400px) rotateX(-10deg);
+    transform: perspective(400px) rotateX(-10deg);
+  }
+
+  /* line 1662, D:/projects/sing/vendor/animate.css/animate.css */
+  70% {
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    -ms-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
+  }
+
+  /* line 1668, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* line 1676, D:/projects/sing/vendor/animate.css/animate.css */
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+
+@-webkit-keyframes flipInY {
+  /* line 1685, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+
+  /* line 1691, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+    transform: perspective(400px) rotateY(-10deg);
+  }
+
+  /* line 1696, D:/projects/sing/vendor/animate.css/animate.css */
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg);
+    transform: perspective(400px) rotateY(10deg);
+  }
+
+  /* line 1701, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipInY {
+  /* line 1709, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    -ms-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+
+  /* line 1716, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+    -ms-transform: perspective(400px) rotateY(-10deg);
+    transform: perspective(400px) rotateY(-10deg);
+  }
+
+  /* line 1722, D:/projects/sing/vendor/animate.css/animate.css */
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg);
+    -ms-transform: perspective(400px) rotateY(10deg);
+    transform: perspective(400px) rotateY(10deg);
+  }
+
+  /* line 1728, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    -ms-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* line 1736, D:/projects/sing/vendor/animate.css/animate.css */
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
+@-webkit-keyframes flipOutX {
+  /* line 1745, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  /* line 1751, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutX {
+  /* line 1759, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);
+    opacity: 1;
+  }
+
+  /* line 1766, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+/* line 1774, D:/projects/sing/vendor/animate.css/animate.css */
+.flipOutX {
+  -webkit-animation-name: flipOutX;
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+
+@-webkit-keyframes flipOutY {
+  /* line 1783, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  /* line 1789, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutY {
+  /* line 1797, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    -ms-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+  }
+
+  /* line 1804, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    -ms-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+/* line 1812, D:/projects/sing/vendor/animate.css/animate.css */
+.flipOutY {
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipOutY;
+  animation-name: flipOutY;
+}
+
+@-webkit-keyframes lightSpeedIn {
+  /* line 1821, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+
+  /* line 1827, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    -webkit-transform: translateX(-20%) skewX(30deg);
+    transform: translateX(-20%) skewX(30deg);
+    opacity: 1;
+  }
+
+  /* line 1833, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateX(0%) skewX(-15deg);
+    transform: translateX(0%) skewX(-15deg);
+    opacity: 1;
+  }
+
+  /* line 1839, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes lightSpeedIn {
+  /* line 1847, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    -ms-transform: translateX(100%) skewX(-30deg);
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+
+  /* line 1854, D:/projects/sing/vendor/animate.css/animate.css */
+  60% {
+    -webkit-transform: translateX(-20%) skewX(30deg);
+    -ms-transform: translateX(-20%) skewX(30deg);
+    transform: translateX(-20%) skewX(30deg);
+    opacity: 1;
+  }
+
+  /* line 1861, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: translateX(0%) skewX(-15deg);
+    -ms-transform: translateX(0%) skewX(-15deg);
+    transform: translateX(0%) skewX(-15deg);
+    opacity: 1;
+  }
+
+  /* line 1868, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    -ms-transform: translateX(0%) skewX(0deg);
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+}
+
+/* line 1876, D:/projects/sing/vendor/animate.css/animate.css */
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes lightSpeedOut {
+  /* line 1884, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  /* line 1890, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  /* line 1898, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0%) skewX(0deg);
+    -ms-transform: translateX(0%) skewX(0deg);
+    transform: translateX(0%) skewX(0deg);
+    opacity: 1;
+  }
+
+  /* line 1905, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(100%) skewX(-30deg);
+    -ms-transform: translateX(100%) skewX(-30deg);
+    transform: translateX(100%) skewX(-30deg);
+    opacity: 0;
+  }
+}
+
+/* line 1913, D:/projects/sing/vendor/animate.css/animate.css */
+.lightSpeedOut {
+  -webkit-animation-name: lightSpeedOut;
+  animation-name: lightSpeedOut;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes rotateIn {
+  /* line 1921, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(-200deg);
+    transform: rotate(-200deg);
+    opacity: 0;
+  }
+
+  /* line 1929, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  /* line 1939, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(-200deg);
+    -ms-transform: rotate(-200deg);
+    transform: rotate(-200deg);
+    opacity: 0;
+  }
+
+  /* line 1949, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/* line 1960, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateIn {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+}
+
+@-webkit-keyframes rotateInDownLeft {
+  /* line 1966, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 1974, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownLeft {
+  /* line 1984, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 1994, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/* line 2005, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateInDownLeft {
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+}
+
+@-webkit-keyframes rotateInDownRight {
+  /* line 2011, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2019, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInDownRight {
+  /* line 2029, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2039, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/* line 2050, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateInDownRight {
+  -webkit-animation-name: rotateInDownRight;
+  animation-name: rotateInDownRight;
+}
+
+@-webkit-keyframes rotateInUpLeft {
+  /* line 2056, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2064, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpLeft {
+  /* line 2074, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* line 2084, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/* line 2095, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateInUpLeft {
+  -webkit-animation-name: rotateInUpLeft;
+  animation-name: rotateInUpLeft;
+}
+
+@-webkit-keyframes rotateInUpRight {
+  /* line 2101, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2109, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateInUpRight {
+  /* line 2119, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  /* line 2129, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/* line 2140, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateInUpRight {
+  -webkit-animation-name: rotateInUpRight;
+  animation-name: rotateInUpRight;
+}
+
+@-webkit-keyframes rotateOut {
+  /* line 2146, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2154, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(200deg);
+    transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOut {
+  /* line 2164, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2174, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotate(200deg);
+    -ms-transform: rotate(200deg);
+    transform: rotate(200deg);
+    opacity: 0;
+  }
+}
+
+/* line 2185, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateOut {
+  -webkit-animation-name: rotateOut;
+  animation-name: rotateOut;
+}
+
+@-webkit-keyframes rotateOutDownLeft {
+  /* line 2191, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2199, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownLeft {
+  /* line 2209, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2219, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+/* line 2230, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateOutDownLeft {
+  -webkit-animation-name: rotateOutDownLeft;
+  animation-name: rotateOutDownLeft;
+}
+
+@-webkit-keyframes rotateOutDownRight {
+  /* line 2236, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2244, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutDownRight {
+  /* line 2254, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2264, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+/* line 2275, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateOutDownRight {
+  -webkit-animation-name: rotateOutDownRight;
+  animation-name: rotateOutDownRight;
+}
+
+@-webkit-keyframes rotateOutUpLeft {
+  /* line 2281, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2289, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpLeft {
+  /* line 2299, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2309, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+/* line 2320, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateOutUpLeft {
+  -webkit-animation-name: rotateOutUpLeft;
+  animation-name: rotateOutUpLeft;
+}
+
+@-webkit-keyframes rotateOutUpRight {
+  /* line 2326, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2334, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateOutUpRight {
+  /* line 2344, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+
+  /* line 2354, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform-origin: right bottom;
+    -ms-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
+
+/* line 2365, D:/projects/sing/vendor/animate.css/animate.css */
+.rotateOutUpRight {
+  -webkit-animation-name: rotateOutUpRight;
+  animation-name: rotateOutUpRight;
+}
+
+@-webkit-keyframes slideInDown {
+  /* line 2371, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  /* line 2377, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  /* line 2384, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+  /* line 2391, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/* line 2398, D:/projects/sing/vendor/animate.css/animate.css */
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+@-webkit-keyframes slideInLeft {
+  /* line 2404, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  /* line 2410, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  /* line 2417, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  /* line 2424, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 2431, D:/projects/sing/vendor/animate.css/animate.css */
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+@-webkit-keyframes slideInRight {
+  /* line 2437, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  /* line 2443, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  /* line 2450, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  /* line 2457, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/* line 2464, D:/projects/sing/vendor/animate.css/animate.css */
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+@-webkit-keyframes slideOutLeft {
+  /* line 2470, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 2475, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+@keyframes slideOutLeft {
+  /* line 2483, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 2489, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+}
+
+/* line 2497, D:/projects/sing/vendor/animate.css/animate.css */
+.slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+}
+
+@-webkit-keyframes slideOutRight {
+  /* line 2503, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 2508, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes slideOutRight {
+  /* line 2516, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  /* line 2522, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+}
+
+/* line 2530, D:/projects/sing/vendor/animate.css/animate.css */
+.slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+
+@-webkit-keyframes slideOutUp {
+  /* line 2536, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 2541, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes slideOutUp {
+  /* line 2549, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  /* line 2555, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    -ms-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+}
+
+/* line 2563, D:/projects/sing/vendor/animate.css/animate.css */
+.slideOutUp {
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
+}
+
+@-webkit-keyframes hinge {
+  /* line 2569, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 2578, D:/projects/sing/vendor/animate.css/animate.css */
+  20%, 60% {
+    -webkit-transform: rotate(80deg);
+    transform: rotate(80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 2587, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 2596, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: rotate(60deg) translateY(0);
+    transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 2606, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateY(700px);
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+@keyframes hinge {
+  /* line 2614, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 2625, D:/projects/sing/vendor/animate.css/animate.css */
+  20%, 60% {
+    -webkit-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    transform: rotate(80deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 2636, D:/projects/sing/vendor/animate.css/animate.css */
+  40% {
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 2647, D:/projects/sing/vendor/animate.css/animate.css */
+  80% {
+    -webkit-transform: rotate(60deg) translateY(0);
+    -ms-transform: rotate(60deg) translateY(0);
+    transform: rotate(60deg) translateY(0);
+    opacity: 1;
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  /* line 2659, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    -webkit-transform: translateY(700px);
+    -ms-transform: translateY(700px);
+    transform: translateY(700px);
+    opacity: 0;
+  }
+}
+
+/* line 2667, D:/projects/sing/vendor/animate.css/animate.css */
+.hinge {
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes rollIn {
+  /* line 2675, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotate(-120deg);
+    transform: translateX(-100%) rotate(-120deg);
+  }
+
+  /* line 2681, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes rollIn {
+  /* line 2689, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%) rotate(-120deg);
+    -ms-transform: translateX(-100%) rotate(-120deg);
+    transform: translateX(-100%) rotate(-120deg);
+  }
+
+  /* line 2696, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+/* line 2704, D:/projects/sing/vendor/animate.css/animate.css */
+.rollIn {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@-webkit-keyframes rollOut {
+  /* line 2712, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+
+  /* line 2718, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(120deg);
+    transform: translateX(100%) rotate(120deg);
+  }
+}
+
+@keyframes rollOut {
+  /* line 2726, D:/projects/sing/vendor/animate.css/animate.css */
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+
+  /* line 2733, D:/projects/sing/vendor/animate.css/animate.css */
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(120deg);
+    -ms-transform: translateX(100%) rotate(120deg);
+    transform: translateX(100%) rotate(120deg);
+  }
+}
+
+/* line 2741, D:/projects/sing/vendor/animate.css/animate.css */
+.rollOut {
+  -webkit-animation-name: rollOut;
+  animation-name: rollOut;
+}
+
+/*!
+ * bootstrap-select v1.5.2
+ * http://silviomoreto.github.io/bootstrap-select/
+ *
+ * Copyright 2013 bootstrap-select
+ * Licensed under the MIT license
+ */
+/* line 10, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group:not(.input-group-btn),
+.bootstrap-select.btn-group[class*="span"] {
+  float: none;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+/* line 18, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.form-search .bootstrap-select.btn-group,
+.form-inline .bootstrap-select.btn-group,
+.navbar-form .bootstrap-select.btn-group,
+.form-horizontal .bootstrap-select.btn-group {
+  margin-bottom: 0;
+}
+
+/* line 22, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.form-control {
+  margin-bottom: 0;
+  padding: 0;
+  border: none;
+}
+
+/* line 30, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group.pull-right,
+.bootstrap-select.btn-group[class*="span"].pull-right,
+.row-fluid .bootstrap-select.btn-group[class*="span"].pull-right {
+  float: right;
+}
+
+/* line 34, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.input-append .bootstrap-select.btn-group {
+  margin-left: -1px;
+}
+
+/* line 38, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.input-prepend .bootstrap-select.btn-group {
+  margin-right: -1px;
+}
+
+/* line 42, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 220px;
+}
+
+/* line 46, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select {
+  /*width: 220px\9; IE8 and below*/
+  width: 220px\0;
+  /*IE9 and below*/
+}
+
+/* line 51, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.form-control:not([class*="span"]) {
+  width: 100%;
+}
+
+/* line 55, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select > .btn {
+  width: 100%;
+  padding-right: 25px;
+}
+
+/* line 60, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.error .bootstrap-select .btn {
+  border: 1px solid #b94a48;
+}
+
+/* line 64, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.show-menu-arrow.open > .btn {
+  z-index: 2051;
+}
+
+/* line 68, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select .btn:focus {
+  outline: thin dotted #333333 !important;
+  outline: 5px auto -webkit-focus-ring-color !important;
+  outline-offset: -2px;
+}
+
+/* line 74, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .btn .filter-option {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  text-align: left;
+}
+
+/* line 82, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .btn .caret {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+
+/* line 91, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group > .disabled,
+.bootstrap-select.btn-group .dropdown-menu li.disabled > a {
+  cursor: not-allowed;
+}
+
+/* line 95, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group > .disabled:focus {
+  outline: none !important;
+}
+
+/* line 99, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group[class*="span"] .btn {
+  width: 100%;
+}
+
+/* line 103, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu {
+  min-width: 100%;
+  z-index: 2000;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 111, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu.inner {
+  position: static;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 124, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu dt {
+  display: block;
+  padding: 3px 20px;
+  cursor: default;
+}
+
+/* line 130, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .div-contain {
+  overflow: hidden;
+}
+
+/* line 134, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu li {
+  position: relative;
+}
+
+/* line 138, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu li > a.opt {
+  position: relative;
+  padding-left: 35px;
+}
+
+/* line 143, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu li > a {
+  cursor: pointer;
+}
+
+/* line 147, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu li > dt small {
+  font-weight: normal;
+}
+
+/* line 151, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a i.check-mark {
+  position: absolute;
+  display: inline-block;
+  right: 15px;
+  margin-top: 2.5px;
+}
+
+/* line 158, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu li a i.check-mark {
+  display: none;
+}
+
+/* line 162, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group.show-tick .dropdown-menu li a span.text {
+  margin-right: 34px;
+}
+
+/* line 166, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu li small {
+  padding-left: 0.5em;
+}
+
+/* line 172, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu li:not(.disabled) > a:hover small,
+.bootstrap-select.btn-group .dropdown-menu li:not(.disabled) > a:focus small,
+.bootstrap-select.btn-group .dropdown-menu li.active:not(.disabled) > a small {
+  color: #64b1d8;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* line 177, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu li > dt small {
+  font-weight: normal;
+}
+
+/* line 181, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.show-menu-arrow .dropdown-toggle:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #CCC;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: -4px;
+  left: 9px;
+  display: none;
+}
+
+/* line 194, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.show-menu-arrow .dropdown-toggle:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  position: absolute;
+  bottom: -4px;
+  left: 10px;
+  display: none;
+}
+
+/* line 206, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.show-menu-arrow.dropup .dropdown-toggle:before {
+  bottom: auto;
+  top: -3px;
+  border-top: 7px solid #ccc;
+  border-bottom: 0;
+  border-top-color: rgba(0, 0, 0, 0.2);
+}
+
+/* line 214, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.show-menu-arrow.dropup .dropdown-toggle:after {
+  bottom: auto;
+  top: -3px;
+  border-top: 6px solid #ffffff;
+  border-bottom: 0;
+}
+
+/* line 221, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.show-menu-arrow.pull-right .dropdown-toggle:before {
+  right: 12px;
+  left: auto;
+}
+
+/* line 225, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.show-menu-arrow.pull-right .dropdown-toggle:after {
+  right: 13px;
+  left: auto;
+}
+
+/* line 231, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.show-menu-arrow.open > .dropdown-toggle:before,
+.bootstrap-select.show-menu-arrow.open > .dropdown-toggle:after {
+  display: block;
+}
+
+/* line 235, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .no-results {
+  padding: 3px;
+  background: #f5f5f5;
+  margin: 0 5px;
+}
+
+/* line 241, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group .dropdown-menu .notify {
+  position: absolute;
+  bottom: 5px;
+  width: 96%;
+  margin: 0 2%;
+  min-height: 26px;
+  padding: 3px 5px;
+  background: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+  opacity: 0.9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 258, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.mobile-device {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block !important;
+  width: 100%;
+  height: 100% !important;
+  opacity: 0;
+}
+
+/* line 268, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.fit-width {
+  width: auto !important;
+}
+
+/* line 272, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group.fit-width .btn .filter-option {
+  position: static;
+}
+
+/* line 276, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select.btn-group.fit-width .btn .caret {
+  position: static;
+  top: auto;
+  margin-top: -1px;
+}
+
+/* line 282, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.control-group.error .bootstrap-select .dropdown-toggle {
+  border-color: #b94a48;
+}
+
+/* line 287, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select-searchbox,
+.bootstrap-select .bs-actionsbox {
+  padding: 4px 8px;
+}
+
+/* line 291, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select .bs-actionsbox {
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 299, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select-searchbox + .bs-actionsbox {
+  padding: 0 8px 4px;
+}
+
+/* line 303, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select-searchbox input {
+  margin-bottom: 0;
+}
+
+/* line 307, D:/projects/sing/vendor/bootstrap-select/bootstrap-select.css */
+.bootstrap-select .bs-actionsbox .btn-group button {
+  width: 50%;
+}
+
+/* line 1, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  width: 1px;
+  transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  -o-transition: opacity 0.25s linear;
+  -webkit-transition: opacity 0.25s linear;
+}
+
+/* line 14, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail.inactive {
+  opacity: 0;
+}
+
+/* line 17, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .item.active {
+  opacity: 1;
+}
+
+/* line 20, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .x_label {
+  font-family: Arial, sans-serif;
+  border-radius: 3px;
+  padding: 6px;
+  opacity: 0.5;
+  border: 1px solid #e0e0e0;
+  font-size: 12px;
+  position: absolute;
+  background: white;
+  white-space: nowrap;
+}
+
+/* line 31, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .x_label.left {
+  left: 0;
+}
+
+/* line 34, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .x_label.right {
+  right: 0;
+}
+
+/* line 37, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .item {
+  position: absolute;
+  z-index: 2;
+  border-radius: 3px;
+  padding: 0.25em;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: -1em;
+  white-space: nowrap;
+}
+
+/* line 53, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .item.left {
+  left: 0;
+}
+
+/* line 56, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .item.right {
+  right: 0;
+}
+
+/* line 59, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .item.active {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* line 63, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .item:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  border: 5px solid transparent;
+}
+
+/* line 73, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .item.left:after {
+  top: 1em;
+  left: -5px;
+  margin-top: -5px;
+  border-right-color: rgba(0, 0, 0, 0.8);
+  border-left-width: 0;
+}
+
+/* line 80, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .item.right:after {
+  top: 1em;
+  right: -5px;
+  margin-top: -5px;
+  border-left-color: rgba(0, 0, 0, 0.8);
+  border-right-width: 0;
+}
+
+/* line 87, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .dot {
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  margin-top: -2px;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  background: white;
+  border-width: 2px;
+  border-style: solid;
+  display: none;
+  background-clip: padding-box;
+}
+
+/* line 101, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .detail .dot.active {
+  display: block;
+}
+
+/* graph */
+/* line 106, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph {
+  position: relative;
+}
+
+/* line 109, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph svg {
+  display: block;
+  overflow: hidden;
+}
+
+/* ticks */
+/* line 116, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .x_tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0px;
+  border-left: 1px dotted rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+/* line 124, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .x_tick .title {
+  position: absolute;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  opacity: 0.5;
+  white-space: nowrap;
+  margin-left: 3px;
+  bottom: 1px;
+}
+
+/* annotations */
+/* line 136, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_annotation_timeline {
+  height: 1px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* line 142, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_annotation_timeline .annotation {
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  margin-left: -2px;
+  top: -3px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* line 151, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .annotation_line {
+  position: absolute;
+  top: 0;
+  bottom: -6px;
+  width: 0px;
+  border-left: 2px solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+/* line 159, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .annotation_line.active {
+  display: block;
+}
+
+/* line 163, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .annotation_range {
+  background: rgba(0, 0, 0, 0.1);
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: -6px;
+}
+
+/* line 170, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .annotation_range.active {
+  display: block;
+}
+
+/* line 173, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .annotation_range.active.offscreen {
+  display: none;
+}
+
+/* line 177, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_annotation_timeline .annotation .content {
+  background: white;
+  color: black;
+  opacity: 0.9;
+  padding: 5px 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  position: relative;
+  z-index: 20;
+  font-size: 12px;
+  padding: 6px 8px 8px;
+  top: 18px;
+  left: -11px;
+  width: 160px;
+  display: none;
+  cursor: pointer;
+}
+
+/* line 194, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_annotation_timeline .annotation .content:before {
+  content: "\25b2";
+  position: absolute;
+  top: -11px;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.8);
+}
+
+/* line 202, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_annotation_timeline .annotation.active,
+.rickshaw_annotation_timeline .annotation:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: none;
+}
+
+/* line 206, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_annotation_timeline .annotation .content:hover {
+  z-index: 50;
+}
+
+/* line 209, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_annotation_timeline .annotation.active .content {
+  display: block;
+}
+
+/* line 212, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_annotation_timeline .annotation:hover .content {
+  display: block;
+  z-index: 50;
+}
+
+/* line 217, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .y_axis,
+.rickshaw_graph .x_axis_d3 {
+  fill: none;
+}
+
+/* line 221, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .y_ticks .tick,
+.rickshaw_graph .x_ticks_d3 .tick {
+  stroke: rgba(0, 0, 0, 0.16);
+  stroke-width: 2px;
+  shape-rendering: crisp-edges;
+  pointer-events: none;
+}
+
+/* line 228, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .y_grid .tick,
+.rickshaw_graph .x_grid_d3 .tick {
+  z-index: -1;
+  stroke: rgba(0, 0, 0, 0.2);
+  stroke-width: 1px;
+  stroke-dasharray: 1 1;
+}
+
+/* line 234, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .y_grid .tick[data-y-value="0"] {
+  stroke-dasharray: 1 0;
+}
+
+/* line 238, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .y_grid path,
+.rickshaw_graph .x_grid_d3 path {
+  fill: none;
+  stroke: none;
+}
+
+/* line 243, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .y_ticks path,
+.rickshaw_graph .x_ticks_d3 path {
+  fill: none;
+  stroke: #808080;
+}
+
+/* line 248, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .y_ticks text,
+.rickshaw_graph .x_ticks_d3 text {
+  opacity: 0.5;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+/* line 254, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .x_tick.glow .title,
+.rickshaw_graph .y_ticks.glow text {
+  fill: black;
+  color: black;
+  text-shadow: -1px 1px 0 rgba(255, 255, 255, 0.1), 1px -1px 0 rgba(255, 255, 255, 0.1), 1px 1px 0 rgba(255, 255, 255, 0.1), 0px 1px 0 rgba(255, 255, 255, 0.1), 0px -1px 0 rgba(255, 255, 255, 0.1), 1px 0px 0 rgba(255, 255, 255, 0.1), -1px 0px 0 rgba(255, 255, 255, 0.1), -1px -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* line 268, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_graph .x_tick.inverse .title,
+.rickshaw_graph .y_ticks.inverse text {
+  fill: white;
+  color: white;
+  text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.8), 1px -1px 0 rgba(0, 0, 0, 0.8), 1px 1px 0 rgba(0, 0, 0, 0.8), 0px 1px 0 rgba(0, 0, 0, 0.8), 0px -1px 0 rgba(0, 0, 0, 0.8), 1px 0px 0 rgba(0, 0, 0, 0.8), -1px 0px 0 rgba(0, 0, 0, 0.8), -1px -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* line 281, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend {
+  font-family: Arial;
+  font-size: 12px;
+  color: white;
+  background: #404040;
+  display: inline-block;
+  padding: 12px 5px;
+  border-radius: 2px;
+  position: relative;
+}
+
+/* line 291, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend:hover {
+  z-index: 10;
+}
+
+/* line 294, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend .swatch {
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* line 299, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend .line {
+  clear: both;
+  line-height: 140%;
+  padding-right: 15px;
+}
+
+/* line 304, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend .line .swatch {
+  display: inline-block;
+  margin-right: 3px;
+  border-radius: 2px;
+}
+
+/* line 309, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend .label {
+  margin: 0;
+  white-space: nowrap;
+  display: inline;
+  font-size: inherit;
+  background-color: transparent;
+  color: inherit;
+  font-weight: normal;
+  line-height: normal;
+  padding: 0px;
+  text-shadow: none;
+}
+
+/* line 321, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend .action:hover {
+  opacity: 0.6;
+}
+
+/* line 324, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend .action {
+  margin-right: 0.2em;
+  font-size: 10px;
+  opacity: 0.2;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* line 331, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend .line.disabled {
+  opacity: 0.4;
+}
+
+/* line 334, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin: 2px;
+  cursor: pointer;
+}
+
+/* line 341, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend li {
+  padding: 0 0 0 2px;
+  min-width: 80px;
+  white-space: nowrap;
+}
+
+/* line 346, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+
+/* line 350, D:/projects/sing/vendor/rickshaw/rickshaw.css */
+.rickshaw_legend li:active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
 /* line 7, D:/projects/sing/sass/_bootstrap-override.scss */
 h1 small,
 h1 .small, h2 small,
@@ -9796,52 +13722,56 @@ h6 .small,
   font-weight: 300;
 }
 
-/* line 18, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 17, D:/projects/sing/sass/_bootstrap-override.scss */
+.form-control {
+  font-weight: 400;
+}
+/* line 19, D:/projects/sing/sass/_bootstrap-override.scss */
 .form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 23, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 24, D:/projects/sing/sass/_bootstrap-override.scss */
 label {
   font-weight: 400;
 }
 
-/* line 27, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 28, D:/projects/sing/sass/_bootstrap-override.scss */
 .help-block {
   margin: 0;
   font-size: 85%;
   color: #999999;
 }
 
-/* line 33, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 34, D:/projects/sing/sass/_bootstrap-override.scss */
 legend {
   padding-top: 20px;
   font-size: 15px;
   font-weight: 400;
 }
 
-/* line 39, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 40, D:/projects/sing/sass/_bootstrap-override.scss */
 .form-group {
   margin-bottom: 20px;
 }
 
-/* line 47, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 48, D:/projects/sing/sass/_bootstrap-override.scss */
 .navbar {
   border: none;
   font-size: 13px;
   font-weight: 500;
 }
 
-/* line 58, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 59, D:/projects/sing/sass/_bootstrap-override.scss */
 .breadcrumb {
   color: #999999;
 }
-/* line 61, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 62, D:/projects/sing/sass/_bootstrap-override.scss */
 .breadcrumb > .active {
   font-weight: 600;
 }
-/* line 65, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 66, D:/projects/sing/sass/_bootstrap-override.scss */
 .content .breadcrumb {
   padding-top: 0;
   padding-bottom: 0;
@@ -10029,12 +13959,12 @@ a {
 }
 /* line 126, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a {
-  color: #ffc427;
+  color: #f2be35;
 }
 /* line 129, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a .icon {
   border-radius: 50%;
-  background-color: #ffc427;
+  background-color: #f2be35;
 }
 /* line 133, D:/projects/sing/sass/_base.scss */
 .sidebar-nav > .active > a .icon .fa, .sidebar-nav > .active > a .icon .glyphicon {
@@ -10152,6 +14082,56 @@ a {
   margin-right: -35px;
 }
 
+/* line 246, D:/projects/sing/sass/_base.scss */
+input[type=search], input.search {
+  background-color: white;
+  background: url(../img/search.png) 5px 60% no-repeat white;
+}
+/* line 247, D:/projects/sing/sass/_base.scss */
+input[type=search], .input-group-lg > input[type=search], .input-group-sm > input[type=search], input.search, .input-group-lg > input.search, .input-group-sm > input.search {
+  padding-left: 26px;
+}
+
+/***********************/
+/*       Buttons       */
+/***********************/
+/* line 258, D:/projects/sing/sass/_base.scss */
+.btn-inverse {
+  color: white;
+  background-color: #555555;
+  border-color: #3c3c3c;
+}
+/* line 508, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.btn-inverse:hover, .btn-inverse:focus, .btn-inverse:active, .btn-inverse.active {
+  color: white;
+  background-color: #414141;
+  border-color: #1d1d1d;
+}
+/* line 513, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.open .btn-inverse.dropdown-toggle {
+  color: white;
+  background-color: #414141;
+  border-color: #1d1d1d;
+}
+/* line 519, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.btn-inverse:active, .btn-inverse.active {
+  background-image: none;
+}
+/* line 522, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.open .btn-inverse.dropdown-toggle {
+  background-image: none;
+}
+/* line 532, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.btn-inverse.disabled, .btn-inverse.disabled:hover, .btn-inverse.disabled:focus, .btn-inverse.disabled:active, .btn-inverse.disabled.active, .btn-inverse[disabled], .btn-inverse[disabled]:hover, .btn-inverse[disabled]:focus, .btn-inverse[disabled]:active, .btn-inverse[disabled].active, fieldset[disabled] .btn-inverse, fieldset[disabled] .btn-inverse:hover, fieldset[disabled] .btn-inverse:focus, fieldset[disabled] .btn-inverse:active, fieldset[disabled] .btn-inverse.active {
+  background-color: #555555;
+  border-color: #3c3c3c;
+}
+/* line 538, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.btn-inverse .badge {
+  color: #555555;
+  background-color: white;
+}
+
 /***********************************/
 /**            UTILS              **/
 /***********************************/
@@ -10220,7 +14200,7 @@ a {
 
 /* line 49, D:/projects/sing/sass/_utils.scss */
 .bg-warning {
-  background-color: #ffc427;
+  background-color: #f0b518;
 }
 
 /* line 53, D:/projects/sing/sass/_utils.scss */
@@ -10342,12 +14322,12 @@ a {
 
   /* line 23, D:/projects/sing/sass/_print.scss */
   .col-print-1 {
-    width: 8.33333%;
+    width: 8.3333333333%;
   }
 
   /* line 24, D:/projects/sing/sass/_print.scss */
   .col-print-2 {
-    width: 16.66667%;
+    width: 16.6666666667%;
   }
 
   /* line 25, D:/projects/sing/sass/_print.scss */
@@ -10357,12 +14337,12 @@ a {
 
   /* line 26, D:/projects/sing/sass/_print.scss */
   .col-print-4 {
-    width: 33.33333%;
+    width: 33.3333333333%;
   }
 
   /* line 27, D:/projects/sing/sass/_print.scss */
   .col-print-5 {
-    width: 41.66667%;
+    width: 41.6666666667%;
   }
 
   /* line 28, D:/projects/sing/sass/_print.scss */
@@ -10372,12 +14352,12 @@ a {
 
   /* line 29, D:/projects/sing/sass/_print.scss */
   .col-print-7 {
-    width: 58.33333%;
+    width: 58.3333333333%;
   }
 
   /* line 30, D:/projects/sing/sass/_print.scss */
   .col-print-8 {
-    width: 66.66667%;
+    width: 66.6666666667%;
   }
 
   /* line 31, D:/projects/sing/sass/_print.scss */
@@ -10387,12 +14367,12 @@ a {
 
   /* line 32, D:/projects/sing/sass/_print.scss */
   .col-print-10 {
-    width: 83.33333%;
+    width: 83.3333333333%;
   }
 
   /* line 33, D:/projects/sing/sass/_print.scss */
   .col-print-11 {
-    width: 91.66667%;
+    width: 91.6666666667%;
   }
 
   /* line 34, D:/projects/sing/sass/_print.scss */
@@ -10407,12 +14387,12 @@ a {
 
   /* line 38, D:/projects/sing/sass/_print.scss */
   .col-print-push-1 {
-    left: 8.33333%;
+    left: 8.3333333333%;
   }
 
   /* line 39, D:/projects/sing/sass/_print.scss */
   .col-print-push-2 {
-    left: 16.66667%;
+    left: 16.6666666667%;
   }
 
   /* line 40, D:/projects/sing/sass/_print.scss */
@@ -10422,12 +14402,12 @@ a {
 
   /* line 41, D:/projects/sing/sass/_print.scss */
   .col-print-push-4 {
-    left: 33.33333%;
+    left: 33.3333333333%;
   }
 
   /* line 42, D:/projects/sing/sass/_print.scss */
   .col-print-push-5 {
-    left: 41.66667%;
+    left: 41.6666666667%;
   }
 
   /* line 43, D:/projects/sing/sass/_print.scss */
@@ -10437,12 +14417,12 @@ a {
 
   /* line 44, D:/projects/sing/sass/_print.scss */
   .col-print-push-7 {
-    left: 58.33333%;
+    left: 58.3333333333%;
   }
 
   /* line 45, D:/projects/sing/sass/_print.scss */
   .col-print-push-8 {
-    left: 66.66667%;
+    left: 66.6666666667%;
   }
 
   /* line 46, D:/projects/sing/sass/_print.scss */
@@ -10452,12 +14432,12 @@ a {
 
   /* line 47, D:/projects/sing/sass/_print.scss */
   .col-print-push-10 {
-    left: 83.33333%;
+    left: 83.3333333333%;
   }
 
   /* line 48, D:/projects/sing/sass/_print.scss */
   .col-print-push-11 {
-    left: 91.66667%;
+    left: 91.6666666667%;
   }
 
   /* line 50, D:/projects/sing/sass/_print.scss */
@@ -10467,12 +14447,12 @@ a {
 
   /* line 51, D:/projects/sing/sass/_print.scss */
   .col-print-pull-1 {
-    right: 8.33333%;
+    right: 8.3333333333%;
   }
 
   /* line 52, D:/projects/sing/sass/_print.scss */
   .col-print-pull-2 {
-    right: 16.66667%;
+    right: 16.6666666667%;
   }
 
   /* line 53, D:/projects/sing/sass/_print.scss */
@@ -10482,12 +14462,12 @@ a {
 
   /* line 54, D:/projects/sing/sass/_print.scss */
   .col-print-pull-4 {
-    right: 33.33333%;
+    right: 33.3333333333%;
   }
 
   /* line 55, D:/projects/sing/sass/_print.scss */
   .col-print-pull-5 {
-    right: 41.66667%;
+    right: 41.6666666667%;
   }
 
   /* line 56, D:/projects/sing/sass/_print.scss */
@@ -10497,12 +14477,12 @@ a {
 
   /* line 57, D:/projects/sing/sass/_print.scss */
   .col-print-pull-7 {
-    right: 58.33333%;
+    right: 58.3333333333%;
   }
 
   /* line 58, D:/projects/sing/sass/_print.scss */
   .col-print-pull-8 {
-    right: 66.66667%;
+    right: 66.6666666667%;
   }
 
   /* line 59, D:/projects/sing/sass/_print.scss */
@@ -10512,12 +14492,12 @@ a {
 
   /* line 60, D:/projects/sing/sass/_print.scss */
   .col-print-pull-10 {
-    right: 83.33333%;
+    right: 83.3333333333%;
   }
 
   /* line 61, D:/projects/sing/sass/_print.scss */
   .col-print-pull-11 {
-    right: 91.66667%;
+    right: 91.6666666667%;
   }
 
   /* line 64, D:/projects/sing/sass/_print.scss */
@@ -10527,12 +14507,12 @@ a {
 
   /* line 65, D:/projects/sing/sass/_print.scss */
   .col-print-offset-1 {
-    margin-left: 8.33333%;
+    margin-left: 8.3333333333%;
   }
 
   /* line 66, D:/projects/sing/sass/_print.scss */
   .col-print-offset-2 {
-    margin-left: 16.66667%;
+    margin-left: 16.6666666667%;
   }
 
   /* line 67, D:/projects/sing/sass/_print.scss */
@@ -10542,12 +14522,12 @@ a {
 
   /* line 68, D:/projects/sing/sass/_print.scss */
   .col-print-offset-4 {
-    margin-left: 33.33333%;
+    margin-left: 33.3333333333%;
   }
 
   /* line 69, D:/projects/sing/sass/_print.scss */
   .col-print-offset-5 {
-    margin-left: 41.66667%;
+    margin-left: 41.6666666667%;
   }
 
   /* line 70, D:/projects/sing/sass/_print.scss */
@@ -10557,12 +14537,12 @@ a {
 
   /* line 71, D:/projects/sing/sass/_print.scss */
   .col-print-offset-7 {
-    margin-left: 58.33333%;
+    margin-left: 58.3333333333%;
   }
 
   /* line 72, D:/projects/sing/sass/_print.scss */
   .col-print-offset-8 {
-    margin-left: 66.66667%;
+    margin-left: 66.6666666667%;
   }
 
   /* line 73, D:/projects/sing/sass/_print.scss */
@@ -10572,12 +14552,12 @@ a {
 
   /* line 74, D:/projects/sing/sass/_print.scss */
   .col-print-offset-10 {
-    margin-left: 83.33333%;
+    margin-left: 83.3333333333%;
   }
 
   /* line 75, D:/projects/sing/sass/_print.scss */
   .col-print-offset-11 {
-    margin-left: 91.66667%;
+    margin-left: 91.6666666667%;
   }
 }
 /***********************/

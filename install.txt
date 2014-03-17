@@ -1,0 +1,3 @@
+install sass-css-importer for proper css importing
+run
+gem install --pre sass-css-importer

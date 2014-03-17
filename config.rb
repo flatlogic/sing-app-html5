@@ -1,5 +1,8 @@
 # Require any additional compass plugins here.
 
+#allows to include(embed) css as if it is scss
+require 'sass-css-importer'
+
 # Set this to the root of your project when deployed:
 http_path = ""
 css_dir = "css"
@@ -27,3 +30,9 @@ output_style = (environment == :production) ? :compressed : :expanded
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+
+#Sing compilation variables
+#button line-height fix
+#https://github.com/twbs/bootstrap-sass/issues/409
+Sass::Script::Number.precision = 10

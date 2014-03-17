@@ -6,10 +6,11 @@
 
 @import "../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap";
 @import "../vendor/font-awesome/scss/font-awesome";
-@import "../vendor/animate.css/animate.css";
+@import "CSS:../vendor/animate.css/animate";
+@import "CSS:../vendor/bootstrap-select/bootstrap-select";
 
 //custom libs. can be removed
-@import "../vendor/rickshaw/rickshaw.css";
+@import "CSS:../vendor/rickshaw/rickshaw";
 
 //end custom libs
 

@@ -242,3 +242,19 @@
     margin-right: ($grid-gutter-width/-2) - $line-height-computed;
   }
 }
+
+input[type=search], input.search {
+  &, .input-group-lg > &, .input-group-sm > &{
+    padding-left: 26px;
+  }
+  background-color: $input-bg;
+  background:url(../img/search.png) 5px 60% no-repeat $input-bg;
+}
+
+/***********************/
+/*       Buttons       */
+/***********************/
+
+.btn-inverse {
+  @include button-variant($white, $gray, darken($gray, 10%));
+}

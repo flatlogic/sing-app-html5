@@ -18,14 +18,16 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 $brand-primary:         #618fb0 !default;
 $brand-success:         #56bc76 !default;
 $brand-info:            #4ab0ce !default;
-$brand-warning:         #ffc427 !default;
+$brand-warning:         #f0b518 !default;
 $brand-danger:          #e5603b !default;
+
+$addition-bg: #f8f8f8;
 
 
 $sidebar-bg-color: #242424;
 $sidebar-color: #aaa;
 $sidebar-item-border-color: #2d2d2d;
-$sidebar-item-active-color: $brand-warning;
+$sidebar-item-active-color: lighten($brand-warning, 6%);
 $sidebar-item-hover-bg-color: #111;
 
 // Typography
@@ -93,6 +95,15 @@ $border-radius-small:       0 !default;
 
 $input-border-focus:             $link-color;
 $legend-color:                   lighten($text-color, 15%) !default;
+
+//== Buttons
+//
+
+$btn-default-bg: $addition-bg !default;
+
+//== Dropdowns
+//
+$dropdown-link-color:            $text-color !default;
 
 //== Navbar
 //

@@ -98,6 +98,11 @@
                             <i class="fa fa-align-left"></i>
                             Inputs
                         </h5>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
                     </header>
                     <div class="widget-body">
                         <form class="form-horizontal" role="form">
@@ -184,9 +189,115 @@
                                 <div class="row">
                                     <div class="col-sm-offset-4 col-sm-7">
                                         <button type="submit" class="btn btn-primary">Save Changes</button>
-                                        <button type="button" class="btn btn-default">Cancel</button>
+                                        <button type="button" class="btn btn-inverse">Cancel</button>
                                     </div>
                                 </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            <i class="fa fa-align-right"></i>
+                            Prepended and appended inputs
+                        </h5>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <form role="form">
+                            <fieldset>
+                                <legend class="section">Default Form</legend>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <label for="search-input">Search type input</label>
+                                            <div class="input-group">
+                                                <input type="search" class="form-control" id="search-input">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default">Search</button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="bar">Whole bar appended</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="bar">
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-danger"><i class="fa fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-warning"><i class="fa fa-plus"></i></button>
+                                                    <button type="button" class="btn btn-success"><i class="fa fa-refresh"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="dropdown-appended">Actions dropdown</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="dropdown-appended">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                                        Action
+                                                        <i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">Action</a></li>
+                                                        <li><a href="#">Another action</a></li>
+                                                        <li><a href="#">Something else here</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Separated link</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="type-dropdown-appended">Types dropdown</label>
+
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="type-dropdown-appended">
+                                                <div class="input-group-btn">
+                                                    <select id="phone-type" class="selectpicker"
+                                                            data-style="btn-primary"
+                                                            data-width="auto">
+                                                        <option>Another type</option>
+                                                        <option>Type one</option>
+                                                        <option>Next type</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <p class="help-block">You can select some type of a field just right in the place.</p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="segmented-dropdown">Segmented dropdown</label>
+                                            <div class="input-group">
+                                                <input id="segmented-dropdown" class="form-control" type="text">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-warning" tabindex="-1">Action</button>
+                                                    <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                                        <i class="fa fa-caret-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">Action</a></li>
+                                                        <li><a href="#">Another action</a></li>
+                                                        <li><a href="#">Something else here</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Separated link</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <span class="help-block">Everything can be appended to the right</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-inverse">Save Changes</button>
+                                <button type="button" class="btn btn-default">Cancel</button>
                             </div>
                         </form>
                     </div>
@@ -210,6 +321,7 @@
 
 <!-- page specific libs -->
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="vendor/bootstrap-select/bootstrap-select.js"></script>
 
 <!-- page specific js -->
 <script src="js/form-elements.js"></script>
