@@ -682,42 +682,42 @@ a.text-primary:hover {
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-success {
-  color: #56bc76;
+  color: white;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-success:hover {
-  color: #3fa05e;
+  color: #e6e6e6;
 }
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-info {
-  color: #31708f;
+  color: white;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-info:hover {
-  color: #245269;
+  color: #e6e6e6;
 }
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-warning {
-  color: #f0b518;
+  color: white;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-warning:hover {
-  color: #c8950d;
+  color: #e6e6e6;
 }
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-danger {
-  color: #e5603b;
+  color: white;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-danger:hover {
-  color: #d1431c;
+  color: #e6e6e6;
 }
 
 /* line 108, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_type.scss */
@@ -737,42 +737,42 @@ a.bg-primary:hover {
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-success {
-  background-color: #dff0d8;
+  background-color: #56bc76;
 }
 
 /* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.bg-success:hover {
-  background-color: #c1e2b3;
+  background-color: #3fa05e;
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-info {
-  background-color: #d9edf7;
+  background-color: #4ab0ce;
 }
 
 /* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.bg-info:hover {
-  background-color: #afd9ee;
+  background-color: #3196b4;
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-warning {
-  background-color: #fcf8e3;
+  background-color: #f0b518;
 }
 
 /* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.bg-warning:hover {
-  background-color: #f7ecb5;
+  background-color: #c8950d;
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-danger {
-  background-color: #f2dede;
+  background-color: #e5603b;
 }
 
 /* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.bg-danger:hover {
-  background-color: #e4b9b9;
+  background-color: #d1431c;
 }
 
 /* line 127, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_type.scss */
@@ -2257,13 +2257,13 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.success,
 .table > tfoot > tr.success > td,
 .table > tfoot > tr.success > th {
-  background-color: #dff0d8;
+  background-color: #56bc76;
 }
 
 /* line 460, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr.success:hover > th {
-  background-color: #d0e9c6;
+  background-color: #47b268;
 }
 
 /* line 449, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2277,13 +2277,13 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.info,
 .table > tfoot > tr.info > td,
 .table > tfoot > tr.info > th {
-  background-color: #d9edf7;
+  background-color: #4ab0ce;
 }
 
 /* line 460, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .table-hover > tbody > tr > td.info:hover,
 .table-hover > tbody > tr > th.info:hover, .table-hover > tbody > tr.info:hover > td, .table-hover > tbody > tr.info:hover > th {
-  background-color: #c4e3f3;
+  background-color: #36a7c8;
 }
 
 /* line 449, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2297,13 +2297,13 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.warning,
 .table > tfoot > tr.warning > td,
 .table > tfoot > tr.warning > th {
-  background-color: #fcf8e3;
+  background-color: #f0b518;
 }
 
 /* line 460, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover, .table-hover > tbody > tr.warning:hover > td, .table-hover > tbody > tr.warning:hover > th {
-  background-color: #faf2cc;
+  background-color: #e0a70f;
 }
 
 /* line 449, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2317,13 +2317,13 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.danger,
 .table > tfoot > tr.danger > td,
 .table > tfoot > tr.danger > th {
-  background-color: #f2dede;
+  background-color: #e5603b;
 }
 
 /* line 460, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover, .table-hover > tbody > tr.danger:hover > td, .table-hover > tbody > tr.danger:hover > th {
-  background-color: #ebcccc;
+  background-color: #e24e24;
 }
 
 @media (max-width: 767px) {
@@ -2676,29 +2676,29 @@ select[multiple].input-lg,
 .has-success .checkbox,
 .has-success .radio-inline,
 .has-success .checkbox-inline {
-  color: #56bc76;
+  color: white;
 }
 /* line 879, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .form-control {
-  border-color: #56bc76;
+  border-color: white;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .form-control:focus {
-  border-color: #3fa05e;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #9fd9b1;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #9fd9b1;
+  border-color: #e6e6e6;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
 }
 /* line 889, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .input-group-addon {
-  color: #56bc76;
-  border-color: #56bc76;
-  background-color: #dff0d8;
+  color: white;
+  border-color: white;
+  background-color: #56bc76;
 }
 /* line 895, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .form-control-feedback {
-  color: #56bc76;
+  color: white;
 }
 
 /* line 875, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2708,29 +2708,29 @@ select[multiple].input-lg,
 .has-warning .checkbox,
 .has-warning .radio-inline,
 .has-warning .checkbox-inline {
-  color: #f0b518;
+  color: white;
 }
 /* line 879, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control {
-  border-color: #f0b518;
+  border-color: white;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control:focus {
-  border-color: #c8950d;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f6d478;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f6d478;
+  border-color: #e6e6e6;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
 }
 /* line 889, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .input-group-addon {
-  color: #f0b518;
-  border-color: #f0b518;
-  background-color: #fcf8e3;
+  color: white;
+  border-color: white;
+  background-color: #f0b518;
 }
 /* line 895, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-warning .form-control-feedback {
-  color: #f0b518;
+  color: white;
 }
 
 /* line 875, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2740,29 +2740,29 @@ select[multiple].input-lg,
 .has-error .checkbox,
 .has-error .radio-inline,
 .has-error .checkbox-inline {
-  color: #e5603b;
+  color: white;
 }
 /* line 879, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-error .form-control {
-  border-color: #e5603b;
+  border-color: white;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 /* line 882, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-error .form-control:focus {
-  border-color: #d1431c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f1a995;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f1a995;
+  border-color: #e6e6e6;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px white;
 }
 /* line 889, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-error .input-group-addon {
-  color: #e5603b;
-  border-color: #e5603b;
-  background-color: #f2dede;
+  color: white;
+  border-color: white;
+  background-color: #e5603b;
 }
 /* line 895, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-error .form-control-feedback {
-  color: #e5603b;
+  color: white;
 }
 
 /* line 303, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss */
@@ -5974,62 +5974,62 @@ a.thumbnail.active {
 
 /* line 56, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
 .alert-success {
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
-  color: #56bc76;
+  background-color: #56bc76;
+  border-color: #47b256;
+  color: white;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-success hr {
-  border-top-color: #c9e2b3;
+  border-top-color: #3fa04d;
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-success .alert-link {
-  color: #3fa05e;
+  color: #e6e6e6;
 }
 
 /* line 59, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
 .alert-info {
-  background-color: #d9edf7;
-  border-color: #bce8f1;
-  color: #31708f;
+  background-color: #4ab0ce;
+  border-color: #34b8c0;
+  color: white;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-info hr {
-  border-top-color: #a6e1ec;
+  border-top-color: #2fa5ac;
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-info .alert-link {
-  color: #245269;
+  color: #e6e6e6;
 }
 
 /* line 62, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
 .alert-warning {
-  background-color: #fcf8e3;
-  border-color: #faebcc;
-  color: #f0b518;
+  background-color: #f0b518;
+  border-color: #e0840f;
+  color: white;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-warning hr {
-  border-top-color: #f7e1b5;
+  border-top-color: #c8760d;
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-warning .alert-link {
-  color: #c8950d;
+  color: #e6e6e6;
 }
 
 /* line 65, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
 .alert-danger {
-  background-color: #f2dede;
-  border-color: #ebccd1;
-  color: #e5603b;
+  background-color: #e5603b;
+  border-color: #e22e24;
+  color: white;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-danger hr {
-  border-top-color: #e4b9c0;
+  border-top-color: #d1251c;
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-danger .alert-link {
-  color: #d1431c;
+  color: #e6e6e6;
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -6245,13 +6245,13 @@ a.list-group-item.active .list-group-item-text, a.list-group-item.active:hover .
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-success {
-  color: #56bc76;
-  background-color: #dff0d8;
+  color: white;
+  background-color: #56bc76;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success {
-  color: #56bc76;
+  color: white;
 }
 /* line 479, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success .list-group-item-heading {
@@ -6259,25 +6259,25 @@ a.list-group-item-success .list-group-item-heading {
 }
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success:hover, a.list-group-item-success:focus {
-  color: #56bc76;
-  background-color: #d0e9c6;
+  color: white;
+  background-color: #47b268;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success.active, a.list-group-item-success.active:hover, a.list-group-item-success.active:focus {
   color: #fff;
-  background-color: #56bc76;
-  border-color: #56bc76;
+  background-color: white;
+  border-color: white;
 }
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-info {
-  color: #31708f;
-  background-color: #d9edf7;
+  color: white;
+  background-color: #4ab0ce;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-info {
-  color: #31708f;
+  color: white;
 }
 /* line 479, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-info .list-group-item-heading {
@@ -6285,25 +6285,25 @@ a.list-group-item-info .list-group-item-heading {
 }
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-info:hover, a.list-group-item-info:focus {
-  color: #31708f;
-  background-color: #c4e3f3;
+  color: white;
+  background-color: #36a7c8;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-info.active, a.list-group-item-info.active:hover, a.list-group-item-info.active:focus {
   color: #fff;
-  background-color: #31708f;
-  border-color: #31708f;
+  background-color: white;
+  border-color: white;
 }
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-warning {
-  color: #f0b518;
-  background-color: #fcf8e3;
+  color: white;
+  background-color: #f0b518;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning {
-  color: #f0b518;
+  color: white;
 }
 /* line 479, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning .list-group-item-heading {
@@ -6311,25 +6311,25 @@ a.list-group-item-warning .list-group-item-heading {
 }
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning:hover, a.list-group-item-warning:focus {
-  color: #f0b518;
-  background-color: #faf2cc;
+  color: white;
+  background-color: #e0a70f;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-warning.active, a.list-group-item-warning.active:hover, a.list-group-item-warning.active:focus {
   color: #fff;
-  background-color: #f0b518;
-  border-color: #f0b518;
+  background-color: white;
+  border-color: white;
 }
 
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-danger {
-  color: #e5603b;
-  background-color: #f2dede;
+  color: white;
+  background-color: #e5603b;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-danger {
-  color: #e5603b;
+  color: white;
 }
 /* line 479, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-danger .list-group-item-heading {
@@ -6337,14 +6337,14 @@ a.list-group-item-danger .list-group-item-heading {
 }
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-danger:hover, a.list-group-item-danger:focus {
-  color: #e5603b;
-  background-color: #ebcccc;
+  color: white;
+  background-color: #e24e24;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
   color: #fff;
-  background-color: #e5603b;
-  border-color: #e5603b;
+  background-color: white;
+  border-color: white;
 }
 
 /* line 103, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss */
@@ -6648,78 +6648,78 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 230, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-success {
-  border-color: #d6e9c6;
+  border-color: #47b256;
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-success > .panel-heading {
-  color: #56bc76;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+  color: white;
+  background-color: #56bc76;
+  border-color: #47b256;
 }
 /* line 412, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-success > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #d6e9c6;
+  border-top-color: #47b256;
 }
 /* line 417, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-success > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #d6e9c6;
+  border-bottom-color: #47b256;
 }
 
 /* line 233, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-info {
-  border-color: #bce8f1;
+  border-color: #34b8c0;
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-info > .panel-heading {
-  color: #31708f;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
+  color: white;
+  background-color: #4ab0ce;
+  border-color: #34b8c0;
 }
 /* line 412, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-info > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #bce8f1;
+  border-top-color: #34b8c0;
 }
 /* line 417, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-info > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #bce8f1;
+  border-bottom-color: #34b8c0;
 }
 
 /* line 236, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-warning {
-  border-color: #faebcc;
+  border-color: #e0840f;
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-warning > .panel-heading {
-  color: #f0b518;
-  background-color: #fcf8e3;
-  border-color: #faebcc;
+  color: white;
+  background-color: #f0b518;
+  border-color: #e0840f;
 }
 /* line 412, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-warning > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #faebcc;
+  border-top-color: #e0840f;
 }
 /* line 417, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-warning > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #faebcc;
+  border-bottom-color: #e0840f;
 }
 
 /* line 239, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-danger {
-  border-color: #ebccd1;
+  border-color: #e22e24;
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-danger > .panel-heading {
-  color: #e5603b;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  color: white;
+  background-color: #e5603b;
+  border-color: #e22e24;
 }
 /* line 412, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-danger > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #ebccd1;
+  border-top-color: #e22e24;
 }
 /* line 417, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-danger > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #ebccd1;
+  border-bottom-color: #e22e24;
 }
 
 /* line 7, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_wells.scss */
@@ -13804,14 +13804,14 @@ a {
 
 /* line 5, D:/projects/sing/sass/_global-transitions.scss */
 .btn {
-  -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 /* line 9, D:/projects/sing/sass/_global-transitions.scss */
 .form-control {
-  -webkit-transition: border-color 0.2s ease-out;
-  transition: border-color 0.2s ease-out;
+  -webkit-transition: border-color 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out;
 }
 
 /***********************/
@@ -14026,42 +14026,55 @@ a {
 /* line 190, D:/projects/sing/sass/_base.scss */
 .widget {
   position: relative;
+  margin-bottom: 30px;
   padding: 15px 20px;
   background: white;
   border-radius: 1px;
 }
-/* line 196, D:/projects/sing/sass/_base.scss */
+/* line 197, D:/projects/sing/sass/_base.scss */
 .widget > header {
   margin-bottom: 10px;
 }
-/* line 198, D:/projects/sing/sass/_base.scss */
+/* line 199, D:/projects/sing/sass/_base.scss */
 .widget > header h1, .widget > header h2, .widget > header h3, .widget > header h4, .widget > header h5, .widget > header h6 {
   margin: 0;
 }
 
-/* line 204, D:/projects/sing/sass/_base.scss */
+/* line 205, D:/projects/sing/sass/_base.scss */
 .widget-controls {
   position: absolute;
   top: 0;
   right: 0;
   padding: 14px;
   font-size: 12px;
-  word-spacing: 5px;
+  word-spacing: 1px;
 }
-/* line 212, D:/projects/sing/sass/_base.scss */
+/* line 213, D:/projects/sing/sass/_base.scss */
 .widget-controls.left {
   left: 0;
   right: auto;
 }
-/* line 217, D:/projects/sing/sass/_base.scss */
+/* line 218, D:/projects/sing/sass/_base.scss */
 .widget-controls a {
+  padding: 1px 4px;
+  border-radius: 4px;
   color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
 }
-/* line 220, D:/projects/sing/sass/_base.scss */
+/* line 224, D:/projects/sing/sass/_base.scss */
 .widget-controls a:hover {
   color: rgba(0, 0, 0, 0.1);
 }
-/* line 225, D:/projects/sing/sass/_base.scss */
+/* line 228, D:/projects/sing/sass/_base.scss */
+.widget-controls a > .fa {
+  vertical-align: middle;
+}
+/* line 232, D:/projects/sing/sass/_base.scss */
+.widget-controls a > .glyphicon {
+  vertical-align: -1px;
+}
+/* line 237, D:/projects/sing/sass/_base.scss */
 .widget-controls .fa-refresh {
   position: relative;
   top: -1px;
@@ -14070,24 +14083,24 @@ a {
 /***********************/
 /*        Forms        */
 /***********************/
-/* line 235, D:/projects/sing/sass/_base.scss */
+/* line 247, D:/projects/sing/sass/_base.scss */
 .form-actions {
   margin: 20px 0 0;
   padding: 20px;
   background-color: whitesmoke;
 }
-/* line 240, D:/projects/sing/sass/_base.scss */
+/* line 252, D:/projects/sing/sass/_base.scss */
 .form-horizontal .form-actions .row {
   margin-left: -35px;
   margin-right: -35px;
 }
 
-/* line 246, D:/projects/sing/sass/_base.scss */
+/* line 258, D:/projects/sing/sass/_base.scss */
 input[type=search], input.search {
   background-color: white;
   background: url(../img/search.png) 5px 60% no-repeat white;
 }
-/* line 247, D:/projects/sing/sass/_base.scss */
+/* line 259, D:/projects/sing/sass/_base.scss */
 input[type=search], .input-group-lg > input[type=search], .input-group-sm > input[type=search], input.search, .input-group-lg > input.search, .input-group-sm > input.search {
   padding-left: 26px;
 }
@@ -14095,7 +14108,7 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 /***********************/
 /*       Buttons       */
 /***********************/
-/* line 258, D:/projects/sing/sass/_base.scss */
+/* line 270, D:/projects/sing/sass/_base.scss */
 .btn-inverse {
   color: white;
   background-color: #555555;
@@ -14183,117 +14196,133 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   transform: rotate(315deg);
 }
 
-/* line 37, D:/projects/sing/sass/_utils.scss */
-.bg-primary {
-  background-color: #618fb0;
-}
-
-/* line 41, D:/projects/sing/sass/_utils.scss */
-.bg-success {
-  background-color: #56bc76;
-}
-
-/* line 45, D:/projects/sing/sass/_utils.scss */
-.bg-info {
-  background-color: #4ab0ce;
-}
-
-/* line 49, D:/projects/sing/sass/_utils.scss */
-.bg-warning {
-  background-color: #f0b518;
-}
-
-/* line 53, D:/projects/sing/sass/_utils.scss */
-.bg-danger {
-  background-color: #e5603b;
-}
-
-/* line 57, D:/projects/sing/sass/_utils.scss */
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-body {
   background-color: #f1f1f1;
 }
 
-/* line 61, D:/projects/sing/sass/_utils.scss */
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-body:hover {
+  background-color: #d7d7d7;
+}
+
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-body-light {
   background-color: #f9f9f9;
 }
 
-/* line 65, D:/projects/sing/sass/_utils.scss */
-.text-white {
-  color: white !important;
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-body-light:hover {
+  background-color: #dfdfdf;
 }
 
-/* line 69, D:/projects/sing/sass/_utils.scss */
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-gray {
+  background-color: #555555;
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-gray:hover {
+  background-color: #3c3c3c;
+}
+
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-gray-tp {
+  background-color: rgba(85, 85, 85, 0.6);
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-gray-tp:hover {
+  background-color: rgba(60, 60, 60, 0.6);
+}
+
+/* line 42, D:/projects/sing/sass/_utils.scss */
+.bg-body, .bg-body-light, .bg-gray, .bg-gray-tp, .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-white {
+  color: white;
+}
+
+/* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-white:hover {
+  color: #e6e6e6;
+}
+
+/* line 49, D:/projects/sing/sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
-/* line 73, D:/projects/sing/sass/_utils.scss */
+/* line 53, D:/projects/sing/sass/_utils.scss */
 .font-semi-bold {
   font-weight: 600;
 }
 
-/* line 77, D:/projects/sing/sass/_utils.scss */
+/* line 57, D:/projects/sing/sass/_utils.scss */
 .font-normal {
   font-weight: 400;
 }
 
-/* line 81, D:/projects/sing/sass/_utils.scss */
+/* line 61, D:/projects/sing/sass/_utils.scss */
 .font-bold {
   font-weight: 700;
 }
 
 /* small + .text-muted*/
-/* line 86, D:/projects/sing/sass/_utils.scss */
+/* line 66, D:/projects/sing/sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
 }
 
 /* .h* + .font-bold */
-/* line 96, D:/projects/sing/sass/_utils.scss */
+/* line 76, D:/projects/sing/sass/_utils.scss */
 .value1 {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 96, D:/projects/sing/sass/_utils.scss */
+/* line 76, D:/projects/sing/sass/_utils.scss */
 .value2 {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-/* line 96, D:/projects/sing/sass/_utils.scss */
+/* line 76, D:/projects/sing/sass/_utils.scss */
 .value3 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 96, D:/projects/sing/sass/_utils.scss */
+/* line 76, D:/projects/sing/sass/_utils.scss */
 .value4 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* line 96, D:/projects/sing/sass/_utils.scss */
+/* line 76, D:/projects/sing/sass/_utils.scss */
 .value5 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
 }
 
-/* line 96, D:/projects/sing/sass/_utils.scss */
+/* line 76, D:/projects/sing/sass/_utils.scss */
 .value6 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* line 104, D:/projects/sing/sass/_utils.scss */
+/* line 84, D:/projects/sing/sass/_utils.scss */
 .help {
   font-size: 85%;
   color: #999999;

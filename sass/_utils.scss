@@ -34,37 +34,17 @@
   @include rotate(315deg);
 }
 
-.bg-primary{
-  background-color: $brand-primary;
+@include bg-variant('.bg-body', $body-bg);
+@include bg-variant('.bg-body-light', lighten($body-bg, 3%));
+@include bg-variant('.bg-gray', $gray);
+@include bg-variant('.bg-gray-tp', rgba($gray, .6));
+
+.bg-body, .bg-body-light, .bg-gray, .bg-gray-tp, .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info{
+  @include transition(background-color .15s ease-in-out);
 }
 
-.bg-success{
-  background-color: $brand-success;
-}
+@include text-emphasis-variant('.text-white', $white);
 
-.bg-info{
-  background-color: $brand-info;
-}
-
-.bg-warning{
-  background-color: $brand-warning;
-}
-
-.bg-danger{
-  background-color: $brand-danger;
-}
-
-.bg-body{
-  background-color: $body-bg;
-}
-
-.bg-body-light{
-  background-color: lighten($body-bg, 3%);
-}
-
-.text-white{
-  color: $white !important;
-}
 
 .text-light{
   opacity: .8;

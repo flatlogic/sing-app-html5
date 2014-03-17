@@ -3,9 +3,9 @@ a{
 }
 
 .btn{
-  @include transition(background-color .2s ease-out);
+  @include transition(background-color .15s ease-in-out, border-color .15s ease-in-out);
 }
 
 .form-control{
-  @include transition(border-color .2s ease-out);
+  @include transition(border-color .15s ease-in-out);
 }

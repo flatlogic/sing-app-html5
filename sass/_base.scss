@@ -189,6 +189,7 @@
 
 .widget{
   position: relative;
+  margin-bottom: $grid-gutter-width;
   padding: $widget-padding-vertical $widget-padding-horizontal;
   background: $widget-bg-color;
   border-radius: $border-radius-base;
@@ -207,7 +208,7 @@
   right: 0;
   padding: 14px;
   font-size: $font-size-small;
-  word-spacing: 5px;
+  word-spacing: 1px;
 
   &.left{
     left: 0;
@@ -215,10 +216,21 @@
   }
 
   a{
+    padding: 1px 4px;
+    border-radius: 4px;
     color: rgba($black, .25);
+    @include transition(color .15s ease-in-out);
 
     &:hover{
       color: rgba($black, .1);
+    }
+
+    > .fa{
+      vertical-align: middle;
+    }
+
+    > .glyphicon{
+      vertical-align: -1px;
     }
   }
 
