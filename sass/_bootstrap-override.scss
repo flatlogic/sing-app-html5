@@ -41,6 +41,24 @@ legend {
   margin-bottom: $line-height-computed;
 }
 
+.input-group-addon{
+  &.bg-primary{
+    border-color: darken($brand-primary, 10%);
+  }
+  &.bg-success{
+    border-color: darken($state-success-bg, 10%);
+  }
+  &.bg-info{
+    border-color: darken($state-info-bg, 10%);
+  }
+  &.bg-warning{
+    border-color: darken($state-warning-bg, 10%);
+  }
+  &.bg-danger{
+    border-color: darken($state-danger-bg, 10%);
+  }
+}
+
 //
 // Navbars
 // --------------------------------------------------

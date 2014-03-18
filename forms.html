@@ -95,12 +95,11 @@
                 <section class="widget">
                     <header>
                         <h5>
-                            <i class="fa fa-align-left"></i>
                             Inputs
                         </h5>
                         <div class="widget-controls">
                             <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
-                            <a class="bg-gray-tp" href="#"><i class="fa fa-refresh text-white"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
                             <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
@@ -201,7 +200,6 @@
                 <section class="widget">
                     <header>
                         <h5>
-                            <i class="fa fa-align-right"></i>
                             Prepended and appended inputs
                         </h5>
                         <div class="widget-controls">
@@ -312,6 +310,44 @@
                             Form <span class="font-semi-bold">Options</span>
                         </h5>
                         <div class="widget-controls">
+                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <form role="form">
+                            <fieldset>
+                                <legend>
+                                    Control sizing
+                                </legend>
+                                <p>
+                                    Set input heights using classes like <code>.input-lg</code> and <code>.input-sm</code>.
+                                    Also works with <code>type='search'</code> inputs and selects. For input groups use
+                                    <code>.input-group-lg</code> & <code>.input-group-sm</code>.
+                                </p>
+                                <br/>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-lg" placeholder=".input-lg">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="default input">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-sm" placeholder=".input-sm">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-4">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Form <span class="font-semi-bold">Options</span>
+                        </h5>
+                        <div class="widget-controls">
                             <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
                             <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
@@ -319,7 +355,34 @@
                     </header>
                     <div class="widget-body">
                         <form role="form">
-
+                            <fieldset>
+                                <legend>
+                                    Input Groups
+                                </legend>
+                                <p>
+                                    Different colors & sizes for any elements including input groups. Elements may be
+                                    easily styled with classes like <code>.bg-primary</code> or <code>.bg-transparent</code>
+                                </p>
+                                <br/>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon bg-transparent"><i class="fa fa-github-alt"></i></span>
+                                        <input class="form-control" size="16" type="text" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-lg">
+                                        <span class="input-group-addon"><i class="fa fa-bars"></i></span>
+                                        <input class="form-control" size="16" type="text" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-sm">
+                                        <input class="form-control" size="16" type="text" placeholder="City">
+                                        <span class="input-group-addon bg-danger text-white"><i class="fa fa-code-fork"></i></span>
+                                    </div>
+                                </div>
+                            </fieldset>
                         </form>
                     </div>
                 </section>

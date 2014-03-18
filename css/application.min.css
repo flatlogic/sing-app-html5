@@ -13756,22 +13756,43 @@ legend {
   margin-bottom: 20px;
 }
 
+/* line 45, D:/projects/sing/sass/_bootstrap-override.scss */
+.input-group-addon.bg-primary {
+  border-color: #4a7594;
+}
 /* line 48, D:/projects/sing/sass/_bootstrap-override.scss */
+.input-group-addon.bg-success {
+  border-color: #3fa05e;
+}
+/* line 51, D:/projects/sing/sass/_bootstrap-override.scss */
+.input-group-addon.bg-info {
+  border-color: #3196b4;
+}
+/* line 54, D:/projects/sing/sass/_bootstrap-override.scss */
+.input-group-addon.bg-warning {
+  border-color: #c8950d;
+}
+/* line 57, D:/projects/sing/sass/_bootstrap-override.scss */
+.input-group-addon.bg-danger {
+  border-color: #d1431c;
+}
+
+/* line 66, D:/projects/sing/sass/_bootstrap-override.scss */
 .navbar {
   border: none;
   font-size: 13px;
   font-weight: 500;
 }
 
-/* line 59, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 77, D:/projects/sing/sass/_bootstrap-override.scss */
 .breadcrumb {
   color: #999999;
 }
-/* line 62, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 80, D:/projects/sing/sass/_bootstrap-override.scss */
 .breadcrumb > .active {
   font-weight: 600;
 }
-/* line 66, D:/projects/sing/sass/_bootstrap-override.scss */
+/* line 84, D:/projects/sing/sass/_bootstrap-override.scss */
 .content .breadcrumb {
   padding-top: 0;
   padding-bottom: 0;
@@ -14197,6 +14218,56 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-primary {
+  background-color: #618fb0;
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-primary:hover {
+  background-color: #4a7594;
+}
+
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-success {
+  background-color: #56bc76;
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-success:hover {
+  background-color: #3fa05e;
+}
+
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-info {
+  background-color: #4ab0ce;
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-info:hover {
+  background-color: #3196b4;
+}
+
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-warning {
+  background-color: #f0b518;
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-warning:hover {
+  background-color: #c8950d;
+}
+
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-danger {
+  background-color: #e5603b;
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-danger:hover {
+  background-color: #d1431c;
+}
+
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-body {
   background-color: #f1f1f1;
 }
@@ -14227,17 +14298,28 @@ a.bg-gray:hover {
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.bg-gray-tp {
+.bg-gray-transparent {
   background-color: rgba(85, 85, 85, 0.6);
 }
 
 /* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-a.bg-gray-tp:hover {
+a.bg-gray-transparent:hover {
   background-color: rgba(60, 60, 60, 0.6);
 }
 
-/* line 42, D:/projects/sing/sass/_utils.scss */
-.bg-body, .bg-body-light, .bg-gray, .bg-gray-tp, .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-transparent:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* line 52, D:/projects/sing/sass/_utils.scss */
+.bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
+.bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
   -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
@@ -14252,77 +14334,77 @@ a.text-white:hover {
   color: #e6e6e6;
 }
 
-/* line 49, D:/projects/sing/sass/_utils.scss */
+/* line 59, D:/projects/sing/sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
-/* line 53, D:/projects/sing/sass/_utils.scss */
+/* line 63, D:/projects/sing/sass/_utils.scss */
 .font-semi-bold {
   font-weight: 600;
 }
 
-/* line 57, D:/projects/sing/sass/_utils.scss */
+/* line 67, D:/projects/sing/sass/_utils.scss */
 .font-normal {
   font-weight: 400;
 }
 
-/* line 61, D:/projects/sing/sass/_utils.scss */
+/* line 71, D:/projects/sing/sass/_utils.scss */
 .font-bold {
   font-weight: 700;
 }
 
 /* small + .text-muted*/
-/* line 66, D:/projects/sing/sass/_utils.scss */
+/* line 76, D:/projects/sing/sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
 }
 
 /* .h* + .font-bold */
-/* line 76, D:/projects/sing/sass/_utils.scss */
+/* line 86, D:/projects/sing/sass/_utils.scss */
 .value1 {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 76, D:/projects/sing/sass/_utils.scss */
+/* line 86, D:/projects/sing/sass/_utils.scss */
 .value2 {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-/* line 76, D:/projects/sing/sass/_utils.scss */
+/* line 86, D:/projects/sing/sass/_utils.scss */
 .value3 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 76, D:/projects/sing/sass/_utils.scss */
+/* line 86, D:/projects/sing/sass/_utils.scss */
 .value4 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* line 76, D:/projects/sing/sass/_utils.scss */
+/* line 86, D:/projects/sing/sass/_utils.scss */
 .value5 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
 }
 
-/* line 76, D:/projects/sing/sass/_utils.scss */
+/* line 86, D:/projects/sing/sass/_utils.scss */
 .value6 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* line 84, D:/projects/sing/sass/_utils.scss */
+/* line 94, D:/projects/sing/sass/_utils.scss */
 .help {
   font-size: 85%;
   color: #999999;

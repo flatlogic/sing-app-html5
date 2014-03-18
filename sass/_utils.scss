@@ -34,12 +34,22 @@
   @include rotate(315deg);
 }
 
+//copy bg classes after bootstrap so it's possible to overload other bootstrap classes
+
+@include bg-variant('.bg-primary', $brand-primary);
+@include bg-variant('.bg-success', $state-success-bg);
+@include bg-variant('.bg-info', $state-info-bg);
+@include bg-variant('.bg-warning', $state-warning-bg);
+@include bg-variant('.bg-danger', $state-danger-bg);
+
 @include bg-variant('.bg-body', $body-bg);
 @include bg-variant('.bg-body-light', lighten($body-bg, 3%));
 @include bg-variant('.bg-gray', $gray);
-@include bg-variant('.bg-gray-tp', rgba($gray, .6));
+@include bg-variant('.bg-gray-transparent', rgba($gray, .6));
+@include bg-variant('.bg-transparent', rgba(0,0,0,0));
 
-.bg-body, .bg-body-light, .bg-gray, .bg-gray-tp, .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info{
+.bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
+.bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info{
   @include transition(background-color .15s ease-in-out);
 }
 
