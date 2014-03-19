@@ -13704,6 +13704,130 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-radius: 3px;
 }
 
+/* line 1, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* line 7, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* line 13, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar > li {
+  float: left;
+  display: list-item;
+  list-style: none;
+  margin: 0 5px 10px 0;
+}
+
+/* line 20, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar a[data-wysihtml5-command=bold] {
+  font-weight: bold;
+}
+
+/* line 24, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar a[data-wysihtml5-command=italic] {
+  font-style: italic;
+}
+
+/* line 28, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar a[data-wysihtml5-command=underline] {
+  text-decoration: underline;
+}
+
+/* line 32, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #E6E6E6;
+  background-color: #D9D9D9;
+  outline: 0;
+}
+
+/* line 42, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-commands-disabled .dropdown-menu {
+  display: none !important;
+}
+
+/* line 46, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div.wysihtml5-colors {
+  display: block;
+  width: 50px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 5px;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 56, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar a.wysihtml5-colors-title {
+  padding-left: 70px;
+}
+
+/* line 60, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="black"] {
+  background: black !important;
+}
+
+/* line 64, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="silver"] {
+  background: silver !important;
+}
+
+/* line 68, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="gray"] {
+  background: gray !important;
+}
+
+/* line 72, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="maroon"] {
+  background: maroon !important;
+}
+
+/* line 76, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="red"] {
+  background: red !important;
+}
+
+/* line 80, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="purple"] {
+  background: purple !important;
+}
+
+/* line 84, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="green"] {
+  background: green !important;
+}
+
+/* line 88, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="olive"] {
+  background: olive !important;
+}
+
+/* line 92, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="navy"] {
+  background: navy !important;
+}
+
+/* line 96, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="blue"] {
+  background: blue !important;
+}
+
+/* line 100, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
+  background: orange !important;
+}
+
 /* line 7, D:/projects/sing/sass/_bootstrap-override.scss */
 h1 small,
 h1 .small, h2 small,
@@ -13796,6 +13920,21 @@ legend {
 .content .breadcrumb {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+/* line 95, D:/projects/sing/sass/_bootstrap-override.scss */
+.btn-toolbar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*
+ * bootstrap-select
+ */
+/* line 6, D:/projects/sing/sass/_libs-override.scss */
+.bootstrap-select.btn-group:not(.input-group-btn),
+.bootstrap-select.btn-group[class*="span"] {
+  margin-bottom: 0;
 }
 
 /**
@@ -14217,6 +14356,56 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   transform: rotate(315deg);
 }
 
+/* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-primary {
+  color: #618fb0;
+}
+
+/* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-primary:hover {
+  color: #4a7594;
+}
+
+/* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-success {
+  color: #56bc76;
+}
+
+/* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-success:hover {
+  color: #3fa05e;
+}
+
+/* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-info {
+  color: #4ab0ce;
+}
+
+/* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-info:hover {
+  color: #3196b4;
+}
+
+/* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-warning {
+  color: #f0b518;
+}
+
+/* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-warning:hover {
+  color: #c8950d;
+}
+
+/* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-danger {
+  color: #e5603b;
+}
+
+/* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-danger:hover {
+  color: #d1431c;
+}
+
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-primary {
   background-color: #618fb0;
@@ -14317,7 +14506,7 @@ a.bg-transparent:hover {
   background-color: rgba(0, 0, 0, 0);
 }
 
-/* line 52, D:/projects/sing/sass/_utils.scss */
+/* line 64, D:/projects/sing/sass/_utils.scss */
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -14334,80 +14523,86 @@ a.text-white:hover {
   color: #e6e6e6;
 }
 
-/* line 59, D:/projects/sing/sass/_utils.scss */
+/* line 71, D:/projects/sing/sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
-/* line 63, D:/projects/sing/sass/_utils.scss */
+/* line 75, D:/projects/sing/sass/_utils.scss */
 .font-semi-bold {
   font-weight: 600;
 }
 
-/* line 67, D:/projects/sing/sass/_utils.scss */
+/* line 79, D:/projects/sing/sass/_utils.scss */
 .font-normal {
   font-weight: 400;
 }
 
-/* line 71, D:/projects/sing/sass/_utils.scss */
+/* line 83, D:/projects/sing/sass/_utils.scss */
 .font-bold {
   font-weight: 700;
 }
 
 /* small + .text-muted*/
-/* line 76, D:/projects/sing/sass/_utils.scss */
+/* line 88, D:/projects/sing/sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
 }
 
 /* .h* + .font-bold */
-/* line 86, D:/projects/sing/sass/_utils.scss */
+/* line 98, D:/projects/sing/sass/_utils.scss */
 .value1 {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 86, D:/projects/sing/sass/_utils.scss */
+/* line 98, D:/projects/sing/sass/_utils.scss */
 .value2 {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-/* line 86, D:/projects/sing/sass/_utils.scss */
+/* line 98, D:/projects/sing/sass/_utils.scss */
 .value3 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 86, D:/projects/sing/sass/_utils.scss */
+/* line 98, D:/projects/sing/sass/_utils.scss */
 .value4 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* line 86, D:/projects/sing/sass/_utils.scss */
+/* line 98, D:/projects/sing/sass/_utils.scss */
 .value5 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
 }
 
-/* line 86, D:/projects/sing/sass/_utils.scss */
+/* line 98, D:/projects/sing/sass/_utils.scss */
 .value6 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* line 94, D:/projects/sing/sass/_utils.scss */
+/* line 106, D:/projects/sing/sass/_utils.scss */
 .help {
   font-size: 85%;
   color: #999999;
+}
+
+/* line 111, D:/projects/sing/sass/_utils.scss */
+.transition-height {
+  -webkit-transition: height 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out;
 }
 
 @media print {

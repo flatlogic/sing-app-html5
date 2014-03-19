@@ -303,7 +303,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-md-8">
                 <section class="widget">
                     <header>
                         <h5>
@@ -341,7 +341,7 @@
                     </div>
                 </section>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <section class="widget">
                     <header>
                         <h5>
@@ -388,6 +388,60 @@
                 </section>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            <i class="fa fa-font"></i>
+                            Textareas
+                        </h5>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="body">
+                        <form class="form-horizontal" role="form">
+                            <fieldset>
+                                <legend class="section">Small form</legend>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="default-textarea">Default textarea</label>
+                                    <div class="col-sm-9">
+                                        <textarea rows="4" class="form-control" id="default-textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="elastic-textarea">
+                                        Auto-growing textarea
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <textarea rows="3" class="autogrow form-control transition-height" id="elastic-textarea"
+                                                  placeholder="Try to add few new lines.."></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="wysiwyg">
+                                        Wysiwyg
+                                        <span class="help-block">
+                                            With bottom toolbar appended
+                                        </span>
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <textarea rows="4" class="form-control" id="wysiwyg"></textarea>
+                                        <div class="btn-toolbar">
+                                            <button type="button" class="btn btn-sm btn-default pull-right">Clear</button>
+                                            <button type="button" class="btn btn-sm btn-danger pull-right">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 </div>
 
@@ -406,6 +460,9 @@
 <!-- page specific libs -->
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
 <script src="vendor/bootstrap-select/bootstrap-select.js"></script>
+<script src="vendor/jquery-autosize/jquery.autosize.js"></script>
+<script src="vendor/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
+<script src="vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
 
 <!-- page specific js -->
 <script src="js/form-elements.js"></script>

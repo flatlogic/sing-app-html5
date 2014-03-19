@@ -86,3 +86,13 @@ legend {
     padding-bottom: 0;
   }
 }
+
+
+//
+// Button groups
+// --------------------------------------------------
+
+.btn-toolbar{
+  margin-top: $line-height-computed/2;
+  margin-bottom: $line-height-computed/2;
+}

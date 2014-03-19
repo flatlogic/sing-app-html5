@@ -11,10 +11,12 @@
 
 //custom libs. can be removed
 @import "CSS:../vendor/rickshaw/rickshaw";
+@import "CSS:../vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5";
 
 //end custom libs
 
 @import "bootstrap-override";
+@import "libs-override";
 
 @import "general";
 @import "global-transitions";

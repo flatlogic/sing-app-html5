@@ -34,6 +34,18 @@
   @include rotate(315deg);
 }
 
+//override bs .text-* classes so they use $brand-* variables
+
+@include text-emphasis-variant('.text-primary', $brand-primary);
+
+@include text-emphasis-variant('.text-success', $brand-success);
+
+@include text-emphasis-variant('.text-info', $brand-info);
+
+@include text-emphasis-variant('.text-warning', $brand-warning);
+
+@include text-emphasis-variant('.text-danger', $brand-danger);
+
 //copy bg classes after bootstrap so it's possible to overload other bootstrap classes
 
 @include bg-variant('.bg-primary', $brand-primary);
@@ -94,4 +106,8 @@ $i: 1;
 .help{
   font-size: $font-size-smaller;
   color: $text-muted;
+}
+
+.transition-height{
+  @include transition(height .15s ease-in-out);
 }
