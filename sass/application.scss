@@ -8,6 +8,8 @@
 @import "../vendor/font-awesome/scss/font-awesome";
 @import "CSS:../vendor/animate.css/animate";
 @import "CSS:../vendor/bootstrap-select/bootstrap-select";
+@import "../vendor/select2/select2.css"; //import as css to keep image urls correct
+@import "../vendor/select2-bootstrap-css/lib/select2-bootstrap";
 
 //custom libs. can be removed
 @import "CSS:../vendor/rickshaw/rickshaw";

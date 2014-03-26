@@ -59,6 +59,14 @@ legend {
   }
 }
 
+.form-horizontal.form-label-left {
+  @media (min-width: $screen-sm-min) {
+    .control-label {
+      text-align: left;
+    }
+  }
+}
+
 //
 // Navbars
 // --------------------------------------------------

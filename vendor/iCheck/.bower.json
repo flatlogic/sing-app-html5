@@ -1,0 +1,13 @@
+{
+  "name": "iCheck",
+  "homepage": "https://github.com/fronteed/iCheck",
+  "_release": "d3b53e6d36",
+  "_resolution": {
+    "type": "branch",
+    "branch": "2.x-beta",
+    "commit": "d3b53e6d3623feaef6d2cddfea2c5288bad5af09"
+  },
+  "_source": "git://github.com/fronteed/iCheck.git",
+  "_target": "2.x-beta",
+  "_originalSource": "git://github.com/fronteed/iCheck.git"
+}

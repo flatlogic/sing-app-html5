@@ -18,8 +18,11 @@
     "rickshaw": "latest",
     "flot": "latest",
     "bootstrap-select": ">= 1.5.2",
-    "jquery-autosize": "~1.18.6",
-    "bootstrap-wysihtml5": "*"
+    "jquery-autosize": ">= 1.18.6",
+    "bootstrap3-wysihtml5": "git://github.com/schnawel007/bootstrap3-wysihtml5.git",
+    "select2": "3.4.5",
+    "select2-bootstrap-css": ">= 1.3.0",
+    "iCheck": "git://github.com/fronteed/iCheck.git#2.x-beta"
   },
   "private": true,
   "ignore": [
