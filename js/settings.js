@@ -5,7 +5,7 @@ $(function(){
         _grayLight: '#999',
         _grayLighter: '#eee',
         _brandPrimary: '#618fb0',
-        _brandSuccess: '#56bc76',
+        _brandSuccess: '#64bd63',
         _brandWarning: '#ffc427',
         _brandDanger: '#e5603b',
 

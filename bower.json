@@ -22,7 +22,8 @@
     "bootstrap3-wysihtml5": "git://github.com/schnawel007/bootstrap3-wysihtml5.git",
     "select2": "3.4.5",
     "select2-bootstrap-css": ">= 1.3.0",
-    "iCheck": "git://github.com/fronteed/iCheck.git#2.x-beta"
+    "awesome-bootstrap-checkbox": ">= 0.1.1",
+    "switchery": ">= 0.5.1"
   },
   "private": true,
   "ignore": [

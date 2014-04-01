@@ -55,6 +55,9 @@ $(function(){
         $(".select2").each(function(){
             $(this).select2($(this).data());
         });
+
+        new Switchery(document.getElementById('checkbox-ios1'));
+        new Switchery(document.getElementById('checkbox-ios2'),{color: Sing._brandPrimary});
     }
     pageLoad();
     SingApp.onPageLoad(pageLoad);

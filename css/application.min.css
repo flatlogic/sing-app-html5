@@ -738,12 +738,12 @@ a.bg-primary:hover {
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-success {
-  background-color: #56bc76;
+  background-color: #64bd63;
 }
 
 /* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.bg-success:hover {
-  background-color: #3fa05e;
+  background-color: #48a746;
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2258,13 +2258,13 @@ table th[class*="col-"] {
 .table > tfoot > tr > th.success,
 .table > tfoot > tr.success > td,
 .table > tfoot > tr.success > th {
-  background-color: #56bc76;
+  background-color: #64bd63;
 }
 
 /* line 460, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover, .table-hover > tbody > tr.success:hover > td, .table-hover > tbody > tr.success:hover > th {
-  background-color: #47b268;
+  background-color: #52b551;
 }
 
 /* line 449, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -2695,7 +2695,7 @@ select[multiple].input-lg,
 .has-success .input-group-addon {
   color: white;
   border-color: white;
-  background-color: #56bc76;
+  background-color: #64bd63;
 }
 /* line 895, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .has-success .form-control-feedback {
@@ -2994,20 +2994,20 @@ select[multiple].input-lg,
 /* line 64, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-success {
   color: white;
-  background-color: #56bc76;
-  border-color: #47b268;
+  background-color: #64bd63;
+  border-color: #52b551;
 }
 /* line 508, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
   color: white;
-  background-color: #42a762;
-  border-color: #35864f;
+  background-color: #4bae49;
+  border-color: #3d8d3c;
 }
 /* line 513, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .open .btn-success.dropdown-toggle {
   color: white;
-  background-color: #42a762;
-  border-color: #35864f;
+  background-color: #4bae49;
+  border-color: #3d8d3c;
 }
 /* line 519, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-success:active, .btn-success.active {
@@ -3019,12 +3019,12 @@ select[multiple].input-lg,
 }
 /* line 532, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled]:active, .btn-success[disabled].active, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success.active {
-  background-color: #56bc76;
-  border-color: #47b268;
+  background-color: #64bd63;
+  border-color: #52b551;
 }
 /* line 538, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .btn-success .badge {
-  color: #56bc76;
+  color: #64bd63;
   background-color: white;
 }
 
@@ -5774,11 +5774,11 @@ input[type="button"].btn-block {
 
 /* line 50, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
 .label-success {
-  background-color: #56bc76;
+  background-color: #64bd63;
 }
 /* line 583, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .label-success[href]:hover, .label-success[href]:focus {
-  background-color: #3fa05e;
+  background-color: #48a746;
 }
 
 /* line 54, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss */
@@ -5975,13 +5975,13 @@ a.thumbnail.active {
 
 /* line 56, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss */
 .alert-success {
-  background-color: #56bc76;
-  border-color: #47b256;
+  background-color: #64bd63;
+  border-color: #63b551;
   color: white;
 }
 /* line 430, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-success hr {
-  border-top-color: #3fa04d;
+  border-top-color: #58a746;
 }
 /* line 433, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .alert-success .alert-link {
@@ -6099,7 +6099,7 @@ a.thumbnail.active {
 
 /* line 66, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress-bar-success {
-  background-color: #56bc76;
+  background-color: #64bd63;
 }
 /* line 626, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .progress-striped .progress-bar-success {
@@ -6247,7 +6247,7 @@ a.list-group-item.active .list-group-item-text, a.list-group-item.active:hover .
 /* line 469, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .list-group-item-success {
   color: white;
-  background-color: #56bc76;
+  background-color: #64bd63;
 }
 
 /* line 476, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -6261,7 +6261,7 @@ a.list-group-item-success .list-group-item-heading {
 /* line 482, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success:hover, a.list-group-item-success:focus {
   color: white;
-  background-color: #47b268;
+  background-color: #52b551;
 }
 /* line 488, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.list-group-item-success.active, a.list-group-item-success.active:hover, a.list-group-item-success.active:focus {
@@ -6649,21 +6649,21 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 230, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-success {
-  border-color: #47b256;
+  border-color: #63b551;
 }
 /* line 407, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-success > .panel-heading {
   color: white;
-  background-color: #56bc76;
-  border-color: #47b256;
+  background-color: #64bd63;
+  border-color: #63b551;
 }
 /* line 412, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-success > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #47b256;
+  border-top-color: #63b551;
 }
 /* line 417, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-success > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #47b256;
+  border-bottom-color: #63b551;
 }
 
 /* line 233, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
@@ -13829,6 +13829,239 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   /* 5 */
 }
 
+/* line 20, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox label {
+  display: inline-block;
+  position: relative;
+  padding-left: 5px;
+}
+/* line 25, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+/* line 39, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox label:after {
+  display: inline-block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 11px;
+  color: #555555;
+}
+/* line 54, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type=checkbox] {
+  display: none;
+}
+/* line 57, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type=checkbox]:checked + label:after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+/* line 62, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type=checkbox]:disabled + label {
+  opacity: 0.65;
+}
+/* line 65, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type=checkbox]:disabled + label:before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+/* line 73, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox.checkbox-circle label:before {
+  border-radius: 50%;
+}
+
+/* line 7, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-primary input[type=checkbox]:checked + label:before {
+  background-color: #618fb0;
+  border-color: #618fb0;
+}
+/* line 11, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-primary input[type=checkbox]:checked + label:after {
+  color: #fff;
+}
+
+/* line 7, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-danger input[type=checkbox]:checked + label:before {
+  background-color: #e5603b;
+  border-color: #e5603b;
+}
+/* line 11, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-danger input[type=checkbox]:checked + label:after {
+  color: #fff;
+}
+
+/* line 7, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-info input[type=checkbox]:checked + label:before {
+  background-color: #4ab0ce;
+  border-color: #4ab0ce;
+}
+/* line 11, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-info input[type=checkbox]:checked + label:after {
+  color: #fff;
+}
+
+/* line 7, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-warning input[type=checkbox]:checked + label:before {
+  background-color: #f0b518;
+  border-color: #f0b518;
+}
+/* line 11, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-warning input[type=checkbox]:checked + label:after {
+  color: #fff;
+}
+
+/* line 7, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-success input[type=checkbox]:checked + label:before {
+  background-color: #64bd63;
+  border-color: #64bd63;
+}
+/* line 11, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox-success input[type=checkbox]:checked + label:after {
+  color: #fff;
+}
+
+/* line 108, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio label {
+  display: inline-block;
+  position: relative;
+  padding-left: 5px;
+}
+/* line 113, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out;
+}
+/* line 127, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio label:after {
+  display: inline-block;
+  position: absolute;
+  content: " ";
+  width: 11px;
+  height: 11px;
+  left: 3px;
+  top: 3px;
+  margin-left: -20px;
+  border-radius: 50%;
+  background-color: #555555;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -moz-transition: -moz-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+  transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+/* line 144, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type=radio] {
+  display: none;
+}
+/* line 147, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type=radio]:checked + label:after {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+/* line 151, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type=radio]:disabled + label {
+  opacity: 0.65;
+}
+/* line 154, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type=radio]:disabled + label:before {
+  cursor: not-allowed;
+}
+
+/* line 91, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-primary input[type=radio] + label:after {
+  background-color: #618fb0;
+}
+/* line 96, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-primary input[type=radio]:checked + label:before {
+  border-color: #618fb0;
+}
+/* line 99, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-primary input[type=radio]:checked + label:after {
+  background-color: #618fb0;
+}
+
+/* line 91, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-danger input[type=radio] + label:after {
+  background-color: #e5603b;
+}
+/* line 96, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-danger input[type=radio]:checked + label:before {
+  border-color: #e5603b;
+}
+/* line 99, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-danger input[type=radio]:checked + label:after {
+  background-color: #e5603b;
+}
+
+/* line 91, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-info input[type=radio] + label:after {
+  background-color: #4ab0ce;
+}
+/* line 96, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-info input[type=radio]:checked + label:before {
+  border-color: #4ab0ce;
+}
+/* line 99, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-info input[type=radio]:checked + label:after {
+  background-color: #4ab0ce;
+}
+
+/* line 91, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-warning input[type=radio] + label:after {
+  background-color: #f0b518;
+}
+/* line 96, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-warning input[type=radio]:checked + label:before {
+  border-color: #f0b518;
+}
+/* line 99, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-warning input[type=radio]:checked + label:after {
+  background-color: #f0b518;
+}
+
+/* line 91, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-success input[type=radio] + label:after {
+  background-color: #64bd63;
+}
+/* line 96, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-success input[type=radio]:checked + label:before {
+  border-color: #64bd63;
+}
+/* line 99, D:/projects/sing/vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-success input[type=radio]:checked + label:after {
+  background-color: #64bd63;
+}
+
 /* line 1, D:/projects/sing/vendor/rickshaw/rickshaw.css */
 .rickshaw_graph .detail {
   pointer-events: none;
@@ -14265,21 +14498,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-radius: 3px;
 }
 
-/* line 1, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 1, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar {
   margin: 0;
   padding: 0;
   display: block;
 }
 
-/* line 7, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 7, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar::after {
   clear: both;
   display: table;
   content: "";
 }
 
-/* line 13, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 13, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar > li {
   float: left;
   display: list-item;
@@ -14287,22 +14520,22 @@ ul.wysihtml5-toolbar > li {
   margin: 0 5px 10px 0;
 }
 
-/* line 20, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 20, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar a[data-wysihtml5-command=bold] {
   font-weight: bold;
 }
 
-/* line 24, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 24, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar a[data-wysihtml5-command=italic] {
   font-style: italic;
 }
 
-/* line 28, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 28, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar a[data-wysihtml5-command=underline] {
   text-decoration: underline;
 }
 
-/* line 32, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 32, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
   background-image: none;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -14313,12 +14546,12 @@ ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
   outline: 0;
 }
 
-/* line 42, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 42, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-commands-disabled .dropdown-menu {
   display: none !important;
 }
 
-/* line 46, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 46, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div.wysihtml5-colors {
   display: block;
   width: 50px;
@@ -14329,64 +14562,94 @@ ul.wysihtml5-toolbar div.wysihtml5-colors {
   pointer-events: none;
 }
 
-/* line 56, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 56, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar a.wysihtml5-colors-title {
   padding-left: 70px;
 }
 
-/* line 60, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 60, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="black"] {
   background: black !important;
 }
 
-/* line 64, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 64, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="silver"] {
   background: silver !important;
 }
 
-/* line 68, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 68, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="gray"] {
   background: gray !important;
 }
 
-/* line 72, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 72, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="maroon"] {
   background: maroon !important;
 }
 
-/* line 76, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 76, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="red"] {
   background: red !important;
 }
 
-/* line 80, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 80, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="purple"] {
   background: purple !important;
 }
 
-/* line 84, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 84, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="green"] {
   background: green !important;
 }
 
-/* line 88, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 88, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="olive"] {
   background: olive !important;
 }
 
-/* line 92, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 92, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="navy"] {
   background: navy !important;
 }
 
-/* line 96, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 96, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="blue"] {
   background: blue !important;
 }
 
-/* line 100, D:/projects/sing/vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css */
+/* line 100, D:/projects/sing/vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css */
 ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   background: orange !important;
+}
+
+/*
+ *
+ * Main stylesheet for Switchery.
+ * http://abpetkov.github.io/switchery/
+ *
+ */
+/* line 8, D:/projects/sing/vendor/switchery/dist/switchery.css */
+.switchery {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  vertical-align: middle;
+  width: 50px;
+}
+
+/* line 20, D:/projects/sing/vendor/switchery/dist/switchery.css */
+.switchery > small {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  height: 30px;
+  position: absolute;
+  top: 0;
+  width: 30px;
 }
 
 /* line 7, D:/projects/sing/sass/_bootstrap-override.scss */
@@ -14447,7 +14710,7 @@ legend {
 }
 /* line 48, D:/projects/sing/sass/_bootstrap-override.scss */
 .input-group-addon.bg-success {
-  border-color: #3fa05e;
+  border-color: #48a746;
 }
 /* line 51, D:/projects/sing/sass/_bootstrap-override.scss */
 .input-group-addon.bg-info {
@@ -14537,6 +14800,17 @@ legend {
   -ms-border-radius: 1px;
   -o-border-radius: 1px;
   border-radius: 1px;
+}
+
+/**
+ * Switchery.
+ */
+/* line 37, D:/projects/sing/sass/_libs-override.scss */
+.switchery {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin-left: -20px;
 }
 
 /**
@@ -14970,12 +15244,12 @@ a.text-primary:hover {
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-success {
-  color: #56bc76;
+  color: #64bd63;
 }
 
 /* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.text-success:hover {
-  color: #3fa05e;
+  color: #48a746;
 }
 
 /* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -15020,12 +15294,12 @@ a.bg-primary:hover {
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-success {
-  background-color: #56bc76;
+  background-color: #64bd63;
 }
 
 /* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.bg-success:hover {
-  background-color: #3fa05e;
+  background-color: #48a746;
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */

@@ -29,3 +29,12 @@
 .select2-container-multi .select2-choices .select2-search-choice{
   @include border-radius($border-radius-base);
 }
+
+/**
+ * Switchery.
+ */
+
+.switchery{
+  @include box-sizing(content-box);
+  margin-left: -20px;
+}

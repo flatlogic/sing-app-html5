@@ -10,10 +10,12 @@
 @import "CSS:../vendor/bootstrap-select/bootstrap-select";
 @import "../vendor/select2/select2.css"; //import as css to keep image urls correct
 @import "../vendor/select2-bootstrap-css/lib/select2-bootstrap";
+@import "../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox";
 
 //custom libs. can be removed
 @import "CSS:../vendor/rickshaw/rickshaw";
-@import "CSS:../vendor/bootstrap-wysihtml5/src/bootstrap-wysihtml5";
+@import "CSS:../vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5";
+@import "CSS:../vendor/switchery/dist/switchery";
 
 //end custom libs
 
