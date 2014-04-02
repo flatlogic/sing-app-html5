@@ -38,3 +38,93 @@
   @include box-sizing(content-box);
   margin-left: -20px;
 }
+
+/**
+ * Datetimepicker for Bootstrap v3
+ */
+.bootstrap-datetimepicker-widget
+{
+  border-radius: $border-radius-base;
+
+  td,
+  th
+  {
+    border-radius: $border-radius-base;
+  }
+
+  td
+  {
+    &.day:hover,
+    &.hour:hover,
+    &.minute:hover,
+    &.second:hover
+    {
+      background: $gray-lighter;
+    }
+
+    &.old,
+    &.new
+    {
+      color: $gray-light;
+    }
+
+    &.active,
+    &.active:hover
+    {
+      background-color: $btn-primary-bg;
+      text-shadow: none;
+    }
+
+    &.disabled,
+    &.disabled:hover
+    {
+      color: $gray-light;
+    }
+
+    span
+    {
+      border-radius: $border-radius-base;
+
+      &:hover
+      {
+        background: $gray-lighter;
+      }
+
+      &.active
+      {
+        background-color: $btn-primary-bg;
+      }
+
+      &.old
+      {
+        color: $gray-light;
+      }
+
+      &.disabled,
+      &.disabled:hover
+      {
+        color: $gray-light;
+      }
+    }
+  }
+  th
+  {
+    &.next,
+    &.prev
+    {
+      font-size: $font-size-base * 1.5;
+    }
+    &.disabled,
+    &.disabled:hover
+    {
+      color: $gray-light;
+    }
+  }
+  thead tr:first-child th
+  {
+    &:hover
+    {
+      background: $gray-lighter;
+    }
+  }
+}

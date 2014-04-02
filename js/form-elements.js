@@ -58,6 +58,14 @@ $(function(){
 
         new Switchery(document.getElementById('checkbox-ios1'));
         new Switchery(document.getElementById('checkbox-ios2'),{color: Sing._brandPrimary});
+
+        $('#datetimepicker1').datetimepicker({
+            pickTime: false
+        });
+        $('#datetimepicker2').datetimepicker({
+        });
+
+        $('#colorpicker').colorpicker({color: Sing._grayLight});
     }
     pageLoad();
     SingApp.onPageLoad(pageLoad);
