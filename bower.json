@@ -25,7 +25,8 @@
     "awesome-bootstrap-checkbox": ">= 0.1.1",
     "switchery": ">= 0.5.1",
     "eonasdan-bootstrap-datetimepicker": ">= 3.0.0",
-    "mjolnic-bootstrap-colorpicker": ">= 2.0.0-beta3"
+    "mjolnic-bootstrap-colorpicker": ">= 2.0.0-beta3",
+    "jquery.maskedinput": "git://github.com/digitalBush/jquery.maskedinput.git"
   },
   "private": true,
   "ignore": [

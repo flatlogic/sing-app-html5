@@ -66,6 +66,11 @@ $(function(){
         });
 
         $('#colorpicker').colorpicker({color: Sing._grayLight});
+
+        $("#mask-phone").mask("(999) 999-9999");
+        $("#mask-date").mask("99-99-9999");
+        $("#mask-int-phone").mask("+999 999 999 999");
+        $("#mask-time").mask("99:99");
     }
     pageLoad();
     SingApp.onPageLoad(pageLoad);
