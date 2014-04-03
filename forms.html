@@ -1532,7 +1532,7 @@
                 <section class="widget">
                     <header>
                         <h5>
-                            Simple <strong>file uploads</strong>
+                            <strong>Drop</strong> Zone
                         </h5>
                         <div class="widget-controls">
                             <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
@@ -1541,52 +1541,7 @@
                         </div>
                     </header>
                     <div class="widget-body">
-                        <form class="form-horizontal" role="form">
-                            <fieldset>
-                                <blockquote class="blockquote-reverse">
-                                    <p>The man who is really serious, with the urge to find out what truth is, has no style at all. He lives only in what is.</p>
-                                    <footer>Bruce Lee</footer>
-                                </blockquote>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-4" for="fileupload1">
-                                        File input widget
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
-                                            <div class="form-control" data-trigger="fileinput">
-                                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
-                                                <span class="fileinput-filename"></span>
-                                            </div>
-                                            <span class="input-group-addon btn btn-default btn-file">
-                                                <span class="fileinput-new">Select file</span>
-                                                <span class="fileinput-exists">Change</span>
-                                                <input id="fileupload1" type="file">
-                                            </span>
-                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                        </div>
-                                        <span class="help-block">Awesome file input plugin allows you to create a visually appealing file or image inputs.</span>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-4" for="fileupload1">
-                                        Image upload widget
-                                    </label>
-                                    <div class="col-sm-8">
-                                        <div class="fileinput fileinput-new" data-provides="fileinput">
-                                            <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-                                                <img data-src="holder.js/100%x100%" alt="..." src="">
-                                            </div>
-                                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
-                                            <div>
-                                                <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                                                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-                                            </div>
-                                        </div>
-                                        <span class="help-block">Showing a thumbnail instead of the filename when uploading an image.</span>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
+                        <form class="dropzone" action="#" id="my-awesome-dropzone"></form>
                     </div>
                 </section>
             </div>
@@ -1622,6 +1577,7 @@
 <script src="vendor/jasny-bootstrap/js/inputmask.js"></script>
 <script src="vendor/jasny-bootstrap/js/fileinput.js"></script>
 <script src="vendor/holderjs/holder.js"></script>
+<script src="vendor/dropzone/downloads/dropzone.min.js"></script>
 
 <!-- page specific js -->
 <script src="js/form-elements.js"></script>
