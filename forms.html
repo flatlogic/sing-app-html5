@@ -323,7 +323,7 @@
                                 </legend>
                                 <p>
                                     Set input heights using classes like <code>.input-lg</code> and <code>.input-sm</code>.
-                                    Also works with <code>type='search'</code> inputs and selects. For input groups use
+                                    Also works with <code>type="search"</code> inputs and selects. For input groups use
                                     <code>.input-group-lg</code> & <code>.input-group-sm</code>.
                                 </p>
                                 <br/>
@@ -1365,7 +1365,7 @@
                                 </legend>
                                 <div class="form-group">
                                     <label for="datetimepicker1">In place</label>
-                                    <input id="datetimepicker1" type='text' class="form-control" />
+                                    <input id="datetimepicker1" type="text" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label for="datepicker2i">
@@ -1374,8 +1374,8 @@
                                             Can be customized for both 24 hour and 12 hour clocks.
                                         </span>
                                     </label>
-                                    <div id="datetimepicker2" class='input-group'>
-                                        <input id="datepicker2i" type='text' class="form-control" />
+                                    <div id="datetimepicker2" class="input-group">
+                                        <input id="datepicker2i" type="text" class="form-control" />
                                         <span class="input-group-btn">
                                             <a href="#" class="btn btn-success">
                                                 <span class="glyphicon glyphicon-calendar"></span>
@@ -1465,6 +1465,132 @@
                 </section>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Simple <strong>file uploads</strong>
+                        </h5>
+                        <div class="widget-controls">
+                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <form class="form-horizontal" role="form">
+                            <fieldset>
+                                <blockquote class="blockquote-reverse">
+                                    <p>The man who is really serious, with the urge to find out what truth is, has no style at all. He lives only in what is.</p>
+                                    <footer>Bruce Lee</footer>
+                                </blockquote>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="fileupload1">
+                                        File input widget
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                            <div class="form-control" data-trigger="fileinput">
+                                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                                <span class="fileinput-filename"></span>
+                                            </div>
+                                            <span class="input-group-addon btn btn-default btn-file">
+                                                <span class="fileinput-new">Select file</span>
+                                                <span class="fileinput-exists">Change</span>
+                                                <input id="fileupload1" type="file">
+                                            </span>
+                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                        </div>
+                                        <span class="help-block">Awesome file input plugin allows you to create a visually appealing file or image inputs.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="fileupload1">
+                                        Image upload widget
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                <img data-src="holder.js/100%x100%" alt="..." src="">
+                                            </div>
+                                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                            <div>
+                                                <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                            </div>
+                                        </div>
+                                        <span class="help-block">Showing a thumbnail instead of the filename when uploading an image.</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Simple <strong>file uploads</strong>
+                        </h5>
+                        <div class="widget-controls">
+                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <form class="form-horizontal" role="form">
+                            <fieldset>
+                                <blockquote class="blockquote-reverse">
+                                    <p>The man who is really serious, with the urge to find out what truth is, has no style at all. He lives only in what is.</p>
+                                    <footer>Bruce Lee</footer>
+                                </blockquote>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="fileupload1">
+                                        File input widget
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                            <div class="form-control" data-trigger="fileinput">
+                                                <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                                <span class="fileinput-filename"></span>
+                                            </div>
+                                            <span class="input-group-addon btn btn-default btn-file">
+                                                <span class="fileinput-new">Select file</span>
+                                                <span class="fileinput-exists">Change</span>
+                                                <input id="fileupload1" type="file">
+                                            </span>
+                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                        </div>
+                                        <span class="help-block">Awesome file input plugin allows you to create a visually appealing file or image inputs.</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-4" for="fileupload1">
+                                        Image upload widget
+                                    </label>
+                                    <div class="col-sm-8">
+                                        <div class="fileinput fileinput-new" data-provides="fileinput">
+                                            <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                <img data-src="holder.js/100%x100%" alt="..." src="">
+                                            </div>
+                                            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                            <div>
+                                                <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                            </div>
+                                        </div>
+                                        <span class="help-block">Showing a thumbnail instead of the filename when uploading an image.</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 </div>
 
@@ -1493,7 +1619,9 @@
 <script src="vendor/moment/min/moment.min.js"></script>
 <script src="vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="vendor/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-<script src="vendor/jquery.maskedinput/dist/jquery.maskedinput.min.js"></script>
+<script src="vendor/jasny-bootstrap/js/inputmask.js"></script>
+<script src="vendor/jasny-bootstrap/js/fileinput.js"></script>
+<script src="vendor/holderjs/holder.js"></script>
 
 <!-- page specific js -->
 <script src="js/form-elements.js"></script>

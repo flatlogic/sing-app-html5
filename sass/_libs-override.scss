@@ -128,3 +128,48 @@
     }
   }
 }
+
+
+/**
+ * Jasny Bootstrap
+ * Fileinput.less
+ */
+
+
+.fileinput-new.input-group .btn-file,
+.fileinput-new .input-group .btn-file {
+  border-radius: 0 $border-radius-base $border-radius-base 0;
+
+  &.btn-xs,
+  &.btn-sm {
+    border-radius: 0 $border-radius-small $border-radius-small 0;
+  }
+  &.btn-lg {
+    border-radius: 0 $border-radius-large $border-radius-large 0;
+  }
+}
+
+.form-group.has-warning .fileinput {
+  .fileinput-preview {
+    color: $state-warning-text;
+  }
+  .thumbnail {
+    border-color: $state-warning-border;
+  }
+}
+.form-group.has-error .fileinput {
+  .fileinput-preview {
+    color: $state-danger-text;
+  }
+  .thumbnail {
+    border-color: $state-danger-border;
+  }
+}
+.form-group.has-success .fileinput {
+  .fileinput-preview {
+    color: $state-success-text;
+  }
+  .thumbnail {
+    border-color: $state-success-border;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "jasny-bootstrap",
+  "version": "3.1.1",
+  "main": [
+    "./dist/css/jasny-bootstrap.css",
+    "./dist/js/jasny-bootstrap.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "_config.yml",
+    "CNAME",
+    "composer.json",
+    "CONTRIBUTING.md",
+    "docs",
+    "js/tests"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0",
+    "bootstrap": ">= 3.0.0"
+  },
+  "homepage": "https://github.com/jasny/bootstrap",
+  "_release": "3.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.1.1",
+    "commit": "d5d4c5bd62e43c8846858b38efe05992ee1d7344"
+  },
+  "_source": "git://github.com/jasny/bootstrap.git",
+  "_target": "~3.1.1",
+  "_originalSource": "jasny-bootstrap",
+  "_direct": true
+}
