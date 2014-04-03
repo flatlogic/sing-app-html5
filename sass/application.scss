@@ -1,6 +1,7 @@
 @import "font";
 
 @import "variables";
+@import "mixins";
 
 @import "compass";
 
@@ -8,7 +9,7 @@
 @import "../vendor/font-awesome/scss/font-awesome";
 @import "CSS:../vendor/animate.css/animate";
 @import "CSS:../vendor/bootstrap-select/bootstrap-select";
-@import "../vendor/select2/select2.css"; //import as css to keep image urls correct
+@import "CSS:../vendor/select2/select2"; //import as css to keep image urls correct
 @import "../vendor/select2-bootstrap-css/lib/select2-bootstrap";
 @import "../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox";
 
@@ -17,8 +18,9 @@
 @import "CSS:../vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5";
 @import "CSS:../vendor/switchery/dist/switchery";
 @import "CSS:../vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker";
-@import "../vendor/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css";  //import as css to keep image urls correct
+@import "CSS:../vendor/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker";
 @import "CSS:../vendor/jasny-bootstrap/dist/css/jasny-bootstrap";
+@import "CSS:../vendor/dropzone/downloads/css/dropzone";
 
 //end custom libs
 

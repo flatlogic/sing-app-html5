@@ -31,6 +31,22 @@
 }
 
 /**
+ * setting correct urls
+ */
+.select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice .select2-arrow b{
+  background-image: url("#{$vendor-folder}/select2/select2.png");
+  @include retina(){
+    background-image: url("#{$vendor-folder}/select2/select2x2.png") !important;
+  }
+}
+
+.select2-search input.select2-active,
+.select2-more-results.select2-active,
+.select2-container-multi .select2-choices .select2-search-field input.select2-active{
+  background-image: url("#{$vendor-folder}/select2/select2-spinner.gif");
+}
+
+/**
  * Switchery.
  */
 
@@ -129,6 +145,32 @@
   }
 }
 
+/**
+ * Bootstrap Colorpicker
+ * setting correct urls
+ */
+
+.colorpicker-saturation {
+  background-image: url("#{$vendor-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/saturation.png");;
+}
+
+.colorpicker-hue {
+  background-image: url("#{$vendor-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/hue.png");
+}
+
+.colorpicker-alpha,
+.colorpicker-color {
+  background-image: url("#{$vendor-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/alpha.png");
+}
+
+.colorpicker.colorpicker-horizontal .colorpicker-hue {
+  background-image: url("#{$vendor-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/hue-horizontal.png");
+}
+
+.colorpicker.colorpicker-horizontal .colorpicker-alpha {
+  background-image: url("#{$vendor-folder}/mjolnic-bootstrap-colorpicker/dist/img/bootstrap-colorpicker/alpha-horizontal.png");
+}
+
 
 /**
  * Jasny Bootstrap
@@ -173,3 +215,29 @@
     border-color: $state-success-border;
   }
 }
+
+
+/**
+ * Dropzone
+ */
+
+.dropzone{
+  @include border-radius($border-radius-base);
+}
+
+/**
+ * Set correct urls
+ */
+.dropzone .dz-default.dz-message,
+.dropzone .dz-preview .dz-error-mark,
+.dropzone-previews .dz-preview .dz-error-mark,
+.dropzone .dz-preview .dz-success-mark,
+.dropzone-previews .dz-preview .dz-success-mark,
+.dropzone .dz-preview .dz-progress .dz-upload,
+.dropzone-previews .dz-preview .dz-progress .dz-upload{
+  background-image: url("#{$vendor-folder}/dropzone/downloads/images/spritemap.png");
+  @include retina{
+    background-image: url("#{$vendor-folder}/dropzone/downloads/images/spritemap@2x.png");
+  }
+}
+
