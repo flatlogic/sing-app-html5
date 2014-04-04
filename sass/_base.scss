@@ -15,11 +15,8 @@
 .controls, .content-wrap{
   margin-left: $sidebar-icon-state-width;
 
-  @include translate(150px, 0);
-  -ms-transition: -ms-transform $sidebar-transition-time ease-in-out;
-  -moz-transition: -moz-transform $sidebar-transition-time ease-in-out;
-  -webkit-transition: -webkit-transform $sidebar-transition-time ease-in-out;
-  transition: transform $sidebar-transition-time ease-in-out;
+  @include translate($sidebar-width - $sidebar-icon-state-width, 0);
+  @include transition-transform($sidebar-transition-time ease-in-out);
 
   .nav-collapsed &{
     @include translate(0, 0);
