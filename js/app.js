@@ -19,8 +19,8 @@ $(function(){
         this._resetResizeCallbacks();
         this._initOnResizeCallbacks();
 
-        this.$sidebar.on('mouseover', $.proxy(this.expandNavigation, this));
-        this.$sidebar.on('mouseout', $.proxy(this.collapseNavigation, this));
+        this.$sidebar.on('mouseenter', $.proxy(this.expandNavigation, this));
+        this.$sidebar.on('mouseleave', $.proxy(this.collapseNavigation, this));
 
         this.checkNavigationState();
         this._initOnResizeCallbacks();
@@ -60,7 +60,7 @@ $(function(){
     };
 
     SingAppView.prototype.checkNavigationState = function(){
-        if (this.settings.get('nav-collapsed') === true){
+        if (this.settings.get('collapse-nav') === true){
             var view = this;
             setTimeout(function(){
                 view.collapseNavigation();
@@ -226,7 +226,7 @@ $(function(){
     SingAppView.prototype._logErrors = function(){
         var errors = JSON.parse(localStorage.getItem('lb-errors')) || {};
         errors[new Date().getTime()] = arguments;
-        localStorage.setItem('lb-errors', JSON.stringify(errors));
+        localStorage.setItem('sing-errors', JSON.stringify(errors));
     };
 
     SingAppView.prototype.log = function(message){
