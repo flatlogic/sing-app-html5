@@ -92,7 +92,7 @@ $(function(){
 
     var SingSettingsBundle = function(){
         var defaultSettings =  {
-            'nav-collapsed': true
+            'collapse-nav': true
         };
         this.settingName = 'sing-app-settings';
         this._settings = JSON.parse(localStorage.getItem(this.settingName)) || defaultSettings;
