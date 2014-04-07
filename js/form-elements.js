@@ -71,6 +71,8 @@ $(function(){
         $("#mask-date").inputmask({mask: "99-99-9999"});
         $("#mask-int-phone").inputmask({mask: "+999 999 999 999"});
         $("#mask-time").inputmask({mask: "99:99"});
+
+        Holder.run();
     }
     pageLoad();
     SingApp.onPageLoad(pageLoad);
