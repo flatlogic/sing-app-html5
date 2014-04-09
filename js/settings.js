@@ -6,7 +6,7 @@ $(function(){
         _grayLighter: '#eee',
         _brandPrimary: '#618fb0',
         _brandSuccess: '#64bd63',
-        _brandWarning: '#ffc427',
+        _brandWarning: '#f0b518',
         _brandDanger: '#e5603b',
 
         //credit http://stackoverflow.com/questions/1507931/generate-lighter-darker-color-in-css-using-javascript

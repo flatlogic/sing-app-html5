@@ -17318,6 +17318,12 @@ legend {
   margin-bottom: 10px;
 }
 
+/* line 111, D:/projects/sing/sass/_bootstrap-override.scss */
+.progress-sm {
+  height: 10px;
+  margin-bottom: 10px;
+}
+
 /*
  * bootstrap-select
  */
@@ -17572,6 +17578,67 @@ legend {
   .dropzone-previews .dz-preview .dz-progress .dz-upload {
     background-image: url("../vendor/dropzone/downloads/images/spritemap@2x.png");
   }
+}
+
+/* line 245, D:/projects/sing/sass/_libs-override.scss */
+.mapTooltip {
+  position: fixed;
+  padding: 2px;
+  z-index: 1000;
+  max-width: 200px;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  font-size: 12px;
+  color: #555555;
+}
+
+/* line 259, D:/projects/sing/sass/_libs-override.scss */
+.zoomIn, .zoomOut {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #555555;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 1px;
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 279, D:/projects/sing/sass/_libs-override.scss */
+.zoomOut {
+  left: 36px;
+}
+
+/* line 284, D:/projects/sing/sass/_libs-override.scss */
+.mapael {
+  position: relative;
+  margin: -15px -20px 0;
+}
+/* line 287, D:/projects/sing/sass/_libs-override.scss */
+.mapael .map {
+  position: relative;
+}
+/* line 290, D:/projects/sing/sass/_libs-override.scss */
+.mapael .stats {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin: 5% 10%;
 }
 
 /**
@@ -17836,22 +17903,33 @@ a {
 .widget > header h1, .widget > header h2, .widget > header h3, .widget > header h4, .widget > header h5, .widget > header h6 {
   margin: 0;
 }
+/* line 201, D:/projects/sing/sass/_base.scss */
+.widget:hover .widget-controls-hover {
+  opacity: 1;
+}
 
-/* line 202, D:/projects/sing/sass/_base.scss */
+/* line 206, D:/projects/sing/sass/_base.scss */
 .widget-controls {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   padding: 14px;
   font-size: 12px;
   word-spacing: 1px;
 }
-/* line 210, D:/projects/sing/sass/_base.scss */
+/* line 215, D:/projects/sing/sass/_base.scss */
 .widget-controls.left {
   left: 0;
   right: auto;
 }
-/* line 215, D:/projects/sing/sass/_base.scss */
+/* line 220, D:/projects/sing/sass/_base.scss */
+.widget-controls.widget-controls-hover {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+}
+/* line 225, D:/projects/sing/sass/_base.scss */
 .widget-controls a {
   padding: 1px 4px;
   border-radius: 4px;
@@ -17859,19 +17937,19 @@ a {
   -webkit-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
 }
-/* line 221, D:/projects/sing/sass/_base.scss */
+/* line 231, D:/projects/sing/sass/_base.scss */
 .widget-controls a:hover {
   color: rgba(0, 0, 0, 0.1);
 }
-/* line 225, D:/projects/sing/sass/_base.scss */
+/* line 235, D:/projects/sing/sass/_base.scss */
 .widget-controls a > .fa {
   vertical-align: middle;
 }
-/* line 229, D:/projects/sing/sass/_base.scss */
+/* line 239, D:/projects/sing/sass/_base.scss */
 .widget-controls a > .glyphicon {
   vertical-align: -1px;
 }
-/* line 234, D:/projects/sing/sass/_base.scss */
+/* line 244, D:/projects/sing/sass/_base.scss */
 .widget-controls .fa-refresh {
   position: relative;
   top: -1px;
@@ -17880,24 +17958,24 @@ a {
 /***********************/
 /*        Forms        */
 /***********************/
-/* line 244, D:/projects/sing/sass/_base.scss */
+/* line 254, D:/projects/sing/sass/_base.scss */
 .form-actions {
   margin: 20px 0 0;
   padding: 20px;
   background-color: whitesmoke;
 }
-/* line 249, D:/projects/sing/sass/_base.scss */
+/* line 259, D:/projects/sing/sass/_base.scss */
 .form-horizontal .form-actions .row {
   margin-left: -35px;
   margin-right: -35px;
 }
 
-/* line 255, D:/projects/sing/sass/_base.scss */
+/* line 265, D:/projects/sing/sass/_base.scss */
 input[type=search], input.search {
   background-color: white;
   background: url(../img/search.png) 5px 60% no-repeat white;
 }
-/* line 256, D:/projects/sing/sass/_base.scss */
+/* line 266, D:/projects/sing/sass/_base.scss */
 input[type=search], .input-group-lg > input[type=search], .input-group-sm > input[type=search], input.search, .input-group-lg > input.search, .input-group-sm > input.search {
   padding-left: 26px;
 }
@@ -17905,7 +17983,7 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 /***********************/
 /*       Buttons       */
 /***********************/
-/* line 267, D:/projects/sing/sass/_base.scss */
+/* line 277, D:/projects/sing/sass/_base.scss */
 .btn-inverse {
   color: white;
   background-color: #555555;
@@ -18143,7 +18221,17 @@ a.bg-transparent:hover {
   background-color: rgba(0, 0, 0, 0);
 }
 
-/* line 64, D:/projects/sing/sass/_utils.scss */
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-white {
+  background-color: white;
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-white:hover {
+  background-color: #e6e6e6;
+}
+
+/* line 65, D:/projects/sing/sass/_utils.scss */
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -18160,86 +18248,119 @@ a.text-white:hover {
   color: #e6e6e6;
 }
 
-/* line 71, D:/projects/sing/sass/_utils.scss */
+/* line 72, D:/projects/sing/sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
-/* line 75, D:/projects/sing/sass/_utils.scss */
+/* line 76, D:/projects/sing/sass/_utils.scss */
 .font-semi-bold {
   font-weight: 600;
 }
 
-/* line 79, D:/projects/sing/sass/_utils.scss */
+/* line 80, D:/projects/sing/sass/_utils.scss */
 .font-normal {
   font-weight: 400;
 }
 
-/* line 83, D:/projects/sing/sass/_utils.scss */
+/* line 84, D:/projects/sing/sass/_utils.scss */
 .font-bold {
   font-weight: 700;
 }
 
 /* small + .text-muted*/
-/* line 88, D:/projects/sing/sass/_utils.scss */
+/* line 89, D:/projects/sing/sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
 }
 
 /* .h* + .font-bold */
-/* line 98, D:/projects/sing/sass/_utils.scss */
+/* line 99, D:/projects/sing/sass/_utils.scss */
 .value1 {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 98, D:/projects/sing/sass/_utils.scss */
+/* line 99, D:/projects/sing/sass/_utils.scss */
 .value2 {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-/* line 98, D:/projects/sing/sass/_utils.scss */
+/* line 99, D:/projects/sing/sass/_utils.scss */
 .value3 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 98, D:/projects/sing/sass/_utils.scss */
+/* line 99, D:/projects/sing/sass/_utils.scss */
 .value4 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* line 98, D:/projects/sing/sass/_utils.scss */
+/* line 99, D:/projects/sing/sass/_utils.scss */
 .value5 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
 }
 
-/* line 98, D:/projects/sing/sass/_utils.scss */
+/* line 99, D:/projects/sing/sass/_utils.scss */
 .value6 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* line 106, D:/projects/sing/sass/_utils.scss */
+/* line 107, D:/projects/sing/sass/_utils.scss */
 .help {
   font-size: 85%;
   color: #999999;
 }
 
-/* line 111, D:/projects/sing/sass/_utils.scss */
+/* line 112, D:/projects/sing/sass/_utils.scss */
 .transition-height {
   -webkit-transition: height 0.15s ease-in-out;
   transition: height 0.15s ease-in-out;
+}
+
+/* line 116, D:/projects/sing/sass/_utils.scss */
+.circle, .rounded {
+  display: inline-block;
+  width: 1.428571429em;
+  height: 1.428571429em;
+  text-align: center;
+}
+
+/* line 123, D:/projects/sing/sass/_utils.scss */
+.circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 127, D:/projects/sing/sass/_utils.scss */
+.rounded {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 131, D:/projects/sing/sass/_utils.scss */
+.circle-lg, .rounded-lg {
+  width: 2.2em;
+  height: 2.2em;
+  line-height: 2.2em;
 }
 
 @media print {
@@ -18606,4 +18727,20 @@ a.text-white:hover {
 /* line 106, D:/projects/sing/sass/_widgets.scss */
 .chart-stats {
   border-top: 1px solid #eeeeee;
+}
+
+/***********************/
+/* Part:Progress Stats */
+/***********************/
+/* line 115, D:/projects/sing/sass/_widgets.scss */
+.progress-stats .name {
+  margin-bottom: 2px;
+}
+/* line 118, D:/projects/sing/sass/_widgets.scss */
+.progress-stats .description {
+  margin-bottom: 2px;
+}
+/* line 121, D:/projects/sing/sass/_widgets.scss */
+.progress-stats .status {
+  margin-top: 15px;
 }

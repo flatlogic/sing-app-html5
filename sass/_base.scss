@@ -197,10 +197,15 @@
       margin: 0;
     }
   }
+
+  &:hover .widget-controls-hover{
+    opacity: 1;
+  }
 }
 
 .widget-controls{
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 0;
   padding: 14px;
@@ -210,6 +215,11 @@
   &.left{
     left: 0;
     right: auto;
+  }
+
+  &.widget-controls-hover{
+    opacity: 0;
+    @include transition(opacity .15s);
   }
 
   a{

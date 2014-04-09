@@ -27,8 +27,9 @@
     "eonasdan-bootstrap-datetimepicker": ">= 3.0.0",
     "mjolnic-bootstrap-colorpicker": ">= 2.0.0-beta3",
     "jasny-bootstrap": "~3.1.1",
-    "holderjs": "~2.3.2",
-    "dropzone": "~3.8.4"
+    "holderjs": ">= 2.3.2",
+    "dropzone": ">= 3.8.4",
+    "jQuery-Mapael": "git://github.com/neveldo/jQuery-Mapael.git"
   },
   "private": true,
   "ignore": [

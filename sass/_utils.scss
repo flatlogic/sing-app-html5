@@ -59,6 +59,7 @@
 @include bg-variant('.bg-gray', $gray);
 @include bg-variant('.bg-gray-transparent', rgba($gray, .6));
 @include bg-variant('.bg-transparent', rgba(0,0,0,0));
+@include bg-variant('.bg-white', $white);
 
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info{
@@ -110,4 +111,25 @@ $i: 1;
 
 .transition-height{
   @include transition(height .15s ease-in-out);
+}
+
+.circle, .rounded{
+  display: inline-block;
+  width: #{$line-height-base}em;
+  height: #{$line-height-base}em;
+  text-align: center;
+}
+
+.circle{
+  @include border-radius(50%);
+}
+
+.rounded{
+  @include border-radius(5px);
+}
+
+.circle-lg, .rounded-lg{
+  width: 2.2em;
+  height: 2.2em;
+  line-height: 2.2em;
 }

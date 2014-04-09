@@ -106,3 +106,19 @@
 .chart-stats{
   border-top: 1px solid $gray-lighter;
 }
+
+/***********************/
+/* Part:Progress Stats */
+/***********************/
+
+.progress-stats{
+  .name{
+    margin-bottom: 2px;
+  }
+  .description{
+    margin-bottom: 2px;
+  }
+  .status{
+    margin-top: 15px;
+  }
+}

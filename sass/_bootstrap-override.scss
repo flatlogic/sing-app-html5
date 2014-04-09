@@ -103,3 +103,12 @@ legend {
   margin-top: $line-height-computed/2;
   margin-bottom: $line-height-computed/2;
 }
+
+//
+// Progress bars
+// --------------------------------------------------
+
+.progress-sm{
+  height: 10px;
+  margin-bottom: $line-height-computed/2;
+}
