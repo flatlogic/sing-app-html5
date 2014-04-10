@@ -121,4 +121,34 @@
   .status{
     margin-top: 15px;
   }
+
+  @media (max-width: $screen-md-max) {
+    .description + .progress{
+      margin-bottom: 0;
+    }
+  }
+}
+
+/***********************/
+/*    Part:Stats Row   */
+/***********************/
+
+.stats-row{
+  margin-bottom: $line-height-computed;
+}
+
+.stat-item{
+  display: inline-block;
+  padding-right: 15px;
+
+  & + .stat-item{
+    padding-left: 15px;
+    border-left: 1px solid $hr-border;
+  }
+  .name{
+    margin-bottom: 2px;
+  }
+  .value{
+    font-weight: bold;
+  }
 }

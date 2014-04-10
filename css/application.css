@@ -17324,6 +17324,12 @@ legend {
   margin-bottom: 10px;
 }
 
+/* line 116, D:/projects/sing/sass/_bootstrap-override.scss */
+.progress-xs {
+  height: 5px;
+  margin-bottom: 10px;
+}
+
 /*
  * bootstrap-select
  */
@@ -18212,6 +18218,16 @@ a.bg-gray-transparent:hover {
 }
 
 /* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.bg-gray-dark {
+  background-color: #333333;
+}
+
+/* line 596, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.bg-gray-dark:hover {
+  background-color: #1a1a1a;
+}
+
+/* line 593, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-transparent {
   background-color: rgba(0, 0, 0, 0);
 }
@@ -18231,7 +18247,7 @@ a.bg-white:hover {
   background-color: #e6e6e6;
 }
 
-/* line 65, D:/projects/sing/sass/_utils.scss */
+/* line 66, D:/projects/sing/sass/_utils.scss */
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -18248,97 +18264,108 @@ a.text-white:hover {
   color: #e6e6e6;
 }
 
-/* line 72, D:/projects/sing/sass/_utils.scss */
+/* line 605, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-gray {
+  color: #555555;
+}
+
+/* line 608, D:/projects/sing/vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-gray:hover {
+  color: #3c3c3c;
+}
+
+/* line 74, D:/projects/sing/sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
-/* line 76, D:/projects/sing/sass/_utils.scss */
+/* line 78, D:/projects/sing/sass/_utils.scss */
 .font-semi-bold {
   font-weight: 600;
 }
 
-/* line 80, D:/projects/sing/sass/_utils.scss */
+/* line 82, D:/projects/sing/sass/_utils.scss */
 .font-normal {
   font-weight: 400;
 }
 
-/* line 84, D:/projects/sing/sass/_utils.scss */
+/* line 86, D:/projects/sing/sass/_utils.scss */
 .font-bold {
   font-weight: 700;
 }
 
 /* small + .text-muted*/
-/* line 89, D:/projects/sing/sass/_utils.scss */
+/* line 91, D:/projects/sing/sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
 }
 
 /* .h* + .font-bold */
-/* line 99, D:/projects/sing/sass/_utils.scss */
+/* line 101, D:/projects/sing/sass/_utils.scss */
 .value1 {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 99, D:/projects/sing/sass/_utils.scss */
+/* line 101, D:/projects/sing/sass/_utils.scss */
 .value2 {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-/* line 99, D:/projects/sing/sass/_utils.scss */
+/* line 101, D:/projects/sing/sass/_utils.scss */
 .value3 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 99, D:/projects/sing/sass/_utils.scss */
+/* line 101, D:/projects/sing/sass/_utils.scss */
 .value4 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* line 99, D:/projects/sing/sass/_utils.scss */
+/* line 101, D:/projects/sing/sass/_utils.scss */
 .value5 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
 }
 
-/* line 99, D:/projects/sing/sass/_utils.scss */
+/* line 101, D:/projects/sing/sass/_utils.scss */
 .value6 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* line 107, D:/projects/sing/sass/_utils.scss */
+/* line 109, D:/projects/sing/sass/_utils.scss */
 .help {
   font-size: 85%;
   color: #999999;
 }
 
-/* line 112, D:/projects/sing/sass/_utils.scss */
+/* line 114, D:/projects/sing/sass/_utils.scss */
 .transition-height {
   -webkit-transition: height 0.15s ease-in-out;
   transition: height 0.15s ease-in-out;
 }
 
-/* line 116, D:/projects/sing/sass/_utils.scss */
+/* line 118, D:/projects/sing/sass/_utils.scss */
 .circle, .rounded {
   display: inline-block;
   width: 1.428571429em;
   height: 1.428571429em;
+  line-height: 1.428571429em;
   text-align: center;
 }
 
-/* line 123, D:/projects/sing/sass/_utils.scss */
+/* line 126, D:/projects/sing/sass/_utils.scss */
 .circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -18347,7 +18374,7 @@ a.text-white:hover {
   border-radius: 50%;
 }
 
-/* line 127, D:/projects/sing/sass/_utils.scss */
+/* line 130, D:/projects/sing/sass/_utils.scss */
 .rounded {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -18356,7 +18383,7 @@ a.text-white:hover {
   border-radius: 5px;
 }
 
-/* line 131, D:/projects/sing/sass/_utils.scss */
+/* line 134, D:/projects/sing/sass/_utils.scss */
 .circle-lg, .rounded-lg {
   width: 2.2em;
   height: 2.2em;
@@ -18743,4 +18770,37 @@ a.text-white:hover {
 /* line 121, D:/projects/sing/sass/_widgets.scss */
 .progress-stats .status {
   margin-top: 15px;
+}
+@media (max-width: 1199px) {
+  /* line 126, D:/projects/sing/sass/_widgets.scss */
+  .progress-stats .description + .progress {
+    margin-bottom: 0;
+  }
+}
+
+/***********************/
+/*    Part:Stats Row   */
+/***********************/
+/* line 136, D:/projects/sing/sass/_widgets.scss */
+.stats-row {
+  margin-bottom: 20px;
+}
+
+/* line 140, D:/projects/sing/sass/_widgets.scss */
+.stat-item {
+  display: inline-block;
+  padding-right: 15px;
+}
+/* line 144, D:/projects/sing/sass/_widgets.scss */
+.stat-item + .stat-item {
+  padding-left: 15px;
+  border-left: 1px solid #eeeeee;
+}
+/* line 148, D:/projects/sing/sass/_widgets.scss */
+.stat-item .name {
+  margin-bottom: 2px;
+}
+/* line 151, D:/projects/sing/sass/_widgets.scss */
+.stat-item .value {
+  font-weight: bold;
 }

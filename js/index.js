@@ -218,7 +218,6 @@ $(function(){
         $map.mapael({
             map:{
                 name : "usa_states",
-                height: '200px',
                 defaultArea : {
                     attrsHover : {
                         fill : '#242424',
@@ -310,6 +309,11 @@ $(function(){
                     longitude: -83.522688,
                     size: 11,
                     tooltip: {content : "Union County"}
+                },
+                'lm' : {
+                    latitude: 33.844630,
+                    longitude: -118.157483,
+                    tooltip: {content : "Lakewood Mutual"}
                 }
             }
         });

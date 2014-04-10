@@ -58,6 +58,7 @@
 @include bg-variant('.bg-body-light', lighten($body-bg, 3%));
 @include bg-variant('.bg-gray', $gray);
 @include bg-variant('.bg-gray-transparent', rgba($gray, .6));
+@include bg-variant('.bg-gray-dark', $gray-dark);
 @include bg-variant('.bg-transparent', rgba(0,0,0,0));
 @include bg-variant('.bg-white', $white);
 
@@ -67,6 +68,7 @@
 }
 
 @include text-emphasis-variant('.text-white', $white);
+@include text-emphasis-variant('.text-gray', $gray);
 
 
 .text-light{
@@ -117,6 +119,7 @@ $i: 1;
   display: inline-block;
   width: #{$line-height-base}em;
   height: #{$line-height-base}em;
+  line-height: #{$line-height-base}em;
   text-align: center;
 }
 
