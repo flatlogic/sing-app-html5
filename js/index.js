@@ -403,7 +403,7 @@ $(function(){
         initChangesYearChart();
         initSalesChart();
         initMap();
-        initBigChart();
+//        initBigChart();
     }
 
     pjaxPageLoad();

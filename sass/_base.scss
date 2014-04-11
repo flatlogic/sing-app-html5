@@ -198,6 +198,11 @@
     }
   }
 
+  > footer{
+    margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+    padding: $widget-padding-vertical $widget-padding-horizontal;
+  }
+
   &:hover .widget-controls-hover{
     opacity: 1;
   }

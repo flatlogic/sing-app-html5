@@ -7,3 +7,10 @@
     @content;
   }
 }
+
+@mixin thumb($parent, $size){
+  #{$parent} {
+    width: $size;
+    display: inline-block;
+  }
+}

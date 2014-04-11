@@ -2,6 +2,9 @@
 /**            UTILS              **/
 /***********************************/
 
+// Style Classes
+// ----------------------------
+
 .text-align-center {
   text-align: center;
 }
@@ -14,8 +17,16 @@
   margin: 0 !important;
 }
 
-.margin-top-one{
-  margin-top: $line-height-computed;
+.font-semi-bold{
+  font-weight: $font-weight-semi-bold;
+}
+
+.font-normal{
+  font-weight: $font-weight-normal;
+}
+
+.font-bold{
+  font-weight: $font-weight-bold;
 }
 
 .rotate-45 {
@@ -33,6 +44,9 @@
 .rotate-315 {
   @include rotate(315deg);
 }
+
+// Text & Background Variations
+// ----------------------------
 
 //override bs .text-* classes so they use $brand-* variables
 
@@ -75,17 +89,8 @@
   opacity: .8;
 }
 
-.font-semi-bold{
-  font-weight: $font-weight-semi-bold;
-}
-
-.font-normal{
-  font-weight: $font-weight-normal;
-}
-
-.font-bold{
-  font-weight: $font-weight-bold;
-}
+// Util Components
+// ----------------------------
 
 /* small + .text-muted*/
 .deemphasize{
@@ -135,4 +140,50 @@ $i: 1;
   width: 2.2em;
   height: 2.2em;
   line-height: 2.2em;
+}
+
+@include thumb('.thumb-sm', 34px);
+@include thumb('.thumb', 50px);
+
+.thumb-sm,
+.thumb{
+  position: relative;
+  img{
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .list-group-item > & {
+    margin-right: 15px;
+  }
+
+  .status{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    border: 0.15em solid $white;
+    @include border-radius(50%);
+
+    &.status-bottom{
+      top: auto;
+      left: auto;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.text-ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input-rounded{
+  @include border-radius(2em);
 }
