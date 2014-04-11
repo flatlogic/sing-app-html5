@@ -4,6 +4,8 @@ $(function(){
         _black: '#000',
         _grayLight: '#999',
         _grayLighter: '#eee',
+        _gray: '#666',
+        _grayDark: '#343434',
         _brandPrimary: '#618fb0',
         _brandSuccess: '#64bd63',
         _brandWarning: '#f0b518',

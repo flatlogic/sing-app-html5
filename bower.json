@@ -29,7 +29,8 @@
     "jasny-bootstrap": "~3.1.1",
     "holderjs": ">= 2.3.2",
     "dropzone": ">= 3.8.4",
-    "jQuery-Mapael": "git://github.com/neveldo/jQuery-Mapael.git"
+    "jQuery-Mapael": "git://github.com/neveldo/jQuery-Mapael.git",
+    "nvd3": ">= 1.1.15-beta"
   },
   "private": true,
   "ignore": [
@@ -37,6 +38,7 @@
     "vendor"
   ],
   "resolutions": {
-    "jquery": ">= 2.1.0"
+    "jquery": ">= 2.1.0",
+    "d3": ">= 3.4.3"
   }
 }
