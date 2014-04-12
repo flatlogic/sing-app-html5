@@ -17,6 +17,10 @@
   margin: 0 !important;
 }
 
+.mt{
+  margin-top: $line-height-computed;
+}
+
 .font-semi-bold{
   font-weight: $font-weight-semi-bold;
 }
@@ -83,6 +87,7 @@
 
 @include text-emphasis-variant('.text-white', $white);
 @include text-emphasis-variant('.text-gray', $gray);
+@include text-emphasis-variant('.text-gray-dark', $gray-dark);
 
 
 .text-light{
@@ -186,4 +191,15 @@ $i: 1;
 
 .input-rounded{
   @include border-radius(2em);
+}
+
+.globe{
+  font-size: 64px;
+  > i {
+    position: relative;
+    > i {
+      position: absolute;
+      left: 0;
+    }
+  }
 }

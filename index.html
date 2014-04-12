@@ -103,7 +103,7 @@
                 </section>
             </div>
             <div class="col-md-4">
-                <section class="widget bg-transparent">
+                <section class="widget bg-transparent no-margin">
                     <header>
                         <h4 class="font-semi-bold">
                             Statistics
@@ -168,6 +168,21 @@
                                 </span>
                             </div>
                         </div>
+                        <h5 class="font-semi-bold mt">Map Distributions</h5>
+                        <p>Tracking: <strong>Active</strong></p>
+                        <p>
+                            <span class="circle bg-warning"><i class="fa fa-cog"></i></span>
+                            391 elements installed, 84 sets
+                        </p>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search Map">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default">
+                                    <i class="fa fa-search text-gray"></i>
+                                </button>
+                            </span>
+                        </div>
+
                     </div>
                 </section>
             </div>
@@ -282,7 +297,7 @@
                             </div>
                         </div>
                         <p>
-                            <small><span class="circle bg-warning"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
+                            <small><span class="circle bg-warning"><i class="fa fa-plus"></i></span></small>
                             <strong>8 734 higher</strong>
                             than last month
                         </p>
@@ -300,7 +315,45 @@
                     <!--</div>-->
                 <!--</section>-->
             <!--</div>-->
-            <div class="col-md-4 col-md-offset-8">
+            <div class="col-md-4">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Today Stats
+                        </h5>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-refresh"></i></a>
+                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div class="row">
+                            <div class="col-sm-3 text-align-center">
+                                <span class="globe">
+                                    <i class="fa fa-circle text-warning"><i class="fa fa-globe text-gray-dark"></i></i>
+                                </span>
+                            </div>
+                            <div class="col-sm-9">
+                                <p><span class="value2">943</span> <span class="text-muted">views</span></p>
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar progress-bar-gray-light" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 57%;">
+                                    </div>
+                                </div>
+                                <p>
+                                        <i class="fa fa-video-camera"></i>
+                                    &nbsp;
+                                        <i class="fa fa-cog"></i>
+                                    &nbsp;
+                                        <i class="fa fa-map-marker"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-4">
                 <section class="widget">
                     <header>
                         <h5><span class="label label-danger">New</span> Messages</h5>
@@ -504,6 +557,7 @@
 <script src="vendor/jQuery-Mapael/js/jquery.mapael.js"></script>
 <script src="vendor/jQuery-Mapael/js/maps/usa_states.js"></script>
 <script src="vendor/nvd3/nv.d3.min.js"></script>
+<script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
 
 <!-- page specific js -->
 <script src="js/index.js"></script>

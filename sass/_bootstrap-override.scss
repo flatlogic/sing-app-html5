@@ -118,6 +118,16 @@ legend {
   margin-bottom: $line-height-computed/2;
 }
 
+
+.progress-bar-gray {
+  @include progress-bar-variant($gray);
+}
+
+.progress-bar-gray-light {
+  @include progress-bar-variant($gray-light);
+}
+
+
 //
 // List groups
 // --------------------------------------------------

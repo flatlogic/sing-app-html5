@@ -225,7 +225,7 @@ $(function(){
                     },
                     tooltip: {
                         content: function(){
-                            return state;
+                            return '<strong>' + state + '</strong>';
                         }
                     },
                     eventHandlers: {
