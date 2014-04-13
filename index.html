@@ -359,7 +359,35 @@
                         <div class="row">
                             <div class="col-sm-7"></div>
                             <div class="col-sm-5">
-                                <h4>BASIC STATS</h4>
+                                <div class="widget-overflow bg-gray-dark text-white">
+                                    <h5><span class="font-semi-bold">QUICK</span> VIEW</h5>
+                                    <input class="form-control input-dark" type="text" placeholder="Search...">
+                                    <div class="stats-row mt">
+                                        <div class="stat-item">
+                                            <h6 class="name">Overall Growth</h6>
+                                            <p class="value">43.75%</p>
+                                        </div>
+                                        <div class="stat-item">
+                                            <h6 class="name">Montly</h6>
+                                            <p class="value">86.34%</p>
+                                        </div>
+                                        <div class="stat-item">
+                                            <h6 class="name">24h</h6>
+                                            <p class="value">3.85%</p>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-xs mt">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+                                             aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
+                                        </div>
+                                    </div>
+                                    <p class="mt mb">
+                                        <small><span class="circle bg-warning text-gray-dark"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
+                                        <strong>17% higher</strong>
+                                        than last month</p>
+                                    <br>
+                                    <div id="realtime1" class="chart-overflow-bottom text-gray-dark"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -538,7 +566,7 @@
                             </div>
                         </div>
                         <div class="chart bg-body-light">
-                            <div id="chart-stats-simple"></div>
+                            <div id="chart-stats-simple" class="chart-inner"></div>
                         </div>
                     </div>
                 </section>

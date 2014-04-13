@@ -57,7 +57,7 @@ $(function(){
         });
 
         new Switchery(document.getElementById('checkbox-ios1'));
-        new Switchery(document.getElementById('checkbox-ios2'),{color: Sing._brandPrimary});
+        new Switchery(document.getElementById('checkbox-ios2'),{color: Sing.colors['brand-primary']});
 
         $('#datetimepicker1').datetimepicker({
             pickTime: false
@@ -65,7 +65,7 @@ $(function(){
         $('#datetimepicker2').datetimepicker({
         });
 
-        $('#colorpicker').colorpicker({color: Sing._grayLight});
+        $('#colorpicker').colorpicker({color: Sing.Sing.colors['gray-light']});
 
         $("#mask-phone").inputmask({mask: "(999) 999-9999"});
         $("#mask-date").inputmask({mask: "99-99-9999"});

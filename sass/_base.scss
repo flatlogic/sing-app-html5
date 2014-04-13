@@ -208,6 +208,11 @@
   }
 }
 
+.widget-overflow{
+  margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+  padding: $widget-padding-vertical $widget-padding-horizontal;
+}
+
 .widget-controls{
   position: absolute;
   z-index: 1;

@@ -2,6 +2,98 @@
 /**            UTILS              **/
 /***********************************/
 
+// Util Components
+// ----------------------------
+
+.transition-height{
+  @include transition(height .15s ease-in-out);
+}
+
+.circle, .rounded{
+  display: inline-block;
+  width: #{$line-height-base}em;
+  height: #{$line-height-base}em;
+  line-height: #{$line-height-base}em;
+  text-align: center;
+}
+
+.circle{
+  @include border-radius(50%);
+}
+
+.rounded{
+  @include border-radius(5px);
+}
+
+.circle-lg, .rounded-lg{
+  width: 2.2em;
+  height: 2.2em;
+  line-height: 2.2em;
+}
+
+@include thumb('.thumb-sm', 34px);
+@include thumb('.thumb', 50px);
+
+.thumb-sm,
+.thumb{
+  position: relative;
+  img{
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  .list-group-item > & {
+    margin-right: 15px;
+  }
+
+  .status{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 0.7em;
+    height: 0.7em;
+    border: 0.15em solid $white;
+    @include border-radius(50%);
+
+    &.status-bottom{
+      top: auto;
+      left: auto;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+.text-ellipsis {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input-dark{
+  background-color: rgba(0,0,0,.3);
+  border: 0;
+  color: $gray-light
+}
+
+.chart-overflow-bottom{
+  margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+}
+
+.globe{
+  font-size: 64px;
+  > i {
+    position: relative;
+    > i {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
 // Style Classes
 // ----------------------------
 
@@ -14,7 +106,7 @@
 }
 
 .no-margin {
-  margin: 0 !important;
+  margin: 0;
 }
 
 .mt{
@@ -98,9 +190,6 @@
   opacity: .8;
 }
 
-// Util Components
-// ----------------------------
-
 /* small + .text-muted*/
 .deemphasize{
   font-size: $font-size-smaller;
@@ -123,87 +212,4 @@ $i: 1;
 .help{
   font-size: $font-size-smaller;
   color: $text-muted;
-}
-
-.transition-height{
-  @include transition(height .15s ease-in-out);
-}
-
-.circle, .rounded{
-  display: inline-block;
-  width: #{$line-height-base}em;
-  height: #{$line-height-base}em;
-  line-height: #{$line-height-base}em;
-  text-align: center;
-}
-
-.circle{
-  @include border-radius(50%);
-}
-
-.rounded{
-  @include border-radius(5px);
-}
-
-.circle-lg, .rounded-lg{
-  width: 2.2em;
-  height: 2.2em;
-  line-height: 2.2em;
-}
-
-@include thumb('.thumb-sm', 34px);
-@include thumb('.thumb', 50px);
-
-.thumb-sm,
-.thumb{
-  position: relative;
-  img{
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-  }
-
-  .list-group-item > & {
-    margin-right: 15px;
-  }
-
-  .status{
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    width: 0.7em;
-    height: 0.7em;
-    border: 0.15em solid $white;
-    @include border-radius(50%);
-
-    &.status-bottom{
-      top: auto;
-      left: auto;
-      bottom: 0;
-      right: 0;
-    }
-  }
-}
-
-.text-ellipsis {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.input-rounded{
-  @include border-radius(2em);
-}
-
-.globe{
-  font-size: 64px;
-  > i {
-    position: relative;
-    > i {
-      position: absolute;
-      left: 0;
-    }
-  }
 }

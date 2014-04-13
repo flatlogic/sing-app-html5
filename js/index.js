@@ -7,12 +7,12 @@ $(function(){
             lineColor: 'transparent',
             fillColor: 'transparent',
             spotRadius: 5,
-            spotColor: Sing._grayLight,
-            valueSpots: {'0:':Sing._grayLight},
-            highlightSpotColor: Sing._grayLight,
+            spotColor: Sing.colors['gray-light'],
+            valueSpots: {'0:':Sing.colors['gray-light']},
+            highlightSpotColor: Sing.colors['gray-light'],
             highlightLineColor: 'transparent',
-            minSpotColor: Sing._grayLight,
-            maxSpotColor: Sing._grayLight,
+            minSpotColor: Sing.colors['gray-light'],
+            maxSpotColor: Sing.colors['gray-light'],
             tooltipFormat: new $.SPFormatClass('<span style="color: white">&#9679;</span> {{prefix}}{{y}}{{suffix}}'),
             chartRangeMin: _(data).min() - 1
         });
@@ -20,16 +20,16 @@ $(function(){
         $el.sparkline(data, {
             composite: true,
             type: 'line',
-            lineColor: Sing._grayLight,
+            lineColor: Sing.colors['gray-light'],
             lineWidth: 1,
             fillColor: 'transparent',
             spotRadius: 4.1,
-            spotColor: Sing._white,
-            valueSpots: {'0:': Sing._white},
-            highlightSpotColor: Sing._grayLighter,
+            spotColor: Sing.colors['white'],
+            valueSpots: {'0:': Sing.colors['white']},
+            highlightSpotColor: Sing.colors['gray-lighter'],
             highlightLineColor: 'transparent',
-            minSpotColor: Sing._white,
-            maxSpotColor: Sing._white,
+            minSpotColor: Sing.colors['white'],
+            maxSpotColor: Sing.colors['white'],
             tooltipFormat: new $.SPFormatClass(''),
             chartRangeMin: _(data).min() - 1
         });
@@ -55,13 +55,13 @@ $(function(){
             series: [{
                 name: 'pop',
                 data: seriesData.shift().map(function(d) { return { x: d.x, y: d.y } }),
-                color: Sing.lighten(Sing._brandSuccess, .09),
+                color: Sing.lighten(Sing.colors['brand-success'], .09),
                 renderer: 'bar'
             }, {
                 name: 'humidity',
                 data: seriesData.shift().map(function(d) { return { x: d.x, y: d.y * (Math.random()*0.1 + 1.1) } }),
                 renderer: 'line',
-                color: Sing._white
+                color: Sing.colors['white']
             }]
         } );
 
@@ -105,7 +105,7 @@ $(function(){
         $el.sparkline(backgroundData,{
             type: 'bar',
             height: 26,
-            barColor: Sing._grayLighter,
+            barColor: Sing.colors['gray-lighter'],
             barWidth: 7,
             barSpacing: 5,
             chartRangeMin: _(data).min(),
@@ -115,7 +115,7 @@ $(function(){
         $el.sparkline(data,{
             composite: true,
             type: 'bar',
-            barColor: Sing._brandSuccess,
+            barColor: Sing.colors['brand-success'],
             barWidth: 7,
             barSpacing: 5
         });
@@ -123,6 +123,7 @@ $(function(){
 
     function initSalesChart(){
 
+        //todo rewrite
         function randValue() {
             return (Math.floor(Math.random() * (1 + 50 - 20))) + 10;
         }
@@ -208,7 +209,7 @@ $(function(){
                 tickColor: "rgba(255,255,255,1)",
                 borderWidth: 0
             },
-            colors: [Sing.darken(Sing._grayLighter,.05), Sing._brandDanger]
+            colors: [Sing.darken(Sing.colors['gray-lighter'],.05), Sing.colors['brand-danger']]
         });
     }
 
@@ -237,7 +238,7 @@ $(function(){
                 defaultPlot:{
                     size: 17,
                     attrs : {
-                        fill : Sing._brandWarning,
+                        fill : Sing.colors['brand-warning'],
                         stroke : "#fff",
                         "stroke-width" : 0,
                         "stroke-linejoin" : "round"
@@ -370,7 +371,7 @@ $(function(){
                 .showXAxis(false)
                 .showYAxis(true)
                 .margin({left: 28, bottom: 0, right: 0})
-                .color([Sing._brandDanger, Sing._brandWarning, Sing._brandSuccess]);
+                .color([Sing.colors['brand-danger'], Sing.colors['brand-warning'], Sing.colors['brand-success']]);
 
             chart.xAxis
                 .showMaxMin(false)
@@ -397,6 +398,59 @@ $(function(){
         });
     }
 
+    function initRealTime1(){
+        "use strict";
+
+        var seriesData = [ [], [] ];
+        var random = new Rickshaw.Fixtures.RandomData(30);
+
+        for (var i = 0; i < 30; i++) {
+            random.addData(seriesData);
+        }
+
+        var graph = new Rickshaw.Graph( {
+            element: document.getElementById("realtime1"),
+            height: 130,
+            renderer: 'area',
+            series: [
+                {
+                    color: Sing.colors['gray-dark'],
+                    data: seriesData[0],
+                    name: 'Uploads'
+                }, {
+                    color: Sing.colors['gray'],
+                    data: seriesData[1],
+                    name: 'Downloads'
+                }
+            ]
+        } );
+
+        function onResize(){
+            graph.configure({
+                width: $('#realtime1').width()
+            });
+            graph.render();
+        }
+
+        SingApp.onResize(onResize);
+        onResize();
+
+
+        var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+            graph: graph,
+            xFormatter: function(x) {
+                return new Date(x * 1000).toString();
+            }
+        } );
+
+        setInterval( function() {
+            random.removeData(seriesData);
+            random.addData(seriesData);
+            graph.update();
+
+        }, 1000 );
+    }
+
     function pjaxPageLoad(){
         initSimpleChart();
         initChangesChart();
@@ -404,6 +458,7 @@ $(function(){
         initSalesChart();
         initMap();
 //        initBigChart();
+        initRealTime1();
     }
 
     pjaxPageLoad();

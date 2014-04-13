@@ -1,15 +1,17 @@
 $(function(){
     window.Sing = {
-        _white: '#fff',
-        _black: '#000',
-        _grayLight: '#999',
-        _grayLighter: '#eee',
-        _gray: '#666',
-        _grayDark: '#343434',
-        _brandPrimary: '#618fb0',
-        _brandSuccess: '#64bd63',
-        _brandWarning: '#f0b518',
-        _brandDanger: '#e5603b',
+        colors: {
+            'white': '#fff',
+            'black': '#000',
+            'gray-light': '#999',
+            'gray-lighter': '#eee',
+            'gray': '#666',
+            'gray-dark': '#343434',
+            'brand-primary': '#618fb0',
+            'brand-success': '#64bd63',
+            'brand-warning': '#f0b518',
+            'brand-danger': '#e5603b'
+        },
 
         //credit http://stackoverflow.com/questions/1507931/generate-lighter-darker-color-in-css-using-javascript
         changeColor: function(color, ratio, darker) {
