@@ -367,9 +367,9 @@ $(function(){
         nv.addGraph(function() {
             var chart = nv.models.lineChart()
                 .useInteractiveGuideline(true)
-                .showXAxis(true)
+                .showXAxis(false)
                 .showYAxis(true)
-                .margin({left: 28})
+                .margin({left: 28, bottom: 0, right: 0})
                 .color([Sing._brandDanger, Sing._brandWarning, Sing._brandSuccess]);
 
             chart.xAxis
@@ -383,7 +383,7 @@ $(function(){
 
             d3.select('#chart svg')
                 .datum(testData(['Search', 'Referral', 'Direct'], 150).map(function(el, i){
-//                    el.area = true;
+                    (i == 0) && (el.area = true);
                     return el;
                 }))
                 .transition().duration(500)

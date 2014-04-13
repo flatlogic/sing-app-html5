@@ -18977,42 +18977,47 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 }
 
 /* line 24, D:/projects/sing/sass/_utils.scss */
+.mb {
+  margin-bottom: 20px;
+}
+
+/* line 28, D:/projects/sing/sass/_utils.scss */
 .font-semi-bold {
   font-weight: 600;
 }
 
-/* line 28, D:/projects/sing/sass/_utils.scss */
+/* line 32, D:/projects/sing/sass/_utils.scss */
 .font-normal {
   font-weight: 400;
 }
 
-/* line 32, D:/projects/sing/sass/_utils.scss */
+/* line 36, D:/projects/sing/sass/_utils.scss */
 .font-bold {
   font-weight: 700;
 }
 
-/* line 36, D:/projects/sing/sass/_utils.scss */
+/* line 40, D:/projects/sing/sass/_utils.scss */
 .rotate-45 {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 40, D:/projects/sing/sass/_utils.scss */
+/* line 44, D:/projects/sing/sass/_utils.scss */
 .rotate-135 {
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 44, D:/projects/sing/sass/_utils.scss */
+/* line 48, D:/projects/sing/sass/_utils.scss */
 .rotate-225 {
   -webkit-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
-/* line 48, D:/projects/sing/sass/_utils.scss */
+/* line 52, D:/projects/sing/sass/_utils.scss */
 .rotate-315 {
   -webkit-transform: rotate(315deg);
   -ms-transform: rotate(315deg);
@@ -19189,7 +19194,7 @@ a.bg-white:hover {
   background-color: #e6e6e6;
 }
 
-/* line 84, D:/projects/sing/sass/_utils.scss */
+/* line 88, D:/projects/sing/sass/_utils.scss */
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -19226,74 +19231,74 @@ a.text-gray-dark:hover {
   color: #1a1a1a;
 }
 
-/* line 93, D:/projects/sing/sass/_utils.scss */
+/* line 97, D:/projects/sing/sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
 /* small + .text-muted*/
-/* line 101, D:/projects/sing/sass/_utils.scss */
+/* line 105, D:/projects/sing/sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
 }
 
 /* .h* + .font-bold */
-/* line 111, D:/projects/sing/sass/_utils.scss */
+/* line 115, D:/projects/sing/sass/_utils.scss */
 .value1 {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 111, D:/projects/sing/sass/_utils.scss */
+/* line 115, D:/projects/sing/sass/_utils.scss */
 .value2 {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-/* line 111, D:/projects/sing/sass/_utils.scss */
+/* line 115, D:/projects/sing/sass/_utils.scss */
 .value3 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 111, D:/projects/sing/sass/_utils.scss */
+/* line 115, D:/projects/sing/sass/_utils.scss */
 .value4 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* line 111, D:/projects/sing/sass/_utils.scss */
+/* line 115, D:/projects/sing/sass/_utils.scss */
 .value5 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
 }
 
-/* line 111, D:/projects/sing/sass/_utils.scss */
+/* line 115, D:/projects/sing/sass/_utils.scss */
 .value6 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* line 119, D:/projects/sing/sass/_utils.scss */
+/* line 123, D:/projects/sing/sass/_utils.scss */
 .help {
   font-size: 85%;
   color: #999999;
 }
 
-/* line 124, D:/projects/sing/sass/_utils.scss */
+/* line 128, D:/projects/sing/sass/_utils.scss */
 .transition-height {
   -webkit-transition: height 0.15s ease-in-out;
   transition: height 0.15s ease-in-out;
 }
 
-/* line 128, D:/projects/sing/sass/_utils.scss */
+/* line 132, D:/projects/sing/sass/_utils.scss */
 .circle, .rounded {
   display: inline-block;
   width: 1.428571429em;
@@ -19302,7 +19307,7 @@ a.text-gray-dark:hover {
   text-align: center;
 }
 
-/* line 136, D:/projects/sing/sass/_utils.scss */
+/* line 140, D:/projects/sing/sass/_utils.scss */
 .circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -19311,7 +19316,7 @@ a.text-gray-dark:hover {
   border-radius: 50%;
 }
 
-/* line 140, D:/projects/sing/sass/_utils.scss */
+/* line 144, D:/projects/sing/sass/_utils.scss */
 .rounded {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -19320,7 +19325,7 @@ a.text-gray-dark:hover {
   border-radius: 5px;
 }
 
-/* line 144, D:/projects/sing/sass/_utils.scss */
+/* line 148, D:/projects/sing/sass/_utils.scss */
 .circle-lg, .rounded-lg {
   width: 2.2em;
   height: 2.2em;
@@ -19339,24 +19344,24 @@ a.text-gray-dark:hover {
   display: inline-block;
 }
 
-/* line 154, D:/projects/sing/sass/_utils.scss */
+/* line 158, D:/projects/sing/sass/_utils.scss */
 .thumb-sm,
 .thumb {
   position: relative;
 }
-/* line 156, D:/projects/sing/sass/_utils.scss */
+/* line 160, D:/projects/sing/sass/_utils.scss */
 .thumb-sm img,
 .thumb img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
 }
-/* line 162, D:/projects/sing/sass/_utils.scss */
+/* line 166, D:/projects/sing/sass/_utils.scss */
 .list-group-item > .thumb-sm, .list-group-item >
 .thumb {
   margin-right: 15px;
 }
-/* line 166, D:/projects/sing/sass/_utils.scss */
+/* line 170, D:/projects/sing/sass/_utils.scss */
 .thumb-sm .status,
 .thumb .status {
   position: absolute;
@@ -19372,7 +19377,7 @@ a.text-gray-dark:hover {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 176, D:/projects/sing/sass/_utils.scss */
+/* line 180, D:/projects/sing/sass/_utils.scss */
 .thumb-sm .status.status-bottom,
 .thumb .status.status-bottom {
   top: auto;
@@ -19381,7 +19386,7 @@ a.text-gray-dark:hover {
   right: 0;
 }
 
-/* line 185, D:/projects/sing/sass/_utils.scss */
+/* line 189, D:/projects/sing/sass/_utils.scss */
 .text-ellipsis {
   display: block;
   white-space: nowrap;
@@ -19389,7 +19394,7 @@ a.text-gray-dark:hover {
   text-overflow: ellipsis;
 }
 
-/* line 192, D:/projects/sing/sass/_utils.scss */
+/* line 196, D:/projects/sing/sass/_utils.scss */
 .input-rounded {
   -webkit-border-radius: 2em;
   -moz-border-radius: 2em;
@@ -19398,15 +19403,15 @@ a.text-gray-dark:hover {
   border-radius: 2em;
 }
 
-/* line 196, D:/projects/sing/sass/_utils.scss */
+/* line 200, D:/projects/sing/sass/_utils.scss */
 .globe {
   font-size: 64px;
 }
-/* line 198, D:/projects/sing/sass/_utils.scss */
+/* line 202, D:/projects/sing/sass/_utils.scss */
 .globe > i {
   position: relative;
 }
-/* line 200, D:/projects/sing/sass/_utils.scss */
+/* line 204, D:/projects/sing/sass/_utils.scss */
 .globe > i > i {
   position: absolute;
   left: 0;
@@ -19748,24 +19753,20 @@ a.text-gray-dark:hover {
   color: rgba(255, 255, 255, 0.7);
   font-size: 85%;
 }
-/* line 77, D:/projects/sing/sass/_widgets.scss */
-.widget-chart-changes .chart-additional-info {
-  margin-top: 20px;
-}
 
 /***********************/
 /*  Chart Stats Simple */
 /***********************/
-/* line 88, D:/projects/sing/sass/_widgets.scss */
+/* line 84, D:/projects/sing/sass/_widgets.scss */
 .widget-chart-stats-simple > header h1, .widget-chart-stats-simple > header h2, .widget-chart-stats-simple > header h3, .widget-chart-stats-simple > header h4, .widget-chart-stats-simple > header h5, .widget-chart-stats-simple > header h6 {
   margin-bottom: 5px;
 }
-/* line 93, D:/projects/sing/sass/_widgets.scss */
+/* line 89, D:/projects/sing/sass/_widgets.scss */
 .widget-chart-stats-simple .chart {
   height: 260px;
   margin: 10px -20px -15px;
 }
-/* line 96, D:/projects/sing/sass/_widgets.scss */
+/* line 92, D:/projects/sing/sass/_widgets.scss */
 .widget-chart-stats-simple .chart > * {
   height: 100%;
 }
@@ -19773,15 +19774,15 @@ a.text-gray-dark:hover {
 /***********************/
 /*      Big Chart      */
 /***********************/
-/* line 107, D:/projects/sing/sass/_widgets.scss */
+/* line 103, D:/projects/sing/sass/_widgets.scss */
 .widget-big-chart .chart {
-  height: 350px;
+  height: 200px;
 }
 
 /***********************/
 /*  Part:Chart Stats   */
 /***********************/
-/* line 116, D:/projects/sing/sass/_widgets.scss */
+/* line 112, D:/projects/sing/sass/_widgets.scss */
 .chart-stats {
   border-top: 1px solid #eeeeee;
 }
@@ -19789,20 +19790,20 @@ a.text-gray-dark:hover {
 /***********************/
 /* Part:Progress Stats */
 /***********************/
-/* line 125, D:/projects/sing/sass/_widgets.scss */
+/* line 121, D:/projects/sing/sass/_widgets.scss */
 .progress-stats .name {
   margin-bottom: 2px;
 }
-/* line 128, D:/projects/sing/sass/_widgets.scss */
+/* line 124, D:/projects/sing/sass/_widgets.scss */
 .progress-stats .description {
   margin-bottom: 2px;
 }
-/* line 131, D:/projects/sing/sass/_widgets.scss */
+/* line 127, D:/projects/sing/sass/_widgets.scss */
 .progress-stats .status {
   margin-top: 15px;
 }
 @media (max-width: 1199px) {
-  /* line 136, D:/projects/sing/sass/_widgets.scss */
+  /* line 132, D:/projects/sing/sass/_widgets.scss */
   .progress-stats .description + .progress {
     margin-bottom: 0;
   }
@@ -19811,26 +19812,26 @@ a.text-gray-dark:hover {
 /***********************/
 /*    Part:Stats Row   */
 /***********************/
-/* line 146, D:/projects/sing/sass/_widgets.scss */
+/* line 142, D:/projects/sing/sass/_widgets.scss */
 .stats-row {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-/* line 150, D:/projects/sing/sass/_widgets.scss */
+/* line 146, D:/projects/sing/sass/_widgets.scss */
 .stat-item {
   display: inline-block;
   padding-right: 15px;
 }
-/* line 154, D:/projects/sing/sass/_widgets.scss */
+/* line 150, D:/projects/sing/sass/_widgets.scss */
 .stat-item + .stat-item {
   padding-left: 15px;
   border-left: 1px solid #eeeeee;
 }
-/* line 158, D:/projects/sing/sass/_widgets.scss */
+/* line 154, D:/projects/sing/sass/_widgets.scss */
 .stat-item .name {
   margin-bottom: 2px;
 }
-/* line 161, D:/projects/sing/sass/_widgets.scss */
+/* line 157, D:/projects/sing/sass/_widgets.scss */
 .stat-item .value {
   font-weight: bold;
 }

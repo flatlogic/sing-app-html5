@@ -73,10 +73,6 @@
     color: rgba($white, .7);
     font-size: $font-size-smaller;
   }
-
-  .chart-additional-info{
-    margin-top: $line-height-computed;
-  }
 }
 
 /***********************/
@@ -105,7 +101,7 @@
 
 .widget-big-chart{
   .chart{
-    height: 350px;
+    height: 200px;
   }
 }
 
@@ -144,7 +140,7 @@
 /***********************/
 
 .stats-row{
-  margin-bottom: $line-height-computed;
+  margin-bottom: 15px;
 }
 
 .stat-item{
