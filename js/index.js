@@ -178,9 +178,9 @@ $(function(){
             [23, 130 + randValue()]
         ];
         $.plot($("#chart-stats-simple"), [{
-            data: data_com, showLabels: true, label: "New Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+            data: data_com, showLabels: true, label: "Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
         },{
-            data: data_com2, showLabels: true, label: "Old Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+            data: data_com2, showLabels: true, label: "Test Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
         }
         ], {
             series: {
