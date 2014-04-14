@@ -18651,7 +18651,7 @@ a {
 }
 
 /* line 15, D:/projects/sing/sass/_base.scss */
-.controls, .content-wrap {
+.page-controls, .content-wrap {
   margin-left: 50px;
   -webkit-transform: translate(150px, 0);
   -ms-transform: translate(150px, 0);
@@ -18662,14 +18662,14 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 /* line 21, D:/projects/sing/sass/_base.scss */
-.nav-collapsed .controls, .nav-collapsed .content-wrap {
+.nav-collapsed .page-controls, .nav-collapsed .content-wrap {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
 /* line 26, D:/projects/sing/sass/_base.scss */
-.controls {
+.page-controls {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -18987,6 +18987,33 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 .btn-inverse .badge {
   color: #555555;
   background-color: white;
+}
+
+/***********************/
+/*     Content Map     */
+/***********************/
+/* line 295, D:/projects/sing/sass/_base.scss */
+.content-map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 301, D:/projects/sing/sass/_base.scss */
+.content-map + .page-title {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 307, D:/projects/sing/sass/_base.scss */
+.content-map-controls {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  margin-top: 90px;
+  margin-right: 40px;
 }
 
 /***********************************/

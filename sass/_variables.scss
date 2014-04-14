@@ -48,6 +48,11 @@ $font-weight-base: $font-weight-thin;
 
 $font-size-smaller: 85%;
 
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
 $link-color: #218BC3;
 
 // Layout
@@ -56,6 +61,12 @@ $sidebar-width: 200px;
 $sidebar-icon-state-width: 50px;
 
 $sidebar-transition-time: .3s;
+
+$navbar-height:                    50px !default;
+
+$content-padding-vertical: $line-height-computed*2;
+$content-padding-top: $content-padding-vertical + $navbar-height;
+$content-padding-horizontal: 40px;
 
 // Screens
 // -------------------------

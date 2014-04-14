@@ -12,7 +12,7 @@
   color: $sidebar-color;
 }
 
-.controls, .content-wrap{
+.page-controls, .content-wrap{
   margin-left: $sidebar-icon-state-width;
 
   @include translate($sidebar-width - $sidebar-icon-state-width, 0);
@@ -23,7 +23,7 @@
   }
 }
 
-.controls{
+.page-controls{
   position: absolute;
   z-index: 1;
   left: 0;
@@ -38,7 +38,7 @@
 
 .content{
   min-height: 100%;
-  padding: (40 + $navbar-height) 40px $line-height-computed*2;
+  padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
   background-color: $body-bg;
 }
 
@@ -286,4 +286,29 @@ input[type=search], input.search {
 
 .btn-inverse {
   @include button-variant($white, $gray, darken($gray, 10%));
+}
+
+/***********************/
+/*     Content Map     */
+/***********************/
+
+.content-map{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  + .page-title{
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.content-map-controls{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  margin-top: $content-padding-top;
+  margin-right: $content-padding-horizontal;
 }
