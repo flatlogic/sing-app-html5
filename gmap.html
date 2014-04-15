@@ -63,10 +63,30 @@
 </nav>
 <nav class="page-controls navbar navbar-default">
     <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="#"><i class="fa fa-bars fa-lg"></i></a></li>
+            <li class="ml-sm mr-n-xs"><a href="#"><i class="fa fa-refresh fa-lg"></i></a></li>
+            <li class="ml-n-xs"><a href="#"><i class="fa fa-th-large fa-lg"></i></a></li>
+        </ul>
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <div class="input-group input-group-no-border">
+                    <span class="input-group-addon">
+                        <i class="fa fa-search"></i>
+                    </span>
+                    <input class="form-control" type="text" placeholder="Search Dashboard">
+                </div>
+            </div>
+        </form>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menus <b class="caret"></b></a>
-                <ul class="dropdown-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="thumb-sm avatar pull-right">
+                        <img class="img-circle" src="img/demo/people/a5.jpg" alt="...">
+                    </span>
+                    John <strong>Smith</strong>
+                    <b class="caret"></b></a>
+                <ul class="dropdown-menu animated fadeInUp">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
@@ -74,20 +94,23 @@
                     <li><a href="#">Separated link</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-cog fa-lg"></i></a></li>
-            <li class="">
+            <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-question-circle fa-lg"></i> <b class="caret"></b>
+                    <i class="fa fa-cog fa-lg"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">My Calendar</a></li>
+                    <li><a href="#">My Inbox &nbsp;&nbsp;<span class="badge bg-danger animated bounceIn">9</span></a></li>
                     <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#"><i class="fa fa-power-off"></i> &nbsp; Log Out</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fa fa-sign-out fa-lg"></i></a></li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-globe fa-lg"></i>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
