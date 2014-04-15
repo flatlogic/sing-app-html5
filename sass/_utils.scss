@@ -108,19 +108,27 @@
   }
 }
 
+.input-no-border{
+  border: none;
+  @include transition(background-color ease-in-out .15s);
+
+  &:focus{
+    background-color: #f3f3f3;
+  }
+}
+
 .input-group-no-border{
   @extend .input-group-transparent;
 
   .form-control,
   .input-group-addon{
-    border: none;
-    @include transition(background-color ease-in-out .15s)
+    @extend .input-no-border;
   }
 
   .form-control:focus,
   .form-control:focus + .input-group-addon,
   &.focus .input-group-addon{
-    background-color: #f3f3f3;
+    @extend .input-no-border:focus;
   }
 }
 
@@ -223,6 +231,8 @@ $margin-horizontal: (lg: 20px, md: 15px, sm: 10px, xs: 5px);
 @include bg-variant('.bg-gray', $gray);
 @include bg-variant('.bg-gray-transparent', rgba($gray, .6));
 @include bg-variant('.bg-gray-dark', $gray-dark);
+@include bg-variant('.bg-gray-light', $gray-light);
+@include bg-variant('.bg-gray-lighter', $gray-lighter);
 @include bg-variant('.bg-transparent', rgba(0,0,0,0));
 @include bg-variant('.bg-white', $white);
 
