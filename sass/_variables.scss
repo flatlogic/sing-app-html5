@@ -2,13 +2,13 @@
 // -------------------------
 // -------------------------
 
-$vendor-folder: '../vendor';
+$vendor-folder: '../vendor' !default;
 
 // Colors
 // ------------------------
 
-$white: #fff;
-$black: #000;
+$white: #fff !default;
+$black: #000 !default;
 
 //copy from BS
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
@@ -19,18 +19,18 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
 $brand-primary:         #618fb0 !default;
 $brand-success:         #64bd63 !default;
-$brand-info:            #4ab0ce !default;
+$brand-info:            #218bc3 !default;
 $brand-warning:         #f0b518 !default;
 $brand-danger:          #e5603b !default;
 
-$addition-bg: #f8f8f8;
+$addition-bg: #f8f8f8 !default;
 
 
-$sidebar-bg-color: #242424;
-$sidebar-color: #aaa;
-$sidebar-item-border-color: #2d2d2d;
-$sidebar-item-active-color: lighten($brand-warning, 6%);
-$sidebar-item-hover-bg-color: #111;
+$sidebar-bg-color: #242424 !default;
+$sidebar-color: #aaa !default;
+$sidebar-item-border-color: #2d2d2d !default;
+$sidebar-item-active-color: lighten($brand-warning, 6%) !default;
+$sidebar-item-hover-bg-color: #111 !default;
 
 // Typography
 // -------------------------
@@ -40,44 +40,45 @@ $text-color:            $gray !default;
 
 $font-size-base:          14px !default;
 
-$font-weight-bold: 700;
-$font-weight-semi-bold: 600;
-$font-weight-normal: 400;
-$font-weight-thin: 300;
-$font-weight-base: $font-weight-thin;
+$font-weight-bold: 700 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-normal: 400 !default;
+$font-weight-thin: 300 !default;
+$font-weight-base: $font-weight-thin !default;
 
-$font-size-smaller: 85%;
+$font-size-smaller: 85% !default;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.428571429 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
-$link-color: #218BC3;
+$link-color: #218BC3 !default;
 
 // Layout
 // -------------------------
-$sidebar-width: 200px;
-$sidebar-icon-state-width: 50px;
+$sidebar-width: 200px !default;
+$sidebar-icon-state-width: 50px !default;
 
-$sidebar-transition-time: .3s;
+$sidebar-transition-time: .3s !default;
 
 $navbar-height:                    50px !default;
+$navbar-font-size:              13px !default;
 
-$content-padding-vertical: $line-height-computed*2;
-$content-padding-top: $content-padding-vertical + $navbar-height;
-$content-padding-horizontal: 40px;
+$content-padding-vertical: $line-height-computed*2 !default;
+$content-padding-top: $content-padding-vertical + $navbar-height !default;
+$content-padding-horizontal: 40px !default;
 
 // Screens
 // -------------------------
 
-$screen-md-height: 670px;
+$screen-md-height: 670px !default;
 
 // Widgets
 // -------------------------
 
-$widget-padding-vertical: 15px;
-$widget-padding-horizontal: 20px;
+$widget-padding-vertical: 15px !default;
+$widget-padding-horizontal: 20px !default;
 $widget-bg-color: $white;
 
 
@@ -87,14 +88,14 @@ $widget-bg-color: $white;
 
 //== Scaffolding
 //
-$body-bg: #eee;
+$body-bg: #eee !default;
 
 // Typography
 // -------------------------
 
-$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif !default;
 
-$headings-font-weight: 300;
+$headings-font-weight: 300 !default;
 
 //== Components
 //
@@ -105,8 +106,7 @@ $border-radius-small:       0 !default;
 
 //== Forms
 //
-
-$input-border-focus:             $link-color;
+$input-border-focus:             #4D90FE !default; //webkit focus color
 $legend-color:                   lighten($text-color, 15%) !default;
 
 //== Buttons
@@ -121,10 +121,13 @@ $dropdown-link-color:            $text-color !default;
 //== Navbar
 //
 
-$navbar-margin-bottom:             0;
-$navbar-border-radius:             0;
+$navbar-margin-bottom:             0 !default;
+$navbar-border-radius:             0 !default;
 
 $navbar-default-bg:                $white !default;
+
+// Navbar links
+$navbar-default-link-color:                #666 !default;
 
 //== Form states and alerts
 //

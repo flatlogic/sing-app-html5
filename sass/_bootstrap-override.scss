@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6,
 
 .form-control {
   font-weight: $font-weight-normal;
+  @include box-shadow(none);
   &:focus{
     @include box-shadow(none);
   }
@@ -67,13 +68,40 @@ legend {
 }
 
 //
+// Dropdown menus
+// --------------------------------------------------
+
+.dropdown-menu{
+  font-size: $font-size-base - 1;
+
+  & > li > a{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+//
 // Navbars
 // --------------------------------------------------
 
 .navbar {
   border: none;
-  font-size: 13px;
+  font-size: $navbar-font-size;
   font-weight: 500;
+}
+
+.navbar-form{
+  .form-control{
+    font-size: $navbar-font-size;
+  }
+
+  .input-group{
+    width: 250px;
+  }
+
+  .input-group-addon{
+    color: $navbar-default-link-color;
+  }
 }
 
 //

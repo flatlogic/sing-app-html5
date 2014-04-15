@@ -1,3 +1,7 @@
-<a href="#"><i class="glyphicon glyphicon-info-sign text-success"></i></a>
-
-inside widget header
+1. avatar pull left pull right
+2. white tabs on background
+3. help icon navbar
+4. weather widget with picture http://bucketadmin.themebucket.net/
+5. pace. turn of my loader
+6. "www.gv.com"-like white sidebar & white content
+7. steal social btns from here http://www.gv.com/lib/design-details

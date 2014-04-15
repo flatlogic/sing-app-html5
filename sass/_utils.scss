@@ -43,10 +43,6 @@
     vertical-align: middle;
   }
 
-  .list-group-item > & {
-    margin-right: 15px;
-  }
-
   .status{
     position: absolute;
     top: 0;
@@ -79,6 +75,55 @@
   color: $gray-light
 }
 
+.input-group-transparent{
+  .form-control:first-child,
+  .input-group-addon:first-child,
+  .input-group-btn:first-child > .btn,
+  .input-group-btn:first-child > .btn-group > .btn,
+  .input-group-btn:first-child > .dropdown-toggle,
+  .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+  .input-group-btn:last-child > .btn-group:not(:last-child) > .btn{
+    border-right: none;
+  }
+
+  .form-control:last-child,
+  .input-group-addon:last-child,
+  .input-group-btn:last-child > .btn,
+  .input-group-btn:last-child > .btn-group > .btn,
+  .input-group-btn:last-child > .dropdown-toggle,
+  .input-group-btn:first-child > .btn:not(:first-child),
+  .input-group-btn:first-child > .btn-group:not(:first-child) > .btn{
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .input-group-addon{
+    background-color: $input-bg;
+    @include transition(border-color ease-in-out .15s);
+  }
+
+  .form-control:focus + .input-group-addon,
+  &.focus .input-group-addon{
+    border-color: $input-border-focus;
+  }
+}
+
+.input-group-no-border{
+  @extend .input-group-transparent;
+
+  .form-control,
+  .input-group-addon{
+    border: none;
+    @include transition(background-color ease-in-out .15s)
+  }
+
+  .form-control:focus,
+  .form-control:focus + .input-group-addon,
+  &.focus .input-group-addon{
+    background-color: #f3f3f3;
+  }
+}
+
 .chart-overflow-bottom{
   margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
 }
@@ -109,12 +154,17 @@
   margin: 0;
 }
 
-.mt{
-  margin-top: $line-height-computed;
-}
+$margin-vertical: (lg: $line-height-computed*3/2, md: $line-height-computed, sm: $line-height-computed*3/4, xs: $line-height-computed/4);
+$margin-horizontal: (lg: 20px, md: 15px, sm: 10px, xs: 5px);
 
-.mb{
-  margin-bottom: $line-height-computed;
+@include property-variants('.mt', 'margin-top', $margin-vertical);
+@include property-variants('.mb', 'margin-bottom', $margin-vertical);
+@include property-variants('.ml', 'margin-left', $margin-horizontal);
+@include property-variants('.mr', 'margin-right', $margin-horizontal);
+
+
+.no-border{
+  border: none;
 }
 
 .font-semi-bold{
@@ -206,7 +256,7 @@ $i: 1;
     font-size: $font-size;
     font-weight: $font-weight-bold;
   }
-  $i: $i + 1;
+  $i: $i + 1 !global;
 }
 
 .help{

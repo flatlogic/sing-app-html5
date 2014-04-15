@@ -1,3 +1,11 @@
-install sass-css-importer for proper css importing
+1a. update compass
+run
+gem install compass -v '1.0.0.alpha.19'
+
+1b. As of https://github.com/chriseppstein/compass/issues/1470
+run
+gem install wdm
+
+2. install sass-css-importer for proper css importing
 run
 gem install --pre sass-css-importer

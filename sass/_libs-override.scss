@@ -330,3 +330,11 @@ svg .title {
 .nvd3 .nv-axis path.domain {
   stroke-opacity: 0;
 }
+
+/**
+ * Animate.css
+ */
+
+.animated{
+  @include animation-duration(.5s);
+}

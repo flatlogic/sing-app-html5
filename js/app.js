@@ -232,8 +232,8 @@ $(function(){
     SingAppView.prototype.log = function(message){
         if (this.debug){
             console.log(message
-                + " - " + arguments.callee.caller.toString().slice(0, 30).split('\n')[0]
-                + " - " + this.extractPageName(location.href)
+                    + " - " + arguments.callee.caller.toString().slice(0, 30).split('\n')[0]
+                    + " - " + this.extractPageName(location.href)
             );
         }
     };
@@ -242,4 +242,18 @@ $(function(){
     window.SingApp = new SingAppView();
 
     SingApp.collapseNavigation();
+
+    initAppPlugins();
 });
+
+function initAppPlugins(){
+    /* ========================================================================
+     * Handle transparent inputs
+     * ========================================================================
+     */
+    !function($){
+        $('.input-group-transparent, .input-group-no-border').find('.input-group-addon + .form-control').on('blur focus', function(e){
+           $(this).parents('.input-group')[e.type=='focus' ? 'addClass' : 'removeClass']('focus');
+        });
+    }(jQuery);
+}

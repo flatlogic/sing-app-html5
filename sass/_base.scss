@@ -28,6 +28,17 @@
   z-index: 1;
   left: 0;
   right: 0;
+
+  .avatar{
+    width: 30px;
+    margin-top: -5px;
+    &.pull-left{
+      margin-right: 5px;
+    }
+    &.pull-right{
+      margin-left: 5px;
+    }
+  }
 }
 
 .content-wrap{
