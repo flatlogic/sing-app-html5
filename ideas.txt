@@ -5,3 +5,4 @@
 5. pace. turn of my loader
 6. "www.gv.com"-like white sidebar & white content
 7. steal social btns from here http://www.gv.com/lib/design-details
+8. inline calendar http://flatfull.com/themes/todo/dashboard-1.html
