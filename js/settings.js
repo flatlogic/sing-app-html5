@@ -1,4 +1,9 @@
+
 $(function(){
+    /**
+     * A global object containing theme specific color values & color functions.
+     * @type Object
+     */
     window.Sing = {
         colors: {
             'white': '#fff',
@@ -94,6 +99,14 @@ $(function(){
         }
     };
 
+    /**
+     * SingSettingsBundle provides a convenient way to access Sing related localStorage options.
+     * Settings should be explicitly saved by calling save() method after changing some property
+     * @constructor
+     * @example
+     * SingSettings.set('collapse-nav', false);
+     * SingSettings.save();
+     */
     var SingSettingsBundle = function(){
         var defaultSettings =  {
             'collapse-nav': true

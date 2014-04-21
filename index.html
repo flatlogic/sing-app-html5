@@ -74,7 +74,7 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <span class="thumb-sm avatar pull-right">
-                        <img class="img-circle" src="img/demo/people/a5.jpg" alt="...">
+                        <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                     </span>
                     <span class="circle bg-warning font-bold">
                         13
@@ -87,10 +87,10 @@
                         <header class="panel-heading">
                             <strong>You have 13 notifications</strong>
                         </header>
-                        <div class="list-group thin-scroll">
+                        <div id="notifications-list" class="list-group thin-scroll">
                             <div class="list-group-item">
                                 <span class="thumb-sm pull-left mr clearfix">
-                                    <img class="img-circle" src="img/demo/people/a3.jpg" alt="...">
+                                    <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
                                 </span>
                                 <p class="no-margin overflow-hidden">
                                     1 new user just signed up! Check out
@@ -122,7 +122,7 @@
                             </a>
                             <div class="list-group-item">
                                 <span class="thumb-sm pull-left mr clearfix">
-                                    <img class="img-circle" src="img/demo/people/a5.jpg" alt="...">
+                                    <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                                 </span>
                                 <p class="no-margin overflow-hidden">
                                     <a href="#">Jeff</a> as a contact?
@@ -172,7 +172,10 @@
                             </a>
                         </div>
                         <footer class="panel-footer text-sm">
-                            <button class="btn btn-xs btn-default pull-right" id="load-notifications-btn"
+                            <button class="btn btn-xs btn-default pull-right"
+                                    id="load-notifications-btn"
+                                    data-ajax-load="demo/ajax/notifications.php"
+                                    data-ajax-target="#notifications-list"
                                     data-loading-text="<i class='fa fa-refresh fa-spin mr-xs'></i> Loading...">
                                 <i class="fa fa-refresh"></i>
                             </button>
@@ -526,7 +529,7 @@
                         <div class="list-group list-group-lg">
                             <a class="list-group-item" href="#">
                                 <span class="thumb-sm pull-left mr">
-                                    <img class="img-circle" src="img/demo/people/a2.jpg" alt="...">
+                                    <img class="img-circle" src="demo/img/people/a2.jpg" alt="...">
                                     <i class="status status-bottom bg-success"></i>
                                 </span>
                                 <h5 class="no-margin">Chris Gray</h5>
@@ -534,7 +537,7 @@
                             </a>
                             <a class="list-group-item" href="#">
                                 <span class="thumb-sm pull-left mr">
-                                    <img class="img-circle" src="img/demo/people/a4.jpg" alt="...">
+                                    <img class="img-circle" src="demo/img/people/a4.jpg" alt="...">
                                     <i class="status status-bottom bg-success"></i>
                                 </span>
                                 <h5 class="no-margin">Jamey Brownlow</h5>
@@ -542,7 +545,7 @@
                             </a>
                             <a class="list-group-item" href="#">
                                 <span class="thumb-sm pull-left mr">
-                                    <img class="img-circle" src="img/demo/people/a1.jpg" alt="...">
+                                    <img class="img-circle" src="demo/img/people/a1.jpg" alt="...">
                                     <i class="status status-bottom bg-warning"></i>
                                 </span>
                                 <h5 class="no-margin">Livia Walsh</h5>
@@ -550,7 +553,7 @@
                             </a>
                             <a class="list-group-item" href="#">
                                 <span class="thumb-sm pull-left mr">
-                                    <img class="img-circle" src="img/demo/people/a5.jpg" alt="...">
+                                    <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                                     <i class="status status-bottom bg-danger"></i>
                                 </span>
                                 <h5 class="no-margin">Jaron Fitzroy</h5>

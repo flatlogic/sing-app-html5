@@ -1,8 +1,20 @@
+/**
+ * Whether to use pjax page swithing
+ * @type {boolean}
+ */
 window.PJAX_ENABLED = true;
+/**
+ * Whether to print some log information
+ * @type {boolean}
+ */
 window.DEBUG = true;
 
 $(function(){
 
+    /**
+     * Main app class that handles page switching, async script loading, resize & pageLoad callbacks.
+     * @constructor
+     */
     var SingAppView = function(){
 
         this.pjaxEnabled = window.PJAX_ENABLED;
@@ -43,6 +55,10 @@ $(function(){
         }
     };
 
+    /**
+     * Initiates an array of throttle onResize callbacks.
+     * @private
+     */
     SingAppView.prototype._initOnResizeCallbacks = function(){
         var resizeTimeout,
             view = this;
@@ -59,6 +75,9 @@ $(function(){
         this.resizeCallbacks = {};
     };
 
+    /**
+     * Collapses navigation if collapse-nav local storage option is set to true
+     */
     SingAppView.prototype.checkNavigationState = function(){
         if (this.settings.get('collapse-nav') === true){
             var view = this;
@@ -76,6 +95,14 @@ $(function(){
         $('body').removeClass('nav-collapsed');
     };
 
+    /**
+     * Changes active navigation item depending on current page.
+     * Should be executed before page load
+     * @param event
+     * @param xhr
+     * @param options
+     * @private
+     */
     SingAppView.prototype._changeActiveNavigationItem = function(event, xhr, options){
         this.$sidebar.find('li.active').removeClass('active');
 
@@ -116,17 +143,26 @@ $(function(){
     };
 
     /**
-     * Specify a function to execute when page was reloaded with pjax.
+     * Specify a function to execute when a page was reloaded with pjax.
      * @param fn A function to execute
      */
     SingAppView.prototype.onPageLoad = function(fn){
         this._addPageCallback(this.pageLoadCallbacks, fn);
     };
 
+    /**
+     * Runs page loaded callbacks
+     */
     SingAppView.prototype.pageLoaded = function(){
         this._runPageCallbacks(this.pageLoadCallbacks);
     };
 
+    /**
+     * Convenient private method to add app callback depending on current page.
+     * @param callbacks
+     * @param fn callback to execute
+     * @private
+     */
     SingAppView.prototype._addPageCallback = function(callbacks, fn){
         var pageName = this.extractPageName(location.href);
         if (!callbacks[pageName]){
@@ -135,6 +171,11 @@ $(function(){
         callbacks[pageName].push(fn);
     };
 
+    /**
+     * Convenient private method to run app callbacks depending on current page.
+     * @param callbacks
+     * @private
+     */
     SingAppView.prototype._runPageCallbacks = function(callbacks){
         var pageName = this.extractPageName(location.href);
         if (callbacks[pageName]){
@@ -144,6 +185,17 @@ $(function(){
         }
     };
 
+    /**
+     * Parses entire body response in order to find & execute script tags.
+     * This has to be done because it's only .content attached to the page after ajax request.
+     * Usually content does not contain all scripts required from page loading, so need to additionally extract them from body response.
+     * @param event
+     * @param data
+     * @param status
+     * @param xhr
+     * @param options
+     * @private
+     */
     SingAppView.prototype._loadScripts = function(event, data, status, xhr, options){
         var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
             $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
@@ -247,6 +299,9 @@ $(function(){
     initDemoFunctions();
 });
 
+/**
+ * Theme functions extracted to independent plugins.
+ */
 function initAppPlugins(){
     /* ========================================================================
      * Handle transparent inputs
@@ -257,17 +312,45 @@ function initAppPlugins(){
            $(this).parents('.input-group')[e.type=='focus' ? 'addClass' : 'removeClass']('focus');
         });
     }(jQuery);
+
+    /* ========================================================================
+     * Ajax Load links & buttons
+     * loads #data-ajax-target from url provided in data-ajax-load
+     * ========================================================================
+     */
+    !function($){
+        $(document).on('click', '[data-ajax-load]', function(e){
+            var $this = $(this),
+                $target = $($this.data('ajax-target'));
+            if ($target.length > 0 ){
+                e = $.Event('ajax-load:start', {originalEvent: e});
+                $this.trigger(e);
+
+                !e.isDefaultPrevented() && $target.load($this.data('ajax-load'), function(){
+                    $this.trigger('ajax-load:end');
+                });
+            }
+            return false;
+        })
+    }(jQuery);
 }
 
+/**
+ * Demo-only functions. Does not affect core Sing functionality.
+ * Should be removed when used in real app.
+ */
 function initDemoFunctions(){
     !function($){
-        $('#load-notifications-btn').on('click', function () {
-            var $btn = $(this);
-            $btn.button('loading');
-            setTimeout(function () {
-                $btn.button('reset')
-            }, 3000);
-            return false;
+        var $loadNotificationsBtn = $('#load-notifications-btn');
+        $loadNotificationsBtn.on('ajax-load:start', function (e) {
+            $loadNotificationsBtn.button('loading');
         });
+        $loadNotificationsBtn.on('ajax-load:end', function () {
+            $loadNotificationsBtn.button('reset');
+            setTimeout(function(){
+                $('#notifications-list').find('.bg-attention').removeClass('bg-attention');
+            }, 10000)
+        });
+
     }(jQuery);
 }

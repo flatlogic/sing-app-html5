@@ -174,6 +174,22 @@
   }
 }
 
+@include keyframes('bg-attention'){
+  0%{
+    background-color: lighten($state-warning-bg, 43%);
+  }
+  5%{
+    background-color: lighten($state-warning-bg, 33%);
+  }
+  0%{
+    background-color: rgba(0,0,0,0);
+  }
+};
+
+.bg-attention{
+  @include animation(bg-attention 10s);
+}
+
 // Style Classes
 // ----------------------------
 
@@ -259,7 +275,7 @@ $display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'bloc
 @include bg-variant('.bg-success', $state-success-bg);
 @include bg-variant('.bg-info', $state-info-bg);
 @include bg-variant('.bg-warning', $state-warning-bg);
-@include bg-variant('.bg-warning-light', lighten($state-warning-bg, 44%));
+@include bg-variant('.bg-warning-light', lighten($state-warning-bg, 43%));
 @include bg-variant('.bg-danger', $state-danger-bg);
 
 @include bg-variant('.bg-body', $body-bg);
