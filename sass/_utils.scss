@@ -15,6 +15,10 @@
   height: #{$line-height-base}em;
   line-height: #{$line-height-base}em;
   text-align: center;
+
+  > .glyphicon{
+    vertical-align: -10.714%;
+  }
 }
 
 .circle{
@@ -37,6 +41,9 @@
 .thumb-sm,
 .thumb{
   position: relative;
+  display: inline-block;
+  text-align: center;
+
   img{
     height: auto;
     max-width: 100%;
@@ -147,6 +154,26 @@
   }
 }
 
+.thin-scroll{
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+  &::-webkit-scrollbar:hover {
+    background-color: #e9e9e9;
+    border: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 0;
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, .2);
+    @include box-shadow(inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07));
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $gray-light;
+  }
+}
+
 // Style Classes
 // ----------------------------
 
@@ -162,17 +189,25 @@
   margin: 0;
 }
 
-$margin-vertical: (lg: $line-height-computed*3/2, md: $line-height-computed, sm: $line-height-computed*3/4, xs: $line-height-computed/4);
-$margin-horizontal: (lg: 20px, md: 15px, sm: 10px, xs: 5px);
+$margin-vertical-variants: (lg: $line-height-computed*3/2, md: $line-height-computed, sm: $line-height-computed*3/4, xs: $line-height-computed/4);
+$margin-horizontal-variants: (lg: 20px, md: 15px, sm: 10px, xs: 5px);
 
-@include property-variants('.mt', 'margin-top', $margin-vertical);
-@include property-variants('.mb', 'margin-bottom', $margin-vertical);
-@include property-variants('.ml', 'margin-left', $margin-horizontal);
-@include property-variants('.mr', 'margin-right', $margin-horizontal);
+@include property-variants('.mt', 'margin-top', $margin-vertical-variants);
+@include property-variants('.mb', 'margin-bottom', $margin-vertical-variants);
+@include property-variants('.ml', 'margin-left', $margin-horizontal-variants);
+@include property-variants('.mr', 'margin-right', $margin-horizontal-variants);
+
+$display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'block');
+
+@include property-variants('.display', 'display', $margin-horizontal-variants);
 
 
 .no-border{
   border: none;
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }
 
 .font-semi-bold{
@@ -224,6 +259,7 @@ $margin-horizontal: (lg: 20px, md: 15px, sm: 10px, xs: 5px);
 @include bg-variant('.bg-success', $state-success-bg);
 @include bg-variant('.bg-info', $state-info-bg);
 @include bg-variant('.bg-warning', $state-warning-bg);
+@include bg-variant('.bg-warning-light', lighten($state-warning-bg, 44%));
 @include bg-variant('.bg-danger', $state-danger-bg);
 
 @include bg-variant('.bg-body', $body-bg);

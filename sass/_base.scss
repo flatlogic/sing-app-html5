@@ -167,6 +167,21 @@
   margin: 0 0 $line-height-computed;
 }
 
+.notifications{
+  @media (min-width: $screen-md-min) {
+    width: 333px;
+  }
+  .list-group{
+    height: 320px;
+    overflow-y: scroll;
+  }
+  .list-group-item{
+    &:hover{
+      background-color: $list-group-hover-bg;
+    }
+  }
+}
+
 /***********************/
 /*        Loader       */
 /***********************/

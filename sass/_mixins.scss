@@ -11,7 +11,11 @@
 @mixin thumb($parent, $size){
   #{$parent} {
     width: $size;
-    display: inline-block;
+
+    > .glyphicon,
+    > .fa{
+      line-height: $size;
+    }
   }
 }
 

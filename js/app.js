@@ -108,7 +108,7 @@ $(function(){
 
     /**
      * Specify a function to execute when window was resized.
-     * Runs maximum once in 100 milliseconds.
+     * Runs maximum once in 100 milliseconds (throttle).
      * @param fn A function to execute
      */
     SingAppView.prototype.onResize = function(fn){
@@ -244,6 +244,7 @@ $(function(){
     SingApp.collapseNavigation();
 
     initAppPlugins();
+    initDemoFunctions();
 });
 
 function initAppPlugins(){
@@ -254,6 +255,19 @@ function initAppPlugins(){
     !function($){
         $('.input-group-transparent, .input-group-no-border').find('.input-group-addon + .form-control').on('blur focus', function(e){
            $(this).parents('.input-group')[e.type=='focus' ? 'addClass' : 'removeClass']('focus');
+        });
+    }(jQuery);
+}
+
+function initDemoFunctions(){
+    !function($){
+        $('#load-notifications-btn').on('click', function () {
+            var $btn = $(this);
+            $btn.button('loading');
+            setTimeout(function () {
+                $btn.button('reset')
+            }, 3000);
+            return false;
         });
     }(jQuery);
 }

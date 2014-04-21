@@ -76,15 +76,110 @@
                     <span class="thumb-sm avatar pull-right">
                         <img class="img-circle" src="img/demo/people/a5.jpg" alt="...">
                     </span>
+                    <span class="circle bg-warning font-bold">
+                        13
+                    </span>
+                    &nbsp;
                     John <strong>Smith</strong>
                     <b class="caret"></b></a>
-                <ul class="dropdown-menu animated fadeInUp">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
+                <div class="dropdown-menu animated fadeInUp">
+                    <section class="panel notifications">
+                        <header class="panel-heading">
+                            <strong>You have 13 notifications</strong>
+                        </header>
+                        <div class="list-group thin-scroll">
+                            <div class="list-group-item">
+                                <span class="thumb-sm pull-left mr clearfix">
+                                    <img class="img-circle" src="img/demo/people/a3.jpg" alt="...">
+                                </span>
+                                <p class="no-margin overflow-hidden">
+                                    1 new user just signed up! Check out
+                                    <a href="#">Monica Smith</a>'s account.
+                                    <span class="help-block no-margin">
+                                        2 mins ago
+                                    </span>
+                                </p>
+                            </div>
+                            <a class="list-group-item" href="#">
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="glyphicon glyphicon-upload fa-lg"></i>
+                                </span>
+                                <p class="text-ellipsis no-margin">
+                                    2.1.0-pre-alpha just released. </p>
+                                <p class="help-block no-margin">
+                                    5h ago
+                                </p>
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="fa fa-bolt fa-lg"></i>
+                                </span>
+                                <p class="text-ellipsis no-margin">
+                                    Server load limited. </p>
+                                <p class="help-block no-margin">
+                                    7h ago
+                                </p>
+                            </a>
+                            <div class="list-group-item">
+                                <span class="thumb-sm pull-left mr clearfix">
+                                    <img class="img-circle" src="img/demo/people/a5.jpg" alt="...">
+                                </span>
+                                <p class="no-margin overflow-hidden">
+                                    <a href="#">Jeff</a> as a contact?
+                                    &nbsp;&nbsp;
+                                    <button class="btn btn-xs btn-success">Accept</button>
+                                    <button class="btn btn-xs btn-danger">Reject</button>
+                                    <span class="help-block no-margin">
+                                        12:18 AM
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="list-group-item">
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="fa fa-lock fa-lg"></i>
+                                </span>
+                                <p class="no-margin overflow-hidden">
+                                    Your password was recently updated. Please complete
+                                    security questions from your <a href="#">profile page</a>.
+                                    <span class="help-block no-margin">
+                                        12:18 AM
+                                    </span>
+                                </p>
+                            </div>
+                            <a class="list-group-item" href="#">
+                                <span class="thumb-sm pull-left mr">
+                                    <span class="rounded bg-primary rounded-lg">
+                                        <i class="fa fa-facebook text-white"></i>
+                                    </span>
+                                </span>
+                                <p class="text-ellipsis no-margin">
+                                    New <strong>76</strong> facebook likes received.</p>
+                                <p class="help-block no-margin">
+                                    15 Apr 2014
+                                </p>
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <span class="thumb-sm pull-left mr">
+                                    <span class="circle circle-lg bg-gray-dark">
+                                        <i class="fa fa-circle-o text-white"></i>
+                                    </span>
+                                </span>
+                                <p class="text-ellipsis no-margin">
+                                    Dark matter detected.</p>
+                                <p class="help-block no-margin">
+                                    15 Apr 2014
+                                </p>
+                            </a>
+                        </div>
+                        <footer class="panel-footer text-sm">
+                            <button class="btn btn-xs btn-default pull-right" id="load-notifications-btn"
+                                    data-loading-text="<i class='fa fa-refresh fa-spin mr-xs'></i> Loading...">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                            Last updated: 21 Apr 2014 18:36
+                        </footer>
+                    </section>
+                </div>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -435,7 +530,7 @@
                                     <i class="status status-bottom bg-success"></i>
                                 </span>
                                 <h5 class="no-margin">Chris Gray</h5>
-                                <p class="help-block text-ellipsis">Hey! What's up? So many times before</p>
+                                <p class="help-block text-ellipsis no-margin">Hey! What's up? So many times before</p>
                             </a>
                             <a class="list-group-item" href="#">
                                 <span class="thumb-sm pull-left mr">
@@ -443,7 +538,7 @@
                                     <i class="status status-bottom bg-success"></i>
                                 </span>
                                 <h5 class="no-margin">Jamey Brownlow</h5>
-                                <p class="help-block text-ellipsis">Good news coming tonight. Seems they agreed to proceed</p>
+                                <p class="help-block text-ellipsis no-margin">Good news coming tonight. Seems they agreed to proceed</p>
                             </a>
                             <a class="list-group-item" href="#">
                                 <span class="thumb-sm pull-left mr">
@@ -451,7 +546,7 @@
                                     <i class="status status-bottom bg-warning"></i>
                                 </span>
                                 <h5 class="no-margin">Livia Walsh</h5>
-                                <p class="help-block text-ellipsis">Check my latest email plz!</p>
+                                <p class="help-block text-ellipsis no-margin">Check my latest email plz!</p>
                             </a>
                             <a class="list-group-item" href="#">
                                 <span class="thumb-sm pull-left mr">
@@ -459,7 +554,7 @@
                                     <i class="status status-bottom bg-danger"></i>
                                 </span>
                                 <h5 class="no-margin">Jaron Fitzroy</h5>
-                                <p class="help-block text-ellipsis">What about summer break?</p>
+                                <p class="help-block text-ellipsis no-margin">What about summer break?</p>
                             </a>
                         </div>
                     </div>
@@ -608,6 +703,7 @@
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
 
 <!-- common app js -->
 <script src="js/settings.js"></script>

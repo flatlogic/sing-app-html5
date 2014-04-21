@@ -175,3 +175,24 @@ legend {
     padding: 15px 15px;
   }
 }
+
+//
+// Panels
+// --------------------------------------------------
+
+.panel{
+  .dropdown-menu > &{
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}
+
+.panel-heading{
+  border-color: $panel-inner-border;
+}
+
+.panel-footer{
+  .panel > .list-group + &{
+    border-top: 0;
+  }
+}
