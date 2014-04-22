@@ -254,6 +254,30 @@ $display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'bloc
   @include rotate(315deg);
 }
 
+/* small + .text-muted*/
+.deemphasize{
+  font-size: $font-size-smaller;
+  color: $text-muted;
+}
+
+/* .h* + .font-bold */
+$font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
+$i: 1;
+@each $font-size in $font-sizes{
+
+  .value#{$i}{
+    margin: 0;
+    font-size: $font-size;
+    font-weight: $font-weight-bold;
+  }
+  $i: $i + 1 !global;
+}
+
+.help{
+  font-size: $font-size-smaller;
+  color: $text-muted;
+}
+
 // Text & Background Variations
 // ----------------------------
 
@@ -268,6 +292,8 @@ $display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'bloc
 @include text-emphasis-variant('.text-warning', $brand-warning);
 
 @include text-emphasis-variant('.text-danger', $brand-danger);
+
+@include text-emphasis-variant('.text-link', $link-color);
 
 //copy bg classes after bootstrap so it's possible to overload other bootstrap classes
 
@@ -300,28 +326,4 @@ $display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'bloc
 
 .text-light{
   opacity: .8;
-}
-
-/* small + .text-muted*/
-.deemphasize{
-  font-size: $font-size-smaller;
-  color: $text-muted;
-}
-
-/* .h* + .font-bold */
-$font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
-$i: 1;
-@each $font-size in $font-sizes{
-
-  .value#{$i}{
-    margin: 0;
-    font-size: $font-size;
-    font-weight: $font-weight-bold;
-  }
-  $i: $i + 1 !global;
-}
-
-.help{
-  font-size: $font-size-smaller;
-  color: $text-muted;
 }

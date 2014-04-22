@@ -87,6 +87,14 @@ legend {
   border: none;
   font-size: $navbar-font-size;
   font-weight: 500;
+
+  h5{
+    font-size: $navbar-font-size;
+  }
+
+  .deemphasize{
+    font-size: $font-size-small;
+  }
 }
 
 .navbar-form{

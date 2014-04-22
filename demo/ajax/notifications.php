@@ -7,9 +7,9 @@
         </span>
     <p class="overflow-hidden no-margin">
         2 issues require your approval. <a href="#">The Search Project</a> completed on time!
-        <span class="help-block no-margin">
+        <time class="help-block no-margin">
             just now
-        </span>
+        </time>
     </p>
 </div>
 <div class="list-group-item bg-attention">
@@ -18,9 +18,9 @@
     </span>
     <p class="no-margin overflow-hidden">
         <a href="#">Jeniffer Willington</a> has just endorsed you with 50 points!
-        <span class="help-block no-margin">
+        <time class="help-block no-margin">
             30 sec ago
-        </span>
+        </time>
     </p>
 </div>
 <div class="list-group-item">
@@ -30,9 +30,9 @@
     <p class="no-margin overflow-hidden">
         1 new user just signed up! Check out
         <a href="#">Monica Smith</a>'s account.
-                                    <span class="help-block no-margin">
-                                        2 mins ago
-                                    </span>
+        <time class="help-block no-margin">
+            2 mins ago
+        </time>
     </p>
 </div>
 <a class="list-group-item" href="#">
@@ -41,9 +41,9 @@
     </span>
     <p class="text-ellipsis no-margin">
         2.1.0-pre-alpha just released. </p>
-    <p class="help-block no-margin">
+    <time class="help-block no-margin">
         5h ago
-    </p>
+    </time>
 </a>
 <a class="list-group-item" href="#">
     <span class="thumb-sm pull-left mr">
@@ -51,9 +51,9 @@
     </span>
     <p class="text-ellipsis no-margin">
         Server load limited. </p>
-    <p class="help-block no-margin">
+    <time class="help-block no-margin">
         7h ago
-    </p>
+    </time>
 </a>
 <div class="list-group-item">
     <span class="thumb-sm pull-left mr clearfix">
@@ -64,9 +64,9 @@
         &nbsp;&nbsp;
         <button class="btn btn-xs btn-success">Accept</button>
         <button class="btn btn-xs btn-danger">Reject</button>
-                                    <span class="help-block no-margin">
-                                        12:18 AM
-                                    </span>
+        <time class="help-block no-margin">
+            12:18 AM
+        </time>
     </p>
 </div>
 <div class="list-group-item">
@@ -76,9 +76,9 @@
     <p class="no-margin overflow-hidden">
         Your password was recently updated. Please complete
         security questions from your <a href="#">profile page</a>.
-                                    <span class="help-block no-margin">
-                                        12:18 AM
-                                    </span>
+        <time class="help-block no-margin">
+            12:18 AM
+        </time>
     </p>
 </div>
 <a class="list-group-item" href="#">
@@ -89,9 +89,9 @@
     </span>
     <p class="text-ellipsis no-margin">
         New <strong>76</strong> facebook likes received.</p>
-    <p class="help-block no-margin">
+    <time class="help-block no-margin">
         15 Apr 2014
-    </p>
+    </time>
 </a>
 <a class="list-group-item" href="#">
     <span class="thumb-sm pull-left mr">
@@ -101,7 +101,7 @@
     </span>
     <p class="text-ellipsis no-margin">
         Dark matter detected.</p>
-    <p class="help-block no-margin">
+    <time class="help-block no-margin">
         15 Apr 2014
-    </p>
+    </time>
 </a>
