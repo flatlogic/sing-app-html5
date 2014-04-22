@@ -179,6 +179,12 @@
     @include transition(background-color .15s ease-in-out);
     &:hover{
       background-color: $list-group-hover-bg;
+      .progress{
+        background-color: $white;
+      }
+    }
+    .progress{
+      @include transition(background-color .15s ease-in-out);
     }
   }
 }

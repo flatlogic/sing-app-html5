@@ -366,6 +366,9 @@ function initDemoFunctions(){
                 $('#notifications-list').find('.bg-attention').removeClass('bg-attention');
             }, 10000)
         });
+        $('#notifications-toggle').find('input').on('ajax-load:end', function(){
+            $('#notifications-list').find('[data-toggle=tooltip]').tooltip();
+        })
 
     }(jQuery);
 }
