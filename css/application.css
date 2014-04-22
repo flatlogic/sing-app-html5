@@ -19264,12 +19264,12 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 
 /* line 39, ../sass/_mixins.scss */
 .mt-sm {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /* line 42, ../sass/_mixins.scss */
 .mt-n-sm {
-  margin-top: -15px;
+  margin-top: -10px;
 }
 
 /* line 39, ../sass/_mixins.scss */
@@ -19314,12 +19314,12 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 
 /* line 39, ../sass/_mixins.scss */
 .mb-sm {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 /* line 42, ../sass/_mixins.scss */
 .mb-n-sm {
-  margin-bottom: -15px;
+  margin-bottom: -10px;
 }
 
 /* line 39, ../sass/_mixins.scss */

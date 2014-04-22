@@ -296,6 +296,7 @@ $(function(){
     SingApp.collapseNavigation();
 
     initAppPlugins();
+    initAppFunctions();
     initDemoFunctions();
 });
 
@@ -314,12 +315,12 @@ function initAppPlugins(){
     }(jQuery);
 
     /* ========================================================================
-     * Ajax Load links & buttons
+     * Ajax Load links, buttons & inputs
      * loads #data-ajax-target from url provided in data-ajax-load
      * ========================================================================
      */
     !function($){
-        $(document).on('click', '[data-ajax-load]', function(e){
+        $(document).on('click change', '[data-ajax-load], [data-ajax-trigger^=change]', function(e){
             var $this = $(this),
                 $target = $($this.data('ajax-target'));
             if ($target.length > 0 ){
@@ -331,7 +332,26 @@ function initAppPlugins(){
                 });
             }
             return false;
+        });
+        $(document).on('click', '[data-toggle^=button]', function (e) {
+            return $(e.target).find('input').data('ajax-trigger') != 'change';
         })
+    }(jQuery);
+}
+
+/**
+ *
+ */
+function initAppFunctions(){
+    !function($){
+        var $loadNotificationsBtn = $('#load-notifications-btn');
+        $loadNotificationsBtn.on('ajax-load:start', function (e) {
+            $loadNotificationsBtn.button('loading');
+        });
+        $loadNotificationsBtn.on('ajax-load:end', function () {
+            $loadNotificationsBtn.button('reset');
+        });
+
     }(jQuery);
 }
 
@@ -341,12 +361,7 @@ function initAppPlugins(){
  */
 function initDemoFunctions(){
     !function($){
-        var $loadNotificationsBtn = $('#load-notifications-btn');
-        $loadNotificationsBtn.on('ajax-load:start', function (e) {
-            $loadNotificationsBtn.button('loading');
-        });
-        $loadNotificationsBtn.on('ajax-load:end', function () {
-            $loadNotificationsBtn.button('reset');
+        $('#load-notifications-btn').on('ajax-load:end', function () {
             setTimeout(function(){
                 $('#notifications-list').find('.bg-attention').removeClass('bg-attention');
             }, 10000)

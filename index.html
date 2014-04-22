@@ -85,7 +85,29 @@
                 <div class="dropdown-menu animated fadeInUp">
                     <section class="panel notifications">
                         <header class="panel-heading">
-                            <strong>You have 13 notifications</strong>
+                            <div class="text-align-center mb-sm">
+                                <strong>You have 13 notifications</strong>
+                            </div>
+                            <div class="btn-group btn-group-sm btn-group-justified" data-toggle="buttons">
+                                <label class="btn btn-default active">
+                                    <input type="radio" checked
+                                           data-ajax-trigger="change"
+                                           data-ajax-load="demo/ajax/notifications.html"
+                                           data-ajax-target="#notifications-list"> Notifications
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio"
+                                           data-ajax-trigger="change"
+                                           data-ajax-load="demo/ajax/messages.html"
+                                           data-ajax-target="#notifications-list"> Messages
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio"
+                                           data-ajax-trigger="change"
+                                           data-ajax-load="demo/ajax/messages.html"
+                                           data-ajax-target="#notifications-list"> Progress
+                                </label>
+                            </div>
                         </header>
                         <div id="notifications-list" class="list-group thin-scroll">
                             <div class="list-group-item">

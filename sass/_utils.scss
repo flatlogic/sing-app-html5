@@ -205,7 +205,7 @@
   margin: 0;
 }
 
-$margin-vertical-variants: (lg: $line-height-computed*3/2, md: $line-height-computed, sm: $line-height-computed*3/4, xs: $line-height-computed/4);
+$margin-vertical-variants: (lg: $line-height-computed*3/2, md: $line-height-computed, sm: $line-height-computed/2, xs: $line-height-computed/4);
 $margin-horizontal-variants: (lg: 20px, md: 15px, sm: 10px, xs: 5px);
 
 @include property-variants('.mt', 'margin-top', $margin-vertical-variants);
