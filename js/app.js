@@ -32,14 +32,14 @@ $(function(){
         this._initOnResizeCallbacks();
 
         this.$sidebar.on('mouseenter', $.proxy(this.expandNavigation, this));
-        this.$sidebar.on('mouseleave', $.proxy(this.collapseNavigation, this));
+        //this.$sidebar.on('mouseleave', $.proxy(this.collapseNavigation, this));
 
         this.checkNavigationState();
         this._initOnResizeCallbacks();
 
         if (this.pjaxEnabled){
-            this.$sidebar.find('a:not(.accordion-toggle):not([data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
-            $(document).pjax('#sidebar a', '#content', {
+            this.$sidebar.find('a:not(.accordion-toggle, [data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
+            $(document).pjax('#sidebar a:not(.accordion-toggle, [data-no-pjax])', '#content', {
                 fragment: '#content',
                 type: 'POST' //prevents caching
             });
@@ -293,7 +293,7 @@ $(function(){
 
     window.SingApp = new SingAppView();
 
-    SingApp.collapseNavigation();
+    //SingApp.collapseNavigation();
 
     initAppPlugins();
     initAppFunctions();

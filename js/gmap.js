@@ -1,6 +1,6 @@
 $(function(){
     function initGmap(){
-        map = new GMaps({
+        var map = new GMaps({
             el: '#gmap',
             lat: -37.813179,
             lng: 144.950259,
