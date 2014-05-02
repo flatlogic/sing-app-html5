@@ -84,15 +84,135 @@
                     <span class="thumb-sm avatar pull-right">
                         <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                     </span>
+                    <span class="circle bg-warning font-bold">
+                        13
+                    </span>
+                    &nbsp;
                     John <strong>Smith</strong>
                     <b class="caret"></b></a>
-                <ul class="dropdown-menu animated fadeInUp">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
+                <div class="dropdown-menu animated fadeInUp">
+                    <section class="panel notifications">
+                        <header class="panel-heading">
+                            <div class="text-align-center mb-sm">
+                                <strong>You have 13 notifications</strong>
+                            </div>
+                            <div class="btn-group btn-group-sm btn-group-justified" id="notifications-toggle" data-toggle="buttons">
+                                <label class="btn btn-default active">
+                                    <input type="radio" checked
+                                           data-ajax-trigger="change"
+                                           data-ajax-load="demo/ajax/notifications.html"
+                                           data-ajax-target="#notifications-list"> Notifications
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio"
+                                           data-ajax-trigger="change"
+                                           data-ajax-load="demo/ajax/messages.html"
+                                           data-ajax-target="#notifications-list"> Messages
+                                </label>
+                                <label class="btn btn-default">
+                                    <input type="radio"
+                                           data-ajax-trigger="change"
+                                           data-ajax-load="demo/ajax/progress.html"
+                                           data-ajax-target="#notifications-list"> Progress
+                                </label>
+                            </div>
+                        </header>
+                        <div id="notifications-list" class="list-group thin-scroll">
+                            <div class="list-group-item">
+                                <span class="thumb-sm pull-left mr clearfix">
+                                    <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
+                                </span>
+                                <p class="no-margin overflow-hidden">
+                                    1 new user just signed up! Check out
+                                    <a href="#">Monica Smith</a>'s account.
+                                    <time class="help-block no-margin">
+                                        2 mins ago
+                                    </time>
+                                </p>
+                            </div>
+                            <a class="list-group-item" href="#">
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="glyphicon glyphicon-upload fa-lg"></i>
+                                </span>
+                                <p class="text-ellipsis no-margin">
+                                    2.1.0-pre-alpha just released. </p>
+                                <time class="help-block no-margin">
+                                    5h ago
+                                </time>
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="fa fa-bolt fa-lg"></i>
+                                </span>
+                                <p class="text-ellipsis no-margin">
+                                    Server load limited. </p>
+                                <time class="help-block no-margin">
+                                    7h ago
+                                </time>
+                            </a>
+                            <div class="list-group-item">
+                                <span class="thumb-sm pull-left mr clearfix">
+                                    <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+                                </span>
+                                <p class="no-margin overflow-hidden">
+                                    <a href="#">Jeff</a> as a contact?
+                                    &nbsp;&nbsp;
+                                    <button class="btn btn-xs btn-success">Accept</button>
+                                    <button class="btn btn-xs btn-danger">Reject</button>
+                                    <time class="help-block no-margin">
+                                        12:18 AM
+                                    </time>
+                                </p>
+                            </div>
+                            <div class="list-group-item">
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="fa fa-lock fa-lg"></i>
+                                </span>
+                                <p class="no-margin overflow-hidden">
+                                    Your password was recently updated. Please complete
+                                    security questions from your <a href="#">profile page</a>.
+                                    <time class="help-block no-margin">
+                                        12:18 AM
+                                    </time>
+                                </p>
+                            </div>
+                            <a class="list-group-item" href="#">
+                                <span class="thumb-sm pull-left mr">
+                                    <span class="rounded bg-primary rounded-lg">
+                                        <i class="fa fa-facebook text-white"></i>
+                                    </span>
+                                </span>
+                                <p class="text-ellipsis no-margin">
+                                    New <strong>76</strong> facebook likes received.</p>
+                                <time class="help-block no-margin">
+                                    15 Apr 2014
+                                </time>
+                            </a>
+                            <a class="list-group-item" href="#">
+                                <span class="thumb-sm pull-left mr">
+                                    <span class="circle circle-lg bg-gray-dark">
+                                        <i class="fa fa-circle-o text-white"></i>
+                                    </span>
+                                </span>
+                                <p class="text-ellipsis no-margin">
+                                    Dark matter detected.</p>
+                                <time class="help-block no-margin">
+                                    15 Apr 2014
+                                </time>
+                            </a>
+                        </div>
+                        <footer class="panel-footer text-sm">
+                            <button class="btn btn-xs btn-default pull-right"
+                                    id="load-notifications-btn"
+                                    data-ajax-load="demo/ajax/notifications.php"
+                                    data-ajax-target="#notifications-list"
+                                    data-loading-text="<i class='fa fa-refresh fa-spin mr-xs'></i> Loading...">
+                                <i class="fa fa-refresh"></i>
+                            </button>
+                            Last updated: 21 Apr 2014 18:36
+                        </footer>
+                    </section>
+                </div>
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -136,6 +256,8 @@
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
+<script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
 
 <!-- common app js -->
 <script src="js/settings.js"></script>
