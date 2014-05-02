@@ -38,8 +38,8 @@ $(function(){
         this._initOnResizeCallbacks();
 
         if (this.pjaxEnabled){
-            this.$sidebar.find('a:not(.accordion-toggle, [data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
-            $(document).pjax('#sidebar a:not(.accordion-toggle, [data-no-pjax])', '#content', {
+            this.$sidebar.find('a:not([data-toggle=collapse], [data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
+            $(document).pjax('#sidebar a:not([data-toggle=collapse], [data-no-pjax])', '#content', {
                 fragment: '#content',
                 type: 'POST' //prevents caching
             });
@@ -104,12 +104,13 @@ $(function(){
      * @private
      */
     SingAppView.prototype._changeActiveNavigationItem = function(event, xhr, options){
-        this.$sidebar.find('li.active').removeClass('active');
+        this.$sidebar.find('.active .active').closest('.collapse').collapse('hide');
+        this.$sidebar.find('.active').removeClass('active');
 
         this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
             if (this.href === options.url){
                 $(this).closest('li').addClass('active')
-                    .closest('.panel').addClass('active');
+                    .closest('li').addClass('active');
             }
         });
     };
