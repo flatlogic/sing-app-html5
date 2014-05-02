@@ -36,11 +36,12 @@
     <h5 class="sidebar-nav-title">Template</h5>
     <ul class="sidebar-nav">
         <li>
-            <a href="#" data-toggle="collapse" data-target="#sidebar-forms">
+            <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
                 <span class="icon">
                     <i class="glyphicon glyphicon-align-right"></i>
                 </span>
                 Forms
+                <i class="toggle fa fa-angle-down"></i>
             </a>
             <ul id="sidebar-forms" class="collapse">
                 <li><a href="form_elements.html">Form Elements</a></li>
@@ -56,11 +57,12 @@
             </a>
         </li>
         <li class="active">
-            <a href="#" data-toggle="collapse" data-target="#sidebar-maps">
+            <a href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
                 <span class="icon">
                     <i class="glyphicon glyphicon-map-marker"></i>
                 </span>
                 Maps
+                <i class="toggle fa fa-angle-down"></i>
             </a>
             <ul id="sidebar-maps" class="collapse in">
                 <li class="active"><a href="maps_google.html" data-no-pjax>Google Maps</a></li>

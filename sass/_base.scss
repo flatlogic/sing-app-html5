@@ -114,23 +114,45 @@
       @media (min-width: $screen-md) and (min-height: $screen-md-height){
         top: 8px;
       }
+
+      .fa, .glyphicon{
+        font-size: 16px;
+        vertical-align: middle;
+        color: rgba($sidebar-color, .7);
+      }
+
+      .glyphicon{
+        top: -2px;
+        left: -1px;
+      }
+
+      .glyphicon-map-marker{
+        top: 0;
+        left: 0;
+      }
+
     }
 
-    .fa, .glyphicon{
-      font-size: 16px;
-      vertical-align: middle;
-      color: rgba($sidebar-color, .7);
+    .toggle{
+      float: right;
+      line-height: 35px;
+      margin-right: 11px;
+      @include transition-transform(.35s ease);
+
+      @media (min-width: $screen-md) and (min-height: $screen-md-height){
+        line-height: 44px;
+      }
+
+
     }
 
-    .glyphicon{
-      top: -2px;
-      left: -1px;
+    &.collapsed .toggle{
+      @include rotate(90deg);
     }
+  }
 
-    .glyphicon-map-marker{
-      top: 0;
-      left: 0;
-    }
+  > .open > a{
+    background-color: lighten($sidebar-item-hover-bg-color, 2%);
   }
 
   > li:last-child > a{
@@ -139,6 +161,7 @@
 
   > .active > a{
     color: $sidebar-item-active-color;
+    background-color: $sidebar-bg-color;
 
     .icon{
       border-radius: 50%;

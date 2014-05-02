@@ -51,6 +51,18 @@ $(function(){
             $(document).on('sing-app:loaded', $.proxy(this._loadingFinished, this));
             $(document).on('sing-app:loaded', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
+
+            /* reimplementing bs.collapse data-parent here as we don't want to use BS .panel*/
+            this.$sidebar.find('.collapse').on('show.bs.collapse', function(){
+                $('#sidebar').find('.collapse.in').not($(this)).collapse('hide');
+            })
+                /* adding additional classes to navigation link li-parent for several purposes. see navigation styles */
+                .on('show.bs.collapse', function(){
+                    $(this).closest('li').addClass('open');
+                }).on('hide.bs.collapse', function(){
+                    $(this).closest('li').removeClass('open');
+                });
+
             window.onerror = $.proxy(this._logErrors, this);
         }
     };
@@ -104,7 +116,7 @@ $(function(){
      * @private
      */
     SingAppView.prototype._changeActiveNavigationItem = function(event, xhr, options){
-        this.$sidebar.find('.active .active').closest('.collapse').collapse('hide');
+        //this.$sidebar.find('.active .active').closest('.collapse').collapse('hide');
         this.$sidebar.find('.active').removeClass('active');
 
         this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
