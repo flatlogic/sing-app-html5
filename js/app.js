@@ -116,7 +116,7 @@ $(function(){
      * @private
      */
     SingAppView.prototype._changeActiveNavigationItem = function(event, xhr, options){
-        //this.$sidebar.find('.active .active').closest('.collapse').collapse('hide');
+        this.$sidebar.find('.active .active').closest('.collapse').collapse('hide');
         this.$sidebar.find('.active').removeClass('active');
 
         this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
