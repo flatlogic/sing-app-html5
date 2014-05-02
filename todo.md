@@ -4,7 +4,7 @@
 *italic* - consider for the next version  
 ~~striked~~ - done
 
- 1.  second-level menu sidebar
+ 1.  ~~second-level menu sidebar~~
  2.  **responsive layout**
  3.  menu iconic state on/off
  4.  dashboard fill
