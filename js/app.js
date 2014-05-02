@@ -110,7 +110,7 @@ $(function(){
         this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
             if (this.href === options.url){
                 $(this).closest('li').addClass('active')
-                    .closest('li').addClass('active');
+                    .parents('li').addClass('active');
             }
         });
     };
