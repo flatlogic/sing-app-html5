@@ -22,7 +22,7 @@ $(function(){
         this.navCollapseTimeout = 1000;
         this.$sidebar = $('#sidebar');
         this.$contentWrap = $('.content-wrap');
-        this.loaderTemplate = _.template($('#loader-template').html());
+        this.loaderTemplate = $('#loader-template').html();
         this.settings = window.SingSettings;
         this.pageLoadCallbacks = {};
         this.resizeCallbacks = {};
@@ -32,7 +32,7 @@ $(function(){
         this._initOnResizeCallbacks();
 
         this.$sidebar.on('mouseenter', $.proxy(this.expandNavigation, this));
-        //this.$sidebar.on('mouseleave', $.proxy(this.collapseNavigation, this));
+        this.$sidebar.on('mouseleave', $.proxy(this.collapseNavigation, this));
 
         this.checkNavigationState();
         this._initOnResizeCallbacks();
@@ -101,10 +101,14 @@ $(function(){
 
     SingAppView.prototype.collapseNavigation = function(){
         $('body').addClass('nav-collapsed');
+        this.$sidebar.find('.collapse.in').collapse('hide')
+            .siblings('[data-toggle=collapse]').addClass('collapsed');
     };
 
     SingAppView.prototype.expandNavigation = function(){
         $('body').removeClass('nav-collapsed');
+        this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
+            .siblings('[data-toggle=collapse]').removeClass('collapsed');
     };
 
     /**
@@ -130,7 +134,7 @@ $(function(){
     SingAppView.prototype.showLoader = function(){
         var view = this;
         this.showLoaderTimeout = setTimeout(function(){
-            view.$contentWrap.append(view.loaderTemplate());
+            view.$contentWrap.append(view.loaderTemplate);
             setTimeout(function(){
                 view.$contentWrap.find('.loader-wrap').removeClass('hiding');
             }, 0)
@@ -192,7 +196,7 @@ $(function(){
     SingAppView.prototype._runPageCallbacks = function(callbacks){
         var pageName = this.extractPageName(location.href);
         if (callbacks[pageName]){
-            _(callbacks[pageName]).each(function(fn){
+            callbacks[pageName].forEach(function(fn){
                 fn();
             })
         }
@@ -357,6 +361,9 @@ function initAppPlugins(){
  */
 function initAppFunctions(){
     !function($){
+        /**
+         * Change to loading state when fetching notifications
+         */
         var $loadNotificationsBtn = $('#load-notifications-btn');
         $loadNotificationsBtn.on('ajax-load:start', function (e) {
             $loadNotificationsBtn.button('loading');
@@ -364,6 +371,11 @@ function initAppFunctions(){
         $loadNotificationsBtn.on('ajax-load:end', function () {
             $loadNotificationsBtn.button('reset');
         });
+
+        /**
+         * Show help tooltips
+         */
+        $('#sidebar-state-toggle').tooltip();
 
     }(jQuery);
 }
