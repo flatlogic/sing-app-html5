@@ -6,7 +6,7 @@
 
  1.  ~~second-level menu sidebar~~
  2.  **responsive layout**
- 3.  menu iconic state on/off
+ 3.  ~~menu iconic state on/off~~
  4.  dashboard fill
    1.  black chart + map
    2.  reorganize last row

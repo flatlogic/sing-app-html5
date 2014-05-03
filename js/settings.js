@@ -104,12 +104,15 @@ $(function(){
      * Settings should be explicitly saved by calling save() method after changing some property
      * @constructor
      * @example
-     * SingSettings.set('collapse-nav', false);
+     * SingSettings.set('nav-static', false);
      * SingSettings.save();
      */
     var SingSettingsBundle = function(){
         var defaultSettings =  {
-            'collapse-nav': true
+            /**
+             * whether navigation is static (does not collapse automatically)
+             */
+            'nav-static': false
         };
         this.settingName = 'sing-app-settings';
         this._settings = JSON.parse(localStorage.getItem(this.settingName)) || defaultSettings;
@@ -117,6 +120,7 @@ $(function(){
 
     SingSettingsBundle.prototype.save = function(){
         localStorage.setItem(this.settingName, JSON.stringify(this._settings));
+        return this;
     };
 
     SingSettingsBundle.prototype.get = function(key){
@@ -125,6 +129,7 @@ $(function(){
 
     SingSettingsBundle.prototype.set = function(key, value){
         this._settings[key] = value;
+        return this;
     };
 
     window.SingSettings = new SingSettingsBundle();

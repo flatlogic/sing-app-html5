@@ -22,6 +22,7 @@ $(function(){
         this.navCollapseTimeout = 1000;
         this.$sidebar = $('#sidebar');
         this.$contentWrap = $('.content-wrap');
+        this.$navigationStateToggle = $('#nav-state-toggle');
         this.loaderTemplate = $('#loader-template').html();
         this.settings = window.SingSettings;
         this.pageLoadCallbacks = {};
@@ -52,19 +53,21 @@ $(function(){
             $(document).on('sing-app:loaded', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
 
-            /* reimplementing bs.collapse data-parent here as we don't want to use BS .panel*/
-            this.$sidebar.find('.collapse').on('show.bs.collapse', function(){
-                $('#sidebar').find('.collapse.in').not($(this)).collapse('hide');
-            })
-                /* adding additional classes to navigation link li-parent for several purposes. see navigation styles */
-                .on('show.bs.collapse', function(){
-                    $(this).closest('li').addClass('open');
-                }).on('hide.bs.collapse', function(){
-                    $(this).closest('li').removeClass('open');
-                });
-
             window.onerror = $.proxy(this._logErrors, this);
         }
+
+        this.$navigationStateToggle.on('click', $.proxy(this.toggleNavigationState, this));
+
+        /* reimplementing bs.collapse data-parent here as we don't want to use BS .panel*/
+        this.$sidebar.find('.collapse').on('show.bs.collapse', function(){
+            $('#sidebar').find('.collapse.in').not($(this)).collapse('hide');
+        })
+            /* adding additional classes to navigation link li-parent for several purposes. see navigation styles */
+            .on('show.bs.collapse', function(){
+                $(this).closest('li').addClass('open');
+            }).on('hide.bs.collapse', function(){
+                $(this).closest('li').removeClass('open');
+            });
     };
 
     /**
@@ -88,10 +91,12 @@ $(function(){
     };
 
     /**
-     * Collapses navigation if collapse-nav local storage option is set to true
+     * Collapses navigation if nav-static local storage option is set to false
      */
     SingAppView.prototype.checkNavigationState = function(){
-        if (this.settings.get('collapse-nav') === true){
+        if (this.isNavigationStatic()){
+            this.staticNavigationState();
+        } else {
             var view = this;
             setTimeout(function(){
                 view.collapseNavigation();
@@ -100,15 +105,44 @@ $(function(){
     };
 
     SingAppView.prototype.collapseNavigation = function(){
+        //this method only makes sense for non-static navigation state
+        if (this.isNavigationStatic()) return;
+
         $('body').addClass('nav-collapsed');
         this.$sidebar.find('.collapse.in').collapse('hide')
             .siblings('[data-toggle=collapse]').addClass('collapsed');
     };
 
     SingAppView.prototype.expandNavigation = function(){
+        //this method only makes sense for non-static navigation state
+        if (this.isNavigationStatic()) return;
+
         $('body').removeClass('nav-collapsed');
         this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
             .siblings('[data-toggle=collapse]').removeClass('collapsed');
+    };
+
+    SingAppView.prototype.toggleNavigationState = function(){
+        if (this.isNavigationStatic()){
+            this.collapsingNavigationState();
+        } else {
+            this.staticNavigationState();
+        }
+    };
+
+    SingAppView.prototype.staticNavigationState = function(){
+        this.settings.set('nav-static', true).save();
+        $('body').addClass('nav-static');
+    };
+
+    SingAppView.prototype.collapsingNavigationState = function(){
+        this.settings.set('nav-static', false).save();
+        $('body').removeClass('nav-static');
+        this.collapseNavigation();
+    };
+
+    SingAppView.prototype.isNavigationStatic = function(){
+        return this.settings.get('nav-static') === true;
     };
 
     /**
@@ -296,6 +330,7 @@ $(function(){
         var errors = JSON.parse(localStorage.getItem('lb-errors')) || {};
         errors[new Date().getTime()] = arguments;
         localStorage.setItem('sing-errors', JSON.stringify(errors));
+        this.debug && alert('check errors');
     };
 
     SingAppView.prototype.log = function(message){
@@ -375,7 +410,7 @@ function initAppFunctions(){
         /**
          * Show help tooltips
          */
-        $('#sidebar-state-toggle').tooltip();
+        $('#nav-state-toggle').tooltip();
 
     }(jQuery);
 }

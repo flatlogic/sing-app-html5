@@ -21,6 +21,12 @@
   .nav-collapsed &{
     @include translate(0, 0);
   }
+
+  .nav-static & {
+    @include transition(none);
+    @include translate(0, 0);
+    margin-left: $sidebar-width;
+  }
 }
 
 .page-controls{
@@ -71,6 +77,11 @@
 
   .nav-collapsed &{
     width: $sidebar-icon-state-width;
+  }
+
+  .nav-static &{
+    @include transition(none);
+    width: 100%;
   }
 }
 
@@ -228,6 +239,11 @@
 
   .nav-collapsed &{
     opacity: 0;
+  }
+
+  .nav-static &{
+    @include transition(none);
+    opacity: 1;
   }
 }
 
