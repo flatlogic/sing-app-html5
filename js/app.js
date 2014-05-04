@@ -19,10 +19,11 @@ $(function(){
 
         this.pjaxEnabled = window.PJAX_ENABLED;
         this.debug = window.DEBUG;
-        this.navCollapseTimeout = 1000;
+        this.navCollapseTimeout = 1500;
         this.$sidebar = $('#sidebar');
         this.$contentWrap = $('.content-wrap');
         this.$navigationStateToggle = $('#nav-state-toggle');
+        this.$navigationCollapseToggle = $('#nav-collapse-toggle');
         this.loaderTemplate = $('#loader-template').html();
         this.settings = window.SingSettings;
         this.pageLoadCallbacks = {};
@@ -57,6 +58,7 @@ $(function(){
         }
 
         this.$navigationStateToggle.on('click', $.proxy(this.toggleNavigationState, this));
+        this.$navigationCollapseToggle.on('click', $.proxy(this.toggleNavigationCollapseState, this));
 
         /* reimplementing bs.collapse data-parent here as we don't want to use BS .panel*/
         this.$sidebar.find('.collapse').on('show.bs.collapse', function(){
@@ -96,17 +98,32 @@ $(function(){
     SingAppView.prototype.checkNavigationState = function(){
         if (this.isNavigationStatic()){
             this.staticNavigationState();
+            if (Sing.isScreen('sm')){
+                this.collapseNavigation();
+            }
         } else {
-            var view = this;
-            setTimeout(function(){
-                view.collapseNavigation();
-            }, this.navCollapseTimeout);
+            if (Sing.isScreen('md') || Sing.isScreen('lg')){
+                var view = this;
+                setTimeout(function(){
+                    view.collapseNavigation();
+                }, this.navCollapseTimeout);
+            } else {
+                this.collapseNavigation();
+            }
+        }
+    };
+
+    SingAppView.prototype.toggleNavigationCollapseState = function(){
+        if ($('body').is('.nav-collapsed')){
+            this.expandNavigation();
+        } else {
+            this.collapseNavigation();
         }
     };
 
     SingAppView.prototype.collapseNavigation = function(){
         //this method only makes sense for non-static navigation state
-        if (this.isNavigationStatic()) return;
+        if (this.isNavigationStatic() && (!Sing.isScreen('sm'))) return;
 
         $('body').addClass('nav-collapsed');
         this.$sidebar.find('.collapse.in').collapse('hide')
@@ -115,7 +132,7 @@ $(function(){
 
     SingAppView.prototype.expandNavigation = function(){
         //this method only makes sense for non-static navigation state
-        if (this.isNavigationStatic()) return;
+        if (this.isNavigationStatic() && (!Sing.isScreen('sm'))) return;
 
         $('body').removeClass('nav-collapsed');
         this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
@@ -410,7 +427,7 @@ function initAppFunctions(){
         /**
          * Show help tooltips
          */
-        $('#nav-state-toggle').tooltip();
+        $('#nav-state-toggle, #nav-collapse-toggle').tooltip();
 
     }(jQuery);
 }

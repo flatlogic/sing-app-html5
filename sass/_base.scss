@@ -13,9 +13,10 @@
 }
 
 .page-controls, .content-wrap{
-  margin-left: $sidebar-icon-state-width;
-
-  @include translate($sidebar-width - $sidebar-icon-state-width, 0);
+  @media (min-width: $screen-sm-min) {
+    margin-left: $sidebar-icon-state-width;
+    @include translate($sidebar-width - $sidebar-icon-state-width, 0);
+  }
   @include transition-transform($sidebar-transition-time ease-in-out);
 
   .nav-collapsed &{
@@ -23,9 +24,11 @@
   }
 
   .nav-static & {
-    @include transition(none);
-    @include translate(0, 0);
-    margin-left: $sidebar-width;
+    @media (min-width: $screen-md-min) {
+      @include transition(none);
+      @include translate(0, 0);
+      margin-left: $sidebar-width;
+    }
   }
 }
 
@@ -34,6 +37,10 @@
   z-index: 1;
   left: 0;
   right: 0;
+
+  @media (max-width: $screen-xs-max) {
+    background-color: $sidebar-bg-color;
+  }
 
   .avatar{
     width: 30px;
@@ -80,8 +87,10 @@
   }
 
   .nav-static &{
-    @include transition(none);
-    width: 100%;
+    @media (min-width: $screen-md-min) {
+      width: 100%;
+      @include transition(none);
+    }
   }
 }
 
@@ -242,8 +251,10 @@
   }
 
   .nav-static &{
-    @include transition(none);
-    opacity: 1;
+    @media (min-width: $screen-md-min) {
+      opacity: 1;
+      @include transition(none);
+    }
   }
 }
 
@@ -252,7 +263,7 @@
 }
 
 .notifications{
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     width: 333px;
   }
   .list-group{
