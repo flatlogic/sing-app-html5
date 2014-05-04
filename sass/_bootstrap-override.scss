@@ -121,6 +121,36 @@ legend {
     }
   }
 }
+
+.navbar-header > .navbar-nav{
+  float: left;
+
+  &.navbar-right{
+    float: right;
+  }
+
+  margin-left: $navbar-padding-horizontal;
+  margin-right: $navbar-padding-horizontal;
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    + .navbar-brand{
+      height: 60px;
+      line-height: 30px;
+    }
+  }
+
+  > li {
+    float: left;
+    > a {
+      padding-top:    $navbar-padding-vertical;
+      padding-bottom: $navbar-padding-vertical;
+    }
+  }
+}
+
 //
 // Breadcrumbs
 // --------------------------------------------------

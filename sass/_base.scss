@@ -37,9 +37,27 @@
   z-index: 1;
   left: 0;
   right: 0;
+  @include box-shadow(1px 0 2px);
 
   @media (max-width: $screen-xs-max) {
-    background-color: $sidebar-bg-color;
+    font-size: 16px;
+
+    .navbar-brand{
+      position: absolute;
+      left: 0;
+      right: 0;
+      font-weight: $font-weight-bold;
+      text-align: center;
+
+      > .fa-circle{
+        font-size: 10px;
+      }
+    }
+
+    .navbar-nav{
+      position: relative;
+      z-index: 1;
+    }
   }
 
   .avatar{
@@ -50,6 +68,13 @@
     }
     &.pull-right{
       margin-left: 5px;
+    }
+  }
+
+  .navbar-nav > li > a {
+    .rounded.rounded-lg,
+    .circle.circle.lg{
+      margin: -7px -7px -8px;
     }
   }
 }

@@ -120,7 +120,7 @@
   @include transition(background-color ease-in-out .15s);
 
   &:focus{
-    background-color: #f3f3f3;
+    background-color: #f1f1f1;
   }
 }
 
@@ -309,6 +309,7 @@ $i: 1;
 @include bg-variant('.bg-gray', $gray);
 @include bg-variant('.bg-gray-transparent', rgba($gray, .6));
 @include bg-variant('.bg-gray-dark', $gray-dark);
+@include bg-variant('.bg-black', $black);
 @include bg-variant('.bg-gray-light', $gray-light);
 @include bg-variant('.bg-gray-lighter', $gray-lighter);
 @include bg-variant('.bg-transparent', rgba(0,0,0,0));
