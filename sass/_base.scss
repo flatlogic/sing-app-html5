@@ -295,6 +295,17 @@
     color: $gray-lighter;
     text-decoration: none;
   }
+
+  .dropdown-menu{
+    position: fixed;
+    top: 60px;
+    margin: 0 20px;
+    width: 320px;
+    @media (max-width: 380px) {
+      width: 100%;
+      margin: 0;
+    }
+  }
 }
 
 .page-title{

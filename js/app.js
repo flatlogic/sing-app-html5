@@ -39,8 +39,8 @@ $(function(){
         this._initOnResizeCallbacks();
         this._initOnScreenSizeCallbacks();
 
-        this.$sidebar.on('mouseenter', $.proxy(this.expandNavigation, this));
-        this.$sidebar.on('mouseleave', $.proxy(this.collapseNavigation, this));
+        this.$sidebar.on('mouseenter', $.proxy(this._sidebarMouseEnter, this));
+        this.$sidebar.on('mouseleave', $.proxy(this._sidebarMouseLeave, this));
 
         this.checkNavigationState();
 
@@ -115,7 +115,7 @@ $(function(){
                     view.screenSizeCallbacks[size]['enter'].forEach(function(fn){
                         fn(size, prevSize);
                     });
-                    view.debug && view.log('screen changed. new: ' + size + ', old: ' + prevSize);
+                    view.log('screen changed. new: ' + size + ', old: ' + prevSize);
                 }
                 prevSize = size;
             }, 100);
@@ -172,6 +172,18 @@ $(function(){
         $('body').removeClass('nav-collapsed');
         this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
             .siblings('[data-toggle=collapse]').removeClass('collapsed');
+    };
+
+    SingAppView.prototype._sidebarMouseEnter = function(){
+        if (Sing.isScreen('md') || Sing.isScreen('lg')){
+            this.expandNavigation();
+        }
+    };
+
+    SingAppView.prototype._sidebarMouseLeave = function(){
+        if (Sing.isScreen('md') || Sing.isScreen('lg')){
+            this.collapseNavigation();
+        }
     };
 
     SingAppView.prototype.toggleNavigationState = function(){
@@ -260,9 +272,9 @@ $(function(){
      * Page independent. Runs regardless of current page (on every page).
      * @param size ('xs','sm','md','lg')
      * @param fn callback(newScreenSize, prevScreenSize)
-     * @param onEnter whether to run a callback when screen enters `size` or exits. true by default
+     * @param onEnter whether to run a callback when screen enters `size` or exits. true by default @optional
      */
-    SingAppView.prototype.onScreenSize = function(size, fn, onEnter){
+    SingAppView.prototype.onScreenSize = function(size, fn, /**Boolean=*/ onEnter){
         onEnter = typeof onEnter !== 'undefined' ? onEnter : true;
         this.screenSizeCallbacks[size][onEnter ? 'enter' : 'exit'].push(fn)
     };
@@ -472,6 +484,32 @@ function initAppFunctions(){
         });
         $loadNotificationsBtn.on('ajax-load:end', function () {
             $loadNotificationsBtn.button('reset');
+        });
+
+        /**
+         * Move notifications dropdown to sidebar when/if screen goes xs
+         * and back when leaves xs
+         */
+        function moveNotificationsDropdown(){
+            $('.sidebar-status .dropdown-toggle').after($('#notifications-dropdown-menu').detach());
+        }
+
+        function moveBackNotificationsDropdown(){
+            $('#notifications-dropdown-toggle').after($('#notifications-dropdown-menu').detach());
+        }
+        SingApp.onScreenSize('xs', moveNotificationsDropdown);
+        SingApp.onScreenSize('xs', moveBackNotificationsDropdown, false);
+
+        Sing.isScreen('xs') && moveNotificationsDropdown();
+
+        /**
+         * Set Sidebar zindex higher than .content and .page-controls so the dropdown is seen
+         */
+
+        $('.sidebar-status').on('show.bs.dropdown', function(){
+            $('#sidebar').css('z-index', 2);
+        }).on('hidden.bs.dropdown', function(){
+            $('#sidebar').css('z-index', '');
         });
 
         /**
