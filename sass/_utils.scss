@@ -315,6 +315,8 @@ $i: 1;
 @include bg-variant('.bg-transparent', rgba(0,0,0,0));
 @include bg-variant('.bg-white', $white);
 
+@include bg-variant('.bg-sidebar', $sidebar-bg-color);
+
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info{
   @include transition(background-color .15s ease-in-out);
@@ -323,6 +325,7 @@ $i: 1;
 @include text-emphasis-variant('.text-white', $white);
 @include text-emphasis-variant('.text-gray', $gray);
 @include text-emphasis-variant('.text-gray-dark', $gray-dark);
+@include text-emphasis-variant('.text-bg-sidebar', $sidebar-bg-color);
 
 
 .text-light{
