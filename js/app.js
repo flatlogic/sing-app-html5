@@ -98,7 +98,7 @@ $(function(){
     SingAppView.prototype.checkNavigationState = function(){
         if (this.isNavigationStatic()){
             this.staticNavigationState();
-            if (Sing.isScreen('sm')){
+            if (Sing.isScreen('sm') || Sing.isScreen('xs')){
                 this.collapseNavigation();
             }
         } else {
@@ -123,7 +123,7 @@ $(function(){
 
     SingAppView.prototype.collapseNavigation = function(){
         //this method only makes sense for non-static navigation state
-        if (this.isNavigationStatic() && (!Sing.isScreen('sm'))) return;
+        if (this.isNavigationStatic() && (Sing.isScreen('md') || Sing.isScreen('lg'))) return;
 
         $('body').addClass('nav-collapsed');
         this.$sidebar.find('.collapse.in').collapse('hide')
@@ -132,7 +132,8 @@ $(function(){
 
     SingAppView.prototype.expandNavigation = function(){
         //this method only makes sense for non-static navigation state
-        if (this.isNavigationStatic() && (!Sing.isScreen('sm'))) return;
+        if (this.isNavigationStatic() && (Sing.isScreen('md') || Sing.isScreen('lg'))) return;
+        if (this.isNavigationStatic() && (Sing.isScreen('md') || Sing.isScreen('lg'))) return;
 
         $('body').removeClass('nav-collapsed');
         this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
