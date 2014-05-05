@@ -284,6 +284,19 @@
   }
 }
 
+.sidebar-status{
+  position: relative;
+  margin: 10px 0 20px;
+  padding: 0 11px;
+
+  > a{
+    display: block;
+    line-height: 40px;
+    color: $gray-lighter;
+    text-decoration: none;
+  }
+}
+
 .page-title{
   margin: 0 0 $line-height-computed;
 }

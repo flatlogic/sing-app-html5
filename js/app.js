@@ -27,21 +27,26 @@ $(function(){
         this.loaderTemplate = $('#loader-template').html();
         this.settings = window.SingSettings;
         this.pageLoadCallbacks = {};
-        this.resizeCallbacks = {};
+        this.screenSizeCallbacks = {
+            xs:{enter:[], exit:[]},
+            sm:{enter:[], exit:[]},
+            md:{enter:[], exit:[]},
+            lg:{enter:[], exit:[]}
+        };
         this.loading = false;
 
         this._resetResizeCallbacks();
         this._initOnResizeCallbacks();
+        this._initOnScreenSizeCallbacks();
 
         this.$sidebar.on('mouseenter', $.proxy(this.expandNavigation, this));
         this.$sidebar.on('mouseleave', $.proxy(this.collapseNavigation, this));
 
         this.checkNavigationState();
-        this._initOnResizeCallbacks();
 
         if (this.pjaxEnabled){
-            this.$sidebar.find('a:not([data-toggle=collapse], [data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
-            $(document).pjax('#sidebar a:not([data-toggle=collapse], [data-no-pjax])', '#content', {
+            this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
+            $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax])', '#content', {
                 fragment: '#content',
                 type: 'POST' //prevents caching
             });
@@ -83,13 +88,42 @@ $(function(){
         $(window).resize(function() {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(function(){
-                view._runPageCallbacks(view.resizeCallbacks);
+                view._runPageCallbacks(view.pageResizeCallbacks);
+            }, 100);
+        });
+    };
+
+    /**
+     * Initiates an array of throttle onScreenSize callbacks.
+     * @private
+     */
+    SingAppView.prototype._initOnScreenSizeCallbacks = function(){
+        var resizeTimeout,
+            view = this,
+            prevSize = Sing.getScreenSize();
+
+        $(window).resize(function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function(){
+                var size = Sing.getScreenSize();
+                if (size != prevSize){ //run only if something changed
+                    //run exit callbacks first
+                    view.screenSizeCallbacks[prevSize]['exit'].forEach(function(fn){
+                        fn(size, prevSize);
+                    });
+                    //run enter callbacks then
+                    view.screenSizeCallbacks[size]['enter'].forEach(function(fn){
+                        fn(size, prevSize);
+                    });
+                    view.debug && view.log('screen changed. new: ' + size + ', old: ' + prevSize);
+                }
+                prevSize = size;
             }, 100);
         });
     };
 
     SingAppView.prototype._resetResizeCallbacks = function(){
-        this.resizeCallbacks = {};
+        this.pageResizeCallbacks = {};
     };
 
     /**
@@ -205,10 +239,12 @@ $(function(){
     /**
      * Specify a function to execute when window was resized.
      * Runs maximum once in 100 milliseconds (throttle).
+     * Page dependent. So `fn` will be executed only when at the page it was added.
+     * Cleaned after page left.
      * @param fn A function to execute
      */
     SingAppView.prototype.onResize = function(fn){
-        this._addPageCallback(this.resizeCallbacks, fn);
+        this._addPageCallback(this.pageResizeCallbacks, fn);
     };
 
     /**
@@ -217,6 +253,18 @@ $(function(){
      */
     SingAppView.prototype.onPageLoad = function(fn){
         this._addPageCallback(this.pageLoadCallbacks, fn);
+    };
+
+    /**
+     * Specify a function to execute when window entered/exited particular size.
+     * Page independent. Runs regardless of current page (on every page).
+     * @param size ('xs','sm','md','lg')
+     * @param fn callback(newScreenSize, prevScreenSize)
+     * @param onEnter whether to run a callback when screen enters `size` or exits. true by default
+     */
+    SingAppView.prototype.onScreenSize = function(size, fn, onEnter){
+        onEnter = typeof onEnter !== 'undefined' ? onEnter : true;
+        this.screenSizeCallbacks[size][onEnter ? 'enter' : 'exit'].push(fn)
     };
 
     /**
@@ -353,7 +401,8 @@ $(function(){
 
     SingAppView.prototype.log = function(message){
         if (this.debug){
-            console.log(message
+            console.log("SingApp: "
+                    + message
                     + " - " + arguments.callee.caller.toString().slice(0, 30).split('\n')[0]
                     + " - " + this.extractPageName(location.href)
             );
@@ -363,7 +412,7 @@ $(function(){
 
     window.SingApp = new SingAppView();
 
-    //SingApp.collapseNavigation();
+//    SingApp.expandNavigation();
 
     initAppPlugins();
     initAppFunctions();
