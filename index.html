@@ -12,98 +12,113 @@
 </head>
 <body>
 <nav id="sidebar" class="sidebar" role="navigation">
-    <header class="logo hidden-xs">
-        <a href="index.html">sing</a>
-    </header>
-    <div class="sidebar-status visible-xs">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="thumb-sm avatar pull-right">
-                <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
-            </span>
-            <span class="circle bg-warning font-bold text-gray-dark">
-                13
-            </span>
-            &nbsp;
-            John <strong>Smith</strong>
-            <b class="caret"></b>
-        </a>
+    <div class="js-sidebar-content">
+        <header class="logo hidden-xs">
+            <a href="index.html">sing</a>
+        </header>
+        <div class="sidebar-status visible-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="thumb-sm avatar pull-right">
+                    <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+                </span>
+                <span class="circle bg-warning font-bold text-gray-dark">
+                    13
+                </span>
+                &nbsp;
+                John <strong>Smith</strong>
+                <b class="caret"></b>
+            </a>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="active">
+                <a href="index.html">
+                    <span class="icon">
+                        <i class="fa fa-desktop"></i>
+                    </span>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="statistics.html">
+                    <span class="icon">
+                        <i class="glyphicon glyphicon-signal"></i>
+                    </span>
+                    Statistics
+                </a>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <ul class="sidebar-nav">
+            <li>
+                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="glyphicon glyphicon-align-right"></i>
+                    </span>
+                    Forms
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-forms" class="collapse">
+                    <li><a href="form_elements.html">Form Elements</a></li>
+                    <li><a href="form_validation.html">Form Validation</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon">
+                        <i class="glyphicon glyphicon-th"></i>
+                    </span>
+                    Tables
+                </a>
+            </li>
+            <li>
+                <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                    </span>
+                    Maps
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-maps" class="collapse">
+                    <li><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li><a href="vmap.html">Vector Maps</a></li>
+                </ul>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <ul class="sidebar-labels">
+            <li>
+                <a href="#">
+                    <span class="circle bg-warning mr-sm"><i class="fa fa-circle text-bg-sidebar"></i></span>
+                    <span class="label-name">My Recent</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="circle bg-gray-light mr-sm"><i class="fa fa-circle text-bg-sidebar"></i></span>
+                    <span class="label-name">Starred</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="circle bg-danger mr-sm"><i class="fa fa-circle text-bg-sidebar"></i></span>
+                    <span class="label-name">Background</span>
+                </a>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Projects</h5>
+        <div class="sidebar-alerts">
+            <div class="alert fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="text-white font-semi-bold">Sales Report</span> <br>
+                Check and compare incoming taxes
+            </div>
+            <div class="alert fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="text-white font-semi-bold">Social Responsibility</span> <br>
+                Provide required notes
+            </div>
+        </div>
     </div>
-    <ul class="sidebar-nav">
-        <li class="active">
-            <a href="index.html">
-                <span class="icon">
-                    <i class="fa fa-desktop"></i>
-                </span>
-                Dashboard
-            </a>
-        </li>
-        <li>
-            <a href="statistics.html">
-                <span class="icon">
-                    <i class="glyphicon glyphicon-signal"></i>
-                </span>
-                Statistics
-            </a>
-        </li>
-    </ul>
-    <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
-    <ul class="sidebar-nav">
-        <li>
-            <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
-                <span class="icon">
-                    <i class="glyphicon glyphicon-align-right"></i>
-                </span>
-                Forms
-                <i class="toggle fa fa-angle-down"></i>
-            </a>
-            <ul id="sidebar-forms" class="collapse">
-                <li><a href="form_elements.html">Form Elements</a></li>
-                <li><a href="form_validation.html">Form Validation</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#">
-                <span class="icon">
-                    <i class="glyphicon glyphicon-th"></i>
-                </span>
-                Tables
-            </a>
-        </li>
-        <li>
-            <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
-                <span class="icon">
-                    <i class="glyphicon glyphicon-map-marker"></i>
-                </span>
-                Maps
-                <i class="toggle fa fa-angle-down"></i>
-            </a>
-            <ul id="sidebar-maps" class="collapse">
-                <li><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
-                <li><a href="vmap.html">Vector Maps</a></li>
-            </ul>
-        </li>
-    </ul>
-    <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
-    <ul class="sidebar-labels">
-        <li>
-            <a href="#">
-                <span class="circle bg-warning mr-sm"><i class="fa fa-circle text-bg-sidebar"></i></span>
-                <span class="label-name">My Recent</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span class="circle bg-gray-light mr-sm"><i class="fa fa-circle text-bg-sidebar"></i></span>
-                <span class="label-name">Starred</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span class="circle bg-danger mr-sm"><i class="fa fa-circle text-bg-sidebar"></i></span>
-                <span class="label-name">Background</span>
-            </a>
-        </li>
-    </ul>
 </nav>
 <nav class="page-controls navbar navbar-default">
     <div class="container-fluid">
@@ -801,7 +816,7 @@
     </main>
 </div>
 
-<!-- common libraries -->
+<!-- common libraries. required for every page-->
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/jquery-pjax/jquery.pjax.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
@@ -809,6 +824,8 @@
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
+<script src="vendor/jQuery-slimScroll/jquery.slimscroll.min.js"></script>
 
 <!-- common app js -->
 <script src="js/settings.js"></script>

@@ -27,6 +27,7 @@ $(function(){
         this.loaderTemplate = $('#loader-template').html();
         this.settings = window.SingSettings;
         this.pageLoadCallbacks = {};
+        this.resizeCallbacks = [];
         this.screenSizeCallbacks = {
             xs:{enter:[], exit:[]},
             sm:{enter:[], exit:[]},
@@ -89,6 +90,9 @@ $(function(){
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(function(){
                 view._runPageCallbacks(view.pageResizeCallbacks);
+                view.resizeCallbacks.forEach(function(fn){
+                    fn();
+                });
             }, 100);
         });
     };
@@ -254,9 +258,15 @@ $(function(){
      * Page dependent. So `fn` will be executed only when at the page it was added.
      * Cleaned after page left.
      * @param fn A function to execute
+     * @param allPages whether to keep callback after leaving page
      */
-    SingAppView.prototype.onResize = function(fn){
-        this._addPageCallback(this.pageResizeCallbacks, fn);
+    SingAppView.prototype.onResize = function(fn, /**Boolean=*/ allPages){
+        allPages = typeof allPages !== 'undefined' ? allPages : false;
+        if (allPages){
+            this.resizeCallbacks.push(fn);
+        } else {
+            this._addPageCallback(this.pageResizeCallbacks, fn);
+        }
     };
 
     /**
@@ -471,7 +481,7 @@ function initAppPlugins(){
 }
 
 /**
- *
+ * Sing required js functions
  */
 function initAppFunctions(){
     !function($){
@@ -503,9 +513,8 @@ function initAppFunctions(){
         Sing.isScreen('xs') && moveNotificationsDropdown();
 
         /**
-         * Set Sidebar zindex higher than .content and .page-controls so the dropdown is seen
+         * Set Sidebar zindex higher than .content and .page-controls so the notifications dropdown is seen
          */
-
         $('.sidebar-status').on('show.bs.dropdown', function(){
             $('#sidebar').css('z-index', 2);
         }).on('hidden.bs.dropdown', function(){
@@ -517,11 +526,27 @@ function initAppFunctions(){
          */
         $('#nav-state-toggle, #nav-collapse-toggle').tooltip();
 
+        function initSidebarScroll(){
+            var $sidebarContent = $('.js-sidebar-content');
+            if ($('#sidebar').find('.slimScrollDiv').length != 0){
+                $sidebarContent.slimscroll({
+                    destroy: true
+                })
+            }
+            $sidebarContent.slimscroll({
+                height: window.innerHeight,
+                size: '4px'
+            });
+        }
+
+        SingApp.onResize(initSidebarScroll, true);
+        initSidebarScroll();
+
     }(jQuery);
 }
 
 /**
- * Demo-only functions. Does not affect core Sing functionality.
+ * Demo-only functions. Does not affect the core Sing functionality.
  * Should be removed when used in real app.
  */
 function initDemoFunctions(){

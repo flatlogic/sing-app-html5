@@ -57,9 +57,10 @@ $link-color: #218BC3 !default;
 
 // Layout
 // -------------------------
-$sidebar-width: 200px !default;
 $sidebar-padding-horizontal: 11px;
 $sidebar-icon-state-width: 50px !default;
+$sidebar-slim-scroll-width: 4px;
+$sidebar-width: 200px + $sidebar-slim-scroll-width!default;
 
 $sidebar-transition-time: .3s !default;
 

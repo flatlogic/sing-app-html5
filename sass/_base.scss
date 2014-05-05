@@ -10,6 +10,11 @@
   width: $sidebar-width;
   background-color: $sidebar-bg-color;
   color: $sidebar-color;
+
+  .slimScrollBar{
+    @include border-radius(0 !important);
+    background-color: $sidebar-color !important;
+  }
 }
 
 .page-controls, .content-wrap{
@@ -182,7 +187,7 @@
     .toggle{
       float: right;
       line-height: 35px;
-      margin-right: $sidebar-padding-horizontal;
+      margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       @include transition-transform(.35s ease);
 
       @media (min-width: $screen-md-min) and (min-height: $screen-md-height), (max-width: $screen-xs-max){
@@ -275,7 +280,7 @@
   .action-link{
     color: $sidebar-color;
     float: right;
-    margin-right: $sidebar-padding-horizontal;
+    margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
     margin-top: -1px;
 
     .fa, .glyphicon{
@@ -298,7 +303,7 @@
 .sidebar-status{
   position: relative;
   margin: 10px 0 20px;
-  padding: 0 $sidebar-padding-horizontal;
+  padding: 0 ($sidebar-padding-horizontal + $sidebar-slim-scroll-width) 0 $sidebar-padding-horizontal;
 
   > a{
     display: block;
@@ -312,6 +317,7 @@
     top: 60px;
     margin: 0 20px;
     width: 320px;
+    color: $text-color;
     @media (max-width: 380px) {
       width: 100%;
       margin: 0;
@@ -322,6 +328,7 @@
 .sidebar-labels{
   list-style: none;
   padding: $sidebar-padding-horizontal;
+  padding-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
   font-size: $font-size-base - 1;
   > li{
     > a{
@@ -352,10 +359,48 @@
           opacity: 0;
         }
       }
+
+      .nav-static &{
+        .circle{
+          margin-left: 0;
+          @include transition(none);
+        }
+        .label-name{
+          opacity: 1;
+          @include transition(none);
+        }
+      }
     }
 
     + li {
       margin-top: $line-height-computed/2;
+    }
+  }
+}
+
+.sidebar-alerts{
+  font-size: $font-size-base - 1;
+  @include transition(opacity $sidebar-transition-time ease-in-out);
+  opacity: 1;
+
+  .nav-collapsed &{
+    opacity: 0;
+  }
+
+  .nav-static &{
+    opacity: 1;
+    @include transition(none);
+  }
+  .alert{
+    margin-bottom: 0;
+    padding: $line-height-computed/2 $sidebar-padding-horizontal;
+    padding-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
+
+    .close{
+      font-size: 16px;
+      text-shadow: none;
+      opacity: 1;
+      color: $sidebar-color;
     }
   }
 }
