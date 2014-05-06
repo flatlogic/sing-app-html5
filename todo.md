@@ -31,7 +31,7 @@
    6.  accordion
    7.  list groups
  12.  forms
-   1.  ~~elements~~ (slider, *markdown*)
+   1.  ~~elements (slider, *markdown*)~~
    2.  validation
    3.  wizard
  13.  apps
@@ -51,3 +51,4 @@
  18.  ~~fill sidebar with projects etc. scroll sidebar~~
  19.  documentation
  20.  item description
+ 21.  browsers test

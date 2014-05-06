@@ -74,6 +74,8 @@ $(function(){
 
         $('#markdown').markdown();
 
+        $('.js-slider').slider();
+
         Holder.run();
     }
     pageLoad();

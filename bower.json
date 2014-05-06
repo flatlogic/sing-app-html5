@@ -37,7 +37,8 @@
     "gmaps": ">= 0.4.11",
     "markdown": ">= 0.5.0",
     "to-markdown": "git://github.com/domchristie/to-markdown.git",
-    "bootstrap-markdown": ">= 2.3.1"
+    "bootstrap-markdown": ">= 2.3.1",
+    "seiyria-bootstrap-slider": ">= 3.0.1"
   },
   "private": true,
   "ignore": [
