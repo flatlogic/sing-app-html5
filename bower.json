@@ -34,7 +34,10 @@
     "jQuery-Mapael": "git://github.com/neveldo/jQuery-Mapael.git",
     "nvd3": ">= 1.1.15-beta",
     "morris.js": ">= 0.5.0",
-    "gmaps": ">= 0.4.11"
+    "gmaps": ">= 0.4.11",
+    "markdown": ">= 0.5.0",
+    "to-markdown": "git://github.com/domchristie/to-markdown.git",
+    "bootstrap-markdown": ">= 2.3.1"
   },
   "private": true,
   "ignore": [

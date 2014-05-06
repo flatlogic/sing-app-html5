@@ -338,3 +338,51 @@ svg .title {
 .animated{
   @include animation-duration(.5s);
 }
+
+.md-editor {
+  display: block;
+  border: 1px solid $table-border-color;
+
+  > .md-header, .md-footer {
+    display: block;
+    padding: 6px 4px;
+    background: $panel-default-heading-bg;
+  }
+
+  > .md-header {
+    margin: 0;
+  }
+
+  > .md-preview {
+    padding: $padding-base-vertical $padding-base-horizontal;
+    background: $panel-bg;
+    border-top: 1px dashed $table-border-color;
+    min-height: 10px;
+  }
+
+  > textarea {
+    font-family: $font-family-monospace;
+    font-size: $font-size-base;
+    outline: 0;
+    outline: thin dotted  \9; /* IE6-9 */
+    margin: 0;
+    display: block;
+    width: 100%;
+    border: 0;
+    border-top: 1px dashed $table-border-color;
+    border-radius: 0;
+    box-shadow: none;
+    background: $input-bg-disabled;
+    &:focus {
+      box-shadow: none;
+      background: $input-bg;
+    }
+  }
+
+  // Hover state
+  $color: $input-border-focus;
+  &.active {
+    border-color: $color;
+    outline: 0;
+  }
+}

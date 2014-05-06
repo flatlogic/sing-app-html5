@@ -17,11 +17,11 @@
    1.  vector
    2.  ~~google~~
  7.  tables  
-   1.  static
+   1.  static (no padding tables, like inside panels)
    2.  datatables
  8.  grid (widgster)
  9.  menu levels
- 10.  widgets (different)
+ 10.  *widgets (different)*
  11.  ui elements
    1.  messages & alerts (alerts, labels, popovers, tooltips, modals, progressbars). like [here](http://www.revox.io/webarchv2/messages_notifications.html)
    2.  notifications (messenger)

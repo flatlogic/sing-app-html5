@@ -18549,6 +18549,55 @@ svg .title {
   animation-duration: 0.5s;
 }
 
+/* line 342, ../sass/_libs-override.scss */
+.md-editor {
+  display: block;
+  border: 1px solid #dddddd;
+}
+/* line 346, ../sass/_libs-override.scss */
+.md-editor > .md-header, .md-editor .md-footer {
+  display: block;
+  padding: 6px 4px;
+  background: whitesmoke;
+}
+/* line 352, ../sass/_libs-override.scss */
+.md-editor > .md-header {
+  margin: 0;
+}
+/* line 356, ../sass/_libs-override.scss */
+.md-editor > .md-preview {
+  padding: 6px 12px;
+  background: white;
+  border-top: 1px dashed #dddddd;
+  min-height: 10px;
+}
+/* line 363, ../sass/_libs-override.scss */
+.md-editor > textarea {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  outline: 0;
+  outline: thin dotted  \9;
+  /* IE6-9 */
+  margin: 0;
+  display: block;
+  width: 100%;
+  border: 0;
+  border-top: 1px dashed #dddddd;
+  border-radius: 0;
+  box-shadow: none;
+  background: #eeeeee;
+}
+/* line 376, ../sass/_libs-override.scss */
+.md-editor > textarea:focus {
+  box-shadow: none;
+  background: white;
+}
+/* line 384, ../sass/_libs-override.scss */
+.md-editor.active {
+  border-color: #4d90fe;
+  outline: 0;
+}
+
 /**
 * if set to device-width ie10 built-in scrollbar overflows content. Fix it as of here
 * http://stackoverflow.com/questions/17045132/scrollbar-overlay-in-ie10-how-do-you-stop-that-might-be-bootstrap
