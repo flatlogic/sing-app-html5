@@ -592,57 +592,77 @@
                     <!--</div>-->
                 <!--</section>-->
             <!--</div>-->
-            <div class="col-md-8">
+            <div class="col-md-4">
                 <section class="widget">
                     <div class="widget-body">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <div id="map-years-mapael" class="mapael" style="height: 394px; margin-bottom: -15px">
-                                    <div class="stats">
-                                        <h5 class="font-semi-bold text-gray-dark">YEARLY DISTRIBUTUTIONS</h5>
+                        <div class="widget-overflow bg-gray-dark text-white">
+                            <h5><span class="font-semi-bold">QUICK</span> VIEW</h5>
+                            <input class="form-control input-dark" type="text" placeholder="Search...">
+                            <div class="stats-row mt">
+                                <div class="stat-item">
+                                    <h6 class="name">Overall Growth</h6>
+                                    <p class="value">43.75%</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h6 class="name">Montly</h6>
+                                    <p class="value">86.34%</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h6 class="name">24h</h6>
+                                    <p class="value">3.85%</p>
+                                </div>
+                            </div>
+                            <div class="progress progress-xs mt">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
+                                </div>
+                            </div>
+                            <p class="mt mb">
+                                <small><span class="circle bg-warning text-gray-dark"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
+                                <strong>17% higher</strong>
+                                than last month</p>
+                            <br>
+                            <div id="realtime1" class="chart-overflow-bottom text-gray-dark"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <section class="widget">
+                    <div class="widget-body">
+                        <div id="map-years-mapael" class="mapael">
+                            <div class="stats">
+                                <h5 class="font-semi-bold text-gray-dark">YEARLY DISTRIBUTIONS</h5>
                                         <span class="pull-left mr-xs">
                                             <small><span class="circle bg-warning text-gray-dark"><i class="fa fa-plus"></i></span></small>
                                         </span>
-                                        <p class="h4 no-margin">
-                                            <strong>17% last year</strong>
-                                        </p>
-                                    </div>
-                                    <div class="map" style="height: 100%">
-                                        <span>Alternative content for the map</span>
-                                    </div>
-                                </div>
+                                <p class="h4 no-margin">
+                                    <strong>17% last year</strong>
+                                </p>
                             </div>
-                            <div class="col-sm-5">
-                                <div class="widget-overflow bg-gray-dark text-white">
-                                    <h5><span class="font-semi-bold">QUICK</span> VIEW</h5>
-                                    <input class="form-control input-dark" type="text" placeholder="Search...">
-                                    <div class="stats-row mt">
-                                        <div class="stat-item">
-                                            <h6 class="name">Overall Growth</h6>
-                                            <p class="value">43.75%</p>
-                                        </div>
-                                        <div class="stat-item">
-                                            <h6 class="name">Montly</h6>
-                                            <p class="value">86.34%</p>
-                                        </div>
-                                        <div class="stat-item">
-                                            <h6 class="name">24h</h6>
-                                            <p class="value">3.85%</p>
-                                        </div>
-                                    </div>
-                                    <div class="progress progress-xs mt">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-                                             aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
-                                        </div>
-                                    </div>
-                                    <p class="mt mb">
-                                        <small><span class="circle bg-warning text-gray-dark"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
-                                        <strong>17% higher</strong>
-                                        than last month</p>
-                                    <br>
-                                    <div id="realtime1" class="chart-overflow-bottom text-gray-dark"></div>
-                                </div>
+                            <div class="map">
+                                <span>Alternative content for the map</span>
                             </div>
+                            <ul class="map-controls nav nav-pills nav-justified">
+                                <li>
+                                    <a href="#" data-years-map-year="2008">2008</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#" data-years-map-year="2009">2009</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-years-map-year="2010">2010</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-years-map-year="2011">2011</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-years-map-year="2012">2012</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-years-map-year="2013">2013</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -860,6 +880,7 @@
 <script src="vendor/nvd3/nv.d3.min.js"></script>
 
 <!-- page specific js -->
+<script src="js/_fake-world-data.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

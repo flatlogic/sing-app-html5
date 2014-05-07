@@ -8,7 +8,7 @@
  2.  ~~**responsive layout**~~
  3.  ~~menu iconic state on/off~~
  4.  dashboard fill
-   1.  black chart + map
+   1.  ~~black chart + map~~
    2.  reorganize last row
    3.  add something from `love designs` folder
    4.  weather

@@ -321,7 +321,10 @@ $(function(){
     }
 
     function initYearsMap(){
+
         var $map = $('#map-years-mapael');
+        $map.css('height', 394).css('margin-bottom', -15)
+            .find('.map').css('height', parseInt($map.parents('.widget').css('height')) - 40);
         $map.mapael({
             map:{
                 name : "world_countries",
@@ -329,8 +332,6 @@ $(function(){
                     attrs : {
                         fill: Sing.colors['gray-lighter']
                         , stroke : Sing.colors['gray']
-                        , "stroke-width" : 1
-                        , "stroke-linejoin" : "round"
                     },
                     attrsHover : {
                         fill : Sing.colors['gray-light'],
@@ -354,11 +355,56 @@ $(function(){
                     enabled : true,
                     step : 1,
                     maxLevel: 10
-                }
             }
+            }
+            ,legend : {
+                area : {
+                    display : false,
+                    slices : [
+                        {
+                            max :5000000,
+                            attrs : {
+                                fill : Sing.lighten(Sing.colors['gray-lighter'],.04)
+                            },
+                            label :"Less than 5M"
+                        },
+                        {
+                            min :5000000,
+                            max :10000000,
+                            attrs : {
+                                fill : Sing.colors['gray-lighter']
+                            },
+                            label :"Between 5M and 10M"
+                        },
+                        {
+                            min :10000000,
+                            max :50000000,
+                            attrs : {
+                                fill : Sing.colors['gray-lighter']
+                            },
+                            label :"Between 10M and 50M"
+                        },
+                        {
+                            min :50000000,
+                            attrs : {
+                                fill : Sing.darken(Sing.colors['gray-lighter'],.1)
+                            },
+                            label :"More than 50M"
+                        }
+                    ]
+                }
+            },
+            areas: fakeWorldData[2009]['areas']
         });
         var coords = $.fn.mapael.maps["world_countries"].getCoords(59.599254, 8.863224);
         $map.trigger('zoom', [6, coords.x, coords.y]);
+
+        $map.find('.map-controls > li > a').on('click', function(){
+            $('.map-controls > li').removeClass('active');
+            $(this).parents('li').addClass('active');
+            $map.trigger('update', [fakeWorldData[$(this).data('years-map-year')], {}, {}, {animDuration : 300}]);
+            return false;
+        });
     }
 
     /* Inspired by Lee Byron's test data generator. */
@@ -498,9 +544,9 @@ $(function(){
         initChangesYearChart();
         initSalesChart();
         initMap();
-        initYearsMap();
 //        initBigChart();
         initRealTime1();
+        initYearsMap();
     }
 
     pjaxPageLoad();

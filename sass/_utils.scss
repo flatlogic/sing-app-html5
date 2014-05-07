@@ -15,10 +15,6 @@
   height: #{$line-height-base}em;
   line-height: #{$line-height-base}em;
   text-align: center;
-
-  > .glyphicon{
-    vertical-align: -10.714%;
-  }
 }
 
 .circle{
@@ -205,8 +201,8 @@
   margin: 0;
 }
 
-$margin-vertical-variants: (lg: $line-height-computed*3/2, md: $line-height-computed, sm: $line-height-computed/2, xs: $line-height-computed/4);
-$margin-horizontal-variants: (lg: 20px, md: 15px, sm: 10px, xs: 5px);
+$margin-vertical-variants: (lg: $line-height-computed*3/2, md: $line-height-computed, sm: $line-height-computed/2, xs: $line-height-computed/4, 0: 0);
+$margin-horizontal-variants: (lg: 20px, md: 15px, sm: 10px, xs: 5px, 0: 0);
 
 @include property-variants('.mt', 'margin-top', $margin-vertical-variants);
 @include property-variants('.mb', 'margin-bottom', $margin-vertical-variants);

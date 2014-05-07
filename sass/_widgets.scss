@@ -158,3 +158,35 @@
     font-weight: bold;
   }
 }
+
+
+/***********************/
+/*  Part:Map Controls  */
+/***********************/
+
+.map-controls{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $gray-dark;
+
+  > li > a{
+    padding-left: 0;
+    padding-right: 0;
+
+    color: $gray-lighter;
+    &:hover{
+      background-color: $gray;
+      color: $white
+    }
+  }
+
+  > li.active > a{
+    &, &:hover{
+      background-color: $gray;
+      color: $brand-warning;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
