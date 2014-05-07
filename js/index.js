@@ -320,6 +320,47 @@ $(function(){
         });
     }
 
+    function initYearsMap(){
+        var $map = $('#map-years-mapael');
+        $map.mapael({
+            map:{
+                name : "world_countries",
+                defaultArea : {
+                    attrs : {
+                        fill: Sing.colors['gray-lighter']
+                        , stroke : Sing.colors['gray']
+                        , "stroke-width" : 1
+                        , "stroke-linejoin" : "round"
+                    },
+                    attrsHover : {
+                        fill : Sing.colors['gray-light'],
+                        animDuration : 100
+                    }
+                },
+                defaultPlot:{
+                    size: 17,
+                    attrs : {
+                        fill : Sing.colors['brand-warning'],
+                        stroke : "#fff",
+                        "stroke-width" : 0,
+                        "stroke-linejoin" : "round"
+                    },
+                    attrsHover : {
+                        "stroke-width" : 1,
+                        animDuration : 100
+                    }
+                },
+                zoom : {
+                    enabled : true,
+                    step : 1,
+                    maxLevel: 10
+                }
+            }
+        });
+        var coords = $.fn.mapael.maps["world_countries"].getCoords(59.599254, 8.863224);
+        $map.trigger('zoom', [6, coords.x, coords.y]);
+    }
+
     /* Inspired by Lee Byron's test data generator. */
     function _stream_layers(n, m, o) {
         if (arguments.length < 3) o = 0;
@@ -457,6 +498,7 @@ $(function(){
         initChangesYearChart();
         initSalesChart();
         initMap();
+        initYearsMap();
 //        initBigChart();
         initRealTime1();
     }

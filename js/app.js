@@ -22,6 +22,7 @@ $(function(){
         this.navCollapseTimeout = 1500;
         this.$sidebar = $('#sidebar');
         this.$contentWrap = $('.content-wrap');
+        this.$loaderWrap = $('.loader-wrap');
         this.$navigationStateToggle = $('#nav-state-toggle');
         this.$navigationCollapseToggle = $('#nav-collapse-toggle');
         this.loaderTemplate = $('#loader-template').html();
@@ -236,19 +237,19 @@ $(function(){
     SingAppView.prototype.showLoader = function(){
         var view = this;
         this.showLoaderTimeout = setTimeout(function(){
-            view.$contentWrap.append(view.loaderTemplate);
+            view.$loaderWrap.removeClass('hide');
             setTimeout(function(){
-                view.$contentWrap.find('.loader-wrap').removeClass('hiding');
+                view.$loaderWrap.removeClass('hiding');
             }, 0)
-        }, 100);
+        }, 200);
     };
 
     SingAppView.prototype.hideLoader = function(){
         clearTimeout(this.showLoaderTimeout);
-        var $loaderWrap = this.$contentWrap.find('.loader-wrap');
-        $loaderWrap.addClass('hiding');
-        $loaderWrap.one($.support.transition.end, function () {
-            $loaderWrap.remove();
+        this.$loaderWrap.addClass('hiding');
+        var view = this;
+        this.$loaderWrap.one($.support.transition.end, function () {
+            view.$loaderWrap.addClass('hide');
         }).emulateTransitionEnd(200)
     };
 

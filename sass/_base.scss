@@ -4,6 +4,7 @@
 
 .sidebar{
   position: fixed;
+  z-index: 0;
   left: 0;
   top: 0;
   bottom: 0;
@@ -17,7 +18,7 @@
   }
 }
 
-.page-controls, .content-wrap{
+.page-controls, .content-wrap, .loader-wrap{
   @include translate($sidebar-width, 0);
   @include transition-transform($sidebar-transition-time ease-in-out);
 
@@ -436,18 +437,20 @@
 /***********************/
 
 .loader-wrap{
-  position: absolute;
+  position: fixed;
+  z-index: 0;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   text-align: center;
-  background: $body-bg;
+  background-color: $body-bg;
 
   opacity: 1;
-  @include transition(opacity .2s ease-out);
+  @include transition-transform($sidebar-transition-time ease-in-out, opacity .2s ease-out, background-color .2s ease-out);
   &.hiding{
     opacity: 0;
+    background-color: rgba(0,0,0,0);
   }
 
   .fa{
@@ -457,6 +460,14 @@
     margin-top: -15px;
     font-size: 20px;
     vertical-align: middle;
+  }
+
+  .nav-static & {
+    @media (min-width: $screen-md-min) {
+      @include transition(opacity .2s ease-out, background-color .2s ease-out);
+      @include translate(0, 0);
+      margin-left: $sidebar-width;
+    }
   }
 }
 

@@ -597,7 +597,20 @@
                     <div class="widget-body">
                         <div class="row">
                             <div class="col-sm-7">
-
+                                <div id="map-years-mapael" class="mapael" style="height: 394px; margin-bottom: -15px">
+                                    <div class="stats">
+                                        <h5 class="font-semi-bold text-gray-dark">YEARLY DISTRIBUTUTIONS</h5>
+                                        <span class="pull-left mr-xs">
+                                            <small><span class="circle bg-warning text-gray-dark"><i class="fa fa-plus"></i></span></small>
+                                        </span>
+                                        <p class="h4 no-margin">
+                                            <strong>17% last year</strong>
+                                        </p>
+                                    </div>
+                                    <div class="map" style="height: 100%">
+                                        <span>Alternative content for the map</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-sm-5">
                                 <div class="widget-overflow bg-gray-dark text-white">
@@ -815,6 +828,9 @@
         </div>
     </main>
 </div>
+<div class="loader-wrap hiding hide">
+    <i class="fa fa-spinner fa-spin"></i>
+</div>
 
 <!-- common libraries. required for every page-->
 <script src="vendor/jquery/dist/jquery.min.js"></script>
@@ -840,15 +856,10 @@
 <script src="vendor/raphael/raphael-min.js"></script>
 <script src="vendor/jQuery-Mapael/js/jquery.mapael.js"></script>
 <script src="vendor/jQuery-Mapael/js/maps/usa_states.js"></script>
+<script src="vendor/jQuery-Mapael/js/maps/world_countries.js"></script>
 <script src="vendor/nvd3/nv.d3.min.js"></script>
 
 <!-- page specific js -->
 <script src="js/index.js"></script>
-
-<script id="loader-template" type="text/template">
-    <div class="loader-wrap hiding">
-        <i class="fa fa-spinner fa-spin"></i>
-    </div>
-</script>
 </body>
 </html>
