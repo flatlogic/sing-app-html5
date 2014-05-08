@@ -44,12 +44,18 @@
         <!-- main notification links are placed inside of .sidebar-nav -->
         <ul class="sidebar-nav">
             <li class="active">
-                <a href="index.html">
+                <!-- an example of nested submenu. basic bootstrap collapsed component -->
+                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-desktop"></i>
                     </span>
                     Dashboard
+                    <i class="toggle fa fa-angle-down"></i>
                 </a>
+                <ul id="sidebar-dashboard" class="collapse in">
+                    <li class="active"><a href="index.html">Dashboard</a></li>
+                    <li><a href="widgets.html">Widgets</a></li>
+                </ul>
             </li>
             <li>
                 <a href="statistics.html">
@@ -586,242 +592,31 @@
             </div>
         </div>
         <div class="row">
-            <!--<div class="col-md-8">-->
-                <!--<section class="widget widget-big-chart">-->
-                    <!--<div class="widget-body">-->
-                        <!--<div id="chart" class="chart">-->
-                            <!--<svg></svg>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-                <!--<section class="widget">-->
-                    <!--<header>-->
-                        <!--<h5>-->
-                            <!--Today Stats-->
-                        <!--</h5>-->
-                        <!--<div class="widget-controls">-->
-                            <!--<a href="#"><i class="glyphicon glyphicon-cog"></i></a>-->
-                            <!--<a href="#"><i class="fa fa-refresh"></i></a>-->
-                            <!--<a href="#"><i class="glyphicon glyphicon-remove"></i></a>-->
-                        <!--</div>-->
-                    <!--</header>-->
-                    <!--<div class="widget-body">-->
-                        <!--<div class="row">-->
-                            <!--<div class="col-sm-3 text-align-center">-->
-                                <!--<span class="globe">-->
-                                    <!--<i class="fa fa-circle text-warning"><i class="fa fa-globe text-gray-dark"></i></i>-->
-                                <!--</span>-->
-                            <!--</div>-->
-                            <!--<div class="col-sm-9">-->
-                                <!--<p><span class="value2">943</span> <span class="text-muted">views</span></p>-->
-                                <!--<div class="progress progress-xs">-->
-                                    <!--<div class="progress-bar progress-bar-gray-light" role="progressbar" aria-valuenow="60"-->
-                                         <!--aria-valuemin="0" aria-valuemax="100" style="width: 57%;">-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<p>-->
-                                        <!--<i class="fa fa-video-camera"></i>-->
-                                    <!--&nbsp;-->
-                                        <!--<i class="fa fa-cog"></i>-->
-                                    <!--&nbsp;-->
-                                        <!--<i class="fa fa-map-marker"></i>-->
-                                <!--</p>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</section>-->
-            <!--</div>-->
-            <div class="col-md-4">
-                <section class="widget">
-                    <div class="widget-body">
-                        <div class="widget-overflow bg-gray-dark text-white">
-                            <h5><span class="font-semi-bold">QUICK</span> VIEW</h5>
-                            <input class="form-control input-dark" type="text" placeholder="Search...">
-                            <div class="stats-row mt">
-                                <div class="stat-item">
-                                    <h6 class="name">Overall Growth</h6>
-                                    <p class="value">43.75%</p>
-                                </div>
-                                <div class="stat-item">
-                                    <h6 class="name">Montly</h6>
-                                    <p class="value">86.34%</p>
-                                </div>
-                                <div class="stat-item">
-                                    <h6 class="name">24h</h6>
-                                    <p class="value">3.85%</p>
-                                </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <section class="widget widget-chart-simple">
+                            <div class="widget-controls">
+                                <a href="#"><i class="fa fa-refresh"></i></a>
+                                <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
                             </div>
-                            <div class="progress progress-xs mt">
-                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-                                     aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
-                                </div>
-                            </div>
-                            <p class="mt mb">
-                                <small><span class="circle bg-warning text-gray-dark"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
-                                <strong>17% higher</strong>
-                                than last month</p>
-                            <br>
-                            <div id="realtime1" class="chart-overflow-bottom text-gray-dark"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-4">
-                <section class="widget">
-                    <div class="widget-body">
-                        <div id="map-years-mapael" class="mapael">
-                            <div class="stats">
-                                <h5 class="font-semi-bold text-gray-dark">YEARLY DISTRIBUTIONS</h5>
-                                        <span class="pull-left mr-xs">
-                                            <small><span class="circle bg-warning text-gray-dark"><i class="fa fa-plus"></i></span></small>
-                                        </span>
-                                <p class="h4 no-margin">
-                                    <strong>17% last year</strong>
-                                </p>
-                            </div>
-                            <div class="map">
-                                <span>Alternative content for the map</span>
-                            </div>
-                            <ul class="map-controls nav nav-pills nav-justified">
-                                <li>
-                                    <a href="#" data-years-map-year="2008">2008</a>
-                                </li>
-                                <li class="active">
-                                    <a href="#" data-years-map-year="2009">2009</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-years-map-year="2010">2010</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-years-map-year="2011">2011</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-years-map-year="2012">2012</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-years-map-year="2013">2013</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-4">
-                <section class="widget">
-                    <header>
-                        <h5><span class="label label-danger">New</span> Messages</h5>
-                        <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="fa fa-refresh text-white"></i></a>
-                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
-                        </div>
-                    </header>
-                    <div class="widget-body">
-                        <div class="list-group list-group-lg">
-                            <a class="list-group-item" href="#">
-                                <span class="thumb-sm pull-left mr">
-                                    <img class="img-circle" src="demo/img/people/a2.jpg" alt="...">
-                                    <i class="status status-bottom bg-success"></i>
-                                </span>
-                                <h5 class="no-margin">Chris Gray</h5>
-                                <p class="help-block text-ellipsis no-margin">Hey! What's up? So many times since we</p>
-                            </a>
-                            <a class="list-group-item" href="#">
-                                <span class="thumb-sm pull-left mr">
-                                    <img class="img-circle" src="demo/img/people/a4.jpg" alt="...">
-                                    <i class="status status-bottom bg-success"></i>
-                                </span>
-                                <h5 class="no-margin">Jamey Brownlow</h5>
-                                <p class="help-block text-ellipsis no-margin">Good news coming tonight. Seems they agreed to proceed</p>
-                            </a>
-                            <a class="list-group-item" href="#">
-                                <span class="thumb-sm pull-left mr">
-                                    <img class="img-circle" src="demo/img/people/a1.jpg" alt="...">
-                                    <i class="status status-bottom bg-warning"></i>
-                                </span>
-                                <h5 class="no-margin">Livia Walsh</h5>
-                                <p class="help-block text-ellipsis no-margin">Check my latest email plz!</p>
-                            </a>
-                            <a class="list-group-item" href="#">
-                                <span class="thumb-sm pull-left mr">
-                                    <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
-                                    <i class="status status-bottom bg-danger"></i>
-                                </span>
-                                <h5 class="no-margin">Jaron Fitzroy</h5>
-                                <p class="help-block text-ellipsis no-margin">What about summer break?</p>
-                            </a>
-                        </div>
-                    </div>
-                    <footer class="bg-body-light">
-                        <input type="search" class="form-control input-sm" placeholder="Search">
-                    </footer>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <section class="widget widget-chart-simple">
-                    <div class="widget-controls">
-                        <a href="#"><i class="fa fa-refresh"></i></a>
-                        <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
-                    </div>
-                    <div class="widget-body">
-                        <h4 class="chart-title">
-                            NASDAQ
-                        </h4>
-                        <div class="chart-value">
+                            <div class="widget-body">
+                                <h4 class="chart-title">
+                                    NASDAQ
+                                </h4>
+                                <div class="chart-value">
                             <span class="trend">
                                 <i class="fa fa-long-arrow-up rotate-45 text-warning"></i>
                             </span>
-                            355<span class="text-muted">.94</span>
-                        </div>
-                        <div class="chart">
-                            <div id="chart-simple"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-3">
-                <section class="widget widget-chart-changes">
-                    <div class="widget-controls">
-                        <a href="#"><i class="fa fa-refresh"></i></a>
-                        <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
-                    </div>
-                    <div class="widget-body">
-                        <div class="chart bg-success">
-                            <p class="chart-value"><i class="fa fa-caret-up"></i> 352.79</p>
-                            <p class="chart-value-change">+2.04 (1.69%)</p>
-                            <div id="chart-changes"></div>
-                        </div>
-                        <h4 class="chart-title">Salt Lake City, Utah</h4>
-                        <p class="deemphasize">Today 13:34</p>
-                        <div class="mt">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <p class="h4 no-margin">18.7M</p>
-                                    <p class="deemphasize">Shares Traded</p>
+                                    355<span class="text-muted">.94</span>
                                 </div>
-                                <div class="col-xs-6 text-align-right">
-                                    <p class="h4 no-margin">19.9B</p>
-                                    <p class="deemphasize">Market Cap</p>
+                                <div class="chart">
+                                    <div id="chart-simple"></div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="mt">
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <p class="h3 no-margin text-success">+120.93</p>
-                                    <p class="deemphasize">Yearly Change</p>
-                                </div>
-                                <div class="col-xs-6 text-align-right">
-                                    <span id="chart-changes-year"></span>
-                                    <p class="deemphasize">GOOG</p>
-                                </div>
-                            </div>
-                        </div>
+                        </section>
                     </div>
-                </section>
+                </div>
             </div>
             <div class="col-md-6">
                 <section class="widget widget-chart-stats-simple">
@@ -887,6 +682,49 @@
                 </section>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-3">
+                <section class="widget widget-chart-changes">
+                    <div class="widget-controls">
+                        <a href="#"><i class="fa fa-refresh"></i></a>
+                        <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                    <div class="widget-body">
+                        <div class="chart bg-success">
+                            <p class="chart-value"><i class="fa fa-caret-up"></i> 352.79</p>
+                            <p class="chart-value-change">+2.04 (1.69%)</p>
+                            <div id="chart-changes"></div>
+                        </div>
+                        <h4 class="chart-title">Salt Lake City, Utah</h4>
+                        <p class="deemphasize">Today 13:34</p>
+                        <div class="mt">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p class="h4 no-margin">18.7M</p>
+                                    <p class="deemphasize">Shares Traded</p>
+                                </div>
+                                <div class="col-xs-6 text-align-right">
+                                    <p class="h4 no-margin">19.9B</p>
+                                    <p class="deemphasize">Market Cap</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <p class="h3 no-margin text-success">+120.93</p>
+                                    <p class="deemphasize">Yearly Change</p>
+                                </div>
+                                <div class="col-xs-6 text-align-right">
+                                    <span id="chart-changes-year"></span>
+                                    <p class="deemphasize">GOOG</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 </div>
 <!-- The Loader. Is shown when pjax happens -->
@@ -922,7 +760,6 @@
 <script src="vendor/nvd3/nv.d3.min.js"></script>
 
 <!-- page specific js -->
-<script src="js/_fake-world-data.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

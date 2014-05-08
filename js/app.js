@@ -255,15 +255,18 @@ $(function(){
      * @private
      */
     SingAppView.prototype._changeActiveNavigationItem = function(event, xhr, options){
-        this.$sidebar.find('.active .active').closest('.collapse').collapse('hide');
+        var $newActiveLink = this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').filter(function(){
+            return this.href === options.url;
+        });
+
+        // collapse .collapse only if new and old active links belong to different .collapse
+        if (!$newActiveLink.is('.active > .collapse > li > a')){
+            this.$sidebar.find('.active .active').closest('.collapse').collapse('hide');
+        }
         this.$sidebar.find('.active').removeClass('active');
 
-        this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
-            if (this.href === options.url){
-                $(this).closest('li').addClass('active')
-                    .parents('li').addClass('active');
-            }
-        });
+        $newActiveLink.closest('li').addClass('active')
+            .parents('li').addClass('active');
     };
 
     SingAppView.prototype.showLoader = function(){
