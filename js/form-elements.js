@@ -76,7 +76,18 @@ $(function(){
 
         $('.js-slider').slider();
 
+        // Prevent Dropzone from auto discovering this element:
+        Dropzone.options.myAwesomeDropzone = false;
+        $('#my-awesome-dropzone').dropzone();
         Holder.run();
+        /**
+         * Holder js hack. removing holder's data to prevent onresize callbacks execution
+         * so they don't fail when page loaded
+         * via ajax and there is no holder elements anymore
+         */
+        $('img[data-src]').each(function(){
+            delete this.holder_data;
+        });
     }
     pageLoad();
     SingApp.onPageLoad(pageLoad);

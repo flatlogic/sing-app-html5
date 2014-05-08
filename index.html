@@ -8,19 +8,30 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta charset="utf-8">
-    <meta http-equiv="x-pjax-version" content="sing0001a">
+    <!-- Bootstrap - BS -->
 </head>
 <body>
+<!--
+  Main sidebar seen on the left. may be static or collapsing depending on selected state.
+
+    * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
+    * Static - stays always open.
+-->
 <nav id="sidebar" class="sidebar" role="navigation">
+    <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
         <header class="logo hidden-xs">
             <a href="index.html">sing</a>
         </header>
+        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+             looks good, so adding it and enhancing with notifications -->
         <div class="sidebar-status visible-xs">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="thumb-sm avatar pull-right">
                     <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                 </span>
+                <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
+                     should be used with bg-* and text-* classes for colors -->
                 <span class="circle bg-warning font-bold text-gray-dark">
                     13
                 </span>
@@ -28,7 +39,9 @@
                 John <strong>Smith</strong>
                 <b class="caret"></b>
             </a>
+            <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
         </div>
+        <!-- main notification links are placed inside of .sidebar-nav -->
         <ul class="sidebar-nav">
             <li class="active">
                 <a href="index.html">
@@ -47,9 +60,11 @@
                 </a>
             </li>
         </ul>
+        <!-- every .sidebar-nav may have a title -->
         <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
         <ul class="sidebar-nav">
             <li>
+                <!-- an example of nested submenu. basic bootstrap collapsed component -->
                 <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="glyphicon glyphicon-align-right"></i>
@@ -79,15 +94,19 @@
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-maps" class="collapse">
+                    <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
+                         target page -->
                     <li><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
                     <li><a href="vmap.html">Vector Maps</a></li>
                 </ul>
             </li>
         </ul>
         <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
         <ul class="sidebar-labels">
             <li>
                 <a href="#">
+                    <!-- yep, .circle again -->
                     <span class="circle bg-warning mr-sm"><i class="fa fa-circle text-bg-sidebar"></i></span>
                     <span class="label-name">My Recent</span>
                 </a>
@@ -106,6 +125,7 @@
             </li>
         </ul>
         <h5 class="sidebar-nav-title">Projects</h5>
+        <!-- A place for sidebar notifications & alerts -->
         <div class="sidebar-alerts">
             <div class="alert fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
@@ -120,14 +140,18 @@
         </div>
     </div>
 </nav>
+<!-- This is the white navigation bar seen on the top. A bit enhanced BS navbar. See .page-controls in _base.scss. -->
 <nav class="page-controls navbar navbar-default">
     <div class="container-fluid">
+        <!-- .navbar-header contains links seen on xs & sm screens -->
         <div class="navbar-header">
             <ul class="nav navbar-nav">
                 <li>
+                    <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
                     <a class="hidden-sm hidden-xs" id="nav-state-toggle" href="#" title="Turn on/off sidebar collapsing" data-placement="bottom">
                         <i class="fa fa-bars fa-lg"></i>
                     </a>
+                    <!-- shown on xs & sm screen. collapses and expands navigation -->
                     <a class="visible-sm visible-xs" id="nav-collapse-toggle" href="#" title="Show/hide sidebar" data-placement="bottom">
                         <span class="rounded rounded-lg bg-gray text-white visible-xs"><i class="fa fa-bars fa-lg"></i></span>
                         <i class="fa fa-bars fa-lg hidden-xs"></i>
@@ -138,11 +162,13 @@
             </ul>
             <ul class="nav navbar-nav navbar-right visible-xs">
                 <li>
+                    <!-- toggles chat -->
                     <a href="#">
                         <span class="rounded rounded-lg bg-gray text-white"><i class="fa fa-globe fa-lg"></i></span>
                     </a>
                 </li>
             </ul>
+            <!-- xs & sm screen logo -->
             <a class="navbar-brand visible-xs" href="index.html">
                 <i class="fa fa-circle text-gray mr-n-sm"></i>
                 <i class="fa fa-circle text-warning"></i>
@@ -154,7 +180,9 @@
             </a>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- this part is hidden for xs screens -->
+        <div class="collapse navbar-collapse">
+            <!-- search form! link it to your search server -->
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <div class="input-group input-group-no-border">
@@ -177,6 +205,10 @@
                         &nbsp;
                         John <strong>Smith</strong>
                         <b class="caret"></b></a>
+                    <!-- ready to use notifications dropdown.  inspired by smartadmin template.
+                         consists of three components:
+                         notifications, messages, progress. leave or add what's important for you.
+                         uses Sing's ajax-load plugin for async content loading. See #load-notifications-btn -->
                     <div class="dropdown-menu animated fadeInUp" id="notifications-dropdown-menu">
                         <section class="panel notifications">
                             <header class="panel-heading">
@@ -185,6 +217,8 @@
                                 </div>
                                 <div class="btn-group btn-group-sm btn-group-justified" id="notifications-toggle" data-toggle="buttons">
                                     <label class="btn btn-default active">
+                                        <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
+                                             only requirement for async reloading -->
                                         <input type="radio" checked
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/notifications.html"
@@ -204,6 +238,7 @@
                                     </label>
                                 </div>
                             </header>
+                            <!-- notification list with .thin-scroll which styles scrollbar for webkit -->
                             <div id="notifications-list" class="list-group thin-scroll">
                                 <div class="list-group-item">
                                 <span class="thumb-sm pull-left mr clearfix">
@@ -289,6 +324,8 @@
                                 </a>
                             </div>
                             <footer class="panel-footer text-sm">
+                                <!-- ajax-load button. loads demo/ajax/notifications.php to #notifications-list
+                                     when clicked -->
                                 <button class="btn btn-xs btn-default pull-right"
                                         id="load-notifications-btn"
                                         data-ajax-load="demo/ajax/notifications.php"
@@ -323,11 +360,15 @@
     </div>
 </nav>
 <div class="content-wrap">
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <h1 class="page-title">Dashboard <small><small>The Lucky One</small></small></h1>
         <div class="row">
             <div class="col-md-8">
+                <!-- minimal widget consist of .widget class. note bg-transparent - it can be any background like bg-gray,
+                bg-primary, bg-white -->
                 <section class="widget bg-transparent">
+                    <!-- .widget-body is a mostly semantic class. may be a sibling to .widget>header or .widget>footer -->
                     <div class="widget-body">
                         <div id="map" class="mapael">
                             <div class="stats">
@@ -421,7 +462,6 @@
                                 </button>
                             </span>
                         </div>
-
                     </div>
                 </section>
             </div>
@@ -429,6 +469,7 @@
         <div class="row">
             <div class="col-md-4">
                 <section class="widget">
+                    <!-- .widget>header is generally a place for widget title and widget controls. see .widget in _base.scss -->
                     <header>
                         <h5>
                             USERBASE GROWTH
@@ -848,6 +889,7 @@
         </div>
     </main>
 </div>
+<!-- The Loader. Is shown when pjax happens -->
 <div class="loader-wrap hiding hide">
     <i class="fa fa-spinner fa-spin"></i>
 </div>

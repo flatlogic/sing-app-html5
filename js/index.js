@@ -37,6 +37,9 @@ $(function(){
 
     function initSimpleChart(){
         initPointSparkline($("#chart-simple"), [4,6,5,7,5]);
+        SingApp.onResize(function(){
+            initPointSparkline($("#chart-simple"), [4,6,5,7,5]);
+        });
     }
 
     function initChangesChart(){
@@ -552,5 +555,4 @@ $(function(){
     pjaxPageLoad();
     SingApp.onPageLoad(pjaxPageLoad);
 
-    SingApp.onResize(initSimpleChart);
 });

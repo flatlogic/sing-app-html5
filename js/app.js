@@ -13,6 +13,10 @@ $(function(){
 
     /**
      * Main app class that handles page switching, async script loading, resize & pageLoad callbacks.
+     * Events:
+     *   sing-app:loaded - fires after pjax request is made and ALL scripts are trully loaded
+     *   sing-app:content-resize - fires when .content changes its size (e.g. switching between static & collapsing
+     *     navigation states)
      * @constructor
      */
     var SingAppView = function(){
@@ -21,11 +25,9 @@ $(function(){
         this.debug = window.DEBUG;
         this.navCollapseTimeout = 1500;
         this.$sidebar = $('#sidebar');
-        this.$contentWrap = $('.content-wrap');
         this.$loaderWrap = $('.loader-wrap');
         this.$navigationStateToggle = $('#nav-state-toggle');
         this.$navigationCollapseToggle = $('#nav-collapse-toggle');
-        this.loaderTemplate = $('#loader-template').html();
         this.settings = window.SingSettings;
         this.pageLoadCallbacks = {};
         this.resizeCallbacks = [];
@@ -43,10 +45,17 @@ $(function(){
 
         this.$sidebar.on('mouseenter', $.proxy(this._sidebarMouseEnter, this));
         this.$sidebar.on('mouseleave', $.proxy(this._sidebarMouseLeave, this));
+        /**
+         * open navigation in case collapsed sidebar clicked
+         */
+        $(document).on('click', '.nav-collapsed #sidebar', $.proxy(this.expandNavigation, this));
 
         this.checkNavigationState();
 
         if (this.pjaxEnabled){
+            /**
+             * Initialize pjax & attaching all related events
+             */
             this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
             $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax])', '#content', {
                 fragment: '#content',
@@ -58,6 +67,7 @@ $(function(){
             $(document).on('pjax:success', $.proxy(this._loadScripts, this));
             //custom event which fires when all scripts are actually loaded
             $(document).on('sing-app:loaded', $.proxy(this._loadingFinished, this));
+            $(document).on('sing-app:loaded', $.proxy(this._collapseNavIfSmallScreen, this));
             $(document).on('sing-app:loaded', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
 
@@ -87,7 +97,7 @@ $(function(){
         var resizeTimeout,
             view = this;
 
-        $(window).resize(function() {
+        $(window).on('resize sing-app:content-resize', function() {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(function(){
                 view._runPageCallbacks(view.pageResizeCallbacks);
@@ -191,19 +201,41 @@ $(function(){
         }
     };
 
+    SingAppView.prototype._collapseNavIfSmallScreen = function(){
+        if (Sing.isScreen('xs') || Sing.isScreen('sm')){
+            this.collapseNavigation();
+        }
+    };
+
+    /**
+     * Toggles between static and collapsing navigation states.
+     * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
+     * Static - stays always open.
+     */
     SingAppView.prototype.toggleNavigationState = function(){
         if (this.isNavigationStatic()){
             this.collapsingNavigationState();
         } else {
             this.staticNavigationState();
         }
+        $(window).trigger('sing-app:content-resize');
     };
 
+    /**
+     * Turns on static navigation state.
+     * Collapsing navigation state - navigation automatically collapse when mouse leaves it and expand when enters.
+     * Static navigation state - navigation stays always open.
+     */
     SingAppView.prototype.staticNavigationState = function(){
         this.settings.set('nav-static', true).save();
         $('body').addClass('nav-static');
     };
 
+    /**
+     * Turns on collapsing navigation state.
+     * Collapsing navigation state - navigation automatically collapse when mouse leaves it and expand when enters.
+     * Static navigation state - navigation stays always open.
+     */
     SingAppView.prototype.collapsingNavigationState = function(){
         this.settings.set('nav-static', false).save();
         $('body').removeClass('nav-static');
@@ -254,7 +286,7 @@ $(function(){
     };
 
     /**
-     * Specify a function to execute when window was resized.
+     * Specify a function to execute when window was resized or .content size was changed (e.g. sidebar static/collapsed).
      * Runs maximum once in 100 milliseconds (throttle).
      * Page dependent. So `fn` will be executed only when at the page it was added.
      * Cleaned after page left.
