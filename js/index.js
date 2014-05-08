@@ -321,6 +321,12 @@ $(function(){
                 }
             }
         });
+        /**
+         * Reattach map tooltips to body, as they use position:fixed, which doesn't work properly inside of
+         * translated elements (.content-wrap uses transform: translate;).
+         * See https://code.google.com/p/chromium/issues/detail?id=20574
+         */
+        $('body').append($(".mapTooltip").detach());
     }
 
     function initYearsMap(){
@@ -408,6 +414,12 @@ $(function(){
             $map.trigger('update', [fakeWorldData[$(this).data('years-map-year')], {}, {}, {animDuration : 300}]);
             return false;
         });
+        /**
+         * Reattach map tooltips to body, as they use position:fixed, which doesn't work properly inside of
+         * translated elements (.content-wrap uses transform: translate;).
+         * See https://code.google.com/p/chromium/issues/detail?id=20574
+         */
+        $('body').append($(".mapTooltip").detach());
     }
 
     /* Inspired by Lee Byron's test data generator. */
