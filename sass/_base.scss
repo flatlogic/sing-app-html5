@@ -487,6 +487,14 @@
     #{headings()}{
       margin: 0;
     }
+
+    + .widget-body.no-padding{
+      margin-top: 0;
+    }
+  }
+
+  > .widget-body.no-padding{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
   }
 
   > footer{
@@ -497,11 +505,6 @@
   &:hover .widget-controls-hover{
     opacity: 1;
   }
-}
-
-.widget-overflow{
-  margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
-  padding: $widget-padding-vertical $widget-padding-horizontal;
 }
 
 .widget-controls{

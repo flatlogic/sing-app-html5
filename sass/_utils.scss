@@ -301,11 +301,16 @@ $i: 1;
 @include bg-variant('.bg-success', $state-success-bg);
 @include bg-variant('.bg-info', $state-info-bg);
 @include bg-variant('.bg-warning', $state-warning-bg);
-@include bg-variant('.bg-warning-light', lighten($state-warning-bg, 43%));
 @include bg-variant('.bg-danger', $state-danger-bg);
 
+@include bg-variant('.bg-primary-light', $brand-primary-light);
+@include bg-variant('.bg-success-light', $brand-success-light);
+@include bg-variant('.bg-info-light', $brand-info-light);
+@include bg-variant('.bg-warning-light', $brand-warning-light);
+@include bg-variant('.bg-danger-light', $brand-danger-light);
+
 @include bg-variant('.bg-body', $body-bg);
-@include bg-variant('.bg-body-light', lighten($body-bg, 3%));
+@include bg-variant('.bg-body-light', $body-bg-light);
 @include bg-variant('.bg-gray', $gray);
 @include bg-variant('.bg-gray-transparent', rgba($gray, .6));
 @include bg-variant('.bg-gray-dark', $gray-dark);
@@ -330,4 +335,12 @@ $i: 1;
 
 .text-light{
   opacity: .8;
+}
+
+.fs-mini{
+  font-size: $font-size-base - 1;
+}
+
+.fs-sm{
+  font-size: $font-size-small;
 }

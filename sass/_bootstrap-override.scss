@@ -215,6 +215,10 @@ legend {
       border-width: 1px 0;
     }
   }
+
+  .widget-body.no-padding > &{
+    margin: 0;
+  }
 }
 
 .list-group-item{
@@ -241,4 +245,12 @@ legend {
 
 .panel-heading{
   border-color: $panel-inner-border;
+}
+
+//
+// Tooltips
+// --------------------------------------------------
+
+.tooltip-inner{
+  @include border-radius(3px);
 }

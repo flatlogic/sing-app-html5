@@ -7,7 +7,7 @@
  1.  ~~second-level menu sidebar~~
  2.  ~~**responsive layout**~~
  3.  ~~menu iconic state on/off~~
- 4.  dashboard fill
+ 4.  **dashboard fill**
    1.  ~~black chart + map~~
    2.  reorganize last row
    3.  add something from `love designs` folder
@@ -36,8 +36,8 @@
    3.  wizard
  13.  apps
    1.  email
-   2.  *notes*
- 14.  *right side chat*
+   2.  ** *notes* **
+ 14.  ** *right side chat* **
  15.  extra
    1.  calendar
    2.  invoice
@@ -46,7 +46,7 @@
    5.  gallery (js sortable). [example](http://themes-lab.com/pixit/admin/gallery.html)
    6.  search result
    7.  *time line*
- 16.  touch devices test (check navigation)
+ 16.  ** touch devices test (check navigation) **
  17.  *pace*
  18.  ~~fill sidebar with projects etc. scroll sidebar~~
  19.  documentation

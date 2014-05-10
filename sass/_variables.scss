@@ -23,6 +23,12 @@ $brand-info:            #218bc3 !default;
 $brand-warning:         #f0b518 !default;
 $brand-danger:          #e5603b !default;
 
+$brand-primary-light: #dee4ee !default;
+$brand-success-light:         lighten($brand-success, 43%) !default;
+$brand-info-light:            lighten($brand-info, 43%) !default;
+$brand-warning-light:         lighten($brand-primary, 43%) !default;
+$brand-danger-light:          lighten($brand-danger, 43%) !default;
+
 $addition-bg: #f8f8f8 !default;
 
 
@@ -91,6 +97,7 @@ $widget-bg-color: $white;
 //== Scaffolding
 //
 $body-bg: #eee !default;
+$body-bg-light: lighten($body-bg, 3%);
 
 // Typography
 // -------------------------
@@ -150,6 +157,11 @@ $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) 
 $state-danger-text:              $white !default;
 $state-danger-bg:                $brand-danger !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+//== Tooltips
+//
+
+$tooltip-bg:                  rgba(#000, .85) !default;
 
 //== Breadcrumbs
 //

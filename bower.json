@@ -38,7 +38,8 @@
     "markdown": ">= 0.5.0",
     "to-markdown": "git://github.com/domchristie/to-markdown.git",
     "bootstrap-markdown": ">= 2.3.1",
-    "seiyria-bootstrap-slider": ">= 3.0.1"
+    "seiyria-bootstrap-slider": ">= 3.0.1",
+    "bootstrap-calendar": "git://github.com/xero/bootstrap_calendar.git"
   },
   "private": true,
   "ignore": [
