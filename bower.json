@@ -39,7 +39,9 @@
     "to-markdown": "git://github.com/domchristie/to-markdown.git",
     "bootstrap-markdown": ">= 2.3.1",
     "seiyria-bootstrap-slider": ">= 3.0.1",
-    "bootstrap-calendar": "git://github.com/xero/bootstrap_calendar.git"
+    "bootstrap-calendar": "git://github.com/xero/bootstrap_calendar.git",
+    "jvectormap": "git://github.com/bjornd/jvectormap.git",
+    "jvectormap-world": "http://jvectormap.com/js/jquery-jvectormap-world-mill-en.js"
   },
   "private": true,
   "ignore": [

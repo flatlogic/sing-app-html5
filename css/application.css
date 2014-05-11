@@ -18268,6 +18268,48 @@ Interactive Layer
   margin: 0.1em 0;
 }
 
+/* line 1, ../vendor/jvectormap/jquery-jvectormap.css */
+.jvectormap-label {
+  position: absolute;
+  display: none;
+  border: solid 1px #CDCDCD;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #292929;
+  color: white;
+  font-family: sans-serif, Verdana;
+  font-size: smaller;
+  padding: 3px;
+}
+
+/* line 15, ../vendor/jvectormap/jquery-jvectormap.css */
+.jvectormap-zoomin, .jvectormap-zoomout {
+  position: absolute;
+  left: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #292929;
+  padding: 3px;
+  color: white;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  line-height: 10px;
+  text-align: center;
+}
+
+/* line 31, ../vendor/jvectormap/jquery-jvectormap.css */
+.jvectormap-zoomin {
+  top: 10px;
+}
+
+/* line 35, ../vendor/jvectormap/jquery-jvectormap.css */
+.jvectormap-zoomout {
+  top: 30px;
+}
+
 /**
  * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
@@ -20644,6 +20686,36 @@ a.text-gray-dark:hover {
 }
 
 /* line 605, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-gray-light {
+  color: #999999;
+}
+
+/* line 608, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-gray-light:hover {
+  color: gray;
+}
+
+/* line 605, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-gray-darker {
+  color: #222222;
+}
+
+/* line 608, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-gray-darker:hover {
+  color: #090909;
+}
+
+/* line 605, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.text-gray-lighter {
+  color: #eeeeee;
+}
+
+/* line 608, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+a.text-gray-lighter:hover {
+  color: #d5d5d5;
+}
+
+/* line 605, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .text-bg-sidebar {
   color: #242424;
 }
@@ -20653,17 +20725,17 @@ a.text-bg-sidebar:hover {
   color: #0a0a0a;
 }
 
-/* line 336, ../sass/_utils.scss */
+/* line 339, ../sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
-/* line 340, ../sass/_utils.scss */
+/* line 343, ../sass/_utils.scss */
 .fs-mini {
   font-size: 13px;
 }
 
-/* line 344, ../sass/_utils.scss */
+/* line 347, ../sass/_utils.scss */
 .fs-sm {
   font-size: 12px;
 }

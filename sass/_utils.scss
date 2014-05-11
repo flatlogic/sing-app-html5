@@ -330,6 +330,9 @@ $i: 1;
 @include text-emphasis-variant('.text-white', $white);
 @include text-emphasis-variant('.text-gray', $gray);
 @include text-emphasis-variant('.text-gray-dark', $gray-dark);
+@include text-emphasis-variant('.text-gray-light', $gray-light);
+@include text-emphasis-variant('.text-gray-darker', $gray-darker);
+@include text-emphasis-variant('.text-gray-lighter', $gray-lighter);
 @include text-emphasis-variant('.text-bg-sidebar', $sidebar-bg-color);
 
 

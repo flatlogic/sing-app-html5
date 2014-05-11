@@ -13,8 +13,8 @@
    3.  add something from `love designs` folder
    4.  weather
  5.  charts
- 6.  maps
-   1.  vector
+ 6.  ~~maps~~
+   1.  ~~vector~~
    2.  ~~google~~
  7.  tables  
    1.  static (no padding tables, like inside panels)
