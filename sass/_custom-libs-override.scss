@@ -631,4 +631,30 @@ input.parsley-error{
     @include opacity(.65);
     @include box-shadow(none);
   }
+
+  //fix conflict with MODAL WIZARD
+  .pager.wizard{
+    display: block;
+  }
+}
+
+/***********************************/
+/**         MODAL WIZARD          **/
+/***********************************/
+
+.wizard-header h3 {
+  font-family: $font-family-base;
+  font-weight: $headings-font-weight;
+  color: $text-color;
+}
+
+.wizard-nav-list > li.already-visited > a.wizard-nav-link,
+.wizard-nav-list > li.already-visited.active > a.wizard-nav-link{
+  color: $text-color;
+}
+
+.wizard-nav-list li.active > a,
+.wizard-nav-item .already-visited .active{
+  background-color: $brand-info;
+  color: $white;
 }

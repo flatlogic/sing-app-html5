@@ -33,7 +33,7 @@
  12.  forms
    1.  ~~elements (slider, *markdown*)~~
    2.  validation
-   3.  wizard
+   3.  ~~wizard~~
  13.  apps
    1.  email
    2.  ** *notes* **

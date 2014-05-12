@@ -19,15 +19,16 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
 $brand-primary:         #618fb0 !default;
 $brand-success:         #64bd63 !default;
-$brand-info:            #218bc3 !default;
+$brand-info:            #5DADE2 !default;
 $brand-warning:         #f0b518 !default;
 $brand-danger:          #e5603b !default;
 
 $brand-primary-light: #dee4ee !default;
-$brand-success-light:         lighten($brand-success, 43%) !default;
-$brand-info-light:            lighten($brand-info, 43%) !default;
+
+$brand-success-light:         lighten($brand-success, 34%) !default;
+$brand-info-light:            lighten($brand-info, 31%) !default;
 $brand-warning-light:         lighten($brand-warning, 43%) !default;
-$brand-danger-light:          lighten($brand-danger, 43%) !default;
+$brand-danger-light:          lighten($brand-danger, 35%) !default;
 
 $addition-bg: #f8f8f8 !default;
 
@@ -115,6 +116,7 @@ $border-radius-small:       0 !default;
 
 //== Forms
 //
+//$input-border-radius:            1px;
 $input-border-focus:             #4D90FE !default; //webkit focus color
 $legend-color:                   lighten($text-color, 15%) !default;
 
@@ -142,21 +144,10 @@ $navbar-default-link-color:                #666 !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             $white !default;
-$state-success-bg:               $brand-success !default;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
-
-$state-info-text:                $white !default;
-$state-info-bg:                  $brand-info !default;
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
-
-$state-warning-text:             $white !default;
-$state-warning-bg:               $brand-warning !default;
-$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
-
-$state-danger-text:              $white !default;
-$state-danger-bg:                $brand-danger !default;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-success-bg:               $brand-success-light;
+$state-info-bg:                  $brand-info-light !default;
+$state-warning-bg:               $brand-warning-light !default;
+$state-danger-bg:                $brand-danger-light !default;
 
 //== Tooltips
 //

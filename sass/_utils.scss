@@ -176,10 +176,10 @@
 
 @include keyframes('bg-attention'){
   0%{
-    background-color: lighten($state-warning-bg, 43%);
+    background-color: lighten($brand-warning, 43%);
   }
   5%{
-    background-color: lighten($state-warning-bg, 33%);
+    background-color: lighten($brand-warning, 33%);
   }
   0%{
     background-color: rgba(0,0,0,0);
@@ -298,10 +298,10 @@ $i: 1;
 //copy bg classes after bootstrap so it's possible to overload other bootstrap classes
 
 @include bg-variant('.bg-primary', $brand-primary);
-@include bg-variant('.bg-success', $state-success-bg);
-@include bg-variant('.bg-info', $state-info-bg);
-@include bg-variant('.bg-warning', $state-warning-bg);
-@include bg-variant('.bg-danger', $state-danger-bg);
+@include bg-variant('.bg-success', $brand-success);
+@include bg-variant('.bg-info', $brand-info);
+@include bg-variant('.bg-warning', $brand-warning);
+@include bg-variant('.bg-danger', $brand-danger);
 
 @include bg-variant('.bg-primary-light', $brand-primary-light);
 @include bg-variant('.bg-success-light', $brand-success-light);

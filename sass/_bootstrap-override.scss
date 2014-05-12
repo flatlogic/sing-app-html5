@@ -88,6 +88,14 @@ legend {
   }
 }
 
+//.input-lg, .input-sm{
+//  @include border-radius($input-border-radius)
+//}
+//
+//.input-group-addon{
+//  @include border-radius($input-border-radius);
+//}
+
 //
 // Dropdown menus
 // --------------------------------------------------

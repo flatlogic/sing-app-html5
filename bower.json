@@ -43,7 +43,8 @@
     "jvectormap": "git://github.com/bjornd/jvectormap.git",
     "jvectormap-world": "http://jvectormap.com/js/jquery-jvectormap-world-mill-en.js",
     "parsleyjs": ">= 2.0.0",
-    "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#master"
+    "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#master",
+    "bootstrap-application-wizard": "git://github.com/amoffat/bootstrap-application-wizard.git"
   },
   "private": true,
   "ignore": [
