@@ -47,7 +47,7 @@
    6.  search result
    7.  *time line*
  16.  ** touch devices test (check navigation) **
- 17.  *pace*
+ 17.  ~~*pace*~~
  18.  ~~fill sidebar with projects etc. scroll sidebar~~
  19.  documentation
  20.  item description

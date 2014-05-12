@@ -53,3 +53,10 @@
 .animated{
   @include animation-duration(.5s);
 }
+
+/**
+ * Pace
+ */
+.pace .pace-progress{
+  background: $brand-primary;
+}
