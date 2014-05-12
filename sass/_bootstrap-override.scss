@@ -191,6 +191,14 @@ legend {
   }
 }
 
+//
+// Buttons
+// --------------------------------------------------
+
+.btn-rounded{
+  @include border-radius(5px);
+}
+
 
 //
 // Button groups

@@ -18,7 +18,6 @@
     "jasny-bootstrap": "~3.1.1",
     "jQuery-slimScroll": "git://github.com/rochal/jQuery-slimScroll.git",
     "widgster": ">= 0.0.1",
-
     "animate.css": ">= 3.0.0",
     "backbone": ">= 1.1.2",
     "jquery.sparkline": "latest",
@@ -43,7 +42,8 @@
     "bootstrap-calendar": "git://github.com/xero/bootstrap_calendar.git",
     "jvectormap": "git://github.com/bjornd/jvectormap.git",
     "jvectormap-world": "http://jvectormap.com/js/jquery-jvectormap-world-mill-en.js",
-    "parsleyjs": ">= 2.0.0"
+    "parsleyjs": ">= 2.0.0",
+    "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#master"
   },
   "private": true,
   "ignore": [
@@ -52,6 +52,7 @@
   ],
   "resolutions": {
     "jquery": ">= 2.1.0",
-    "d3": ">= 3.4.3"
+    "d3": ">= 3.4.3",
+    "bootstrap": "~3.1.1"
   }
 }

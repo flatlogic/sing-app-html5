@@ -1,0 +1,30 @@
+{
+  "name": "twitter-bootstrap-wizard",
+  "ignore": [
+    "**/.*",
+    "examples",
+    "README.md",
+    "*.txt",
+    "*.html",
+    "prettify.js",
+    "prettify.css",
+    "bower.json"
+  ],
+  "main": [
+    "jquery.bootstrap.wizard.js"
+  ],
+  "dependencies": {
+    "jquery": ">=1.9.1",
+    "bootstrap": ">=2.3.0 <3.0"
+  },
+  "homepage": "https://github.com/VinceG/twitter-bootstrap-wizard",
+  "_release": "9bd07c38d4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9bd07c38d4e6dd4a995ab228854fc7f96b4d4320"
+  },
+  "_source": "git://github.com/VinceG/twitter-bootstrap-wizard.git",
+  "_target": "master",
+  "_originalSource": "git://github.com/VinceG/twitter-bootstrap-wizard.git"
+}

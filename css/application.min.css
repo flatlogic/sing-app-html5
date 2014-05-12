@@ -14880,25 +14880,32 @@ legend {
   padding-bottom: 0;
 }
 
-/* line 199, ../sass/_bootstrap-override.scss */
+/* line 198, ../sass/_bootstrap-override.scss */
+.btn-rounded {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 207, ../sass/_bootstrap-override.scss */
 .btn-toolbar {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 208, ../sass/_bootstrap-override.scss */
+/* line 216, ../sass/_bootstrap-override.scss */
 .progress-sm {
   height: 10px;
   margin-bottom: 10px;
 }
 
-/* line 213, ../sass/_bootstrap-override.scss */
+/* line 221, ../sass/_bootstrap-override.scss */
 .progress-xs {
   height: 5px;
   margin-bottom: 10px;
 }
 
-/* line 219, ../sass/_bootstrap-override.scss */
+/* line 227, ../sass/_bootstrap-override.scss */
 .progress-bar-gray {
   background-color: #555555;
 }
@@ -14908,7 +14915,7 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 223, ../sass/_bootstrap-override.scss */
+/* line 231, ../sass/_bootstrap-override.scss */
 .progress-bar-gray-light {
   background-color: #999999;
 }
@@ -14918,40 +14925,40 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 233, ../sass/_bootstrap-override.scss */
+/* line 241, ../sass/_bootstrap-override.scss */
 .widget-body > .list-group {
   margin: 0 -20px;
 }
-/* line 236, ../sass/_bootstrap-override.scss */
+/* line 244, ../sass/_bootstrap-override.scss */
 .widget-body > .list-group .list-group-item {
   border-width: 1px 0;
 }
-/* line 241, ../sass/_bootstrap-override.scss */
+/* line 249, ../sass/_bootstrap-override.scss */
 .widget-body.no-padding > .list-group {
   margin: 0;
 }
 
-/* line 248, ../sass/_bootstrap-override.scss */
+/* line 256, ../sass/_bootstrap-override.scss */
 .list-group-lg .list-group-item {
   padding: 15px 15px;
 }
-/* line 252, ../sass/_bootstrap-override.scss */
+/* line 260, ../sass/_bootstrap-override.scss */
 .list-group:last-of-type .list-group-item:last-child {
   border-bottom: 0;
 }
 
-/* line 262, ../sass/_bootstrap-override.scss */
+/* line 270, ../sass/_bootstrap-override.scss */
 .dropdown-menu > .panel {
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-/* line 268, ../sass/_bootstrap-override.scss */
+/* line 276, ../sass/_bootstrap-override.scss */
 .panel-heading {
   border-color: #dddddd;
 }
 
-/* line 276, ../sass/_bootstrap-override.scss */
+/* line 284, ../sass/_bootstrap-override.scss */
 .tooltip-inner {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -19064,6 +19071,60 @@ input.parsley-error {
   color: #e5603b;
 }
 
+/***********************************/
+/**          FORM WIZARD          **/
+/***********************************/
+/* line 592, ../sass/_custom-libs-override.scss */
+.form-wizard .nav-pills > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eeeeee;
+  color: #999999;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 600, ../sass/_custom-libs-override.scss */
+.form-wizard .nav-pills > li.active > a {
+  background-color: #618fb0;
+  color: white;
+}
+/* line 604, ../sass/_custom-libs-override.scss */
+.form-wizard .nav-pills > li.done > a {
+  background-color: #c0d2e0;
+  color: white;
+}
+@media (min-width: 768px) {
+  /* line 610, ../sass/_custom-libs-override.scss */
+  .form-wizard .nav-pills.nav-justified > li {
+    padding: 0 5px;
+  }
+  /* line 612, ../sass/_custom-libs-override.scss */
+  .form-wizard .nav-pills.nav-justified > li:first-child {
+    padding-left: 0;
+  }
+  /* line 615, ../sass/_custom-libs-override.scss */
+  .form-wizard .nav-pills.nav-justified > li:last-child {
+    padding-right: 0;
+  }
+}
+/* line 623, ../sass/_custom-libs-override.scss */
+.form-wizard .tab-pane {
+  padding: 20px 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 628, ../sass/_custom-libs-override.scss */
+.form-wizard .pager > li.disabled > .btn {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
 /**
 * if set to device-width ie10 built-in scrollbar overflows content. Fix it as of here
 * http://stackoverflow.com/questions/17045132/scrollbar-overlay-in-ie10-how-do-you-stop-that-might-be-bootstrap
@@ -19644,7 +19705,7 @@ a {
   margin-bottom: 30px;
   padding: 15px 20px;
   background: white;
-  border-radius: 1px;
+  border-radius: 0;
 }
 /* line 486, ../sass/_base.scss */
 .widget > header h1, .widget > header h2, .widget > header h3, .widget > header h4, .widget > header h5, .widget > header h6 {
@@ -20643,12 +20704,12 @@ a.bg-info-light:hover {
 
 /* line 593, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .bg-warning-light {
-  background-color: #f3f7f9;
+  background-color: #fdf7e6;
 }
 
 /* line 596, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 a.bg-warning-light:hover {
-  background-color: #d1dfe8;
+  background-color: #fae8b6;
 }
 
 /* line 593, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */

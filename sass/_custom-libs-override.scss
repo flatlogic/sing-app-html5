@@ -582,3 +582,53 @@ input.parsley-error{
     color: $brand-danger;
   }
 }
+
+/***********************************/
+/**          FORM WIZARD          **/
+/***********************************/
+
+.form-wizard{
+  .nav-pills{
+    > li > a{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: $gray-lighter;
+      color: $gray-light;
+      @include border-radius(3px);
+    }
+
+    > li.active > a{
+      background-color: $brand-primary;
+      color: $white;
+    }
+    > li.done > a {
+      background-color: lighten($brand-primary, 28%);
+      color: $white;
+    }
+    @media (min-width: $screen-sm-min) {
+      &.nav-justified{
+        > li {
+          padding: 0 5px;
+          &:first-child{
+            padding-left: 0;
+          }
+          &:last-child{
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-pane{
+    padding: $line-height-computed 20px;
+    @include border-radius(5px);
+  }
+
+  .pager > li.disabled > .btn{
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+}
