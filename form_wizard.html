@@ -419,55 +419,44 @@
                                     </div>
                                     <div class="tab-content">
                                         <div class="tab-pane bg-gray-lighter" id="tab1">
-                                            <form action='' method="POST">
+                                            <form action='' method="POST"
+                                                  data-parsley-priority-enabled="false"
+                                                  novalidate="novalidate">
                                                 <fieldset>
                                                     <div class="form-group">
                                                         <!-- Username -->
                                                         <label for="username">Username</label>
-
-
-
-                                                                <input type="text" id="username" name="username" placeholder=""
-                                                                       class="form-control">
-                                                                <span class="help-block">Username can contain any letters or numbers, without spaces</span>
-
-
+                                                            <input type="text" id="username" name="username" placeholder=""
+                                                                   class="form-control"
+                                                                    required="required">
+                                                            <span class="help-block">Username can contain any letters or numbers, without spaces</span>
                                                     </div>
                                                     <div class="form-group">
                                                         <!-- Email -->
                                                         <label for="email">Email</label>
-
-
-
-                                                                <input type="text" id="email" name="email"
-                                                                       placeholder="" class="form-control">
-                                                                <span class="help-block">Please provide your E-mail</span>
-
-
+                                                            <input type="email" id="email" name="email"
+                                                                   placeholder="" class="form-control"
+                                                                   data-parsley-trigger="change"
+                                                                    required="required">
+                                                            <span class="help-block">Please provide your E-mail</span>
                                                     </div>
                                                     <div class="form-group">
                                                         <!-- Password -->
                                                         <label for="address">Address</label>
-
-
-
-                                                                <input type="text" id="address" name="address" placeholder=""
-                                                                       class="form-control">
-                                                                <span class="help-block">Please provide your address</span>
-
-
+                                                            <input type="text" id="address" name="address" placeholder=""
+                                                                   class="form-control">
+                                                            <span class="help-block">Please provide your address</span>
                                                     </div>
                                                 </fieldset>
                                             </form>
                                         </div>
                                         <div class="tab-pane bg-gray-lighter" id="tab2">
-                                            <form action='' method="POST">
+                                            <form action='' method="POST"
+                                                  data-parsley-priority-enabled="false"
+                                                  novalidate="novalidate">
                                                 <fieldset>
                                                     <div class="form-group">
                                                         <label for="country-select">Destination Country</label>
-
-
-
                                                         <select id="country-select" data-placeholder="Choose a Country..."
                                                                 class="form-control chzn-select">
                                                         <option value=""></option>
@@ -742,7 +731,7 @@
 
 
                                                         <input type="text" id="destination" name="destination" placeholder=""
-                                                                                      class="form-control">
+                                                                                      class="form-control" required="required">
                                                         <span class="help-block">Please provide your Destination Zip Code</span>
 
                                                     </div>
@@ -766,7 +755,7 @@
 
 
                                                         <input type="text" id="name" name="name" placeholder=""
-                                                                                          class="form-control">
+                                                                                          class="form-control" required="required">
 
                                                     </div>
                                                     <div class="form-group">
@@ -775,7 +764,7 @@
 
                                                         <select id="credit-card-type"
                                                                                        data-placeholder="Please select.."
-                                                                                       class="form-control chzn-select">
+                                                                                       class="form-control chzn-select" required="required">
                                                             <option value=""></option>
                                                             <option value="Visa">Visa</option>
                                                             <option value="Mastercard">Mastercard</option>
@@ -788,7 +777,7 @@
 
 
                                                         <input id="credit" type="text" tabindex="3"
-                                                                                      class="form-control">
+                                                                                      class="form-control" required="required">
 
                                                     </div>
                                                     <div class="form-group">
@@ -796,7 +785,7 @@
 
 
                                                         <input type="text" id="expiration-date"
-                                                                                      class="form-control">
+                                                                                      class="form-control" required="required">
 
                                                     </div>
                                                 </fieldset>

@@ -73,6 +73,22 @@ $(function(){
                 //setting done class
                 $navigation.find('li').removeClass('done');
                 $activeTab.prevAll().addClass('done');
+            },
+
+            // validate on tab change
+            onNext: function($activeTab, $navigation, nextIndex){
+                debugger;
+                var $activeTabPane = $($activeTab.find('a[data-toggle=tab]').attr('href')),
+                    $form = $activeTabPane.find('form');
+
+                // validate form in casa there is form
+                if ($form.length){
+                    return $form.parsley().validate();
+                }
+            },
+            //diable tab clicking
+            onTabClick: function($activeTab, $navigation, currentIndex, clickedIndex){
+                return $navigation.find('li:eq(' + clickedIndex + ')').is('.done');
             }
         })
             //setting fixed height so wizard won't jump

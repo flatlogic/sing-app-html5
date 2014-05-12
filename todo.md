@@ -30,9 +30,9 @@
    5.  tabs
    6.  accordion
    7.  list groups
- 12.  forms
+ 12.  ~~forms~~
    1.  ~~elements (slider, *markdown*)~~
-   2.  validation
+   2.  ~~validation~~
    3.  ~~wizard~~
  13.  apps
    1.  email

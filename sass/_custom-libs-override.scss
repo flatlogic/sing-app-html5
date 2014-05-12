@@ -595,6 +595,7 @@ input.parsley-error{
       background-color: $gray-lighter;
       color: $gray-light;
       @include border-radius(3px);
+      cursor: default;
     }
 
     > li.active > a{
@@ -604,6 +605,7 @@ input.parsley-error{
     > li.done > a {
       background-color: lighten($brand-primary, 28%);
       color: $white;
+      cursor: pointer;
     }
     @media (min-width: $screen-sm-min) {
       &.nav-justified{

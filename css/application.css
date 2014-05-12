@@ -19291,39 +19291,41 @@ input.parsley-error {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  cursor: default;
 }
-/* line 600, ../sass/_custom-libs-override.scss */
+/* line 601, ../sass/_custom-libs-override.scss */
 .form-wizard .nav-pills > li.active > a {
   background-color: #618fb0;
   color: white;
 }
-/* line 604, ../sass/_custom-libs-override.scss */
+/* line 605, ../sass/_custom-libs-override.scss */
 .form-wizard .nav-pills > li.done > a {
   background-color: #c0d2e0;
   color: white;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
-  /* line 610, ../sass/_custom-libs-override.scss */
+  /* line 612, ../sass/_custom-libs-override.scss */
   .form-wizard .nav-pills.nav-justified > li {
     padding: 0 5px;
   }
-  /* line 612, ../sass/_custom-libs-override.scss */
+  /* line 614, ../sass/_custom-libs-override.scss */
   .form-wizard .nav-pills.nav-justified > li:first-child {
     padding-left: 0;
   }
-  /* line 615, ../sass/_custom-libs-override.scss */
+  /* line 617, ../sass/_custom-libs-override.scss */
   .form-wizard .nav-pills.nav-justified > li:last-child {
     padding-right: 0;
   }
 }
-/* line 623, ../sass/_custom-libs-override.scss */
+/* line 625, ../sass/_custom-libs-override.scss */
 .form-wizard .tab-pane {
   padding: 20px 20px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 628, ../sass/_custom-libs-override.scss */
+/* line 630, ../sass/_custom-libs-override.scss */
 .form-wizard .pager > li.disabled > .btn {
   cursor: not-allowed;
   pointer-events: none;
@@ -19332,7 +19334,7 @@ input.parsley-error {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 636, ../sass/_custom-libs-override.scss */
+/* line 638, ../sass/_custom-libs-override.scss */
 .form-wizard .pager.wizard {
   display: block;
 }
@@ -19340,20 +19342,20 @@ input.parsley-error {
 /***********************************/
 /**         MODAL WIZARD          **/
 /***********************************/
-/* line 645, ../sass/_custom-libs-override.scss */
+/* line 647, ../sass/_custom-libs-override.scss */
 .wizard-header h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: #555555;
 }
 
-/* line 651, ../sass/_custom-libs-override.scss */
+/* line 653, ../sass/_custom-libs-override.scss */
 .wizard-nav-list > li.already-visited > a.wizard-nav-link,
 .wizard-nav-list > li.already-visited.active > a.wizard-nav-link {
   color: #555555;
 }
 
-/* line 656, ../sass/_custom-libs-override.scss */
+/* line 658, ../sass/_custom-libs-override.scss */
 .wizard-nav-list li.active > a,
 .wizard-nav-item .already-visited .active {
   background-color: #5dade2;
