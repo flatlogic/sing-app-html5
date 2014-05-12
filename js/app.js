@@ -9,6 +9,16 @@ window.PJAX_ENABLED = true;
  */
 window.DEBUG = true;
 
+/**
+ * Plugins configuration options
+ */
+
+/**
+ * Setting Widgster's body selector to theme specific
+ * @type {string}
+ */
+$.fn.widgster.Constructor.DEFAULTS.bodySelector = '.widget-body';
+
 $(function(){
 
     /**

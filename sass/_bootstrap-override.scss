@@ -66,6 +66,28 @@ legend {
   }
 }
 
+// Feedback states
+.has-success {
+  @include form-control-validation($brand-success, $brand-success, $brand-success);
+}
+.has-warning {
+  @include form-control-validation($brand-warning, $brand-warning, $brand-warning);
+}
+.has-error {
+  @include form-control-validation($brand-danger, $brand-danger, $brand-danger);
+}
+
+//turn off shadow
+.has-success,
+.has-warning,
+.has-error {
+  .form-control {
+    &:focus {
+      @include box-shadow(none);
+    }
+  }
+}
+
 //
 // Dropdown menus
 // --------------------------------------------------
