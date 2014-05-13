@@ -192,7 +192,6 @@ $(function(){
     SingAppView.prototype.expandNavigation = function(){
         //this method only makes sense for non-static navigation state
         if (this.isNavigationStatic() && (Sing.isScreen('md') || Sing.isScreen('lg'))) return;
-        if (this.isNavigationStatic() && (Sing.isScreen('md') || Sing.isScreen('lg'))) return;
 
         $('body').removeClass('nav-collapsed');
         this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
