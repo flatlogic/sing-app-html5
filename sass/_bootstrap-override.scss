@@ -209,6 +209,14 @@ legend {
 
 
 //
+// Labels
+// --------------------------------------------------
+.label{
+  font-size: 11px;
+}
+
+
+//
 // Button groups
 // --------------------------------------------------
 
@@ -247,8 +255,6 @@ legend {
 
 .list-group{
   .widget-body > &{
-    margin: 0 (-$widget-padding-horizontal);
-
     .list-group-item{
       border-width: 1px 0;
     }

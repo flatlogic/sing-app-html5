@@ -226,16 +226,20 @@ $display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'bloc
   overflow: hidden;
 }
 
-.font-semi-bold{
+.fw-semi-bold{
   font-weight: $font-weight-semi-bold;
 }
 
-.font-normal{
+.fw-normal{
   font-weight: $font-weight-normal;
 }
 
-.font-bold{
+.fw-bold{
   font-weight: $font-weight-bold;
+}
+
+.fw-thin{
+  font-weight: $font-weight-thin;
 }
 
 .rotate-45 {
@@ -260,7 +264,7 @@ $display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'bloc
   color: $text-muted;
 }
 
-/* .h* + .font-bold */
+/* .h* + .fw-bold */
 $font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
 $i: 1;
 @each $font-size in $font-sizes{

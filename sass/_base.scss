@@ -96,6 +96,11 @@
   min-height: 100%;
   padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
   background-color: $body-bg;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .logo{
@@ -180,6 +185,11 @@
 
       .glyphicon-map-marker{
         top: 0;
+        left: 0;
+      }
+
+      .glyphicon-th{
+        top: -1px;
         left: 0;
       }
 
@@ -496,6 +506,10 @@
 
   > .widget-body.no-padding{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+
+    + footer{
+      margin-top: $widget-padding-vertical;
+    }
   }
 
   > footer{
@@ -505,6 +519,23 @@
 
   &:hover .widget-controls-hover{
     opacity: 1;
+  }
+
+  .loader{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .spinner{
+      position: absolute;
+      top: 50%;
+      width: 100%; //ie fix
+      margin-top: -10px;
+      font-size: 20px;
+      text-align: center;
+    }
   }
 }
 
@@ -527,10 +558,12 @@
     @include transition(opacity .15s);
   }
 
+
+
   a{
     padding: 1px 4px;
     border-radius: 4px;
-    color: rgba($black, .25);
+    color: rgba($black, .4);
     @include transition(color .15s ease-in-out);
 
     &:hover{
@@ -550,6 +583,24 @@
     position: relative;
     top: -1px;
   }
+}
+
+/***********************************/
+/**         Widgets Grid          **/
+/***********************************/
+
+.widget-container{
+  min-height: 30px;
+
+  .widget:not(.fullscreened) > header{
+    cursor: move;
+  }
+}
+
+.widget-placeholder{
+  background:  rgba($white, .4);
+  border: 1px dashed $gray-light;
+  margin: -1px -1px ($grid-gutter-width - 1px) -1px;
 }
 
 /***********************/

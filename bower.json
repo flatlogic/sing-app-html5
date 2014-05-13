@@ -48,7 +48,9 @@
     "jvectormap-world": "http://jvectormap.com/js/jquery-jvectormap-world-mill-en.js",
     "parsleyjs": ">= 2.0.0",
     "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#master",
-    "bootstrap-application-wizard": "git://github.com/amoffat/bootstrap-application-wizard.git"
+    "bootstrap-application-wizard": "git://github.com/amoffat/bootstrap-application-wizard.git",
+    "jquery-ui": "git://github.com/jquery/jquery-ui.git#1.11.0-beta.1",
+    "jquery-ui-touch-punch": "git://github.com/furf/jquery-ui-touch-punch.git"
   },
   "private": true,
   "ignore": [
