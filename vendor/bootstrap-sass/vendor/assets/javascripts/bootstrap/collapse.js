@@ -32,7 +32,6 @@
   }
 
   Collapse.prototype.show = function () {
-      if (this.transitioning || this.$element.hasClass('in')) console.log('olalala')
     if (this.transitioning || this.$element.hasClass('in')) return
 
     var startEvent = $.Event('show.bs.collapse')
@@ -77,7 +76,6 @@
   }
 
   Collapse.prototype.hide = function () {
-      if (this.transitioning || !this.$element.hasClass('in')) console.log('olalala')
     if (this.transitioning || !this.$element.hasClass('in')) return
 
     var startEvent = $.Event('hide.bs.collapse')
