@@ -167,6 +167,57 @@ legend {
 }
 
 //
+// Navs
+// --------------------------------------------------
+
+.nav-tabs {
+  border-bottom: none;
+  background-color: $gray-semi-lighter;
+  border-top-left-radius: $border-radius-base;
+  border-top-right-radius: $border-radius-base;
+  > li {
+    margin-bottom: 0;
+    > a {
+      padding: 12px 18px;
+      border: none;
+      color: $text-muted;
+      @include transition(color .15s ease-in-out);
+      &:hover {
+        background-color: transparent;
+        color: $text-color;
+      }
+    }
+
+    &.open > a{
+      &,
+      &:hover,
+      &:focus{
+        background-color: $nav-tabs-active-link-hover-bg;
+        color: $nav-tabs-active-link-hover-color;
+      }
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        border: none;
+        @include box-shadow(1px 1px 2px #ccc);
+      }
+    }
+  }
+}
+
+.tab-content {
+  position: relative;
+  z-index: 1;
+  background-color: $white;
+  > .tab-pane {
+    padding: $line-height-computed;
+  }
+}
+
+//
 // Navbars
 // --------------------------------------------------
 

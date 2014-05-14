@@ -254,6 +254,11 @@ $width-variants: (50: 50px, 100: 100px, 150: 150px, 200: 200px);
   border: none;
 }
 
+.bt{ border-top: 1px solid $gray-semi-lighter }
+.br{ border-right: 1px solid $gray-semi-lighter }
+.bb{ border-bottom: 1px solid $gray-semi-lighter }
+.bl{ border-left: 1px solid $gray-semi-lighter }
+
 .overflow-hidden{
   overflow: hidden;
 }
