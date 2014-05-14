@@ -372,13 +372,15 @@
       }
 
       .nav-static &{
-        .circle{
-          margin-left: 0;
-          @include transition(none);
-        }
-        .label-name{
-          opacity: 1;
-          @include transition(none);
+        @media (min-width: $screen-md-min) {
+          .circle {
+            margin-left: 0;
+            @include transition(none);
+          }
+          .label-name {
+            opacity: 1;
+            @include transition(none);
+          }
         }
       }
     }
@@ -399,8 +401,10 @@
   }
 
   .nav-static &{
-    opacity: 1;
-    @include transition(none);
+    @media (min-width: $screen-md-min) {
+      opacity: 1;
+      @include transition(none);
+    }
   }
   .alert{
     margin-bottom: 0;
@@ -536,6 +540,10 @@
       font-size: 20px;
       text-align: center;
     }
+  }
+
+  .widget-table-overflow{
+    margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
   }
 }
 

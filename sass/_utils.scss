@@ -217,6 +217,10 @@ $display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'bloc
 
 @include property-variants('.display', 'display', $margin-horizontal-variants);
 
+$width-variants: (50: 50px, 100: 100px, 150: 150px, 200: 200px);
+
+@include property-variants('.width', 'width', $width-variants);
+
 
 .no-border{
   border: none;
@@ -335,6 +339,7 @@ $i: 1;
 @include text-emphasis-variant('.text-gray', $gray);
 @include text-emphasis-variant('.text-gray-dark', $gray-dark);
 @include text-emphasis-variant('.text-gray-light', $gray-light);
+@include text-emphasis-variant('.text-semi-muted', #777);
 @include text-emphasis-variant('.text-gray-darker', $gray-darker);
 @include text-emphasis-variant('.text-gray-lighter', $gray-lighter);
 @include text-emphasis-variant('.text-bg-sidebar', $sidebar-bg-color);

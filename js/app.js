@@ -523,6 +523,16 @@ function initAppPlugins(){
             return $(e.target).find('input').data('ajax-trigger') != 'change';
         })
     }(jQuery);
+
+
+    /* ========================================================================
+     * Table head check all checkboxes
+     * ========================================================================
+     */
+    $('table th [data-check-all]').on('click', function () {
+        $(this).closest('table').find('input[type=checkbox]')
+            .not(this).prop('checked', $(this).prop('checked'));
+    });
 }
 
 /**

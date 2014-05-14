@@ -1,1 +1,2 @@
 add http://parsleyjs.org/doc/examples/multisteps.html to wizard & validation docs
+add .table-responsive to table docs

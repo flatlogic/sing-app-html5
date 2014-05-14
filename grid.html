@@ -383,6 +383,13 @@
 <div class="content-wrap">
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
+        <!-- jquery ui sortable chrome overflow-x fix. when set to hidden does not behaves as expected. resetting back
+             just for this page -->
+        <style>
+            body{
+                overflow-x: visible;
+            }
+        </style>
         <ol class="breadcrumb">
             <li>YOU ARE HERE</li>
             <li class="active">Grid</li>
@@ -419,7 +426,7 @@
             <div class="col-md-6 widget-container">
                 <section class="widget" id="default-widget" data-widgster-load="demo/ajax/widgets/default.php">
                     <header>
-                        <h5>Default Widget</h5>
+                        <h5>Default <span class="fw-semi-bold">Widget</span></h5>
                         <div class="widget-controls">
                             <a data-widgster="load" title="Reload" href="#"><i class="fa fa-refresh"></i></a>
                             <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -438,7 +445,8 @@
                          data-widgster-load="demo/ajax/widgets/shares.php">
                     <header>
                         <h5>
-                            <span class="label label-primary"><i class="fa fa-facebook"></i></span> &nbsp; Shares
+                            <span class="label label-primary"><i class="fa fa-facebook"></i></span> &nbsp;
+                            Latest <span class="fw-semi-bold">Shares</span>
                         </h5>
                         <div class="widget-controls">
                             <a data-widgster="load" title="Reload" href="#"><strong class="text-gray-light">Reload</strong></a>
@@ -487,7 +495,7 @@
                          data-widgster-autoload="true"
                          data-widgster-show-loader="false">
                     <header>
-                        <h5>Autoload widget</h5>
+                        <h5>Autoload <span class="fw-semi-bold">Widget</span></h5>
                         <div class="widget-controls dropdown">
                             <span>
                                 <i class="fa fa-spinner fa-lg fade mr-xs"></i>
@@ -546,7 +554,7 @@ data-widgster-autoload="true"</code></pre>
                 </section>
                 <section class="widget" style="min-height: 200px">
                     <header>
-                        <h5>Custom Loader</h5>
+                        <h5>Custom <span class="fw-semi-bold">Loader</span></h5>
                     </header>
                     <div class="widget-body">
                         <div class="loader animated fadeIn handle">

@@ -17,7 +17,7 @@
    1.  ~~vector~~
    2.  ~~google~~
  7.  tables  
-   1.  static (no padding tables, like inside panels)
+   1.  ~~static (no padding tables, like inside panels)~~
    2.  datatables
  8.  ~~grid (widgster)~~
  9.  menu levels

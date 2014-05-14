@@ -27,7 +27,7 @@
 }
 
 .select2-container-multi .select2-choices .select2-search-choice{
-  @include border-radius($border-radius-base);
+  @include border-radius($input-border-radius);
 }
 
 /**

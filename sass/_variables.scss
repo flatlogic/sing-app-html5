@@ -110,15 +110,21 @@ $headings-font-weight: 300 !default;
 //== Components
 //
 
-$border-radius-base:        1px !default;
-$border-radius-large:       1px !default;
-$border-radius-small:       0 !default;
+//$border-radius-base:        1px !default;
+//$border-radius-large:       1px !default;
+//$border-radius-small:       0 !default;
 
 //== Forms
 //
-//$input-border-radius:            1px;
+$input-border-radius:            2px;
 $input-border-focus:             #4D90FE !default; //webkit focus color
 $legend-color:                   lighten($text-color, 15%) !default;
+
+//== Tables
+//
+
+$table-bg-accent:               #f3f3f3 !default;
+$table-bg-hover:                $gray-lighter !default;
 
 //== Buttons
 //
