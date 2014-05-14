@@ -529,10 +529,12 @@ function initAppPlugins(){
      * Table head check all checkboxes
      * ========================================================================
      */
-    $('table th [data-check-all]').on('click', function () {
-        $(this).closest('table').find('input[type=checkbox]')
-            .not(this).prop('checked', $(this).prop('checked'));
-    });
+    !function($){
+        $(document).on('click', 'table th [data-check-all]', function () {
+            $(this).closest('table').find('input[type=checkbox]')
+                .not(this).prop('checked', $(this).prop('checked'));
+        });
+    }(jQuery);
 }
 
 /**

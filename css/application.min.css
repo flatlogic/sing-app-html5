@@ -15120,6 +15120,49 @@ legend {
   background: #618fb0;
 }
 
+/**
+ * No More Tables
+ * http://css-tricks.com/responsive-data-tables/
+ * Just mark your cells with col header attribute <td data-col-title="Surname">Otto</td>
+ */
+@media (max-width: 767px) {
+  /* line 70, ../sass/_libs-override.scss */
+  .table-no-more {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  /* line 73, ../sass/_libs-override.scss */
+  .table-no-more, .table-no-more thead, .table-no-more tbody, .table-no-more th, .table-no-more td, .table-no-more tr {
+    display: block;
+  }
+  /* line 78, ../sass/_libs-override.scss */
+  .table-no-more thead > tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  /* line 84, ../sass/_libs-override.scss */
+  .table-no-more tbody > tr > td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  /* line 92, ../sass/_libs-override.scss */
+  .table-no-more tbody > tr > td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-col-title);
+  }
+}
+
 /* line 1, ../vendor/rickshaw/rickshaw.css */
 .rickshaw_graph .detail {
   pointer-events: none;
