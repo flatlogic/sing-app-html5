@@ -46,6 +46,7 @@ $text-color:            $gray !default;
 //$text-color: #57534A; //a bit brown?
 
 $font-size-base:          14px !default;
+$font-size-mini:          $font-size-base - 1;
 
 $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;

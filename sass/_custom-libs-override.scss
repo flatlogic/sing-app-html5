@@ -478,7 +478,7 @@ $slider-handle-size: 26px;
  */
 
 .calendar{
-  font-size: $font-size-base - 1;
+  font-size: $font-size-mini;
   padding: $line-height-computed/2 0;
 }
 .calendar a{
@@ -659,4 +659,110 @@ input.parsley-error{
 .wizard-nav-item .already-visited .active{
   background-color: $brand-info;
   color: $white;
+}
+
+/***********************************/
+/**           Backgrid            **/
+/***********************************/
+
+.table-editable{
+
+  th > a{
+    color: $text-color;
+    cursor: pointer;
+  }
+
+  .sort-caret {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 0.3em;
+    border: 0;
+    content: "";
+    font: 15px FontAwesome;
+  }
+
+  .ascending .sort-caret {
+    &:before{
+      content: "\f0d8";
+    }
+  }
+
+  .descending .sort-caret {
+    &:before{
+      content: "\f0d7";
+    }
+  }
+
+  + .backgrid-paginator > ul{
+    display: inline-block;
+    padding-left: 0;
+    margin: $line-height-computed 0;
+    border-radius: $border-radius-base;
+
+    > li {
+      display: inline; // Remove list-style and block-level defaults
+      > a,
+      > span {
+        position: relative;
+        float: left; // Collapse white-space
+        line-height: $line-height-base;
+        text-decoration: none;
+        color: $pagination-color;
+        background-color: $pagination-bg;
+        border: 1px solid $pagination-border;
+        margin-left: -1px;
+
+        > .fa-lg{
+          position: relative;
+          top: -1px;
+        }
+      }
+      &:first-child {
+        > a,
+        > span {
+          margin-left: 0;
+        }
+      }
+    }
+
+    > li > a,
+    > li > span {
+      &:hover,
+      &:focus {
+        color: $pagination-hover-color;
+        background-color: $pagination-hover-bg;
+        border-color: $pagination-hover-border;
+      }
+    }
+
+    > .active > a,
+    > .active > span {
+      &,
+      &:hover,
+      &:focus {
+        z-index: 2;
+        color: $pagination-active-color;
+        background-color: $pagination-active-bg;
+        border-color: $pagination-active-border;
+        cursor: default;
+      }
+    }
+
+    > .disabled {
+      > span,
+      > span:hover,
+      > span:focus,
+      > a,
+      > a:hover,
+      > a:focus {
+        color: $pagination-disabled-color;
+        background-color: $pagination-disabled-bg;
+        border-color: $pagination-disabled-border;
+        cursor: not-allowed;
+      }
+    }
+
+    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
+  }
 }

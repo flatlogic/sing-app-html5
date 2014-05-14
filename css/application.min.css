@@ -14621,7 +14621,13 @@ disabled look for disabled choices in the results dropdown
   display: none;
 }
 
-/* line 6, ../sass/_bootstrap-override.scss */
+/* line 5, ../sass/_bootstrap-override.scss */
+.blockquote-sm {
+  padding: 3px 15px;
+  font-size: 14px;
+}
+
+/* line 15, ../sass/_bootstrap-override.scss */
 h1 small,
 h1 .small, h2 small,
 h2 .small, h3 small,
@@ -14639,63 +14645,63 @@ h6 .small,
   font-weight: 300;
 }
 
-/* line 17, ../sass/_bootstrap-override.scss */
+/* line 26, ../sass/_bootstrap-override.scss */
 .form-control {
   font-weight: 400;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 20, ../sass/_bootstrap-override.scss */
+/* line 29, ../sass/_bootstrap-override.scss */
 .form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 25, ../sass/_bootstrap-override.scss */
+/* line 34, ../sass/_bootstrap-override.scss */
 label {
   font-weight: 400;
 }
 
-/* line 29, ../sass/_bootstrap-override.scss */
+/* line 38, ../sass/_bootstrap-override.scss */
 .help-block {
   font-size: 85%;
   color: #999999;
 }
 
-/* line 34, ../sass/_bootstrap-override.scss */
+/* line 43, ../sass/_bootstrap-override.scss */
 legend {
   font-size: 15px;
   font-weight: 400;
 }
 
-/* line 39, ../sass/_bootstrap-override.scss */
+/* line 48, ../sass/_bootstrap-override.scss */
 .form-group {
   margin-bottom: 20px;
 }
 
-/* line 44, ../sass/_bootstrap-override.scss */
+/* line 53, ../sass/_bootstrap-override.scss */
 .input-group-addon.bg-primary {
   border-color: #4a7594;
 }
-/* line 47, ../sass/_bootstrap-override.scss */
+/* line 56, ../sass/_bootstrap-override.scss */
 .input-group-addon.bg-success {
   border-color: #b9e1b9;
 }
-/* line 50, ../sass/_bootstrap-override.scss */
+/* line 59, ../sass/_bootstrap-override.scss */
 .input-group-addon.bg-info {
   border-color: #b8dbf2;
 }
-/* line 53, ../sass/_bootstrap-override.scss */
+/* line 62, ../sass/_bootstrap-override.scss */
 .input-group-addon.bg-warning {
   border-color: #fae8b6;
 }
-/* line 56, ../sass/_bootstrap-override.scss */
+/* line 65, ../sass/_bootstrap-override.scss */
 .input-group-addon.bg-danger {
   border-color: #f4bbac;
 }
 
 @media (min-width: 768px) {
-  /* line 63, ../sass/_bootstrap-override.scss */
+  /* line 72, ../sass/_bootstrap-override.scss */
   .form-horizontal.form-label-left .control-label {
     text-align: left;
   }
@@ -14797,7 +14803,7 @@ legend {
   color: #e5603b;
 }
 
-/* line 85, ../sass/_bootstrap-override.scss */
+/* line 94, ../sass/_bootstrap-override.scss */
 .has-success .form-control:focus,
 .has-warning .form-control:focus,
 .has-error .form-control:focus {
@@ -14805,7 +14811,7 @@ legend {
   box-shadow: none;
 }
 
-/* line 91, ../sass/_bootstrap-override.scss */
+/* line 100, ../sass/_bootstrap-override.scss */
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .input-sm, .input-group-sm > .form-control,
@@ -14816,14 +14822,14 @@ legend {
   border-radius: 2px;
 }
 
-/* line 95, ../sass/_bootstrap-override.scss */
+/* line 104, ../sass/_bootstrap-override.scss */
 .input-group-addon {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
 
-/* line 103, ../sass/_bootstrap-override.scss */
+/* line 112, ../sass/_bootstrap-override.scss */
 .table td > .checkbox,
 .table th > .checkbox {
   position: relative;
@@ -14832,7 +14838,7 @@ legend {
   margin-bottom: 0;
   padding-left: 0;
 }
-/* line 110, ../sass/_bootstrap-override.scss */
+/* line 119, ../sass/_bootstrap-override.scss */
 .table td > .checkbox > label:before,
 .table td > .checkbox > label:after,
 .table th > .checkbox > label:before,
@@ -14840,19 +14846,19 @@ legend {
   margin-left: 0;
 }
 
-/* line 116, ../sass/_bootstrap-override.scss */
+/* line 125, ../sass/_bootstrap-override.scss */
 .table > thead > tr > th {
   font-weight: 600;
   text-transform: uppercase;
   border-bottom-width: 1px;
 }
 
-/* line 122, ../sass/_bootstrap-override.scss */
+/* line 131, ../sass/_bootstrap-override.scss */
 .table-bordered th {
   background-color: #eeeeee;
 }
 
-/* line 131, ../sass/_bootstrap-override.scss */
+/* line 140, ../sass/_bootstrap-override.scss */
 .table-lg > thead > tr > th,
 .table-lg > thead > tr > td,
 .table-lg > tbody > tr > th,
@@ -14862,46 +14868,46 @@ legend {
   padding: 10px;
 }
 
-/* line 143, ../sass/_bootstrap-override.scss */
+/* line 152, ../sass/_bootstrap-override.scss */
 .dropdown-menu {
   font-size: 13px;
 }
-/* line 146, ../sass/_bootstrap-override.scss */
+/* line 155, ../sass/_bootstrap-override.scss */
 .dropdown-menu > li > a {
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-/* line 156, ../sass/_bootstrap-override.scss */
+/* line 165, ../sass/_bootstrap-override.scss */
 .navbar {
   border: none;
   font-size: 13px;
   font-weight: 500;
 }
-/* line 161, ../sass/_bootstrap-override.scss */
+/* line 170, ../sass/_bootstrap-override.scss */
 .navbar h5 {
   font-size: 13px;
 }
-/* line 165, ../sass/_bootstrap-override.scss */
+/* line 174, ../sass/_bootstrap-override.scss */
 .navbar .deemphasize {
   font-size: 12px;
 }
 
-/* line 171, ../sass/_bootstrap-override.scss */
+/* line 180, ../sass/_bootstrap-override.scss */
 .navbar-form .form-control {
   font-size: 13px;
 }
-/* line 175, ../sass/_bootstrap-override.scss */
+/* line 184, ../sass/_bootstrap-override.scss */
 .navbar-form .input-group {
   width: 250px;
 }
-/* line 179, ../sass/_bootstrap-override.scss */
+/* line 188, ../sass/_bootstrap-override.scss */
 .navbar-form .input-group-addon {
   color: #666666;
 }
 
 @media (min-width: 768px) {
-  /* line 186, ../sass/_bootstrap-override.scss */
+  /* line 195, ../sass/_bootstrap-override.scss */
   .container > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -14911,83 +14917,83 @@ legend {
   }
 }
 
-/* line 195, ../sass/_bootstrap-override.scss */
+/* line 204, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav {
   float: left;
   margin-left: 15px;
   margin-right: 15px;
 }
-/* line 198, ../sass/_bootstrap-override.scss */
+/* line 207, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav.navbar-right {
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 195, ../sass/_bootstrap-override.scss */
+  /* line 204, ../sass/_bootstrap-override.scss */
   .navbar-header > .navbar-nav {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  /* line 209, ../sass/_bootstrap-override.scss */
+  /* line 218, ../sass/_bootstrap-override.scss */
   .navbar-header > .navbar-nav + .navbar-brand {
     height: 60px;
     line-height: 30px;
   }
 }
-/* line 215, ../sass/_bootstrap-override.scss */
+/* line 224, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav > li {
   float: left;
 }
-/* line 217, ../sass/_bootstrap-override.scss */
+/* line 226, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav > li > a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-/* line 229, ../sass/_bootstrap-override.scss */
+/* line 238, ../sass/_bootstrap-override.scss */
 .breadcrumb {
   color: #999999;
 }
-/* line 232, ../sass/_bootstrap-override.scss */
+/* line 241, ../sass/_bootstrap-override.scss */
 .breadcrumb > .active {
   font-weight: 600;
 }
-/* line 236, ../sass/_bootstrap-override.scss */
+/* line 245, ../sass/_bootstrap-override.scss */
 .content .breadcrumb {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 246, ../sass/_bootstrap-override.scss */
+/* line 255, ../sass/_bootstrap-override.scss */
 .btn-rounded {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
-/* line 254, ../sass/_bootstrap-override.scss */
+/* line 263, ../sass/_bootstrap-override.scss */
 .label {
   font-size: 11px;
 }
 
-/* line 263, ../sass/_bootstrap-override.scss */
+/* line 272, ../sass/_bootstrap-override.scss */
 .btn-toolbar {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 272, ../sass/_bootstrap-override.scss */
+/* line 281, ../sass/_bootstrap-override.scss */
 .progress-sm {
   height: 10px;
   margin-bottom: 10px;
 }
 
-/* line 277, ../sass/_bootstrap-override.scss */
+/* line 286, ../sass/_bootstrap-override.scss */
 .progress-xs {
   height: 5px;
   margin-bottom: 10px;
 }
 
-/* line 283, ../sass/_bootstrap-override.scss */
+/* line 292, ../sass/_bootstrap-override.scss */
 .progress-bar-gray {
   background-color: #555555;
 }
@@ -14997,7 +15003,7 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 287, ../sass/_bootstrap-override.scss */
+/* line 296, ../sass/_bootstrap-override.scss */
 .progress-bar-gray-light {
   background-color: #999999;
 }
@@ -15007,36 +15013,36 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 298, ../sass/_bootstrap-override.scss */
+/* line 307, ../sass/_bootstrap-override.scss */
 .widget-body > .list-group .list-group-item {
   border-width: 1px 0;
 }
-/* line 303, ../sass/_bootstrap-override.scss */
+/* line 312, ../sass/_bootstrap-override.scss */
 .widget-body.no-padding > .list-group {
   margin: 0;
 }
 
-/* line 310, ../sass/_bootstrap-override.scss */
+/* line 319, ../sass/_bootstrap-override.scss */
 .list-group-lg .list-group-item {
   padding: 15px 15px;
 }
-/* line 314, ../sass/_bootstrap-override.scss */
+/* line 323, ../sass/_bootstrap-override.scss */
 .list-group:last-of-type .list-group-item:last-child {
   border-bottom: 0;
 }
 
-/* line 324, ../sass/_bootstrap-override.scss */
+/* line 333, ../sass/_bootstrap-override.scss */
 .dropdown-menu > .panel {
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-/* line 330, ../sass/_bootstrap-override.scss */
+/* line 339, ../sass/_bootstrap-override.scss */
 .panel-heading {
   border-color: #dddddd;
 }
 
-/* line 338, ../sass/_bootstrap-override.scss */
+/* line 347, ../sass/_bootstrap-override.scss */
 .tooltip-inner {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -18758,6 +18764,275 @@ li.wizard-nav-item {
   border-right-color: #953B39;
 }
 
+/*
+  backgrid
+  http://github.com/wyuenho/backgrid
+
+  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
+  Licensed under the MIT license.
+*/
+/* line 9, ../vendor/backgrid/lib/backgrid.css */
+.backgrid-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 465px;
+  padding: 0;
+  overflow: auto;
+  border: 0;
+}
+
+/* line 19, ../vendor/backgrid/lib/backgrid.css */
+.backgrid {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 29, ../vendor/backgrid/lib/backgrid.css */
+.backgrid th,
+.backgrid td {
+  display: none;
+  height: 20px;
+  max-width: 250px;
+  padding: 4px 5px;
+  overflow: hidden;
+  line-height: 20px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-bottom: 1px solid #DDD;
+}
+
+/* line 44, ../vendor/backgrid/lib/backgrid.css */
+.backgrid th.renderable,
+.backgrid td.renderable {
+  display: table-cell;
+}
+
+/* line 49, ../vendor/backgrid/lib/backgrid.css */
+.backgrid th {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 54, ../vendor/backgrid/lib/backgrid.css */
+.backgrid th.sortable a {
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* line 60, ../vendor/backgrid/lib/backgrid.css */
+.backgrid thead th {
+  vertical-align: bottom;
+  background-color: #f9f9f9;
+}
+
+/* line 65, ../vendor/backgrid/lib/backgrid.css */
+.backgrid thead th a {
+  display: block;
+}
+
+/* line 69, ../vendor/backgrid/lib/backgrid.css */
+.backgrid.backgrid-striped tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* line 73, ../vendor/backgrid/lib/backgrid.css */
+.backgrid tbody tr.empty {
+  font-style: italic;
+  color: gray;
+}
+
+/* line 78, ../vendor/backgrid/lib/backgrid.css */
+.backgrid tbody tr.empty td {
+  display: inherit;
+  text-align: center;
+}
+
+/* line 83, ../vendor/backgrid/lib/backgrid.css */
+.backgrid td.editor {
+  padding: 0;
+}
+
+/* line 87, ../vendor/backgrid/lib/backgrid.css */
+.backgrid td.editor,
+.backgrid tbody tr:nth-child(odd) td.editor {
+  background-color: rgba(82, 168, 236, 0.1);
+  outline: 1px solid rgba(82, 168, 236, 0.8);
+  outline-offset: -1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition-duration: 200ms;
+  -moz-transition-duration: 200ms;
+  -o-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: width, outline, background-color;
+  -moz-transition-property: width, outline, background-color;
+  -o-transition-property: width, outline, background-color;
+  transition-property: width, outline, background-color;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 109, ../vendor/backgrid/lib/backgrid.css */
+.backgrid td.editor input[type=text] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 5px;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* line 128, ../vendor/backgrid/lib/backgrid.css */
+.backgrid td.editor input[type=text]::-ms-clear {
+  display: none;
+}
+
+/* line 132, ../vendor/backgrid/lib/backgrid.css */
+.backgrid td.error,
+.backgrid tbody tr:nth-child(odd) td.error {
+  background-color: rgba(255, 210, 77, 0.1);
+  outline: 1px solid #ffd24d;
+}
+
+/* line 138, ../vendor/backgrid/lib/backgrid.css */
+.backgrid td.editor :focus,
+.backgrid th.editor :focus {
+  outline: 0;
+}
+
+/* line 143, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .sort-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.3em;
+  border: 0;
+  content: "";
+}
+
+/* line 152, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .ascending .sort-caret {
+  vertical-align: baseline;
+  border-top: none;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid #000000;
+  border-left: 4px solid transparent;
+}
+
+/* line 160, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .descending .sort-caret {
+  vertical-align: super;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+}
+
+/* line 168, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .string-cell,
+.backgrid .uri-cell,
+.backgrid .email-cell,
+.backgrid .string-cell.editor input[type=text],
+.backgrid .uri-cell.editor input[type=text],
+.backgrid .email-cell.editor input[type=text] {
+  text-align: left;
+}
+
+/* line 177, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .date-cell,
+.backgrid .time-cell,
+.backgrid .datetime-cell,
+.backgrid .number-cell,
+.backgrid .integer-cell,
+.backgrid .percent-cell,
+.backgrid .date-cell.editor input[type=text],
+.backgrid .time-cell.editor input[type=text],
+.backgrid .datetime-cell.editor input[type=text],
+.backgrid .number-cell.editor input[type=text],
+.backgrid .integer-cell.editor input[type=text],
+.backgrid .percent-cell.editor input[type=text] {
+  text-align: right;
+}
+
+/* line 192, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .boolean-cell,
+.backgrid .boolean-cell.editor input[type=checkbox] {
+  text-align: center;
+}
+
+/* line 197, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .select-cell {
+  text-align: center;
+}
+
+/* line 201, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .select-cell.editor {
+  padding: 0;
+}
+
+/* line 205, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .select-cell.editor select {
+  display: block;
+  width: 100%;
+  height: 28px;
+  padding: 4px 5px;
+  margin: 0;
+  line-height: 28px;
+  vertical-align: middle;
+  background-color: white;
+  border: 0;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 224, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .select-cell.editor select[multiple] {
+  height: auto;
+}
+
+/* line 228, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .select-cell.editor :focus {
+  border: 0;
+  outline: 0;
+}
+
+/* line 233, ../vendor/backgrid/lib/backgrid.css */
+.backgrid .select-cell.editor select::-moz-focus-inner,
+.backgrid .select-cell.editor optgroup::-moz-focus-inner,
+.backgrid .select-cell.editor option::-moz-focus-inner,
+.backgrid .select-cell.editor select::-o-focus-inner,
+.backgrid .select-cell.editor optgroup::-o-focus-inner,
+.backgrid .select-cell.editor option::-o-focus-inner {
+  border: 0;
+}
+
 /**
  * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
@@ -19489,6 +19764,116 @@ input.parsley-error {
 .wizard-nav-item .already-visited .active {
   background-color: #5dade2;
   color: white;
+}
+
+/***********************************/
+/**           Backgrid            **/
+/***********************************/
+/* line 670, ../sass/_custom-libs-override.scss */
+.table-editable th > a {
+  color: #555555;
+  cursor: pointer;
+}
+/* line 675, ../sass/_custom-libs-override.scss */
+.table-editable .sort-caret {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 0.3em;
+  border: 0;
+  content: "";
+  font: 15px FontAwesome;
+}
+/* line 686, ../sass/_custom-libs-override.scss */
+.table-editable .ascending .sort-caret:before {
+  content: "\f0d8";
+}
+/* line 692, ../sass/_custom-libs-override.scss */
+.table-editable .descending .sort-caret:before {
+  content: "\f0d7";
+}
+/* line 697, ../sass/_custom-libs-override.scss */
+.table-editable + .backgrid-paginator > ul {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+/* line 703, ../sass/_custom-libs-override.scss */
+.table-editable + .backgrid-paginator > ul > li {
+  display: inline;
+}
+/* line 705, ../sass/_custom-libs-override.scss */
+.table-editable + .backgrid-paginator > ul > li > a,
+.table-editable + .backgrid-paginator > ul > li > span {
+  position: relative;
+  float: left;
+  line-height: 1.428571429;
+  text-decoration: none;
+  color: #218bc3;
+  background-color: white;
+  border: 1px solid #dddddd;
+  margin-left: -1px;
+}
+/* line 716, ../sass/_custom-libs-override.scss */
+.table-editable + .backgrid-paginator > ul > li > a > .fa-lg,
+.table-editable + .backgrid-paginator > ul > li > span > .fa-lg {
+  position: relative;
+  top: -1px;
+}
+/* line 722, ../sass/_custom-libs-override.scss */
+.table-editable + .backgrid-paginator > ul > li:first-child > a,
+.table-editable + .backgrid-paginator > ul > li:first-child > span {
+  margin-left: 0;
+}
+/* line 731, ../sass/_custom-libs-override.scss */
+.table-editable + .backgrid-paginator > ul > li > a:hover, .table-editable + .backgrid-paginator > ul > li > a:focus,
+.table-editable + .backgrid-paginator > ul > li > span:hover,
+.table-editable + .backgrid-paginator > ul > li > span:focus {
+  color: #165c82;
+  background-color: #eeeeee;
+  border-color: #dddddd;
+}
+/* line 741, ../sass/_custom-libs-override.scss */
+.table-editable + .backgrid-paginator > ul > .active > a, .table-editable + .backgrid-paginator > ul > .active > a:hover, .table-editable + .backgrid-paginator > ul > .active > a:focus,
+.table-editable + .backgrid-paginator > ul > .active > span,
+.table-editable + .backgrid-paginator > ul > .active > span:hover,
+.table-editable + .backgrid-paginator > ul > .active > span:focus {
+  z-index: 2;
+  color: white;
+  background-color: #618fb0;
+  border-color: #618fb0;
+  cursor: default;
+}
+/* line 753, ../sass/_custom-libs-override.scss */
+.table-editable + .backgrid-paginator > ul > .disabled > span,
+.table-editable + .backgrid-paginator > ul > .disabled > span:hover,
+.table-editable + .backgrid-paginator > ul > .disabled > span:focus,
+.table-editable + .backgrid-paginator > ul > .disabled > a,
+.table-editable + .backgrid-paginator > ul > .disabled > a:hover,
+.table-editable + .backgrid-paginator > ul > .disabled > a:focus {
+  color: #999999;
+  background-color: white;
+  border-color: #dddddd;
+  cursor: not-allowed;
+}
+/* line 557, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.table-editable + .backgrid-paginator > ul > li > a,
+.table-editable + .backgrid-paginator > ul > li > span {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+/* line 563, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.table-editable + .backgrid-paginator > ul > li:first-child > a,
+.table-editable + .backgrid-paginator > ul > li:first-child > span {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+/* line 569, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.table-editable + .backgrid-paginator > ul > li:last-child > a,
+.table-editable + .backgrid-paginator > ul > li:last-child > span {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 /**
@@ -20424,9 +20809,11 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 .input-group-no-border .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-transparent .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-no-border .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   border-right: none;
 }
-/* line 96, ../sass/_utils.scss */
+/* line 98, ../sass/_utils.scss */
 .input-group-transparent .form-control:last-child, .input-group-no-border .form-control:last-child,
 .input-group-transparent .input-group-addon:last-child,
 .input-group-no-border .input-group-addon:last-child,
@@ -20443,61 +20830,61 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   border-left: none;
   padding-left: 0;
 }
-/* line 107, ../sass/_utils.scss */
+/* line 109, ../sass/_utils.scss */
 .input-group-transparent .input-group-addon, .input-group-no-border .input-group-addon {
   background-color: white;
   -webkit-transition: border-color ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s;
 }
-/* line 112, ../sass/_utils.scss */
+/* line 114, ../sass/_utils.scss */
 .input-group-transparent .form-control:focus + .input-group-addon, .input-group-no-border .form-control:focus + .input-group-addon, .input-group-transparent.focus .input-group-addon, .focus.input-group-no-border .input-group-addon {
   border-color: #4d90fe;
 }
 
-/* line 118, ../sass/_utils.scss */
+/* line 120, ../sass/_utils.scss */
 .input-no-border, .input-group-no-border .form-control,
 .input-group-no-border .input-group-addon {
   border: none;
   -webkit-transition: background-color ease-in-out 0.15s;
   transition: background-color ease-in-out 0.15s;
 }
-/* line 122, ../sass/_utils.scss */
+/* line 124, ../sass/_utils.scss */
 .input-no-border:focus, .input-group-no-border .form-control:focus,
 .input-group-no-border .input-group-addon:focus,
 .input-group-no-border .form-control:focus + .input-group-addon, .input-group-no-border.focus .input-group-addon {
   background-color: #f1f1f1;
 }
 
-/* line 142, ../sass/_utils.scss */
+/* line 144, ../sass/_utils.scss */
 .chart-overflow-bottom {
   margin: 0 -20px -15px;
 }
 
-/* line 146, ../sass/_utils.scss */
+/* line 148, ../sass/_utils.scss */
 .globe {
   font-size: 64px;
 }
-/* line 148, ../sass/_utils.scss */
+/* line 150, ../sass/_utils.scss */
 .globe > i {
   position: relative;
 }
-/* line 150, ../sass/_utils.scss */
+/* line 152, ../sass/_utils.scss */
 .globe > i > i {
   position: absolute;
   left: 0;
 }
 
-/* line 158, ../sass/_utils.scss */
+/* line 160, ../sass/_utils.scss */
 .thin-scroll::-webkit-scrollbar {
   height: 8px;
   width: 8px;
 }
-/* line 162, ../sass/_utils.scss */
+/* line 164, ../sass/_utils.scss */
 .thin-scroll::-webkit-scrollbar:hover {
   background-color: #e9e9e9;
   border: none;
 }
-/* line 166, ../sass/_utils.scss */
+/* line 168, ../sass/_utils.scss */
 .thin-scroll::-webkit-scrollbar-thumb {
   border: 0;
   background-clip: padding-box;
@@ -20505,76 +20892,76 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
   box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
 }
-/* line 172, ../sass/_utils.scss */
+/* line 174, ../sass/_utils.scss */
 .thin-scroll::-webkit-scrollbar-thumb:hover {
   background-color: #999999;
 }
 
 @-moz-keyframes bg-attention {
-  /* line 178, ../sass/_utils.scss */
+  /* line 180, ../sass/_utils.scss */
   0% {
     background-color: #fdf7e6;
   }
 
-  /* line 181, ../sass/_utils.scss */
+  /* line 183, ../sass/_utils.scss */
   5% {
     background-color: #fae8b6;
   }
 
-  /* line 184, ../sass/_utils.scss */
+  /* line 186, ../sass/_utils.scss */
   0% {
     background-color: transparent;
   }
 }
 @-webkit-keyframes bg-attention {
-  /* line 178, ../sass/_utils.scss */
+  /* line 180, ../sass/_utils.scss */
   0% {
     background-color: #fdf7e6;
   }
 
-  /* line 181, ../sass/_utils.scss */
+  /* line 183, ../sass/_utils.scss */
   5% {
     background-color: #fae8b6;
   }
 
-  /* line 184, ../sass/_utils.scss */
+  /* line 186, ../sass/_utils.scss */
   0% {
     background-color: transparent;
   }
 }
 @keyframes bg-attention {
-  /* line 178, ../sass/_utils.scss */
+  /* line 180, ../sass/_utils.scss */
   0% {
     background-color: #fdf7e6;
   }
 
-  /* line 181, ../sass/_utils.scss */
+  /* line 183, ../sass/_utils.scss */
   5% {
     background-color: #fae8b6;
   }
 
-  /* line 184, ../sass/_utils.scss */
+  /* line 186, ../sass/_utils.scss */
   0% {
     background-color: transparent;
   }
 }
-/* line 189, ../sass/_utils.scss */
+/* line 191, ../sass/_utils.scss */
 .bg-attention {
   -webkit-animation: bg-attention 10s;
   animation: bg-attention 10s;
 }
 
-/* line 196, ../sass/_utils.scss */
+/* line 198, ../sass/_utils.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 200, ../sass/_utils.scss */
+/* line 202, ../sass/_utils.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 204, ../sass/_utils.scss */
+/* line 206, ../sass/_utils.scss */
 .no-margin {
   margin: 0;
 }
@@ -20919,58 +21306,58 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   width: -200px;
 }
 
-/* line 225, ../sass/_utils.scss */
+/* line 227, ../sass/_utils.scss */
 .no-border {
   border: none;
 }
 
-/* line 229, ../sass/_utils.scss */
+/* line 231, ../sass/_utils.scss */
 .overflow-hidden {
   overflow: hidden;
 }
 
-/* line 233, ../sass/_utils.scss */
+/* line 235, ../sass/_utils.scss */
 .fw-semi-bold {
   font-weight: 600;
 }
 
-/* line 237, ../sass/_utils.scss */
+/* line 239, ../sass/_utils.scss */
 .fw-normal {
   font-weight: 400;
 }
 
-/* line 241, ../sass/_utils.scss */
+/* line 243, ../sass/_utils.scss */
 .fw-bold {
   font-weight: 700;
 }
 
-/* line 245, ../sass/_utils.scss */
+/* line 247, ../sass/_utils.scss */
 .fw-thin {
   font-weight: 300;
 }
 
-/* line 249, ../sass/_utils.scss */
+/* line 251, ../sass/_utils.scss */
 .rotate-45 {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 253, ../sass/_utils.scss */
+/* line 255, ../sass/_utils.scss */
 .rotate-135 {
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 257, ../sass/_utils.scss */
+/* line 259, ../sass/_utils.scss */
 .rotate-225 {
   -webkit-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
-/* line 261, ../sass/_utils.scss */
+/* line 263, ../sass/_utils.scss */
 .rotate-315 {
   -webkit-transform: rotate(315deg);
   -ms-transform: rotate(315deg);
@@ -20978,56 +21365,56 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 }
 
 /* small + .text-muted*/
-/* line 266, ../sass/_utils.scss */
+/* line 268, ../sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
 }
 
 /* .h* + .fw-bold */
-/* line 276, ../sass/_utils.scss */
+/* line 278, ../sass/_utils.scss */
 .value1 {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 276, ../sass/_utils.scss */
+/* line 278, ../sass/_utils.scss */
 .value2 {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-/* line 276, ../sass/_utils.scss */
+/* line 278, ../sass/_utils.scss */
 .value3 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 276, ../sass/_utils.scss */
+/* line 278, ../sass/_utils.scss */
 .value4 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* line 276, ../sass/_utils.scss */
+/* line 278, ../sass/_utils.scss */
 .value5 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
 }
 
-/* line 276, ../sass/_utils.scss */
+/* line 278, ../sass/_utils.scss */
 .value6 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* line 284, ../sass/_utils.scss */
+/* line 286, ../sass/_utils.scss */
 .help {
   font-size: 85%;
   color: #999999;
@@ -21303,7 +21690,7 @@ a.bg-sidebar:hover {
   background-color: #0a0a0a;
 }
 
-/* line 333, ../sass/_utils.scss */
+/* line 335, ../sass/_utils.scss */
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -21390,17 +21777,17 @@ a.text-bg-sidebar:hover {
   color: #0a0a0a;
 }
 
-/* line 348, ../sass/_utils.scss */
+/* line 350, ../sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
-/* line 352, ../sass/_utils.scss */
+/* line 354, ../sass/_utils.scss */
 .fs-mini {
   font-size: 13px;
 }
 
-/* line 356, ../sass/_utils.scss */
+/* line 358, ../sass/_utils.scss */
 .fs-sm {
   font-size: 12px;
 }

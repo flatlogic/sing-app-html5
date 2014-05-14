@@ -69,7 +69,7 @@ $(function(){
             this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
             $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax])', '#content', {
                 fragment: '#content',
-                type: 'POST' //prevents caching
+                type: 'POST' //prevents caching todo change to GET for prod
             });
             $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
             $(document).on('pjax:start', $.proxy(this._resetResizeCallbacks, this));
@@ -491,13 +491,20 @@ $(function(){
  */
 function initAppPlugins(){
     /* ========================================================================
-     * Handle transparent inputs
+     * Handle transparent input groups focus
      * ========================================================================
      */
     !function($){
-        $('.input-group-transparent, .input-group-no-border').find('.input-group-addon + .form-control').on('blur focus', function(e){
-           $(this).parents('.input-group')[e.type=='focus' ? 'addClass' : 'removeClass']('focus');
-        });
+
+        $.fn.transparentGroupFocus = function () {
+            return this.each(function () {
+                $(this).find('.input-group-addon + .form-control').on('blur focus', function(e){
+                    $(this).parents('.input-group')[e.type=='focus' ? 'addClass' : 'removeClass']('focus');
+                });
+            })
+        };
+
+        $('.input-group-transparent, .input-group-no-border').transparentGroupFocus();
     }(jQuery);
 
     /* ========================================================================

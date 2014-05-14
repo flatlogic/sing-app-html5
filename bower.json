@@ -19,9 +19,6 @@
     "jQuery-slimScroll": "git://github.com/rochal/jQuery-slimScroll.git",
     "widgster": ">= 0.0.1",
     "pace.js": "git://github.com/HubSpot/pace.git#master",
-
-
-
     "animate.css": ">= 3.0.0",
     "backbone": ">= 1.1.2",
     "jquery.sparkline": "latest",
@@ -50,7 +47,10 @@
     "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#master",
     "bootstrap-application-wizard": "git://github.com/amoffat/bootstrap-application-wizard.git",
     "jquery-ui": "git://github.com/jquery/jquery-ui.git#1.11.0-beta.1",
-    "jquery-ui-touch-punch": "git://github.com/furf/jquery-ui-touch-punch.git"
+    "jquery-ui-touch-punch": "git://github.com/furf/jquery-ui-touch-punch.git",
+    "backbone.paginator": "*",
+    "backgrid": "git://github.com/wyuenho/backgrid.git#master",
+    "backgrid-paginator": "git://github.com/wyuenho/backgrid-paginator.git#master"
   },
   "private": true,
   "ignore": [
@@ -60,6 +60,7 @@
   "resolutions": {
     "jquery": ">= 2.1.0",
     "d3": ">= 3.4.3",
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.1.1",
+    "backgrid": "~0.3.5"
   }
 }

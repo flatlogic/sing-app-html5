@@ -340,7 +340,7 @@
   list-style: none;
   padding: $sidebar-padding-horizontal;
   padding-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
-  font-size: $font-size-base - 1;
+  font-size: $font-size-mini;
   > li{
     > a{
       color: $gray-lighter;
@@ -392,7 +392,7 @@
 }
 
 .sidebar-alerts{
-  font-size: $font-size-base - 1;
+  font-size: $font-size-mini;
   @include transition(opacity $sidebar-transition-time ease-in-out);
   opacity: 1;
 

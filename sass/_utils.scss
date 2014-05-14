@@ -90,6 +90,8 @@
   .input-group-btn:first-child > .dropdown-toggle,
   .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
   .input-group-btn:last-child > .btn-group:not(:last-child) > .btn{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     border-right: none;
   }
 
@@ -350,7 +352,7 @@ $i: 1;
 }
 
 .fs-mini{
-  font-size: $font-size-base - 1;
+  font-size: $font-size-mini;
 }
 
 .fs-sm{
