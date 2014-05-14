@@ -5575,9 +5575,9 @@ input[type="button"].btn-block {
   padding: 6px 12px;
   line-height: 1.428571429;
   text-decoration: none;
-  color: #218bc3;
+  color: #777777;
   background-color: white;
-  border: 1px solid #dddddd;
+  border: 1px solid transparent;
   margin-left: -1px;
 }
 /* line 25, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss */
@@ -5597,9 +5597,9 @@ input[type="button"].btn-block {
 .pagination > li > a:hover, .pagination > li > a:focus,
 .pagination > li > span:hover,
 .pagination > li > span:focus {
-  color: #165c82;
+  color: #555555;
   background-color: #eeeeee;
-  border-color: #dddddd;
+  border-color: transparent;
 }
 /* line 51, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss */
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
@@ -5607,9 +5607,9 @@ input[type="button"].btn-block {
 .pagination > .active > span:hover,
 .pagination > .active > span:focus {
   z-index: 2;
-  color: white;
-  background-color: #618fb0;
-  border-color: #618fb0;
+  color: #555555;
+  background-color: #eeeeee;
+  border-color: transparent;
   cursor: default;
 }
 /* line 63, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss */
@@ -5621,7 +5621,7 @@ input[type="button"].btn-block {
 .pagination > .disabled > a:focus {
   color: #999999;
   background-color: white;
-  border-color: #dddddd;
+  border-color: transparent;
   cursor: not-allowed;
 }
 
@@ -5689,7 +5689,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding: 5px 14px;
   background-color: white;
-  border: 1px solid #dddddd;
+  border: 1px solid transparent;
   border-radius: 15px;
 }
 /* line 23, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pager.scss */
@@ -14829,7 +14829,12 @@ legend {
   border-radius: 2px;
 }
 
-/* line 112, ../sass/_bootstrap-override.scss */
+/* line 108, ../sass/_bootstrap-override.scss */
+.input-rounded {
+  border-radius: 4px;
+}
+
+/* line 116, ../sass/_bootstrap-override.scss */
 .table td > .checkbox,
 .table th > .checkbox {
   position: relative;
@@ -14838,7 +14843,7 @@ legend {
   margin-bottom: 0;
   padding-left: 0;
 }
-/* line 119, ../sass/_bootstrap-override.scss */
+/* line 123, ../sass/_bootstrap-override.scss */
 .table td > .checkbox > label:before,
 .table td > .checkbox > label:after,
 .table th > .checkbox > label:before,
@@ -14846,19 +14851,19 @@ legend {
   margin-left: 0;
 }
 
-/* line 125, ../sass/_bootstrap-override.scss */
+/* line 129, ../sass/_bootstrap-override.scss */
 .table > thead > tr > th {
   font-weight: 600;
   text-transform: uppercase;
   border-bottom-width: 1px;
 }
 
-/* line 131, ../sass/_bootstrap-override.scss */
+/* line 135, ../sass/_bootstrap-override.scss */
 .table-bordered th {
   background-color: #eeeeee;
 }
 
-/* line 140, ../sass/_bootstrap-override.scss */
+/* line 144, ../sass/_bootstrap-override.scss */
 .table-lg > thead > tr > th,
 .table-lg > thead > tr > td,
 .table-lg > tbody > tr > th,
@@ -14869,45 +14874,50 @@ legend {
 }
 
 /* line 152, ../sass/_bootstrap-override.scss */
+.table-hover > tbody > tr:hover .progress {
+  background-color: white;
+}
+
+/* line 160, ../sass/_bootstrap-override.scss */
 .dropdown-menu {
   font-size: 13px;
 }
-/* line 155, ../sass/_bootstrap-override.scss */
+/* line 163, ../sass/_bootstrap-override.scss */
 .dropdown-menu > li > a {
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-/* line 165, ../sass/_bootstrap-override.scss */
+/* line 173, ../sass/_bootstrap-override.scss */
 .navbar {
   border: none;
   font-size: 13px;
   font-weight: 500;
 }
-/* line 170, ../sass/_bootstrap-override.scss */
+/* line 178, ../sass/_bootstrap-override.scss */
 .navbar h5 {
   font-size: 13px;
 }
-/* line 174, ../sass/_bootstrap-override.scss */
+/* line 182, ../sass/_bootstrap-override.scss */
 .navbar .deemphasize {
   font-size: 12px;
 }
 
-/* line 180, ../sass/_bootstrap-override.scss */
+/* line 188, ../sass/_bootstrap-override.scss */
 .navbar-form .form-control {
   font-size: 13px;
 }
-/* line 184, ../sass/_bootstrap-override.scss */
+/* line 192, ../sass/_bootstrap-override.scss */
 .navbar-form .input-group {
   width: 250px;
 }
-/* line 188, ../sass/_bootstrap-override.scss */
+/* line 196, ../sass/_bootstrap-override.scss */
 .navbar-form .input-group-addon {
   color: #666666;
 }
 
 @media (min-width: 768px) {
-  /* line 195, ../sass/_bootstrap-override.scss */
+  /* line 203, ../sass/_bootstrap-override.scss */
   .container > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -14917,83 +14927,83 @@ legend {
   }
 }
 
-/* line 204, ../sass/_bootstrap-override.scss */
+/* line 212, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav {
   float: left;
   margin-left: 15px;
   margin-right: 15px;
 }
-/* line 207, ../sass/_bootstrap-override.scss */
+/* line 215, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav.navbar-right {
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 204, ../sass/_bootstrap-override.scss */
+  /* line 212, ../sass/_bootstrap-override.scss */
   .navbar-header > .navbar-nav {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  /* line 218, ../sass/_bootstrap-override.scss */
+  /* line 226, ../sass/_bootstrap-override.scss */
   .navbar-header > .navbar-nav + .navbar-brand {
     height: 60px;
     line-height: 30px;
   }
 }
-/* line 224, ../sass/_bootstrap-override.scss */
+/* line 232, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav > li {
   float: left;
 }
-/* line 226, ../sass/_bootstrap-override.scss */
+/* line 234, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav > li > a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
-/* line 238, ../sass/_bootstrap-override.scss */
+/* line 246, ../sass/_bootstrap-override.scss */
 .breadcrumb {
   color: #999999;
 }
-/* line 241, ../sass/_bootstrap-override.scss */
+/* line 249, ../sass/_bootstrap-override.scss */
 .breadcrumb > .active {
   font-weight: 600;
 }
-/* line 245, ../sass/_bootstrap-override.scss */
+/* line 253, ../sass/_bootstrap-override.scss */
 .content .breadcrumb {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 255, ../sass/_bootstrap-override.scss */
+/* line 263, ../sass/_bootstrap-override.scss */
 .btn-rounded {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
-/* line 263, ../sass/_bootstrap-override.scss */
+/* line 271, ../sass/_bootstrap-override.scss */
 .label {
   font-size: 11px;
 }
 
-/* line 272, ../sass/_bootstrap-override.scss */
+/* line 280, ../sass/_bootstrap-override.scss */
 .btn-toolbar {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 281, ../sass/_bootstrap-override.scss */
+/* line 289, ../sass/_bootstrap-override.scss */
 .progress-sm {
   height: 10px;
   margin-bottom: 10px;
 }
 
-/* line 286, ../sass/_bootstrap-override.scss */
+/* line 294, ../sass/_bootstrap-override.scss */
 .progress-xs {
   height: 5px;
   margin-bottom: 10px;
 }
 
-/* line 292, ../sass/_bootstrap-override.scss */
+/* line 300, ../sass/_bootstrap-override.scss */
 .progress-bar-gray {
   background-color: #555555;
 }
@@ -15003,7 +15013,7 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 296, ../sass/_bootstrap-override.scss */
+/* line 304, ../sass/_bootstrap-override.scss */
 .progress-bar-gray-light {
   background-color: #999999;
 }
@@ -15013,40 +15023,55 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 307, ../sass/_bootstrap-override.scss */
+/* line 315, ../sass/_bootstrap-override.scss */
 .widget-body > .list-group .list-group-item {
   border-width: 1px 0;
 }
-/* line 312, ../sass/_bootstrap-override.scss */
+/* line 320, ../sass/_bootstrap-override.scss */
 .widget-body.no-padding > .list-group {
   margin: 0;
 }
 
-/* line 319, ../sass/_bootstrap-override.scss */
+/* line 327, ../sass/_bootstrap-override.scss */
 .list-group-lg .list-group-item {
   padding: 15px 15px;
 }
-/* line 323, ../sass/_bootstrap-override.scss */
+/* line 331, ../sass/_bootstrap-override.scss */
 .list-group:last-of-type .list-group-item:last-child {
   border-bottom: 0;
 }
 
-/* line 333, ../sass/_bootstrap-override.scss */
+/* line 341, ../sass/_bootstrap-override.scss */
 .dropdown-menu > .panel {
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-/* line 339, ../sass/_bootstrap-override.scss */
+/* line 347, ../sass/_bootstrap-override.scss */
 .panel-heading {
   border-color: #dddddd;
 }
 
-/* line 347, ../sass/_bootstrap-override.scss */
+/* line 355, ../sass/_bootstrap-override.scss */
 .tooltip-inner {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+}
+
+/* line 363, ../sass/_bootstrap-override.scss */
+.pagination {
+  font-weight: 400;
+}
+/* line 366, ../sass/_bootstrap-override.scss */
+.pagination > li {
+  display: inline;
+}
+/* line 368, ../sass/_bootstrap-override.scss */
+.pagination > li > a,
+.pagination > li > span {
+  border-radius: 4px;
+  margin: 0 2px;
 }
 
 /*
@@ -19033,6 +19058,540 @@ li.wizard-nav-item {
   border: 0;
 }
 
+/*
+ * Table styles
+ */
+/* line 4, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  border-collapse: separate;
+  border-spacing: 0;
+  /*
+   * Header and footer styles
+   */
+  /*
+   * Body styles
+   */
+}
+
+/* line 17, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead th,
+table.dataTable tfoot th {
+  font-weight: bold;
+}
+
+/* line 21, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead th,
+table.dataTable thead td {
+  padding: 10px 18px;
+  border-bottom: 1px solid #111111;
+}
+
+/* line 26, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead th:active,
+table.dataTable thead td:active {
+  outline: none;
+}
+
+/* line 30, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable tfoot th,
+table.dataTable tfoot td {
+  padding: 10px 18px 6px 18px;
+  border-top: 1px solid #111111;
+}
+
+/* line 35, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting {
+  cursor: pointer;
+  *cursor: hand;
+}
+
+/* line 41, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead .sorting {
+  background: url("../images/sort_both.png") no-repeat center right;
+}
+
+/* line 44, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead .sorting_asc {
+  background: url("../images/sort_asc.png") no-repeat center right;
+}
+
+/* line 47, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead .sorting_desc {
+  background: url("../images/sort_desc.png") no-repeat center right;
+}
+
+/* line 50, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead .sorting_asc_disabled {
+  background: url("../images/sort_asc_disabled.png") no-repeat center right;
+}
+
+/* line 53, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable thead .sorting_desc_disabled {
+  background: url("../images/sort_desc_disabled.png") no-repeat center right;
+}
+
+/* line 56, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable tbody tr {
+  background-color: white;
+}
+
+/* line 59, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable tbody tr.selected {
+  background-color: #b0bed9;
+}
+
+/* line 62, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: 8px 10px;
+}
+
+/* line 66, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable th.center,
+table.dataTable td.center,
+table.dataTable td.dataTables_empty {
+  text-align: center;
+}
+
+/* line 71, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable th.right,
+table.dataTable td.right {
+  text-align: right;
+}
+
+/* line 75, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
+  border-top: 1px solid #dddddd;
+}
+
+/* line 78, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.row-border tbody tr:first-child th,
+table.dataTable.row-border tbody tr:first-child td, table.dataTable.display tbody tr:first-child th,
+table.dataTable.display tbody tr:first-child td {
+  border-top: none;
+}
+
+/* line 83, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.cell-border tbody th, table.dataTable.cell-border tbody td {
+  border-top: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+/* line 87, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.cell-border tbody tr th:first-child,
+table.dataTable.cell-border tbody tr td:first-child {
+  border-left: 1px solid #dddddd;
+}
+
+/* line 91, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.cell-border tbody tr:first-child th,
+table.dataTable.cell-border tbody tr:first-child td {
+  border-top: none;
+}
+
+/* line 95, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+  background-color: #f9f9f9;
+}
+
+/* line 98, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.stripe tbody tr.odd.selected, table.dataTable.display tbody tr.odd.selected {
+  background-color: #abb9d3;
+}
+
+/* line 101, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.hover tbody tr:hover,
+table.dataTable.hover tbody tr.odd:hover,
+table.dataTable.hover tbody tr.even:hover, table.dataTable.display tbody tr:hover,
+table.dataTable.display tbody tr.odd:hover,
+table.dataTable.display tbody tr.even:hover {
+  background-color: whitesmoke;
+}
+
+/* line 108, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.hover tbody tr:hover.selected,
+table.dataTable.hover tbody tr.odd:hover.selected,
+table.dataTable.hover tbody tr.even:hover.selected, table.dataTable.display tbody tr:hover.selected,
+table.dataTable.display tbody tr.odd:hover.selected,
+table.dataTable.display tbody tr.even:hover.selected {
+  background-color: #a9b7d1;
+}
+
+/* line 115, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.order-column tbody tr > .sorting_1,
+table.dataTable.order-column tbody tr > .sorting_2,
+table.dataTable.order-column tbody tr > .sorting_3, table.dataTable.display tbody tr > .sorting_1,
+table.dataTable.display tbody tr > .sorting_2,
+table.dataTable.display tbody tr > .sorting_3 {
+  background-color: #f9f9f9;
+}
+
+/* line 122, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.order-column tbody tr.selected > .sorting_1,
+table.dataTable.order-column tbody tr.selected > .sorting_2,
+table.dataTable.order-column tbody tr.selected > .sorting_3, table.dataTable.display tbody tr.selected > .sorting_1,
+table.dataTable.display tbody tr.selected > .sorting_2,
+table.dataTable.display tbody tr.selected > .sorting_3 {
+  background-color: #acbad4;
+}
+
+/* line 129, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.odd > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+  background-color: #f1f1f1;
+}
+
+/* line 132, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.odd > .sorting_2, table.dataTable.order-column.stripe tbody tr.odd > .sorting_2 {
+  background-color: #f3f3f3;
+}
+
+/* line 135, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.odd > .sorting_3, table.dataTable.order-column.stripe tbody tr.odd > .sorting_3 {
+  background-color: whitesmoke;
+}
+
+/* line 138, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.odd.selected > .sorting_1, table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_1 {
+  background-color: #a6b3cd;
+}
+
+/* line 141, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.odd.selected > .sorting_2, table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_2 {
+  background-color: #a7b5ce;
+}
+
+/* line 144, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.odd.selected > .sorting_3, table.dataTable.order-column.stripe tbody tr.odd.selected > .sorting_3 {
+  background-color: #a9b6d0;
+}
+
+/* line 147, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.even > .sorting_1, table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+  background-color: #f9f9f9;
+}
+
+/* line 150, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.even > .sorting_2, table.dataTable.order-column.stripe tbody tr.even > .sorting_2 {
+  background-color: #fbfbfb;
+}
+
+/* line 153, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.even > .sorting_3, table.dataTable.order-column.stripe tbody tr.even > .sorting_3 {
+  background-color: #fdfdfd;
+}
+
+/* line 156, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.even.selected > .sorting_1, table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_1 {
+  background-color: #acbad4;
+}
+
+/* line 159, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.even.selected > .sorting_2, table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_2 {
+  background-color: #adbbd6;
+}
+
+/* line 162, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr.even.selected > .sorting_3, table.dataTable.order-column.stripe tbody tr.even.selected > .sorting_3 {
+  background-color: #afbdd8;
+}
+
+/* line 165, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr:hover > .sorting_1,
+table.dataTable.display tbody tr.odd:hover > .sorting_1,
+table.dataTable.display tbody tr.even:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1,
+table.dataTable.order-column.hover tbody tr.odd:hover > .sorting_1,
+table.dataTable.order-column.hover tbody tr.even:hover > .sorting_1 {
+  background-color: #eaeaea;
+}
+
+/* line 172, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr:hover > .sorting_2,
+table.dataTable.display tbody tr.odd:hover > .sorting_2,
+table.dataTable.display tbody tr.even:hover > .sorting_2, table.dataTable.order-column.hover tbody tr:hover > .sorting_2,
+table.dataTable.order-column.hover tbody tr.odd:hover > .sorting_2,
+table.dataTable.order-column.hover tbody tr.even:hover > .sorting_2 {
+  background-color: #ebebeb;
+}
+
+/* line 179, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr:hover > .sorting_3,
+table.dataTable.display tbody tr.odd:hover > .sorting_3,
+table.dataTable.display tbody tr.even:hover > .sorting_3, table.dataTable.order-column.hover tbody tr:hover > .sorting_3,
+table.dataTable.order-column.hover tbody tr.odd:hover > .sorting_3,
+table.dataTable.order-column.hover tbody tr.even:hover > .sorting_3 {
+  background-color: #eeeeee;
+}
+
+/* line 186, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr:hover.selected > .sorting_1,
+table.dataTable.display tbody tr.odd:hover.selected > .sorting_1,
+table.dataTable.display tbody tr.even:hover.selected > .sorting_1, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_1,
+table.dataTable.order-column.hover tbody tr.odd:hover.selected > .sorting_1,
+table.dataTable.order-column.hover tbody tr.even:hover.selected > .sorting_1 {
+  background-color: #a1aec7;
+}
+
+/* line 193, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr:hover.selected > .sorting_2,
+table.dataTable.display tbody tr.odd:hover.selected > .sorting_2,
+table.dataTable.display tbody tr.even:hover.selected > .sorting_2, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_2,
+table.dataTable.order-column.hover tbody tr.odd:hover.selected > .sorting_2,
+table.dataTable.order-column.hover tbody tr.even:hover.selected > .sorting_2 {
+  background-color: #a2afc8;
+}
+
+/* line 200, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.display tbody tr:hover.selected > .sorting_3,
+table.dataTable.display tbody tr.odd:hover.selected > .sorting_3,
+table.dataTable.display tbody tr.even:hover.selected > .sorting_3, table.dataTable.order-column.hover tbody tr:hover.selected > .sorting_3,
+table.dataTable.order-column.hover tbody tr.odd:hover.selected > .sorting_3,
+table.dataTable.order-column.hover tbody tr.even:hover.selected > .sorting_3 {
+  background-color: #a4b2cb;
+}
+
+/* line 207, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable.no-footer {
+  border-bottom: 1px solid #111111;
+}
+
+/* line 211, ../vendor/datatables/media/css/jquery.dataTables.css */
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/*
+ * Control feature layout
+ */
+/* line 222, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper {
+  position: relative;
+  clear: both;
+  *zoom: 1;
+  zoom: 1;
+}
+
+/* line 228, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_length {
+  float: left;
+}
+
+/* line 231, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_filter {
+  float: right;
+  text-align: right;
+}
+
+/* line 235, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_filter input {
+  margin-left: 0.5em;
+}
+
+/* line 238, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_info {
+  clear: both;
+  float: left;
+  padding-top: 0.755em;
+}
+
+/* line 243, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+  text-align: right;
+  padding-top: 0.25em;
+}
+
+/* line 248, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  *cursor: hand;
+  color: #333333 !important;
+  border: 1px solid transparent;
+}
+
+/* line 261, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #333333 !important;
+  border: 1px solid #cacaca;
+  background-color: white;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, gainsboro));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, white 0%, gainsboro 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, white 0%, gainsboro 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, white 0%, gainsboro 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, white 0%, gainsboro 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #dcdcdc 100%);
+  /* W3C */
+}
+
+/* line 278, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  cursor: default;
+  color: #666 !important;
+  border: 1px solid transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* line 285, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  color: white !important;
+  border: 1px solid #111111;
+  background-color: #585858;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111111));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #585858 0%, #111111 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, #585858 0%, #111111 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, #585858 0%, #111111 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, #585858 0%, #111111 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, #585858 0%, #111111 100%);
+  /* W3C */
+}
+
+/* line 302, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_paginate .paginate_button:active {
+  outline: none;
+  background-color: #2b2b2b;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2b2b2b), color-stop(100%, #0c0c0c));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(top, #2b2b2b 0%, #0c0c0c 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to bottom, #2b2b2b 0%, #0c0c0c 100%);
+  /* W3C */
+  box-shadow: inset 0 0 3px #111;
+}
+
+/* line 319, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 40px;
+  margin-left: -50%;
+  margin-top: -25px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(25%, rgba(255, 255, 255, 0.9)), color-stop(75%, rgba(255, 255, 255, 0.9)), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 11.10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(255, 255, 255, 0.9) 75%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */
+}
+
+/* line 344, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color: #333333;
+}
+
+/* line 351, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_scroll {
+  clear: both;
+}
+
+/* line 354, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
+  *margin-top: -1px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 358, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody th > div.dataTables_sizing,
+.dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody td > div.dataTables_sizing {
+  height: 0;
+  overflow: hidden;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* line 365, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+  border-bottom: 1px solid #111111;
+}
+
+/* line 368, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper.no-footer div.dataTables_scrollHead table,
+.dataTables_wrapper.no-footer div.dataTables_scrollBody table {
+  border-bottom: none;
+}
+
+/* line 372, ../vendor/datatables/media/css/jquery.dataTables.css */
+.dataTables_wrapper:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 381, ../vendor/datatables/media/css/jquery.dataTables.css */
+  .dataTables_wrapper .dataTables_info,
+  .dataTables_wrapper .dataTables_paginate {
+    float: none;
+    text-align: center;
+  }
+
+  /* line 386, ../vendor/datatables/media/css/jquery.dataTables.css */
+  .dataTables_wrapper .dataTables_paginate {
+    margin-top: 0.5em;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 391, ../vendor/datatables/media/css/jquery.dataTables.css */
+  .dataTables_wrapper .dataTables_length,
+  .dataTables_wrapper .dataTables_filter {
+    float: none;
+    text-align: center;
+  }
+
+  /* line 396, ../vendor/datatables/media/css/jquery.dataTables.css */
+  .dataTables_wrapper .dataTables_filter {
+    margin-top: 0.5em;
+  }
+}
 /**
  * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
@@ -19794,58 +20353,60 @@ input.parsley-error {
 }
 /* line 697, ../sass/_custom-libs-override.scss */
 .table-editable + .backgrid-paginator > ul {
+  font-weight: 400;
   display: inline-block;
   padding-left: 0;
   margin: 20px 0;
   border-radius: 4px;
 }
-/* line 703, ../sass/_custom-libs-override.scss */
+/* line 704, ../sass/_custom-libs-override.scss */
 .table-editable + .backgrid-paginator > ul > li {
   display: inline;
 }
-/* line 705, ../sass/_custom-libs-override.scss */
+/* line 706, ../sass/_custom-libs-override.scss */
 .table-editable + .backgrid-paginator > ul > li > a,
 .table-editable + .backgrid-paginator > ul > li > span {
   position: relative;
   float: left;
   line-height: 1.428571429;
   text-decoration: none;
-  color: #218bc3;
+  color: #777777;
   background-color: white;
-  border: 1px solid #dddddd;
-  margin-left: -1px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 0 2px;
 }
-/* line 716, ../sass/_custom-libs-override.scss */
+/* line 718, ../sass/_custom-libs-override.scss */
 .table-editable + .backgrid-paginator > ul > li > a > .fa-lg,
 .table-editable + .backgrid-paginator > ul > li > span > .fa-lg {
   position: relative;
   top: -1px;
 }
-/* line 722, ../sass/_custom-libs-override.scss */
+/* line 724, ../sass/_custom-libs-override.scss */
 .table-editable + .backgrid-paginator > ul > li:first-child > a,
 .table-editable + .backgrid-paginator > ul > li:first-child > span {
   margin-left: 0;
 }
-/* line 731, ../sass/_custom-libs-override.scss */
+/* line 733, ../sass/_custom-libs-override.scss */
 .table-editable + .backgrid-paginator > ul > li > a:hover, .table-editable + .backgrid-paginator > ul > li > a:focus,
 .table-editable + .backgrid-paginator > ul > li > span:hover,
 .table-editable + .backgrid-paginator > ul > li > span:focus {
-  color: #165c82;
+  color: #555555;
   background-color: #eeeeee;
-  border-color: #dddddd;
+  border-color: transparent;
 }
-/* line 741, ../sass/_custom-libs-override.scss */
+/* line 743, ../sass/_custom-libs-override.scss */
 .table-editable + .backgrid-paginator > ul > .active > a, .table-editable + .backgrid-paginator > ul > .active > a:hover, .table-editable + .backgrid-paginator > ul > .active > a:focus,
 .table-editable + .backgrid-paginator > ul > .active > span,
 .table-editable + .backgrid-paginator > ul > .active > span:hover,
 .table-editable + .backgrid-paginator > ul > .active > span:focus {
   z-index: 2;
-  color: white;
-  background-color: #618fb0;
-  border-color: #618fb0;
+  color: #555555;
+  background-color: #eeeeee;
+  border-color: transparent;
   cursor: default;
 }
-/* line 753, ../sass/_custom-libs-override.scss */
+/* line 755, ../sass/_custom-libs-override.scss */
 .table-editable + .backgrid-paginator > ul > .disabled > span,
 .table-editable + .backgrid-paginator > ul > .disabled > span:hover,
 .table-editable + .backgrid-paginator > ul > .disabled > span:focus,
@@ -19854,7 +20415,7 @@ input.parsley-error {
 .table-editable + .backgrid-paginator > ul > .disabled > a:focus {
   color: #999999;
   background-color: white;
-  border-color: #dddddd;
+  border-color: transparent;
   cursor: not-allowed;
 }
 /* line 557, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
@@ -19874,6 +20435,66 @@ input.parsley-error {
 .table-editable + .backgrid-paginator > ul > li:last-child > span {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
+}
+
+/***********************************/
+/**          Datatables           **/
+/***********************************/
+/* line 776, ../sass/_custom-libs-override.scss */
+table.dataTable thead .sorting {
+  background: url("../vendor/datatables/media/images/sort_both.png") no-repeat center right;
+}
+
+/* line 779, ../sass/_custom-libs-override.scss */
+table.dataTable thead .sorting_asc {
+  background: url("../vendor/datatables/media/images/sort_asc.png") no-repeat center right;
+}
+
+/* line 782, ../sass/_custom-libs-override.scss */
+table.dataTable thead .sorting_desc {
+  background: url("../vendor/datatables/media/images/sort_desc.png") no-repeat center right;
+}
+
+/* line 785, ../sass/_custom-libs-override.scss */
+table.dataTable thead .sorting_asc_disabled {
+  background: url("../vendor/datatables/media/images/sort_asc_disabled.png") no-repeat center right;
+}
+
+/* line 788, ../sass/_custom-libs-override.scss */
+table.dataTable thead .sorting_desc_disabled {
+  background: url("../vendor/datatables/media/images/sort_desc_disabled.png") no-repeat center right;
+}
+
+/* line 792, ../sass/_custom-libs-override.scss */
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable.no-footer {
+  border-bottom-color: transparent;
+}
+
+/* line 798, ../sass/_custom-libs-override.scss */
+table.dataTable thead th,
+table.dataTable tfoot th {
+  font-weight: 600;
+}
+
+/* line 803, ../sass/_custom-libs-override.scss */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color: #555555;
+}
+
+/* line 811, ../sass/_custom-libs-override.scss */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  font-size: 13px;
+  color: #777777;
 }
 
 /**
@@ -20827,64 +21448,89 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 .input-group-no-border .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-transparent .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 .input-group-no-border .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   border-left: none;
   padding-left: 0;
 }
-/* line 109, ../sass/_utils.scss */
+/* line 111, ../sass/_utils.scss */
 .input-group-transparent .input-group-addon, .input-group-no-border .input-group-addon {
   background-color: white;
   -webkit-transition: border-color ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s;
 }
-/* line 114, ../sass/_utils.scss */
+/* line 116, ../sass/_utils.scss */
 .input-group-transparent .form-control:focus + .input-group-addon, .input-group-no-border .form-control:focus + .input-group-addon, .input-group-transparent.focus .input-group-addon, .focus.input-group-no-border .input-group-addon {
   border-color: #4d90fe;
 }
 
-/* line 120, ../sass/_utils.scss */
+/* line 122, ../sass/_utils.scss */
 .input-no-border, .input-group-no-border .form-control,
 .input-group-no-border .input-group-addon {
   border: none;
   -webkit-transition: background-color ease-in-out 0.15s;
   transition: background-color ease-in-out 0.15s;
 }
-/* line 124, ../sass/_utils.scss */
+/* line 126, ../sass/_utils.scss */
 .input-no-border:focus, .input-group-no-border .form-control:focus,
 .input-group-no-border .input-group-addon:focus,
 .input-group-no-border .form-control:focus + .input-group-addon, .input-group-no-border.focus .input-group-addon {
   background-color: #f1f1f1;
 }
 
-/* line 144, ../sass/_utils.scss */
+/* line 147, ../sass/_utils.scss */
+.input-group-rounded .form-control:first-child,
+.input-group-rounded .input-group-addon:first-child,
+.input-group-rounded .input-group-btn:first-child > .btn,
+.input-group-rounded .input-group-btn:first-child > .btn-group > .btn,
+.input-group-rounded .input-group-btn:first-child > .dropdown-toggle,
+.input-group-rounded .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.input-group-rounded .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* line 158, ../sass/_utils.scss */
+.input-group-rounded .form-control:last-child,
+.input-group-rounded .input-group-addon:last-child,
+.input-group-rounded .input-group-btn:last-child > .btn,
+.input-group-rounded .input-group-btn:last-child > .btn-group > .btn,
+.input-group-rounded .input-group-btn:last-child > .dropdown-toggle,
+.input-group-rounded .input-group-btn:first-child > .btn:not(:first-child),
+.input-group-rounded .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 170, ../sass/_utils.scss */
 .chart-overflow-bottom {
   margin: 0 -20px -15px;
 }
 
-/* line 148, ../sass/_utils.scss */
+/* line 174, ../sass/_utils.scss */
 .globe {
   font-size: 64px;
 }
-/* line 150, ../sass/_utils.scss */
+/* line 176, ../sass/_utils.scss */
 .globe > i {
   position: relative;
 }
-/* line 152, ../sass/_utils.scss */
+/* line 178, ../sass/_utils.scss */
 .globe > i > i {
   position: absolute;
   left: 0;
 }
 
-/* line 160, ../sass/_utils.scss */
+/* line 186, ../sass/_utils.scss */
 .thin-scroll::-webkit-scrollbar {
   height: 8px;
   width: 8px;
 }
-/* line 164, ../sass/_utils.scss */
+/* line 190, ../sass/_utils.scss */
 .thin-scroll::-webkit-scrollbar:hover {
   background-color: #e9e9e9;
   border: none;
 }
-/* line 168, ../sass/_utils.scss */
+/* line 194, ../sass/_utils.scss */
 .thin-scroll::-webkit-scrollbar-thumb {
   border: 0;
   background-clip: padding-box;
@@ -20892,76 +21538,76 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
   box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
 }
-/* line 174, ../sass/_utils.scss */
+/* line 200, ../sass/_utils.scss */
 .thin-scroll::-webkit-scrollbar-thumb:hover {
   background-color: #999999;
 }
 
 @-moz-keyframes bg-attention {
-  /* line 180, ../sass/_utils.scss */
+  /* line 206, ../sass/_utils.scss */
   0% {
     background-color: #fdf7e6;
   }
 
-  /* line 183, ../sass/_utils.scss */
+  /* line 209, ../sass/_utils.scss */
   5% {
     background-color: #fae8b6;
   }
 
-  /* line 186, ../sass/_utils.scss */
+  /* line 212, ../sass/_utils.scss */
   0% {
     background-color: transparent;
   }
 }
 @-webkit-keyframes bg-attention {
-  /* line 180, ../sass/_utils.scss */
+  /* line 206, ../sass/_utils.scss */
   0% {
     background-color: #fdf7e6;
   }
 
-  /* line 183, ../sass/_utils.scss */
+  /* line 209, ../sass/_utils.scss */
   5% {
     background-color: #fae8b6;
   }
 
-  /* line 186, ../sass/_utils.scss */
+  /* line 212, ../sass/_utils.scss */
   0% {
     background-color: transparent;
   }
 }
 @keyframes bg-attention {
-  /* line 180, ../sass/_utils.scss */
+  /* line 206, ../sass/_utils.scss */
   0% {
     background-color: #fdf7e6;
   }
 
-  /* line 183, ../sass/_utils.scss */
+  /* line 209, ../sass/_utils.scss */
   5% {
     background-color: #fae8b6;
   }
 
-  /* line 186, ../sass/_utils.scss */
+  /* line 212, ../sass/_utils.scss */
   0% {
     background-color: transparent;
   }
 }
-/* line 191, ../sass/_utils.scss */
+/* line 217, ../sass/_utils.scss */
 .bg-attention {
   -webkit-animation: bg-attention 10s;
   animation: bg-attention 10s;
 }
 
-/* line 198, ../sass/_utils.scss */
+/* line 224, ../sass/_utils.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 202, ../sass/_utils.scss */
+/* line 228, ../sass/_utils.scss */
 .text-align-right {
   text-align: right;
 }
 
-/* line 206, ../sass/_utils.scss */
+/* line 232, ../sass/_utils.scss */
 .no-margin {
   margin: 0;
 }
@@ -21306,58 +21952,58 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   width: -200px;
 }
 
-/* line 227, ../sass/_utils.scss */
+/* line 253, ../sass/_utils.scss */
 .no-border {
   border: none;
 }
 
-/* line 231, ../sass/_utils.scss */
+/* line 257, ../sass/_utils.scss */
 .overflow-hidden {
   overflow: hidden;
 }
 
-/* line 235, ../sass/_utils.scss */
+/* line 261, ../sass/_utils.scss */
 .fw-semi-bold {
   font-weight: 600;
 }
 
-/* line 239, ../sass/_utils.scss */
+/* line 265, ../sass/_utils.scss */
 .fw-normal {
   font-weight: 400;
 }
 
-/* line 243, ../sass/_utils.scss */
+/* line 269, ../sass/_utils.scss */
 .fw-bold {
   font-weight: 700;
 }
 
-/* line 247, ../sass/_utils.scss */
+/* line 273, ../sass/_utils.scss */
 .fw-thin {
   font-weight: 300;
 }
 
-/* line 251, ../sass/_utils.scss */
+/* line 277, ../sass/_utils.scss */
 .rotate-45 {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
-/* line 255, ../sass/_utils.scss */
+/* line 281, ../sass/_utils.scss */
 .rotate-135 {
   -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-/* line 259, ../sass/_utils.scss */
+/* line 285, ../sass/_utils.scss */
 .rotate-225 {
   -webkit-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 
-/* line 263, ../sass/_utils.scss */
+/* line 289, ../sass/_utils.scss */
 .rotate-315 {
   -webkit-transform: rotate(315deg);
   -ms-transform: rotate(315deg);
@@ -21365,56 +22011,56 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 }
 
 /* small + .text-muted*/
-/* line 268, ../sass/_utils.scss */
+/* line 294, ../sass/_utils.scss */
 .deemphasize {
   font-size: 85%;
   color: #999999;
 }
 
 /* .h* + .fw-bold */
-/* line 278, ../sass/_utils.scss */
+/* line 304, ../sass/_utils.scss */
 .value1 {
   margin: 0;
   font-size: 36px;
   font-weight: 700;
 }
 
-/* line 278, ../sass/_utils.scss */
+/* line 304, ../sass/_utils.scss */
 .value2 {
   margin: 0;
   font-size: 30px;
   font-weight: 700;
 }
 
-/* line 278, ../sass/_utils.scss */
+/* line 304, ../sass/_utils.scss */
 .value3 {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
 
-/* line 278, ../sass/_utils.scss */
+/* line 304, ../sass/_utils.scss */
 .value4 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
 }
 
-/* line 278, ../sass/_utils.scss */
+/* line 304, ../sass/_utils.scss */
 .value5 {
   margin: 0;
   font-size: 14px;
   font-weight: 700;
 }
 
-/* line 278, ../sass/_utils.scss */
+/* line 304, ../sass/_utils.scss */
 .value6 {
   margin: 0;
   font-size: 12px;
   font-weight: 700;
 }
 
-/* line 286, ../sass/_utils.scss */
+/* line 312, ../sass/_utils.scss */
 .help {
   font-size: 85%;
   color: #999999;
@@ -21690,7 +22336,7 @@ a.bg-sidebar:hover {
   background-color: #0a0a0a;
 }
 
-/* line 335, ../sass/_utils.scss */
+/* line 361, ../sass/_utils.scss */
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -21777,17 +22423,17 @@ a.text-bg-sidebar:hover {
   color: #0a0a0a;
 }
 
-/* line 350, ../sass/_utils.scss */
+/* line 376, ../sass/_utils.scss */
 .text-light {
   opacity: .8;
 }
 
-/* line 354, ../sass/_utils.scss */
+/* line 380, ../sass/_utils.scss */
 .fs-mini {
   font-size: 13px;
 }
 
-/* line 358, ../sass/_utils.scss */
+/* line 384, ../sass/_utils.scss */
 .fs-sm {
   font-size: 12px;
 }

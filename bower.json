@@ -50,7 +50,8 @@
     "jquery-ui-touch-punch": "git://github.com/furf/jquery-ui-touch-punch.git",
     "backbone.paginator": "*",
     "backgrid": "git://github.com/wyuenho/backgrid.git#master",
-    "backgrid-paginator": "git://github.com/wyuenho/backgrid-paginator.git#master"
+    "backgrid-paginator": "git://github.com/wyuenho/backgrid-paginator.git#master",
+    "datatables": "latest"
   },
   "private": true,
   "ignore": [

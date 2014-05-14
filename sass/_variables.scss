@@ -16,6 +16,7 @@ $gray-dark:              #343434 !default;
 $gray:                   lighten(#000, 33.5%) !default; // #555
 $gray-light:             lighten(#000, 60%) !default;   // #999
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+$gray-semi-light:        #777;
 
 $brand-primary:         #618fb0 !default;
 $brand-success:         #64bd63 !default;
@@ -169,6 +170,26 @@ $breadcrumb-bg:                 transparent !default;
 $breadcrumb-color:              $text-color !default;
 $breadcrumb-active-color:       $text-color !default;
 $breadcrumb-separator:          ">" !default;
+
+//== Pagination
+//
+//##
+
+$pagination-color:                     $gray-semi-light !default;
+$pagination-bg:                        #fff !default;
+$pagination-border:                    transparent !default;
+
+$pagination-hover-color:               $text-color !default;
+$pagination-hover-bg:                  $gray-lighter !default;
+$pagination-hover-border:              transparent !default;
+
+$pagination-active-color:              $text-color !default;
+$pagination-active-bg:                 $gray-lighter !default;
+$pagination-active-border:             transparent !default;
+
+$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           transparent !default;
 
 //-- Iconography
 //

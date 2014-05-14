@@ -102,6 +102,8 @@
   .input-group-btn:last-child > .dropdown-toggle,
   .input-group-btn:first-child > .btn:not(:first-child),
   .input-group-btn:first-child > .btn-group:not(:first-child) > .btn{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     border-left: none;
     padding-left: 0;
   }
@@ -138,6 +140,30 @@
   .form-control:focus + .input-group-addon,
   &.focus .input-group-addon{
     @extend .input-no-border:focus;
+  }
+}
+
+.input-group-rounded{
+  .form-control:first-child,
+  .input-group-addon:first-child,
+  .input-group-btn:first-child > .btn,
+  .input-group-btn:first-child > .btn-group > .btn,
+  .input-group-btn:first-child > .dropdown-toggle,
+  .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+  .input-group-btn:last-child > .btn-group:not(:last-child) > .btn{
+    border-top-left-radius: $border-radius-base;
+    border-bottom-left-radius: $border-radius-base;
+  }
+
+  .form-control:last-child,
+  .input-group-addon:last-child,
+  .input-group-btn:last-child > .btn,
+  .input-group-btn:last-child > .btn-group > .btn,
+  .input-group-btn:last-child > .dropdown-toggle,
+  .input-group-btn:first-child > .btn:not(:first-child),
+  .input-group-btn:first-child > .btn-group:not(:first-child) > .btn{
+    border-top-right-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
   }
 }
 
@@ -341,7 +367,7 @@ $i: 1;
 @include text-emphasis-variant('.text-gray', $gray);
 @include text-emphasis-variant('.text-gray-dark', $gray-dark);
 @include text-emphasis-variant('.text-gray-light', $gray-light);
-@include text-emphasis-variant('.text-semi-muted', #777);
+@include text-emphasis-variant('.text-semi-muted', $gray-semi-light);
 @include text-emphasis-variant('.text-gray-darker', $gray-darker);
 @include text-emphasis-variant('.text-gray-lighter', $gray-lighter);
 @include text-emphasis-variant('.text-bg-sidebar', $sidebar-bg-color);

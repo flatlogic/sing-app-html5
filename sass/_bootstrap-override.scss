@@ -105,6 +105,10 @@ legend {
   @include border-radius($input-border-radius);
 }
 
+.input-rounded{
+  border-radius: $border-radius-base;
+}
+
 //
 // Tables
 // --------------------------------------------------
@@ -143,6 +147,10 @@ legend {
       }
     }
   }
+}
+
+.table-hover > tbody > tr:hover .progress{
+  background-color: $white;
 }
 
 //
@@ -346,4 +354,21 @@ legend {
 
 .tooltip-inner{
   @include border-radius(3px);
+}
+
+//
+// Pagination
+// --------------------------------------------------
+
+.pagination{
+  font-weight: $font-weight-normal;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span{
+      border-radius: $border-radius-base;
+      margin: 0 2px;
+    }
+  }
 }

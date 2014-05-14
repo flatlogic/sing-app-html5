@@ -695,6 +695,7 @@ input.parsley-error{
   }
 
   + .backgrid-paginator > ul{
+    font-weight: $font-weight-normal;
     display: inline-block;
     padding-left: 0;
     margin: $line-height-computed 0;
@@ -711,7 +712,8 @@ input.parsley-error{
         color: $pagination-color;
         background-color: $pagination-bg;
         border: 1px solid $pagination-border;
-        margin-left: -1px;
+        border-radius: $border-radius-base;
+        margin: 0 2px;
 
         > .fa-lg{
           position: relative;
@@ -765,4 +767,52 @@ input.parsley-error{
 
     @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
   }
+}
+
+/***********************************/
+/**          Datatables           **/
+/***********************************/
+
+table.dataTable thead .sorting {
+  background: url("#{$vendor-folder}/datatables/media/images/sort_both.png") no-repeat center right;
+}
+table.dataTable thead .sorting_asc {
+  background: url("#{$vendor-folder}/datatables/media/images/sort_asc.png") no-repeat center right;
+}
+table.dataTable thead .sorting_desc {
+  background: url("#{$vendor-folder}/datatables/media/images/sort_desc.png") no-repeat center right;
+}
+table.dataTable thead .sorting_asc_disabled {
+  background: url("#{$vendor-folder}/datatables/media/images/sort_asc_disabled.png") no-repeat center right;
+}
+table.dataTable thead .sorting_desc_disabled {
+  background: url("#{$vendor-folder}/datatables/media/images/sort_desc_disabled.png") no-repeat center right;
+}
+
+table.dataTable thead th,
+table.dataTable thead td,
+table.dataTable.no-footer{
+  border-bottom-color: transparent;
+}
+
+table.dataTable thead th,
+table.dataTable tfoot th{
+  font-weight: $font-weight-semi-bold;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate{
+  color: $text-color;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate{
+  font-size: $font-size-mini;
+  color: $gray-semi-light;
 }

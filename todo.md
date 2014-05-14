@@ -16,9 +16,9 @@
  6.  ~~maps~~
    1.  ~~vector~~
    2.  ~~google~~
- 7.  tables  
+ 7.  ~~tables~~
    1.  ~~static (no padding tables, like inside panels)~~
-   2.  datatables
+   2.  ~~datatables~~
  8.  ~~grid (widgster)~~
  9.  menu levels
  10.  *widgets (different)*
@@ -27,9 +27,8 @@
    2.  notifications (messenger)
    3.  icons
    4.  buttons
-   5.  tabs
-   6.  accordion
-   7.  list groups
+   5.  tabs & accordion
+   6.  list groups
  12.  ~~forms~~
    1.  ~~elements (slider, *markdown*)~~
    2.  ~~validation~~
