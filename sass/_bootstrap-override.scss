@@ -337,6 +337,44 @@ legend {
 // Panels
 // --------------------------------------------------
 
+.panel {
+  border: none;
+  @include box-shadow(none);
+}
+
+.panel-heading{
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.panel-title{
+  > a{
+    display: block;
+
+    >i{
+      @include transition-transform(.35s ease);
+    }
+
+    &.collapsed{
+      color: $text-muted;
+      &:hover{
+        color: $panel-default-text;
+      }
+      > i{
+        @include rotate(180deg);
+      }
+    }
+  }
+}
+
+// return back h* font-sizes
+h1, .h1 { &.panel-title{ font-size: $font-size-h1; }}
+h2, .h2 { &.panel-title{ font-size: $font-size-h2; }}
+h3, .h3 { &.panel-title{ font-size: $font-size-h3; }}
+h4, .h4 { &.panel-title{ font-size: $font-size-h4; }}
+h5, .h5 { &.panel-title{ font-size: $font-size-h5; }}
+h6, .h6 { &.panel-title{ font-size: $font-size-h6; }}
+
 .panel{
   .dropdown-menu > &{
     margin-top: -5px;

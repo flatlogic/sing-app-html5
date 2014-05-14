@@ -6354,7 +6354,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 7, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel {
   margin-bottom: 20px;
-  background-color: white;
+  background-color: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6602,21 +6602,21 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 224, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
 .panel-default {
-  border-color: #dddddd;
+  border-color: transparent;
 }
 /* line 407, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-default > .panel-heading {
   color: #343434;
-  background-color: whitesmoke;
-  border-color: #dddddd;
+  background-color: #dddddd;
+  border-color: transparent;
 }
 /* line 412, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-default > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #dddddd;
+  border-top-color: transparent;
 }
 /* line 417, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .panel-default > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #dddddd;
+  border-bottom-color: transparent;
 }
 
 /* line 227, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss */
@@ -15041,33 +15041,102 @@ legend {
   border-bottom: 0;
 }
 
-/* line 341, ../sass/_bootstrap-override.scss */
+/* line 340, ../sass/_bootstrap-override.scss */
+.panel {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 345, ../sass/_bootstrap-override.scss */
+.panel-heading {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+/* line 351, ../sass/_bootstrap-override.scss */
+.panel-title > a {
+  display: block;
+}
+/* line 354, ../sass/_bootstrap-override.scss */
+.panel-title > a > i {
+  -webkit-transition: -webkit-transform 0.35s ease;
+  -moz-transition: -moz-transform 0.35s ease;
+  -o-transition: -o-transform 0.35s ease;
+  transition: transform 0.35s ease;
+}
+/* line 358, ../sass/_bootstrap-override.scss */
+.panel-title > a.collapsed {
+  color: #999999;
+}
+/* line 360, ../sass/_bootstrap-override.scss */
+.panel-title > a.collapsed:hover {
+  color: #343434;
+}
+/* line 363, ../sass/_bootstrap-override.scss */
+.panel-title > a.collapsed > i {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 371, ../sass/_bootstrap-override.scss */
+h1.panel-title, .h1.panel-title {
+  font-size: 36px;
+}
+
+/* line 372, ../sass/_bootstrap-override.scss */
+h2.panel-title, .h2.panel-title {
+  font-size: 30px;
+}
+
+/* line 373, ../sass/_bootstrap-override.scss */
+h3.panel-title, .h3.panel-title {
+  font-size: 24px;
+}
+
+/* line 374, ../sass/_bootstrap-override.scss */
+h4.panel-title, .h4.panel-title {
+  font-size: 18px;
+}
+
+/* line 375, ../sass/_bootstrap-override.scss */
+h5.panel-title, .h5.panel-title {
+  font-size: 14px;
+}
+
+/* line 376, ../sass/_bootstrap-override.scss */
+h6.panel-title, .h6.panel-title {
+  font-size: 12px;
+}
+
+/* line 379, ../sass/_bootstrap-override.scss */
 .dropdown-menu > .panel {
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-/* line 347, ../sass/_bootstrap-override.scss */
+/* line 385, ../sass/_bootstrap-override.scss */
 .panel-heading {
   border-color: #dddddd;
 }
 
-/* line 355, ../sass/_bootstrap-override.scss */
+/* line 393, ../sass/_bootstrap-override.scss */
 .tooltip-inner {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 
-/* line 363, ../sass/_bootstrap-override.scss */
+/* line 401, ../sass/_bootstrap-override.scss */
 .pagination {
   font-weight: 400;
 }
-/* line 366, ../sass/_bootstrap-override.scss */
+/* line 404, ../sass/_bootstrap-override.scss */
 .pagination > li {
   display: inline;
 }
-/* line 368, ../sass/_bootstrap-override.scss */
+/* line 406, ../sass/_bootstrap-override.scss */
 .pagination > li > a,
 .pagination > li > span {
   border-radius: 4px;
@@ -19899,7 +19968,7 @@ svg .title {
 .md-editor > .md-header, .md-editor .md-footer {
   display: block;
   padding: 6px 4px;
-  background: whitesmoke;
+  background: #dddddd;
 }
 /* line 304, ../sass/_custom-libs-override.scss */
 .md-editor > .md-header {
@@ -19908,7 +19977,7 @@ svg .title {
 /* line 308, ../sass/_custom-libs-override.scss */
 .md-editor > .md-preview {
   padding: 6px 12px;
-  background: white;
+  background: transparent;
   border-top: 1px dashed #dddddd;
   min-height: 10px;
 }
