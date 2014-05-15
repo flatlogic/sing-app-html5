@@ -52,7 +52,8 @@
     "backgrid": "git://github.com/wyuenho/backgrid.git#master",
     "backgrid-paginator": "git://github.com/wyuenho/backgrid-paginator.git#master",
     "datatables": "latest",
-    "jquery.nestable": "git://github.com/dbushell/Nestable.git"
+    "jquery.nestable": "git://github.com/dbushell/Nestable.git",
+    "messenger": "latest"
   },
   "private": true,
   "ignore": [
