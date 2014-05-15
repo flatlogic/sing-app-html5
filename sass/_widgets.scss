@@ -194,9 +194,6 @@
 /***********************************/
 /**          NEWS LIST           **/
 /**********************************/
-/**
- * Legacy .users-list. Will be removed in next release.
- */
 
 .news-list{
   margin-bottom: 0;
@@ -246,5 +243,30 @@
         color: $link-color;
       }
     }
+  }
+}
+
+
+/***********************************/
+/**      LIST GROUP SORTABLE      **/
+/***********************************/
+
+.list-group-sortable{
+  > .list-group-item{
+    margin-bottom: 0;
+    border-radius: $border-radius-base;
+
+    + .list-group-item{
+      margin-top: $line-height-computed/2;
+    }
+  }
+
+  > .list-group-item-placeholder{
+    border: 1px dashed $gray-light;
+    background-color: $gray-semi-lighter;
+  }
+
+  &:last-of-type > .list-group-item:last-child{
+    border-bottom: 1px solid $list-group-border;
   }
 }

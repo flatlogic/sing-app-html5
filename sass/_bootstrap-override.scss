@@ -441,14 +441,12 @@ legend {
 // --------------------------------------------------
 
 .list-group{
-  .widget-body > &{
+  .widget-body.no-padding > &{
+    margin: 0;
+
     .list-group-item{
       border-width: 1px 0;
     }
-  }
-
-  .widget-body.no-padding > &{
-    margin: 0;
   }
 }
 

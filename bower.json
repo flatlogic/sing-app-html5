@@ -51,7 +51,8 @@
     "backbone.paginator": "*",
     "backgrid": "git://github.com/wyuenho/backgrid.git#master",
     "backgrid-paginator": "git://github.com/wyuenho/backgrid-paginator.git#master",
-    "datatables": "latest"
+    "datatables": "latest",
+    "jquery.nestable": "git://github.com/dbushell/Nestable.git"
   },
   "private": true,
   "ignore": [
