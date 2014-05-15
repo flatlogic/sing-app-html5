@@ -23,7 +23,7 @@
  9.  menu levels
  10.  *widgets (different)*
  11.  ui elements
-   1.  messages & alerts (alerts, labels, popovers, tooltips, modals, progressbars). like [here](http://www.revox.io/webarchv2/messages_notifications.html)
+   1.  ~~messages & alerts (alerts, labels, popovers, tooltips, modals, progressbars). like [here](http://www.revox.io/webarchv2/messages_notifications.html)~~
    2.  ~~notifications (messenger)~~
    3.  ~~icons~~
    4.  buttons

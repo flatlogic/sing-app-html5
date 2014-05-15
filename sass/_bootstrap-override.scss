@@ -421,6 +421,10 @@ legend {
 // Progress bars
 // --------------------------------------------------
 
+.progress-bar{
+  border-radius: $border-radius-base;
+}
+
 .progress-sm{
   height: 10px;
   margin-bottom: $line-height-computed/2;

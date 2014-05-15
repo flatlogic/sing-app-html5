@@ -631,9 +631,14 @@ function initAppFixes(){
         $(document).on('show.bs.modal', function(){
             // force redraw solution
             // http://stackoverflow.com/questions/3485365/how-can-i-force-webkit-to-redraw-repaint-to-propagate-style-changes
+            var body = document.body,
+                scrollTop = body.scrollTop;
             document.body.style.display='none';
             document.body.offsetHeight;
             document.body.style.display='block';
+
+            // preserving scroll position
+            body.scrollTop = scrollTop;
         });
     }
 }
