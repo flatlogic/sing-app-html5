@@ -1,4 +1,15 @@
 /*
+ * Font Awesome 2x spin
+ */
+
+.#{$fa-css-prefix}-spin-fast {
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+
+/*
  * bootstrap-select
  */
 
