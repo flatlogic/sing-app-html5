@@ -394,12 +394,17 @@ legend {
   @include border-radius(6px);
 }
 
+.btn-gray{
+  @include button-variant($text-color, $gray-semi-lighter, darken($gray-semi-lighter, 5%));
+}
+
 
 //
 // Labels
 // --------------------------------------------------
 .label{
   font-size: 11px;
+  font-weight: $font-weight-semi-bold;
 }
 
 
@@ -520,6 +525,35 @@ h6, .h6 { &.panel-title{ font-size: $font-size-h6; }}
 
 .tooltip-inner{
   @include border-radius(3px);
+}
+
+//
+// Alerts
+// --------------------------------------------------
+
+
+.alert-sm{
+  padding: 10px 12px;
+}
+
+//
+// Modals
+// --------------------------------------------------
+
+// z-index fix. modal doesn't show up properly when .content-wrap is relative
+.modal-open{
+  &, &.nav-collapsed, &.nav-static{
+    .content-wrap{
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      position: static;
+    }
+
+    .sidebar{
+      z-index: -1;
+    }
+  }
 }
 
 //
