@@ -27,7 +27,7 @@
    2.  notifications (messenger)
    3.  icons
    4.  buttons
-   5.  tabs & accordion
+   5.  ~~tabs & accordion~~
    6.  list groups
  12.  ~~forms~~
    1.  ~~elements (slider, *markdown*)~~
