@@ -1,5 +1,4 @@
 @charset "IBM866";
-@import url("//fonts.googleapis.com/css?family=Raleway:400");
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -20651,527 +20650,6 @@ ul.messenger.messenger-spinner-active .messenger-spinner .messenger-spinner {
   transform-origin: 100% 50%;
 }
 
-@-webkit-keyframes ui-spinner-rotate-right {
-  /* line 64, ../../src/sass/messenger-spinner.scss */
-  /* line 4, ../vendor/messenger/build/css/messenger-theme-air.css */
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-
-  /* line 65, ../../src/sass/messenger-spinner.scss */
-  /* line 9, ../vendor/messenger/build/css/messenger-theme-air.css */
-  25% {
-    -webkit-transform: rotate(180deg);
-  }
-
-  /* line 66, ../../src/sass/messenger-spinner.scss */
-  /* line 14, ../vendor/messenger/build/css/messenger-theme-air.css */
-  50% {
-    -webkit-transform: rotate(180deg);
-  }
-
-  /* line 67, ../../src/sass/messenger-spinner.scss */
-  /* line 19, ../vendor/messenger/build/css/messenger-theme-air.css */
-  75% {
-    -webkit-transform: rotate(360deg);
-  }
-
-  /* line 68, ../../src/sass/messenger-spinner.scss */
-  /* line 24, ../vendor/messenger/build/css/messenger-theme-air.css */
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes ui-spinner-rotate-left {
-  /* line 72, ../../src/sass/messenger-spinner.scss */
-  /* line 31, ../vendor/messenger/build/css/messenger-theme-air.css */
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-
-  /* line 73, ../../src/sass/messenger-spinner.scss */
-  /* line 36, ../vendor/messenger/build/css/messenger-theme-air.css */
-  25% {
-    -webkit-transform: rotate(0deg);
-  }
-
-  /* line 74, ../../src/sass/messenger-spinner.scss */
-  /* line 41, ../vendor/messenger/build/css/messenger-theme-air.css */
-  50% {
-    -webkit-transform: rotate(180deg);
-  }
-
-  /* line 75, ../../src/sass/messenger-spinner.scss */
-  /* line 46, ../vendor/messenger/build/css/messenger-theme-air.css */
-  75% {
-    -webkit-transform: rotate(180deg);
-  }
-
-  /* line 76, ../../src/sass/messenger-spinner.scss */
-  /* line 51, ../vendor/messenger/build/css/messenger-theme-air.css */
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@-moz-keyframes ui-spinner-rotate-right {
-  /* line 80, ../../src/sass/messenger-spinner.scss */
-  /* line 58, ../vendor/messenger/build/css/messenger-theme-air.css */
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-
-  /* line 81, ../../src/sass/messenger-spinner.scss */
-  /* line 63, ../vendor/messenger/build/css/messenger-theme-air.css */
-  25% {
-    -moz-transform: rotate(180deg);
-  }
-
-  /* line 82, ../../src/sass/messenger-spinner.scss */
-  /* line 68, ../vendor/messenger/build/css/messenger-theme-air.css */
-  50% {
-    -moz-transform: rotate(180deg);
-  }
-
-  /* line 83, ../../src/sass/messenger-spinner.scss */
-  /* line 73, ../vendor/messenger/build/css/messenger-theme-air.css */
-  75% {
-    -moz-transform: rotate(360deg);
-  }
-
-  /* line 84, ../../src/sass/messenger-spinner.scss */
-  /* line 78, ../vendor/messenger/build/css/messenger-theme-air.css */
-  100% {
-    -moz-transform: rotate(360deg);
-  }
-}
-@-moz-keyframes ui-spinner-rotate-left {
-  /* line 88, ../../src/sass/messenger-spinner.scss */
-  /* line 85, ../vendor/messenger/build/css/messenger-theme-air.css */
-  0% {
-    -moz-transform: rotate(0deg);
-  }
-
-  /* line 89, ../../src/sass/messenger-spinner.scss */
-  /* line 90, ../vendor/messenger/build/css/messenger-theme-air.css */
-  25% {
-    -moz-transform: rotate(0deg);
-  }
-
-  /* line 90, ../../src/sass/messenger-spinner.scss */
-  /* line 95, ../vendor/messenger/build/css/messenger-theme-air.css */
-  50% {
-    -moz-transform: rotate(180deg);
-  }
-
-  /* line 91, ../../src/sass/messenger-spinner.scss */
-  /* line 100, ../vendor/messenger/build/css/messenger-theme-air.css */
-  75% {
-    -moz-transform: rotate(180deg);
-  }
-
-  /* line 92, ../../src/sass/messenger-spinner.scss */
-  /* line 105, ../vendor/messenger/build/css/messenger-theme-air.css */
-  100% {
-    -moz-transform: rotate(360deg);
-  }
-}
-@keyframes ui-spinner-rotate-right {
-  /* line 96, ../../src/sass/messenger-spinner.scss */
-  /* line 112, ../vendor/messenger/build/css/messenger-theme-air.css */
-  0% {
-    transform: rotate(0deg);
-  }
-
-  /* line 97, ../../src/sass/messenger-spinner.scss */
-  /* line 117, ../vendor/messenger/build/css/messenger-theme-air.css */
-  25% {
-    transform: rotate(180deg);
-  }
-
-  /* line 98, ../../src/sass/messenger-spinner.scss */
-  /* line 122, ../vendor/messenger/build/css/messenger-theme-air.css */
-  50% {
-    transform: rotate(180deg);
-  }
-
-  /* line 99, ../../src/sass/messenger-spinner.scss */
-  /* line 127, ../vendor/messenger/build/css/messenger-theme-air.css */
-  75% {
-    transform: rotate(360deg);
-  }
-
-  /* line 100, ../../src/sass/messenger-spinner.scss */
-  /* line 132, ../vendor/messenger/build/css/messenger-theme-air.css */
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes ui-spinner-rotate-left {
-  /* line 104, ../../src/sass/messenger-spinner.scss */
-  /* line 139, ../vendor/messenger/build/css/messenger-theme-air.css */
-  0% {
-    transform: rotate(0deg);
-  }
-
-  /* line 105, ../../src/sass/messenger-spinner.scss */
-  /* line 144, ../vendor/messenger/build/css/messenger-theme-air.css */
-  25% {
-    transform: rotate(0deg);
-  }
-
-  /* line 106, ../../src/sass/messenger-spinner.scss */
-  /* line 149, ../vendor/messenger/build/css/messenger-theme-air.css */
-  50% {
-    transform: rotate(180deg);
-  }
-
-  /* line 107, ../../src/sass/messenger-spinner.scss */
-  /* line 154, ../vendor/messenger/build/css/messenger-theme-air.css */
-  75% {
-    transform: rotate(180deg);
-  }
-
-  /* line 108, ../../src/sass/messenger-spinner.scss */
-  /* line 159, ../vendor/messenger/build/css/messenger-theme-air.css */
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* line 116, ../../src/sass/messenger-spinner.scss */
-/* line 165, ../vendor/messenger/build/css/messenger-theme-air.css */
-.messenger-spinner {
-  position: relative;
-  border-radius: 100%;
-}
-
-/* line 120, ../../src/sass/messenger-spinner.scss */
-/* line 170, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger.messenger-spinner-active .messenger-spinner .messenger-spinner {
-  display: block;
-}
-
-/* line 124, ../../src/sass/messenger-spinner.scss */
-/* line 174, ../vendor/messenger/build/css/messenger-theme-air.css */
-.messenger-spinner .messenger-spinner-side {
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-}
-
-/* line 130, ../../src/sass/messenger-spinner.scss */
-/* line 181, ../vendor/messenger/build/css/messenger-theme-air.css */
-.messenger-spinner .messenger-spinner-side .messenger-spinner-fill {
-  border-radius: 999px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
-}
-
-/* line 140, ../../src/sass/messenger-spinner.scss */
-/* line 198, ../vendor/messenger/build/css/messenger-theme-air.css */
-.messenger-spinner .messenger-spinner-side-left {
-  left: 0;
-}
-
-/* line 143, ../../src/sass/messenger-spinner.scss */
-/* line 202, ../vendor/messenger/build/css/messenger-theme-air.css */
-.messenger-spinner .messenger-spinner-side-left .messenger-spinner-fill {
-  left: 100%;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  -webkit-animation-name: ui-spinner-rotate-left;
-  -moz-animation-name: ui-spinner-rotate-left;
-  -ms-animation-name: ui-spinner-rotate-left;
-  -o-animation-name: ui-spinner-rotate-left;
-  animation-name: ui-spinner-rotate-left;
-  -webkit-transform-origin: 0 50%;
-  -moz-transform-origin: 0 50%;
-  -ms-transform-origin: 0 50%;
-  -o-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-}
-
-/* line 152, ../../src/sass/messenger-spinner.scss */
-/* line 218, ../vendor/messenger/build/css/messenger-theme-air.css */
-.messenger-spinner .messenger-spinner-side-right {
-  left: 50%;
-}
-
-/* line 155, ../../src/sass/messenger-spinner.scss */
-/* line 222, ../vendor/messenger/build/css/messenger-theme-air.css */
-.messenger-spinner .messenger-spinner-side-right .messenger-spinner-fill {
-  left: -100%;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  -webkit-animation-name: ui-spinner-rotate-right;
-  -moz-animation-name: ui-spinner-rotate-right;
-  -ms-animation-name: ui-spinner-rotate-right;
-  -o-animation-name: ui-spinner-rotate-right;
-  animation-name: ui-spinner-rotate-right;
-  -webkit-transform-origin: 100% 50%;
-  -moz-transform-origin: 100% 50%;
-  -ms-transform-origin: 100% 50%;
-  -o-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-}
-
-/* line 16, ../../src/sass/messenger-theme-air.sass */
-/* line 239, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  font-family: "Raleway", sans-serif;
-}
-
-/* line 20, ../../src/sass/messenger-theme-air.sass */
-/* line 247, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message {
-  -webkit-transition: background-color 0.4s;
-  -moz-transition: background-color 0.4s;
-  -o-transition: background-color 0.4s;
-  transition: background-color 0.4s;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 0 1px white, inset 0 2px white, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 0 0 1px white, inset 0 2px white, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 0 1px white, inset 0 2px white, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
-  border: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: relative;
-  margin-bottom: 1em;
-  font-size: 13px;
-  color: #666666;
-  font-weight: 500;
-  padding: 10px 30px 11px 46px;
-}
-
-/* line 33, ../../src/sass/messenger-theme-air.sass */
-/* line 270, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message:hover {
-  background-color: white;
-}
-
-/* line 36, ../../src/sass/messenger-theme-air.sass */
-/* line 274, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-close {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  color: #888888;
-  opacity: 1;
-  font-weight: bold;
-  display: block;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 8px 10px 7px 7px;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
-}
-
-/* line 52, ../../src/sass/messenger-theme-air.sass */
-/* line 291, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-close:hover {
-  color: #444444;
-}
-
-/* line 55, ../../src/sass/messenger-theme-air.sass */
-/* line 295, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-close:active {
-  color: #222222;
-}
-
-/* line 58, ../../src/sass/messenger-theme-air.sass */
-/* line 299, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-actions {
-  float: none;
-  margin-top: 10px;
-}
-
-/* line 62, ../../src/sass/messenger-theme-air.sass */
-/* line 304, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-actions a {
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.05);
-  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.05);
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px;
-  color: #888888;
-  margin-right: 10px;
-  padding: 3px 10px 5px;
-  text-transform: capitalize;
-}
-
-/* line 73, ../../src/sass/messenger-theme-air.sass */
-/* line 322, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-actions a:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15);
-  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15);
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15);
-  color: #444444;
-}
-
-/* line 77, ../../src/sass/messenger-theme-air.sass */
-/* line 329, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-actions a:active {
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px 1px rgba(0, 0, 0, 0.05);
-  background: rgba(0, 0, 0, 0.04);
-  color: #444444;
-}
-
-/* line 82, ../../src/sass/messenger-theme-air.sass */
-/* line 337, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-actions .messenger-phrase {
-  display: none;
-}
-
-/* line 85, ../../src/sass/messenger-theme-air.sass */
-/* line 341, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message .messenger-message-inner:before {
-  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  position: absolute;
-  left: 17px;
-  display: block;
-  content: " ";
-  top: 50%;
-  margin-top: -8px;
-  height: 13px;
-  width: 13px;
-  z-index: 20;
-}
-
-/* line 99, ../../src/sass/messenger-theme-air.sass */
-/* line 361, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-success .messenger-message-inner:before {
-  background-color: #5fca4a;
-}
-
-/* line 32, ../../src/sass/messenger-spinner.scss */
-/* line 365, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-soon .messenger-spinner {
-  width: 24px;
-  height: 24px;
-  background: transparent;
-}
-
-/* line 37, ../../src/sass/messenger-spinner.scss */
-/* line 371, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-soon .messenger-spinner .messenger-spinner-side .messenger-spinner-fill {
-  background: #dd6a45;
-  -webkit-animation-duration: 20s;
-  -moz-animation-duration: 20s;
-  -ms-animation-duration: 20s;
-  -o-animation-duration: 20s;
-  animation-duration: 20s;
-  opacity: 1;
-}
-
-/* line 45, ../../src/sass/messenger-spinner.scss */
-/* line 381, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-soon .messenger-spinner:after {
-  content: "";
-  background: white;
-  position: absolute;
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  display: block;
-}
-
-/* line 32, ../../src/sass/messenger-spinner.scss */
-/* line 393, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-later .messenger-spinner {
-  width: 24px;
-  height: 24px;
-  background: transparent;
-}
-
-/* line 37, ../../src/sass/messenger-spinner.scss */
-/* line 399, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-later .messenger-spinner .messenger-spinner-side .messenger-spinner-fill {
-  background: #dd6a45;
-  -webkit-animation-duration: 600s;
-  -moz-animation-duration: 600s;
-  -ms-animation-duration: 600s;
-  -o-animation-duration: 600s;
-  animation-duration: 600s;
-  opacity: 1;
-}
-
-/* line 45, ../../src/sass/messenger-spinner.scss */
-/* line 409, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-later .messenger-spinner:after {
-  content: "";
-  background: white;
-  position: absolute;
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  display: block;
-}
-
-/* line 109, ../../src/sass/messenger-theme-air.sass */
-/* line 421, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-error .messenger-message-inner:before {
-  background-color: #dd6a45;
-}
-
-/* line 113, ../../src/sass/messenger-theme-air.sass */
-/* line 425, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-message.alert-info .messenger-message-inner:before {
-  background-color: #61c4b8;
-}
-
-/* line 116, ../../src/sass/messenger-theme-air.sass */
-/* line 429, ../vendor/messenger/build/css/messenger-theme-air.css */
-ul.messenger-theme-air .messenger-spinner {
-  display: block;
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  margin-top: -13px;
-  z-index: 999;
-  height: 24px;
-  width: 24px;
-  z-index: 10;
-}
-
 /**
  * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
@@ -22329,12 +21807,533 @@ table.dataTable tfoot th {
 /***********************/
 /*    Messenger    */
 /***********************/
-/* line 1057, ../sass/_custom-libs-override.scss */
+@-webkit-keyframes ui-spinner-rotate-right {
+  /* line 64, ../../src/sass/messenger-spinner.scss */
+  /* line 1061, ../sass/_custom-libs-override.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 65, ../../src/sass/messenger-spinner.scss */
+  /* line 1066, ../sass/_custom-libs-override.scss */
+  25% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  /* line 66, ../../src/sass/messenger-spinner.scss */
+  /* line 1071, ../sass/_custom-libs-override.scss */
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  /* line 67, ../../src/sass/messenger-spinner.scss */
+  /* line 1076, ../sass/_custom-libs-override.scss */
+  75% {
+    -webkit-transform: rotate(360deg);
+  }
+
+  /* line 68, ../../src/sass/messenger-spinner.scss */
+  /* line 1081, ../sass/_custom-libs-override.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes ui-spinner-rotate-left {
+  /* line 72, ../../src/sass/messenger-spinner.scss */
+  /* line 1088, ../sass/_custom-libs-override.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 73, ../../src/sass/messenger-spinner.scss */
+  /* line 1093, ../sass/_custom-libs-override.scss */
+  25% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 74, ../../src/sass/messenger-spinner.scss */
+  /* line 1098, ../sass/_custom-libs-override.scss */
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  /* line 75, ../../src/sass/messenger-spinner.scss */
+  /* line 1103, ../sass/_custom-libs-override.scss */
+  75% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  /* line 76, ../../src/sass/messenger-spinner.scss */
+  /* line 1108, ../sass/_custom-libs-override.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes ui-spinner-rotate-right {
+  /* line 80, ../../src/sass/messenger-spinner.scss */
+  /* line 1115, ../sass/_custom-libs-override.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  /* line 81, ../../src/sass/messenger-spinner.scss */
+  /* line 1120, ../sass/_custom-libs-override.scss */
+  25% {
+    -moz-transform: rotate(180deg);
+  }
+
+  /* line 82, ../../src/sass/messenger-spinner.scss */
+  /* line 1125, ../sass/_custom-libs-override.scss */
+  50% {
+    -moz-transform: rotate(180deg);
+  }
+
+  /* line 83, ../../src/sass/messenger-spinner.scss */
+  /* line 1130, ../sass/_custom-libs-override.scss */
+  75% {
+    -moz-transform: rotate(360deg);
+  }
+
+  /* line 84, ../../src/sass/messenger-spinner.scss */
+  /* line 1135, ../sass/_custom-libs-override.scss */
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes ui-spinner-rotate-left {
+  /* line 88, ../../src/sass/messenger-spinner.scss */
+  /* line 1142, ../sass/_custom-libs-override.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
+  /* line 89, ../../src/sass/messenger-spinner.scss */
+  /* line 1147, ../sass/_custom-libs-override.scss */
+  25% {
+    -moz-transform: rotate(0deg);
+  }
+
+  /* line 90, ../../src/sass/messenger-spinner.scss */
+  /* line 1152, ../sass/_custom-libs-override.scss */
+  50% {
+    -moz-transform: rotate(180deg);
+  }
+
+  /* line 91, ../../src/sass/messenger-spinner.scss */
+  /* line 1157, ../sass/_custom-libs-override.scss */
+  75% {
+    -moz-transform: rotate(180deg);
+  }
+
+  /* line 92, ../../src/sass/messenger-spinner.scss */
+  /* line 1162, ../sass/_custom-libs-override.scss */
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes ui-spinner-rotate-right {
+  /* line 96, ../../src/sass/messenger-spinner.scss */
+  /* line 1169, ../sass/_custom-libs-override.scss */
+  0% {
+    transform: rotate(0deg);
+  }
+
+  /* line 97, ../../src/sass/messenger-spinner.scss */
+  /* line 1174, ../sass/_custom-libs-override.scss */
+  25% {
+    transform: rotate(180deg);
+  }
+
+  /* line 98, ../../src/sass/messenger-spinner.scss */
+  /* line 1179, ../sass/_custom-libs-override.scss */
+  50% {
+    transform: rotate(180deg);
+  }
+
+  /* line 99, ../../src/sass/messenger-spinner.scss */
+  /* line 1184, ../sass/_custom-libs-override.scss */
+  75% {
+    transform: rotate(360deg);
+  }
+
+  /* line 100, ../../src/sass/messenger-spinner.scss */
+  /* line 1189, ../sass/_custom-libs-override.scss */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ui-spinner-rotate-left {
+  /* line 104, ../../src/sass/messenger-spinner.scss */
+  /* line 1196, ../sass/_custom-libs-override.scss */
+  0% {
+    transform: rotate(0deg);
+  }
+
+  /* line 105, ../../src/sass/messenger-spinner.scss */
+  /* line 1201, ../sass/_custom-libs-override.scss */
+  25% {
+    transform: rotate(0deg);
+  }
+
+  /* line 106, ../../src/sass/messenger-spinner.scss */
+  /* line 1206, ../sass/_custom-libs-override.scss */
+  50% {
+    transform: rotate(180deg);
+  }
+
+  /* line 107, ../../src/sass/messenger-spinner.scss */
+  /* line 1211, ../sass/_custom-libs-override.scss */
+  75% {
+    transform: rotate(180deg);
+  }
+
+  /* line 108, ../../src/sass/messenger-spinner.scss */
+  /* line 1216, ../sass/_custom-libs-override.scss */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 116, ../../src/sass/messenger-spinner.scss */
+/* line 1222, ../sass/_custom-libs-override.scss */
+.messenger-spinner {
+  position: relative;
+  border-radius: 100%;
+}
+
+/* line 120, ../../src/sass/messenger-spinner.scss */
+/* line 1227, ../sass/_custom-libs-override.scss */
+ul.messenger.messenger-spinner-active .messenger-spinner .messenger-spinner {
+  display: block;
+}
+
+/* line 124, ../../src/sass/messenger-spinner.scss */
+/* line 1231, ../sass/_custom-libs-override.scss */
+.messenger-spinner .messenger-spinner-side {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* line 130, ../../src/sass/messenger-spinner.scss */
+/* line 1238, ../sass/_custom-libs-override.scss */
+.messenger-spinner .messenger-spinner-side .messenger-spinner-fill {
+  border-radius: 999px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+/* line 140, ../../src/sass/messenger-spinner.scss */
+/* line 1255, ../sass/_custom-libs-override.scss */
+.messenger-spinner .messenger-spinner-side-left {
+  left: 0;
+}
+
+/* line 143, ../../src/sass/messenger-spinner.scss */
+/* line 1259, ../sass/_custom-libs-override.scss */
+.messenger-spinner .messenger-spinner-side-left .messenger-spinner-fill {
+  left: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -webkit-animation-name: ui-spinner-rotate-left;
+  -moz-animation-name: ui-spinner-rotate-left;
+  -ms-animation-name: ui-spinner-rotate-left;
+  -o-animation-name: ui-spinner-rotate-left;
+  animation-name: ui-spinner-rotate-left;
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+}
+
+/* line 152, ../../src/sass/messenger-spinner.scss */
+/* line 1275, ../sass/_custom-libs-override.scss */
+.messenger-spinner .messenger-spinner-side-right {
+  left: 50%;
+}
+
+/* line 155, ../../src/sass/messenger-spinner.scss */
+/* line 1279, ../sass/_custom-libs-override.scss */
+.messenger-spinner .messenger-spinner-side-right .messenger-spinner-fill {
+  left: -100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-animation-name: ui-spinner-rotate-right;
+  -moz-animation-name: ui-spinner-rotate-right;
+  -ms-animation-name: ui-spinner-rotate-right;
+  -o-animation-name: ui-spinner-rotate-right;
+  animation-name: ui-spinner-rotate-right;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* line 16, ../../src/sass/messenger-theme-air.sass */
+/* line 1296, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 20, ../../src/sass/messenger-theme-air.sass */
+/* line 1304, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message {
+  -webkit-transition: background-color 0.4s;
+  -moz-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 0 1px white, inset 0 2px white, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 0 1px white, inset 0 2px white, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1px white, inset 0 2px white, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  margin-bottom: 1em;
+  font-size: 13px;
+  color: #666666;
+  font-weight: 500;
+  padding: 10px 30px 11px 46px;
+}
+
+/* line 33, ../../src/sass/messenger-theme-air.sass */
+/* line 1327, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message:hover {
+  background-color: white;
+}
+
+/* line 36, ../../src/sass/messenger-theme-air.sass */
+/* line 1331, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #888888;
+  opacity: 1;
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 8px 10px 7px 7px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+/* line 52, ../../src/sass/messenger-theme-air.sass */
+/* line 1348, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-close:hover {
+  color: #444444;
+}
+
+/* line 55, ../../src/sass/messenger-theme-air.sass */
+/* line 1352, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-close:active {
+  color: #222222;
+}
+
+/* line 58, ../../src/sass/messenger-theme-air.sass */
+/* line 1356, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-actions {
+  float: none;
+  margin-top: 10px;
+}
+
+/* line 62, ../../src/sass/messenger-theme-air.sass */
+/* line 1361, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-actions a {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.05);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.05);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  color: #888888;
+  margin-right: 10px;
+  padding: 3px 10px 5px;
+  text-transform: capitalize;
+}
+
+/* line 73, ../../src/sass/messenger-theme-air.sass */
+/* line 1379, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-actions a:hover {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px rgba(255, 255, 255, 0.15);
+  color: #444444;
+}
+
+/* line 77, ../../src/sass/messenger-theme-air.sass */
+/* line 1386, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-actions a:active {
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.18), inset 0px 1px rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.04);
+  color: #444444;
+}
+
+/* line 82, ../../src/sass/messenger-theme-air.sass */
+/* line 1394, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-actions .messenger-phrase {
+  display: none;
+}
+
+/* line 85, ../../src/sass/messenger-theme-air.sass */
+/* line 1398, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message .messenger-message-inner:before {
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  left: 17px;
+  display: block;
+  content: " ";
+  top: 50%;
+  margin-top: -8px;
+  height: 13px;
+  width: 13px;
+  z-index: 20;
+}
+
+/* line 99, ../../src/sass/messenger-theme-air.sass */
+/* line 1418, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-success .messenger-message-inner:before {
+  background-color: #5fca4a;
+}
+
+/* line 32, ../../src/sass/messenger-spinner.scss */
+/* line 1422, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-soon .messenger-spinner {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+}
+
+/* line 37, ../../src/sass/messenger-spinner.scss */
+/* line 1428, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-soon .messenger-spinner .messenger-spinner-side .messenger-spinner-fill {
+  background: #dd6a45;
+  -webkit-animation-duration: 20s;
+  -moz-animation-duration: 20s;
+  -ms-animation-duration: 20s;
+  -o-animation-duration: 20s;
+  animation-duration: 20s;
+  opacity: 1;
+}
+
+/* line 45, ../../src/sass/messenger-spinner.scss */
+/* line 1438, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-soon .messenger-spinner:after {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  display: block;
+}
+
+/* line 32, ../../src/sass/messenger-spinner.scss */
+/* line 1450, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-later .messenger-spinner {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+}
+
+/* line 37, ../../src/sass/messenger-spinner.scss */
+/* line 1456, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-later .messenger-spinner .messenger-spinner-side .messenger-spinner-fill {
+  background: #dd6a45;
+  -webkit-animation-duration: 600s;
+  -moz-animation-duration: 600s;
+  -ms-animation-duration: 600s;
+  -o-animation-duration: 600s;
+  animation-duration: 600s;
+  opacity: 1;
+}
+
+/* line 45, ../../src/sass/messenger-spinner.scss */
+/* line 1466, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-error.messenger-retry-later .messenger-spinner:after {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  display: block;
+}
+
+/* line 109, ../../src/sass/messenger-theme-air.sass */
+/* line 1478, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-error .messenger-message-inner:before {
+  background-color: #dd6a45;
+}
+
+/* line 113, ../../src/sass/messenger-theme-air.sass */
+/* line 1482, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-message.alert-info .messenger-message-inner:before {
+  background-color: #61c4b8;
+}
+
+/* line 116, ../../src/sass/messenger-theme-air.sass */
+/* line 1486, ../sass/_custom-libs-override.scss */
+ul.messenger-theme-air .messenger-spinner {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  margin-top: -13px;
+  z-index: 999;
+  height: 24px;
+  width: 24px;
+  z-index: 10;
+}
+
+/* line 1499, ../sass/_custom-libs-override.scss */
 ul.messenger-theme-air .messenger-message {
   background-color: white;
 }
 
-/* line 1061, ../sass/_custom-libs-override.scss */
+/* line 1503, ../sass/_custom-libs-override.scss */
 .location-selector {
   width: 100%;
   height: 220px;
@@ -22343,7 +22342,7 @@ ul.messenger-theme-air .messenger-message {
   position: relative;
 }
 
-/* line 1067, ../sass/_custom-libs-override.scss */
+/* line 1509, ../sass/_custom-libs-override.scss */
 .location-selector .bit {
   background-color: #eeeeee;
   -webkit-transition: background-color 0.15s ease-in-out;
@@ -22352,29 +22351,29 @@ ul.messenger-theme-air .messenger-message {
   position: absolute;
 }
 
-/* line 1072, ../sass/_custom-libs-override.scss */
+/* line 1514, ../sass/_custom-libs-override.scss */
 .location-selector .bit:hover {
   background-color: #dddddd;
 }
 
-/* line 1074, ../sass/_custom-libs-override.scss */
+/* line 1516, ../sass/_custom-libs-override.scss */
 .location-selector .bit.top, .location-selector .bit.bottom {
   height: 25%;
   width: 40%;
   margin: 0 30%;
 }
 
-/* line 1078, ../sass/_custom-libs-override.scss */
+/* line 1520, ../sass/_custom-libs-override.scss */
 .location-selector .bit.top {
   top: 0;
 }
 
-/* line 1080, ../sass/_custom-libs-override.scss */
+/* line 1522, ../sass/_custom-libs-override.scss */
 .location-selector .bit.bottom {
   bottom: 0;
 }
 
-/* line 1082, ../sass/_custom-libs-override.scss */
+/* line 1524, ../sass/_custom-libs-override.scss */
 .location-selector .bit.right, .location-selector .bit.left {
   height: 20%;
   width: 20%;
@@ -22382,12 +22381,12 @@ ul.messenger-theme-air .messenger-message {
   margin-right: 0;
 }
 
-/* line 1087, ../sass/_custom-libs-override.scss */
+/* line 1529, ../sass/_custom-libs-override.scss */
 .location-selector .bit.right {
   right: 0;
 }
 
-/* line 1089, ../sass/_custom-libs-override.scss */
+/* line 1531, ../sass/_custom-libs-override.scss */
 .location-selector .bit.left {
   left: 0;
 }

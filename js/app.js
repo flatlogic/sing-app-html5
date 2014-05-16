@@ -607,6 +607,14 @@ function initAppFunctions(){
         SingApp.onResize(initSidebarScroll, true);
         initSidebarScroll();
 
+        /*
+        todo
+        When widget is closed remove its parent if it is .col-*
+         */
+        $(document).on('closed.widgster', function(){
+            console.log(this);
+        })
+
     }(jQuery);
 }
 
