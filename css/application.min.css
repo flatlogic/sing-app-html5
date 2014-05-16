@@ -22248,7 +22248,7 @@ table.dataTable tfoot th {
 }
 
 /***********************/
-/*    Messenger    */
+/*      Messenger      */
 /***********************/
 @-webkit-keyframes ui-spinner-rotate-right {
   /* line 64, ../../src/sass/messenger-spinner.scss */
@@ -22833,6 +22833,18 @@ ul.messenger-theme-air .messenger-message {
 /* line 1531, ../sass/_custom-libs-override.scss */
 .location-selector .bit.left {
   left: 0;
+}
+
+/***********************/
+/*         Flot        */
+/***********************/
+/* line 1540, ../sass/_custom-libs-override.scss */
+.chart-tooltip {
+  position: fixed;
+  padding: 5px 10px;
+  border: 1px solid #dddddd;
+  font-size: 13px;
+  background-color: white;
 }
 
 /**
@@ -25260,11 +25272,18 @@ a.text-bg-sidebar:hover {
 .stat-item .value {
   font-weight: bold;
 }
+/* line 161, ../sass/_widgets.scss */
+.stat-item.stat-item-mini-chart {
+  position: relative;
+  top: -12px;
+  padding-left: 0;
+  border-left: none;
+}
 
 /***********************/
 /*  Part:Map Controls  */
 /***********************/
-/* line 167, ../sass/_widgets.scss */
+/* line 174, ../sass/_widgets.scss */
 .map-controls {
   position: absolute;
   bottom: 0;
@@ -25272,18 +25291,18 @@ a.text-bg-sidebar:hover {
   right: 0;
   background-color: #343434;
 }
-/* line 174, ../sass/_widgets.scss */
+/* line 181, ../sass/_widgets.scss */
 .map-controls > li > a {
   padding-left: 0;
   padding-right: 0;
   color: #eeeeee;
 }
-/* line 179, ../sass/_widgets.scss */
+/* line 186, ../sass/_widgets.scss */
 .map-controls > li > a:hover {
   background-color: #555555;
   color: white;
 }
-/* line 186, ../sass/_widgets.scss */
+/* line 193, ../sass/_widgets.scss */
 .map-controls > li.active > a, .map-controls > li.active > a:hover {
   background-color: #555555;
   color: #f0b518;
@@ -25293,12 +25312,12 @@ a.text-bg-sidebar:hover {
 /***********************************/
 /**          NEWS LIST           **/
 /**********************************/
-/* line 198, ../sass/_widgets.scss */
+/* line 205, ../sass/_widgets.scss */
 .news-list {
   margin-bottom: 0;
   padding-left: 0;
 }
-/* line 202, ../sass/_widgets.scss */
+/* line 209, ../sass/_widgets.scss */
 .news-list li {
   list-style: none;
   -webkit-box-sizing: content-box;
@@ -25311,42 +25330,42 @@ a.text-bg-sidebar:hover {
   -o-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
 }
-/* line 210, ../sass/_widgets.scss */
+/* line 217, ../sass/_widgets.scss */
 .news-list li:hover {
   background: #f6f6f6;
 }
-/* line 214, ../sass/_widgets.scss */
+/* line 221, ../sass/_widgets.scss */
 .news-list li:last-child {
   margin-bottom: -10px;
 }
-/* line 219, ../sass/_widgets.scss */
+/* line 226, ../sass/_widgets.scss */
 .news-list img,
 .news-list .icon {
   float: left;
   height: 50px;
   width: 50px;
 }
-/* line 226, ../sass/_widgets.scss */
+/* line 233, ../sass/_widgets.scss */
 .news-list .icon {
   line-height: 50px;
   border-radius: 50%;
   text-align: center;
   font-size: 28px;
 }
-/* line 233, ../sass/_widgets.scss */
+/* line 240, ../sass/_widgets.scss */
 .news-list .news-item-info {
   margin-left: 62px;
   /*50 + 12px padding*/
 }
-/* line 237, ../sass/_widgets.scss */
+/* line 244, ../sass/_widgets.scss */
 .news-list .name {
   text-transform: uppercase;
 }
-/* line 240, ../sass/_widgets.scss */
+/* line 247, ../sass/_widgets.scss */
 .news-list .name a {
   text-decoration: none;
 }
-/* line 242, ../sass/_widgets.scss */
+/* line 249, ../sass/_widgets.scss */
 .news-list .name a:hover {
   color: #218bc3;
 }
@@ -25354,21 +25373,21 @@ a.text-bg-sidebar:hover {
 /***********************************/
 /**      LIST GROUP SORTABLE      **/
 /***********************************/
-/* line 255, ../sass/_widgets.scss */
+/* line 262, ../sass/_widgets.scss */
 .list-group-sortable > .list-group-item {
   margin-bottom: 0;
   border-radius: 4px;
 }
-/* line 259, ../sass/_widgets.scss */
+/* line 266, ../sass/_widgets.scss */
 .list-group-sortable > .list-group-item + .list-group-item {
   margin-top: 10px;
 }
-/* line 264, ../sass/_widgets.scss */
+/* line 271, ../sass/_widgets.scss */
 .list-group-sortable > .list-group-item-placeholder {
   border: 1px dashed #999999;
   background-color: #dddddd;
 }
-/* line 269, ../sass/_widgets.scss */
+/* line 276, ../sass/_widgets.scss */
 .list-group-sortable:last-of-type > .list-group-item:last-child {
   border-bottom: 1px solid #dddddd;
 }
@@ -25376,38 +25395,38 @@ a.text-bg-sidebar:hover {
 /***********************************/
 /**           ICON LIST           **/
 /***********************************/
-/* line 278, ../sass/_widgets.scss */
+/* line 285, ../sass/_widgets.scss */
 .icon-list {
   margin-top: 20px;
 }
 
-/* line 282, ../sass/_widgets.scss */
+/* line 289, ../sass/_widgets.scss */
 .icon-list-item {
   height: 32px;
   font-size: 14px;
   line-height: 32px;
 }
-/* line 286, ../sass/_widgets.scss */
+/* line 293, ../sass/_widgets.scss */
 .icon-list-item > a {
   color: #555555;
   text-decoration: none;
 }
-/* line 292, ../sass/_widgets.scss */
+/* line 299, ../sass/_widgets.scss */
 .icon-list-item .glyphicon,
 .icon-list-item .fa {
   width: 32px;
   margin-right: 10px;
 }
-/* line 299, ../sass/_widgets.scss */
+/* line 306, ../sass/_widgets.scss */
 .icon-list-item:hover .glyphicon,
 .icon-list-item:hover .fa {
   font-size: 28px;
 }
-/* line 304, ../sass/_widgets.scss */
+/* line 311, ../sass/_widgets.scss */
 .icon-list-item:hover .fa {
   vertical-align: -5px;
 }
-/* line 308, ../sass/_widgets.scss */
+/* line 315, ../sass/_widgets.scss */
 .icon-list-item:hover .glyphicon {
   vertical-align: -6px;
 }

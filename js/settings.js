@@ -12,10 +12,14 @@ $(function(){
             'gray-lighter': '#eee',
             'gray': '#666',
             'gray-dark': '#343434',
+            'gray-darker': '#222',
+            'gray-semi-light': '#777',
+            'gray-semi-lighter': '#ddd',
             'brand-primary': '#618fb0',
             'brand-success': '#64bd63',
             'brand-warning': '#f0b518',
-            'brand-danger': '#e5603b'
+            'brand-danger': '#e5603b',
+            'brand-info': '#5dc4bf'
         },
 
         screens: {

@@ -1051,7 +1051,7 @@ table.dataTable tfoot th{
 }
 
 /***********************/
-/*    Messenger    */
+/*      Messenger      */
 /***********************/
 
 //copying theme-air here as we don't want to use Raleway font included into theme-air.css
@@ -1530,3 +1530,17 @@ ul.messenger-theme-air .messenger-message{
   right: 0; }
 .location-selector .bit.left {
   left: 0; }
+
+
+/***********************/
+/*         Flot        */
+/***********************/
+
+
+.chart-tooltip{
+  position: fixed;
+  padding: $padding-small-vertical $padding-small-horizontal;
+  border: 1px solid $gray-semi-lighter;
+  font-size: $font-size-mini;
+  background-color: $white;
+}

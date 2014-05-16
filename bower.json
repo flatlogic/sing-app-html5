@@ -27,6 +27,7 @@
     "d3": ">= 3.4.3",
     "rickshaw": "latest",
     "flot": "latest",
+    "flot.animator":"https://github.com/Codicode/flotanimator.git",
     "jquery-autosize": ">= 1.18.6",
     "bootstrap3-wysihtml5": "git://github.com/schnawel007/bootstrap3-wysihtml5.git",
     "switchery": ">= 0.5.1",

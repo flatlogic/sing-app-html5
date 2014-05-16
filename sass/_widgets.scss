@@ -157,6 +157,13 @@
   .value{
     font-weight: bold;
   }
+
+  &.stat-item-mini-chart{
+    position: relative;
+    top: -12px;
+    padding-left: 0;
+    border-left: none;
+  }
 }
 
 
