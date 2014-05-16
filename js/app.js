@@ -608,14 +608,16 @@ function initAppFunctions(){
         initSidebarScroll();
 
         /*
-        todo
         When widget is closed remove its parent if it is .col-*
          */
-//        $(document).on('close.widgster', function(){
-//            console.log('close');
-//        }).on('closed.widgster', function(){
-//            console.log('closed');
-//        })
+        $(document).on('close.widgster', function(e){
+            var $colWrap = $(e.target).closest('.content > .row > [class*="col-"]:not(.widget-container)');
+
+            // remove colWrap only if there are no more widgets inside
+            if (!$colWrap.find('> .widget').length){
+                $colWrap.remove();
+            }
+        });
 
     }(jQuery);
 }
