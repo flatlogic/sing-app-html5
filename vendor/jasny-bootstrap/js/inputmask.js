@@ -32,7 +32,7 @@
     if (isAndroid) return // No support because caret positioning doesn't work on Android
     
     this.$element = $(element)
-    this.options = $.extend({}, Inputmask.DEFAULS, options)
+    this.options = $.extend({}, Inputmask.DEFAULTS, options)
     this.mask = String(this.options.mask)
     
     this.init()
@@ -41,13 +41,13 @@
     this.checkVal() //Perform initial check for existing values
   }
 
-  Inputmask.DEFAULS = {
+  Inputmask.DEFAULTS = {
     mask: "",
     placeholder: "_",
     definitions: {
       '9': "[0-9]",
       'a': "[A-Za-z]",
-      '?': "[A-Za-z0-9]",
+      'w': "[A-Za-z0-9]",
       '*': "."
     }
   }
@@ -330,9 +330,9 @@
   $.fn.inputmask = function (options) {
     return this.each(function () {
       var $this = $(this)
-      var data = $this.data('inputmask')
+      var data = $this.data('bs.inputmask')
       
-      if (!data) $this.data('inputmask', (data = new Inputmask(this, options)))
+      if (!data) $this.data('bs.inputmask', (data = new Inputmask(this, options)))
     })
   }
 
@@ -353,7 +353,7 @@
 
   $(document).on('focus.bs.inputmask.data-api', '[data-mask]', function (e) {
     var $this = $(this)
-    if ($this.data('inputmask')) return
+    if ($this.data('bs.inputmask')) return
     $this.inputmask($this.data())
   })
 

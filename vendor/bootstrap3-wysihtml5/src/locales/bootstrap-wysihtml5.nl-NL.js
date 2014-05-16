@@ -7,7 +7,10 @@
             normal: "Normale Tekst",
             h1: "Kop 1",
             h2: "Kop 2",
-            h3: "Kop 3"
+            h3: "Kop 3",
+            h4: "Kop 4",
+            h5: "Kop 5",
+            h6: "Kop 6"
         },
         emphasis: {
             bold: "Vet",

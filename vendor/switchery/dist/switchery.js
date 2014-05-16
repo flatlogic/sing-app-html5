@@ -1058,9 +1058,8 @@ if (typeof define !== 'undefined' && define.amd) {
 
 });
 require.register("switchery/switchery.js", function(exports, require, module){
-
 /**
- * Switchery 0.5.1
+ * Switchery 0.5.5
  * http://abpetkov.github.io/switchery/
  *
  * Authored by Alexander Petkov
@@ -1222,7 +1221,7 @@ Switchery.prototype.setPosition = function (clicked) {
     this.element.checked = false;
     this.switcher.style.boxShadow = 'inset 0 0 0 0 ' + this.options.secondaryColor;
     this.switcher.style.borderColor = this.options.secondaryColor;
-    this.switcher.style.backgroundColor = '';
+    this.switcher.style.backgroundColor = (this.options.secondaryColor !== defaults.secondaryColor) ? this.options.secondaryColor : '#fff';
     this.setSpeed();
   }
 };
@@ -1290,10 +1289,32 @@ Switchery.prototype.colorize = function() {
 Switchery.prototype.handleOnchange = function(state) {
   if (typeof Event === 'function' || !document.fireEvent) {
     var event = document.createEvent('HTMLEvents');
-    event.initEvent('change', false, true);
+    event.initEvent('change', true, true);
     this.element.dispatchEvent(event);
   } else {
     this.element.fireEvent('onchange');
+  }
+};
+
+/**
+ * Handle the native input element state change.
+ * A `change` event must be fired in order to detect the change.
+ *
+ * @api private
+ */
+
+Switchery.prototype.handleChange = function() {
+  var self = this
+    , el = this.element;
+
+  if (el.addEventListener) {
+    el.addEventListener('change', function() {
+      self.setPosition();
+    });
+  } else {
+    el.attachEvent('onchange', function() {
+      self.setPosition();
+    });
   }
 };
 
@@ -1365,7 +1386,7 @@ Switchery.prototype.disableLabel = function() {
 
 Switchery.prototype.markAsSwitched = function() {
   this.element.setAttribute('data-switchery', true);
-}
+};
 
 /**
  * Check if an individual switch is already handled.
@@ -1375,7 +1396,7 @@ Switchery.prototype.markAsSwitched = function() {
 
 Switchery.prototype.markedAsSwitched = function() {
   return this.element.getAttribute('data-switchery');
-}
+};
 
 /**
  * Initialize Switchery.
@@ -1390,6 +1411,7 @@ Switchery.prototype.init = function() {
   this.setAttributes();
   this.markAsSwitched();
   this.disableLabel();
+  this.handleChange();
   this.handleClick();
 };
 

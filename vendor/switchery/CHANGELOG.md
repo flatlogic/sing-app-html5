@@ -1,4 +1,24 @@
 
+0.5.5 / 2014-05-14
+==================
+
+  * Set secondary color to be background color on switch off state
+
+0.5.4 / 2014-04-29
+==================
+
+  * Fix box-sizing when using Bootstrap 3
+
+0.5.3 / 2014-04-12
+==================
+
+  * Detect native checkbox state change
+
+0.5.2 / 2014-04-03
+==================
+
+  * Enable event bubbles
+
 0.5.1 / 2014-03-22
 ==================
 

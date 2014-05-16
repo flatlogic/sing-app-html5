@@ -1,8 +1,8 @@
 /*!
- * Bootstrap's Gruntfile
- * http://getbootstrap.com
- * Copyright 2013-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Jasny Bootstrap's Gruntfile
+ * http://jasny.github.io/bootstrap
+ * Copyright 2013-2014 Arnold Daniels.
+ * Licensed under Apache License 2.0 (https://github.com/jasny/bootstrap/blob/master/LICENSE)
  */
 
 module.exports = function (grunt) {
@@ -98,6 +98,7 @@ module.exports = function (grunt) {
       },
       bootstrap: {
         src: [
+          'js/transition.js',
           'js/offcanvas.js',
           'js/rowlink.js',
           'js/inputmask.js',
@@ -298,14 +299,14 @@ module.exports = function (grunt) {
       }
     },
 
-    sed: {
+    replace: {
       versionNumber: {
-        pattern: (function () {
-          var old = grunt.option('oldver');
-          return old ? RegExp.quote(old) : old;
-        })(),
-        replacement: grunt.option('newver'),
-        recursive: true
+        src: ['*.js', '*.md', '*.json', '*.yml', 'js/*.js'],
+        overwrite: true,
+        replacements: [{
+          from: grunt.option('oldver'),
+          to: grunt.option('newver')
+        }]
       }
     },
 
@@ -377,7 +378,7 @@ module.exports = function (grunt) {
   // Version numbering task.
   // grunt change-version-number --oldver=A.B.C --newver=X.Y.Z
   // This can be overzealous, so its changes should always be manually reviewed!
-  grunt.registerTask('change-version-number', 'sed');
+  grunt.registerTask('change-version-number', 'replace');
 
   // task for building customizer
   grunt.registerTask('build-customizer', ['build-customizer-html', 'build-raw-files']);

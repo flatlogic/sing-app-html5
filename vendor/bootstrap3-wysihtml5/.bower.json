@@ -1,11 +1,11 @@
 {
   "name": "bootstrap3-wysihtml5",
   "homepage": "https://github.com/schnawel007/bootstrap3-wysihtml5",
-  "_release": "9dc0618105",
+  "_release": "733e430090",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "9dc061810578dfa72ef4f6af6d02063803b591ec"
+    "commit": "733e4300909bbd65ab586f033be61cfb43120aa0"
   },
   "_source": "git://github.com/schnawel007/bootstrap3-wysihtml5.git",
   "_target": "*",

@@ -7,7 +7,10 @@
             normal: "Normalan tekst",
             h1: "Naslov 1",
             h2: "Naslov 2",
-            h3: "Naslov 3"
+            h3: "Naslov 3",
+            h4: "Naslov 4",
+            h5: "Naslov 5",
+            h6: "Naslov 6"
         },
         emphasis: {
             bold: "Podebljano",

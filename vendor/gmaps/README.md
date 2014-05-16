@@ -21,12 +21,16 @@ grunt
 Changelog
 ---------
 
+0.4.12
+-----------------------
+* Adds ability to listen for clicks on overlays
+
 0.4.11
 -----------------------
 * Add RadarSearch to the places layer
 * Update default control styles to match new Google Maps release.
 
-0.4.11
+0.4.10
 -----------------------
 * Fix and optimize removeMarkers
 * Fix bug in addMarker (issue #270)

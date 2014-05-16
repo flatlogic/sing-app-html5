@@ -23,7 +23,7 @@ Files to reference
 <script src="lib/js/wysihtml5-0.3.0.js" type="text/javascript"></script>
 <script src="lib/js/jquery-1.7.2.min.js" type="text/javascript"></script>
 <script src="lib/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="src/bootstrap-wysihtml5.js" type="text/javascript"></script>
+<script src="src/bootstrap3-wysihtml5.js" type="text/javascript"></script>
 ```
 
 Usage

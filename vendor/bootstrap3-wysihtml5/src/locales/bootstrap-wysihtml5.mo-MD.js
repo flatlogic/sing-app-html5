@@ -6,7 +6,11 @@
         font_styles: {
               normal: "Normal",
               h1: "Titlu 1",
-              h2: "Titlu 2"
+              h2: "Titlu 2",
+              h3: "Titlu 3",
+              h4: "Titlu 4",
+              h5: "Titlu 5",
+              h6: "Titlu 6"
         },
         emphasis: {
               bold: "Bold",

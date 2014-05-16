@@ -7,7 +7,10 @@
             normal: "Normaler Text",
             h1: "Überschrift 1",
             h2: "Überschrift 2",
-            h3: "Überschrift 3"
+            h3: "Überschrift 3",
+            h4: "Überschrift 4",
+            h5: "Überschrift 5",
+            h6: "Überschrift 6"
         },
         emphasis: {
             bold: "Fett",

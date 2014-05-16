@@ -558,6 +558,20 @@ describe("Public Method Tests", function() {
     expect(invokingNonPublicMethod).toThrow(new Error("method '" + nonPublicMethodName + "()' does not exist for slider."));
   });
 
+  it("get attribute", function() {
+    testSlider = $("#testSlider1").slider();
+
+    var sliderMaxValue = testSlider.slider('getAttribute', 'max');
+    expect(sliderMaxValue).toBe(10);
+  });
+
+  it("changes slider from basic to range", function() {
+    testSlider = $("#makeRangeSlider").slider();
+    testSlider.slider('setAttribute', 'range', true).slider('refresh');
+
+    var isRangeSlider = $("#changeOrientationSlider").parent("div.slider").find('.slider-handle').last().hasClass('hide');
+    expect(isRangeSlider).toBeFalsy();
+  });
 
   afterEach(function() {
     if(testSlider) {

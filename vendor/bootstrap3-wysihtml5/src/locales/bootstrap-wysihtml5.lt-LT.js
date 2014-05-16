@@ -7,7 +7,10 @@
               normal: "Normalus",
               h1: "Antraštė 1",
               h2: "Antraštė 2",
-              h3: "Antraštė 3"
+              h3: "Antraštė 3",
+              h4: "Antraštė 4",
+              h5: "Antraštė 5",
+              h6: "Antraštė 6"
         },
         emphasis: {
               bold: "Pastorintas",

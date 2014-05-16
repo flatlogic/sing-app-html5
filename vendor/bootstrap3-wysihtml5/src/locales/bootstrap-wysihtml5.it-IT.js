@@ -6,7 +6,11 @@
         font_styles: {
               normal: "Testo normale",
               h1: "Titolo 1",
-              h2: "Titolo 2"
+              h2: "Titolo 2",
+              h3: "Titolo 3",
+              h4: "Titolo 4",
+              h5: "Titolo 5",
+              h6: "Titolo 6"
         },
         emphasis: {
               bold: "Grassetto",

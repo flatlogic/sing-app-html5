@@ -1,5 +1,5 @@
 /*!
- * Jasny Bootstrap v3.1.1 (http://jasny.github.io/bootstrap)
+ * Jasny Bootstrap v3.1.3 (http://jasny.github.io/bootstrap)
  * Copyright 2012-2014 Arnold Daniels
  * Licensed under Apache-2.0 (https://github.com/jasny/bootstrap/blob/master/LICENSE)
  */
@@ -7,7 +7,58 @@
 if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScript requires jQuery') }
 
 /* ========================================================================
- * Bootstrap: offcanvas.js v3.1.1
+ * Bootstrap: transition.js v3.1.3
+ * http://getbootstrap.com/javascript/#transitions
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // CSS TRANSITION SUPPORT (Shoutout: http://www.modernizr.com/)
+  // ============================================================
+
+  function transitionEnd() {
+    var el = document.createElement('bootstrap')
+
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition    : 'transitionend',
+      OTransition      : 'oTransitionEnd otransitionend',
+      transition       : 'transitionend'
+    }
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return { end: transEndEventNames[name] }
+      }
+    }
+
+    return false // explicit for ie8 (  ._.)
+  }
+
+  if ($.support.transition !== undefined) return  // Prevent conflict with Twitter Bootstrap
+
+  // http://blog.alexmaccaw.com/css-transitions
+  $.fn.emulateTransitionEnd = function (duration) {
+    var called = false, $el = this
+    $(this).one($.support.transition.end, function () { called = true })
+    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+    setTimeout(callback, duration)
+    return this
+  }
+
+  $(function () {
+    $.support.transition = transitionEnd()
+  })
+
+}(window.jQuery);
+
+/* ========================================================================
+ * Bootstrap: offcanvas.js v3.1.3
  * http://jasny.github.io/bootstrap/javascript/#offcanvas
  * ========================================================================
  * Copyright 2013-2014 Arnold Daniels
@@ -45,6 +96,11 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
       $(document).on('click', $.proxy(this.autohide, this))
 
     if (this.options.toggle) this.toggle()
+    
+    if (this.options.disablescrolling) {
+        this.options.disableScrolling = this.options.disablescrolling
+        delete this.options.disablescrolling
+    }
   }
 
   OffCanvas.DEFAULTS = {
@@ -143,8 +199,10 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
     var bodyWidth = $('body').width()
     var prop = 'padding-' + this.opposite(this.placement)
 
-    if ($('body').data('offcanvas-style') === undefined) $('body').data('offcanvas-style', $('body').attr('style'))
-    
+    if ($('body').data('offcanvas-style') === undefined) {
+      $('body').data('offcanvas-style', $('body').attr('style') || '')
+    }
+      
     $('body').css('overflow', 'hidden')
 
     if ($('body').width() > bodyWidth) {
@@ -319,7 +377,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
 }(window.jQuery);
 
 /* ============================================================
- * Bootstrap: rowlink.js v3.1.1
+ * Bootstrap: rowlink.js v3.1.3
  * http://jasny.github.io/bootstrap/javascript/#rowlink
  * ============================================================
  * Copyright 2012-2014 Arnold Daniels
@@ -374,8 +432,8 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
   $.fn.rowlink = function (options) {
     return this.each(function () {
       var $this = $(this)
-      var data = $this.data('rowlink')
-      if (!data) $this.data('rowlink', (data = new Rowlink(this, options)))
+      var data = $this.data('bs.rowlink')
+      if (!data) $this.data('bs.rowlink', (data = new Rowlink(this, options)))
     })
   }
 
@@ -395,10 +453,10 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
   // ==================
 
   $(document).on('click.bs.rowlink.data-api', '[data-link="row"]', function (e) {
-    if ($(e.target).closest('.rowlink-skip')) return
+    if ($(e.target).closest('.rowlink-skip').length !== 0) return
     
     var $this = $(this)
-    if ($this.data('rowlink')) return
+    if ($this.data('bs.rowlink')) return
     $this.rowlink($this.data())
     $(e.target).trigger('click.bs.rowlink')
   })
@@ -439,7 +497,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
     if (isAndroid) return // No support because caret positioning doesn't work on Android
     
     this.$element = $(element)
-    this.options = $.extend({}, Inputmask.DEFAULS, options)
+    this.options = $.extend({}, Inputmask.DEFAULTS, options)
     this.mask = String(this.options.mask)
     
     this.init()
@@ -448,13 +506,13 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
     this.checkVal() //Perform initial check for existing values
   }
 
-  Inputmask.DEFAULS = {
+  Inputmask.DEFAULTS = {
     mask: "",
     placeholder: "_",
     definitions: {
       '9': "[0-9]",
       'a': "[A-Za-z]",
-      '?': "[A-Za-z0-9]",
+      'w': "[A-Za-z0-9]",
       '*': "."
     }
   }
@@ -737,9 +795,9 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
   $.fn.inputmask = function (options) {
     return this.each(function () {
       var $this = $(this)
-      var data = $this.data('inputmask')
+      var data = $this.data('bs.inputmask')
       
-      if (!data) $this.data('inputmask', (data = new Inputmask(this, options)))
+      if (!data) $this.data('bs.inputmask', (data = new Inputmask(this, options)))
     })
   }
 
@@ -760,14 +818,14 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
 
   $(document).on('focus.bs.inputmask.data-api', '[data-mask]', function (e) {
     var $this = $(this)
-    if ($this.data('inputmask')) return
+    if ($this.data('bs.inputmask')) return
     $this.inputmask($this.data())
   })
 
 }(window.jQuery);
 
 /* ===========================================================
- * Bootstrap: fileinput.js v3.1.1
+ * Bootstrap: fileinput.js v3.1.3
  * http://jasny.github.com/bootstrap/javascript/#fileinput
  * ===========================================================
  * Copyright 2012-2014 Arnold Daniels
@@ -802,14 +860,15 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
 
     this.$hidden = this.$element.find('input[type=hidden][name="' + this.name + '"]')
     if (this.$hidden.length === 0) {
-      this.$hidden = $('<input type="hidden" />')
-      this.$element.prepend(this.$hidden)
+      this.$hidden = $('<input type="hidden">').insertBefore(this.$input)
     }
 
     this.$preview = this.$element.find('.fileinput-preview')
     var height = this.$preview.css('height')
-    if (this.$preview.css('display') != 'inline' && height != '0px' && height != 'none') this.$preview.css('line-height', height)
-
+    if (this.$preview.css('display') !== 'inline' && height !== '0px' && height !== 'none') {
+      this.$preview.css('line-height', height)
+    }
+        
     this.original = {
       exists: this.$element.hasClass('fileinput-exists'),
       preview: this.$preview.html(),
@@ -896,14 +955,14 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
     this.$element.find('.fileinput-filename').text('')
     this.$element.addClass('fileinput-new').removeClass('fileinput-exists')
     
-    if (e !== false) {
+    if (e !== undefined) {
       this.$input.trigger('change')
       this.$element.trigger('clear.bs.fileinput')
     }
   },
 
   Fileinput.prototype.reset = function() {
-    this.clear(false)
+    this.clear()
 
     this.$hidden.val(this.original.hiddenVal)
     this.$preview.html(this.original.preview)
@@ -929,8 +988,8 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
   $.fn.fileinput = function (options) {
     return this.each(function () {
       var $this = $(this),
-          data = $this.data('fileinput')
-      if (!data) $this.data('fileinput', (data = new Fileinput(this, options)))
+          data = $this.data('bs.fileinput')
+      if (!data) $this.data('bs.fileinput', (data = new Fileinput(this, options)))
       if (typeof options == 'string') data[options]()
     })
   }
@@ -952,7 +1011,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
 
   $(document).on('click.fileinput.data-api', '[data-provides="fileinput"]', function (e) {
     var $this = $(this)
-    if ($this.data('fileinput')) return
+    if ($this.data('bs.fileinput')) return
     $this.fileinput($this.data())
       
     var $target = $(e.target).closest('[data-dismiss="fileinput"],[data-trigger="fileinput"]');
