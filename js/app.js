@@ -88,13 +88,26 @@ $(function(){
         this.$navigationCollapseToggle.on('click', $.proxy(this.toggleNavigationCollapseState, this));
 
         /* reimplementing bs.collapse data-parent here as we don't want to use BS .panel*/
-        this.$sidebar.find('.collapse').on('show.bs.collapse', function(){
-            $('#sidebar').find('.collapse.in').not($(this)).collapse('hide');
+        this.$sidebar.find('.collapse').on('show.bs.collapse', function(e){
+            // execute only if we're actually the .collapse element initiated event
+            // return for bubbled events
+            if (e.target != e.currentTarget) return;
+
+            var $triggerLink = $(this).prev('[data-toggle=collapse]');
+            $($triggerLink.data('parent')).find('.collapse.in').not($(this)).collapse('hide');
         })
             /* adding additional classes to navigation link li-parent for several purposes. see navigation styles */
-            .on('show.bs.collapse', function(){
+            .on('show.bs.collapse', function(e){
+                // execute only if we're actually the .collapse element initiated event
+                // return for bubbled events
+                if (e.target != e.currentTarget) return;
+
                 $(this).closest('li').addClass('open');
-            }).on('hide.bs.collapse', function(){
+            }).on('hide.bs.collapse', function(e){
+                // execute only if we're actually the .collapse element initiated event
+                // return for bubbled events
+                if (e.target != e.currentTarget) return;
+
                 $(this).closest('li').removeClass('open');
             });
     };
