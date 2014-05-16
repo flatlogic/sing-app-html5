@@ -58,11 +58,11 @@
                 </ul>
             </li>
             <li>
-                <a href="statistics.html">
+                <a href="charts.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-signal"></i>
+                        <i class="glyphicon glyphicon-stats"></i>
                     </span>
-                    Statistics
+                    Charts
                 </a>
             </li>
         </ul>
@@ -136,6 +136,28 @@
                 <ul id="sidebar-tables" class="collapse">
                     <li><a href="tables_basic.html">Tables Basic</a></li>
                     <li><a href="tables_dynamic.html">Tables Dynamic</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fa fa-folder-open"></i>
+                    </span>
+                    Menu Levels
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-levels" class="collapse">
+                    <li><a href="tables_basic.html">Level 1</a></li>
+                    <li>
+                        <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
+                            Level 2
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-sub-levels" class="collapse">
+                            <li><a href="#">Level 3</a></li>
+                            <li><a href="#">Level 3</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
         </ul>

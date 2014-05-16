@@ -33,7 +33,7 @@ $(function(){
 
         this.pjaxEnabled = window.PJAX_ENABLED;
         this.debug = window.DEBUG;
-        this.navCollapseTimeout = 1500;
+        this.navCollapseTimeout = 2000;
         this.$sidebar = $('#sidebar');
         this.$loaderWrap = $('.loader-wrap');
         this.$navigationStateToggle = $('#nav-state-toggle');
@@ -653,7 +653,7 @@ function initAppFixes(){
 
         So forcing chrome to redraw everything.
          */
-        $(document).on('show.bs.modal', function(){
+        $(document).on('shown.bs.modal', function(){
             // force redraw solution
             // http://stackoverflow.com/questions/3485365/how-can-i-force-webkit-to-redraw-repaint-to-propagate-style-changes
             var body = document.body,
