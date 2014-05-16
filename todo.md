@@ -12,7 +12,7 @@
    2.  reorganize last row
    3.  add something from `love designs` folder
    4.  weather
- 5.  charts
+ 5.  ~~charts~~
  6.  ~~maps~~
    1.  ~~vector~~
    2.  ~~google~~
