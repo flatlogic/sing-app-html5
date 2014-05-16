@@ -56,7 +56,8 @@
     "backgrid-paginator": "git://github.com/wyuenho/backgrid-paginator.git#master",
     "datatables": "latest",
     "jquery.nestable": "git://github.com/dbushell/Nestable.git",
-    "messenger": "latest"
+    "messenger": "latest",
+    "jquery.easy-pie-chart": "2.1.3"
   },
   "private": true,
   "ignore": [
