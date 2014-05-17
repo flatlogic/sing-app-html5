@@ -317,3 +317,21 @@
     }
   }
 }
+
+/***********************************/
+/**            INVOICE            **/
+/***********************************/
+
+.widget-invoice{
+  padding: 40px;
+
+  > header{
+    .invoice-logo{
+      max-height: 50px;
+    }
+
+    + .widget-body{
+      margin-top: 70px;
+    }
+  }
+}

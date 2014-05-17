@@ -1,5 +1,27 @@
 @media print {
 
+  .page-controls, .sidebar, .loader-wrap{
+    display: none;
+  }
+
+  .content-wrap{
+    position: static;
+  }
+
+  .content{
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .table, .table td, .table th{
+    background: $white !important;
+    border: none !important;
+  }
+
+  .table td{
+    border-top: 1px solid $gray-light !important;
+  }
 
   .hidden-print{
     display: none !important;
