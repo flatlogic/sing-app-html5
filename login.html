@@ -9,12 +9,56 @@
     <meta name="author" content="">
     <meta charset="utf-8">
 </head>
-<body>
+<body class="login-page">
 
-<div class="content-wrap">
-    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
-    <main id="content" class="content" role="main">
+<div class="container">
+    <main id="content" class="widget-login-container" role="main">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-10 col-md-offset-4 col-sm-offset-3 col-xs-offset-1">
+                <h4 class="widget-login-logo animated fadeInUp">
+                    <i class="fa fa-circle text-gray"></i>
+                    sing
+                    <i class="fa fa-circle text-warning"></i>
+                </h4>
+                <section class="widget widget-login animated fadeInUp">
+                    <header>
+                        <h3>Login to your Sing App</h3>
+                    </header>
+                    <div class="widget-body">
+                        <p class="widget-login-info">
+                            Use Facebook, Twitter or your email to sign in.
+                        </p>
+                        <p class="widget-login-info">
+                            Don't have an account? Sign up now!
+                        </p>
+                        <form class="login-form mt-lg">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="pswd" type="text" placeholder="Password">
+                            </div>
+                            <div class="clearfix">
+                                <div class="btn-toolbar pull-right">
+                                    <button type="button" class="btn btn-default btn-sm">Create an Account</button>
+                                    <a class="btn btn-inverse btn-sm" href="index.html">Login</a>
+                                </div>
+                            </div>
+                            <div class="checkbox widget-login-info">
+                                    <a href="#">Trouble with account?</a>
+                                    <input type="checkbox" id="checkbox1" value="1">
+                                    <label class="pull-right" for="checkbox1">Keep me signed in </label>
+                            </div>
+                        </form>
+                    </div>
+                    <footer>
+                        2014 &copy; Sing. Admin Dashboard Template.
+                    </footer>
+                </section>
+            </div>
+        </div>
     </main>
+
 </div>
 <!-- The Loader. Is shown when pjax happens -->
 <div class="loader-wrap hiding hide">
@@ -30,9 +74,6 @@
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
 <script src="vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
-<script src="vendor/jQuery-slimScroll/jquery.slimscroll.min.js"></script>
-<script src="vendor/widgster/widgster.js"></script>
-<script src="vendor/pace.js/pace.min.js"></script>
 
 <!-- common app js -->
 <script src="js/settings.js"></script>

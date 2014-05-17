@@ -40,7 +40,7 @@
  15.  extra
    1.  calendar
    2.  ~~invoice~~
-   3.  login
+   3.  ~~login~~
    4.  error page (404)
    5.  gallery (js sortable). [example](http://themes-lab.com/pixit/admin/gallery.html)
    6.  search result
