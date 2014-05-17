@@ -38,7 +38,7 @@
    2.  ** *notes* **
  14.  ** *right side chat* **
  15.  extra
-   1.  calendar
+   1.  ~~calendar~~
    2.  ~~invoice~~
    3.  ~~login~~
    4.  error page (404)
