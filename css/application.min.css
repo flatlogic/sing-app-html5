@@ -26595,6 +26595,66 @@ a.text-bg-sidebar:hover {
   transform: scale(1.1, 1.1);
 }
 
+/* line 482, ../sass/_widgets.scss */
+.search-result-categories > a {
+  display: block;
+  padding: 5px 30px 5px 10px;
+  font-weight: 400;
+  color: #777777;
+  text-decoration: none;
+}
+/* line 488, ../sass/_widgets.scss */
+.search-result-categories > a:hover {
+  color: #555555;
+}
+/* line 492, ../sass/_widgets.scss */
+.search-result-categories > a > .badge {
+  float: right;
+}
+
+/* line 499, ../sass/_widgets.scss */
+.search-result-item, .search-result-item > .media-body {
+  overflow: visible;
+}
+/* line 503, ../sass/_widgets.scss */
+.search-result-item .media-heading {
+  margin-bottom: 1px;
+  font-weight: 400;
+}
+/* line 508, ../sass/_widgets.scss */
+.search-result-item .media-object {
+  max-width: 74px;
+  max-height: 74px;
+  margin-top: 6px;
+}
+/* line 513, ../sass/_widgets.scss */
+.search-result-item .info {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2px;
+  font-size: 12px;
+}
+/* line 519, ../sass/_widgets.scss */
+.search-result-item .info > .dropdown-toggle {
+  margin-left: 3px;
+  color: #999999;
+}
+/* line 524, ../sass/_widgets.scss */
+.search-result-item .info > .dropdown-menu {
+  font-size: 12px;
+  min-width: 100px;
+}
+/* line 529, ../sass/_widgets.scss */
+.search-result-item .info > .additional-action {
+  margin-left: 3px;
+  color: #89B9D3;
+}
+/* line 534, ../sass/_widgets.scss */
+.search-result-item .description {
+  font-size: 13px;
+  color: #999999;
+}
+
 @media print {
   /* line 3, ../sass/_print.scss */
   .page-controls, .sidebar, .loader-wrap {
