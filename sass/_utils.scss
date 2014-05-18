@@ -218,6 +218,24 @@
   @include animation(bg-attention 10s);
 }
 
+/* .h* + .fw-bold */
+$font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
+$i: 1;
+@each $font-size in $font-sizes{
+
+  .value#{$i}{
+    margin: 0;
+    font-size: $font-size;
+    font-weight: $font-weight-semi-bold;
+  }
+  $i: $i + 1 !global;
+}
+
+.help{
+  font-size: $font-size-smaller;
+  color: $text-muted;
+}
+
 // Style Classes
 // ----------------------------
 
@@ -297,24 +315,6 @@ $width-variants: (50: 50px, 100: 100px, 150: 150px, 200: 200px);
 
 /* small + .text-muted*/
 .deemphasize{
-  font-size: $font-size-smaller;
-  color: $text-muted;
-}
-
-/* .h* + .fw-bold */
-$font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
-$i: 1;
-@each $font-size in $font-sizes{
-
-  .value#{$i}{
-    margin: 0;
-    font-size: $font-size;
-    font-weight: $font-weight-bold;
-  }
-  $i: $i + 1 !global;
-}
-
-.help{
   font-size: $font-size-smaller;
   color: $text-muted;
 }
