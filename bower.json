@@ -58,7 +58,9 @@
     "jquery.nestable": "git://github.com/dbushell/Nestable.git",
     "messenger": "latest",
     "jquery.easy-pie-chart": "2.1.3",
-    "fullcalendar": "latest"
+    "fullcalendar": "latest",
+    "shufflejs": "latest",
+    "magnific-popup": "latest"
   },
   "private": true,
   "ignore": [

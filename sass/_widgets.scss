@@ -425,3 +425,55 @@
     margin-top: -100px;
   }
 }
+
+/***********************************/
+/**          Post Links           **/
+/***********************************/
+
+.post-links{
+  margin-bottom: 0;
+  font-size: $font-size-small;
+  padding-left: 0;
+  @include clearfix();
+  > li{
+    float: left;
+    list-style: none;
+
+    + li{
+      &:before{
+        color: #999;
+        content: "•";
+        padding: 0 8px;
+      }
+    }
+    > a{
+      text-decoration: none;
+      color: $text-muted;
+      &:hover{
+        color: $text-muted;
+      }
+    }
+  }
+}
+
+/***********************************/
+/**            Gallery            **/
+/***********************************/
+
+.gallery{
+  .thumbnail{
+
+    a{
+      display: inline-block;
+      overflow: hidden;
+      > img{
+        @include transition-transform(.15s ease);
+      }
+    }
+    &:hover{
+      a > img{
+        @include scale(1.1, 1.1);
+      }
+    }
+  }
+}
