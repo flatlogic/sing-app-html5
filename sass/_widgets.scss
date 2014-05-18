@@ -503,11 +503,14 @@
 .search-result-item{
   padding: 20px;
   background-color: $white;
+  border-radius: $border-radius-base;
   @include clearfix();
 
   .image-link{
     display: block;
     overflow: hidden;
+    border-top-left-radius: $border-radius-base;
+    border-bottom-left-radius: $border-radius-base;
     @media (min-width: $screen-sm-min) {
       display: inline-block;
       margin: -20px 0 -20px -20px;

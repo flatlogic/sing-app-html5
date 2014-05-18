@@ -26622,6 +26622,7 @@ a.text-bg-sidebar:hover {
 .search-result-item {
   padding: 20px;
   background-color: white;
+  border-radius: 4px;
 }
 /* line 14, ../vendor/bootstrap-sass/vendor/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
 .search-result-item:before, .search-result-item:after {
@@ -26632,13 +26633,15 @@ a.text-bg-sidebar:hover {
 .search-result-item:after {
   clear: both;
 }
-/* line 508, ../sass/_widgets.scss */
+/* line 509, ../sass/_widgets.scss */
 .search-result-item .image-link {
   display: block;
   overflow: hidden;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 @media (min-width: 768px) {
-  /* line 508, ../sass/_widgets.scss */
+  /* line 509, ../sass/_widgets.scss */
   .search-result-item .image-link {
     display: inline-block;
     margin: -20px 0 -20px -20px;
@@ -26647,43 +26650,43 @@ a.text-bg-sidebar:hover {
   }
 }
 @media (max-width: 767px) {
-  /* line 508, ../sass/_widgets.scss */
+  /* line 509, ../sass/_widgets.scss */
   .search-result-item .image-link {
     max-height: 200px;
   }
 }
-/* line 522, ../sass/_widgets.scss */
+/* line 525, ../sass/_widgets.scss */
 .search-result-item .image {
   max-width: 100%;
 }
-/* line 526, ../sass/_widgets.scss */
+/* line 529, ../sass/_widgets.scss */
 .search-result-item .info {
   margin-top: 2px;
   font-size: 12px;
   color: #999999;
 }
-/* line 532, ../sass/_widgets.scss */
+/* line 535, ../sass/_widgets.scss */
 .search-result-item .description {
   font-size: 13px;
 }
-/* line 536, ../sass/_widgets.scss */
+/* line 539, ../sass/_widgets.scss */
 .search-result-item + .search-result-item {
   margin-top: 20px;
 }
 
 @media (min-width: 768px) {
-  /* line 541, ../sass/_widgets.scss */
+  /* line 544, ../sass/_widgets.scss */
   .search-result-item-body {
     margin-left: 200px;
   }
 }
 
-/* line 547, ../sass/_widgets.scss */
+/* line 550, ../sass/_widgets.scss */
 .search-result-item-heading {
   font-weight: 400;
 }
 @media (min-width: 768px) {
-  /* line 547, ../sass/_widgets.scss */
+  /* line 550, ../sass/_widgets.scss */
   .search-result-item-heading {
     margin: 0;
   }
