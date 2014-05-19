@@ -485,14 +485,16 @@
 /***********************************/
 
 .search-result-categories{
-  > a {
-    display: block;
-    padding: 5px 30px 5px 10px;
-    font-weight: $font-weight-normal;
+  > li > a {
     color: $gray-semi-light;
-    text-decoration: none;
+    font-weight: $font-weight-normal;
     &:hover{
+      background-color: $gray-semi-lighter;
       color: $text-color;
+    }
+
+    > .glyphicon{
+      margin-right: 5px;
     }
 
     > .badge{
@@ -803,4 +805,155 @@
   font-size: $font-size-mini;
   color: $text-muted;
   text-align: center;
+}
+
+/***********************************/
+/**             EMAIL             **/
+/***********************************/
+
+
+.nav-email-folders{
+  > li > a {
+    color: $gray-semi-light;
+    font-weight: $font-weight-normal;
+    &:hover{
+      background-color: #e5e5e5;
+      color: $text-color;
+    }
+
+    > .glyphicon{
+      margin-right: 5px;
+    }
+
+    > .fa-circle{
+      margin-top: 3px;
+    }
+
+    > .badge{
+      background-color: $brand-danger;
+    }
+  }
+
+  > li.active > a{
+    &,
+    &:hover,
+    &:focus {
+      background-color: $gray-semi-lighter;
+      color: $text-color;
+      font-weight: $font-weight-semi-bold;
+
+      > .badge{
+        color: $text-color;
+      }
+    }
+  }
+}
+
+.widget-email-count{
+  display: inline-block;
+  margin: 0;
+  font-size: $font-size-mini;
+  color: $text-muted;
+  line-height: 29px;
+
+  + .widget-email-pagination{
+    margin-left: 10px;
+    border-left: 1px solid $gray-semi-lighter;
+    padding-left: 15px;
+    border-radius: 0;
+    vertical-align: -9px;
+  }
+}
+
+.widget-email-pagination{
+  margin: 0;
+}
+
+.table-emails{
+  margin-bottom: 0;
+
+  td > .checkbox,
+  th > .checkbox{
+    top: -13px;
+  }
+
+  .name,
+  .subject,
+  .date{
+    cursor: pointer;
+  }
+
+  .date{
+    text-align: right;
+    min-width: 65px;
+  }
+
+  .unread{
+    font-weight: $font-weight-semi-bold;
+    color: $text-color;
+  }
+
+  .starred{
+    color: $text-muted;
+    cursor: pointer;
+    @include transition(color .2s);
+    &:hover{
+      color: $text-color;
+    }
+
+    .fa-star{
+      color: $brand-warning;
+    }
+  }
+}
+
+.email-view{
+  hr{
+    margin: 5px 0;
+  }
+
+  .email-body{
+    margin-top: $line-height-computed;
+  }
+}
+
+.email-details img{
+  width: 30px;
+  height: 30px;
+  float: left;
+}
+
+.email-details-content{
+  @include clearfix();
+
+  .email{
+    color: $text-muted;
+    font-size: $font-size-mini;
+  }
+
+  .receiver{
+    display: block;
+    color: $text-muted;
+    margin-top: -6px;
+  }
+
+  .email-date{
+    margin-right: 10px;
+    line-height: 24px;
+    vertical-align: middle;
+  }
+}
+
+.email-attachments{
+  .attachment{
+    img{
+      display: block;
+    }
+
+    .title{
+      margin: 0;
+      font-weight: bold;
+    }
+
+  }
 }
