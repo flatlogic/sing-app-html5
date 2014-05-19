@@ -344,6 +344,16 @@
   background-color: $gray-semi-lighter;
 }
 
+.login-page .page-footer {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  font-size: $font-size-mini;
+  color: $text-muted;
+  text-align: center;
+}
+
 .widget-login-container{
   padding-top: 10%;
 }
@@ -365,15 +375,6 @@
     #{headings()}{
       font-weight: $font-weight-normal;
     }
-  }
-
-  > footer{
-    position: absolute;
-    bottom: -40px;
-    margin: 0;
-    font-size: $font-size-mini;
-    color: $text-muted;
-    text-align: center;
   }
 }
 
@@ -758,4 +759,48 @@
   > img{
     max-width: 100%;
   }
+}
+
+/***********************************/
+/**          ERROR PAGE           **/
+/***********************************/
+
+.error-page{
+  background-color: $gray-semi-lighter;
+}
+
+.error-container{
+  padding-top: 5%;
+  text-align: center;
+
+  > .btn{
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.error-code{
+  font-size: 120px;
+  font-weight: $font-weight-semi-bold;
+  color: $gray-dark;
+}
+
+.error-info{
+  font-size: 32px;
+  color: $gray-dark;
+}
+
+.error-help{
+  font-size: 20px;
+}
+
+.error-page .page-footer {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: $font-size-mini;
+  color: $text-muted;
+  text-align: center;
 }

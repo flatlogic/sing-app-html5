@@ -37,14 +37,14 @@
    1.  email
    2.  ** *notes* **
  14.  ** *right side chat* **
- 15.  extra
+ 15.  ~~extra~~
    1.  ~~calendar~~
    2.  ~~invoice~~
    3.  ~~login~~
-   4.  error page (404)
+   4.  ~~error page (404)~~
    5.  ~~gallery (js sortable). [example](http://themes-lab.com/pixit/admin/gallery.html)~~
    6.  ~~search result~~
-   7.  *time line*
+   7.  ~~*time line*~~
  16.  ** touch devices test (check navigation) **
  17.  ~~*pace*~~
  18.  ~~fill sidebar with projects etc. scroll sidebar~~
