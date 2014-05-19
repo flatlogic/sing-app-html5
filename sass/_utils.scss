@@ -35,8 +35,8 @@
   line-height: 2.2em;
 }
 
-@include thumb('.thumb-sm', 34px);
 @include thumb('.thumb', 50px);
+@include thumb('.thumb-sm', 34px);
 
 .thumb-sm,
 .thumb{
