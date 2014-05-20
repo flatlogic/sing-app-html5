@@ -154,6 +154,13 @@
     &.collapsed .toggle{
       @include rotate(90deg);
     }
+
+    .label{
+      float: right;
+      line-height: 15px;
+      margin-top: 11px;
+      margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
+    }
   }
 
   > li > a{
