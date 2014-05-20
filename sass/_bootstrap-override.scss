@@ -538,6 +538,11 @@ h6, .h6 { &.panel-title{ font-size: $font-size-h6; }}
 
 .alert-sm{
   padding: 10px 12px;
+  font-size: $font-size-mini;
+
+  .close{
+    font-size: 18px;
+  }
 }
 
 //

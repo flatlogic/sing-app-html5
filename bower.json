@@ -28,6 +28,7 @@
     "rickshaw": "latest",
     "flot": "latest",
     "flot.animator":"https://github.com/Codicode/flotanimator.git",
+    "flot-orderBars": "https://github.com/emmerich/flot-orderBars.git",
     "jquery-autosize": ">= 1.18.6",
     "bootstrap3-wysihtml5": "git://github.com/schnawel007/bootstrap3-wysihtml5.git",
     "switchery": ">= 0.5.1",

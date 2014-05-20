@@ -43,12 +43,14 @@ $(function(){
                 "</li>";
         }
     };
+
     function pageLoad(){
         $('#wysiwyg').wysihtml5({
             html: true,
             customTemplates: bs3Wysihtml5Templates,
             stylesheets: []
         });
+
     }
     pageLoad();
     SingApp.onPageLoad(pageLoad);

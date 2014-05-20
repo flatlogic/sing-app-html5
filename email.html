@@ -56,6 +56,14 @@
                     <li><a href="widgets.html">Widgets</a></li>
                 </ul>
             </li>
+            <li class="active">
+                <a href="inbox.html">
+                    <span class="icon">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+                    Email
+                </a>
+            </li>
             <li>
                 <a href="charts.html">
                     <span class="icon">
@@ -137,20 +145,20 @@
                     <li><a href="tables_dynamic.html">Tables Dynamic</a></li>
                 </ul>
             </li>
-            <li class="active">
-                <a href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+            <li>
+                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-leaf"></i>
                     </span>
                     Extra
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-extra" class="collapse in">
+                <ul id="sidebar-extra" class="collapse">
                     <li><a href="calendar.html">Calendar</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
                     <li><a href="login.html" target="_blank" data-no-pjax>Login Page</a></li>
                     <li><a href="error.html" target="_blank" data-no-pjax>Error Page</a></li>
-                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="search.html">Search Results</a></li>
                     <li><a href="time_line.html" data-no-pjax>Time Line</a></li>
                 </ul>
@@ -474,14 +482,19 @@
                 </ul>
             </div>
             <div class="col-md-9 col-lg-10">
-                <div class="text-align-right mb-xs">
-                    <p class="widget-email-count">Showing 1 - 10 of 96 messages</p>
-                    <ul class="pagination pagination-sm widget-email-pagination">
-                        <li class="prev disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li class="next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                    </ul>
+                <div class="clearfix mb-xs">
+                    <a class="btn btn-default btn-sm width-50 pull-left" id="back-btn" href="inbox.html">
+                        <i class="fa fa-angle-left fa-lg"></i>
+                    </a>
+                    <div class="pull-right hide" id="folder-stats">
+                        <p class="widget-email-count">Showing 1 - 10 of 96 messages</p>
+                        <ul class="pagination pagination-sm widget-email-pagination">
+                            <li class="prev disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <section class="widget widget-email">
                     <header>
@@ -585,9 +598,6 @@
 <script src="js/app.js"></script>
 
 <!-- page specific libs -->
-<script src="vendor/bootstrap3-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script>
-<script src="vendor/bootstrap3-wysihtml5/src/bootstrap3-wysihtml5.js"></script>
 <!-- page specific js -->
-<script src="js/email.js"></script>
 </body>
 </html>

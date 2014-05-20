@@ -34,7 +34,7 @@
    2.  ~~validation~~
    3.  ~~wizard~~
  13.  apps
-   1.  email
+   1.  ~~email~~
    2.  ** *notes* **
  14.  ** *right side chat* **
  15.  ~~extra~~
