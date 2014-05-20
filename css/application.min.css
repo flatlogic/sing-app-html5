@@ -26583,7 +26583,7 @@ a.text-bg-sidebar:hover {
 /* line 445, ../sass/_widgets.scss */
 .post-links > li + li:before {
   color: #999;
-  content: "•";
+  content: "\25cf";
   padding: 0 8px;
 }
 /* line 451, ../sass/_widgets.scss */
