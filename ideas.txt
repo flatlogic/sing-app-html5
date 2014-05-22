@@ -13,3 +13,4 @@
 13. http://neveldo.fr/mapael/usecases/world/ select a year map
 14. no padding tables & list groups http://getbootstrap.com/components/#panels-tables
 15. responsive tables http://css-tricks.com/examples/ResponsiveTables/responsive.php
+16. docs like here http://themeforest.net/item/orb-powerfull-admin-dashboard/7758614?WT.ac=category_thumb&WT.z_author=DazeinCreative

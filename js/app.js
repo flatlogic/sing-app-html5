@@ -633,6 +633,18 @@ function initAppFunctions(){
         });
 
     }(jQuery);
+
+    /* ========================================================================
+     * Chat Sidebar
+     * ========================================================================
+     */
+    !function($){
+        //.chat-sidebar-container contains all needed styles so we don't pollute body{ }
+        var $chatContainer = $('body').addClass('chat-sidebar-container');
+        $(document).on('click', '[data-toggle=chat-sidebar]', function(){
+            $chatContainer.toggleClass('chat-sidebar-opened')
+        })
+    }(jQuery);
 }
 
 

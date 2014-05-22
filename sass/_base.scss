@@ -450,6 +450,25 @@
   }
 }
 
+.chat-sidebar{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;
+  width: $sidebar-width;
+  background-color: $sidebar-bg-color;
+}
+
+/* body tag is given this class */
+.chat-sidebar-container{
+  position: relative;
+  left: 0;
+  @include transition(left $sidebar-transition-time ease-in-out);
+  &.chat-sidebar-opened{
+    left: -$sidebar-width;
+  }
+}
+
 .page-title{
   margin: 0 0 $line-height-computed;
 }
