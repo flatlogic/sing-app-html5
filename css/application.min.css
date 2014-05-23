@@ -24421,7 +24421,7 @@ a {
 /* line 220, ../sass/_base.scss */
 .sidebar-nav > li > a .icon .fa-envelope {
   position: relative;
-  top: -2px;
+  top: -1px;
 }
 /* line 227, ../sass/_base.scss */
 .sidebar-nav > li > a .toggle {
