@@ -621,7 +621,7 @@ function initAppFunctions(){
         initSidebarScroll();
 
         /*
-        When widget is closed remove its parent if it is .col-*
+         When widget is closed remove its parent if it is .col-*
          */
         $(document).on('close.widgster', function(e){
             var $colWrap = $(e.target).closest('.content > .row > [class*="col-"]:not(.widget-container)');
@@ -643,7 +643,81 @@ function initAppFunctions(){
         var $chatContainer = $('body').addClass('chat-sidebar-container');
         $(document).on('click', '[data-toggle=chat-sidebar]', function(){
             $chatContainer.toggleClass('chat-sidebar-opened')
-        })
+            $(this).find('.chat-notification-sing').remove();
+        });
+
+        $(document).on('click', '.chat-sidebar-user-group > a', function(){
+            var $this = $(this),
+                $target = $($this.attr('href')),
+                $targetTitle = $target.find('.title');
+            $this.removeClass('active').find('.badge').remove();
+            $target.addClass('open');
+            $('.chat-sidebar-contacts').removeClass('open');
+            $('.chat-sidebar-footer').addClass('open');
+            $('.message-list', $target).slimscroll({
+                height: $target.height() - $targetTitle.height()
+                    - parseInt($targetTitle.css('margin-top'))
+                    - parseInt($targetTitle.css('margin-bottom')),
+                width: '',
+                size: '4px'
+            });
+            return false;
+        });
+
+        $(document).on('click', '.chat-sidebar-chat .js-back', function(){
+            var $chat = $(this).closest('.chat-sidebar-chat').removeClass('open');
+            var $sidebarContacts = $('.chat-sidebar-contacts').addClass('open');
+            $('.chat-sidebar-footer').removeClass('open');
+
+            return false;
+        });
+
+        $('#chat-sidebar-input').keyup(function(e){
+            if(e.keyCode != 13) return;
+            var val;
+            if ((val = $(this).val().trim()) == '') return;
+
+            var $currentMessageList = $('.chat-sidebar-chat.open .message-list'),
+                $message = $('<li class="message from-me">' +
+                    '<span class="thumb-sm"><img class="img-circle" src="img/avatar.png" alt="..."></span>' +
+                    '<div class="message-body"></div>' +
+                    '</li>');
+            $message.appendTo($currentMessageList).find('.message-body').text(val);
+            $(this).val('');
+        });
+
+        $('#chat-sidebar-search').keyup(function(){
+            var $contacts = $('.chat-sidebar-contacts.open'),
+                $chat = $('.chat-sidebar-chat.open'),
+                val = $(this).val().trim().toUpperCase();
+            if ($contacts.length){
+                $('.chat-sidebar-user-group .list-group-item').addClass('hide').filter(function(){
+                    return val == '' ? true : ($(this).find('.message-sender').text().toUpperCase().indexOf(val) != -1)
+                }).removeClass('hide');
+            }
+            if ($chat.length){
+                $('.chat-sidebar-chat.open .message-list .message').addClass('hide').filter(function(){
+                    return val == '' ? true : ($(this).find('.message-body').text().toUpperCase().indexOf(val) != -1)
+                }).removeClass('hide');
+            }
+        });
+
+        function initChatSidebarScroll(){
+            var $sidebarContent = $('.chat-sidebar-contacts');
+            if ($('#chat').find('.slimScrollDiv').length != 0){
+                $sidebarContent.slimscroll({
+                    destroy: true
+                })
+            }
+            $sidebarContent.slimscroll({
+                height: window.innerHeight,
+                width: '',
+                size: '4px'
+            });
+        }
+
+        SingApp.onResize(initChatSidebarScroll, true);
+        initChatSidebarScroll();
     }(jQuery);
 }
 
@@ -657,13 +731,13 @@ function initAppFixes(){
     if (isWebkit){
 
         /*
-        This fixes a situation when webkit scrollbar is not properly shown
-        when modal is opened. It's happening because .modal element is somehow
-        shifted to the right by $sidebar-icon-state-width pixels (see _variables.scss:71).
-        My only guess it's because of having complex css style structure (transforms, absolutes, overflows).
-        Though it works well in opera, firefox & ie.
+         This fixes a situation when webkit scrollbar is not properly shown
+         when modal is opened. It's happening because .modal element is somehow
+         shifted to the right by $sidebar-icon-state-width pixels (see _variables.scss:71).
+         My only guess it's because of having complex css style structure (transforms, absolutes, overflows).
+         Though it works well in opera, firefox & ie.
 
-        So forcing chrome to redraw everything.
+         So forcing chrome to redraw everything.
          */
         $(document).on('shown.bs.modal', function(){
             // force redraw solution
@@ -693,7 +767,29 @@ function initDemoFunctions(){
         });
         $('#notifications-toggle').find('input').on('ajax-load:end', function(){
             $('#notifications-list').find('[data-toggle=tooltip]').tooltip();
-        })
+        });
+
+        $('[data-toggle="chat-sidebar"]').one('click', function(){
+            setTimeout(function(){
+                $('.chat-sidebar-user-group:first-of-type .list-group-item:first-child').addClass('active')
+                    .find('.fa-circle').after('<span class="badge badge-danger pull-right animated bounceInDown">3</span>');
+            }, 1000)
+        });
+
+        setTimeout(function(){
+            var $chatNotification = $('#chat-notification');
+            $chatNotification.removeClass('hide').addClass('animated fadeIn')
+                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $chatNotification.removeClass('animated fadeIn');
+                    setTimeout(function(){
+                        $chatNotification.addClass('animated fadeOut')
+                            .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                              $chatNotification.addClass('hide');
+                            });
+                    }, 2000);
+                });
+            $chatNotification.siblings('[data-toggle="chat-sidebar"]').append('<i class="chat-notification-sing animated bounceIn"></i>')
+        }, 4000)
 
     }(jQuery);
 }

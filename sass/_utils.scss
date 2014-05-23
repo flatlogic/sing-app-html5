@@ -13,7 +13,7 @@
  * .circle & .rounded are pretty cool way to add a bit of beauty to raw data.
  * should be used with bg-* and text-* classes for colors.
  */
-.circle, .rounded{
+.circle, .rounded, .circle-o{
   display: inline-block;
   width: #{$line-height-base}em;
   height: #{$line-height-base}em;
@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-.circle{
+.circle, .circle-o{
   @include border-radius(50%);
 }
 
@@ -35,9 +35,28 @@
   line-height: 2.2em;
 }
 
+.circle-o{
+  border: #{$line-height-base/5}em solid transparent;
+
+  &.circle-o-danger{ border-color: $brand-danger };
+  &.circle-o-warning{ border-color: $brand-warning };
+  &.circle-o-success{ border-color: $brand-success };
+  &.circle-o-info{ border-color: $brand-info };
+  &.circle-o-primary{ border-color: $brand-primary };
+  &.circle-o-black{ border-color: $black };
+  &.circle-o-gray-darker{ border-color: $gray-darker };
+  &.circle-o-gray-dark{ border-color: $gray-dark };
+  &.circle-o-gray{ border-color: $gray };
+  &.circle-o-gray-light{ border-color: $gray-light };
+  &.circle-o-gray-lighter{ border-color: $gray-lighter };
+  &.circle-o-white{ border-color: $white };
+}
+
 @include thumb('.thumb', 50px);
 @include thumb('.thumb-sm', 34px);
+@include thumb('.thumb-xs', 28px);
 
+.thumb-xs,
 .thumb-sm,
 .thumb{
   position: relative;
@@ -77,9 +96,28 @@
 }
 
 .input-dark{
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0,0,0,.4);
   border: 0;
-  color: $gray-light
+  color: $gray;
+  &:focus{
+    background-color: $gray-lighter
+  }
+}
+
+.input-group-dark{
+  .input-group-addon,
+  .form-control{
+    background-color: rgba(0,0,0,.4);
+    border: 0;
+    color: $gray;
+    @include transition(background-color .15s ease-in-out);
+  }
+
+  .form-control:focus,
+  .form-control:focus + .input-group-addon,
+  &.focus .input-group-addon{
+    background-color: $gray-lighter
+  }
 }
 
 .input-group-transparent{

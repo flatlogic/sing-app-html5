@@ -368,6 +368,12 @@ legend {
   }
 }
 
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+  }
+}
+
 //
 // Breadcrumbs
 // --------------------------------------------------

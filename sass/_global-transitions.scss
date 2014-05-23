@@ -10,5 +10,5 @@ a{
 }
 
 .form-control{
-  @include transition(border-color .15s ease-in-out);
+  @include transition(border-color .15s ease-in-out, background-color .15s ease-in-out);
 }

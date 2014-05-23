@@ -36,7 +36,7 @@
  13.  apps
    1.  ~~email~~
    2.  ** *notes* **
- 14.  ** *right side chat* **
+ 14.  ~~** *right side chat* **~~
  15.  ~~extra~~
    1.  ~~calendar~~
    2.  ~~invoice~~
