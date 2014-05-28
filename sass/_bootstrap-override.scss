@@ -116,7 +116,7 @@ legend {
 .table td > .checkbox,
 .table th > .checkbox{
   position: relative;
-  top: -8px;
+  top: -13px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -144,6 +144,19 @@ legend {
       > th,
       > td {
         padding: 10px;
+      }
+    }
+  }
+}
+
+.table-sm {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 6px;
       }
     }
   }

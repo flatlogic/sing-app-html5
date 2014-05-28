@@ -15660,7 +15660,7 @@ legend {
 .table td > .checkbox,
 .table th > .checkbox {
   position: relative;
-  top: -8px;
+  top: -13px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -15695,33 +15695,43 @@ legend {
   padding: 10px;
 }
 
-/* line 152, ../sass/_bootstrap-override.scss */
+/* line 157, ../sass/_bootstrap-override.scss */
+.table-sm > thead > tr > th,
+.table-sm > thead > tr > td,
+.table-sm > tbody > tr > th,
+.table-sm > tbody > tr > td,
+.table-sm > tfoot > tr > th,
+.table-sm > tfoot > tr > td {
+  padding: 6px;
+}
+
+/* line 165, ../sass/_bootstrap-override.scss */
 .table-hover > tbody > tr:hover .progress {
   background-color: white;
 }
 
-/* line 160, ../sass/_bootstrap-override.scss */
+/* line 173, ../sass/_bootstrap-override.scss */
 .dropdown-menu {
   font-size: 13px;
 }
-/* line 163, ../sass/_bootstrap-override.scss */
+/* line 176, ../sass/_bootstrap-override.scss */
 .dropdown-menu > li > a {
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-/* line 173, ../sass/_bootstrap-override.scss */
+/* line 186, ../sass/_bootstrap-override.scss */
 .nav-tabs {
   border-bottom: none;
   background-color: #dddddd;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 178, ../sass/_bootstrap-override.scss */
+/* line 191, ../sass/_bootstrap-override.scss */
 .nav-tabs > li {
   margin-bottom: 0;
 }
-/* line 180, ../sass/_bootstrap-override.scss */
+/* line 193, ../sass/_bootstrap-override.scss */
 .nav-tabs > li > a {
   padding: 12px 18px;
   border: none;
@@ -15730,30 +15740,30 @@ legend {
   -o-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
 }
-/* line 185, ../sass/_bootstrap-override.scss */
+/* line 198, ../sass/_bootstrap-override.scss */
 .nav-tabs > li > a:hover {
   background-color: transparent;
   color: #555555;
 }
-/* line 192, ../sass/_bootstrap-override.scss */
+/* line 205, ../sass/_bootstrap-override.scss */
 .nav-tabs > li.open > a, .nav-tabs > li.open > a:hover, .nav-tabs > li.open > a:focus {
   background-color: white;
   color: #555555;
 }
-/* line 201, ../sass/_bootstrap-override.scss */
+/* line 214, ../sass/_bootstrap-override.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   border: none;
   -webkit-box-shadow: 1px 1px 2px #cccccc;
   box-shadow: 1px 1px 2px #cccccc;
 }
 
-/* line 211, ../sass/_bootstrap-override.scss */
+/* line 224, ../sass/_bootstrap-override.scss */
 .tab-content {
   position: relative;
   z-index: 1;
   background-color: white;
 }
-/* line 215, ../sass/_bootstrap-override.scss */
+/* line 228, ../sass/_bootstrap-override.scss */
 .tab-content > .tab-pane {
   padding: 20px;
 }
@@ -15768,37 +15778,37 @@ legend {
   clear: both;
 }
 
-/* line 233, ../sass/_bootstrap-override.scss */
+/* line 246, ../sass/_bootstrap-override.scss */
 .tab-content {
   overflow: auto;
 }
 
-/* line 238, ../sass/_bootstrap-override.scss */
+/* line 251, ../sass/_bootstrap-override.scss */
 .tabs-below > .nav-tabs,
 .tabs-right > .nav-tabs,
 .tabs-left > .nav-tabs {
   border-bottom: 0;
 }
 
-/* line 245, ../sass/_bootstrap-override.scss */
+/* line 258, ../sass/_bootstrap-override.scss */
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
   display: none;
 }
 
-/* line 249, ../sass/_bootstrap-override.scss */
+/* line 262, ../sass/_bootstrap-override.scss */
 .tab-content > .active,
 .pill-content > .active {
   display: block;
 }
 
-/* line 258, ../sass/_bootstrap-override.scss */
+/* line 271, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li,
 .tabs-right > .nav-tabs > li {
   float: none;
 }
 
-/* line 262, ../sass/_bootstrap-override.scss */
+/* line 275, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
   min-width: 74px;
@@ -15806,19 +15816,19 @@ legend {
   margin-bottom: 3px;
 }
 
-/* line 269, ../sass/_bootstrap-override.scss */
+/* line 282, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li:last-child > a,
 .tabs-right > .nav-tabs > li:last-child > a {
   margin-bottom: 0;
 }
 
-/* line 275, ../sass/_bootstrap-override.scss */
+/* line 288, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs {
   float: left;
   border-top-right-radius: 0;
 }
 
-/* line 279, ../sass/_bootstrap-override.scss */
+/* line 292, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
   -moz-border-radius: 4px 0 0 4px;
@@ -15826,13 +15836,13 @@ legend {
   border-radius: 4px 0 0 4px;
 }
 
-/* line 285, ../sass/_bootstrap-override.scss */
+/* line 298, ../sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs {
   float: right;
   border-top-left-radius: 0;
 }
 
-/* line 289, ../sass/_bootstrap-override.scss */
+/* line 302, ../sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
   -moz-border-radius: 0 4px 4px 0;
@@ -15840,42 +15850,42 @@ legend {
   border-radius: 0 4px 4px 0;
 }
 
-/* line 294, ../sass/_bootstrap-override.scss */
+/* line 307, ../sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs > li.active > a {
   -webkit-box-shadow: -1px 1px 2px #cccccc;
   box-shadow: -1px 1px 2px #cccccc;
 }
 
-/* line 303, ../sass/_bootstrap-override.scss */
+/* line 316, ../sass/_bootstrap-override.scss */
 .navbar {
   border: none;
   font-size: 13px;
   font-weight: 500;
 }
-/* line 308, ../sass/_bootstrap-override.scss */
+/* line 321, ../sass/_bootstrap-override.scss */
 .navbar h5 {
   font-size: 13px;
 }
-/* line 312, ../sass/_bootstrap-override.scss */
+/* line 325, ../sass/_bootstrap-override.scss */
 .navbar .deemphasize {
   font-size: 12px;
 }
 
-/* line 318, ../sass/_bootstrap-override.scss */
+/* line 331, ../sass/_bootstrap-override.scss */
 .navbar-form .form-control {
   font-size: 13px;
 }
-/* line 322, ../sass/_bootstrap-override.scss */
+/* line 335, ../sass/_bootstrap-override.scss */
 .navbar-form .input-group {
   width: 250px;
 }
-/* line 326, ../sass/_bootstrap-override.scss */
+/* line 339, ../sass/_bootstrap-override.scss */
 .navbar-form .input-group-addon {
   color: #666666;
 }
 
 @media (min-width: 768px) {
-  /* line 333, ../sass/_bootstrap-override.scss */
+  /* line 346, ../sass/_bootstrap-override.scss */
   .container > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -15885,66 +15895,66 @@ legend {
   }
 }
 
-/* line 342, ../sass/_bootstrap-override.scss */
+/* line 355, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav {
   float: left;
   margin-left: 15px;
   margin-right: 15px;
 }
-/* line 345, ../sass/_bootstrap-override.scss */
+/* line 358, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav.navbar-right {
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 342, ../sass/_bootstrap-override.scss */
+  /* line 355, ../sass/_bootstrap-override.scss */
   .navbar-header > .navbar-nav {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  /* line 356, ../sass/_bootstrap-override.scss */
+  /* line 369, ../sass/_bootstrap-override.scss */
   .navbar-header > .navbar-nav + .navbar-brand {
     height: 60px;
     line-height: 30px;
   }
 }
-/* line 362, ../sass/_bootstrap-override.scss */
+/* line 375, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav > li {
   float: left;
 }
-/* line 364, ../sass/_bootstrap-override.scss */
+/* line 377, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav > li > a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 @media (min-width: 768px) {
-  /* line 372, ../sass/_bootstrap-override.scss */
+  /* line 385, ../sass/_bootstrap-override.scss */
   .navbar-nav.navbar-right:last-child {
     margin-right: 0;
   }
 }
-/* line 382, ../sass/_bootstrap-override.scss */
+/* line 395, ../sass/_bootstrap-override.scss */
 .breadcrumb {
   color: #999999;
 }
-/* line 385, ../sass/_bootstrap-override.scss */
+/* line 398, ../sass/_bootstrap-override.scss */
 .breadcrumb > .active {
   font-weight: 600;
 }
-/* line 389, ../sass/_bootstrap-override.scss */
+/* line 402, ../sass/_bootstrap-override.scss */
 .content .breadcrumb {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 399, ../sass/_bootstrap-override.scss */
+/* line 412, ../sass/_bootstrap-override.scss */
 .btn-rounded {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
-/* line 403, ../sass/_bootstrap-override.scss */
+/* line 416, ../sass/_bootstrap-override.scss */
 .btn-gray {
   color: #555555;
   background-color: #dddddd;
@@ -15971,36 +15981,36 @@ legend {
   background-color: #555555;
 }
 
-/* line 411, ../sass/_bootstrap-override.scss */
+/* line 424, ../sass/_bootstrap-override.scss */
 .label {
   font-size: 11px;
   font-weight: 600;
 }
 
-/* line 421, ../sass/_bootstrap-override.scss */
+/* line 434, ../sass/_bootstrap-override.scss */
 .btn-toolbar {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 430, ../sass/_bootstrap-override.scss */
+/* line 443, ../sass/_bootstrap-override.scss */
 .progress-bar {
   border-radius: 4px;
 }
 
-/* line 434, ../sass/_bootstrap-override.scss */
+/* line 447, ../sass/_bootstrap-override.scss */
 .progress-sm {
   height: 10px;
   margin-bottom: 10px;
 }
 
-/* line 439, ../sass/_bootstrap-override.scss */
+/* line 452, ../sass/_bootstrap-override.scss */
 .progress-xs {
   height: 5px;
   margin-bottom: 10px;
 }
 
-/* line 445, ../sass/_bootstrap-override.scss */
+/* line 458, ../sass/_bootstrap-override.scss */
 .progress-bar-gray {
   background-color: #555555;
 }
@@ -16011,7 +16021,7 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 449, ../sass/_bootstrap-override.scss */
+/* line 462, ../sass/_bootstrap-override.scss */
 .progress-bar-gray-light {
   background-color: #999999;
 }
@@ -16022,57 +16032,57 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 459, ../sass/_bootstrap-override.scss */
+/* line 472, ../sass/_bootstrap-override.scss */
 .widget-body.no-padding > .list-group {
   margin: 0;
 }
-/* line 462, ../sass/_bootstrap-override.scss */
+/* line 475, ../sass/_bootstrap-override.scss */
 .widget-body.no-padding > .list-group .list-group-item {
   border-width: 1px 0;
 }
 
-/* line 470, ../sass/_bootstrap-override.scss */
+/* line 483, ../sass/_bootstrap-override.scss */
 .list-group-lg .list-group-item {
   padding: 15px 15px;
 }
-/* line 474, ../sass/_bootstrap-override.scss */
+/* line 487, ../sass/_bootstrap-override.scss */
 .list-group:last-of-type .list-group-item:last-child {
   border-bottom: 0;
 }
 
-/* line 483, ../sass/_bootstrap-override.scss */
+/* line 496, ../sass/_bootstrap-override.scss */
 .panel {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 488, ../sass/_bootstrap-override.scss */
+/* line 501, ../sass/_bootstrap-override.scss */
 .panel-heading {
   padding-top: 13px;
   padding-bottom: 13px;
 }
 
-/* line 494, ../sass/_bootstrap-override.scss */
+/* line 507, ../sass/_bootstrap-override.scss */
 .panel-title > a {
   display: block;
 }
-/* line 497, ../sass/_bootstrap-override.scss */
+/* line 510, ../sass/_bootstrap-override.scss */
 .panel-title > a > i {
   -webkit-transition: -webkit-transform 0.35s ease;
   -moz-transition: -moz-transform 0.35s ease;
   -o-transition: -o-transform 0.35s ease;
   transition: transform 0.35s ease;
 }
-/* line 501, ../sass/_bootstrap-override.scss */
+/* line 514, ../sass/_bootstrap-override.scss */
 .panel-title > a.collapsed {
   color: #999999;
 }
-/* line 503, ../sass/_bootstrap-override.scss */
+/* line 516, ../sass/_bootstrap-override.scss */
 .panel-title > a.collapsed:hover {
   color: #343434;
 }
-/* line 506, ../sass/_bootstrap-override.scss */
+/* line 519, ../sass/_bootstrap-override.scss */
 .panel-title > a.collapsed > i {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -16080,85 +16090,85 @@ legend {
   transform: rotate(180deg);
 }
 
-/* line 514, ../sass/_bootstrap-override.scss */
+/* line 527, ../sass/_bootstrap-override.scss */
 h1.panel-title, .h1.panel-title {
   font-size: 36px;
 }
 
-/* line 515, ../sass/_bootstrap-override.scss */
+/* line 528, ../sass/_bootstrap-override.scss */
 h2.panel-title, .h2.panel-title {
   font-size: 30px;
 }
 
-/* line 516, ../sass/_bootstrap-override.scss */
+/* line 529, ../sass/_bootstrap-override.scss */
 h3.panel-title, .h3.panel-title {
   font-size: 24px;
 }
 
-/* line 517, ../sass/_bootstrap-override.scss */
+/* line 530, ../sass/_bootstrap-override.scss */
 h4.panel-title, .h4.panel-title {
   font-size: 18px;
 }
 
-/* line 518, ../sass/_bootstrap-override.scss */
+/* line 531, ../sass/_bootstrap-override.scss */
 h5.panel-title, .h5.panel-title {
   font-size: 14px;
 }
 
-/* line 519, ../sass/_bootstrap-override.scss */
+/* line 532, ../sass/_bootstrap-override.scss */
 h6.panel-title, .h6.panel-title {
   font-size: 12px;
 }
 
-/* line 522, ../sass/_bootstrap-override.scss */
+/* line 535, ../sass/_bootstrap-override.scss */
 .dropdown-menu > .panel {
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-/* line 528, ../sass/_bootstrap-override.scss */
+/* line 541, ../sass/_bootstrap-override.scss */
 .panel-heading {
   border-color: #dddddd;
 }
 
-/* line 536, ../sass/_bootstrap-override.scss */
+/* line 549, ../sass/_bootstrap-override.scss */
 .tooltip-inner {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 
-/* line 545, ../sass/_bootstrap-override.scss */
+/* line 558, ../sass/_bootstrap-override.scss */
 .alert-sm {
   padding: 10px 12px;
   font-size: 13px;
 }
-/* line 549, ../sass/_bootstrap-override.scss */
+/* line 562, ../sass/_bootstrap-override.scss */
 .alert-sm .close {
   font-size: 18px;
 }
 
-/* line 561, ../sass/_bootstrap-override.scss */
+/* line 574, ../sass/_bootstrap-override.scss */
 .modal-open .content-wrap, .modal-open.nav-collapsed .content-wrap, .modal-open.nav-static .content-wrap {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
   position: static;
 }
-/* line 568, ../sass/_bootstrap-override.scss */
+/* line 581, ../sass/_bootstrap-override.scss */
 .modal-open .sidebar, .modal-open.nav-collapsed .sidebar, .modal-open.nav-static .sidebar {
   z-index: -1;
 }
 
-/* line 578, ../sass/_bootstrap-override.scss */
+/* line 591, ../sass/_bootstrap-override.scss */
 .pagination {
   font-weight: 400;
 }
-/* line 581, ../sass/_bootstrap-override.scss */
+/* line 594, ../sass/_bootstrap-override.scss */
 .pagination > li {
   display: inline;
 }
-/* line 583, ../sass/_bootstrap-override.scss */
+/* line 596, ../sass/_bootstrap-override.scss */
 .pagination > li > a,
 .pagination > li > span {
   border-radius: 4px;
@@ -25755,6 +25765,16 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 }
 
 /* line 39, ../sass/_mixins.scss */
+.mt-xlg {
+  margin-top: 40px;
+}
+
+/* line 42, ../sass/_mixins.scss */
+.mt-n-xlg {
+  margin-top: -40px;
+}
+
+/* line 39, ../sass/_mixins.scss */
 .mt-lg {
   margin-top: 30px;
 }
@@ -25812,6 +25832,16 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 /* line 42, ../sass/_mixins.scss */
 .mt-n-0 {
   margin-top: 0;
+}
+
+/* line 39, ../sass/_mixins.scss */
+.mb-xlg {
+  margin-bottom: 40px;
+}
+
+/* line 42, ../sass/_mixins.scss */
+.mb-n-xlg {
+  margin-bottom: -40px;
 }
 
 /* line 39, ../sass/_mixins.scss */

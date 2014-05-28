@@ -176,9 +176,64 @@ $(function(){
         restyleCalendar();
     }
 
+    function initRickshaw(){
+        "use strict";
+
+        var seriesData = [ [], [] ];
+        var random = new Rickshaw.Fixtures.RandomData(30);
+
+        for (var i = 0; i < 30; i++) {
+            random.addData(seriesData);
+        }
+
+        var graph = new Rickshaw.Graph( {
+            element: document.getElementById("rickshaw"),
+            height: 100,
+            renderer: 'area',
+            series: [
+                {
+                    color: '#F7653F',
+                    data: seriesData[0],
+                    name: 'Uploads'
+                }, {
+                    color: '#F7D9C5',
+                    data: seriesData[1],
+                    name: 'Downloads'
+                }
+            ]
+        } );
+
+        function onResize(){
+            graph.configure({
+                width: $('#realtime1').width()
+            });
+            graph.render();
+        }
+
+        SingApp.onResize(onResize);
+        onResize();
+
+
+        var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+            graph: graph,
+            xFormatter: function(x) {
+                return new Date(x * 1000).toString();
+            }
+        } );
+
+        setInterval( function() {
+            random.removeData(seriesData);
+            random.addData(seriesData);
+            graph.update();
+
+        }, 1000 );
+    }
+
     function pjaxPageLoad(){
+        $('.widget').widgster();
         initMap();
         initCalendar();
+        initRickshaw();
     }
 
     pjaxPageLoad();
