@@ -177,10 +177,13 @@
   left: 0;
   right: 0;
   background-color: $gray-dark;
+  border-bottom-left-radius: $border-radius-base;
+  border-bottom-right-radius: $border-radius-base;
 
   > li > a{
     padding-left: 0;
     padding-right: 0;
+    border-radius: 0;
 
     color: $gray-lighter;
     &:hover{
@@ -195,6 +198,14 @@
       color: $brand-warning;
       font-weight: $font-weight-bold;
     }
+  }
+
+  > li:first-child > a{
+    border-bottom-left-radius: $border-radius-base;
+  }
+
+  > li:last-child > a{
+    border-bottom-right-radius: $border-radius-base;
   }
 }
 
@@ -782,18 +793,18 @@
 }
 
 .error-code{
-  font-size: 120px;
-  font-weight: $font-weight-semi-bold;
+  font-size: 180px;
+  font-weight: $font-weight-normal;
   color: $gray-dark;
 }
 
 .error-info{
-  font-size: 32px;
+  font-size: 20px;
   color: $gray-dark;
 }
 
 .error-help{
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .error-page .page-footer {

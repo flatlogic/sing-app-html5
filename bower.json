@@ -61,7 +61,8 @@
     "jquery.easy-pie-chart": "2.1.3",
     "fullcalendar": "latest",
     "shufflejs": "latest",
-    "magnific-popup": "latest"
+    "magnific-popup": "latest",
+    "jquery-animateNumber": "https://github.com/aishek/jquery-animateNumber.git"
   },
   "private": true,
   "ignore": [

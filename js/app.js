@@ -556,6 +556,24 @@ function initAppPlugins(){
                 .not(this).prop('checked', $(this).prop('checked'));
         });
     }(jQuery);
+
+    /* ========================================================================
+     * Animate Progress Bars
+     * ========================================================================
+     */
+    !function($){
+
+        $.fn.animateProgressBar = function () {
+            return this.each(function () {
+                var $bar = $(this).find('.progress-bar');
+                setTimeout(function(){
+                    $bar.css('width', $bar.data('width'));
+                }, 0)
+            })
+        };
+
+        $('.js-progress-animate').animateProgressBar();
+    }(jQuery);
 }
 
 /**
