@@ -363,13 +363,80 @@ $(function(){
         $('body').append($(".mapTooltip").detach());
     }
 
+    function initTiles(){
+        $(".live-tile").css('height', function(){
+            return $(this).data('height')
+        }).liveTile();
+    }
+
+    function initSparkline1(){
+        $('#sparkline1').sparkline([4,10,14,16,17,16,15,12,13,12,10,10],{
+            width: '100%',
+            fillColor: '#999',
+            height: '120px',
+            lineColor: 'transparent',
+            spotColor: '#c0d0f0',
+            minSpotColor: null,
+            maxSpotColor: null,
+            highlightSpotColor: '#ddd',
+            highlightLineColor: '#ddd'
+        }).sparkline([1,2,4,7,10,14,16,17,17,15,12,10],{
+            composite: true,
+            lineColor: 'transparent',
+            spotColor: '#c0d0f0',
+            fillColor: '#F0BF45',
+            minSpotColor: null,
+            maxSpotColor: null,
+            highlightSpotColor: '#ddd',
+            highlightLineColor: '#ddd'
+        })
+    }
+
+    function initWeather(){
+        var icons = new Skycons({"color": Sing.colors['brand-warning']});
+        icons.set("clear-day", "clear-day");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['brand-info']});
+        icons.set("partly-cloudy-day", "partly-cloudy-day");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['gray']});
+        icons.set("rain", "rain");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['brand-primary']});
+        icons.set("wind", "wind");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['gray']});
+        icons.set("fog", "fog");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['white']});
+        icons.set("clear-day-1", "clear-day");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['white']});
+        icons.set("partly-cloudy-day-1", "partly-cloudy-day");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['gray']});
+        icons.set("clear-day-2", "clear-day");
+        icons.play();
+    }
+
     function pageLoad(){
+        $('.widget').widgster();
         initSimpleChart();
         initChangesChart();
         initChangesYearChart();
         initSalesChart();
         initRealTime1();
         initYearsMap();
+        initTiles();
+        initSparkline1();
+        initWeather();
     }
 
     pageLoad();

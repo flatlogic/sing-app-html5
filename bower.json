@@ -62,7 +62,9 @@
     "fullcalendar": "latest",
     "shufflejs": "latest",
     "magnific-popup": "latest",
-    "jquery-animateNumber": "https://github.com/aishek/jquery-animateNumber.git"
+    "jquery-animateNumber": "https://github.com/aishek/jquery-animateNumber.git",
+    "MetroJS": "https://github.com/drewgreenwell/MetroJS.git",
+    "skycons": "https://github.com/darkskyapp/skycons.git"
   },
   "private": true,
   "ignore": [

@@ -257,8 +257,8 @@
 }
 
 /* .h* + .fw-bold */
-$font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
-$i: 1;
+$font-sizes: 54px, $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4, $font-size-h5, $font-size-h6;
+$i: 0;
 @each $font-size in $font-sizes{
 
   .value#{$i}{
@@ -297,13 +297,22 @@ $margin-horizontal-variants: (lg: 20px, md: 15px, sm: 10px, xs: 5px, 0: 0);
 @include property-variants('.ml', 'margin-left', $margin-horizontal-variants);
 @include property-variants('.mr', 'margin-right', $margin-horizontal-variants);
 
-$display-variants: (inline: 'inline', inline-block: 'inline-block', block: 'block');
+.no-padding{
+  padding: 0;
+}
 
-@include property-variants('.display', 'display', $margin-horizontal-variants);
+$display-variants: (inline: inline, inline-block: inline-block, block: block);
+
+@include property-variants('.display', 'display', $display-variants);
 
 $width-variants: (50: 50px, 100: 100px, 150: 150px, 200: 200px);
 
 @include property-variants('.width', 'width', $width-variants);
+
+$height-variants: (50: 50px, 100: 100px, 150: 150px, 200: 200px, 250: 250px);
+
+@include property-variants('.height', 'height', $height-variants);
+@include property-variants('.max-height', 'max-height', $height-variants);
 
 
 .no-border{

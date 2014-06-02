@@ -37,6 +37,7 @@
 @import "CSS:../vendor/messenger/build/css/messenger-spinner";
 @import "CSS:../vendor/fullcalendar/fullcalendar";
 @import "../vendor/magnific-popup/src/css/main";
+@import "CSS:../vendor/MetroJS/release/MetroJs.Full/MetroJs";
 
 
 @import "custom-libs-override";
@@ -44,13 +45,12 @@
 //
 //end custom libs
 
+//everything below this line is required for essential styling
+
 @import "general";
 @import "global-transitions";
 @import "base";
-@import "utils";
-
-//everything below this line is required for essential styling
 
 @import "widgets";
-
+@import "utils";
 @import "print";

@@ -19,7 +19,7 @@ $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 $gray-semi-light:        #777;
 $gray-semi-lighter:      #ddd;
 
-$brand-primary:         #618fb0 !default;
+$brand-primary:         #6899c6 !default; //#618fb0 !default;
 $brand-success:         #64bd63 !default;
 $brand-info:            #5dc4bf !default; //#61c4b8 !default; //#5DADE2 !default;
 $brand-warning:         #f0b518 !default;
@@ -168,6 +168,13 @@ $state-success-bg:               $brand-success-light;
 $state-info-bg:                  $brand-info-light !default;
 $state-warning-bg:               $brand-warning-light !default;
 $state-danger-bg:                $brand-danger-light !default;
+
+
+//== Progress bars
+//
+
+//** Background color of the whole progress component
+$progress-bg:                 $gray-lighter !default;
 
 //== Tooltips
 //
