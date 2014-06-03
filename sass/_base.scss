@@ -20,23 +20,41 @@
 }
 
 .page-controls, .content-wrap, .loader-wrap{
-  @include translate($sidebar-width, 0);
-  @include transition-transform($sidebar-transition-time ease-in-out);
+  left: $sidebar-width;
+  @include transition(left $sidebar-transition-time ease-in-out);
 
   @media (min-width: $screen-sm-min) {
     margin-left: $sidebar-icon-state-width;
-    @include translate($sidebar-width - $sidebar-icon-state-width, 0);
+    left: $sidebar-width - $sidebar-icon-state-width;
   }
 
   .nav-collapsed &{
-    @include translate(0, 0);
+    left: 0
   }
 
   .nav-static & {
     @media (min-width: $screen-md-min) {
       @include transition(none);
-      @include translate(0, 0);
+      left: 0;
       margin-left: $sidebar-width;
+    }
+  }
+}
+
+.page-controls{
+  @include transition(
+          left $sidebar-transition-time ease-in-out,
+          right $sidebar-transition-time ease-in-out
+  );
+  right: -$sidebar-width;
+
+  .nav-collapsed &{
+    right: 0
+  }
+
+  .nav-static & {
+    @media (min-width: $screen-md-min) {
+      right: 0;
     }
   }
 }
@@ -44,8 +62,6 @@
 .page-controls{
   position: absolute;
   z-index: 1;
-  left: 0;
-  right: 0;
 
   @media (max-width: $screen-xs-max) {
     font-size: 16px;

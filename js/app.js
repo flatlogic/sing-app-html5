@@ -747,28 +747,6 @@ function initAppFunctions(){
 function initAppFixes(){
     var isWebkit = 'WebkitAppearance' in document.documentElement.style;
     if (isWebkit){
-
-        /*
-         This fixes a situation when webkit scrollbar is not properly shown
-         when modal is opened. It's happening because .modal element is somehow
-         shifted to the right by $sidebar-icon-state-width pixels (see _variables.scss:71).
-         My only guess it's because of having complex css style structure (transforms, absolutes, overflows).
-         Though it works well in opera, firefox & ie.
-
-         So forcing chrome to redraw everything.
-         */
-        $(document).on('shown.bs.modal', function(){
-            // force redraw solution
-            // http://stackoverflow.com/questions/3485365/how-can-i-force-webkit-to-redraw-repaint-to-propagate-style-changes
-            var body = document.body,
-                scrollTop = body.scrollTop;
-            document.body.style.display='none';
-            document.body.offsetHeight;
-            document.body.style.display='block';
-
-            // preserving scroll position
-            body.scrollTop = scrollTop;
-        });
     }
 }
 
