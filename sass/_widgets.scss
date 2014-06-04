@@ -968,3 +968,19 @@
 
   }
 }
+
+/***********************************/
+/**           Weather             **/
+/***********************************/
+
+
+.widget-image .forecast{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}

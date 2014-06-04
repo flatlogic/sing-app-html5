@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "jquery": ">= 2.1.0",
-    "jquery-pjax": "latest",
+    "jquery-pjax": "https://github.com/defunkt/jquery-pjax.git#master",
     "bootstrap-sass": "git://github.com/twbs/bootstrap-sass.git",
     "font-awesome": ">= 4.0.3",
     "bootstrap-select": ">= 1.5.2",

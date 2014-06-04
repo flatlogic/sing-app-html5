@@ -846,7 +846,6 @@
 
 .widget{
   position: relative;
-  overflow: hidden;
   margin-bottom: $grid-gutter-width;
   padding: $widget-padding-vertical $widget-padding-horizontal;
   background: $widget-bg-color;
@@ -961,8 +960,8 @@
 .widget-image{
   position: relative;
   overflow: hidden;
-  margin: (-$widget-padding-vertical) (-$widget-padding-horizontal) 0;
-  border-radius: $border-radius-base $border-radius-base 0 0;
+  margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+  border-radius: $border-radius-base;
 
   > img{
     max-width: 100%;
@@ -976,10 +975,16 @@
 
   .title{
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
-    margin: 10px;
-    color: $white;
+    margin: 20px;
+  }
+
+  .info{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
   }
 }
 

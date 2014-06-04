@@ -109,6 +109,19 @@ legend {
   border-radius: $border-radius-base;
 }
 
+
+// Checkboxes and radios
+//
+
+.radio,
+.checkbox {
+  padding-left: 20px;
+
+  label {
+    margin-bottom: 5px;
+  }
+}
+
 //
 // Tables
 // --------------------------------------------------
@@ -116,7 +129,7 @@ legend {
 .table td > .checkbox,
 .table th > .checkbox{
   position: relative;
-  top: -13px;
+  top: -8px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -567,6 +580,19 @@ h6, .h6 { &.panel-title{ font-size: $font-size-h6; }}
   .close{
     font-size: 18px;
   }
+}
+
+
+//
+// Popovers
+
+.popover{
+  border: none;
+  @include box-shadow(none);
+}
+
+.popover-content {
+  padding: 20px;
 }
 
 //

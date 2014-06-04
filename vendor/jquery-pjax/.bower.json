@@ -1,6 +1,5 @@
 {
-  "name": "pjax",
-  "version": "1.8.2",
+  "name": "jquery-pjax",
   "main": "./jquery.pjax.js",
   "dependencies": {
     "jquery": ">=1.8"
@@ -10,13 +9,13 @@
     "test/"
   ],
   "homepage": "https://github.com/defunkt/jquery-pjax",
-  "_release": "1.8.2",
+  "_release": "a200310dda",
   "_resolution": {
-    "type": "version",
-    "tag": "v1.8.2",
-    "commit": "a787d95ae2ea584cfc16b1b7c19bd7cf1906943c"
+    "type": "branch",
+    "branch": "master",
+    "commit": "a200310ddaf9a5d4bf9506fadf23fde071ec4b3b"
   },
-  "_source": "git://github.com/defunkt/jquery-pjax.git",
-  "_target": "*",
-  "_originalSource": "jquery-pjax"
+  "_source": "https://github.com/defunkt/jquery-pjax.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/defunkt/jquery-pjax.git"
 }

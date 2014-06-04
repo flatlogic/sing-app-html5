@@ -128,63 +128,21 @@ $(function(){
     function initSalesChart(){
 
         //todo rewrite
-        function randValue() {
-            return (Math.floor(Math.random() * (1 + 50 - 20))) + 10;
+        function random() {
+            return (Math.floor(Math.random() * 30)) + 10;
         }
-        var data_com2 = [
-            [1, randValue()],
-            [2, randValue()],
-            [3, 2 + randValue()],
-            [4, 3 + randValue()],
-            [5, 5 + randValue()],
-            [6, 10 + randValue()],
-            [7, 15 + randValue()],
-            [8, 20 + randValue()],
-            [9, 25 + randValue()],
-            [10, 30 + randValue()],
-            [11, 35 + randValue()],
-            [12, 25 + randValue()],
-            [13, 15 + randValue()],
-            [14, 20 + randValue()],
-            [15, 45 + randValue()],
-            [16, 50 + randValue()],
-            [17, 65 + randValue()],
-            [18, 70 + randValue()],
-            [19, 54 + randValue()],
-            [20, 65 + randValue()],
-            [21, 75 + randValue()],
-            [22, 85 + randValue()],
-            [23, 54 + randValue()]
-        ];
-        var data_com = [
-            [1, randValue()],
-            [2, randValue()],
-            [3, 10 + randValue()],
-            [4, 15 + randValue()],
-            [5, 20 + randValue()],
-            [6, 25 + randValue()],
-            [7, 30 + randValue()],
-            [8, 35 + randValue()],
-            [9, 40 + randValue()],
-            [10, 45 + randValue()],
-            [11, 50 + randValue()],
-            [12, 55 + randValue()],
-            [13, 60 + randValue()],
-            [14, 70 + randValue()],
-            [15, 75 + randValue()],
-            [16, 80 + randValue()],
-            [17, 85 + randValue()],
-            [18, 90 + randValue()],
-            [19, 95 + randValue()],
-            [20, 100 + randValue()],
-            [21, 110 + randValue()],
-            [22, 120 + randValue()],
-            [23, 130 + randValue()]
-        ];
+        var data1 = [], data2 = [];
+
+        for (var i = 0; i < 25; i++){
+            data1.push([i, Math.floor(5 * i) + random()])
+        }
+        for (i = 0; i < 25; i++){
+            data2.push([i, Math.floor(4 * i) + random()])
+        }
         $.plot($("#chart-stats-simple"), [{
-            data: data_com, showLabels: true, label: "Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+            data: data2, showLabels: true, label: "Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
         },{
-            data: data_com2, showLabels: true, label: "Test Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+            data: data1, showLabels: true, label: "Test Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
         }
         ], {
             series: {
@@ -192,7 +150,7 @@ $(function(){
                     show: true,
                     lineWidth: 1,
                     fill: false,
-                    fillColor: { colors: [{ opacity:1 }, { opacity: 1}] }
+                    fillColor: { colors: [{ opacity: .001 }, { opacity: .5}] }
                 },
                 points: {
                     show: false,
@@ -200,9 +158,7 @@ $(function(){
                 },
                 shadowSize: 0
             },
-            legend:{
-                show: false
-            },
+            legend: false,
             grid: {
                 show:false,
                 margin: 0,
@@ -213,7 +169,55 @@ $(function(){
                 tickColor: "rgba(255,255,255,1)",
                 borderWidth: 0
             },
-            colors: [Sing.darken(Sing.colors['gray-lighter'],.05), Sing.colors['brand-danger']]
+            colors: [Sing.darken(Sing.colors['gray-lighter'], .05), Sing.colors['brand-danger']]
+        });
+    }
+
+    function initSalesChart2(){
+
+        //todo rewrite
+        function random() {
+            return (Math.floor(Math.random() * 30)) + 10;
+        }
+        var data1 = [], data2 = [];
+
+        for (var i = 0; i < 25; i++){
+            data1.push([i, Math.floor(5 * i) + random()])
+        }
+        for (i = 0; i < 25; i++){
+            data2.push([i, Math.floor(4 * i) + random()])
+        }
+        $.plot($("#chart-stats-simple-2"), [{
+            data: data2, showLabels: true, label: "Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+        },{
+            data: data1, showLabels: true, label: "Test Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+        }
+        ], {
+            series: {
+                lines: {
+                    show: true,
+                    lineWidth: 1,
+                    fill: false,
+                    fillColor: { colors: [{ opacity: .001 }, { opacity: .5}] }
+                },
+                points: {
+                    show: false,
+                    fill: true
+                },
+                shadowSize: 0
+            },
+            legend: false,
+            grid: {
+                show:false,
+                margin: 0,
+                labelMargin: 0,
+                axisMargin: 0,
+                hoverable: true,
+                clickable: true,
+                tickColor: "rgba(255,255,255,1)",
+                borderWidth: 0
+            },
+            colors: ['#777', Sing.colors['brand-warning']]
         });
     }
 
@@ -367,6 +371,10 @@ $(function(){
         $(".live-tile").css('height', function(){
             return $(this).data('height')
         }).liveTile();
+
+        $(document).one('pjax:beforeReplace', function(){
+            $('.live-tile').liveTile("destroy", true);
+        });
     }
 
     function initSparkline1(){
@@ -393,36 +401,44 @@ $(function(){
     }
 
     function initWeather(){
-        var icons = new Skycons({"color": Sing.colors['brand-warning']});
+        var icons = new Skycons({"color": Sing.colors['white']});
         icons.set("clear-day", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['brand-info']});
+        icons = new Skycons({"color": Sing.colors['white']});
         icons.set("partly-cloudy-day", "partly-cloudy-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray']});
+        icons = new Skycons({"color": Sing.colors['white']});
         icons.set("rain", "rain");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['brand-primary']});
-        icons.set("wind", "wind");
+        icons = new Skycons({"color": Sing.lighten(Sing.colors['brand-warning'], .1)});
+        icons.set("clear-day-3", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray']});
-        icons.set("fog", "fog");
+        icons = new Skycons({"color": Sing.colors['white']});
+        icons.set("partly-cloudy-day-3", "partly-cloudy-day");
         icons.play();
 
         icons = new Skycons({"color": Sing.colors['white']});
         icons.set("clear-day-1", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['white']});
+        icons = new Skycons({"color": Sing.colors['brand-success']});
         icons.set("partly-cloudy-day-1", "partly-cloudy-day");
         icons.play();
 
         icons = new Skycons({"color": Sing.colors['gray']});
         icons.set("clear-day-2", "clear-day");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['gray-light']});
+        icons.set("wind-1", "wind");
+        icons.play();
+
+        icons = new Skycons({"color": Sing.colors['gray-light']});
+        icons.set("rain-1", "rain");
         icons.play();
     }
 
@@ -432,6 +448,7 @@ $(function(){
         initChangesChart();
         initChangesYearChart();
         initSalesChart();
+        initSalesChart2();
         initRealTime1();
         initYearsMap();
         initTiles();

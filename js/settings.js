@@ -18,7 +18,7 @@ $(function(){
             'brand-primary': '#6899c6',
             'brand-success': '#64bd63',
             'brand-warning': '#f0b518',
-            'brand-danger': '#e5603b',
+            'brand-danger': '#dd5826',
             'brand-info': '#5dc4bf'
         },
 

@@ -440,3 +440,19 @@ $height-variants: (50: 50px, 100: 100px, 150: 150px, 200: 200px, 250: 250px);
 .fs-larger{
   font-size: $font-size-larger;
 }
+
+.btlr{
+  border-top-left-radius: $border-radius-base;
+}
+
+.btrr{
+  border-top-right-radius: $border-radius-base;
+}
+
+.bblr{
+  border-bottom-left-radius: $border-radius-base;
+}
+
+.bbrr{
+  border-bottom-right-radius: $border-radius-base;
+}

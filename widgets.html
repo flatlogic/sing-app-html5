@@ -767,10 +767,10 @@
                 </section>
             </div>
             <div class="col-md-3 col-sm-6">
-                <section class="widget bg-gray-dark text-white">
+                <section class="widget bg-info text-white">
                     <div class="widget-body clearfix">
                         <div class="live-tile" data-mode="fade" data-speed="750" data-delay="4000" data-height="100">
-                            <div class="bg-gray-dark">
+                            <div class="bg-info">
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <span class="widget-icon">
@@ -836,11 +836,11 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-6">
-                                <h5 class="no-margin">LAST MONTH</h5>
+                                <h5 class="no-margin">Last Month</h5>
                                 <p class="value4">$83,541</p>
                             </div>
                             <div class="col-xs-6">
-                                <h5 class="no-margin">LAST WEEK</h5>
+                                <h5 class="no-margin">Last Week</h5>
                                 <p class="value4">$17,926</p>
                             </div>
                         </div>
@@ -850,56 +850,185 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <section class="widget">
+                <section class="widget widget-chart-stats-simple">
+                    <header>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <h4>
+                                    Total Sales
+                                </h4>
+                                <p class="value4">
+                                    19,367
+                                </p>
+                            </div>
+                            <div class="col-xs-3">
+                                <h4>
+                                    <small>Today</small>
+                                </h4>
+                                <p class="value5">
+                                    2,835
+                                </p>
+                            </div>
+                        </div>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
                     <div class="widget-body">
-                        <div class="widget-controls dropdown">
-                            <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-                                Sunnyvale <b class="caret"></b>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-right fs-mini mt-n-sm">
-                                <li><a href="#">Palo Alto</a></li>
-                                <li><a href="#">San Jose</a></li>
-                                <li><a href="#">Mountain View</a></li>
-                            </ul>
+                        <div class="chart-stats">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h6 class="text-muted mb-xs">Saved</h6>
+                                    <p class="fw-semi-bold">01:33:45</p>
+                                </div>
+                                <div class="col-sm-4">
+                                    <h6 class="text-muted mb-xs">Day Range</h6>
+                                    <p class="fw-semi-bold">01 - 26.03</p>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="clearfix">
+                                        <h6 class="pull-left text-muted mb-xs">
+                                            Cash
+                                        </h6>
+                                        <p class="pull-right h5 mb-xs">
+                                            <span class="text-danger fw-semi-bold">$14,595</span>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                        <h6 class="pull-left no-margin text-muted">
+                                            Visa
+                                        </h6>
+                                        <p class="pull-right">
+                                            <span class="text-danger fw-semi-bold">$7,647</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="widget-image max-height-250">
-                            <img class="mt-n-lg mb-n-lg" src="demo/img/pictures/16.jpg">
-                            <h3 class="title">
-                                <span class="fw-semi-bold">Sunnyvale</span>, CA
-                            </h3>
+                        <div class="chart bg-body-light">
+                            <div id="chart-stats-simple" class="chart-inner"></div>
                         </div>
-                        <div class="widget-body text-align-center">
-                            <div class="row mt-sm mb-n-xs">
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="widget widget-chart-stats-simple">
+                    <header>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <h4>
+                                    Total Visits
+                                </h4>
+                                <p class="value4">
+                                    8,455
+                                </p>
+                            </div>
+                            <div class="col-xs-2">
+                                <h4>
+                                    <small>Today</small>
+                                </h4>
+                                <p class="value5">
+                                    955
+                                </p>
+                            </div>
+                            <div class="col-xs-3">
+                                <h4>
+                                    <small>Change</small>
+                                </h4>
+                                <p class="value5">
+                                    <span class="label label-warning text-gray-dark fw-bold">+13.5%</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="widget-controls">
+                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div class="chart-stats">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="clearfix">
+                                        <h6 class="pull-left text-muted mb-xs">
+                                            Cash
+                                        </h6>
+                                        <p class="pull-right h5 mb-xs">
+                                            <span class="fw-semi-bold">$14,595</span>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix">
+                                        <h6 class="pull-left no-margin text-muted">
+                                            Visa
+                                        </h6>
+                                        <p class="pull-right">
+                                            <span class="fw-semi-bold">$7,647</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 text-align-right">
+                                    <h6 class="text-muted mb-xs">Saved</h6>
+                                    <p class="fw-semi-bold">01:33:45</p>
+                                </div>
+                                <div class="col-sm-4 text-align-right">
+                                    <h6 class="text-muted mb-xs">Day Range</h6>
+                                    <p class="fw-semi-bold">01 - 26.03</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart bg-body-light">
+                            <div id="chart-stats-simple-2" class="chart-inner"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget">
+                    <div class="widget-image text-white">
+                        <img src="demo/img/pictures/16.jpg">
+                        <h3 class="title">
+                            <span class="fw-normal">Sunnyvale</span>, CA
+                        </h3>
+                        <div class="info text-align-right">
+                            <i class="fa fa-map-marker h1 no-margin mr-xs"></i>
+                            <h6 class="no-margin mt-xs">FLORIDA, USA</h6>
+                            <p class="fs-sm">9:41 am</p>
+                        </div>
+                        <div class="forecast">
+                            <div class="row">
                                 <div class="col-xs-6 col-sm-4">
                                     <div class="row mt-xs">
                                         <div class="col-xs-6 no-padding">
                                             <canvas id="clear-day" width="40" height="40"></canvas>
-                                            <p class="no-margin fw-normal mt-n-xs text-warning">sunny</p>
+                                            <p class="no-margin fw-normal mt-n-xs">sunny</p>
                                         </div>
                                         <div class="col-xs-6 no-padding">
                                             <h5 class="fw-semi-bold no-margin">SUNDAY</h5>
-                                            <p class="value1">29&deg;</p>
+                                            <p class="value1 ">29&deg;</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-3 col-sm-2 bl no-padding">
+                                <div class="col-xs-3 col-sm-2 no-padding">
                                     <h6 class="no-margin">TOMMOROW</h6>
                                     <canvas class="mt-xs" id="partly-cloudy-day" width="28" height="28"></canvas>
                                     <p class="no-margin fw-semi-bold">32&deg;</p>
                                 </div>
-                                <div class="col-xs-3 col-sm-2 bl no-padding">
+                                <div class="col-xs-3 col-sm-2 no-padding">
                                     <h6 class="no-margin">TUE</h6>
                                     <canvas class="mt-xs" id="rain" width="28" height="28"></canvas>
                                     <p class="no-margin fw-semi-bold">25&deg;</p>
                                 </div>
-                                <div class="col-xs-3 col-sm-2 bl no-padding">
+                                <div class="col-xs-3 col-sm-2 no-padding">
                                     <h6 class="no-margin">WED</h6>
-                                    <canvas class="mt-xs" id="wind" width="28" height="28"></canvas>
+                                    <canvas class="mt-xs" id="clear-day-3" width="28" height="28"></canvas>
                                     <p class="no-margin fw-semi-bold">28&deg;</p>
                                 </div>
-                                <div class="col-xs-3 col-sm-2 bl no-padding">
+                                <div class="col-xs-3 col-sm-2 no-padding">
                                     <h6 class="no-margin">THU</h6>
-                                    <canvas class="mt-xs" id="fog" width="28" height="28"></canvas>
+                                    <canvas class="mt-xs" id="partly-cloudy-day-3" width="28" height="28"></canvas>
                                     <p class="no-margin fw-semi-bold">17&deg;</p>
                                 </div>
                             </div>
@@ -910,27 +1039,52 @@
                     <div class="col-xs-6">
                         <section class="widget no-padding text-align-center">
                             <div class="row no-margin">
-                                <div class="col-xs-5 bg-danger">
-                                    <canvas class="mt" id="partly-cloudy-day-1" width="48" height="48"></canvas>
-                                    <h5 class="text-white display-inline-block">FRIDAY</h5>
+                                <div class="col-xs-5 bg-danger btlr bblr">
+                                    <canvas class="mt" id="clear-day-1" width="62" height="62"></canvas>
+                                    <h5 class="text-white display-inline-block fw-normal">FRIDAY</h5>
                                 </div>
                                 <div class="col-xs-7">
-                                    <p class="value0 text-danger">
+                                    <p class="value0 text-danger mt-n-xs mr-n-xs">
                                         33&deg;
                                     </p>
-                                    <p class="no-margin mt-n-sm fw-normal fs-mini text-muted">WINDY</p>
+                                    <p class="mt-n-sm mb-xs fw-normal fs-sm text-muted">WINDY</p>
+                                    <div class="row">
+                                        <div class="col-xs-6 no-padding">
+                                            <canvas id="wind-1" width="20" height="20"></canvas>
+                                            <div class="display-inline-block">
+                                                <p class="value5">4</p>
+                                                <p class="fs-sm no-margin mt-n-xs text-muted fw-normal">MPS</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-padding">
+                                            <canvas id="rain-1" width="20" height="20"></canvas>
+                                            <div class="display-inline-block">
+                                                <p class="value5">52</p>
+                                                <p class="fs-sm no-margin mt-n-xs text-muted fw-normal">MM</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
                     </div>
                     <div class="col-xs-6">
-                        <section class="widget">
-                            test
+                        <section class="widget no-padding text-align-center">
+                            <div class="row no-margin">
+                                <div class="col-xs-7 bg-success btlr bblr">
+                                    <p class="value0 text-white mt-sm mr-n-xs mb-n-xs">
+                                        20&deg;
+                                    </p>
+                                    <p class="text-white display-inline-block fw-normal display-inline-block mb">SUNDAY</p>
+                                </div>
+                                <div class="col-xs-5">
+                                    <canvas class="mt" id="partly-cloudy-day-1" width="60" height="60"></canvas>
+                                    <p class="fw-normal fs-sm text-muted">WINDY</p>
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
             </div>
         </div>
         <div class="row">
@@ -965,7 +1119,6 @@
                             than last month</p>
                         <br>
                         <div id="realtime1" class="chart-overflow-bottom text-gray-dark"></div>
-
                     </div>
                 </section>
             </div>
@@ -976,7 +1129,7 @@
                     <div class="widget-body">
                         <div id="map-years-mapael" class="mapael">
                             <div class="stats">
-                                <h5 class="fw-semi-bold text-gray-dark">YEARLY DISTRIBUTIONS</h5>
+                                <h5 class="text-gray-dark">YEARLY <span class="fw-semi-bold">DISTRIBUTIONS</span></h5>
                                         <span class="pull-left mr-xs">
                                             <small><span class="circle bg-warning text-gray-dark"><i class="fa fa-plus"></i></span></small>
                                         </span>
@@ -1044,28 +1197,28 @@
                             </header>
                             <div class="widget-body">
                                 <div class="clearfix fs-mini">
-                                    <span class="pull-right no-margin">CPU</span>
+                                    <span class="pull-right no-margin fw-semi-bold">CPU</span>
                                     <span class="fs-mini">60% / 37°C / 3.3 Ghz</span>
                                 </div>
                                 <div class="progress progress-xs">
                                     <div class="progress-bar" style="width: 70%;"></div>
                                 </div>
                                 <div class="clearfix fs-mini mt">
-                                    <span class="pull-right no-margin">Mem</span>
+                                    <span class="pull-right no-margin fw-semi-bold">Mem</span>
                                     <span class="fs-mini">29% / 4GB (16 GB)</span>
                                 </div>
                                 <div class="progress progress-xs">
                                     <div class="progress-bar progress-bar-warning" style="width: 29%;"></div>
                                 </div>
                                 <div class="clearfix fs-mini mt">
-                                    <span class="pull-right no-margin">LAN</span>
+                                    <span class="pull-right no-margin fw-semi-bold">LAN</span>
                                     <span class="fs-mini">6 Mb/s <i class="fa fa-caret-down"></i> &nbsp; 3 Mb/s <i class="fa fa-caret-up"></i></span>
                                 </div>
                                 <div class="progress progress-xs">
                                     <div class="progress-bar progress-bar-danger" style="width: 48%;"></div>
                                 </div>
                                 <div class="clearfix fs-mini mt">
-                                    <span class="pull-right no-margin">Access</span>
+                                    <span class="pull-right no-margin fw-semi-bold">Access</span>
                                     <span class="fs-mini">17 Mb/s <i class="fa fa-caret-up"></i> &nbsp; (+18%)</span>
                                 </div>
                                 <div class="progress progress-xs">
@@ -1077,67 +1230,6 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <section class="widget widget-chart-stats-simple">
-                    <header>
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <h4>
-                                    Total Sales
-                                </h4>
-                                <p class="value4 text-danger">
-                                    19,367
-                                </p>
-                            </div>
-                            <div class="col-xs-3">
-                                <h4>
-                                    <small>Today</small>
-                                </h4>
-                                <p class="value5 text-danger">
-                                    2,835
-                                </p>
-                            </div>
-                        </div>
-                        <div class="widget-controls">
-                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
-                            <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
-                        </div>
-                    </header>
-                    <div class="widget-body">
-                        <div class="chart-stats">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <h5 class="text-danger text-light">Saved</h5>
-                                    <p>01:33:45</p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <h5 class="text-danger text-light">Day Range</h5>
-                                    <p>01.03.2014 - 26.03.2014</p>
-                                </div>
-                                <div class="col-sm-5">
-                                    <div class="clearfix">
-                                        <h5 class="pull-left text-muted">
-                                            Cash
-                                        </h5>
-                                        <p class="pull-right h5">
-                                            <span class="text-danger text-light">$14,595</span>
-                                        </p>
-                                    </div>
-                                    <div class="clearfix">
-                                        <h5 class="pull-left no-margin text-muted">
-                                            Visa
-                                        </h5>
-                                        <p class="pull-right">
-                                            <span class="text-danger text-light">$7,647</span>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chart bg-body-light">
-                            <div id="chart-stats-simple" class="chart-inner"></div>
-                        </div>
-                    </div>
-                </section>
             </div>
         </div>
         <div class="row">
@@ -1145,7 +1237,7 @@
                 <section class="widget widget-chart-changes">
                     <div class="widget-controls">
                         <a href="#"><i class="fa fa-refresh"></i></a>
-                        <a href="#"><i class="glyphicon glyphicon-remove"></i></a>
+                        <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                     </div>
                     <div class="widget-body">
                         <div class="chart bg-success">
@@ -1153,7 +1245,7 @@
                             <p class="chart-value-change">+2.04 (1.69%)</p>
                             <div id="chart-changes"></div>
                         </div>
-                        <h4 class="chart-title">Salt Lake City, Utah</h4>
+                        <h4 class="chart-title"><span class="fw-normal">Salt Lake City</span>, Utah</h4>
                         <p class="deemphasize">Today 13:34</p>
                         <div class="mt">
                             <div class="row">
@@ -1170,7 +1262,7 @@
                         <div class="mt">
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <p class="h3 no-margin text-success">+120.93</p>
+                                    <p class="h3 no-margin text-success fw-semi-bold">+120.93</p>
                                     <p class="deemphasize">Yearly Change</p>
                                 </div>
                                 <div class="col-xs-6 text-align-right">
@@ -1227,7 +1319,7 @@
 <script src="vendor/jQuery-Mapael/js/maps/usa_states.js"></script>
 <script src="vendor/jQuery-Mapael/js/maps/world_countries.js"></script>
 <script src="vendor/flot/jquery.flot.js"></script>
-<script src="vendor/MetroJS/release/MetroJs.Full/MetroJs.min.js"></script>
+<script src="vendor/MetroJS/release/MetroJs.Full/MetroJs.js"></script>
 <script src="vendor/skycons/skycons.js"></script>
 
 <!-- page specific js -->
