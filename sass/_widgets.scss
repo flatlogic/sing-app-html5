@@ -10,28 +10,12 @@
 /***********************/
 
 .widget-chart-simple{
-  padding: 30px 40px 20px;
 
   .widget-body{
     padding-top: 10px;
   }
-
-  .chart-title{
-    color: $text-muted;
-    text-align: center;
-  }
-
   .chart-value{
-    .trend{
-      display: inline-block;
-      margin: -6px 6px 0 -19px;
-      overflow: visible;
-      font-size: 21px;
-      vertical-align: middle;
-    }
-
-    text-align: center;
-    font-size: $font-size-h1;
+    font-size: 24px;
   }
 
   .chart{
@@ -176,7 +160,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: $gray-dark;
+  border-top: 1px solid #bbb;
+  background-color: $gray-semi-lighter;
   border-bottom-left-radius: $border-radius-base;
   border-bottom-right-radius: $border-radius-base;
 
@@ -185,17 +170,17 @@
     padding-right: 0;
     border-radius: 0;
 
-    color: $gray-lighter;
+    color: $gray;
     &:hover{
-      background-color: $gray;
-      color: $white
+      background-color: $gray-lighter;
+      color: $gray
     }
   }
 
   > li.active > a{
     &, &:hover{
-      background-color: $gray;
-      color: $brand-warning;
+      background-color: $white;
+      color: $gray;
       font-weight: $font-weight-bold;
     }
   }

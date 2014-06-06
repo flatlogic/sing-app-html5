@@ -988,6 +988,29 @@
   }
 }
 
+.widget-footer-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.widget-sm{
+  height: 230px;
+}
+
+.widget-md{
+  height: 373px;
+}
+
+.windget-padding-lg {
+  padding: $widget-padding-vertical*2 $widget-padding-horizontal*2;
+}
+
+.widget-body-container{
+  position: relative;
+  height: 100%;
+}
+
 /***********************************/
 /**         Widgets Grid          **/
 /***********************************/

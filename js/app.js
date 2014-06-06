@@ -645,7 +645,7 @@ function initAppFunctions(){
             var $colWrap = $(e.target).closest('.content > .row > [class*="col-"]:not(.widget-container)');
 
             // remove colWrap only if there are no more widgets inside
-            if (!$colWrap.find('> .widget').not(e.target).length){
+            if (!$colWrap.find('.widget').not(e.target).length){
                 $colWrap.remove();
             }
         });

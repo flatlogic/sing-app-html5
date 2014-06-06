@@ -5,33 +5,16 @@ $(function(){
             type: 'line',
             width: '100%',
             height: '60',
-            lineColor: 'transparent',
+            lineColor: Sing.colors['gray'],
             fillColor: 'transparent',
             spotRadius: 5,
-            spotColor: Sing.colors['gray-light'],
-            valueSpots: {'0:':Sing.colors['gray-light']},
-            highlightSpotColor: Sing.colors['gray-light'],
-            highlightLineColor: 'transparent',
-            minSpotColor: Sing.colors['gray-light'],
-            maxSpotColor: Sing.colors['gray-light'],
+            spotColor: Sing.colors['gray'],
+            valueSpots: {'0:':Sing.colors['gray']},
+            highlightSpotColor: Sing.colors['white'],
+            highlightLineColor: Sing.colors['gray'],
+            minSpotColor: Sing.colors['gray'],
+            maxSpotColor: Sing.colors['brand-danger'],
             tooltipFormat: new $.SPFormatClass('<span style="color: white">&#9679;</span> {{prefix}}{{y}}{{suffix}}'),
-            chartRangeMin: _(data).min() - 1
-        });
-
-        $el.sparkline(data, {
-            composite: true,
-            type: 'line',
-            lineColor: Sing.colors['gray-light'],
-            lineWidth: 1,
-            fillColor: 'transparent',
-            spotRadius: 4.1,
-            spotColor: Sing.colors['white'],
-            valueSpots: {'0:': Sing.colors['white']},
-            highlightSpotColor: Sing.colors['gray-lighter'],
-            highlightLineColor: 'transparent',
-            minSpotColor: Sing.colors['white'],
-            maxSpotColor: Sing.colors['white'],
-            tooltipFormat: new $.SPFormatClass(''),
             chartRangeMin: _(data).min() - 1
         });
     }
@@ -318,7 +301,7 @@ $(function(){
                         {
                             max :5000000,
                             attrs : {
-                                fill : Sing.lighten(Sing.colors['gray-lighter'],.04)
+                                fill : Sing.lighten('#ebeff1',.04)
                             },
                             label :"Less than 5M"
                         },
@@ -326,7 +309,7 @@ $(function(){
                             min :5000000,
                             max :10000000,
                             attrs : {
-                                fill : Sing.colors['gray-lighter']
+                                fill : '#ebeff1'
                             },
                             label :"Between 5M and 10M"
                         },
@@ -341,7 +324,7 @@ $(function(){
                         {
                             min :50000000,
                             attrs : {
-                                fill : Sing.darken(Sing.colors['gray-lighter'],.1)
+                                fill : Sing.darken('#ebeff1',.1)
                             },
                             label :"More than 50M"
                         }
@@ -359,12 +342,6 @@ $(function(){
             $map.trigger('update', [fakeWorldData[$(this).data('years-map-year')], {}, {}, {animDuration : 300}]);
             return false;
         });
-        /**
-         * Reattach map tooltips to body, as they use position:fixed, which doesn't work properly inside of
-         * translated elements (.content-wrap uses transform: translate;).
-         * See https://code.google.com/p/chromium/issues/detail?id=20574
-         */
-        $('body').append($(".mapTooltip").detach());
     }
 
     function initTiles(){
@@ -375,29 +352,6 @@ $(function(){
         $(document).one('pjax:beforeReplace', function(){
             $('.live-tile').liveTile("destroy", true);
         });
-    }
-
-    function initSparkline1(){
-        $('#sparkline1').sparkline([4,10,14,16,17,16,15,12,13,12,10,10],{
-            width: '100%',
-            fillColor: '#999',
-            height: '120px',
-            lineColor: 'transparent',
-            spotColor: '#c0d0f0',
-            minSpotColor: null,
-            maxSpotColor: null,
-            highlightSpotColor: '#ddd',
-            highlightLineColor: '#ddd'
-        }).sparkline([1,2,4,7,10,14,16,17,17,15,12,10],{
-            composite: true,
-            lineColor: 'transparent',
-            spotColor: '#c0d0f0',
-            fillColor: '#F0BF45',
-            minSpotColor: null,
-            maxSpotColor: null,
-            highlightSpotColor: '#ddd',
-            highlightLineColor: '#ddd'
-        })
     }
 
     function initWeather(){
@@ -452,7 +406,6 @@ $(function(){
         initRealTime1();
         initYearsMap();
         initTiles();
-        initSparkline1();
         initWeather();
     }
 

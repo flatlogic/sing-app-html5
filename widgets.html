@@ -691,6 +691,33 @@
         <!--<h1 class="page-title">Widgets - <span class="fw-semi-bold">Options</span></h1>-->
         <div class="row">
             <div class="col-md-3 col-sm-6">
+                <section class="widget bg-primary text-white">
+                    <div class="widget-body clearfix">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <span class="widget-icon">
+                                    <i class="glyphicon glyphicon-globe"></i>
+                                </span>
+                            </div>
+                            <div class="col-xs-9">
+                                <h5 class="no-margin">USERS GROWTH</h5>
+                                <p class="h2 no-margin fw-normal">4,332</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h5 class="no-margin">Registrations</h5>
+                                <p class="value4">+830</p>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5 class="no-margin">Bounce Rate</h5>
+                                <p class="value4">4.5%</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-3 col-sm-6">
                 <section class="widget bg-danger text-white">
                     <div class="widget-body clearfix">
                         <div class="row">
@@ -734,33 +761,6 @@
                                         <p class="value4">2.3%</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <section class="widget bg-primary text-white">
-                    <div class="widget-body clearfix">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <span class="widget-icon">
-                                    <i class="glyphicon glyphicon-globe"></i>
-                                </span>
-                            </div>
-                            <div class="col-xs-9">
-                                <h5 class="no-margin">USERS GROWTH</h5>
-                                <p class="h2 no-margin fw-normal">4,332</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <h5 class="no-margin">Registrations</h5>
-                                <p class="value4">+830</p>
-                            </div>
-                            <div class="col-xs-6">
-                                <h5 class="no-margin">Bounce Rate</h5>
-                                <p class="value4">4.5%</p>
                             </div>
                         </div>
                     </div>
@@ -1086,41 +1086,64 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <section class="widget bg-gray-dark text-white">
-                    <div class="widget-body">
-
-                        <h5><span class="fw-semi-bold">QUICK</span> VIEW</h5>
-                        <input class="form-control input-dark" type="text" placeholder="Search...">
-                        <div class="stats-row mt">
-                            <div class="stat-item">
-                                <h6 class="name">Overall Growth</h6>
-                                <p class="value">43.75%</p>
-                            </div>
-                            <div class="stat-item">
-                                <h6 class="name">Montly</h6>
-                                <p class="value">86.34%</p>
-                            </div>
-                            <div class="stat-item">
-                                <h6 class="name">24h</h6>
-                                <p class="value">3.85%</p>
-                            </div>
+            <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <section class="widget widget-chart-simple widget-sm">
+                                <div class="widget-body">
+                                    <h5 class="mb-xs fw-normal">
+                                        Nasdaq
+                                    </h5>
+                                    <div class="chart-value">
+                                        355 <span class="fw-semi-bold">USD</span>
+                                    </div>
+                                    <p>Last Sale 354.94 USD</p>
+                                    <div class="chart">
+                                        <div id="chart-simple"></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="widget widget-sm bg-primary"></section>
                         </div>
-                        <div class="progress progress-xs mt">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-                                 aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
-                            </div>
+                        <div class="col-sm-6">
+                            <section class="widget widget-sm bg-danger"></section>
+                            <section class="widget widget-sm">
+                                <header>
+                                    <h5>Server <span class="fw-semi-bold">Overview</span></h5>
+                                </header>
+                                <div class="widget-body">
+                                    <div class="clearfix fs-mini">
+                                        <span class="pull-right no-margin fw-semi-bold">CPU</span>
+                                        <span class="fs-mini">60% / 37°C / 3.3 Ghz</span>
+                                    </div>
+                                    <div class="progress progress-xs">
+                                        <div class="progress-bar" style="width: 70%;"></div>
+                                    </div>
+                                    <div class="clearfix fs-mini mt">
+                                        <span class="pull-right no-margin fw-semi-bold">Mem</span>
+                                        <span class="fs-mini">29% / 4GB (16 GB)</span>
+                                    </div>
+                                    <div class="progress progress-xs">
+                                        <div class="progress-bar progress-bar-warning" style="width: 29%;"></div>
+                                    </div>
+                                    <div class="clearfix fs-mini mt">
+                                        <span class="pull-right no-margin fw-semi-bold">LAN</span>
+                                        <span class="fs-mini">6 Mb/s <i class="fa fa-caret-down"></i> &nbsp; 3 Mb/s <i class="fa fa-caret-up"></i></span>
+                                    </div>
+                                    <div class="progress progress-xs">
+                                        <div class="progress-bar progress-bar-danger" style="width: 48%;"></div>
+                                    </div>
+                                    <div class="clearfix fs-mini mt">
+                                        <span class="pull-right no-margin fw-semi-bold">Access</span>
+                                        <span class="fs-mini">17 Mb/s <i class="fa fa-caret-up"></i> &nbsp; (+18%)</span>
+                                    </div>
+                                    <div class="progress progress-xs">
+                                        <div class="progress-bar progress-bar-success" style="width: 64%;"></div>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
-                        <p class="mt mb">
-                            <small><span class="circle bg-warning text-gray-dark"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
-                            <strong>17% higher</strong>
-                            than last month</p>
-                        <br>
-                        <div id="realtime1" class="chart-overflow-bottom text-gray-dark"></div>
                     </div>
-                </section>
             </div>
         </div>
         <div class="row">
@@ -1164,72 +1187,41 @@
                     </div>
                 </section>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <section class="widget widget-chart-simple">
-                            <div class="widget-controls">
-                                <a href="#"><i class="fa fa-refresh"></i></a>
-                                <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
-                            </div>
-                            <div class="widget-body">
-                                <h4 class="chart-title">
-                                    NASDAQ
-                                </h4>
-                                <div class="chart-value">
-                                    <span class="trend">
-                                        <i class="fa fa-long-arrow-up rotate-45 text-success"></i>
-                                    </span>
-                                    <span class="fw-normal">355</span><span class="">.94</span>
-                                </div>
-                                <div class="chart">
-                                    <div id="chart-simple"></div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-sm-6">
-                        <section class="widget">
-                            <header>
-                                <h5>Server <span class="fw-semi-bold">Overview</span></h5>
-                            </header>
-                            <div class="widget-body">
-                                <div class="clearfix fs-mini">
-                                    <span class="pull-right no-margin fw-semi-bold">CPU</span>
-                                    <span class="fs-mini">60% / 37°C / 3.3 Ghz</span>
-                                </div>
-                                <div class="progress progress-xs">
-                                    <div class="progress-bar" style="width: 70%;"></div>
-                                </div>
-                                <div class="clearfix fs-mini mt">
-                                    <span class="pull-right no-margin fw-semi-bold">Mem</span>
-                                    <span class="fs-mini">29% / 4GB (16 GB)</span>
-                                </div>
-                                <div class="progress progress-xs">
-                                    <div class="progress-bar progress-bar-warning" style="width: 29%;"></div>
-                                </div>
-                                <div class="clearfix fs-mini mt">
-                                    <span class="pull-right no-margin fw-semi-bold">LAN</span>
-                                    <span class="fs-mini">6 Mb/s <i class="fa fa-caret-down"></i> &nbsp; 3 Mb/s <i class="fa fa-caret-up"></i></span>
-                                </div>
-                                <div class="progress progress-xs">
-                                    <div class="progress-bar progress-bar-danger" style="width: 48%;"></div>
-                                </div>
-                                <div class="clearfix fs-mini mt">
-                                    <span class="pull-right no-margin fw-semi-bold">Access</span>
-                                    <span class="fs-mini">17 Mb/s <i class="fa fa-caret-up"></i> &nbsp; (+18%)</span>
-                                </div>
-                                <div class="progress progress-xs">
-                                    <div class="progress-bar progress-bar-success" style="width: 64%;"></div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <section class="widget" style="height: 395px"></section>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
+                <section class="widget bg-gray-dark text-white">
+                    <div class="widget-body">
+                        <h5><span class="fw-semi-bold">QUICK</span> VIEW</h5>
+                        <input class="form-control input-dark" type="text" placeholder="Search...">
+                        <div class="stats-row mt">
+                            <div class="stat-item">
+                                <h6 class="name">Overall Growth</h6>
+                                <p class="value">43.75%</p>
+                            </div>
+                            <div class="stat-item">
+                                <h6 class="name">Montly</h6>
+                                <p class="value">86.34%</p>
+                            </div>
+                            <div class="stat-item">
+                                <h6 class="name">24h</h6>
+                                <p class="value">3.85%</p>
+                            </div>
+                        </div>
+                        <div class="progress progress-xs mt">
+                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+                                 aria-valuemin="0" aria-valuemax="100" style="width: 77%;">
+                            </div>
+                        </div>
+                        <p class="mt mb">
+                            <small><span class="circle bg-warning text-gray-dark"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
+                            <strong>17% higher</strong>
+                            than last month</p>
+                        <br>
+                        <div id="realtime1" class="chart-overflow-bottom text-gray-dark"></div>
+                    </div>
+                </section>
             </div>
         </div>
         <div class="row">
@@ -1240,7 +1232,7 @@
                         <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                     </div>
                     <div class="widget-body">
-                        <div class="chart bg-success">
+                        <div class="chart bg-success btlr btrr">
                             <p class="chart-value"><i class="fa fa-caret-up"></i> 352.79</p>
                             <p class="chart-value-change">+2.04 (1.69%)</p>
                             <div id="chart-changes"></div>
@@ -1273,17 +1265,91 @@
                         </div>
                     </div>
                 </section>
-                <section class="widget bg-transparent">
-                    <div class="widget-body">
-                        <h2 class="no-margin">$ 50,455</h2>
-                        <p class="h4 fw-semi-bold">Monthly Income</p>
-                        <p class="fs-mini text-muted">
-                            Monthly statistics grouped by per user revenue. Useful for investigating sales trends & extremums.
-                        </p>
-                        <div id="sparkline1" class="chart-overflow-bottom"></div>
+            </div>
+            <div class="col-md-3">
+                <section class="widget windget-padding-lg">
+                    <div class="widget-body clearfix">
+                        <div class="live-tile" data-mode="carousel" data-speed="750" data-delay="3000" data-height="313">
+                            <div>
+                                test
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
+            <div class="col-md-3">
+                <section class="widget windget-padding-lg bg-primary text-white">
+                    <div class="widget-body clearfix">
+                        <div class="live-tile" data-mode="carousel" data-speed="300" data-delay="3000" data-height="313">
+                            <div>
+                                <p class="h4 mt-xs">
+                                    <i class="fa fa-quote-left opacity-50"></i>
+                                    Thanks for the awesome support. That's awesome!
+                                    <i class="fa fa-quote-right opacity-50"></i>
+                                </p>
+                                <div class="widget-footer-bottom">
+                                    <span class="thumb pull-left mr">
+                                        <img class="img-circle" src="demo/img/people/a4.jpg" alt="...">
+                                    </span>
+                                    <h4 class="no-margin mb-xs"><span class="fw-semi-bold">Miha</span> Koshir</h4>
+                                    <p class="text-light">@miha</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="clearfix mt-xs">
+                                    <span class="thumb pull-left mr">
+                                        <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
+                                    </span>
+                                    <h4 class="no-margin mb-xs"><span class="fw-semi-bold">Maryna</span> Ess</h4>
+                                    <p class="text-light">@ess</p>
+                                </div>
+                                <div class="widget-footer-bottom">
+                                    <p class="h4">
+                                        <i class="fa fa-quote-left opacity-50"></i>
+                                        Could have never imagined it would be so great!
+                                        <i class="fa fa-quote-right opacity-50"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-3">
+                <div class="live-tile" data-mode="flip" data-direction="horizontal"
+                     data-speed="600" data-delay="3000" data-height="373"
+                     data-play-onhover="true">
+                    <div>
+                        <section class="widget windget-padding-lg widget-md bg-gray-dark text-white">
+                            <div class="widget-body widget-body-container">
+                                <div class="text-align-center">
+                                    <i class="fa fa-child text-warning fa-5x"></i>
+                                </div>
+                                <h3 class="fw-normal">Sing Web App</h3>
+                                <div class="widget-footer-bottom">
+                                    <div class="mb-sm">Cutting-edge tech and design delivered</div>
+                                    <p><button class="btn btn-default btn-block">Hover over me!</button></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div>
+                        <section class="widget windget-padding-lg widget-md">
+                            <div class="widget-body widget-body-container">
+                                <div class="text-align-center">
+                                    <i class="fa fa-globe text-primary fa-5x"></i>
+                                </div>
+                                <h3 class="fw-normal">Join The Web Now!</h3>
+                                <div class="widget-footer-bottom">
+                                    <div class="mb-sm">Cutting-edge tech and design delivered</div>
+                                    <p><button class="btn btn-gray btn-block">Join now!</button></p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 </div>

@@ -52,7 +52,7 @@
   &.circle-o-white{ border-color: $white };
 }
 
-@include thumb('.thumb', 50px);
+@include thumb('.thumb', 48px);
 @include thumb('.thumb-sm', 34px);
 @include thumb('.thumb-xs', 28px);
 
@@ -313,6 +313,10 @@ $height-variants: (50: 50px, 100: 100px, 150: 150px, 200: 200px, 250: 250px);
 
 @include property-variants('.height', 'height', $height-variants);
 @include property-variants('.max-height', 'max-height', $height-variants);
+
+$opacity-variants: (10: .1, 20: .2, 30: .3, 40: .4, 50: .5, 60: .6, 70: .7, 80: .8, 90: .9);
+
+@include property-variants('.opacity', 'opacity', $opacity-variants);
 
 
 .no-border{
