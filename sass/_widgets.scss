@@ -452,7 +452,28 @@
       }
     }
   }
+
+  &.no-separator > li + li{
+    margin-left: 12px;
+    &:before{
+      content: normal;
+    }
+  }
 }
+
+/***********************************/
+/**           Post User           **/
+/***********************************/
+
+.post-user{
+  position: relative;
+  @include clearfix();
+
+  img{
+    border: 3px solid white;
+  }
+}
+
 
 /***********************************/
 /**            Gallery            **/
@@ -968,4 +989,44 @@
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
+}
+
+/***********************************/
+/**             Tags              **/
+/***********************************/
+
+.tags{
+  padding-left: 0;
+  list-style: none;
+  @include clearfix();
+
+  > li{
+    float: left;
+
+    > a{
+      padding: 3px 10px;
+      font-size: $font-size-mini;
+      border-radius: 2em;
+      border: 2px solid white;
+      color: inherit;
+
+      text-decoration: none;
+
+      &:hover{
+        background-color: rgba(0,0,0,.1);
+
+      }
+    }
+
+    + li > a{
+      margin-left: 4px;
+    }
+  }
+
+  .widget-top-overflow > img + &{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+  }
 }

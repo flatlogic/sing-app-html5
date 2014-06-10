@@ -909,7 +909,6 @@
   right: 0;
   padding: 14px;
   font-size: $font-size-small;
-  word-spacing: 1px;
 
   &.left{
     left: 0;
@@ -1002,6 +1001,10 @@
   height: 373px;
 }
 
+.windget-padding-md {
+  padding: $widget-padding-vertical $widget-padding-horizontal;
+}
+
 .windget-padding-lg {
   padding: $widget-padding-vertical*2 $widget-padding-horizontal*2;
 }
@@ -1009,6 +1012,27 @@
 .widget-body-container{
   position: relative;
   height: 100%;
+}
+
+.widget-top-overflow,
+.widget-middle-overflow{
+  position: relative;
+  margin: 0 (-$widget-padding-horizontal);
+
+  > img{
+    max-width: 100%;
+  }
+}
+
+.widget-top-overflow{
+  margin-top: (-$widget-padding-vertical);
+  border-top-left-radius: $border-radius-base;
+  border-top-right-radius: $border-radius-base;
+
+  > img{
+    border-top-left-radius: $border-radius-base;
+    border-top-right-radius: $border-radius-base;
+  }
 }
 
 /***********************************/
