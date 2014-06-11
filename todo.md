@@ -7,10 +7,10 @@
  1.  ~~second-level menu sidebar~~
  2.  ~~**responsive layout**~~
  3.  ~~menu iconic state on/off~~
- 4.  **dashboard fill**
+ 4.  ~~**dashboard fill**~~
    1.  ~~black chart + map~~
    2.  ~~reorganize last row~~
-   3.  add something from `love designs` folder
+   3.  ~~add something from `love designs` folder`~~
    4.  ~~weather~~
  5.  ~~charts~~
  6.  ~~maps~~
@@ -21,7 +21,7 @@
    2.  ~~datatables~~
  8.  ~~grid (widgster)~~
  9.  ~~menu levels~~
- 10.  *widgets (different)*
+ 10.  ~~*widgets (different)*~~
  11.  ~~ui elements~~
    1.  ~~messages & alerts (alerts, labels, popovers, tooltips, modals, progressbars). like [here](http://www.revox.io/webarchv2/messages_notifications.html)~~
    2.  ~~notifications (messenger)~~

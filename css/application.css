@@ -30436,7 +30436,6 @@ a {
 .loader-wrap {
   position: fixed;
   z-index: 0;
-  left: 0;
   right: 0;
   top: 0;
   bottom: 0;
@@ -30448,12 +30447,12 @@ a {
   -o-transition: -o-transform 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
   transition: transform 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
 }
-/* line 820, ../sass/_base.scss */
+/* line 819, ../sass/_base.scss */
 .loader-wrap.hiding {
   opacity: 0;
   background-color: transparent;
 }
-/* line 825, ../sass/_base.scss */
+/* line 824, ../sass/_base.scss */
 .loader-wrap .fa {
   position: absolute;
   top: 50%;
@@ -30463,7 +30462,7 @@ a {
   vertical-align: middle;
 }
 @media (min-width: 992px) {
-  /* line 834, ../sass/_base.scss */
+  /* line 833, ../sass/_base.scss */
   .nav-static .loader-wrap {
     -webkit-transition: opacity 0.2s ease-out, background-color 0.2s ease-out;
     -o-transition: opacity 0.2s ease-out, background-color 0.2s ease-out;
@@ -30479,7 +30478,7 @@ a {
 /***********************/
 /*       Widget        */
 /***********************/
-/* line 847, ../sass/_base.scss */
+/* line 846, ../sass/_base.scss */
 .widget {
   position: relative;
   margin-bottom: 30px;
@@ -30487,14 +30486,18 @@ a {
   background: white;
   border-radius: 3px;
 }
-/* line 855, ../sass/_base.scss */
+/* line 853, ../sass/_base.scss */
+.widget > header {
+  margin: -15px -20px 0;
+  padding: 15px 20px;
+}
+/* line 856, ../sass/_base.scss */
 .widget > header h1, .widget > header h2, .widget > header h3, .widget > header h4, .widget > header h5, .widget > header h6 {
   margin: 0;
 }
-/* line 859, ../sass/_base.scss */
-.widget > header + .widget-body,
+/* line 860, ../sass/_base.scss */
 .widget > header + .widget-body.no-padding {
-  margin-top: 15px;
+  margin-top: 0;
 }
 /* line 866, ../sass/_base.scss */
 .widget > .widget-body.no-padding {
@@ -31900,6 +31903,64 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   bottom: 0;
   right: 0;
   margin: 20px;
+}
+
+/***********************************/
+/**       Chat List Group         **/
+/***********************************/
+/* line 1038, ../sass/_widgets.scss */
+.widget-chat-list-group {
+  padding-top: 10px;
+}
+/* line 1040, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0;
+  border: 0;
+}
+/* line 1046, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item + .list-group-item {
+  margin-top: 30px;
+}
+/* line 1050, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item .thumb,
+.widget-chat-list-group .list-group-item .thumb-sm {
+  float: left;
+  margin-right: 15px;
+}
+/* line 1056, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item .time {
+  float: right;
+  font-size: 12px;
+  color: #218bc3;
+}
+/* line 1062, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item .sender {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 400;
+}
+/* line 1069, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item .body {
+  font-size: 13px;
+  color: #999999;
+}
+/* line 1075, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item.on-right .thumb,
+.widget-chat-list-group .list-group-item.on-right .thumb-sm {
+  float: right;
+  margin-left: 15px;
+  margin-right: 0;
+}
+/* line 1082, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item.on-right .time {
+  float: left;
+}
+/* line 1086, ../sass/_widgets.scss */
+.widget-chat-list-group .list-group-item.on-right .sender {
+  text-align: right;
 }
 
 /***********************************/

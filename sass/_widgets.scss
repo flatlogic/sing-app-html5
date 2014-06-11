@@ -1030,3 +1030,62 @@
     margin: 20px;
   }
 }
+
+/***********************************/
+/**       Chat List Group         **/
+/***********************************/
+
+.widget-chat-list-group{
+  padding-top: $line-height-computed/2;
+  .list-group-item{
+    margin-left: $widget-padding-horizontal;
+    margin-right: $widget-padding-horizontal;
+    padding: 0;
+    border: 0;
+
+    & + .list-group-item{
+      margin-top: 30px;
+    }
+
+    .thumb,
+    .thumb-sm{
+      float: left;
+      margin-right: 15px;
+    }
+
+    .time{
+      float: right;
+      font-size: $font-size-small;
+      color: $link-color;
+    }
+
+    .sender{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: $font-size-mini;
+      font-weight: $font-weight-normal;
+    }
+
+    .body{
+      font-size: $font-size-mini;
+      color: $text-muted;
+    }
+
+    &.on-right{
+      .thumb,
+      .thumb-sm{
+        float: right;
+        margin-left: 15px;
+        margin-right: 0;
+      }
+
+      .time{
+        float: left;
+      }
+
+      .sender{
+        text-align: right;
+      }
+    }
+  }
+}
