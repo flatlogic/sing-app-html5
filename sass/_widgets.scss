@@ -488,6 +488,7 @@
     a{
       display: inline-block;
       overflow: hidden;
+      max-width: 100%;
       > img{
         @include transition-transform(.15s ease);
       }
@@ -501,6 +502,10 @@
 
   .post-links > li > a{
     display: inline;
+  }
+
+  > div{
+    max-width: 100%;
   }
 }
 

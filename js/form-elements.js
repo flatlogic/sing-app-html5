@@ -1,4 +1,6 @@
 $(function(){
+
+    $('.widget').widgster();
     var bs3Wysihtml5Templates = {
         "emphasis": function(locale, options) {
             var size = (options && options.size) ? ' btn-'+options.size : '';

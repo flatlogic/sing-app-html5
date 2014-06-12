@@ -33,7 +33,7 @@ $(function(){
 
         this.pjaxEnabled = window.PJAX_ENABLED;
         this.debug = window.DEBUG;
-        this.navCollapseTimeout = 2000;
+        this.navCollapseTimeout = 2500;
         this.$sidebar = $('#sidebar');
         this.$loaderWrap = $('.loader-wrap');
         this.$navigationStateToggle = $('#nav-state-toggle');
@@ -66,8 +66,8 @@ $(function(){
             /**
              * Initialize pjax & attaching all related events
              */
-            this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
-            $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax])', '#content', {
+            this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href=#])').on('click', $.proxy(this._checkLoading, this));
+            $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href=#])', '#content', {
                 fragment: '#content',
                 type: 'POST' //prevents caching todo change to GET for prod
             });
