@@ -30501,13 +30501,15 @@ a {
 .loader-wrap .fa {
   position: absolute;
   top: 50%;
+  left: 50%;
   line-height: 30px;
   margin-top: -15px;
+  margin-left: -10px;
   font-size: 20px;
   vertical-align: middle;
 }
 @media (min-width: 992px) {
-  /* line 880, ../sass/_base.scss */
+  /* line 882, ../sass/_base.scss */
   .nav-static .loader-wrap {
     -webkit-transition: opacity 0.2s ease-out, background-color 0.2s ease-out;
     -o-transition: opacity 0.2s ease-out, background-color 0.2s ease-out;
@@ -30523,7 +30525,7 @@ a {
 /***********************/
 /*       Widget        */
 /***********************/
-/* line 893, ../sass/_base.scss */
+/* line 895, ../sass/_base.scss */
 .widget {
   position: relative;
   margin-bottom: 30px;
@@ -30531,38 +30533,38 @@ a {
   background: white;
   border-radius: 3px;
 }
-/* line 900, ../sass/_base.scss */
+/* line 902, ../sass/_base.scss */
 .widget > header {
   margin: -15px -20px;
   padding: 15px 20px;
 }
-/* line 903, ../sass/_base.scss */
+/* line 905, ../sass/_base.scss */
 .widget > header h1, .widget > header h2, .widget > header h3, .widget > header h4, .widget > header h5, .widget > header h6 {
   margin: 0;
 }
-/* line 907, ../sass/_base.scss */
+/* line 909, ../sass/_base.scss */
 .widget > header + .widget-body,
 .widget > header + .widget-body.no-padding {
   margin-top: 15px;
 }
-/* line 913, ../sass/_base.scss */
+/* line 915, ../sass/_base.scss */
 .widget > .widget-body.no-padding {
   margin: -15px -20px;
 }
-/* line 916, ../sass/_base.scss */
+/* line 918, ../sass/_base.scss */
 .widget > .widget-body.no-padding + footer {
   margin-top: 15px;
 }
-/* line 921, ../sass/_base.scss */
+/* line 923, ../sass/_base.scss */
 .widget > footer {
   margin: 0 -20px -15px;
   padding: 15px 20px;
 }
-/* line 926, ../sass/_base.scss */
+/* line 928, ../sass/_base.scss */
 .widget:hover .widget-controls-hover {
   opacity: 1;
 }
-/* line 930, ../sass/_base.scss */
+/* line 932, ../sass/_base.scss */
 .widget .loader {
   position: absolute;
   top: 0;
@@ -30570,7 +30572,7 @@ a {
   left: 0;
   right: 0;
 }
-/* line 937, ../sass/_base.scss */
+/* line 939, ../sass/_base.scss */
 .widget .loader .spinner {
   position: absolute;
   top: 50%;
@@ -30579,12 +30581,12 @@ a {
   font-size: 20px;
   text-align: center;
 }
-/* line 947, ../sass/_base.scss */
+/* line 949, ../sass/_base.scss */
 .widget .widget-table-overflow {
   margin: 0 -20px -15px;
 }
 
-/* line 952, ../sass/_base.scss */
+/* line 954, ../sass/_base.scss */
 .widget-controls {
   position: absolute;
   z-index: 1;
@@ -30593,19 +30595,19 @@ a {
   padding: 14px;
   font-size: 12px;
 }
-/* line 960, ../sass/_base.scss */
+/* line 962, ../sass/_base.scss */
 .widget-controls.left {
   left: 0;
   right: auto;
 }
-/* line 965, ../sass/_base.scss */
+/* line 967, ../sass/_base.scss */
 .widget-controls.widget-controls-hover {
   opacity: 0;
   -webkit-transition: opacity 0.15s;
   -o-transition: opacity 0.15s;
   transition: opacity 0.15s;
 }
-/* line 972, ../sass/_base.scss */
+/* line 974, ../sass/_base.scss */
 .widget-controls > a {
   padding: 1px 4px;
   border-radius: 4px;
@@ -30614,42 +30616,42 @@ a {
   -o-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
 }
-/* line 978, ../sass/_base.scss */
+/* line 980, ../sass/_base.scss */
 .widget-controls > a:hover {
   color: rgba(0, 0, 0, 0.1);
 }
-/* line 982, ../sass/_base.scss */
+/* line 984, ../sass/_base.scss */
 .widget-controls > a > .fa {
   vertical-align: middle;
 }
-/* line 986, ../sass/_base.scss */
+/* line 988, ../sass/_base.scss */
 .widget-controls > a > .glyphicon {
   vertical-align: -1px;
 }
-/* line 991, ../sass/_base.scss */
+/* line 993, ../sass/_base.scss */
 .widget-controls > .btn-group {
   vertical-align: baseline;
 }
-/* line 995, ../sass/_base.scss */
+/* line 997, ../sass/_base.scss */
 .widget-controls .fa-refresh {
   position: relative;
   top: -1px;
 }
 
-/* line 1001, ../sass/_base.scss */
+/* line 1003, ../sass/_base.scss */
 .widget-icon {
   opacity: .5;
   font-size: 42px;
 }
 
-/* line 1006, ../sass/_base.scss */
+/* line 1008, ../sass/_base.scss */
 .widget-image {
   position: relative;
   overflow: hidden;
   margin: -15px -20px;
   border-radius: 4px;
 }
-/* line 1012, ../sass/_base.scss */
+/* line 1014, ../sass/_base.scss */
 .widget-image > img {
   max-width: 100%;
   border-radius: 4px 4px 0 0;
@@ -30658,21 +30660,21 @@ a {
   -o-transition: -o-transform 0.15s ease;
   transition: transform 0.15s ease;
 }
-/* line 1018, ../sass/_base.scss */
+/* line 1020, ../sass/_base.scss */
 .widget-image:hover > img {
   -webkit-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
   -o-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
 }
-/* line 1022, ../sass/_base.scss */
+/* line 1024, ../sass/_base.scss */
 .widget-image .title {
   position: absolute;
   top: 0;
   left: 0;
   margin: 20px;
 }
-/* line 1029, ../sass/_base.scss */
+/* line 1031, ../sass/_base.scss */
 .widget-image .info {
   position: absolute;
   top: 0;
@@ -30680,58 +30682,58 @@ a {
   margin: 20px;
 }
 
-/* line 1037, ../sass/_base.scss */
+/* line 1039, ../sass/_base.scss */
 .widget-footer-bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-/* line 1043, ../sass/_base.scss */
+/* line 1045, ../sass/_base.scss */
 .widget-sm {
   height: 230px;
 }
 
-/* line 1047, ../sass/_base.scss */
+/* line 1049, ../sass/_base.scss */
 .widget-md {
   height: 373px;
 }
 
-/* line 1051, ../sass/_base.scss */
+/* line 1053, ../sass/_base.scss */
 .windget-padding-md {
   padding: 15px 20px;
 }
 
-/* line 1055, ../sass/_base.scss */
+/* line 1057, ../sass/_base.scss */
 .windget-padding-lg {
   padding: 30px 40px;
 }
 
-/* line 1059, ../sass/_base.scss */
+/* line 1061, ../sass/_base.scss */
 .widget-body-container {
   position: relative;
   height: 100%;
 }
 
-/* line 1064, ../sass/_base.scss */
+/* line 1066, ../sass/_base.scss */
 .widget-top-overflow,
 .widget-middle-overflow {
   position: relative;
   margin: 0 -20px;
 }
-/* line 1069, ../sass/_base.scss */
+/* line 1071, ../sass/_base.scss */
 .widget-top-overflow > img,
 .widget-middle-overflow > img {
   max-width: 100%;
 }
 
-/* line 1074, ../sass/_base.scss */
+/* line 1076, ../sass/_base.scss */
 .widget-top-overflow {
   margin-top: -15px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 1079, ../sass/_base.scss */
+/* line 1081, ../sass/_base.scss */
 .widget-top-overflow > img {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -30740,16 +30742,16 @@ a {
 /***********************************/
 /**         Widgets Grid          **/
 /***********************************/
-/* line 1089, ../sass/_base.scss */
+/* line 1091, ../sass/_base.scss */
 .widget-container {
   min-height: 30px;
 }
-/* line 1092, ../sass/_base.scss */
+/* line 1094, ../sass/_base.scss */
 .widget-container .widget:not(.fullscreened) > header {
   cursor: move;
 }
 
-/* line 1097, ../sass/_base.scss */
+/* line 1099, ../sass/_base.scss */
 .widget-placeholder {
   background: rgba(255, 255, 255, 0.4);
   border: 1px dashed #999999;
@@ -30759,24 +30761,24 @@ a {
 /***********************/
 /*        Forms        */
 /***********************/
-/* line 1107, ../sass/_base.scss */
+/* line 1109, ../sass/_base.scss */
 .form-actions {
   margin: 20px 0 0;
   padding: 20px;
   background-color: whitesmoke;
 }
-/* line 1112, ../sass/_base.scss */
+/* line 1114, ../sass/_base.scss */
 .form-horizontal .form-actions .row {
   margin-left: -35px;
   margin-right: -35px;
 }
 
-/* line 1118, ../sass/_base.scss */
+/* line 1120, ../sass/_base.scss */
 input[type=search], input.search {
   background-color: white;
   background: url(../img/search.png) 5px 60% no-repeat white;
 }
-/* line 1119, ../sass/_base.scss */
+/* line 1121, ../sass/_base.scss */
 input[type=search], .input-group-lg > input[type=search], .input-group-sm > input[type=search], input.search, .input-group-lg > input.search, .input-group-sm > input.search {
   padding-left: 26px;
 }
@@ -30784,7 +30786,7 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 /***********************/
 /*       Buttons       */
 /***********************/
-/* line 1130, ../sass/_base.scss */
+/* line 1132, ../sass/_base.scss */
 .btn-inverse {
   color: white;
   background-color: #555555;
@@ -30814,7 +30816,7 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 /***********************/
 /*     Content Map     */
 /***********************/
-/* line 1138, ../sass/_base.scss */
+/* line 1140, ../sass/_base.scss */
 .content-map {
   position: absolute;
   top: 0;
@@ -30822,13 +30824,13 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   left: 0;
   right: 0;
 }
-/* line 1144, ../sass/_base.scss */
+/* line 1146, ../sass/_base.scss */
 .content-map + .page-title {
   position: relative;
   z-index: 2;
 }
 
-/* line 1150, ../sass/_base.scss */
+/* line 1152, ../sass/_base.scss */
 .content-map-controls {
   position: absolute;
   right: 0;
