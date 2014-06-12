@@ -249,7 +249,7 @@ $(function(){
                 .tickFormat(d3.format(',f'));
 
             d3.select('#nvd31 svg')
-                .style('height', 300)
+                .style('height', '300px')
                 .datum(testData(['Search', 'Referral'], 50).map(function(el, i){
                     el.area = true;
                     return el;
@@ -285,7 +285,7 @@ $(function(){
 //            chart.controls.margin({left: 0});
 
             d3.select('#nvd32 svg')
-                .style('height', 300)
+                .style('height', '300px')
                 .datum(testData(['Uploads', 'Downloads'], 10).map(function(el, i){
                     el.area = true;
                     return el;
@@ -323,6 +323,7 @@ $(function(){
     function initMorris2(){
         Morris.Area({
             element: 'morris2',
+            height: '200px',
             data: [
                 { y: '2006', a: 100, b: 90 },
                 { y: '2007', a: 75,  b: 65 },

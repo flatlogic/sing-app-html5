@@ -107,6 +107,10 @@
       padding-right: 0;
     }
   }
+
+  .dropdown-toggle-notifications{
+    display: inline-block; /* ie inline collapsing fix*/
+  }
 }
 
 /* ff icons valign fix */

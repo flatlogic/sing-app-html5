@@ -105,6 +105,20 @@ $(function(){
                 }
             }
         });
+
+        //ie svg height fix
+        function _fixMapHehight(){
+            $map.find('svg').css('height', function(){
+                return $(this).attr('height') + 'px';
+            });
+        }
+
+        _fixMapHehight();
+        SingApp.onResize(function(){
+            setTimeout(function(){
+                _fixMapHehight();
+            }, 0)
+        });
     }
 
     function initCalendar(){
