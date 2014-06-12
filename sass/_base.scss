@@ -851,15 +851,15 @@
   border-radius: $border-radius-small;
 
   > header{
-    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal) 0;
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
     padding: $widget-padding-vertical $widget-padding-horizontal;
     #{headings()}{
       margin: 0;
     }
 
+    + .widget-body,
     + .widget-body.no-padding{
-      margin-top: 0;
-
+      margin-top: $widget-padding-vertical;
     }
   }
 
