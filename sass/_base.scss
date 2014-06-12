@@ -101,6 +101,12 @@
       margin: -7px -7px -8px;
     }
   }
+
+  .navbar-form.navbar-left{
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding-right: 0;
+    }
+  }
 }
 
 .content-wrap{
@@ -380,6 +386,39 @@
       margin: 0;
     }
   }
+
+  /* fix notifications dropdown when there is no enough vertical space*/
+
+  @media (max-height: 500px) {
+    .dropdown-menu{
+      bottom: 20px;
+    }
+
+    .notifications{
+      .panel-heading{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .list-group{
+        position: absolute;
+        top: 85px;
+        left: 0;
+        right: 0;
+        bottom: 43px;
+        height: auto;
+      }
+
+      .panel-footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
 }
 
 .sidebar-labels{
@@ -538,6 +577,7 @@
 
 .chat-sidebar-chat{
   right: -100%;
+  padding-bottom: 54px; /*footer height*/
   background-color: $sidebar-bg-color;
   @include transition(right .2s ease-in-out);
   &.open{

@@ -341,13 +341,16 @@
 }
 
 .login-page .page-footer {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-  right: 0;
+  margin-bottom: 30px;
   font-size: $font-size-mini;
   color: $text-muted;
   text-align: center;
+  @media (min-height: 600px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .widget-login-container{
@@ -803,9 +806,12 @@
 }
 
 .error-code{
-  font-size: 180px;
+  font-size: 80px;
   font-weight: $font-weight-normal;
   color: $gray-dark;
+  @media (min-width: $screen-sm-min) {
+    font-size: 180px;
+  }
 }
 
 .error-info{
