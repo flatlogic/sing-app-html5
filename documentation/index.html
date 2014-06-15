@@ -11,69 +11,18 @@
 <body class="background-two">
 <nav id="sidebar" class="sidebar">
     <ul id="side-nav" class="side-nav">
-        <li class="active green">
-            <a href="index.html"> <span class="name">Dashboard</span></a>
-        </li>
-        <li class="teal accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse">
-                <li><a href="stat_statistics.html">Stats</a></li>
-                <li><a href="stat_charts.html">Charts</a></li>
-                <li><a href="stat_realtime.html">Realtime</a></li>
+        <li class="active accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#dashboard-collapse"> <span class="name">Dashboard</span></a>
+            <ul id="dashboard-collapse" class="accordion-body collapse in">
+                <li class="active"><a href="index.html">Dashboard</a></li>
+                <li><a href="widgets.html">Widgets</a></li>
             </ul>
         </li>
-        <li class="blue accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#forms-collapse"> <span class="name">Forms</span></a>
-            <ul id="forms-collapse" class="accordion-body collapse">
-                <li><a href="form_account.html">Account</a></li>
-                <li><a href="form_article.html">Article</a></li>
-                <li><a href="form_elements.html">Elements</a></li>
-                <li><a href="form_validation.html">Validation</a></li>
-                <li><a href="form_wizard.html">Wizard</a></li>
-            </ul>
+        <li>
+            <a href="inbox.html"><span class="name">Email</span></a>
         </li>
-        <li class="brown accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#ui-collapse"> <span class="name">UI</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse">
-                <li><a href="ui_buttons.html">Buttons</a></li>
-                <li><a href="ui_dialogs.html">Dialogs</a></li>
-                <li><a href="ui_notifications.html">Notifications</a></li>
-                <li><a href="ui_icons.html">Icons</a></li>
-                <li><a href="ui_tabs.html">Tabs</a></li>
-                <li><a href="ui_accordion.html">Accordion</a></li>
-            </ul>
-        </li>
-        <li class="dark-red accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#components-collapse"> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse">
-                <li><a href="component_calendar.html">Calendar</a></li>
-                <li><a href="component_maps.html">Maps</a></li>
-                <li><a href="component_gallery.html">Gallery</a></li>
-                <li><a href="component_fileupload.html">Fileupload</a></li>
-            </ul>
-        </li>
-        <li class="red accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#tables-collapse"> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="accordion-body collapse">
-                <li><a href="tables_static.html">Static</a></li>
-                <li><a href="tables_dynamic.html">Dynamic</a></li>
-            </ul>
-        </li>
-        <li class="orange">
-            <a href="grid.html"><span class="name">Widgets</span></a>
-        </li>
-        <li class="lime accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#special-collapse"> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse">
-                <li><a href="special_search.html">Search</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="special_404.html">404</a></li>
-            </ul>
+        <li>
+            <a href="charts.html"><span class="name">Charts</span></a>
         </li>
     </ul>
 </nav>
@@ -90,6 +39,7 @@
             <div class="span10">
                 <section class="widget">
                     <h2>Contents</h2>
+                    <hr>
                     <ol style="margin-top: 0">
                         <li><a href="#about">About</a></li>
                         <li><a href="#structure">Structure</a></li>
@@ -103,12 +53,14 @@
                         <li><a href="#changelog">Change Log</a></li>
                     </ol>
                     <h2 id="about">About Template (Sing App 1.0)</h2>
+                    <hr>
                     <p><strong>Sing App</strong> is next-generation, carefully hand-coded and powerful front-end template. It can be used for designing either your next
                         web application or admin entrance for it.</p>
                     <p>It's based on the  <a href="http://getbootstrap.com/">Bootstrap</a> front-end framework which
                         uses <strong>12-column responsive grid</strong> layout.</p>
 
                     <h2 id="structure">Structure</h2>
+                    <hr>
                     <p>Sing App package goes with the following folders:</p>
                     <ul>
                         <li><strong>*root*</strong> - html templates;</li>
@@ -128,6 +80,7 @@
                     </ul>
 
                     <h2 id="bower">Bower</h2>
+                    <hr>
                     <p>Since maintaining front-end libraries is getting more and more complicated we use <a href="http://bower.io/">Bower</a>
                     to manage Sing dependencies. Bower is a front-end package management system which allows you to easely install required
                     packages. Installing Bootstrap (for instance) becomes really simple:</p>
@@ -139,6 +92,7 @@
                     some particular demos.</p>
 
                     <h2 id="scss">Scss</h2>
+                    <hr>
                     <p>Sing uses <a href="http://sass-lang.com/">scss</a> to generate css. This choice has been made because of significant boost
                     scss gives when developing front-end apps like this one. We used <a href="http://compass-style.org/">compass</a> to compile scss to css, but what to use
                         is absolutely up to your choice. Anyway editing css is a good old way, right? :)</p>
@@ -174,6 +128,7 @@
                     </ul>
 
                     <h2 id="scss-import">Css files import</h2>
+                    <hr>
                     <p>Unfortunately lots of libs used in Sing do not provide sass versions of stylesheets which creates
                         few problems for us cause we want to serve just one application.<strong>css</strong> file and keep
                         imports consistent. This is solved either by simply copy-pasting lib styles into
@@ -188,6 +143,7 @@
                     which tells compass to use sass-css-importer when processing <code>@import</code>'s.</p>
 
                     <h2 id="pjax">Pjax</h2>
+                    <hr>
                     <p>Sing App uses <a href="https://github.com/defunkt/jquery-pjax">jquery-pjax</a> library that
                         uses ajax and pushState which makes page loading super fast.</p>
                     <p>In case you want to turn off ajax page loading you need to just set <code>window.PJAX_ENABLED</code>
@@ -195,12 +151,13 @@
                     <pre><code>window.PJAX_ENABLED = false;</code></pre>
 
                     <h2 id="support">Support</h2>
+                    <hr>
                     <p>If you have any questions or problems when installing template feel free to contact us via email -
                         <a href="mailto:contact@flatlogic.com">contact@flatlogic.com</a>. We will provide as much help as possible.</p>
 
                     <h2 id="layout">Layout</h2>
-                    <h3>Left Sidebar</h3>
                     <hr>
+                    <h3>Left Sidebar</h3>
                     <p>Left sidebar is a main navigation panel of Sing App. There are two states of sidebar: <strong>collapsing</strong>
                     - sidebar automatically collapses when mouse leaves it; and <strong>static</strong> - sidebar stays
                         always stays open. The state may be changed by pressing collapse button on the top just next to sidebar.</p>
@@ -211,32 +168,28 @@
                         Bootstrap's collapse component</a> </p>
 
                     <h3>Top Navigation Bar</h3>
-                    <hr>
                     <p>Top Navigation Bar is a styled <a href="#http://getbootstrap.com/components/#navbar">Bootstrap's navbar</a>.
                     There is a notifications dropdown which is a good way to display recent events.</p>
                     <p>For mobile screens notifications dropdown goes to inside of sidebar, so it's visible for mobile devices
                     too.</p>
 
                     <h3>Right Sidebar Chat</h3>
-                    <hr>
                     <p>Right Sidebar Chat is a modern admin templates extension which allows you to stay always online with your
                         contacts. Just wire it up with your backend contacts management system. In case you don't need it
                     this layout may be removed.</p>
 
                     <h2 id="dashboard">Dashboard</h2>
+                    <hr>
 
                     <h3>Big Map</h3>
-                    <hr/>
                     <p>Built with <a href="http://www.neveldo.fr/mapael/">jQuery Mapael</a>. Statistics on th right side a made with
                     <a href="http://getbootstrap.com/components/#progress">Bootstrap's progress bar</a>.</p>
 
                     <h3>Market Stats</h3>
-                    <hr/>
                     <p>Market Stats widget contains a realtime chart built with <a href="https://github.com/shutterstock/rickshaw">
                         Rickshaw</a>.</p>
 
                     <h3>Calendar</h3>
-                    <hr/>
                     <p>Built with <a href="https://github.com/xero/bootstrap_calendar">Bootstrap Calendar</a>.</p>
 
                     <h2 id="changelog">Change Log</h2>

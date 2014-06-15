@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing Documentation</title>
+    <link href="css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+</head>
+<body class="background-two">
+<nav id="sidebar" class="sidebar">
+    <ul id="side-nav" class="side-nav">
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#dashboard-collapse"> <span class="name">Dashboard</span></a>
+            <ul id="dashboard-collapse" class="accordion-body collapse">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="widgets.html">Widgets</a></li>
+            </ul>
+        </li>
+        <li class="active">
+            <a href="inbox.html"><span class="name">Email</span></a>
+        </li>
+        <li>
+            <a href="charts.html"><span class="name">Charts</span></a>
+        </li>
+    </ul>
+</nav>
+<div class="wrap">
+    <div class="row-fluid">
+        <div class="span10">
+            <header class="page-header">
+                <h1>Sing Documentation</h1>
+            </header>
+        </div>
+    </div>
+    <div class="content container-fluid">
+        <div class="row-fluid">
+            <div class="span10">
+                <section class="widget">
+                    <h2>Inbox</h2>
+                    <hr>
+                    <p>Inbox App is a real js application with CRUD and Search functions built with
+                        <a href="http://backbonejs.org/">Backbone JS</a>. It has a simple model structure: Email and
+                    Folder. For app to work you need to have a server-side with Backbone compatible API.</p>
+                    <p>App structure is described in <a href="../js/inbox.js">inbox.js</a>.</p>
+                    <p>In case you have some problems integrating it please <a href="mailto:contact@flatlogic.com">contact us</a>.</p>
+                    <pre><code>&lt;script src=&quot;vendor/underscore/underscore-min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;vendor/backbone/backbone.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+                    <h2>Markup-only</h2>
+                    <hr>
+                    <p>In case you need only the markup of Inbox App checkout <a href="../email.html">email.html</a> (for email template)
+                    and <a href="../compose.html">compose.html</a> (for send & respond template).</p>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="js/jquery.1.9.0.min.js"> </script>
+
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+
+</body>
+</html>

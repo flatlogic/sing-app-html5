@@ -6728,14 +6728,7 @@ body {
   min-height: 620px;
   font-weight: 300;
   padding-bottom: 100px;
-  background-color: #b7b7b7;
-  background-image: -moz-linear-gradient(top, #aaaaaa, #cccccc);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#aaaaaa), to(#cccccc));
-  background-image: -webkit-linear-gradient(top, #aaaaaa, #cccccc);
-  background-image: -o-linear-gradient(top, #aaaaaa, #cccccc);
-  background-image: linear-gradient(to bottom, #aaaaaa, #cccccc);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFAAAAAA', endColorstr='#FFCCCCCC', GradientType=0);
+  background-color: #ebeff1;
 }
 
 /* line 13, ../sass/_general.scss */
@@ -7050,13 +7043,12 @@ fieldset {
 
 /* line 254, ../sass/documentation.scss */
 .page-header h1 {
-  color: #ffffff;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   text-align: center;
 }
 
-/* line 261, ../sass/documentation.scss */
+/* line 260, ../sass/documentation.scss */
 .well-white {
   background: #ffffff;
 }
