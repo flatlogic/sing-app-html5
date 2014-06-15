@@ -8,7 +8,7 @@
 .widget{
   @include border-radius($widget-border-radius);
   @include box-shadow($widget-shadow);
-  padding: 15px 30px;
+  padding: 15px 40px;
   color: $textColor;
   background: #ffffff;
   margin-bottom: $box-margin-bottom;
