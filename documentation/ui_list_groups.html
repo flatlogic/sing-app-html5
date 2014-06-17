@@ -18,7 +18,7 @@
                 <li><a href="widgets.html">Widgets</a></li>
             </ul>
         </li>
-        <li class="active">
+        <li>
             <a href="inbox.html"><span class="name">Email</span></a>
         </li>
         <li>
@@ -33,16 +33,16 @@
                 <li><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="active accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#ui-collapse"> <span class="name">UI</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse">
+            <ul id="ui-collapse" class="accordion-body collapse in">
                 <li><a href="ui_components.html">Components</a></li>
                 <li><a href="ui_notifications.html">Notifications</a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
                 <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_tabs_accordion.html">Tabs & Accordion</a></li>
-                <li><a href="ui_list_groups.html">List Groups</a></li>
+                <li class="active"><a href="ui_list_groups.html">List Groups</a></li>
             </ul>
         </li>
     </ul>
@@ -59,20 +59,17 @@
         <div class="row-fluid">
             <div class="span10">
                 <section class="widget">
-                    <h2>Inbox</h2>
+                    <h2>Grouped Lists</h2>
                     <hr>
-                    <p>Inbox App is a real js application with CRUD and Search functions built with
-                        <a href="http://backbonejs.org/">Backbone JS</a>. It has a simple model structure: Email and
-                    Folder. For app to work you need to have a server-side with Backbone compatible API.</p>
-                    <p>App structure is described in <a href="../js/inbox.js">inbox.js</a>.</p>
-                    <p>In case you have some problems integrating it please <a href="mailto:contact@flatlogic.com">contact us</a>.</p>
-                    <pre><code>&lt;script src=&quot;vendor/underscore/underscore-min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;vendor/backbone/backbone.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p><strong>Sing App</strong> grouped lists is a styled version of
+                        jQuery UI <a href="http://jqueryui.com/sortable/">Sortable component</a>.</p>
+                    <p>With help of <a href="http://touchpunch.furf.com/">Touch Punch</a> allows sorting at
+                    touch devices.</p>
 
-                    <h2>Markup-only</h2>
+                    <h2>Nestable List</h2>
                     <hr>
-                    <p>In case you need only the markup of Inbox App checkout <a href="../email.html">email.html</a> (for email template)
-                    and <a href="../compose.html">compose.html</a> (for send & respond template).</p>
+                    <p>This nestable draggable lists are built with jQuery based lib -
+                        <a href="https://github.com/dbushell/Nestable">Nestable</a>.</p>
                 </section>
             </div>
         </div>
