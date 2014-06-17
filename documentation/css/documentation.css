@@ -6835,7 +6835,7 @@ fieldset {
   top: 0;
   color: #666666;
   z-index: 1;
-  margin: 112px 0 0 25px;
+  margin: 112px 0 100px 25px;
 }
 /* line 75, ../sass/documentation.scss */
 .sidebar .settings {

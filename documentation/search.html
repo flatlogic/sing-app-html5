@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
-    <title>Light Blue Documentation</title>
+    <title>Sing Documentation</title>
     <link href="css/documentation.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -11,82 +11,88 @@
 <body class="background-two">
 <nav id="sidebar" class="sidebar">
     <ul id="side-nav" class="side-nav">
-        <li class="green">
-            <a href="index.html"> <span class="name">Dashboard</span></a>
-        </li>
-        <li class="teal accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="accordion-body collapse">
-                <li><a href="stat_statistics.html">Stats</a></li>
-                <li><a href="stat_charts.html">Charts</a></li>
-                <li><a href="stat_realtime.html">Realtime</a></li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#dashboard-collapse"> <span class="name">Dashboard</span></a>
+            <ul id="dashboard-collapse" class="accordion-body collapse">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="widgets.html">Widgets</a></li>
             </ul>
         </li>
-        <li class="blue accordion-group">
+        <li>
+            <a href="inbox.html"><span class="name">Email</span></a>
+        </li>
+        <li>
+            <a href="charts.html"><span class="name">Charts</span></a>
+        </li>
+        <li class="accordion-group">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#forms-collapse"> <span class="name">Forms</span></a>
             <ul id="forms-collapse" class="accordion-body collapse">
-                <li><a href="form_account.html">Account</a></li>
-                <li><a href="form_article.html">Article</a></li>
                 <li><a href="form_elements.html">Elements</a></li>
                 <li><a href="form_validation.html">Validation</a></li>
                 <li><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
-        <li class="brown accordion-group">
+        <li class="accordion-group">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#ui-collapse"> <span class="name">UI</span></a>
             <ul id="ui-collapse" class="accordion-body collapse">
-                <li><a href="ui_buttons.html">Buttons</a></li>
-                <li><a href="ui_dialogs.html">Dialogs</a></li>
+                <li><a href="ui_components.html">Components</a></li>
                 <li><a href="ui_notifications.html">Notifications</a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
-                <li><a href="ui_tabs.html">Tabs</a></li>
-                <li><a href="ui_accordion.html">Accordion</a></li>
+                <li><a href="ui_buttons.html">Buttons</a></li>
+                <li><a href="ui_tabs_accordion.html">Tabs & Accordion</a></li>
+                <li><a href="ui_list_groups.html">List Groups</a></li>
             </ul>
         </li>
-        <li class="dark-red accordion-group">
+        <li>
+            <a href="grid.html">Grid</a>
+        </li>
+        <li class="accordion-group">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#components-collapse"> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="accordion-body collapse">
-                <li><a href="component_calendar.html">Calendar</a></li>
-                <li><a href="component_maps.html">Maps</a></li>
-                <li><a href="component_gallery.html">Gallery</a></li>
-                <li><a href="component_fileupload.html">Fileupload</a></li>
+               data-parent="#side-nav" href="#maps-collapse"> <span class="name">Maps</span></a>
+            <ul id="maps-collapse" class="accordion-body collapse">
+                <li><a href="maps_google.html">Google</a></li>
+                <li><a href="maps_vector.html">Vector</a></li>
             </ul>
         </li>
-        <li class="red accordion-group">
+        <li class="accordion-group">
             <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#tables-collapse"> <span class="name">Tables</span></a>
             <ul id="tables-collapse" class="accordion-body collapse">
-                <li><a href="tables_static.html">Static</a></li>
+                <li><a href="tables_basic.html">Basic</a></li>
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
         </li>
-        <li class="orange">
-            <a href="grid.html"><span class="name">Widgets</span></a>
-        </li>
-        <li class="active lime accordion-group">
+        <li class="accordion-group active">
             <a class="accordion-toggle" data-toggle="collapse"
-               data-parent="#side-nav" href="#special-collapse"> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="accordion-body collapse in">
-                <li class="active"><a href="special_search.html">Search</a></li>
+               data-parent="#side-nav" href="#extra-collapse"> <span class="name">Extra</span></a>
+            <ul id="extra-collapse" class="accordion-body collapse in">
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="invoice.html">Invoice</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="special_404.html">404</a></li>
+                <li><a href="error.html">Error</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="active"><a href="search.html">Search</a></li>
+                <li><a href="time_line.html">Timeline</a></li>
             </ul>
         </li>
     </ul>
 </nav>
 <div class="wrap">
-    <header class="page-header">
-        <h1>Documentation</h1>
-    </header>
+    <div class="row-fluid">
+        <div class="span10">
+            <header class="page-header">
+                <h1>Sing Documentation</h1>
+            </header>
+        </div>
+    </div>
     <div class="content container-fluid">
         <div class="row-fluid">
-            <div class="span10 offset1">
+            <div class="span10">
                 <section class="widget">
-                    <h3>Search page</h3>
-                    <hr/>
+                    <h2>Search page</h2>
+                    <hr>
                     <p>Search page contains only markup, so you may want to read about
                         <a href="grid.html">widgets</a> or <a href="form_elements.html">forms</a>.</p>
                 </section>
