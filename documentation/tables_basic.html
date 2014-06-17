@@ -33,14 +33,14 @@
                 <li><a href="form_wizard.html">Wizard</a></li>
             </ul>
         </li>
-        <li class="active accordion-group">
-            <a class="accordion-toggle" data-toggle="collapse"
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
                data-parent="#side-nav" href="#ui-collapse"> <span class="name">UI</span></a>
-            <ul id="ui-collapse" class="accordion-body collapse in">
+            <ul id="ui-collapse" class="accordion-body collapse">
                 <li><a href="ui_components.html">Components</a></li>
                 <li><a href="ui_notifications.html">Notifications</a></li>
                 <li><a href="ui_icons.html">Icons</a></li>
-                <li class="active"><a href="ui_buttons.html">Buttons</a></li>
+                <li><a href="ui_buttons.html">Buttons</a></li>
                 <li><a href="ui_tabs_accordion.html">Tabs & Accordion</a></li>
                 <li><a href="ui_list_groups.html">List Groups</a></li>
             </ul>
@@ -56,11 +56,11 @@
                 <li><a href="maps_vector.html">Vector</a></li>
             </ul>
         </li>
-        <li class="accordion-group">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
+        <li class="accordion-group active">
+            <a class="accordion-toggle" data-toggle="collapse"
                data-parent="#side-nav" href="#tables-collapse"> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="accordion-body collapse">
-                <li><a href="tables_basic.html">Basic</a></li>
+            <ul id="tables-collapse" class="accordion-body collapse in">
+                <li class="active"><a href="tables_basic.html">Basic</a></li>
                 <li><a href="tables_dynamic.html">Dynamic</a></li>
             </ul>
         </li>
@@ -78,11 +78,39 @@
         <div class="row-fluid">
             <div class="span10">
                 <section class="widget">
-                    <h2>Buttons</h2>
-                    <p>To create button you can style any html element with <code>.btn</code> class. <strong>Sing App</strong>
-                        replaces default bootstrap colors with theme specific and adds two more: <code>.btn-gray</code> and
-                        <code>.btn-inverse</code>.</p>
-                    <p>You can read more at <a href="http://getbootstrap.com/javascript/#buttons">Bootstrap Buttons page</a>.</p>
+                    <h2>Static Tables</h2>
+                    <hr/>
+                    <p><strong>Sing App</strong> tables are based on
+                        <a href="http://getbootstrap.com/css/#tables">Bootstrap tables</a> with additional
+                        styling.</p>
+                    <p>Sing introduces two new table classes <code>.table-sm</code> and <code>.table-lg</code>
+                        for decreased and increased table paddings accordingly.</p>
+
+                    <h3>Overflow Table</h3>
+                    <p>
+                        Add any non-bordered .table within a widget for a seamless design.
+                        Awesome look for no cost.
+                        Just wrap the table with simple css class <code>.widget-table-overflow</code> inside
+                        of widget:
+                    </p>
+                    <pre><code>&lt;section class=&quot;widget&quot;&gt;
+    &lt;header&gt;
+        header
+    &lt;/header&gt;
+    &lt;div class=&quot;widget-body&quot;&gt;
+        body
+    &lt;/div&gt;
+    &lt;div class=&quot;widget-table-overflow&quot;&gt;
+        &lt;table class=&quot;table table-striped&quot;&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
                 </section>
             </div>
         </div>
