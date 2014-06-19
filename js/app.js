@@ -80,8 +80,6 @@ $(function(){
             $(document).on('sing-app:loaded', $.proxy(this._collapseNavIfSmallScreen, this));
             $(document).on('sing-app:loaded', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
-
-            window.onerror = $.proxy(this._logErrors, this);
         }
 
         this.$navigationStateToggle.on('click', $.proxy(this.toggleNavigationState, this));
@@ -110,6 +108,8 @@ $(function(){
 
                 $(this).closest('li').removeClass('open');
             });
+
+        window.onerror = $.proxy(this._logErrors, this);
     };
 
     /**

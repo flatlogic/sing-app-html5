@@ -107,16 +107,16 @@ $(function(){
         });
 
         //ie svg height fix
-        function _fixMapHehight(){
+        function _fixMapHeight(){
             $map.find('svg').css('height', function(){
                 return $(this).attr('height') + 'px';
             });
         }
 
-        _fixMapHehight();
+        _fixMapHeight();
         SingApp.onResize(function(){
             setTimeout(function(){
-                _fixMapHehight();
+                _fixMapHeight();
             }, 0)
         });
     }
