@@ -866,7 +866,7 @@
   background-color: $body-bg;
 
   opacity: 1;
-  @include transition-transform($sidebar-transition-time ease-in-out, opacity .2s ease-out, background-color .2s ease-out);
+  @include transition-transform($sidebar-transition-time ease-in-out, left $sidebar-transition-time ease-in-out, opacity .2s ease-out, background-color .2s ease-out);
   &.hiding{
     opacity: 0;
     background-color: rgba(0,0,0,0);

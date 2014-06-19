@@ -350,7 +350,14 @@ $(function(){
         }).liveTile();
 
         $(document).one('pjax:beforeReplace', function(){
-            $('.live-tile').liveTile("destroy", true);
+            $('.live-tile').liveTile("destroy", true).each(function(){
+                var data = $(this).data("LiveTile");
+                if (typeof (data) === "undefined")
+                    return;
+                clearTimeout(data.eventTimeout);
+                clearTimeout(data.flCompleteTimeout);
+                clearTimeout(data.completeTimeout);
+            });
         });
     }
 

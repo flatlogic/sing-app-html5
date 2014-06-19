@@ -77,7 +77,6 @@ $(function(){
 
             // validate on tab change
             onNext: function($activeTab, $navigation, nextIndex){
-                debugger;
                 var $activeTabPane = $($activeTab.find('a[data-toggle=tab]').attr('href')),
                     $form = $activeTabPane.find('form');
 

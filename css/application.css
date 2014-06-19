@@ -17474,264 +17474,231 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
   display: inline-block;
 }
 
-/*!
- * Jasny Bootstrap v3.1.3 (http://jasny.github.io/bootstrap)
- * Copyright 2012-2014 Arnold Daniels
- * Licensed under Apache-2.0 (https://github.com/jasny/bootstrap/blob/master/LICENSE)
- */
-/* line 7, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 4, ../vendor/jasny-bootstrap/scss/_grid-container-smooth.scss */
 .container-smooth {
   max-width: 1170px;
 }
-
 @media (min-width: 1px) {
-  /* line 11, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 4, ../vendor/jasny-bootstrap/scss/_grid-container-smooth.scss */
   .container-smooth {
     width: auto;
   }
 }
-/* line 15, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+
+/* line 17, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-labeled {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 19, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 22, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-label {
   position: relative;
-  left: -12px;
-  display: inline-block;
-  padding: 6px 12px;
   background: transparent;
   background: rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  padding: 6px 12px;
+  left: -12px;
   border-radius: 3px 0 0 3px;
 }
-
-/* line 28, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 9, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-label.btn-label-right {
-  right: -12px;
   left: auto;
+  right: -12px;
   border-radius: 0 3px 3px 0;
 }
 
-/* line 33, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 30, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-lg .btn-label, .btn-group-lg > .btn .btn-label {
-  left: -16px;
   padding: 10px 16px;
+  left: -16px;
   border-radius: 5px 0 0 5px;
 }
-
-/* line 38, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 9, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-lg .btn-label.btn-label-right, .btn-group-lg > .btn .btn-label.btn-label-right {
-  right: -16px;
   left: auto;
+  right: -16px;
   border-radius: 0 5px 5px 0;
 }
 
-/* line 43, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 33, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-sm .btn-label, .btn-group-sm > .btn .btn-label {
-  left: -10px;
   padding: 5px 10px;
+  left: -10px;
   border-radius: 2px 0 0 2px;
 }
-
-/* line 48, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 9, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-sm .btn-label.btn-label-right, .btn-group-sm > .btn .btn-label.btn-label-right {
-  right: -10px;
   left: auto;
+  right: -10px;
   border-radius: 0 2px 2px 0;
 }
 
-/* line 53, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 36, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-xs .btn-label, .btn-group-xs > .btn .btn-label {
-  left: -5px;
   padding: 1px 5px;
+  left: -5px;
   border-radius: 2px 0 0 2px;
 }
-
-/* line 58, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 9, ../vendor/jasny-bootstrap/scss/_button-labels.scss */
 .btn-xs .btn-label.btn-label-right, .btn-group-xs > .btn .btn-label.btn-label-right {
-  right: -5px;
   left: auto;
+  right: -5px;
   border-radius: 0 2px 2px 0;
 }
 
-/* line 63, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 5, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-bottom {
-  border-top: 1px solid #ddd;
   border-bottom: 0;
+  border-top: 1px solid #dddddd;
 }
-
-/* line 67, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 9, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-bottom > li {
-  margin-top: -1px;
   margin-bottom: 0;
+  margin-top: -1px;
 }
-
-/* line 71, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 13, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-bottom > li > a {
   border-radius: 0 0 4px 4px;
 }
-
-/* line 74, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 17, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-bottom > li > a:hover,
-.nav-tabs-bottom > li > a:focus,
-.nav-tabs-bottom > li.active > a,
-.nav-tabs-bottom > li.active > a:hover,
-.nav-tabs-bottom > li.active > a:focus {
-  border: 1px solid #ddd;
+.nav-tabs-bottom > li > a:focus, .nav-tabs-bottom > li.active > a, .nav-tabs-bottom > li.active > a:hover, .nav-tabs-bottom > li.active > a:focus {
+  border: 1px solid #dddddd;
   border-top-color: transparent;
 }
 
-/* line 82, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 29, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-left {
-  border-right: 1px solid #ddd;
   border-bottom: 0;
+  border-right: 1px solid #dddddd;
 }
-
-/* line 86, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 33, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-left > li {
-  float: none;
-  margin-right: -1px;
   margin-bottom: 0;
+  margin-right: -1px;
+  float: none;
 }
-
-/* line 91, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 38, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-left > li > a {
+  border-radius: 4px 0 0 4px;
   margin-right: 0;
   margin-bottom: 2px;
-  border-radius: 4px 0 0 4px;
 }
-
-/* line 96, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 44, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-left > li > a:hover,
-.nav-tabs-left > li > a:focus,
-.nav-tabs-left > li.active > a,
-.nav-tabs-left > li.active > a:hover,
-.nav-tabs-left > li.active > a:focus {
-  border: 1px solid #ddd;
+.nav-tabs-left > li > a:focus, .nav-tabs-left > li.active > a, .nav-tabs-left > li.active > a:hover, .nav-tabs-left > li.active > a:focus {
+  border: 1px solid #dddddd;
   border-right-color: transparent;
 }
-
-/* line 104, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 54, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .row > .nav-tabs-left {
-  position: relative;
-  z-index: 1;
   padding-right: 0;
   padding-left: 15px;
   margin-right: -1px;
+  position: relative;
+  z-index: 1;
 }
-
-/* line 111, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 61, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .row > .nav-tabs-left + .tab-content {
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #dddddd;
 }
 
-/* line 114, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 68, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-right {
   border-bottom: 0;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid #dddddd;
 }
-
-/* line 118, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 72, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-right > li {
-  float: none;
   margin-bottom: 0;
   margin-left: -1px;
+  float: none;
 }
-
-/* line 123, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 77, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-right > li > a {
-  margin-bottom: 2px;
-  margin-left: 0;
   border-radius: 0 4px 4px 0;
+  margin-left: 0;
+  margin-bottom: 2px;
 }
-
-/* line 128, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 83, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .nav-tabs-right > li > a:hover,
-.nav-tabs-right > li > a:focus,
-.nav-tabs-right > li.active > a,
-.nav-tabs-right > li.active > a:hover,
-.nav-tabs-right > li.active > a:focus {
-  border: 1px solid #ddd;
+.nav-tabs-right > li > a:focus, .nav-tabs-right > li.active > a, .nav-tabs-right > li.active > a:hover, .nav-tabs-right > li.active > a:focus {
+  border: 1px solid #dddddd;
   border-left-color: transparent;
 }
-
-/* line 136, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 93, ../vendor/jasny-bootstrap/scss/_nav-tab-alignment.scss */
 .row > .nav-tabs-right {
-  padding-right: 15px;
   padding-left: 0;
+  padding-right: 15px;
 }
 
-/* line 140, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 10, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu,
 .navbar-offcanvas {
   width: 300px;
-  height: auto;
-  border-style: solid;
+  height: 100%;
   border-width: 1px;
+  border-style: solid;
   border-radius: 4px;
 }
 
-/* line 148, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 19, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-fixed-left,
 .navmenu-fixed-right,
 .navbar-offcanvas {
   position: fixed;
-  top: 0;
-  bottom: 0;
   z-index: 1030;
-  overflow-y: auto;
+  top: 0;
   border-radius: 0;
 }
 
-/* line 158, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 27, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-fixed-left,
 .navbar-offcanvas.navmenu-fixed-left {
-  right: auto;
   left: 0;
+  right: auto;
   border-width: 0 1px 0 0;
+  bottom: 0;
+  overflow-y: auto;
 }
 
-/* line 164, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 35, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-fixed-right,
 .navbar-offcanvas {
-  right: 0;
   left: auto;
+  right: 0;
   border-width: 0 0 0 1px;
 }
 
-/* line 170, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 42, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-nav {
   margin-bottom: 10px;
 }
-
-/* line 173, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 45, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-nav.dropdown-menu {
   position: static;
-  float: none;
-  padding-top: 0;
   margin: 0;
+  padding-top: 0;
+  float: none;
   border: none;
-  border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  border-radius: 0;
 }
 
-/* line 183, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 57, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navbar-offcanvas .navbar-nav {
   margin: 0;
 }
-
 @media (min-width: 768px) {
-  /* line 187, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 56, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
   .navbar-offcanvas {
     width: auto;
     border-top: 0;
     box-shadow: none;
   }
-
-  /* line 192, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 66, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
   .navbar-offcanvas.offcanvas {
     position: static;
     display: block !important;
@@ -17739,586 +17706,491 @@ ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
     padding-bottom: 0;
     overflow: visible !important;
   }
-
-  /* line 199, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 75, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
   .navbar-offcanvas .navbar-nav.navbar-left:first-child {
     margin-left: -15px;
   }
-
-  /* line 202, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 78, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
   .navbar-offcanvas .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
   }
-
-  /* line 205, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 82, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
   .navbar-offcanvas .navmenu-brand {
     display: none;
   }
 }
-/* line 209, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+
+/* line 90, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-brand {
   display: block;
-  padding: 10px 15px;
-  margin: 10px 0;
   font-size: 18px;
   line-height: 20px;
+  padding: 10px 15px;
+  margin: 10px 0;
 }
-
-/* line 216, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-brand:hover,
-.navmenu-brand:focus {
+/* line 95, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-brand:hover, .navmenu-brand:focus {
   text-decoration: none;
 }
 
-/* line 220, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 106, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-default,
 .navbar-default .navbar-offcanvas {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
-
-/* line 225, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 111, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-default .navmenu-brand,
 .navbar-default .navbar-offcanvas .navmenu-brand {
-  color: #777;
+  color: #777777;
 }
-
-/* line 229, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-default .navmenu-brand:hover,
+/* line 113, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-default .navmenu-brand:hover, .navmenu-default .navmenu-brand:focus,
 .navbar-default .navbar-offcanvas .navmenu-brand:hover,
-.navmenu-default .navmenu-brand:focus,
 .navbar-default .navbar-offcanvas .navmenu-brand:focus {
   color: #5e5e5e;
   background-color: transparent;
 }
-
-/* line 236, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 120, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-default .navmenu-text,
 .navbar-default .navbar-offcanvas .navmenu-text {
-  color: #777;
+  color: #777777;
 }
-
-/* line 240, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 126, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-default .navmenu-nav > .dropdown > a:hover .caret,
-.navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a:hover .caret,
 .navmenu-default .navmenu-nav > .dropdown > a:focus .caret,
+.navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a:focus .caret {
-  border-top-color: #333;
-  border-bottom-color: #333;
+  border-top-color: #333333;
+  border-bottom-color: #333333;
 }
-
-/* line 247, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-default .navmenu-nav > .open > a,
+/* line 134, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-default .navmenu-nav > .open > a, .navmenu-default .navmenu-nav > .open > a:hover, .navmenu-default .navmenu-nav > .open > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav > .open > a,
-.navmenu-default .navmenu-nav > .open > a:hover,
 .navbar-default .navbar-offcanvas .navmenu-nav > .open > a:hover,
-.navmenu-default .navmenu-nav > .open > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav > .open > a:focus {
-  color: #555;
   background-color: #e7e7e7;
+  color: #555555;
 }
-
-/* line 256, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-default .navmenu-nav > .open > a .caret,
+/* line 139, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-default .navmenu-nav > .open > a .caret, .navmenu-default .navmenu-nav > .open > a:hover .caret, .navmenu-default .navmenu-nav > .open > a:focus .caret,
 .navbar-default .navbar-offcanvas .navmenu-nav > .open > a .caret,
-.navmenu-default .navmenu-nav > .open > a:hover .caret,
 .navbar-default .navbar-offcanvas .navmenu-nav > .open > a:hover .caret,
-.navmenu-default .navmenu-nav > .open > a:focus .caret,
 .navbar-default .navbar-offcanvas .navmenu-nav > .open > a:focus .caret {
-  border-top-color: #555;
-  border-bottom-color: #555;
+  border-top-color: #555555;
+  border-bottom-color: #555555;
 }
-
-/* line 265, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 145, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-default .navmenu-nav > .dropdown > a .caret,
 .navbar-default .navbar-offcanvas .navmenu-nav > .dropdown > a .caret {
-  border-top-color: #777;
-  border-bottom-color: #777;
+  border-top-color: #777777;
+  border-bottom-color: #777777;
 }
-
-/* line 270, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 149, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-default .navmenu-nav.dropdown-menu,
 .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu {
   background-color: #e7e7e7;
 }
-
-/* line 274, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 151, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-default .navmenu-nav.dropdown-menu > .divider,
 .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .divider {
   background-color: #f8f8f8;
 }
-
-/* line 278, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-default .navmenu-nav.dropdown-menu > .active > a,
+/* line 155, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-default .navmenu-nav.dropdown-menu > .active > a, .navmenu-default .navmenu-nav.dropdown-menu > .active > a:hover, .navmenu-default .navmenu-nav.dropdown-menu > .active > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a,
-.navmenu-default .navmenu-nav.dropdown-menu > .active > a:hover,
 .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:hover,
-.navmenu-default .navmenu-nav.dropdown-menu > .active > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:focus {
   background-color: #d7d7d7;
 }
-
-/* line 286, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 163, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-default .navmenu-nav > li > a,
 .navbar-default .navbar-offcanvas .navmenu-nav > li > a {
-  color: #777;
+  color: #777777;
 }
-
-/* line 290, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-default .navmenu-nav > li > a:hover,
+/* line 165, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-default .navmenu-nav > li > a:hover, .navmenu-default .navmenu-nav > li > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav > li > a:hover,
-.navmenu-default .navmenu-nav > li > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav > li > a:focus {
-  color: #333;
+  color: #333333;
   background-color: transparent;
 }
-
-/* line 297, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-default .navmenu-nav > .active > a,
+/* line 172, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-default .navmenu-nav > .active > a, .navmenu-default .navmenu-nav > .active > a:hover, .navmenu-default .navmenu-nav > .active > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav > .active > a,
-.navmenu-default .navmenu-nav > .active > a:hover,
 .navbar-default .navbar-offcanvas .navmenu-nav > .active > a:hover,
-.navmenu-default .navmenu-nav > .active > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav > .active > a:focus {
-  color: #555;
+  color: #555555;
   background-color: #e7e7e7;
 }
-
-/* line 306, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-default .navmenu-nav > .disabled > a,
+/* line 180, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-default .navmenu-nav > .disabled > a, .navmenu-default .navmenu-nav > .disabled > a:hover, .navmenu-default .navmenu-nav > .disabled > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a,
-.navmenu-default .navmenu-nav > .disabled > a:hover,
 .navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a:hover,
-.navmenu-default .navmenu-nav > .disabled > a:focus,
 .navbar-default .navbar-offcanvas .navmenu-nav > .disabled > a:focus {
-  color: #ccc;
+  color: #cccccc;
   background-color: transparent;
 }
 
-/* line 315, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 191, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-inverse,
 .navbar-inverse .navbar-offcanvas {
-  background-color: #222;
-  border-color: #080808;
+  background-color: #222222;
+  border-color: #090909;
 }
-
-/* line 320, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 196, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-inverse .navmenu-brand,
 .navbar-inverse .navbar-offcanvas .navmenu-brand {
-  color: #999;
+  color: #999999;
 }
-
-/* line 324, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-inverse .navmenu-brand:hover,
+/* line 198, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-inverse .navmenu-brand:hover, .navmenu-inverse .navmenu-brand:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-brand:hover,
-.navmenu-inverse .navmenu-brand:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-brand:focus {
-  color: #fff;
+  color: white;
   background-color: transparent;
 }
-
-/* line 331, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 205, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-inverse .navmenu-text,
 .navbar-inverse .navbar-offcanvas .navmenu-text {
-  color: #999;
+  color: #999999;
 }
-
-/* line 335, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 211, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-inverse .navmenu-nav > .dropdown > a:hover .caret,
-.navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a:hover .caret,
 .navmenu-inverse .navmenu-nav > .dropdown > a:focus .caret,
+.navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a:hover .caret,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a:focus .caret {
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: white;
+  border-bottom-color: white;
 }
-
-/* line 342, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-inverse .navmenu-nav > .open > a,
+/* line 219, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-inverse .navmenu-nav > .open > a, .navmenu-inverse .navmenu-nav > .open > a:hover, .navmenu-inverse .navmenu-nav > .open > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a,
-.navmenu-inverse .navmenu-nav > .open > a:hover,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:hover,
-.navmenu-inverse .navmenu-nav > .open > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:focus {
-  color: #fff;
-  background-color: #080808;
+  background-color: #090909;
+  color: white;
 }
-
-/* line 351, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-inverse .navmenu-nav > .open > a .caret,
+/* line 224, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-inverse .navmenu-nav > .open > a .caret, .navmenu-inverse .navmenu-nav > .open > a:hover .caret, .navmenu-inverse .navmenu-nav > .open > a:focus .caret,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a .caret,
-.navmenu-inverse .navmenu-nav > .open > a:hover .caret,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:hover .caret,
-.navmenu-inverse .navmenu-nav > .open > a:focus .caret,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .open > a:focus .caret {
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: white;
+  border-bottom-color: white;
 }
-
-/* line 360, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 230, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-inverse .navmenu-nav > .dropdown > a .caret,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .dropdown > a .caret {
-  border-top-color: #999;
-  border-bottom-color: #999;
+  border-top-color: #999999;
+  border-bottom-color: #999999;
 }
-
-/* line 365, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 234, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-inverse .navmenu-nav.dropdown-menu,
 .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu {
-  background-color: #080808;
+  background-color: #090909;
 }
-
-/* line 369, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 236, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-inverse .navmenu-nav.dropdown-menu > .divider,
 .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .divider {
-  background-color: #222;
+  background-color: #222222;
 }
-
-/* line 373, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a,
+/* line 240, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a, .navmenu-inverse .navmenu-nav.dropdown-menu > .active > a:hover, .navmenu-inverse .navmenu-nav.dropdown-menu > .active > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a,
-.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a:hover,
 .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:hover,
-.navmenu-inverse .navmenu-nav.dropdown-menu > .active > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav.dropdown-menu > .active > a:focus {
-  background-color: #000;
+  background-color: black;
 }
-
-/* line 381, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 248, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
 .navmenu-inverse .navmenu-nav > li > a,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > li > a {
-  color: #999;
+  color: #999999;
 }
-
-/* line 385, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-inverse .navmenu-nav > li > a:hover,
+/* line 250, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-inverse .navmenu-nav > li > a:hover, .navmenu-inverse .navmenu-nav > li > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > li > a:hover,
-.navmenu-inverse .navmenu-nav > li > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > li > a:focus {
-  color: #fff;
+  color: white;
   background-color: transparent;
 }
-
-/* line 392, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-inverse .navmenu-nav > .active > a,
+/* line 257, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-inverse .navmenu-nav > .active > a, .navmenu-inverse .navmenu-nav > .active > a:hover, .navmenu-inverse .navmenu-nav > .active > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a,
-.navmenu-inverse .navmenu-nav > .active > a:hover,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a:hover,
-.navmenu-inverse .navmenu-nav > .active > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .active > a:focus {
-  color: #fff;
-  background-color: #080808;
+  color: white;
+  background-color: #090909;
 }
-
-/* line 401, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.navmenu-inverse .navmenu-nav > .disabled > a,
+/* line 265, ../vendor/jasny-bootstrap/scss/_navmenu.scss */
+.navmenu-inverse .navmenu-nav > .disabled > a, .navmenu-inverse .navmenu-nav > .disabled > a:hover, .navmenu-inverse .navmenu-nav > .disabled > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a,
-.navmenu-inverse .navmenu-nav > .disabled > a:hover,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a:hover,
-.navmenu-inverse .navmenu-nav > .disabled > a:focus,
 .navbar-inverse .navbar-offcanvas .navmenu-nav > .disabled > a:focus {
-  color: #444;
+  color: #444444;
   background-color: transparent;
 }
 
-/* line 410, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 5, ../vendor/jasny-bootstrap/scss/_alerts-fixed.scss */
 .alert-fixed-top,
 .alert-fixed-bottom {
   position: fixed;
-  left: 0;
-  z-index: 1035;
   width: 100%;
-  margin: 0;
+  z-index: 1035;
   border-radius: 0;
+  margin: 0;
+  left: 0;
 }
-
 @media (min-width: 992px) {
-  /* line 420, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 5, ../vendor/jasny-bootstrap/scss/_alerts-fixed.scss */
   .alert-fixed-top,
   .alert-fixed-bottom {
-    left: 50%;
     width: 992px;
+    left: 50%;
     margin-left: -496px;
   }
 }
-/* line 427, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+
+/* line 21, ../vendor/jasny-bootstrap/scss/_alerts-fixed.scss */
 .alert-fixed-top {
   top: 0;
   border-width: 0 0 1px 0;
 }
-
 @media (min-width: 992px) {
-  /* line 432, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 21, ../vendor/jasny-bootstrap/scss/_alerts-fixed.scss */
   .alert-fixed-top {
-    border-width: 0 1px 1px 1px;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
+    border-width: 0 1px 1px 1px;
   }
 }
-/* line 438, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+
+/* line 31, ../vendor/jasny-bootstrap/scss/_alerts-fixed.scss */
 .alert-fixed-bottom {
   bottom: 0;
   border-width: 1px 0 0 0;
 }
-
 @media (min-width: 992px) {
-  /* line 443, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 31, ../vendor/jasny-bootstrap/scss/_alerts-fixed.scss */
   .alert-fixed-bottom {
-    border-width: 1px 1px 0 1px;
-    border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-width: 1px 1px 0 1px;
   }
-}
-/* line 449, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.offcanvas {
-  display: none;
-}
-
-/* line 452, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.offcanvas.in {
-  display: block;
 }
 
 @media (max-width: 767px) {
-  /* line 456, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 12, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
   .offcanvas-xs {
     display: none;
   }
-
-  /* line 459, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 6, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
   .offcanvas-xs.in {
     display: block;
   }
 }
 @media (max-width: 991px) {
-  /* line 464, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 17, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
   .offcanvas-sm {
     display: none;
   }
-
-  /* line 467, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 6, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
   .offcanvas-sm.in {
     display: block;
   }
 }
 @media (max-width: 1199px) {
-  /* line 472, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 22, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
   .offcanvas-md {
     display: none;
   }
-
-  /* line 475, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+  /* line 6, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
   .offcanvas-md.in {
     display: block;
   }
 }
-/* line 479, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 26, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
 .offcanvas-lg {
   display: none;
 }
-
-/* line 482, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 6, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
 .offcanvas-lg.in {
   display: block;
 }
 
-/* line 485, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 30, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
 .canvas-sliding {
-  -webkit-transition: top .35s, left .35s, bottom .35s, right .35s;
-  transition: top .35s, left .35s, bottom .35s, right .35s;
+  -webkit-transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
+  transition: top 0.35s, left 0.35s, bottom 0.35s, right 0.35s;
 }
 
-/* line 489, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 35, ../vendor/jasny-bootstrap/scss/_offcanvas.scss */
 .offcanvas-clone {
-  position: absolute !important;
-  top: auto !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  left: auto !important;
-  width: 0 !important;
-  height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  height: 0px !important;
+  width: 0px !important;
   overflow: hidden !important;
   border: none !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  bottom: 0px !important;
+  right: 0px !important;
   opacity: 0 !important;
 }
 
-/* line 503, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 6, ../vendor/jasny-bootstrap/scss/_rowlink.scss */
 .table.rowlink td:not(.rowlink-skip),
 .table .rowlink td:not(.rowlink-skip) {
   cursor: pointer;
 }
-
-/* line 507, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 9, ../vendor/jasny-bootstrap/scss/_rowlink.scss */
 .table.rowlink td:not(.rowlink-skip) a,
 .table .rowlink td:not(.rowlink-skip) a {
-  font: inherit;
   color: inherit;
+  font: inherit;
   text-decoration: inherit;
 }
 
-/* line 513, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 19, ../vendor/jasny-bootstrap/scss/_rowlink.scss */
 .table-hover.rowlink tr:hover td,
 .table-hover .rowlink tr:hover td {
-  background-color: #cfcfcf;
+  background-color: #c8c8c8;
 }
 
-/* line 517, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 5, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .btn-file {
-  position: relative;
   overflow: hidden;
+  position: relative;
   vertical-align: middle;
 }
-
-/* line 522, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 9, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .btn-file > input {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
   margin: 0;
-  font-size: 23px;
-  cursor: pointer;
-  filter: alpha(opacity=0);
   opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 23px;
+  height: 100%;
+  width: 100%;
   direction: ltr;
+  cursor: pointer;
 }
 
-/* line 536, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 24, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput {
-  display: inline-block;
   margin-bottom: 9px;
-}
-
-/* line 540, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.fileinput .form-control {
   display: inline-block;
+}
+/* line 27, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
+.fileinput .form-control {
   padding-top: 7px;
   padding-bottom: 5px;
-  margin-bottom: 0;
+  display: inline-block;
+  margin-bottom: 0px;
   vertical-align: middle;
   cursor: text;
 }
-
-/* line 548, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 35, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput .thumbnail {
+  overflow: hidden;
   display: inline-block;
   margin-bottom: 5px;
-  overflow: hidden;
-  text-align: center;
   vertical-align: middle;
+  text-align: center;
 }
-
-/* line 555, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 41, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput .thumbnail > img {
   max-height: 100%;
 }
-
-/* line 558, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 45, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput .btn {
   vertical-align: middle;
 }
 
-/* line 561, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 49, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput-exists .fileinput-new,
 .fileinput-new .fileinput-exists {
   display: none;
 }
 
-/* line 565, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 53, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput-inline .fileinput-controls {
   display: inline;
 }
 
-/* line 568, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 57, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput-filename {
+  vertical-align: middle;
   display: inline-block;
   overflow: hidden;
-  vertical-align: middle;
 }
 
-/* line 573, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 62, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .form-control .fileinput-filename {
   vertical-align: bottom;
 }
 
-/* line 576, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 66, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput.input-group {
   display: table;
 }
 
-/* line 579, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.fileinput.input-group > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* line 583, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.fileinput.input-group > .btn-file {
-  z-index: 1;
-}
-
-/* line 586, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 71, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput-new.input-group .btn-file,
 .fileinput-new .input-group .btn-file {
   border-radius: 0 4px 4px 0;
 }
-
-/* line 590, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
-.fileinput-new.input-group .btn-file.btn-xs, .fileinput-new.input-group .btn-group-xs > .btn-file.btn,
+/* line 75, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
+.fileinput-new.input-group .btn-file.btn-xs, .fileinput-new.input-group .btn-group-xs > .btn-file.btn, .fileinput-new.input-group .btn-file.btn-sm, .fileinput-new.input-group .btn-group-sm > .btn-file.btn,
 .fileinput-new .input-group .btn-file.btn-xs,
 .fileinput-new .input-group .btn-group-xs > .btn-file.btn,
-.fileinput-new.input-group .btn-file.btn-sm,
-.fileinput-new.input-group .btn-group-sm > .btn-file.btn,
 .fileinput-new .input-group .btn-file.btn-sm,
 .fileinput-new .input-group .btn-group-sm > .btn-file.btn {
   border-radius: 0 3px 3px 0;
 }
-
-/* line 596, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 79, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .fileinput-new.input-group .btn-file.btn-lg, .fileinput-new.input-group .btn-group-lg > .btn-file.btn,
 .fileinput-new .input-group .btn-file.btn-lg,
 .fileinput-new .input-group .btn-group-lg > .btn-file.btn {
   border-radius: 0 6px 6px 0;
 }
 
-/* line 600, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 85, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .form-group.has-warning .fileinput .fileinput-preview {
   color: #8a6d3b;
 }
-
-/* line 603, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 88, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .form-group.has-warning .fileinput .thumbnail {
-  border-color: #faebcc;
+  border-color: #fce8ce;
 }
 
-/* line 606, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 93, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .form-group.has-error .fileinput .fileinput-preview {
   color: #a94442;
 }
-
-/* line 609, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 96, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .form-group.has-error .fileinput .thumbnail {
-  border-color: #ebccd1;
+  border-color: #ffd6d6;
 }
 
-/* line 612, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 101, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .form-group.has-success .fileinput .fileinput-preview {
   color: #3c763d;
 }
-
-/* line 615, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 104, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .form-group.has-success .fileinput .thumbnail {
-  border-color: #d6e9c6;
+  border-color: #ddf5d8;
 }
 
-/* line 618, ../vendor/jasny-bootstrap/dist/css/jasny-bootstrap.css */
+/* line 112, ../vendor/jasny-bootstrap/scss/_fileinput.scss */
 .input-group-addon:not(:first-child) {
   border-left: 0;
 }
 
-/*# sourceMappingURL=jasny-bootstrap.css.map */
 /* The MIT License */
 /* line 2, ../vendor/dropzone/downloads/css/dropzone.css */
 .dropzone,
@@ -30492,10 +30364,10 @@ a {
   text-align: center;
   background-color: #eeeeee;
   opacity: 1;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
-  -moz-transition: -moz-transform 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
-  -o-transition: -o-transform 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
-  transition: transform 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, left 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out, left 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
+  -o-transition: -o-transform 0.3s ease-in-out, left 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
+  transition: transform 0.3s ease-in-out, left 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out;
 }
 /* line 870, ../sass/_base.scss */
 .loader-wrap.hiding {
@@ -31531,7 +31403,7 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   width: 68%;
   background: white;
   border-radius: 4px;
-  padding: 20px;
+  padding: 20px 20px 0;
   position: relative;
 }
 /* line 647, ../sass/_widgets.scss */
@@ -31547,7 +31419,7 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 }
 /* line 658, ../sass/_widgets.scss */
 .timeline .event > footer {
-  margin: 20px -20px -20px;
+  margin: 20px -20px 0;
   padding: 10px 20px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -32383,22 +32255,6 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
   background-color: #999999;
 }
 
-@-moz-keyframes bg-attention {
-  /* line 246, ../sass/_utils.scss */
-  0% {
-    background-color: #fdf7e6;
-  }
-
-  /* line 249, ../sass/_utils.scss */
-  5% {
-    background-color: #fae8b6;
-  }
-
-  /* line 252, ../sass/_utils.scss */
-  0% {
-    background-color: transparent;
-  }
-}
 @-webkit-keyframes bg-attention {
   /* line 246, ../sass/_utils.scss */
   0% {

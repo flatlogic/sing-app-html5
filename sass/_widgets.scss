@@ -641,7 +641,7 @@
     width: 68%;
     background: $white;
     border-radius: $border-radius-base;
-    padding: 20px;
+    padding: 20px 20px 0;
     position: relative;
 
     &:before{
@@ -656,7 +656,7 @@
     }
 
     > footer{
-      margin: 20px -20px -20px;
+      margin: 20px -20px 0;
       padding: 10px 20px;
       border-bottom-left-radius: $border-radius-base;
       border-bottom-right-radius: $border-radius-base;
