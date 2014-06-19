@@ -22,84 +22,88 @@ $(function(){
             $chart = $("#flot-main"),
             $tooltip = $('#flot-main-tooltip');
 
-        $('body').append($tooltip.detach());
+        function _initChart(){
+            var plot = $.plotAnimator($chart, [{
+                label: "Traffic",
+                data: data2,
+                lines: {
+                    fill: 0.6,
+                    lineWidth: 0
+                },
+                color:['#F7653F']
+            },{
+                label: "Traffic",
+                data: data1,
+                animator: {steps: 60, duration: 1000, start:0},
+                lines: {lineWidth:2},
+                shadowSize:0,
+                color: '#F7553F'
+            },{
+                label: "Traffic",
+                data: data1,
+                points: { show: true, fill: true, radius:6,fillColor:"#F7553F",lineWidth:3 },
+                color: '#fff',
+                shadowSize:0
+            },{
+                label: "Daylight",
+                data: data2,
+                points: { show: true, fill: true, radius:6,fillColor:"#FFA587",lineWidth:3 },
+                color: '#fff',
+                shadowSize:0
+            }],{
+                xaxis: {
+                    tickLength: 0,
+                    tickDecimals: 0,
+                    min:2,
+                    font :{
+                        lineHeight: 13,
+                        weight: "bold",
+                        color: Sing.colors['gray-semi-light']
+                    }
+                },
+                yaxis: {
+                    tickDecimals: 0,
+                    tickColor: "#f3f3f3",
+                    font :{
+                        lineHeight: 13,
+                        weight: "bold",
+                        color: Sing.colors['gray-semi-light']
+                    }
+                },
+                grid: {
+                    backgroundColor: { colors: [ "#fff", "#fff" ] },
+                    borderWidth:1,
+                    borderColor:"#f0f0f0",
+                    margin:0,
+                    minBorderMargin:0,
+                    labelMargin:20,
+                    hoverable: true,
+                    clickable: true,
+                    mouseActiveRadius:6
+                },
+                legend: false
+            });
 
-        var plot = $.plotAnimator($chart, [{
-            label: "Traffic",
-            data: data2,
-            lines: {
-                fill: 0.6,
-                lineWidth: 0
-            },
-            color:['#F7653F']
-        },{
-            label: "Traffic",
-            data: data1,
-            animator: {steps: 60, duration: 1000, start:0},
-            lines: {lineWidth:2},
-            shadowSize:0,
-            color: '#F7553F'
-        },{
-            label: "Traffic",
-            data: data1,
-            points: { show: true, fill: true, radius:6,fillColor:"#F7553F",lineWidth:3 },
-            color: '#fff',
-            shadowSize:0
-        },{
-            label: "Daylight",
-            data: data2,
-            points: { show: true, fill: true, radius:6,fillColor:"#FFA587",lineWidth:3 },
-            color: '#fff',
-            shadowSize:0
-        }],{
-            xaxis: {
-                tickLength: 0,
-                tickDecimals: 0,
-                min:2,
-                font :{
-                    lineHeight: 13,
-                    weight: "bold",
-                    color: Sing.colors['gray-semi-light']
+            $chart.on("plothover", function (event, pos, item) {
+                if (item) {
+                    var x = item.datapoint[0].toFixed(2),
+                        y = item.datapoint[1].toFixed(2);
+
+                    $tooltip.html(item.series.label + " at " + x + ": " + y)
+                        .css({
+                            top: item.pageY + 5 - window.scrollY,
+                            left: item.pageX + 5 - window.scrollX
+                        })
+                        .fadeIn(200);
+                } else {
+                    $tooltip.hide();
                 }
-            },
-            yaxis: {
-                tickDecimals: 0,
-                tickColor: "#f3f3f3",
-                font :{
-                    lineHeight: 13,
-                    weight: "bold",
-                    color: Sing.colors['gray-semi-light']
-                }
-            },
-            grid: {
-                backgroundColor: { colors: [ "#fff", "#fff" ] },
-                borderWidth:1,
-                borderColor:"#f0f0f0",
-                margin:0,
-                minBorderMargin:0,
-                labelMargin:20,
-                hoverable: true,
-                clickable: true,
-                mouseActiveRadius:6
-            },
-            legend: false
-        });
+            });
+        }
 
-        $chart.on("plothover", function (event, pos, item) {
-            if (item) {
-                var x = item.datapoint[0].toFixed(2),
-                    y = item.datapoint[1].toFixed(2);
+        _initChart();
 
-                $tooltip.html(item.series.label + " at " + x + ": " + y)
-                    .css({
-                        top: item.pageY + 5 - window.scrollY,
-                        left: item.pageX + 5 - window.scrollX
-                    })
-                    .fadeIn(200);
-            } else {
-                $tooltip.hide();
-            }
-        });
+        SingApp.onResize(_initChart);
     }
 
     function initRickshaw(){
@@ -156,26 +160,32 @@ $(function(){
     }
 
     function initSparkline1(){
-        $('#sparkline1').sparkline([2,4,6,2,7,5,3,7,8,3,6],{
-            width: '100%',
-            fillColor: '#ddd',
-            height: '100px',
-            lineColor: 'transparent',
-            spotColor: '#c0d0f0',
-            minSpotColor: null,
-            maxSpotColor: null,
-            highlightSpotColor: '#ddd',
-            highlightLineColor: '#ddd'
-        }).sparkline([5,3,7,8,3,6,2,4,6,2,7],{
-            composite: true,
-            lineColor: 'transparent',
-            spotColor: '#c0d0f0',
-            fillColor: 'rgba(192, 208, 240, 0.76)',
-            minSpotColor: null,
-            maxSpotColor: null,
-            highlightSpotColor: '#ddd',
-            highlightLineColor: '#ddd'
-        })
+        function _initChart(){
+            $('#sparkline1').sparkline([2,4,6,2,7,5,3,7,8,3,6],{
+                width: '100%',
+                fillColor: '#ddd',
+                height: '100px',
+                lineColor: 'transparent',
+                spotColor: '#c0d0f0',
+                minSpotColor: null,
+                maxSpotColor: null,
+                highlightSpotColor: '#ddd',
+                highlightLineColor: '#ddd'
+            }).sparkline([5,3,7,8,3,6,2,4,6,2,7],{
+                composite: true,
+                lineColor: 'transparent',
+                spotColor: '#c0d0f0',
+                fillColor: 'rgba(192, 208, 240, 0.76)',
+                minSpotColor: null,
+                maxSpotColor: null,
+                highlightSpotColor: '#ddd',
+                highlightLineColor: '#ddd'
+            })
+        }
+
+        _initChart();
+
+        SingApp.onResize(_initChart);
     }
 
     function initSparkline2(){
@@ -304,6 +314,7 @@ $(function(){
     function initMorris1(){
         Morris.Line({
             element: 'morris1',
+            resize: true,
             data: [
                 { y: '2006', a: 50,  b: 40},
                 { y: '2007', a: 65,  b: 55 },
@@ -324,6 +335,7 @@ $(function(){
         Morris.Area({
             element: 'morris2',
             height: '200px',
+            resize: true,
             data: [
                 { y: '2006', a: 100, b: 90 },
                 { y: '2007', a: 75,  b: 65 },
@@ -412,49 +424,55 @@ $(function(){
 
         ];
 
-        $.plot($("#flot-bar"), data, {
-            series: {
-                bars: {
-                    show: true,
-                    barWidth: 12*24*60*60*350,
-                    lineWidth: 0,
-                    order: 1,
-                    fillColor: {
-                        colors: [{
-                            opacity: 1
-                        }, {
-                            opacity: 0.7
-                        }]
+        function _initChart(){
+            $.plot($("#flot-bar"), data, {
+                series: {
+                    bars: {
+                        show: true,
+                        barWidth: 12*24*60*60*350,
+                        lineWidth: 0,
+                        order: 1,
+                        fillColor: {
+                            colors: [{
+                                opacity: 1
+                            }, {
+                                opacity: 0.7
+                            }]
+                        }
                     }
-                }
-            },
-            xaxis: {
-                mode: "time",
-                min: 1387497600000,
-                max: 1400112000000,
-                tickLength: 0,
-                tickSize: [1, "month"],
-                axisLabel: 'Month',
-                axisLabelUseCanvas: true,
-                axisLabelFontSizePixels: 13,
-                axisLabelPadding: 15
-            },
-            yaxis: {
-                axisLabel: 'Value',
-                axisLabelUseCanvas: true,
-                axisLabelFontSizePixels: 13,
-                axisLabelPadding: 5
-            },
-            grid: {
-                hoverable: true,
-                borderWidth: 0
-            },
-            legend: {
-                backgroundColor: "transparent",
-                labelBoxBorderColor: "none"
-            },
-            colors: ["#64bd63", "#f0b518", "#F7653F"]
-        });
+                },
+                xaxis: {
+                    mode: "time",
+                    min: 1387497600000,
+                    max: 1400112000000,
+                    tickLength: 0,
+                    tickSize: [1, "month"],
+                    axisLabel: 'Month',
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 13,
+                    axisLabelPadding: 15
+                },
+                yaxis: {
+                    axisLabel: 'Value',
+                    axisLabelUseCanvas: true,
+                    axisLabelFontSizePixels: 13,
+                    axisLabelPadding: 5
+                },
+                grid: {
+                    hoverable: true,
+                    borderWidth: 0
+                },
+                legend: {
+                    backgroundColor: "transparent",
+                    labelBoxBorderColor: "none"
+                },
+                colors: ["#64bd63", "#f0b518", "#F7653F"]
+            });
+        }
+
+        _initChart();
+
+        SingApp.onResize(_initChart);
 
 
     }

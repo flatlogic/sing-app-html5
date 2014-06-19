@@ -213,7 +213,7 @@ $(function(){
 
         function onResize(){
             graph.configure({
-                width: $('#realtime1').width()
+                width: $('#rickshaw').width()
             });
             graph.render();
         }

@@ -122,38 +122,45 @@ $(function(){
         for (i = 0; i < 25; i++){
             data2.push([i, Math.floor(4 * i) + random()])
         }
-        $.plot($("#chart-stats-simple"), [{
-            data: data2, showLabels: true, label: "Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
-        },{
-            data: data1, showLabels: true, label: "Test Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+
+        function _initChart(){
+            $.plot($("#chart-stats-simple"), [{
+                data: data2, showLabels: true, label: "Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+            },{
+                data: data1, showLabels: true, label: "Test Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+            }
+            ], {
+                series: {
+                    lines: {
+                        show: true,
+                        lineWidth: 1,
+                        fill: false,
+                        fillColor: { colors: [{ opacity: .001 }, { opacity: .5}] }
+                    },
+                    points: {
+                        show: false,
+                        fill: true
+                    },
+                    shadowSize: 0
+                },
+                legend: false,
+                grid: {
+                    show:false,
+                    margin: 0,
+                    labelMargin: 0,
+                    axisMargin: 0,
+                    hoverable: true,
+                    clickable: true,
+                    tickColor: "rgba(255,255,255,1)",
+                    borderWidth: 0
+                },
+                colors: [Sing.darken(Sing.colors['gray-lighter'], .05), Sing.colors['brand-danger']]
+            });
         }
-        ], {
-            series: {
-                lines: {
-                    show: true,
-                    lineWidth: 1,
-                    fill: false,
-                    fillColor: { colors: [{ opacity: .001 }, { opacity: .5}] }
-                },
-                points: {
-                    show: false,
-                    fill: true
-                },
-                shadowSize: 0
-            },
-            legend: false,
-            grid: {
-                show:false,
-                margin: 0,
-                labelMargin: 0,
-                axisMargin: 0,
-                hoverable: true,
-                clickable: true,
-                tickColor: "rgba(255,255,255,1)",
-                borderWidth: 0
-            },
-            colors: [Sing.darken(Sing.colors['gray-lighter'], .05), Sing.colors['brand-danger']]
-        });
+
+        _initChart();
+
+        SingApp.onResize(_initChart);
     }
 
     function initSalesChart2(){
@@ -170,38 +177,44 @@ $(function(){
         for (i = 0; i < 25; i++){
             data2.push([i, Math.floor(4 * i) + random()])
         }
-        $.plot($("#chart-stats-simple-2"), [{
-            data: data2, showLabels: true, label: "Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
-        },{
-            data: data1, showLabels: true, label: "Test Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
-        }
-        ], {
-            series: {
-                lines: {
-                    show: true,
-                    lineWidth: 1,
-                    fill: false,
-                    fillColor: { colors: [{ opacity: .001 }, { opacity: .5}] }
-                },
-                points: {
-                    show: false,
-                    fill: true
-                },
-                shadowSize: 0
-            },
-            legend: false,
-            grid: {
-                show:false,
-                margin: 0,
-                labelMargin: 0,
-                axisMargin: 0,
-                hoverable: true,
-                clickable: true,
-                tickColor: "rgba(255,255,255,1)",
-                borderWidth: 0
-            },
-            colors: ['#777', Sing.colors['brand-warning']]
-        });
+         function _initChart(){
+             $.plot($("#chart-stats-simple-2"), [{
+                 data: data2, showLabels: true, label: "Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+             },{
+                 data: data1, showLabels: true, label: "Test Visitors", labelPlacement: "below", canvasRender: true, cColor: "#FFFFFF"
+             }
+             ], {
+                 series: {
+                     lines: {
+                         show: true,
+                         lineWidth: 1,
+                         fill: false,
+                         fillColor: { colors: [{ opacity: .001 }, { opacity: .5}] }
+                     },
+                     points: {
+                         show: false,
+                         fill: true
+                     },
+                     shadowSize: 0
+                 },
+                 legend: false,
+                 grid: {
+                     show:false,
+                     margin: 0,
+                     labelMargin: 0,
+                     axisMargin: 0,
+                     hoverable: true,
+                     clickable: true,
+                     tickColor: "rgba(255,255,255,1)",
+                     borderWidth: 0
+                 },
+                 colors: ['#777', Sing.colors['brand-warning']]
+             });
+         }
+
+        _initChart();
+
+        SingApp.onResize(_initChart);
     }
 
     function initRealTime1(){
