@@ -1,16 +1,7 @@
 Sing App v1.0 (June 20)
 =========
 
-Now with lightening fast **ajax + pushState** page loading!
-
-Available in two [transparent (basic)](http://demo.okendoken.com/) and [white](http://demo.okendoken.com/white/) versions!
-
-Light Blue is a **next generation** dashboard template based on the latest **Flat** design. There are few reasons why we created it:.
-
-  - We didn't like the darkness of most of admin templates, so we created this **light** one.
-  - We didn't like the slowness of most of admin templates, so we created this **fast** one.
-  - We didn't like the high contrast of most of admin templates, so we created this **unobtrusive** one.
-  - We searched for a solution of how to make widgets look like real widgets, so we decided that **deep background** - is what makes widgets look real.
+Sing Res
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
@@ -36,67 +27,14 @@ Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [o
 Changelog
 -
 
-Version 2.0
-
-- Super fast Ajax + pushState page loading
-- Lib updates
-- Few bug fixes
-
-Version 1.8
-
-  - Bootstrap v3.1 update
-  - Few bug fixes
-
-Version 1.7
-
-  - 4+ level menu.
-  - Libs updates & fixes
-  - Documentation update
-
-Version 1.6
-
-  - Bootstrap components page
-  - Draggable Grid
-  - List Groups
-  - Jquery 2.0, lib updates
-  - Font Awesome 4.0.3
-
-Version 1.5
-
-  - White version. *Thanks to Quang Pham for convincing me :)*
-  - Landing page
-  - Css & Structure refactoring
-  - Drop Bootstrap 2 version from package
-
-Version 1.4
-
-  - Bootstrap 3 support
-  - Ready-to-use Inbox App
-
-Version 1.3
-
-  - Overall UI improvements
-  - Print Optimized
-  - New iCheck library instead of out-of-date uniform
-  - Invoice Page
-
-Version 1.2
-
-  - Generic UI improvements
-  - Few bug fixes
-
-Version 1.1
-
-  - Generic Search Field
-  - Form Wizard
-  - jQuery Datatables
-  - UI improvements
 
 Next Release Plan
 -
 
-  - UI improvements
-  - Your suggestions!
+  - Profile Page
+  - Less styles
+  - Public bug-tracker
+  -
 
 Full feature list
 -

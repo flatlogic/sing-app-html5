@@ -35,6 +35,7 @@ $(function(){
         this.debug = window.DEBUG;
         this.navCollapseTimeout = 2500;
         this.$sidebar = $('#sidebar');
+        this.$content = $('#content');
         this.$loaderWrap = $('.loader-wrap');
         this.$navigationStateToggle = $('#nav-state-toggle');
         this.$navigationCollapseToggle = $('#nav-collapse-toggle');
@@ -59,6 +60,12 @@ $(function(){
          * open navigation in case collapsed sidebar clicked
          */
         $(document).on('click', '.nav-collapsed #sidebar', $.proxy(this.expandNavigation, this));
+        //we don't need this cool feature for big boys
+        ('ontouchstart' in window) && this.$content.swipe({
+            swipeLeft: $.proxy(this._contentSwipeLeft, this),
+            swipeRight: $.proxy(this._contentSwipeRight, this),
+            threshold: Sing.isScreen('xs') ? 100 : 200
+        });
 
         this.checkNavigationState();
 
@@ -185,6 +192,9 @@ $(function(){
         }
     };
 
+    /**
+     * Expands or collapses navigation. Valid only for collapsing navigation state
+     */
     SingAppView.prototype.toggleNavigationCollapseState = function(){
         if ($('body').is('.nav-collapsed')){
             this.expandNavigation();
@@ -289,6 +299,37 @@ $(function(){
 
         $newActiveLink.closest('li').addClass('active')
             .parents('li').addClass('active');
+    };
+
+    /**
+     * Checks whether screen is sm or md and closes navigation if opened
+     * @private
+     */
+    SingAppView.prototype._contentSwipeLeft = function(){
+        //this method only makes sense for small screens
+        if (Sing.isScreen('md') || Sing.isScreen('lg')) return;
+
+        if (!$('body').is('.nav-collapsed')){
+            this.collapseNavigation();
+        }
+    };
+
+    /**
+     * Checks whether screen is sm or md and opens navigation if closed
+     * @private
+     */
+    SingAppView.prototype._contentSwipeRight = function(){
+        //this method only makes sense for small screens
+        if (Sing.isScreen('md') || Sing.isScreen('lg')) return;
+
+        // fixme. this check is bad. I know. breaks loose coupling principle
+        // SingApp should not know about some "strange" sidebar chat
+        // check line 726 for more info
+        if ($('body').is('.chat-sidebar-closing')) return;
+
+        if ($('body').is('.nav-collapsed')){
+            this.expandNavigation();
+        }
     };
 
     SingAppView.prototype.showLoader = function(){
@@ -660,8 +701,35 @@ function initAppFunctions(){
         //.chat-sidebar-container contains all needed styles so we don't pollute body{ }
         var $chatContainer = $('body').addClass('chat-sidebar-container');
         $(document).on('click', '[data-toggle=chat-sidebar]', function(){
-            $chatContainer.toggleClass('chat-sidebar-opened')
+            $chatContainer.toggleClass('chat-sidebar-opened');
             $(this).find('.chat-notification-sing').remove();
+        });
+
+        /*
+         * Open chat on swipe left but first check if navigation is collapsed
+         * otherwise do nothing
+         */
+        $('#content').on('swipeLeft', function(e){
+            console.log(arguments);
+            if ($('body').is('.nav-collapsed')){
+                $chatContainer.addClass('chat-sidebar-opened');
+            }
+        })
+            /*
+             * Hide chat on swipe right but first check if navigation is collapsed
+             * otherwise do nothing
+             */
+            .on('swipeRight', function(e){
+            if ($('body').is('.nav-collapsed.chat-sidebar-opened')){
+                $chatContainer.removeClass('chat-sidebar-opened')
+                    // as there is no way to cancel swipeLeft handlers attached to
+                    // .content making this hack with temporary class which will be
+                    // used by SingApp to check whether it is permitted to open navigation
+                    // on swipeRight
+                    .addClass('chat-sidebar-closing').one($.support.transition.end, function () {
+                        $('body').removeClass('chat-sidebar-closing');
+                    }).emulateTransitionEnd(300);
+            }
         });
 
         $(document).on('click', '.chat-sidebar-user-group > a', function(){
@@ -782,7 +850,7 @@ function initDemoFunctions(){
                             .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
                               $chatNotification.addClass('hide');
                             });
-                    }, 2000);
+                    }, 4000);
                 });
             $chatNotification.siblings('[data-toggle="chat-sidebar"]').append('<i class="chat-notification-sing animated bounceIn"></i>')
         }, 4000)
