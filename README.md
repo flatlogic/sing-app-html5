@@ -1,32 +1,26 @@
-Sing App v1.0 (June 20)
+Sing App v1.0 (June 22)
 =========
 
-Sing Res
+Sing Web App is a brand new admin dashboard template with pixel perfect stylish design and tons of ready-to-use programming
+features. Sing App goes beyond normal admin templates and provides you entire intuitive programming framework which boosts
+the speed, quality and maintenance of your web application.
 
 ![Light Blue Preview](http://demo.okendoken.com/preview-transparent.png)
 
-New Version 2.1 Released!
--
 
-- Widgster plugin (closable, fullscreenable, collapsible, refreshable widgets)
-- Messenger notifications
-- Input Sliders
-- Parsley 2.0.0
-- White version bug fixes
+Sing App is **mobile-first** dashboard with gestures-enabled touch interface.
+Sing Framework drastically **simplifies** development process of your web application with built-in set of components, plugins and features.
+Sing Pjax App makes **page loading** super fast using pushState + ajax.
 
-**Light Blue** works great with all range of devices: starting from small mobile to large desktop ones.
-**Light Blue** will make the development of your next web application or admin entrance for it much easier and faster. It is based on great Bootstrap framework, uses powerful Sass (CSS preprocessor) technology and makes page loading super fast with built-in ajax page-loader.
-
-We plan to release continuous long term updates and dozens of new features will be coming soon in the future releases. Once you purchased Light Blue, you will be entitled to free download of all future updates.
+We plan to release continuous long term updates and lots of new features will be coming soon in the future releases. Once you purchased Light Blue, you will be entitled to free download of all future updates.
 
 Feedback
 -
-Let's make **Light Blue** template better together! If you notice any bugs or you want some features to be implemented let us know!
+Let's make **Sing App** better together! If you notice any bugs or you want some features to be implemented let us know!
 Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
 
 Changelog
 -
-
 
 Next Release Plan
 -
@@ -34,7 +28,7 @@ Next Release Plan
   - Profile Page
   - Less styles
   - Public bug-tracker
-  -
+  - Notes App
 
 Full feature list
 -
