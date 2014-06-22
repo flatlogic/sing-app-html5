@@ -5,7 +5,7 @@ Sing App v1.0 (June 22)
 features. Sing App goes beyond normal admin templates and provides you entire **intuitive** programming framework which boosts
 the speed, quality and maintenance of your web application.
 
-![Sing Preview](http://localhost/projects/sing/img/sing-preview.png)
+![Sing Preview](http://demo.okendoken.com/sing/img/sing-preview.png)
 
 
 Sing App is **mobile-first** dashboard with gestures-enabled touch interface.  
