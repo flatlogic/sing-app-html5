@@ -5,14 +5,14 @@ Sing App v1.0 (June 22)
 features. Sing App goes beyond normal admin templates and provides you entire **intuitive** programming framework which boosts
 the speed, quality and maintenance of your web application.
 
-![Light Blue Preview](http://localhost/projects/sing/img/sing-preview.png)
+![Sing Preview](http://localhost/projects/sing/img/sing-preview.png)
 
 
 Sing App is **mobile-first** dashboard with gestures-enabled touch interface.  
 Sing Framework drastically **simplifies** development process of your web application with built-in set of components, plugins and features.  
 Sing Pjax App makes **page loading** super fast using pushState + ajax.  
 
-We plan to release continuous long term updates and lots of new features will be coming soon in the future releases. Once you purchased Light Blue, you will be entitled to free download of all future updates.
+We plan to release continuous long term updates and lots of new features will be coming soon in the future releases. Once you purchased Sing App, you will be entitled to free download of all future updates.
 
 Feedback
 -
