@@ -36,6 +36,7 @@ Feature list
   - Mobile-first dashboard with built-in **touch gestures**. Check out on your iPad!
   - Super fast **ajax page loading**. No need to reload all scripts and styles anymore
   - Ready-to-use **Inbox Application**. You just need to code backend
+  - **Bower** front-end package manager so you can easily handle all your packages
   - Two **sidebar states**: revolutionary hover sidebar and usual static one
   - Right sidebar **chat layout**. Stay in touch with your contacts
   - **Fully commented** codebase. No chance to misunderstood something
