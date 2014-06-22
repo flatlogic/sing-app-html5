@@ -117,7 +117,7 @@ $(function(){
         SingApp.onResize(function(){
             setTimeout(function(){
                 _fixMapHeight();
-            }, 0)
+            }, 100)
         });
     }
 
