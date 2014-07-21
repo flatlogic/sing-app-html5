@@ -1,4 +1,4 @@
-Sing App v1.0 (June 22)
+Sing App v1.0
 =========
 
 **Sing Web App** is a brand new admin dashboard template with pixel perfect stylish design and tons of ready-to-use programming

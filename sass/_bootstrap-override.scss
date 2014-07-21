@@ -430,6 +430,12 @@ legend {
   @include button-variant($text-color, $gray-semi-lighter, darken($gray-semi-lighter, 5%));
 }
 
+.btn-link:focus,
+.btn-link:active:focus,
+.btn-link.active:focus{
+  outline: 0;
+}
+
 
 //
 // Labels

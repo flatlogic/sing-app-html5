@@ -1,0 +1,39 @@
+<h3 id="sing-app-v1-0">Sing App v1.0</h3>
+<p><strong>Sing Web App</strong> is a brand new admin dashboard template with pixel perfect stylish design and tons of ready-to-use programming
+    features. Sing App goes beyond normal admin templates and provides you entire <strong>intuitive</strong> programming framework which boosts
+    the speed, quality and maintenance of your web application.</p>
+<p><img src="http://demo.okendoken.com/sing/img/sing-preview.png" alt="Sing Preview"></p>
+<p>Sing App is <strong>mobile-first</strong> dashboard with gestures-enabled touch interface.<br>Sing Framework drastically <strong>simplifies</strong> development process of your web application with built-in set of components, plugins and features.<br>Sing Pjax App makes <strong>page loading</strong> super fast using pushState + ajax.  </p>
+<p>We plan to release continuous long term updates and lots of new features will be coming soon in the future releases. Once you purchased Sing App, you will be entitled to free download of all future updates.</p>
+<h3 id="feedback">Feedback</h3>
+<p>Let's make <strong>Sing App</strong> better together! If you notice any bugs or you want some features to be implemented let us know!
+    Email us at <a href="mailto:contact@flatlogic.com">contact@flatlogic.com</a> or tweet to <a href="https://twitter.com/Okendokenn">okendokenn</a>. We will do our best to help you.</p>
+<h3 id="next-release-plan">Next Release Plan</h3>
+<ul>
+    <li>Profile Page</li>
+    <li>Less styles</li>
+    <li>Public bug-tracker</li>
+    <li>Notes App</li>
+</ul>
+<h3 id="feature-list">Feature list</h3>
+<ul>
+    <li>Unique to admin templates stylish and <strong>unobtrusive design</strong></li>
+    <li>Revolutionary <strong>hover sidebar</strong> that shows up only when you need it</li>
+    <li>Mobile-first dashboard with built-in <strong>touch gestures</strong>. Check out on your iPad!</li>
+    <li>Super fast <strong>ajax page loading</strong>. No need to reload all scripts and styles anymore</li>
+    <li>Ready-to-use <strong>Inbox Application</strong>. You just need to code backend</li>
+    <li><strong>Bower</strong> front-end package manager so you can easily handle all your packages</li>
+    <li>Two <strong>sidebar states</strong>: revolutionary hover sidebar and usual static one</li>
+    <li>Right sidebar <strong>chat layout</strong>. Stay in touch with your contacts</li>
+    <li><strong>Fully commented</strong> codebase. No chance to misunderstood something</li>
+    <li>Flexible but rich <strong>Sing Framework</strong> that help you boost the development process</li>
+    <li>Lots of built-in <strong>code features</strong> (like screen checkers <code>Sing.isScreen('md')</code>)</li>
+    <li>Cross browser compatible and <strong>W3C valid</strong> HTML5 markup</li>
+    <li>Powerful <strong>Widgster plugin</strong> that helps to control widgets with <code>data-*</code> attributes</li>
+    <li><strong>Sass</strong> css pre-proccessor makes Sing styling compact and modular</li>
+    <li>Invoice page with <strong>print optimized</strong> layout</li>
+    <li>and of course, <strong>Fully responsive</strong> layout - from small mobile to huge desktops</li>
+</ul>
+<h3 id="support">Support</h3>
+<p>Please note that support is provided via email as mentioned in the documentation page.</p>
+<h3 id="changelog">Changelog</h3>
