@@ -76,7 +76,8 @@ $(function(){
             this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href=#])').on('click', $.proxy(this._checkLoading, this));
             $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href=#])', '#content', {
                 fragment: '#content',
-                type: 'GET' //this.debug ? 'POST' : 'GET' //GET - for production, POST - for debug.
+                type: 'GET', //this.debug ? 'POST' : 'GET' //GET - for production, POST - for debug.
+                timeout: 4000
             });
             $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
             $(document).on('pjax:start', $.proxy(this._resetResizeCallbacks, this));
