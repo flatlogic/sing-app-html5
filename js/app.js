@@ -306,8 +306,8 @@ $(function(){
      * @private
      */
     SingAppView.prototype._contentSwipeLeft = function(){
-        //this method only makes sense for small screens
-        if (Sing.isScreen('md') || Sing.isScreen('lg')) return;
+        //this method only makes sense for small screens + ipad
+        if (Sing.isScreen('lg')) return;
 
         if (!$('body').is('.nav-collapsed')){
             this.collapseNavigation();
@@ -319,11 +319,11 @@ $(function(){
      * @private
      */
     SingAppView.prototype._contentSwipeRight = function(){
-        //this method only makes sense for small screens
-        if (Sing.isScreen('md') || Sing.isScreen('lg')) return;
+        //this method only makes sense for small screens + ipad
+        if (Sing.isScreen('lg')) return;
 
         // fixme. this check is bad. I know. breaks loose coupling principle
-        // SingApp should not know about some "strange" sidebar chat
+        // SingApp should not know about some "strange" sidebar chat.
         // check line 726 for more info
         if ($('body').is('.chat-sidebar-closing')) return;
 
