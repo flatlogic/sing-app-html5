@@ -465,6 +465,53 @@
 }
 
 /***********************************/
+/**          Post Comments           **/
+/***********************************/
+
+.post-comments{
+  font-size: $font-size-small;
+  padding-left: 0;
+  @include clearfix();
+
+  .post-links + &{
+    margin-top: $line-height-computed / 2;
+  }
+
+  > li {
+    padding: 10px;
+    border-top: 1px solid #e7e7e7;
+    list-style: none;
+    @include clearfix();
+
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+
+  p:last-child{
+    margin-bottom: 0;
+  }
+
+  .avatar{
+    margin-top: 1px;
+  }
+
+  .author{
+    margin-top: 0;
+    margin-bottom: 2px;
+    color: #7ca9dd;
+  }
+
+  .comment-body{
+    overflow: auto;
+  }
+
+  h6.author > small{
+    font-size: 11px;
+  }
+}
+
+/***********************************/
 /**           Post User           **/
 /***********************************/
 
@@ -664,13 +711,14 @@
 
       @include clearfix();
 
-      > .post-links{
-        float: left;
-      }
-
-      > .thumb{
+      .thumb{
         margin-left: 10px;
       }
+    }
+
+    .post-comments{
+      margin-left: -20px;
+      margin-right: -20px;
     }
   }
 
