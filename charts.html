@@ -713,17 +713,13 @@
                         </div>
                     </header>
                     <div class="widget-body">
+                        <div class="mt mb" id="flot-main" style="width: 100%; height: 260px;"></div>
+                        <div class="chart-tooltip" id="flot-main-tooltip" style="opacity: 0"></div>
                         <p class="fs-mini text-muted">
                             Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
                             focus on simple usage, attractive looks and interactive features.
                         </p>
-                        <div class="mt-lg" id="flot-main" style="width: 100%; height: 260px;"></div>
-                        <div class="chart-tooltip" id="flot-main-tooltip"></div>
-                        <h4 class="mt-lg">Interactive <span class="fw-semi-bold">Sparklines</span></h4>
-                        <p class="fs-mini text-muted">
-                            This jQuery plugin generates sparklines (small inline charts) directly in the browser using
-                            data supplied either inline in the HTML, or via javascript.
-                        </p>
+                        <h4 class="mt">Interactive <span class="fw-semi-bold">Sparklines</span></h4>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="stats-row">
@@ -750,6 +746,11 @@
                                 </div>
                             </div>
                         </div>
+
+                        <p class="fs-mini text-muted">
+                            This jQuery plugin generates sparklines (small inline charts) directly in the browser using
+                            data supplied either inline in the HTML, or via javascript.
+                        </p>
                     </div>
                 </section>
             </div>
@@ -881,48 +882,12 @@
                 </section>
             </div>
         </div>
-        <section class="widget">
-            <header>
-                <h5>
-                    Morris <span class="fw-semi-bold">Charts</span>
-                </h5>
-                <div class="widget-controls">
-                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                    <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>Morris <span class="fw-semi-bold">Line Charts</span></h3>
-                        <p class="fs-mini text-muted">
-                            Good-looking charts shouldn't be difficult.
-                            The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
-                            where options is an object containing some of the following configuration options.
-                        </p>
-                        <div id="morris1">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Morris <span class="fw-semi-bold">Area Charts</span></h3>
-                        <p class="fs-mini text-muted">
-                            Good-looking charts shouldn't be difficult.
-                            The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
-                            where options is an object containing some of the following configuration options.
-                        </p>
-                        <div id="morris2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <div class="row">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6">
                 <section class="widget">
                     <header>
                         <h4>
-                            Morris <span class="fw-semi-bold">Donut Charts</span>
+                            Morris <span class="fw-semi-bold">Area Charts</span>
                         </h4>
                         <div class="widget-controls">
                             <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -932,16 +897,40 @@
                     </header>
                     <div class="widget-body">
                         <p class="fs-mini text-muted">
-                            Donuts a great for representing some parted information like traffice sources,
-                            disk partitions, etc.
-                            This really couldn't be easier. Create a Donut chart using <code>Morris.Donut(options)</code>,
-                            with only few options.
+                            Good-looking charts shouldn't be difficult.
+                            The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
+                            where options is an object containing some of the following configuration options.
                         </p>
-                        <div id="morris3">
+                        <div id="morris2">
                         </div>
                     </div>
                 </section>
             </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            Morris <span class="fw-semi-bold">Line Charts</span>
+                        </h4>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p class="fs-mini text-muted">
+                            Good-looking charts shouldn't be difficult.
+                            The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
+                            where options is an object containing some of the following configuration options.
+                        </p>
+                        <div id="morris1">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6 col-lg-4">
                 <section class="widget">
                     <header>
@@ -955,17 +944,40 @@
                         </div>
                     </header>
                     <div class="widget-body clearfix">
-                        <p class="fs-mini text-muted mb-lg">
+                        <div class="text-align-center">
+                            <div class="easy-pie-chart mb-lg" id="easy-pie1" data-percent="73">
+                                73
+                            </div>
+                        </div>
+                        <p class="fs-mini text-muted">
                             Easy pie chart is a jQuery plugin that uses the canvas element to render simple pie charts
                             for single values. These charts are highly customizable, very easy to implement, scale to
                             the resolution of the display of the client to provide sharp charts even on retina displays.
                         </p>
-                        <div class="easy-pie-chart ml-sm" id="easy-pie1" data-percent="73">
-                            73
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            Morris <span class="fw-semi-bold">Donut Charts</span>
+                        </h4>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
-                        <div class="easy-pie-chart pull-right mr-sm" id="easy-pie2" data-percent="81">
-                            81
+                    </header>
+                    <div class="widget-body">
+                        <div id="morris3">
                         </div>
+                        <p class="fs-mini text-muted">
+                            Donuts a great for representing some parted information like traffice sources,
+                            disk partitions, etc.
+                            This really couldn't be easier. Create a Donut chart using <code>Morris.Donut(options)</code>,
+                            with only few options.
+                        </p>
                     </div>
                 </section>
             </div>
@@ -982,11 +994,11 @@
                         </div>
                     </header>
                     <div class="widget-body">
+                        <div class="mt-lg" id="flot-bar" style="width: 100%; height: 260px;"></div>
                         <p class="fs-mini text-muted">
                             Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
                             focus on simple usage, attractive looks and interactive features.
                         </p>
-                        <div class="mt-lg" id="flot-bar" style="width: 100%; height: 260px;"></div>
                     </div>
                 </section>
             </div>

@@ -2,28 +2,51 @@ $(function(){
 
     function initFlot(){
         var data1 = [
-            [1, 20],
-            [2, 20],
-            [3, 40],
-            [4, 30],
-            [5, 40],
-            [6, 35],
-            [7, 47]
-        ],
+                [1, 20],
+                [2, 20],
+                [3, 40],
+                [4, 30],
+                [5, 40],
+                [6, 35],
+                [7, 47]
+            ],
             data2 = [
-            [1, 20],
-            [2, 10],
-            [3, 30],
-            [4, 15],
-            [5, 30],
-            [6, 25],
-            [7, 27]
+                [1, 13],
+                [2, 8],
+                [3, 17],
+                [4, 10],
+                [5, 17],
+                [6, 15],
+                [7, 16]
+            ],
+            data3 = [
+                [1, 23],
+                [2, 13],
+                [3, 33],
+                [4, 16],
+                [5, 32],
+                [6, 28],
+                [7, 31]
             ],
             $chart = $("#flot-main"),
             $tooltip = $('#flot-main-tooltip');
 
         function _initChart(){
             var plot = $.plotAnimator($chart, [{
+                label: "Traffic",
+                data: data3,
+                lines: {
+                    fill: .3,
+                    lineWidth: 0
+                },
+                color:['#ddd']
+            },{
+                label: "Daylight",
+                data: data3,
+                points: { show: true, fill: true, radius:6,fillColor:"#ddd",lineWidth:3 },
+                color: '#fff',
+                shadowSize:0
+            },{
                 label: "Traffic",
                 data: data2,
                 lines: {
@@ -316,8 +339,8 @@ $(function(){
             element: 'morris1',
             resize: true,
             data: [
-                { y: '2006', a: 50,  b: 40},
-                { y: '2007', a: 65,  b: 55 },
+                { y: '2006', a: 100, b: 90 },
+                { y: '2007', a: 75,  b: 65 },
                 { y: '2008', a: 50,  b: 40 },
                 { y: '2009', a: 75,  b: 65 },
                 { y: '2010', a: 50,  b: 40 },
@@ -372,13 +395,8 @@ $(function(){
             barColor: '#5dc4bf',
             trackColor: '#ddd',
             scaleColor: false,
-            lineWidth: 8
-        });
-        $('#easy-pie2').easyPieChart({
-            barColor: '#618fb0',
-            trackColor: '#ddd',
-            scaleColor: false,
-            lineWidth: 8
+            lineWidth: 10,
+            size: 120
         });
     }
 
