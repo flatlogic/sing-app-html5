@@ -522,6 +522,10 @@
       color: $sidebar-color;
     }
   }
+
+  .progress{
+    background-color: lighten($sidebar-bg-color, 10%);
+  }
 }
 
 .chat-sidebar{
