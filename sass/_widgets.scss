@@ -1067,10 +1067,10 @@
     float: left;
 
     > a{
-      padding: 3px 10px;
+      padding: 2px 8px;
       font-size: $font-size-mini;
-      border-radius: 2em;
-      border: 2px solid white;
+      border-radius: 6px;
+      border: 1px solid white;
       color: inherit;
 
       text-decoration: none;
@@ -1079,10 +1079,17 @@
         background-color: rgba(0,0,0,.1);
 
       }
+
+      .fa{
+        font-size: 8px;
+        vertical-align: 2px;
+        margin-right: 3px;
+        opacity: .8;
+      }
     }
 
     + li > a{
-      margin-left: 4px;
+      margin-left: 6px;
     }
   }
 
