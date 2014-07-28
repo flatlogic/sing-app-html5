@@ -5,7 +5,7 @@ $(function(){
             scaleColors: ['#C8EEFF', '#0071A4'],
             normalizeFunction: 'polynomial',
             focusOn:{
-                x: 0.5,
+                x: 0.5359,
                 y: 0.4,
                 scale: 2.5
             },
