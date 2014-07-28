@@ -454,6 +454,12 @@
         @include transition(margin-left $sidebar-transition-time ease-in-out);
       }
 
+      .fa-circle{
+        font-size: 11px;
+        vertical-align: 1px;
+        @include transition(margin-left $sidebar-transition-time ease-in-out);
+      }
+
       .circle-o{
         top: 1px;
         left: 1px
@@ -466,9 +472,11 @@
 
       .nav-collapsed &{
         .circle,
-        .circle-o{
+        .circle-o,
+        .fa-circle{
           margin-left: 8px;
         }
+
         .label-name{
           opacity: 0;
         }
@@ -477,7 +485,8 @@
       .nav-static &{
         @media (min-width: $screen-md-min) {
           .circle,
-          .circle-o {
+          .circle-o,
+          .fa-circle{
             margin-left: 0;
             @include transition(none);
           }

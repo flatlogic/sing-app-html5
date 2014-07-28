@@ -37,7 +37,7 @@ $(function(){
                     "stroke-width": 5
                 }
             },
-            backgroundColor: '#e5e9ec',
+            backgroundColor: '#eee',
             markers: [
                 {latLng: [41.90, 12.45], name: 'Vatican City'},
                 {latLng: [43.73, 7.41], name: 'Monaco'},
