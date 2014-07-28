@@ -39,13 +39,7 @@ $(function(){
                     fill: .3,
                     lineWidth: 0
                 },
-                color:['#ddd']
-            },{
-                label: "Daylight",
-                data: data3,
-                points: { show: true, fill: true, radius:6,fillColor:"#ddd",lineWidth:3 },
-                color: '#fff',
-                shadowSize:0
+                color:['#ccc']
             },{
                 label: "Traffic",
                 data: data2,
@@ -61,18 +55,6 @@ $(function(){
                 lines: {lineWidth:2},
                 shadowSize:0,
                 color: '#F7553F'
-            },{
-                label: "Traffic",
-                data: data1,
-                points: { show: true, fill: true, radius:6,fillColor:"#F7553F",lineWidth:3 },
-                color: '#fff',
-                shadowSize:0
-            },{
-                label: "Daylight",
-                data: data2,
-                points: { show: true, fill: true, radius:6,fillColor:"#FFA587",lineWidth:3 },
-                color: '#fff',
-                shadowSize:0
             }],{
                 xaxis: {
                     tickLength: 0,
