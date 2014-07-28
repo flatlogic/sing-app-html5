@@ -29528,10 +29528,10 @@ a {
     padding-right: 0;
   }
 }
-/* line 111, ../sass/_base.scss */
-.page-controls .dropdown-toggle-notifications {
-  display: inline-block;
-  /* ie inline collapsing fix*/
+/* line 110, ../sass/_base.scss */
+.page-controls .navbar-nav .fa-times {
+  font-size: 20px;
+  vertical-align: -2px;
 }
 
 /* ff icons valign fix */
