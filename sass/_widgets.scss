@@ -509,6 +509,11 @@
   h6.author > small{
     font-size: 11px;
   }
+
+  .widget > footer &{
+    margin-left: -$widget-padding-horizontal;
+    margin-right: -$widget-padding-horizontal;
+  }
 }
 
 /***********************************/
