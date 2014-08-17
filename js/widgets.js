@@ -53,13 +53,17 @@ $(function(){
         } );
 
         function onResize(){
+            var $chart = $('#chart-changes');
             graph.configure({
-                width: $('#chart-changes').width(),
+                width: $chart.width(),
+                height: chartHeight,
                 gapSize: 0.5,
                 min: 'auto',
                 strokeWidth: 3
             });
             graph.render();
+
+            $chart.find('svg').css({height: chartHeight + 'px'})
         }
 
         SingApp.onResize(onResize);
@@ -245,10 +249,15 @@ $(function(){
         } );
 
         function onResize(){
+            var $chart = $('#realtime1');
             graph.configure({
-                width: $('#realtime1').width()
+                width: $chart.width(),
+                height: 130
             });
             graph.render();
+
+            //safari svg height fix
+            $chart.find('svg').css({height: '130px'});
         }
 
         SingApp.onResize(onResize);

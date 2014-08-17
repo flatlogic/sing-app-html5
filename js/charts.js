@@ -139,10 +139,14 @@ $(function(){
         } );
 
         function onResize(){
+            var $chart = $('#rickshaw');
             graph.configure({
-                width: $('#realtime1').width()
+                width: $chart.width(),
+                height: 130
             });
             graph.render();
+
+            $chart.find('svg').css({height: '130px'});
         }
 
         SingApp.onResize(onResize);
@@ -317,6 +321,7 @@ $(function(){
     }
 
     function initMorris1(){
+        $('#morris1').css({height: '343px'}); //safari svg height fix
         Morris.Line({
             element: 'morris1',
             resize: true,
@@ -337,9 +342,9 @@ $(function(){
     }
 
     function initMorris2(){
+        $('#morris2').css({height: '343px'}); //safari svg height fix
         Morris.Area({
             element: 'morris2',
-            height: '200px',
             resize: true,
             data: [
                 { y: '2006', a: 100, b: 90 },

@@ -212,10 +212,14 @@ $(function(){
         } );
 
         function onResize(){
+            var $chart = $('#rickshaw');
             graph.configure({
-                width: $('#rickshaw').width()
+                width: $chart.width(),
+                height: 100
             });
             graph.render();
+
+            $chart.find('svg').css({height: '100px'})
         }
 
         SingApp.onResize(onResize);
