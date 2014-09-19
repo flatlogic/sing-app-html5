@@ -863,6 +863,10 @@
       @include transition(background-color .15s ease-in-out);
     }
   }
+
+  .btn-notifications-reload{
+    color: $navbar-default-link-color;
+  }
 }
 
 /***********************/
