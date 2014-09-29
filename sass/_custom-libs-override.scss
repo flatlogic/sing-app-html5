@@ -675,6 +675,10 @@ input.parsley-error{
   color: $white;
 }
 
+.wizard-dialog .popover.error-popover .arrow {
+  border-right-color: transparent;
+}
+
 /***********************************/
 /**           Backgrid            **/
 /***********************************/
