@@ -5,12 +5,15 @@ Sing App v1.0
 features. Sing App goes beyond normal admin templates and provides you entire **intuitive** programming framework which boosts
 the speed, quality and maintenance of your web application.
 
-![Sing Preview](http://demo.okendoken.com/sing/img/sing-preview.png)
+Available in two versions: [**basic ajax**](mailto:contact@flatlogic.com) and [**Angular js**](mailto:contact@flatlogic.com)!
+
+![Sing Preview](http://demo.flatlogic.com/sing/img/sing-preview.png)
 
 
 Sing App is **mobile-first** dashboard with gestures-enabled touch interface.  
 Sing Framework drastically **simplifies** development process of your web application with built-in set of components, plugins and features.  
 Sing Pjax App makes **page loading** super fast using pushState + ajax.  
+Sing App is available in **Angular JS** version to simplify integration with the most popular front-end framework.
 
 We plan to release continuous long term updates and lots of new features will be coming soon in the future releases. Once you purchased Sing App, you will be entitled to free download of all future updates.
 
@@ -20,13 +23,15 @@ Let's make **Sing App** better together! If you notice any bugs or you want some
 Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
 
 
-Next Release Plan
+Todo list
 -
 
   - Profile Page
   - Less styles
   - Public bug-tracker
   - Notes App
+  - Angular Inbox App
+  - Angular Chat App
 
 Feature list
 -
@@ -34,6 +39,7 @@ Feature list
   - Unique to admin templates stylish and **unobtrusive design**
   - Revolutionary **hover sidebar** that shows up only when you need it
   - Mobile-first dashboard with built-in **touch gestures**. Check out on your iPad!
+  - Includes a version built on top of the most popular front-end framework - **Angular JS**
   - Super fast **ajax page loading**. No need to reload all scripts and styles anymore
   - Ready-to-use **Inbox Application**. You just need to code backend
   - **Bower** front-end package manager so you can easily handle all your packages
