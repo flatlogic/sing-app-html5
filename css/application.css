@@ -13408,7 +13408,7 @@ legend {
   font-size: 13px;
 }
 .navbar-form .input-group {
-  width: 250px;
+  width: 245px;
 }
 .navbar-form .input-group-addon {
   color: #666666;
@@ -13641,6 +13641,11 @@ h6.panel-title, .h6.panel-title {
 }
 .alert-sm .close {
   font-size: 18px;
+}
+
+.alert-dismissable .close {
+  position: static;
+  color: black;
 }
 
 .popover {
@@ -23647,6 +23652,10 @@ html body .black.accentBorderTop {
   margin: 0;
   padding: 0;
 }
+.nvtooltip h3 {
+  background: none;
+  border-bottom: 0;
+}
 
 svg text {
   font: 300 12px "Open Sans", sans-serif;
@@ -24049,6 +24058,10 @@ input.parsley-error {
 .wizard-nav-item .already-visited .active {
   background-color: #5dc4bf;
   color: white;
+}
+
+.wizard-dialog .popover.error-popover .arrow {
+  border-right-color: transparent;
 }
 
 /***********************************/
@@ -25978,6 +25991,9 @@ a {
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
+.notifications .btn-notifications-reload {
+  color: #666666;
+}
 
 /***********************/
 /*        Loader       */
@@ -27055,6 +27071,7 @@ input[type=search], .input-group-lg > input[type=search], .input-group-sm > inpu
 .event-map {
   height: 200px;
   margin: 0 -20px -20px;
+  overflow: visible !important;
 }
 
 .event-image {
