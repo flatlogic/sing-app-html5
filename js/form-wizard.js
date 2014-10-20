@@ -206,5 +206,5 @@ $(function(){
         });
     }
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 });

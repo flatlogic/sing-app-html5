@@ -25,8 +25,8 @@ $(function(){
             },
             markerStyle: {
                 initial: {
-                    fill: Sing.colors['brand-danger'],
-                    stroke: Sing.darken(Sing.colors['brand-danger'],.1),
+                    fill: LetIt.colors['brand-danger'],
+                    stroke: LetIt.darken(LetIt.colors['brand-danger'],.1),
                     "fill-opacity": 1,
                     "stroke-width": 4,
                     "stroke-opacity": 0.2,
@@ -58,7 +58,7 @@ $(function(){
                 {latLng: [42.5, 1.51], name: 'Andorra'},
                 {latLng: [14.01, -60.98], name: 'Saint Lucia'},
                 {latLng: [6.91, 158.18], name: 'Federated States of Micronesia'},
-                {latLng: [1.3, 103.8], name: 'Singapore'},
+                {latLng: [1.3, 103.8], name: 'LetItapore'},
                 {latLng: [1.46, 173.03], name: 'Kiribati'},
                 {latLng: [-21.13, -175.2], name: 'Tonga'},
                 {latLng: [15.3, -61.38], name: 'Dominica'},
@@ -74,5 +74,5 @@ $(function(){
     }
 
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 });

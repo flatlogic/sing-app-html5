@@ -3,5 +3,5 @@ $(function(){
         $('.widget').widgster();
     }
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 });

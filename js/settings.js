@@ -4,7 +4,7 @@ $(function(){
      * A global object containing theme specific colors, screen variables & color functions.
      * @type Object
      */
-    window.Sing = {
+    window.LetIt = {
         colors: {
             'white': '#fff',
             'black': '#000',
@@ -126,37 +126,37 @@ $(function(){
     };
 
     /**
-     * SingSettingsBundle provides a convenient way to access Sing related localStorage options.
+     * LetItSettingsBundle provides a convenient way to access LetIt related localStorage options.
      * Settings should be explicitly saved by calling save() method after changing some property
      * @constructor
      * @example
-     * SingSettings.set('nav-static', false);
-     * SingSettings.save();
+     * LetItSettings.set('nav-static', false);
+     * LetItSettings.save();
      */
-    var SingSettingsBundle = function(){
+    var LetItSettingsBundle = function(){
         var defaultSettings =  {
             /**
              * whether navigation is static (does not collapse automatically)
              */
             'nav-static': false
         };
-        this.settingName = 'sing-app-settings';
+        this.settingName = 'letit-app-settings';
         this._settings = JSON.parse(localStorage.getItem(this.settingName)) || defaultSettings;
     };
 
-    SingSettingsBundle.prototype.save = function(){
+    LetItSettingsBundle.prototype.save = function(){
         localStorage.setItem(this.settingName, JSON.stringify(this._settings));
         return this;
     };
 
-    SingSettingsBundle.prototype.get = function(key){
+    LetItSettingsBundle.prototype.get = function(key){
         return this._settings[key];
     };
 
-    SingSettingsBundle.prototype.set = function(key, value){
+    LetItSettingsBundle.prototype.set = function(key, value){
         this._settings[key] = value;
         return this;
     };
 
-    window.SingSettings = new SingSettingsBundle();
+    window.LetItSettings = new LetItSettingsBundle();
 });

@@ -580,5 +580,5 @@ $(function(){
         initMailboxAppDemo()
     }
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 });

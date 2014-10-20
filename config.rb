@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
 
-#Sing compilation variables
+#LetIt compilation variables
 #button line-height fix
 #https://github.com/twbs/bootstrap-sass/issues/409
 Sass::Script::Number.precision = 10

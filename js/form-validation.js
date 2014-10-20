@@ -5,5 +5,5 @@ $(function(){
         $( '#validation-form' ).parsley();
     }
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 });

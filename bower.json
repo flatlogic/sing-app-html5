@@ -1,7 +1,7 @@
 {
-  "name": "sing",
+  "name": "letit",
   "version": "1.0.0",
-  "description": "Sing Dashboard App",
+  "description": "LetIt Dashboard App",
   "main": "index.html",
   "authors": [
     "okendoken flatlogic.com"

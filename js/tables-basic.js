@@ -7,5 +7,5 @@ $(function(){
         $('.js-progress-animate').animateProgressBar();
     }
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 });

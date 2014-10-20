@@ -5,15 +5,15 @@ $(function(){
             type: 'line',
             width: '100%',
             height: '60',
-            lineColor: Sing.colors['gray'],
+            lineColor: LetIt.colors['gray'],
             fillColor: 'transparent',
             spotRadius: 5,
-            spotColor: Sing.colors['gray'],
-            valueSpots: {'0:':Sing.colors['gray']},
-            highlightSpotColor: Sing.colors['white'],
-            highlightLineColor: Sing.colors['gray'],
-            minSpotColor: Sing.colors['gray'],
-            maxSpotColor: Sing.colors['brand-danger'],
+            spotColor: LetIt.colors['gray'],
+            valueSpots: {'0:':LetIt.colors['gray']},
+            highlightSpotColor: LetIt.colors['white'],
+            highlightLineColor: LetIt.colors['gray'],
+            minSpotColor: LetIt.colors['gray'],
+            maxSpotColor: LetIt.colors['brand-danger'],
             tooltipFormat: new $.SPFormatClass('<span style="color: white">&#9679;</span> {{prefix}}{{y}}{{suffix}}'),
             chartRangeMin: _(data).min() - 1
         });
@@ -21,7 +21,7 @@ $(function(){
 
     function initSimpleChart(){
         initPointSparkline($("#chart-simple"), [4,6,5,7,5]);
-        SingApp.onResize(function(){
+        LetItApp.onResize(function(){
             initPointSparkline($("#chart-simple"), [4,6,5,7,5]);
         });
     }
@@ -42,13 +42,13 @@ $(function(){
             series: [{
                 name: 'pop',
                 data: seriesData.shift().map(function(d) { return { x: d.x, y: d.y } }),
-                color: Sing.lighten(Sing.colors['brand-success'], .09),
+                color: LetIt.lighten(LetIt.colors['brand-success'], .09),
                 renderer: 'bar'
             }, {
                 name: 'humidity',
                 data: seriesData.shift().map(function(d) { return { x: d.x, y: d.y * (Math.random()*0.1 + 1.1) } }),
                 renderer: 'line',
-                color: Sing.colors['white']
+                color: LetIt.colors['white']
             }]
         } );
 
@@ -66,7 +66,7 @@ $(function(){
             $chart.find('svg').css({height: chartHeight + 'px'})
         }
 
-        SingApp.onResize(onResize);
+        LetItApp.onResize(onResize);
         onResize();
 
         var detail = new Rickshaw.Graph.HoverDetail({
@@ -96,7 +96,7 @@ $(function(){
         $el.sparkline(backgroundData,{
             type: 'bar',
             height: 26,
-            barColor: Sing.colors['gray-lighter'],
+            barColor: LetIt.colors['gray-lighter'],
             barWidth: 7,
             barSpacing: 5,
             chartRangeMin: _(data).min(),
@@ -106,7 +106,7 @@ $(function(){
         $el.sparkline(data,{
             composite: true,
             type: 'bar',
-            barColor: Sing.colors['brand-success'],
+            barColor: LetIt.colors['brand-success'],
             barWidth: 7,
             barSpacing: 5
         });
@@ -158,13 +158,13 @@ $(function(){
                     tickColor: "rgba(255,255,255,1)",
                     borderWidth: 0
                 },
-                colors: [Sing.darken(Sing.colors['gray-lighter'], .05), Sing.colors['brand-danger']]
+                colors: [LetIt.darken(LetIt.colors['gray-lighter'], .05), LetIt.colors['brand-danger']]
             });
         }
 
         _initChart();
 
-        SingApp.onResize(_initChart);
+        LetItApp.onResize(_initChart);
     }
 
     function initSalesChart2(){
@@ -212,13 +212,13 @@ $(function(){
                      tickColor: "rgba(255,255,255,1)",
                      borderWidth: 0
                  },
-                 colors: ['#777', Sing.colors['brand-warning']]
+                 colors: ['#777', LetIt.colors['brand-warning']]
              });
          }
 
         _initChart();
 
-        SingApp.onResize(_initChart);
+        LetItApp.onResize(_initChart);
     }
 
     function initRealTime1(){
@@ -237,11 +237,11 @@ $(function(){
             renderer: 'area',
             series: [
                 {
-                    color: Sing.colors['gray-dark'],
+                    color: LetIt.colors['gray-dark'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: Sing.colors['gray'],
+                    color: LetIt.colors['gray'],
                     data: seriesData[1],
                     name: 'Downloads'
                 }
@@ -260,7 +260,7 @@ $(function(){
             $chart.find('svg').css({height: '130px'});
         }
 
-        SingApp.onResize(onResize);
+        LetItApp.onResize(onResize);
         onResize();
 
 
@@ -289,18 +289,18 @@ $(function(){
                 name : "world_countries",
                 defaultArea : {
                     attrs : {
-                        fill: Sing.colors['gray-lighter']
-                        , stroke : Sing.colors['gray']
+                        fill: LetIt.colors['gray-lighter']
+                        , stroke : LetIt.colors['gray']
                     },
                     attrsHover : {
-                        fill : Sing.colors['gray-light'],
+                        fill : LetIt.colors['gray-light'],
                         animDuration : 100
                     }
                 },
                 defaultPlot:{
                     size: 17,
                     attrs : {
-                        fill : Sing.colors['brand-warning'],
+                        fill : LetIt.colors['brand-warning'],
                         stroke : "#fff",
                         "stroke-width" : 0,
                         "stroke-linejoin" : "round"
@@ -323,7 +323,7 @@ $(function(){
                         {
                             max :5000000,
                             attrs : {
-                                fill : Sing.lighten('#ebeff1',.04)
+                                fill : LetIt.lighten('#ebeff1',.04)
                             },
                             label :"Less than 5M"
                         },
@@ -339,14 +339,14 @@ $(function(){
                             min :10000000,
                             max :50000000,
                             attrs : {
-                                fill : Sing.colors['gray-lighter']
+                                fill : LetIt.colors['gray-lighter']
                             },
                             label :"Between 10M and 50M"
                         },
                         {
                             min :50000000,
                             attrs : {
-                                fill : Sing.darken('#ebeff1',.1)
+                                fill : LetIt.darken('#ebeff1',.1)
                             },
                             label :"More than 50M"
                         }
@@ -384,43 +384,43 @@ $(function(){
     }
 
     function initWeather(){
-        var icons = new Skycons({"color": Sing.colors['white']});
+        var icons = new Skycons({"color": LetIt.colors['white']});
         icons.set("clear-day", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['white']});
+        icons = new Skycons({"color": LetIt.colors['white']});
         icons.set("partly-cloudy-day", "partly-cloudy-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['white']});
+        icons = new Skycons({"color": LetIt.colors['white']});
         icons.set("rain", "rain");
         icons.play();
 
-        icons = new Skycons({"color": Sing.lighten(Sing.colors['brand-warning'], .1)});
+        icons = new Skycons({"color": LetIt.lighten(LetIt.colors['brand-warning'], .1)});
         icons.set("clear-day-3", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['white']});
+        icons = new Skycons({"color": LetIt.colors['white']});
         icons.set("partly-cloudy-day-3", "partly-cloudy-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['white']});
+        icons = new Skycons({"color": LetIt.colors['white']});
         icons.set("clear-day-1", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['brand-success']});
+        icons = new Skycons({"color": LetIt.colors['brand-success']});
         icons.set("partly-cloudy-day-1", "partly-cloudy-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray']});
+        icons = new Skycons({"color": LetIt.colors['gray']});
         icons.set("clear-day-2", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray-light']});
+        icons = new Skycons({"color": LetIt.colors['gray-light']});
         icons.set("wind-1", "wind");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray-light']});
+        icons = new Skycons({"color": LetIt.colors['gray-light']});
         icons.set("rain-1", "rain");
         icons.play();
     }
@@ -449,6 +449,6 @@ $(function(){
     }
 
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 
 });

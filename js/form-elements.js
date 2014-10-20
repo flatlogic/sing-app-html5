@@ -59,7 +59,7 @@ $(function(){
         });
 
         new Switchery(document.getElementById('checkbox-ios1'));
-        new Switchery(document.getElementById('checkbox-ios2'),{color: Sing.colors['brand-primary']});
+        new Switchery(document.getElementById('checkbox-ios2'),{color: LetIt.colors['brand-primary']});
 
         $('#datetimepicker1').datetimepicker({
             pickTime: false
@@ -67,7 +67,7 @@ $(function(){
         $('#datetimepicker2').datetimepicker({
         });
 
-        $('#colorpicker').colorpicker({color: Sing.colors['gray-light']});
+        $('#colorpicker').colorpicker({color: LetIt.colors['gray-light']});
 
         $("#mask-phone").inputmask({mask: "(999) 999-9999"});
         $("#mask-date").inputmask({mask: "99-99-9999"});
@@ -92,5 +92,5 @@ $(function(){
         });
     }
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 });

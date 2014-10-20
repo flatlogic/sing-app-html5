@@ -5,5 +5,5 @@ $(function(){
         $('[data-toggle=popover]').popover();
     }
     pageLoad();
-    SingApp.onPageLoad(pageLoad);
+    LetItApp.onPageLoad(pageLoad);
 });
