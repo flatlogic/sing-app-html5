@@ -1,25 +1,25 @@
-LetIt Web App v1.0
+Sing App v1.0
 =========
 
-**LetIt Web App** is a brand new admin dashboard template with pixel perfect stylish design and tons of ready-to-use programming
-features. LetIt Web App goes beyond normal admin templates and provides you entire **intuitive** programming framework which boosts
+**Sing Web App** is a brand new admin dashboard template with pixel perfect stylish design and tons of ready-to-use programming
+features. Sing App goes beyond normal admin templates and provides you entire **intuitive** programming framework which boosts
 the speed, quality and maintenance of your web application.
 
 Available in two versions: [**basic ajax**](mailto:contact@flatlogic.com) and [**Angular js**](mailto:contact@flatlogic.com)!
 
-![LetIt Preview](http://demo.flatlogic.com/letit/img/letit-preview.png)
+![Sing Preview](http://demo.flatlogic.com/sing/img/sing-preview.png)
 
 
-LetIt Web App is **mobile-first** dashboard with gestures-enabled touch interface.
-LetIt Framework drastically **simplifies** development process of your web application with built-in set of components, plugins and features.
-LetIt Pjax App makes **page loading** super fast using pushState + ajax.
-LetIt Web App is available in **Angular JS** version to simplify integration with the most popular front-end framework.
+Sing App is **mobile-first** dashboard with gestures-enabled touch interface.  
+Sing Framework drastically **simplifies** development process of your web application with built-in set of components, plugins and features.  
+Sing Pjax App makes **page loading** super fast using pushState + ajax.  
+Sing App is available in **Angular JS** version to simplify integration with the most popular front-end framework.
 
-We plan to release continuous long term updates and lots of new features will be coming soon in the future releases. Once you purchased LetIt Web App, you will be entitled to free download of all future updates.
+We plan to release continuous long term updates and lots of new features will be coming soon in the future releases. Once you purchased Sing App, you will be entitled to free download of all future updates.
 
 Feedback
 -
-Let's make **LetIt Web App** better together! If you notice any bugs or you want some features to be implemented let us know!
+Let's make **Sing App** better together! If you notice any bugs or you want some features to be implemented let us know!
 Email us at [contact@flatlogic.com](mailto:contact@flatlogic.com) or tweet to [okendokenn](https://twitter.com/Okendokenn). We will do our best to help you.
 
 
@@ -46,11 +46,11 @@ Feature list
   - Two **sidebar states**: revolutionary hover sidebar and usual static one
   - Right sidebar **chat layout**. Stay in touch with your contacts
   - **Fully commented** codebase. No chance to misunderstood something
-  - Flexible but rich **LetIt Framework** that help you boost the development process
-  - Lots of built-in **code features** (like screen checkers `` LetIt.isScreen('md') ``)
+  - Flexible but rich **Sing Framework** that help you boost the development process
+  - Lots of built-in **code features** (like screen checkers `` Sing.isScreen('md') ``)
   - Cross browser compatible and **W3C valid** HTML5 markup
   - Powerful **Widgster plugin** that helps to control widgets with `` data-* `` attributes
-  - **Sass** css pre-proccessor makes LetIt styling compact and modular
+  - **Sass** css pre-proccessor makes Sing styling compact and modular
   - Invoice page with **print optimized** layout
   - and of course, **Fully responsive** layout - from small mobile to huge desktops
 

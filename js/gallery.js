@@ -16,7 +16,7 @@ $(function(){
                     setupSorting();
                     setupSearching();
 
-                    LetItApp.onResize(function(){
+                    SingApp.onResize(function(){
                         $grid.shuffle('update');
                     });
 
@@ -99,5 +99,5 @@ $(function(){
         });
     }
     pageLoad();
-    LetItApp.onPageLoad(pageLoad);
+    SingApp.onPageLoad(pageLoad);
 });

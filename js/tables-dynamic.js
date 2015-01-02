@@ -39,7 +39,7 @@ $(function(){
                 label: "URL",
                 cell: "uri" // Renders the value in an HTML <a> element
             }];
-            if (LetIt.isScreen('xs')){
+            if (Sing.isScreen('xs')){
                 columns.splice(3,1)
             }
             var pageableGrid = new Backgrid.Grid({
@@ -80,7 +80,7 @@ $(function(){
             $("#table-dynamic").html('').append(pageableGrid.render().$el).append(paginator.render().$el);
         }
 
-        LetItApp.onResize(function(){
+        SingApp.onResize(function(){
             createBackgrid(pageableTerritories);
         });
 
@@ -250,5 +250,5 @@ $(function(){
     }
 
     pageLoad();
-    LetItApp.onPageLoad(pageLoad);
+    SingApp.onPageLoad(pageLoad);
 });

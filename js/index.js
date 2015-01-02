@@ -25,7 +25,7 @@ $(function(){
                 defaultPlot:{
                     size: 17,
                     attrs : {
-                        fill : LetIt.colors['brand-warning'],
+                        fill : Sing.colors['brand-warning'],
                         stroke : "#fff",
                         "stroke-width" : 0,
                         "stroke-linejoin" : "round"
@@ -114,7 +114,7 @@ $(function(){
         }
 
         _fixMapHeight();
-        LetItApp.onResize(function(){
+        SingApp.onResize(function(){
             setTimeout(function(){
                 _fixMapHeight();
             }, 100)
@@ -136,28 +136,28 @@ $(function(){
                     "2/"+month+"/"+year,
                 'The flower bed',
                 '#',
-                LetIt.colors['brand-primary'],
+                Sing.colors['brand-primary'],
                 'Contents here'
             ],
             [
                     "5/"+month+"/"+year,
                 'Stop world water pollution',
                 '#',
-                LetIt.colors['brand-warning'],
+                Sing.colors['brand-warning'],
                 'Have a kick off meeting with .inc company'
             ],
             [
                     "18/"+month+"/"+year,
                 'Light Blue 2.2 release',
                 '#',
-                LetIt.colors['brand-success'],
+                Sing.colors['brand-success'],
                 'Some contents here'
             ],
             [
                     "29/"+month+"/"+year,
                 'A link',
                 'http://www.flatlogic.com',
-                LetIt.colors['brand-danger']
+                Sing.colors['brand-danger']
             ]
         ];
         var $calendar = $('#events-calendar');
@@ -222,7 +222,7 @@ $(function(){
             $chart.find('svg').css({height: '100px'})
         }
 
-        LetItApp.onResize(onResize);
+        SingApp.onResize(onResize);
         onResize();
 
 
@@ -262,6 +262,6 @@ $(function(){
     }
 
     pjaxPageLoad();
-    LetItApp.onPageLoad(pjaxPageLoad);
+    SingApp.onPageLoad(pjaxPageLoad);
 
 });

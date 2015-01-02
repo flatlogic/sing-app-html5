@@ -24,12 +24,12 @@ $(function(){
     /**
      * Main app class that handles page switching, async script loading, resize & pageLoad callbacks.
      * Events:
-     *   letit-app:loaded - fires after pjax request is made and ALL scripts are trully loaded
-     *   letit-app:content-resize - fires when .content changes its size (e.g. switching between static & collapsing
+     *   sing-app:loaded - fires after pjax request is made and ALL scripts are trully loaded
+     *   sing-app:content-resize - fires when .content changes its size (e.g. switching between static & collapsing
      *     navigation states)
      * @constructor
      */
-    var LetItAppView = function(){
+    var SingAppView = function(){
 
         this.pjaxEnabled = window.PJAX_ENABLED;
         this.debug = window.DEBUG;
@@ -39,7 +39,7 @@ $(function(){
         this.$loaderWrap = $('.loader-wrap');
         this.$navigationStateToggle = $('#nav-state-toggle');
         this.$navigationCollapseToggle = $('#nav-collapse-toggle');
-        this.settings = window.LetItSettings;
+        this.settings = window.SingSettings;
         this.pageLoadCallbacks = {};
         this.resizeCallbacks = [];
         this.screenSizeCallbacks = {
@@ -64,7 +64,7 @@ $(function(){
         ('ontouchstart' in window) && this.$content.swipe({
             swipeLeft: $.proxy(this._contentSwipeLeft, this),
             swipeRight: $.proxy(this._contentSwipeRight, this),
-            threshold: LetIt.isScreen('xs') ? 100 : 200
+            threshold: Sing.isScreen('xs') ? 100 : 200
         });
 
         this.checkNavigationState();
@@ -84,9 +84,9 @@ $(function(){
             $(document).on('pjax:send', $.proxy(this.showLoader, this));
             $(document).on('pjax:success', $.proxy(this._loadScripts, this));
             //custom event which fires when all scripts are actually loaded
-            $(document).on('letit-app:loaded', $.proxy(this._loadingFinished, this));
-            $(document).on('letit-app:loaded', $.proxy(this._collapseNavIfSmallScreen, this));
-            $(document).on('letit-app:loaded', $.proxy(this.hideLoader, this));
+            $(document).on('sing-app:loaded', $.proxy(this._loadingFinished, this));
+            $(document).on('sing-app:loaded', $.proxy(this._collapseNavIfSmallScreen, this));
+            $(document).on('sing-app:loaded', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
         }
 
@@ -124,11 +124,11 @@ $(function(){
      * Initiates an array of throttle onResize callbacks.
      * @private
      */
-    LetItAppView.prototype._initOnResizeCallbacks = function(){
+    SingAppView.prototype._initOnResizeCallbacks = function(){
         var resizeTimeout,
             view = this;
 
-        $(window).on('resize letit-app:content-resize', function() {
+        $(window).on('resize sing-app:content-resize', function() {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(function(){
                 view._runPageCallbacks(view.pageResizeCallbacks);
@@ -143,15 +143,15 @@ $(function(){
      * Initiates an array of throttle onScreenSize callbacks.
      * @private
      */
-    LetItAppView.prototype._initOnScreenSizeCallbacks = function(){
+    SingAppView.prototype._initOnScreenSizeCallbacks = function(){
         var resizeTimeout,
             view = this,
-            prevSize = LetIt.getScreenSize();
+            prevSize = Sing.getScreenSize();
 
         $(window).resize(function() {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(function(){
-                var size = LetIt.getScreenSize();
+                var size = Sing.getScreenSize();
                 if (size != prevSize){ //run only if something changed
                     //run exit callbacks first
                     view.screenSizeCallbacks[prevSize]['exit'].forEach(function(fn){
@@ -168,21 +168,21 @@ $(function(){
         });
     };
 
-    LetItAppView.prototype._resetResizeCallbacks = function(){
+    SingAppView.prototype._resetResizeCallbacks = function(){
         this.pageResizeCallbacks = {};
     };
 
     /**
      * Collapses navigation if nav-static local storage option is set to false
      */
-    LetItAppView.prototype.checkNavigationState = function(){
+    SingAppView.prototype.checkNavigationState = function(){
         if (this.isNavigationStatic()){
             this.staticNavigationState();
-            if (LetIt.isScreen('sm') || LetIt.isScreen('xs')){
+            if (Sing.isScreen('sm') || Sing.isScreen('xs')){
                 this.collapseNavigation();
             }
         } else {
-            if (LetIt.isScreen('md') || LetIt.isScreen('lg')){
+            if (Sing.isScreen('md') || Sing.isScreen('lg')){
                 var view = this;
                 setTimeout(function(){
                     view.collapseNavigation();
@@ -196,7 +196,7 @@ $(function(){
     /**
      * Expands or collapses navigation. Valid only for collapsing navigation state
      */
-    LetItAppView.prototype.toggleNavigationCollapseState = function(){
+    SingAppView.prototype.toggleNavigationCollapseState = function(){
         if ($('body').is('.nav-collapsed')){
             this.expandNavigation();
         } else {
@@ -204,38 +204,38 @@ $(function(){
         }
     };
 
-    LetItAppView.prototype.collapseNavigation = function(){
+    SingAppView.prototype.collapseNavigation = function(){
         //this method only makes sense for non-static navigation state
-        if (this.isNavigationStatic() && (LetIt.isScreen('md') || LetIt.isScreen('lg'))) return;
+        if (this.isNavigationStatic() && (Sing.isScreen('md') || Sing.isScreen('lg'))) return;
 
         $('body').addClass('nav-collapsed');
         this.$sidebar.find('.collapse.in').collapse('hide')
             .siblings('[data-toggle=collapse]').addClass('collapsed');
     };
 
-    LetItAppView.prototype.expandNavigation = function(){
+    SingAppView.prototype.expandNavigation = function(){
         //this method only makes sense for non-static navigation state
-        if (this.isNavigationStatic() && (LetIt.isScreen('md') || LetIt.isScreen('lg'))) return;
+        if (this.isNavigationStatic() && (Sing.isScreen('md') || Sing.isScreen('lg'))) return;
 
         $('body').removeClass('nav-collapsed');
         this.$sidebar.find('.active .active').closest('.collapse').collapse('show')
             .siblings('[data-toggle=collapse]').removeClass('collapsed');
     };
 
-    LetItAppView.prototype._sidebarMouseEnter = function(){
-        if (LetIt.isScreen('md') || LetIt.isScreen('lg')){
+    SingAppView.prototype._sidebarMouseEnter = function(){
+        if (Sing.isScreen('md') || Sing.isScreen('lg')){
             this.expandNavigation();
         }
     };
 
-    LetItAppView.prototype._sidebarMouseLeave = function(){
-        if (LetIt.isScreen('md') || LetIt.isScreen('lg')){
+    SingAppView.prototype._sidebarMouseLeave = function(){
+        if (Sing.isScreen('md') || Sing.isScreen('lg')){
             this.collapseNavigation();
         }
     };
 
-    LetItAppView.prototype._collapseNavIfSmallScreen = function(){
-        if (LetIt.isScreen('xs') || LetIt.isScreen('sm')){
+    SingAppView.prototype._collapseNavIfSmallScreen = function(){
+        if (Sing.isScreen('xs') || Sing.isScreen('sm')){
             this.collapseNavigation();
         }
     };
@@ -245,13 +245,13 @@ $(function(){
      * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
      * Static - stays always open.
      */
-    LetItAppView.prototype.toggleNavigationState = function(){
+    SingAppView.prototype.toggleNavigationState = function(){
         if (this.isNavigationStatic()){
             this.collapsingNavigationState();
         } else {
             this.staticNavigationState();
         }
-        $(window).trigger('letit-app:content-resize');
+        $(window).trigger('sing-app:content-resize');
     };
 
     /**
@@ -259,7 +259,7 @@ $(function(){
      * Collapsing navigation state - navigation automatically collapse when mouse leaves it and expand when enters.
      * Static navigation state - navigation stays always open.
      */
-    LetItAppView.prototype.staticNavigationState = function(){
+    SingAppView.prototype.staticNavigationState = function(){
         this.settings.set('nav-static', true).save();
         $('body').addClass('nav-static');
     };
@@ -269,13 +269,13 @@ $(function(){
      * Collapsing navigation state - navigation automatically collapse when mouse leaves it and expand when enters.
      * Static navigation state - navigation stays always open.
      */
-    LetItAppView.prototype.collapsingNavigationState = function(){
+    SingAppView.prototype.collapsingNavigationState = function(){
         this.settings.set('nav-static', false).save();
         $('body').removeClass('nav-static');
         this.collapseNavigation();
     };
 
-    LetItAppView.prototype.isNavigationStatic = function(){
+    SingAppView.prototype.isNavigationStatic = function(){
         return this.settings.get('nav-static') === true;
     };
 
@@ -287,7 +287,7 @@ $(function(){
      * @param options
      * @private
      */
-    LetItAppView.prototype._changeActiveNavigationItem = function(event, xhr, options){
+    SingAppView.prototype._changeActiveNavigationItem = function(event, xhr, options){
         var $newActiveLink = this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').filter(function(){
             return this.href === options.url;
         });
@@ -306,9 +306,9 @@ $(function(){
      * Checks whether screen is sm or md and closes navigation if opened
      * @private
      */
-    LetItAppView.prototype._contentSwipeLeft = function(){
+    SingAppView.prototype._contentSwipeLeft = function(){
         //this method only makes sense for small screens + ipad
-        if (LetIt.isScreen('lg')) return;
+        if (Sing.isScreen('lg')) return;
 
         if (!$('body').is('.nav-collapsed')){
             this.collapseNavigation();
@@ -319,12 +319,12 @@ $(function(){
      * Checks whether screen is sm or md and opens navigation if closed
      * @private
      */
-    LetItAppView.prototype._contentSwipeRight = function(){
+    SingAppView.prototype._contentSwipeRight = function(){
         //this method only makes sense for small screens + ipad
-        if (LetIt.isScreen('lg')) return;
+        if (Sing.isScreen('lg')) return;
 
         // fixme. this check is bad. I know. breaks loose coupling principle
-        // LetItApp should not know about some "strange" sidebar chat.
+        // SingApp should not know about some "strange" sidebar chat.
         // check line 726 for more info
         if ($('body').is('.chat-sidebar-closing')) return;
 
@@ -333,7 +333,7 @@ $(function(){
         }
     };
 
-    LetItAppView.prototype.showLoader = function(){
+    SingAppView.prototype.showLoader = function(){
         var view = this;
         this.showLoaderTimeout = setTimeout(function(){
             view.$loaderWrap.removeClass('hide');
@@ -343,7 +343,7 @@ $(function(){
         }, 200);
     };
 
-    LetItAppView.prototype.hideLoader = function(){
+    SingAppView.prototype.hideLoader = function(){
         clearTimeout(this.showLoaderTimeout);
         this.$loaderWrap.addClass('hiding');
         var view = this;
@@ -360,7 +360,7 @@ $(function(){
      * @param fn A function to execute
      * @param allPages whether to keep callback after leaving page
      */
-    LetItAppView.prototype.onResize = function(fn, /**Boolean=*/ allPages){
+    SingAppView.prototype.onResize = function(fn, /**Boolean=*/ allPages){
         allPages = typeof allPages !== 'undefined' ? allPages : false;
         if (allPages){
             this.resizeCallbacks.push(fn);
@@ -373,7 +373,7 @@ $(function(){
      * Specify a function to execute when a page was reloaded with pjax.
      * @param fn A function to execute
      */
-    LetItAppView.prototype.onPageLoad = function(fn){
+    SingAppView.prototype.onPageLoad = function(fn){
         this._addPageCallback(this.pageLoadCallbacks, fn);
     };
 
@@ -384,7 +384,7 @@ $(function(){
      * @param fn callback(newScreenSize, prevScreenSize)
      * @param onEnter whether to run a callback when screen enters `size` or exits. true by default @optional
      */
-    LetItAppView.prototype.onScreenSize = function(size, fn, /**Boolean=*/ onEnter){
+    SingAppView.prototype.onScreenSize = function(size, fn, /**Boolean=*/ onEnter){
         onEnter = typeof onEnter !== 'undefined' ? onEnter : true;
         this.screenSizeCallbacks[size][onEnter ? 'enter' : 'exit'].push(fn)
     };
@@ -392,7 +392,7 @@ $(function(){
     /**
      * Runs page loaded callbacks
      */
-    LetItAppView.prototype.pageLoaded = function(){
+    SingAppView.prototype.pageLoaded = function(){
         this._runPageCallbacks(this.pageLoadCallbacks);
     };
 
@@ -402,7 +402,7 @@ $(function(){
      * @param fn callback to execute
      * @private
      */
-    LetItAppView.prototype._addPageCallback = function(callbacks, fn){
+    SingAppView.prototype._addPageCallback = function(callbacks, fn){
         var pageName = this.extractPageName(location.href);
         if (!callbacks[pageName]){
             callbacks[pageName] = [];
@@ -415,7 +415,7 @@ $(function(){
      * @param callbacks
      * @private
      */
-    LetItAppView.prototype._runPageCallbacks = function(callbacks){
+    SingAppView.prototype._runPageCallbacks = function(callbacks){
         var pageName = this.extractPageName(location.href);
         if (callbacks[pageName]){
             callbacks[pageName].forEach(function(fn){
@@ -435,7 +435,7 @@ $(function(){
      * @param options
      * @private
      */
-    LetItAppView.prototype._loadScripts = function(event, data, status, xhr, options){
+    SingAppView.prototype._loadScripts = function(event, data, status, xhr, options){
         var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
             $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
             $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
@@ -486,18 +486,18 @@ $(function(){
 
         var view = this;
         $previous.load(function(){
-            $(document).trigger('letit-app:loaded');
+            $(document).trigger('sing-app:loaded');
             view.log('scripts loaded.');
         })
     };
 
-    LetItAppView.prototype.extractPageName = function(url){
+    SingAppView.prototype.extractPageName = function(url){
         //credit: http://stackoverflow.com/a/8497143/1298418
         var pageName = url.split('#')[0].substring(url.lastIndexOf("/") + 1).split('?')[0];
         return pageName === '' ? 'index.html' : pageName;
     };
 
-    LetItAppView.prototype._checkLoading = function(e){
+    SingAppView.prototype._checkLoading = function(e){
         var oldLoading = this.loading;
         this.loading = true;
         if (oldLoading){
@@ -510,20 +510,20 @@ $(function(){
         return !oldLoading;
     };
 
-    LetItAppView.prototype._loadingFinished = function(){
+    SingAppView.prototype._loadingFinished = function(){
         this.loading = false;
     };
 
-    LetItAppView.prototype._logErrors = function(){
+    SingAppView.prototype._logErrors = function(){
         var errors = JSON.parse(localStorage.getItem('lb-errors')) || {};
         errors[new Date().getTime()] = arguments;
-        localStorage.setItem('letit-errors', JSON.stringify(errors));
+        localStorage.setItem('sing-errors', JSON.stringify(errors));
         this.debug && alert('check errors');
     };
 
-    LetItAppView.prototype.log = function(message){
+    SingAppView.prototype.log = function(message){
         if (this.debug){
-            console.log("LetItApp: "
+            console.log("SingApp: "
                     + message
                     + " - " + arguments.callee.caller.toString().slice(0, 30).split('\n')[0]
                     + " - " + this.extractPageName(location.href)
@@ -532,9 +532,9 @@ $(function(){
     };
 
 
-    window.LetItApp = new LetItAppView();
+    window.SingApp = new SingAppView();
 
-//    LetItApp.expandNavigation();
+//    SingApp.expandNavigation();
 
     initAppPlugins();
     initAppFunctions();
@@ -619,7 +619,7 @@ function initAppPlugins(){
 }
 
 /**
- * LetIt required js functions
+ * Sing required js functions
  */
 function initAppFunctions(){
     !function($){
@@ -645,10 +645,10 @@ function initAppFunctions(){
         function moveBackNotificationsDropdown(){
             $('#notifications-dropdown-toggle').after($('#notifications-dropdown-menu').detach());
         }
-        LetItApp.onScreenSize('xs', moveNotificationsDropdown);
-        LetItApp.onScreenSize('xs', moveBackNotificationsDropdown, false);
+        SingApp.onScreenSize('xs', moveNotificationsDropdown);
+        SingApp.onScreenSize('xs', moveBackNotificationsDropdown, false);
 
-        LetIt.isScreen('xs') && moveNotificationsDropdown();
+        Sing.isScreen('xs') && moveNotificationsDropdown();
 
         /**
          * Set Sidebar zindex higher than .content and .page-controls so the notifications dropdown is seen
@@ -677,7 +677,7 @@ function initAppFunctions(){
             });
         }
 
-        LetItApp.onResize(initSidebarScroll, true);
+        SingApp.onResize(initSidebarScroll, true);
         initSidebarScroll();
 
         /*
@@ -703,7 +703,7 @@ function initAppFunctions(){
         var $chatContainer = $('body').addClass('chat-sidebar-container');
         $(document).on('click', '[data-toggle=chat-sidebar]', function(){
             $chatContainer.toggleClass('chat-sidebar-opened');
-            $(this).find('.chat-notification-letit').remove();
+            $(this).find('.chat-notification-sing').remove();
         });
 
         /*
@@ -725,7 +725,7 @@ function initAppFunctions(){
                 $chatContainer.removeClass('chat-sidebar-opened')
                     // as there is no way to cancel swipeLeft handlers attached to
                     // .content making this hack with temporary class which will be
-                    // used by LetItApp to check whether it is permitted to open navigation
+                    // used by SingApp to check whether it is permitted to open navigation
                     // on swipeRight
                     .addClass('chat-sidebar-closing').one($.support.transition.end, function () {
                         $('body').removeClass('chat-sidebar-closing');
@@ -803,7 +803,7 @@ function initAppFunctions(){
             });
         }
 
-        LetItApp.onResize(initChatSidebarScroll, true);
+        SingApp.onResize(initChatSidebarScroll, true);
         initChatSidebarScroll();
     }(jQuery);
 }
@@ -811,7 +811,7 @@ function initAppFunctions(){
 
 
 /**
- * LetIt browser fixes. It's always something broken somewhere
+ * Sing browser fixes. It's always something broken somewhere
  */
 function initAppFixes(){
     var isWebkit = 'WebkitAppearance' in document.documentElement.style;
@@ -820,7 +820,7 @@ function initAppFixes(){
 }
 
 /**
- * Demo-only functions. Does not affect the core LetIt functionality.
+ * Demo-only functions. Does not affect the core Sing functionality.
  * Should be removed when used in real app.
  */
 function initDemoFunctions(){
@@ -853,7 +853,7 @@ function initDemoFunctions(){
                             });
                     }, 4000);
                 });
-            $chatNotification.siblings('[data-toggle="chat-sidebar"]').append('<i class="chat-notification-letit animated bounceIn"></i>')
+            $chatNotification.siblings('[data-toggle="chat-sidebar"]').append('<i class="chat-notification-sing animated bounceIn"></i>')
         }, 4000)
 
     }(jQuery);

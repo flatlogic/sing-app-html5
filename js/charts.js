@@ -63,7 +63,7 @@ $(function(){
                     font :{
                         lineHeight: 13,
                         weight: "bold",
-                        color: LetIt.colors['gray-semi-light']
+                        color: Sing.colors['gray-semi-light']
                     }
                 },
                 yaxis: {
@@ -72,7 +72,7 @@ $(function(){
                     font :{
                         lineHeight: 13,
                         weight: "bold",
-                        color: LetIt.colors['gray-semi-light']
+                        color: Sing.colors['gray-semi-light']
                     }
                 },
                 grid: {
@@ -108,7 +108,7 @@ $(function(){
 
         _initChart();
 
-        LetItApp.onResize(_initChart);
+        SingApp.onResize(_initChart);
     }
 
     function initRickshaw(){
@@ -149,7 +149,7 @@ $(function(){
             $chart.find('svg').css({height: '130px'});
         }
 
-        LetItApp.onResize(onResize);
+        SingApp.onResize(onResize);
         onResize();
 
 
@@ -194,7 +194,7 @@ $(function(){
 
         _initChart();
 
-        LetItApp.onResize(_initChart);
+        SingApp.onResize(_initChart);
     }
 
     function initSparkline2(){
@@ -278,7 +278,7 @@ $(function(){
             ;
 
 
-            LetItApp.onResize(chart.update);
+            SingApp.onResize(chart.update);
 
             return chart;
         });
@@ -314,7 +314,7 @@ $(function(){
             ;
 
 
-            LetItApp.onResize(chart.update);
+            SingApp.onResize(chart.update);
 
             return chart;
         });
@@ -477,7 +477,7 @@ $(function(){
 
         _initChart();
 
-        LetItApp.onResize(_initChart);
+        SingApp.onResize(_initChart);
 
 
     }
@@ -501,5 +501,5 @@ $(function(){
         initFlotBar();
     }
     pageLoad();
-    LetItApp.onPageLoad(pageLoad);
+    SingApp.onPageLoad(pageLoad);
 });

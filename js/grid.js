@@ -98,5 +98,5 @@ $(function(){
         $('.widget-controls > a').tooltip({placement: 'bottom'});
     }
     pageLoad();
-    LetItApp.onPageLoad(pageLoad);
+    SingApp.onPageLoad(pageLoad);
 });

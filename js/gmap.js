@@ -68,5 +68,5 @@ $(function(){
     }
 
     pageLoad();
-    LetItApp.onPageLoad(pageLoad);
+    SingApp.onPageLoad(pageLoad);
 });
