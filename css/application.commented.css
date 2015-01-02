@@ -27406,7 +27406,7 @@ html body .black.accentBorderTop {
     }
 }
 /**
- * override custom libs styles. This files is not required for core letit functionality and may be removed
+ * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
 /**
  * Switchery.
@@ -30340,7 +30340,7 @@ a {
 }
 
 /* line 831, ../sass/_base.scss */
-.chat-notification-letit {
+.chat-notification-sing {
     position: absolute;
     top: 15px;
     left: 11px;
