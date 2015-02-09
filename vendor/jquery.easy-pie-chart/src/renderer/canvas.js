@@ -7,6 +7,8 @@ var CanvasRenderer = function(el, options) {
 	var cachedBackground;
 	var canvas = document.createElement('canvas');
 
+	el.appendChild(canvas);
+
 	if (typeof(G_vmlCanvasManager) !== 'undefined') {
 		G_vmlCanvasManager.initElement(canvas);
 	}
@@ -14,8 +16,6 @@ var CanvasRenderer = function(el, options) {
 	var ctx = canvas.getContext('2d');
 
 	canvas.width = canvas.height = options.size;
-
-	el.appendChild(canvas);
 
 	// canvas on retina devices
 	var scaleBy = 1;
@@ -67,18 +67,17 @@ var CanvasRenderer = function(el, options) {
 	var drawScale = function() {
 		var offset;
 		var length;
-		var i = 24;
 
-		ctx.lineWidth = 1
+		ctx.lineWidth = 1;
 		ctx.fillStyle = options.scaleColor;
 
 		ctx.save();
 		for (var i = 24; i > 0; --i) {
-			if (i%6 === 0) {
+			if (i % 6 === 0) {
 				length = options.scaleLength;
 				offset = 0;
 			} else {
-				length = options.scaleLength * .6;
+				length = options.scaleLength * 0.6;
 				offset = options.scaleLength - length;
 			}
 			ctx.fillRect(-options.size/2 + offset, 0, length, 1);
@@ -104,9 +103,23 @@ var CanvasRenderer = function(el, options) {
 	 * Draw the background of the plugin including the scale and the track
 	 */
 	var drawBackground = function() {
-		options.scaleColor && drawScale();
-		options.trackColor && drawCircle(options.trackColor, options.lineWidth, 1);
+		if(options.scaleColor) drawScale();
+		if(options.trackColor) drawCircle(options.trackColor, options.trackWidth || options.lineWidth, 1);
 	};
+
+  /**
+    * Canvas accessor
+   */
+  this.getCanvas = function() {
+    return canvas;
+  };
+
+  /**
+    * Canvas 2D context 'ctx' accessor
+   */
+  this.getCtx = function() {
+    return ctx;
+  };
 
 	/**
 	 * Clear the complete canvas
@@ -161,11 +174,11 @@ var CanvasRenderer = function(el, options) {
 		var startTime = Date.now();
 		options.onStart(from, to);
 		var animation = function() {
-			var process = Math.min(Date.now() - startTime, options.animate);
-			var currentValue = options.easing(this, process, from, to - from, options.animate);
+			var process = Math.min(Date.now() - startTime, options.animate.duration);
+			var currentValue = options.easing(this, process, from, to - from, options.animate.duration);
 			this.draw(currentValue);
 			options.onStep(from, to, currentValue);
-			if (process >= options.animate) {
+			if (process >= options.animate.duration) {
 				options.onStop(from, to);
 			} else {
 				reqAnimationFrame(animation);

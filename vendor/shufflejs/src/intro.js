@@ -1,8 +1,10 @@
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
     define(['jquery', 'modernizr'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(window.jQuery, window.Modernizr);
   } else {
-    factory(window.$, window.Modernizr);
+    window.Shuffle = factory(window.jQuery, window.Modernizr);
   }
 })(function($, Modernizr, undefined) {
 

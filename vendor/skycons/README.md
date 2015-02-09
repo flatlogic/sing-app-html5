@@ -36,4 +36,15 @@ lightweight, so they shouldn't rain on your parade:
 Skycons were designed for [Forecast](http://forecast.io/) by those wacky folks
 at The Dark Sky Company, and were heavily inspired by Adam Whitcroft's
 excellent [Climacons](http://adamwhitcroft.com/climacons/). The source code has
-been released into the public domain, so please do with it as you see fit! ♡
+been [released into the public domain][cc0], so please do with it as you see
+fit! ♡
+
+[cc0]: http://creativecommons.org/publicdomain/zero/1.0/
+
+Variants
+--------
+
+Several kind folks have made variants of Skycons:
+
+*   [Color Skycons](https://github.com/maxdow/skycons) by Maxime Warner
+*   [Skycons for Android](https://github.com/torryharris/Skycons) by Torry Harris

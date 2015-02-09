@@ -1,13 +1,12 @@
 {
   "name": "jquery.nestable",
   "homepage": "https://github.com/dbushell/Nestable",
-  "_release": "3cf057789d",
+  "_release": "4f93032cfa",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "3cf057789ddd3593c5a6db79d3eedab04ad905a4"
+    "type": "commit",
+    "commit": "4f93032cfafe2002f24ed6bd7dc1510931498503"
   },
   "_source": "git://github.com/dbushell/Nestable.git",
-  "_target": "*",
+  "_target": "4f93032cfafe2002f24ed6bd7dc1510931498503",
   "_originalSource": "git://github.com/dbushell/Nestable.git"
 }

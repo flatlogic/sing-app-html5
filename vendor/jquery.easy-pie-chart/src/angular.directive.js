@@ -1,51 +1,48 @@
-// Angular directives for easyPieChart
-if ((typeof(angular) === 'object') && (typeof(angular.version) === 'object')) {
-	angular.module('easypiechart',[])
-	.directive('easypiechart', ['$timeout', function($timeout) {
-		return {
-			restrict: 'A',
-			require: '?ngModel',
-			scope: {
-				percent: '=',
-				options: '='
-			},
-			link: function (scope, element, attrs) {
-				var options = {
-					barColor: '#ef1e25',
-					trackColor: '#f9f9f9',
-					scaleColor: '#dfe0e0',
-					scaleLength: 5,
-					lineCap: 'round',
-					lineWidth: 3,
-					size: 110,
-					rotate: 0,
-					animate: 1000
-				};
-				angular.extend(options, scope.options);
+(function (angular) {
 
-				var pieChart = new EasyPieChart(element[0], options);
+	'use strict';
 
-				// initial pie rendering
-				if (scope.percent) {
-					pieChart.update(scope.percent);
+	return angular.module('easypiechart', [])
+
+		.directive('easypiechart', [function() {
+			return {
+				restrict: 'A',
+				require: '?ngModel',
+				scope: {
+					percent: '=',
+					options: '='
+				},
+				link: function (scope, element, attrs) {
+
+					scope.percent = scope.percent || 0;
+
+					/**
+					 * default easy pie chart options
+					 * @type {Object}
+					 */
+					var options = {
+						barColor: '#ef1e25',
+						trackColor: '#f9f9f9',
+						scaleColor: '#dfe0e0',
+						scaleLength: 5,
+						lineCap: 'round',
+						lineWidth: 3,
+						size: 110,
+						rotate: 0,
+						animate: {
+							duration: 1000,
+							enabled: true
+						}
+					};
+					scope.options = angular.extend(options, scope.options);
+
+					var pieChart = new EasyPieChart(element[0], options);
+
+					scope.$watch('percent', function(newVal, oldVal) {
+						pieChart.update(newVal);
+					});
 				}
+			};
+		}]);
 
-				// on change of value
-				var timer = null;
-				scope.$watch('percent', function(oldVal, newVal) {
-					pieChart.update(newVal);
-
-					// this is needed or the last value won't be updated
-					if(timer) {
-						$timeout.cancel(timer);
-					}
-					timer = $timeout(function() {
-						pieChart.update(scope.percent);
-					}, 1000 / 60);
-				});
-			}
-		};
-	}]);
-} else{
-	console.log('Angular not detected.');
-}
+})(angular);

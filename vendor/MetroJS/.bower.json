@@ -1,14 +1,12 @@
 {
   "name": "MetroJS",
   "homepage": "https://github.com/drewgreenwell/MetroJS",
-  "version": "0.9.74",
-  "_release": "0.9.74",
+  "_release": "b70806b32e",
   "_resolution": {
-    "type": "version",
-    "tag": "0.9.74",
+    "type": "commit",
     "commit": "b70806b32e070073c17677402e64ed909e24a6ef"
   },
   "_source": "https://github.com/drewgreenwell/MetroJS.git",
-  "_target": "*",
+  "_target": "b70806b32e070073c17677402e64ed909e24a6ef",
   "_originalSource": "https://github.com/drewgreenwell/MetroJS.git"
 }

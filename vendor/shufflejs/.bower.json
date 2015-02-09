@@ -1,6 +1,6 @@
 {
   "name": "Shuffle",
-  "version": "2.1.1",
+  "version": "3.0.2",
   "homepage": "https://github.com/Vestride/Shuffle",
   "authors": [
     "Glen Cheney <cheney.glen@gmail.com>"
@@ -46,13 +46,17 @@
     "jquery": ">=1.9.0",
     "modernizr": "^2.6.2"
   },
-  "_release": "2.1.1",
+  "devDependencies": {
+    "jasmine-jquery": "~2.0.5"
+  },
+  "_release": "3.0.2",
   "_resolution": {
     "type": "version",
-    "tag": "v2.1.1",
-    "commit": "9cdb26740d845b8904ccecfdd63447669abe42a1"
+    "tag": "v3.0.2",
+    "commit": "5507ed5d18da05e9f1a0be9dfc1e950bc6d371e8"
   },
   "_source": "git://github.com/Vestride/Shuffle.git",
-  "_target": "*",
-  "_originalSource": "shufflejs"
+  "_target": "~3.0.2",
+  "_originalSource": "shufflejs",
+  "_direct": true
 }

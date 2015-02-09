@@ -6,9 +6,13 @@ var EasyPieChart = function(el, opts) {
 		scaleLength: 5,
 		lineCap: 'round',
 		lineWidth: 3,
+		trackWidth: undefined,
 		size: 110,
 		rotate: 0,
-		animate: 1000,
+		animate: {
+			duration: 1000,
+			enabled: true
+		},
 		easing: function (x, t, b, c, d) { // more can be found here: http://gsgd.co.uk/sandbox/jquery/easing/
 			t = t / (d/2);
 			if (t < 1) {
@@ -63,6 +67,21 @@ var EasyPieChart = function(el, opts) {
 			options.easing = defaultOptions.easing;
 		}
 
+		// process earlier animate option to avoid bc breaks
+		if (typeof(options.animate) === 'number') {
+			options.animate = {
+				duration: options.animate,
+				enabled: true
+			};
+		}
+
+		if (typeof(options.animate) === 'boolean' && !options.animate) {
+			options.animate = {
+				duration: 1000,
+				enabled: options.animate
+			};
+		}
+
 		// create renderer
 		this.renderer = new options.renderer(el, options);
 
@@ -84,7 +103,7 @@ var EasyPieChart = function(el, opts) {
 	 */
 	this.update = function(newValue) {
 		newValue = parseFloat(newValue);
-		if (options.animate) {
+		if (options.animate.enabled) {
 			this.renderer.animate(currentValue, newValue);
 		} else {
 			this.renderer.draw(newValue);
@@ -92,6 +111,24 @@ var EasyPieChart = function(el, opts) {
 		currentValue = newValue;
 		return this;
 	}.bind(this);
+
+	/**
+	 * Disable animation
+	 * @return {object} Instance of the plugin for method chaining
+	 */
+	this.disableAnimation = function() {
+		options.animate.enabled = false;
+		return this;
+	};
+
+	/**
+	 * Enable animation
+	 * @return {object} Instance of the plugin for method chaining
+	 */
+	this.enableAnimation = function() {
+		options.animate.enabled = true;
+		return this;
+	};
 
 	init();
 };
