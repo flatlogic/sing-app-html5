@@ -32,7 +32,7 @@ define('parsley/ui', [
       // Then store current validation result for next reflow
       fieldInstance._ui.lastValidationResult = fieldInstance.validationResult;
 
-      // Field have been validated at least once if here. Useful for binded key events..
+      // Field have been validated at least once if here. Useful for binded key events...
       fieldInstance._ui.validatedOnce = true;
 
       // Handle valid / invalid / none field class
@@ -81,8 +81,10 @@ define('parsley/ui', [
         if ((diff.added.length || diff.kept.length)) {
           if (0 === fieldInstance._ui.$errorsWrapper.find('.parsley-custom-error-message').length)
             fieldInstance._ui.$errorsWrapper
-              .append($(fieldInstance.options.errorTemplate)
-              .addClass('parsley-custom-error-message'));
+              .append(
+                $(fieldInstance.options.errorTemplate)
+                .addClass('parsley-custom-error-message')
+              );
 
           return fieldInstance._ui.$errorsWrapper
             .addClass('filled')
@@ -108,13 +110,15 @@ define('parsley/ui', [
     },
 
     // TODO: strange API here, intuitive for manual usage with addError(pslyInstance, 'foo', 'bar')
-    // but a little bit complex for above internal usage, with forced undefined parametter..
+    // but a little bit complex for above internal usage, with forced undefined parameter...
     addError: function (fieldInstance, name, message, assert, doNotUpdateClass) {
       fieldInstance._ui.$errorsWrapper
         .addClass('filled')
-        .append($(fieldInstance.options.errorTemplate)
-        .addClass('parsley-' + name)
-        .html(message || this._getErrorMessage(fieldInstance, assert)));
+        .append(
+          $(fieldInstance.options.errorTemplate)
+          .addClass('parsley-' + name)
+          .html(message || this._getErrorMessage(fieldInstance, assert))
+        );
 
       if (true !== doNotUpdateClass)
         this._errorClass(fieldInstance);
@@ -240,8 +244,11 @@ define('parsley/ui', [
       // Store it in fieldInstance for later
       fieldInstance._ui = _ui;
 
-      /** Mess with DOM now **/
-      this._insertErrorWrapper(fieldInstance);
+      // Stops excluded inputs from getting errorContainer added
+      if( !fieldInstance.$element.is(fieldInstance.options.excluded) ) {
+        /** Mess with DOM now **/
+        this._insertErrorWrapper(fieldInstance);
+      }
 
       // Bind triggers first time
       this.actualizeTriggers(fieldInstance);
@@ -260,7 +267,7 @@ define('parsley/ui', [
       if ('undefined' !== typeof $handler && $handler.length)
         return $handler;
 
-      // Otherwise, if simple element (input, texatrea, select..) it will perfectly host the classes
+      // Otherwise, if simple element (input, texatrea, select...) it will perfectly host the classes
       if ('undefined' === typeof fieldInstance.options.multiple || fieldInstance.$element.is('select'))
         return fieldInstance.$element;
 
@@ -271,14 +278,13 @@ define('parsley/ui', [
     _insertErrorWrapper: function (fieldInstance) {
       var $errorsContainer;
 
-      if ('string' === typeof fieldInstance.options.errorsContainer )
-        if ($(fieldInstance.options.errorsContainer + '').length)
+      if ('string' === typeof fieldInstance.options.errorsContainer) {
+        if ($(fieldInstance.options.errorsContainer).length)
           return $(fieldInstance.options.errorsContainer).append(fieldInstance._ui.$errorsWrapper);
         else if (window.console && window.console.warn)
           window.console.warn('The errors container `' + fieldInstance.options.errorsContainer + '` does not exist in DOM');
-
-
-      if ('function' === typeof fieldInstance.options.errorsContainer)
+      }
+      else if ('function' === typeof fieldInstance.options.errorsContainer)
         $errorsContainer = fieldInstance.options.errorsContainer(fieldInstance);
 
       if ('undefined' !== typeof $errorsContainer && $errorsContainer.length)
@@ -288,15 +294,12 @@ define('parsley/ui', [
     },
 
     actualizeTriggers: function (fieldInstance) {
-      var that = this;
+      var $toBind = fieldInstance.$element;
+      if (fieldInstance.options.multiple)
+        $toBind = $('[' + fieldInstance.options.namespace + 'multiple="' + fieldInstance.options.multiple + '"]')
 
       // Remove Parsley events already binded on this field
-      if (fieldInstance.options.multiple)
-        $('[' + fieldInstance.options.namespace + 'multiple="' + fieldInstance.options.multiple + '"]').each(function () {
-          $(this).off('.Parsley');
-        });
-      else
-        fieldInstance.$element.off('.Parsley');
+      $toBind.off('.Parsley');
 
       // If no trigger is set, all good
       if (false === fieldInstance.options.trigger)
@@ -308,24 +311,14 @@ define('parsley/ui', [
         return;
 
       // Bind fieldInstance.eventValidate if exists (for parsley.ajax for example), ParsleyUI.eventValidate otherwise
-      if (fieldInstance.options.multiple)
-        $('[' + fieldInstance.options.namespace + 'multiple="' + fieldInstance.options.multiple + '"]').each(function () {
-          $(this).on(
-            triggers.split(' ').join('.Parsley ') + '.Parsley',
-            false,
-            $.proxy('function' === typeof fieldInstance.eventValidate ? fieldInstance.eventValidate : that.eventValidate, fieldInstance));
-        });
-      else
-        fieldInstance.$element
-          .on(
-            triggers.split(' ').join('.Parsley ') + '.Parsley',
-            false,
-            $.proxy('function' === typeof fieldInstance.eventValidate ? fieldInstance.eventValidate : this.eventValidate, fieldInstance));
+      $toBind.on(
+        triggers.split(' ').join('.Parsley ') + '.Parsley',
+        $.proxy('function' === typeof fieldInstance.eventValidate ? fieldInstance.eventValidate : this.eventValidate, fieldInstance));
     },
 
     // Called through $.proxy with fieldInstance. `this` context is ParsleyField
     eventValidate: function(event) {
-      // For keyup, keypress, keydown.. events that could be a little bit obstrusive
+      // For keyup, keypress, keydown... events that could be a little bit obstrusive
       // do not validate if val length < min threshold on first validation. Once field have been validated once and info
       // about success or failure have been displayed, always validate with this trigger to reflect every yalidation change.
       if (new RegExp('key').test(event.type))
@@ -369,9 +362,10 @@ define('parsley/ui', [
         return;
 
       // Reset all errors' li
-      parsleyInstance._ui.$errorsWrapper.children().each(function () {
-        $(this).remove();
-      });
+      parsleyInstance._ui.$errorsWrapper
+        .removeClass('filled')
+        .children()
+        .remove();
 
       // Reset validation class
       this._resetClass(parsleyInstance);
@@ -388,7 +382,9 @@ define('parsley/ui', [
       if ('ParsleyForm' === parsleyInstance.__class__)
         return;
 
-      parsleyInstance._ui.$errorsWrapper.remove();
+      if ('undefined' !== typeof parsleyInstance._ui)
+        parsleyInstance._ui.$errorsWrapper.remove();
+
       delete parsleyInstance._ui;
     },
 
