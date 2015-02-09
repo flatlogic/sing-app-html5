@@ -1,6 +1,10 @@
 define('parsley/validator', [
   'validator'
 ], function (Validator) {
+
+  // This is needed for Browserify usage that requires Validator.js through module.exports
+  Validator = 'undefined' !== typeof Validator ? Validator : ('undefined' !== typeof module ? module.exports : null);
+
   var ParsleyValidator = function (validators, catalog) {
     this.__class__ = 'ParsleyValidator';
     this.Validator = Validator;
@@ -16,7 +20,7 @@ define('parsley/validator', [
       this.catalog = catalog;
 
       for (var name in validators)
-        this.addValidator(name, validators[name].fn, validators[name].priority);
+        this.addValidator(name, validators[name].fn, validators[name].priority, validators[name].requirementsTransformer);
 
       $.emit('parsley:validator:init');
     },
@@ -44,7 +48,7 @@ define('parsley/validator', [
 
     // Add a specific message for a given constraint in a given locale
     addMessage: function (locale, name, message) {
-      if (undefined === typeof this.catalog[locale])
+      if ('undefined' === typeof this.catalog[locale])
         this.catalog[locale] = {};
 
       this.catalog[locale][name.toLowerCase()] = message;
@@ -57,16 +61,19 @@ define('parsley/validator', [
     },
 
     // Add a new validator
-    addValidator: function (name, fn, priority) {
+    addValidator: function (name, fn, priority, requirementsTransformer) {
       this.validators[name.toLowerCase()] = function (requirements) {
-        return $.extend(new Validator.Assert().Callback(fn, requirements), { priority: priority });
+        return $.extend(new Validator.Assert().Callback(fn, requirements), {
+          priority: priority,
+          requirementsTransformer: requirementsTransformer
+        });
       };
 
       return this;
     },
 
-    updateValidator: function (name, fn, priority) {
-      return addValidator(name, fn, priority);
+    updateValidator: function (name, fn, priority, requirementsTransformer) {
+      return this.addValidator(name, fn, priority, requirementsTransformer);
     },
 
     removeValidator: function (name) {
@@ -116,6 +123,8 @@ define('parsley/validator', [
           case 'email':
             assert = new Validator.Assert().Email();
             break;
+          // range type just ensure we have a number here
+          case 'range':
           case 'number':
             assert = new Validator.Assert().Regexp('^-?(?:\\d+|\\d{1,3}(?:,\\d{3})+)?(?:\\.\\d+)?$');
             break;
@@ -129,7 +138,7 @@ define('parsley/validator', [
             assert = new Validator.Assert().Regexp('^\\w+$', 'i');
             break;
           case 'url':
-            assert = new Validator.Assert().Regexp('(https?:\\/\\/)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)', 'i');
+            assert = new Validator.Assert().Regexp('(https?:\\/\\/)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,24}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)', 'i');
             break;
           default:
             throw new Error('validator type `' + type + '` is not supported');
@@ -162,11 +171,11 @@ define('parsley/validator', [
       },
       maxlength: function (value) {
         return $.extend(new Validator.Assert().Length({ max: value }), {
-        priority: 30,
-        requirementsTransformer: function () {
+          priority: 30,
+          requirementsTransformer: function () {
             return 'string' === typeof value && !isNaN(value) ? parseInt(value, 10) : value;
           }
-      });
+        });
       },
       length: function (array) {
         return $.extend(new Validator.Assert().Length({ min: array[0], max: array[1] }), { priority: 32 });

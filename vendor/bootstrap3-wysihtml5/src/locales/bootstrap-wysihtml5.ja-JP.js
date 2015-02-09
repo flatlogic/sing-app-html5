@@ -17,6 +17,9 @@
             italic: "斜体",
             underline: "下線"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "点字リスト",
             ordered: "数字リスト",

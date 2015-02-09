@@ -1,4 +1,35 @@
 
+0.7.0 / 2014-12-09
+==================
+
+ * Respect `readonly` attribute on checkbox input
+ * Large and small size switches
+
+0.6.3 / 2014-11-02
+==================
+
+ * Update component version
+ * Added separate Jack color option
+ * Add the CSS file to bower.json
+ * Fix bug in Hongmi phone
+ * Fixing issue found in IE9+ with change event dispatch
+
+0.6.2 / 2014-08-22
+==================
+
+ * Prevent text selection on double click
+
+0.6.1 / 2014-07-11
+==================
+
+ * Fix switch click state when inside label
+
+0.6.0 / 2014-05-22
+==================
+
+  * Corresponding label with `for` attribute of the native input, to change switch state as well
+  * Do not copy input's `id` and `name` attributes to switch
+
 0.5.5 / 2014-05-14
 ==================
 

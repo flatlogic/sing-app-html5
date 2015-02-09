@@ -17,6 +17,9 @@
               italic: "Corsivo",
               underline: "Sottolineato"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
               unordered: "Lista non ordinata",
               ordered: "Lista ordinata",

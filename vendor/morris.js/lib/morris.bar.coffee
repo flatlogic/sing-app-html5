@@ -90,7 +90,7 @@ class Morris.Bar extends Morris.Grid
   # @private
   drawSeries: ->
     groupWidth = @width / @options.data.length
-    numBars = if @options.stacked? then 1 else @options.ykeys.length
+    numBars = if @options.stacked then 1 else @options.ykeys.length
     barWidth = (groupWidth * @options.barSizeRatio - @options.barGap * (numBars - 1)) / numBars
     barWidth = Math.min(barWidth, @options.barSize) if @options.barSize
     spaceLeft = groupWidth - barWidth * numBars - @options.barGap * (numBars - 1)
@@ -110,6 +110,9 @@ class Morris.Bar extends Morris.Grid
           left = @left + idx * groupWidth + leftPadding
           left += sidx * (barWidth + @options.barGap) unless @options.stacked
           size = bottom - top
+
+          if @options.verticalGridCondition and @options.verticalGridCondition(row.x)
+            @drawBar(@left + idx * groupWidth, @top, groupWidth, Math.abs(@top - @bottom), @options.verticalGridColor, @options.verticalGridOpacity, @options.barRadius)
 
           top -= lastTop if @options.stacked
           @drawBar(left, top, barWidth, size, @colorFor(row, sidx, 'bar'),

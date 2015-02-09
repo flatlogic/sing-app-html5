@@ -17,6 +17,9 @@
             italic: "Курсив",
             underline: "Подчёркнутый"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Маркированный список",
             ordered: "Нумерованный список",

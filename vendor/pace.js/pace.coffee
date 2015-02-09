@@ -1,24 +1,25 @@
 defaultOptions =
   # How long should it take for the bar to animate to a new
   # point after receiving it
-  catchupTime: 500
+  catchupTime: 100
 
   # How quickly should the bar be moving before it has any progress
   # info from a new source in %/ms
   initialRate: .03
 
   # What is the minimum amount of time the bar should be on the
-  # screen
-  minTime: 500
+  # screen.  Irrespective of this number, the bar will always be on screen for
+  # 33 * (100 / maxProgressPerFrame) + ghostTime ms.
+  minTime: 250
 
   # What is the minimum amount of time the bar should sit after the last
   # update before disappearing
-  ghostTime: 500
+  ghostTime: 100
 
   # Its easy for a bunch of the bar to be eaten in the first few frames
   # before we know how much there is to load.  This limits how much of
   # the bar can be used per frame
-  maxProgressPerFrame: 10
+  maxProgressPerFrame: 20
 
   # This tweaks the animation easing
   easeFactor: 1.25
@@ -173,7 +174,8 @@ class Evented
         else
           i++
 
-window.Pace ?= {}
+Pace = window.Pace or {}
+window.Pace = Pace
 
 extend Pace, Evented::
 
@@ -336,7 +338,8 @@ class RequestIntercept extends Events
 
       req
 
-    extendNative window.XMLHttpRequest, _XMLHttpRequest
+    try
+      extendNative window.XMLHttpRequest, _XMLHttpRequest
 
     if _XDomainRequest?
       window.XDomainRequest = ->
@@ -346,7 +349,8 @@ class RequestIntercept extends Events
 
         req
 
-      extendNative window.XDomainRequest, _XDomainRequest
+      try
+        extendNative window.XDomainRequest, _XDomainRequest
 
     if _WebSocket? and options.ajax.trackWebSockets
       window.WebSocket = (url, protocols) =>
@@ -360,7 +364,8 @@ class RequestIntercept extends Events
 
         req
 
-      extendNative window.WebSocket, _WebSocket
+      try
+        extendNative window.WebSocket, _WebSocket
 
 _intercept = null
 getIntercept = ->
@@ -442,10 +447,12 @@ class XHRRequestTracker
           # response, all we can do is increment the progress with backoff such that we
           # never hit 100% until it's done.
           @progress = @progress + (100 - @progress) / 2
+      , false
 
       for event in ['load', 'abort', 'timeout', 'error']
         request.addEventListener event, =>
           @progress = 100
+        , false
 
     else
       _onreadystatechange = request.onreadystatechange
@@ -464,6 +471,7 @@ class SocketRequestTracker
     for event in ['error', 'open']
       request.addEventListener event, =>
         @progress = 100
+      , false
 
 class ElementMonitor
   constructor: (options={}) ->

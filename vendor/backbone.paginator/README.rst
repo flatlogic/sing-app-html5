@@ -15,7 +15,7 @@ Migrating from Backbone.Paginator 1.0
 -------------------------------------
 
 Backbone.Paginator 2.0 was originally called backbone-pageable, which in turn
-was inspired by Backbone.Paginator < 1.0 by @addyosmani. The two project has
+was inspired by Backbone.Paginator < 1.0 by @addyosmani. The two projects have
 merged as of May 2014 and backbone-pageable has effectively become
 Backbone.Paginator 2.0. This guide describes some of the differences and
 similarities to ease migration.
@@ -43,10 +43,10 @@ Backbone.Paginator <= 1.0           Backbone.Paginator 2.0
 ``Backbone.Paginator``              ``Backbone.PageableCollection``
 ``Backbone.Paginator.requestPager`` ``PageableCollection.extend({mode: "server" | "infinite"})``
 ``Backbone.Paginator.clientPager``  ``PageableCollection.extend({mode: "client"})``
-``paginator_core``                  Override ``PageableCollection#sync`` or use ``PagableCollection.fetch({data: {...}})``
+``paginator_core``                  Override ``PageableCollection#sync``
 ``paginator_ui``                    ``state``
 ``server_api``                      ``queryParams``
-``bootstrap()``                     ``new Backbone.PageaableCollection([{...}, ...])``
+``bootstrap()``                     ``new Backbone.PageableCollection([{...}, ...])``
 ``parse()``                         ``parse()``, ``parseRecords()``, ``parseState()``, ``parseLinks()``
 ``goTo()``                          ``getPage()``
 ``prevPage()``, ``nextPage()``      ``getPreviousPage()``, ``getNextPage()``
@@ -93,7 +93,7 @@ No surprising behavior
   ``Backbone.PageableCollection`` performs internal state sanity checks at
   appropriate times, so it is next to impossible to get into a weird state.
 Light-weight
-  The library is only 4.2KB minified and gzipped.
+  The library is only 4.1KB minified and gzipped.
 
 
 Playable Demos
@@ -109,6 +109,14 @@ The following examples utilizes `Backgrid.js
 
 Installation
 ------------
+
+Installing from Component
++++++++++++++++++++++++++
+
+.. code-block:: bash
+
+  component install backbone.paginator
+
 
 Installing from Node.js
 +++++++++++++++++++++++
@@ -649,7 +657,7 @@ FAQ
 Legal
 -----
 
-Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
+Copyright (c) 2012-2014 Jimmy Yuen Ho Wong and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

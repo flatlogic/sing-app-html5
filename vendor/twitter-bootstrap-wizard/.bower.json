@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "jquery": ">=1.9.1",
-    "bootstrap": ">=2.3.0"
+    "bootstrap": ">=3.3.0"
   },
   "homepage": "https://github.com/VinceG/twitter-bootstrap-wizard",
   "authors": [
@@ -32,13 +32,12 @@
     "wizard"
   ],
   "license": "MIT",
-  "_release": "a4c08774dc",
+  "_release": "62a9aca8cc",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "a4c08774dcda7b5f3d074d5f479d1a2f79ec8104"
+    "type": "commit",
+    "commit": "62a9aca8cc61fdb496c4bf7b92e1ff70c698667e"
   },
   "_source": "git://github.com/VinceG/twitter-bootstrap-wizard.git",
-  "_target": "master",
+  "_target": "62a9aca8cc61fdb496c4bf7b92e1ff70c698667e",
   "_originalSource": "git://github.com/VinceG/twitter-bootstrap-wizard.git"
 }

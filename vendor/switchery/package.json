@@ -1,6 +1,6 @@
 {
   "name": "switchery",
-  "version": "0.5.5",
+  "version": "0.7.0",
   "description": "Create iOS 7 styled switches from default input checkboxes",
   "main": "switchery.js",
   "repository": {
@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "uglify-js": "~2.4.8",
-    "component": "~0.18.0",
+    "component": "^1.0.0",
     "uglifycss": "0.0.7"
   }
 }

@@ -17,6 +17,9 @@
             italic: "Курсив",
             underline: "Підкреслений"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Маркований список",
             ordered: "Нумерований список",

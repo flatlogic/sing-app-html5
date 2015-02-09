@@ -18,6 +18,9 @@
             italic: "Itálica",
             underline: "Subrayado"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             ordered: "Lista ordenada",
             unordered: "Lista desordenada",
@@ -30,7 +33,7 @@
             target: "Abrir enlace en una nueva ventana"
         },
         image: {
-            insert: "Insertar imágen",
+            insert: "Insertar imagen",
             cancel: "Cancelar"
         },
         html: {

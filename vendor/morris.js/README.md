@@ -33,6 +33,10 @@ Very daring.
 
 Fork, hack, possibly even add some tests, then send a pull request :)
 
+Remember that Morris.js is a coffeescript project. Please make your changes in
+the `.coffee` files, not in the compiled javascript files in the root directory
+of the project.
+
 ### Developer quick-start
 
 You'll need [node.js](https://nodejs.org).  I recommend using
@@ -51,7 +55,14 @@ tests currently *only* pass on OS X.
 
 ## Changelog
 
-### 0.5.0 - TBC
+### 0.5.1 - 15th June 2014
+
+- Fix touch event handling.
+- Fix stacked=false in bar chart [#275](https://github.com/morrisjs/morris.js/issues/275)
+- Configurable vertical segments [#297](https://github.com/morrisjs/morris.js/issues/297)
+- Deprecate continuousLine option.
+
+### 0.5.0 - 19th March 2014
 
 - Update grunt dependency [#288](https://github.com/morrisjs/morris.js/issues/228)
 - Donut segment color config in data objects [#281](https://github.com/morrisjs/morris.js/issues/281)

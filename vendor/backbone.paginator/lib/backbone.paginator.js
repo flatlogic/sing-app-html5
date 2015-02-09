@@ -63,7 +63,6 @@
   var _isObject = _.isObject;
   var _keys = _.keys;
   var _isUndefined = _.isUndefined;
-  var _result = _.result;
   var ceil = Math.ceil;
   var floor = Math.floor;
   var max = Math.max;
@@ -470,6 +469,10 @@
                   pageCol.push(nextModel, {onRemove: true});
                 });
               }
+              else if (!pageCol.length && state.totalRecords) {
+                pageCol.reset(fullCol.models.slice(pageStart - pageSize, pageEnd - pageSize),
+                              _extend({}, options, {parse: false}));
+              }
               fullCol.remove(model);
             }
             else if (removedIndex >= pageStart && removedIndex < pageEnd) {
@@ -479,6 +482,10 @@
                 });
               }
               pageCol.remove(model);
+              if (!pageCol.length && state.totalRecords) {
+                pageCol.reset(fullCol.models.slice(pageStart - pageSize, pageEnd - pageSize),
+                              _extend({}, options, {parse: false}));
+              }
             }
           }
           else delete options.onAdd;
@@ -1121,7 +1128,8 @@
       var data = options.data || {};
 
       // dedup query params
-      var url = _result(options, "url") || _result(this, "url") || '';
+      var url = options.url || this.url || "";
+      if (_isFunction(url)) url = url.call(this);
       var qsi = url.indexOf('?');
       if (qsi != -1) {
         _extend(data, queryStringToParams(url.slice(qsi + 1)));
@@ -1148,7 +1156,10 @@
 
       // fix up sorting parameters
       if (state.sortKey && state.order) {
-        data[queryParams.order] = this.queryParams.directions[state.order + ""];
+        var o = _isFunction(queryParams.order) ?
+          queryParams.order.call(thisCopy) :
+          queryParams.order;
+        data[o] = this.queryParams.directions[state.order + ""];
       }
       else if (!state.sortKey) delete data[queryParams.order];
 

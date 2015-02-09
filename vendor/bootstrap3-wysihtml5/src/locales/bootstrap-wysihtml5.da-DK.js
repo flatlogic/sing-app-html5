@@ -17,6 +17,9 @@
             italic: "Kursiv",
             underline: "Understreget"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Uordnet liste",
             ordered: "Ordnet liste",

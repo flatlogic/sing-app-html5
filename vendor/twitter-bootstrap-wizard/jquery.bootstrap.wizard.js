@@ -16,6 +16,7 @@ var bootstrapWizardCreate = function(element, options) {
 	
 	// selector skips any 'li' elements that do not contain a child with a tab data-toggle
 	var baseItemSelector = 'li:has([data-toggle="tab"])';
+	var historyStack = [];
 
 	// Merge options with defaults
 	var $settings = $.extend({}, $.fn.bootstrapWizard.defaults, options);
@@ -38,12 +39,19 @@ var bootstrapWizardCreate = function(element, options) {
 		// See if we're currently in the first/last then disable the previous and last buttons
 		$($settings.previousSelector, element).toggleClass('disabled', (obj.firstIndex() >= obj.currentIndex()));
 		$($settings.nextSelector, element).toggleClass('disabled', (obj.currentIndex() >= obj.navigationLength()));
+		$($settings.nextSelector, element).toggleClass('hidden', (obj.currentIndex() >= obj.navigationLength() && $($settings.finishSelector, element).length > 0));
+		$($settings.lastSelector, element).toggleClass('hidden', (obj.currentIndex() >= obj.navigationLength() && $($settings.finishSelector, element).length > 0));
+		$($settings.finishSelector, element).toggleClass('hidden', (obj.currentIndex() < obj.navigationLength()));
+		$($settings.backSelector, element).toggleClass('disabled', (historyStack.length == 0));
+		$($settings.backSelector, element).toggleClass('hidden', (obj.currentIndex() >= obj.navigationLength() && $($settings.finishSelector, element).length > 0));
 
 		// We are unbinding and rebinding to ensure single firing and no double-click errors
 		obj.rebindClick($($settings.nextSelector, element), obj.next);
 		obj.rebindClick($($settings.previousSelector, element), obj.previous);
 		obj.rebindClick($($settings.lastSelector, element), obj.last);
 		obj.rebindClick($($settings.firstSelector, element), obj.first);
+		obj.rebindClick($($settings.finishSelector, element), obj.finish);
+		obj.rebindClick($($settings.backSelector, element), obj.back);
 
 		if($settings.onTabShow && typeof $settings.onTabShow === 'function' && $settings.onTabShow($activeTab, $navigation, obj.currentIndex())===false){
 			return false;
@@ -51,7 +59,6 @@ var bootstrapWizardCreate = function(element, options) {
 	};
 
 	this.next = function(e) {
-
 		// If we clicked the last then dont activate this
 		if(element.hasClass('last')) {
 			return false;
@@ -61,16 +68,18 @@ var bootstrapWizardCreate = function(element, options) {
 			return false;
 		}
 
-		// Did we click the last button
+		var formerIndex = obj.currentIndex();
 		$index = obj.nextIndex();
+
+	  // Did we click the last button
 		if($index > obj.navigationLength()) {
 		} else {
-			$navigation.find(baseItemSelector + ':eq('+$index+') a').tab('show');
+		  historyStack.push(formerIndex);
+		  $navigation.find(baseItemSelector + ':eq(' + $index + ') a').tab('show');
 		}
 	};
 
 	this.previous = function(e) {
-
 		// If we clicked the first then dont activate this
 		if(element.hasClass('first')) {
 			return false;
@@ -80,14 +89,17 @@ var bootstrapWizardCreate = function(element, options) {
 			return false;
 		}
 
+		var formerIndex = obj.currentIndex();
 		$index = obj.previousIndex();
+
 		if($index < 0) {
 		} else {
-			$navigation.find(baseItemSelector + ':eq('+$index+') a').tab('show');
+		  historyStack.push(formerIndex);
+		  $navigation.find(baseItemSelector + ':eq(' + $index + ') a').tab('show');
 		}
 	};
 
-	this.first = function(e) {
+	this.first = function (e) {
 		if($settings.onFirst && typeof $settings.onFirst === 'function' && $settings.onFirst($activeTab, $navigation, obj.firstIndex())===false){
 			return false;
 		}
@@ -96,9 +108,11 @@ var bootstrapWizardCreate = function(element, options) {
 		if(element.hasClass('disabled')) {
 			return false;
 		}
-		$navigation.find(baseItemSelector + ':eq(0) a').tab('show');
 
+		historyStack.push(obj.currentIndex());
+		$navigation.find(baseItemSelector + ':eq(0) a').tab('show');
 	};
+
 	this.last = function(e) {
 		if($settings.onLast && typeof $settings.onLast === 'function' && $settings.onLast($activeTab, $navigation, obj.lastIndex())===false){
 			return false;
@@ -108,14 +122,39 @@ var bootstrapWizardCreate = function(element, options) {
 		if(element.hasClass('disabled')) {
 			return false;
 		}
-		$navigation.find(baseItemSelector + ':eq('+obj.navigationLength()+') a').tab('show');
+
+		historyStack.push(obj.currentIndex());
+		$navigation.find(baseItemSelector + ':eq(' + obj.navigationLength() + ') a').tab('show');
 	};
+
+	this.finish = function (e) {
+	  if ($settings.onFinish && typeof $settings.onFinish === 'function') {
+	    $settings.onFinish($activeTab, $navigation, obj.lastIndex());
+	  }
+	};
+
+	this.back = function () {
+	  if (historyStack.length == 0) {
+	    return null;
+	  }
+
+	  var formerIndex = historyStack.pop();
+	  if ($settings.onBack && typeof $settings.onBack === 'function' && $settings.onBack($activeTab, $navigation, formerIndex) === false) {
+	    historyStack.push(formerIndex);
+	    return false;
+	  }
+
+	  element.find(baseItemSelector + ':eq(' + formerIndex + ') a').tab('show');
+	};
+
 	this.currentIndex = function() {
 		return $navigation.find(baseItemSelector).index($activeTab);
 	};
+
 	this.firstIndex = function() {
 		return 0;
 	};
+
 	this.lastIndex = function() {
 		return obj.navigationLength();
 	};
@@ -144,9 +183,15 @@ var bootstrapWizardCreate = function(element, options) {
 		return $navigation.find(baseItemSelector + ':eq('+parseInt(obj.currentIndex()-1)+')');
 	};
 	this.show = function(index) {
-		return element.find(baseItemSelector + ':eq(' + index + ') a').tab('show');
+	  var tabToShow = isNaN(index) ? 
+      element.find(baseItemSelector + ' a[href=#' + index + ']') : 
+      element.find(baseItemSelector + ':eq(' + index + ') a');
+	  if (tabToShow.length > 0) {
+	    historyStack.push(obj.currentIndex());
+	    tabToShow.tab('show');
+	  }
 	};
-	this.disable = function(index) {
+	this.disable = function (index) {
 		$navigation.find(baseItemSelector + ':eq('+index+')').addClass('disabled');
 	};
 	this.enable = function(index) {
@@ -175,9 +220,11 @@ var bootstrapWizardCreate = function(element, options) {
 	
 	var innerTabClick = function (e) {
 		// Get the index of the clicked tab
-		var clickedIndex = $navigation.find(baseItemSelector).index($(e.currentTarget).parent(baseItemSelector));
-		if($settings.onTabClick && typeof $settings.onTabClick === 'function' && $settings.onTabClick($activeTab, $navigation, obj.currentIndex(), clickedIndex)===false){
-			return false;
+		var $ul = $navigation.find(baseItemSelector);
+		var clickedIndex = $ul.index($(e.currentTarget).parent(baseItemSelector));
+		var $clickedTab = $( $ul[clickedIndex] );
+		if($settings.onTabClick && typeof $settings.onTabClick === 'function' && $settings.onTabClick($activeTab, $navigation, obj.currentIndex(), clickedIndex, $clickedTab)===false){
+		    return false;
 		}
 	};
 	
@@ -236,8 +283,6 @@ var bootstrapWizardCreate = function(element, options) {
 
 	// attach to both shown and shown.bs.tab to support Bootstrap versions 2.3.2 and 3.0.0
 	$('a[data-toggle="tab"]', $navigation).on('shown shown.bs.tab', innerTabShown);
-
-	this.fixNavigationButtons();
 };
 $.fn.bootstrapWizard = function(options) {
 	//expose methods
@@ -256,6 +301,8 @@ $.fn.bootstrapWizard = function(options) {
 		var wizard = new bootstrapWizardCreate(element, options);
 		// Store plugin object in this element's data
 		element.data('bootstrapWizard', wizard);
+		// and then trigger initial change
+		wizard.fixNavigationButtons();
 	});
 };
 
@@ -266,12 +313,16 @@ $.fn.bootstrapWizard.defaults = {
 	previousSelector: '.wizard li.previous',
 	firstSelector:    '.wizard li.first',
 	lastSelector:     '.wizard li.last',
+  finishSelector:   '.wizard li.finish',
+	backSelector:     '.wizard li.back',
 	onShow:           null,
 	onInit:           null,
 	onNext:           null,
 	onPrevious:       null,
 	onLast:           null,
 	onFirst:          null,
+  onFinish:         null,
+  onBack:           null,
 	onTabChange:      null, 
 	onTabClick:       null,
 	onTabShow:        null

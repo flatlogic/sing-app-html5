@@ -17,6 +17,9 @@
               italic: "Kursiv",
               underline: "Understrekning"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
               unordered: "Usortert",
               ordered: "Sortert",

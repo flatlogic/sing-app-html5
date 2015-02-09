@@ -21,6 +21,28 @@ grunt
 Changelog
 ---------
 
+0.4.16
+-----------------------
+* Fix removeMarkers
+
+0.4.15
+-----------------------
+* Add overlay to mouseTarget when click event is set
+* addControl/createControl now accepts HTML elements or HTML strings
+* Add containsLatLng to google.maps.Circle
+
+0.4.14
+-----------------------
+* Fix bug in drawPolygon
+* Hide context menu before the zoom is changed
+
+0.4.13
+-----------------------
+* Allow unitSystem setting in travelRoute
+* Add functionality to remove controls
+* Delegates non custom events to google.map
+* Convert featureType and elementType toLowerCase in static maps
+
 0.4.12
 -----------------------
 * Adds ability to listen for clicks on overlays

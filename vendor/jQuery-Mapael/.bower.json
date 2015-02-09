@@ -8,7 +8,7 @@
     "tag": "0.7.1",
     "commit": "556cd9d3ca8944f263c8efe02fd9f700c53563be"
   },
-  "_source": "git://github.com/neveldo/jQuery-Mapael.git",
-  "_target": "*",
-  "_originalSource": "git://github.com/neveldo/jQuery-Mapael.git"
+  "_source": "https://github.com/neveldo/jQuery-Mapael.git",
+  "_target": "v0.7.1",
+  "_originalSource": "https://github.com/neveldo/jQuery-Mapael.git"
 }

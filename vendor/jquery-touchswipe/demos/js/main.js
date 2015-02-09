@@ -1,3 +1,14 @@
+String.prototype.trim = function() {
+    return this.replace(/^\s+|\s+$/g,"");
+}
+String.prototype.trimLeft = function() {
+    return this.replace(/^\s+/,"");
+}
+String.prototype.trimRight = function() {
+    return this.replace(/\s+$/,"");
+}
+
+
 //Demos file list (in order of presentation)
 //THe page name is formed from the file name.
 var fileList = [
@@ -162,7 +173,7 @@ function getPageName( file ) {
  * Writes out the page title template 
  */            
 function getTitle() {
-	var html =  "<h2><a href=\"http://labs.rampinteracitve.co.uk/touchSwipe/\">TouchSwipe</a> Demo</h2>";
+	var html =  "<h2><a href=\"http://labs.rampinteractive.co.uk/touchSwipe/\">TouchSwipe</a> Demo</h2>";
         html += "<h3>to be viewed on touch based devices</h3>";
         html += "<h1>"+getPageName()+"<span class='navigation_menu pull-right'></span></h1>";
     
@@ -213,10 +224,10 @@ function getNavigationMenu() {
  */
 function getNavigationList() {
 	
-	var html = "<ul id='menu'>";
+	var html = "<ul>";
 
 	for(var i=0; i<fileList.length; i++) {
-		html+="<li><a href='"+fileList[i]+"'  target='demos'>"+getPageName(fileList[i])+"</a></li>";
+		html+="<li><a href='"+fileList[i]+"'>"+getPageName(fileList[i])+"</a></li>";
 	}
 	
 	html += "</ul>";

@@ -21,6 +21,6 @@
     "commit": "0ec0cde3f88bd9d16ef34ecea973a2fe8e8e44b4"
   },
   "_source": "git://github.com/okendoken/widgster.git",
-  "_target": ">= 0.0.1",
+  "_target": "~0.0.2",
   "_originalSource": "widgster"
 }

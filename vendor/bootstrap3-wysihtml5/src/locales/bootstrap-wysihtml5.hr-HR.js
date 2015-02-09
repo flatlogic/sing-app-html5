@@ -17,6 +17,9 @@
             italic: "Nakrivljeno",
             underline: "Podcrtano"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Nesortirana lista",
             ordered: "Sortirana lista",

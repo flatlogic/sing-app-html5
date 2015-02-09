@@ -17,6 +17,9 @@
               italic: "Cursiva",
               underline: "Subratllat"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
               unordered: "Llista desordenada",
               ordered: "Llista ordenada",

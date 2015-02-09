@@ -17,6 +17,9 @@
               italic: "مائل",
               underline: "تحته خط"
         },
+        paragraph: {
+            paragraph: "¶"  
+        },
         lists: {
               unordered: "قائمة منقطة",
               ordered: "قائمة مرقمة",

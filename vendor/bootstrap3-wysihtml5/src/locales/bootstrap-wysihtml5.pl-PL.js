@@ -17,6 +17,9 @@
             italic: "Kursywa",
             underline: "Podkreślenie"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Lista wypunktowana",
             ordered: "Lista numerowana",

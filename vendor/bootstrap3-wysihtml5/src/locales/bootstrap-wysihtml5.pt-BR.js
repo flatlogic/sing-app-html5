@@ -17,6 +17,9 @@
             italic: "Itálico",
             underline: "Sublinhado"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Lista",
             ordered: "Lista numerada",

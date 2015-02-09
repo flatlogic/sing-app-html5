@@ -17,6 +17,9 @@
             italic: "기울게",
             underline: "밑줄"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "기호목록",
             ordered: "숫자목록",

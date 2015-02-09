@@ -17,6 +17,9 @@
             italic: "Kurzíva",
             underline: "Podtržení"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Seznam s odrážkami",
             ordered: "Číslovaný seznam",

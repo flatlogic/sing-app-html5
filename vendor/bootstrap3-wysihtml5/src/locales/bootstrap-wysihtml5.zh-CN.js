@@ -17,6 +17,9 @@
             italic: "斜体",
             underline: "下划线"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "项目符号",
             ordered: "编号",

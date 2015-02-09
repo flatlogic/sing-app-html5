@@ -17,6 +17,9 @@
             italic: "斜體",
             underline: "底線"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "項目符號",
             ordered: "編號列表",

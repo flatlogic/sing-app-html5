@@ -17,6 +17,9 @@
             italic: "Cursief",
             underline: "Onderstrepen"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Ongeordende lijst",
             ordered: "Geordende lijst",

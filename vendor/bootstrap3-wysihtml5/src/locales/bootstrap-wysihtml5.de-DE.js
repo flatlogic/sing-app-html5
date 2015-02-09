@@ -17,6 +17,9 @@
             italic: "Kursiv",
             underline: "Unterstrichen"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Ungeordnete Liste",
             ordered: "Geordnete Liste",

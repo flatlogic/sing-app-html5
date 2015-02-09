@@ -1,22 +1,27 @@
 {
   "name": "Holder",
-  "version": "2.3.2",
+  "version": "2.5.0",
   "summary": "client side image placeholders",
-  "description": "Holder uses the canvas element and the data URI scheme to render image placeholders entirely in browser.",
+  "description": "Holder uses SVG to render image placeholders entirely in browser.",
+  "author": {
+    "name": "Ivan Malopinsky",
+    "url": "http://imsky.co"
+  },
+  "homepage": "http://imsky.github.io/holder",
+  "license": {
+    "type": "MIT",
+    "url": "http://opensource.org/licenses/MIT"
+  },
   "keywords": [
     "images",
     "placeholders",
     "client-side",
     "canvas",
     "generation",
-    "development"
+    "development",
+    "svg"
   ],
   "main": "holder.js",
-  "author": {
-    "name": "Ivan Malopinsky",
-    "url": "http://imsky.co"
-  },
-  "homepage": "https://github.com/imsky/holder",
   "repository": {
     "type": "git",
     "url": "git://github.com/imsky/holder.git"
@@ -24,13 +29,14 @@
   "bugs": {
     "url": "https://github.com/imsky/holder/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-jshint": "~0.6.0"
+    "gulp": "~3",
+    "gulp-concat": "^2.2.0",
+    "gulp-header": "^1.0.2",
+    "gulp-jshint": "^1.6.1",
+    "gulp-todo": "^0.3.8",
+    "gulp-uglifyjs": "^0.4.4",
+    "gulp-util": "~3",
+    "moment": "^2.6.0"
   }
 }

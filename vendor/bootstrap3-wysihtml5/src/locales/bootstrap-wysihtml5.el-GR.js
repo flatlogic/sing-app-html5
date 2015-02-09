@@ -17,6 +17,9 @@
               italic: "I",
               underline: "U"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
               unordered: "Λίστα με κουκκίδες",
               ordered: "Αριθμημένη λίστα",

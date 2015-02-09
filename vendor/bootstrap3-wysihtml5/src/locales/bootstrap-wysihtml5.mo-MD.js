@@ -17,6 +17,9 @@
               italic: "Cursiv",
               underline: "Accentuat"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
               unordered: "Neordonata",
               ordered: "Ordonata",

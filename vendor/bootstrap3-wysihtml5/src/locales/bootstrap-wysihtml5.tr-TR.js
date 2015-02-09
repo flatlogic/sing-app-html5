@@ -17,6 +17,9 @@
             italic: "İtalik",
             underline: "Altı Çizili"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
             unordered: "Sırasız Liste",
             ordered: "Sıralı Liste",
