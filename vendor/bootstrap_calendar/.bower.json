@@ -24,6 +24,5 @@
   },
   "_source": "git://github.com/xero/bootstrap_calendar.git",
   "_target": "~1.0.1",
-  "_originalSource": "bootstrap_calendar",
-  "_direct": true
+  "_originalSource": "bootstrap_calendar"
 }

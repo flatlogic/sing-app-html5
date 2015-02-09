@@ -44,6 +44,5 @@
   },
   "_source": "git://github.com/guillaumepotier/Parsley.js.git",
   "_target": "~2.0.7",
-  "_originalSource": "parsleyjs",
-  "_direct": true
+  "_originalSource": "parsleyjs"
 }

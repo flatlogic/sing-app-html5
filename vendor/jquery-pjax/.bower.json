@@ -22,6 +22,5 @@
   },
   "_source": "git://github.com/defunkt/jquery-pjax.git",
   "_target": "~1.9.4",
-  "_originalSource": "jquery-pjax",
-  "_direct": true
+  "_originalSource": "jquery-pjax"
 }

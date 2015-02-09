@@ -16678,14 +16678,18 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   position: absolute !important;
 }
 
-/* line 20, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 18, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox {
+  padding-left: 20px;
+}
+/* line 21, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox label {
   display: inline-block;
   position: relative;
   padding-left: 5px;
 }
-/* line 25, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox label:before {
+/* line 26, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -16700,8 +16704,8 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
 }
-/* line 39, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox label:after {
+/* line 40, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox label::after {
   display: inline-block;
   position: absolute;
   width: 16px;
@@ -16714,87 +16718,101 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   font-size: 11px;
   color: #555555;
 }
-/* line 54, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox input[type=checkbox] {
-  display: none;
+/* line 55, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type="checkbox"] {
+  opacity: 0;
 }
-/* line 57, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox input[type=checkbox]:checked + label:after {
+/* line 58, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+/* line 62, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type="checkbox"]:checked + label::after {
   font-family: 'FontAwesome';
   content: "\f00c";
 }
-/* line 62, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox input[type=checkbox]:disabled + label {
+/* line 67, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type="checkbox"]:disabled + label {
   opacity: 0.65;
 }
-/* line 65, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox input[type=checkbox]:disabled + label:before {
+/* line 70, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox input[type="checkbox"]:disabled + label::before {
   background-color: #eeeeee;
   cursor: not-allowed;
 }
-/* line 73, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox.checkbox-circle label:before {
+/* line 78, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox.checkbox-circle label::before {
   border-radius: 50%;
+}
+/* line 82, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox.checkbox-inline {
+  margin-top: 0;
 }
 
 /* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-primary input[type=checkbox]:checked + label:before {
+.checkbox-primary input[type="checkbox"]:checked + label::before {
   background-color: #5d8fc2;
   border-color: #5d8fc2;
 }
 /* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-primary input[type=checkbox]:checked + label:after {
+.checkbox-primary input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
 /* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-danger input[type=checkbox]:checked + label:before {
+.checkbox-danger input[type="checkbox"]:checked + label::before {
   background-color: #dd5826;
   border-color: #dd5826;
 }
 /* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-danger input[type=checkbox]:checked + label:after {
+.checkbox-danger input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
 /* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-info input[type=checkbox]:checked + label:before {
+.checkbox-info input[type="checkbox"]:checked + label::before {
   background-color: #5dc4bf;
   border-color: #5dc4bf;
 }
 /* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-info input[type=checkbox]:checked + label:after {
+.checkbox-info input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
 /* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-warning input[type=checkbox]:checked + label:before {
+.checkbox-warning input[type="checkbox"]:checked + label::before {
   background-color: #f0b518;
   border-color: #f0b518;
 }
 /* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-warning input[type=checkbox]:checked + label:after {
+.checkbox-warning input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
 /* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-success input[type=checkbox]:checked + label:before {
+.checkbox-success input[type="checkbox"]:checked + label::before {
   background-color: #64bd63;
   border-color: #64bd63;
 }
 /* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.checkbox-success input[type=checkbox]:checked + label:after {
+.checkbox-success input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
-/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 115, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio {
+  padding-left: 20px;
+}
+/* line 118, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio label {
   display: inline-block;
   position: relative;
   padding-left: 5px;
 }
-/* line 113, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio label:before {
+/* line 123, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio label::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -16809,8 +16827,8 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   -o-transition: border 0.15s ease-in-out;
   transition: border 0.15s ease-in-out;
 }
-/* line 127, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio label:after {
+/* line 137, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio label::after {
   display: inline-block;
   position: absolute;
   content: " ";
@@ -16830,88 +16848,98 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
   transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
 }
-/* line 145, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio input[type=radio] {
-  display: none;
+/* line 155, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type="radio"] {
+  opacity: 0;
 }
-/* line 148, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio input[type=radio]:checked + label:after {
+/* line 158, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type="radio"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+/* line 162, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type="radio"]:checked + label::after {
   -webkit-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 152, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio input[type=radio]:disabled + label {
+/* line 166, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type="radio"]:disabled + label {
   opacity: 0.65;
 }
-/* line 155, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio input[type=radio]:disabled + label:before {
+/* line 169, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio input[type="radio"]:disabled + label::before {
   cursor: not-allowed;
 }
+/* line 176, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio.radio-inline {
+  margin-top: 0;
+}
 
-/* line 91, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-primary input[type=radio] + label:after {
+/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-primary input[type="radio"] + label::after {
   background-color: #5d8fc2;
 }
-/* line 96, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-primary input[type=radio]:checked + label:before {
+/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-primary input[type="radio"]:checked + label::before {
   border-color: #5d8fc2;
 }
-/* line 99, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-primary input[type=radio]:checked + label:after {
+/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-primary input[type="radio"]:checked + label::after {
   background-color: #5d8fc2;
 }
 
-/* line 91, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-danger input[type=radio] + label:after {
+/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-danger input[type="radio"] + label::after {
   background-color: #dd5826;
 }
-/* line 96, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-danger input[type=radio]:checked + label:before {
+/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-danger input[type="radio"]:checked + label::before {
   border-color: #dd5826;
 }
-/* line 99, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-danger input[type=radio]:checked + label:after {
+/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-danger input[type="radio"]:checked + label::after {
   background-color: #dd5826;
 }
 
-/* line 91, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-info input[type=radio] + label:after {
+/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-info input[type="radio"] + label::after {
   background-color: #5dc4bf;
 }
-/* line 96, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-info input[type=radio]:checked + label:before {
+/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-info input[type="radio"]:checked + label::before {
   border-color: #5dc4bf;
 }
-/* line 99, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-info input[type=radio]:checked + label:after {
+/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-info input[type="radio"]:checked + label::after {
   background-color: #5dc4bf;
 }
 
-/* line 91, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-warning input[type=radio] + label:after {
+/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-warning input[type="radio"] + label::after {
   background-color: #f0b518;
 }
-/* line 96, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-warning input[type=radio]:checked + label:before {
+/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-warning input[type="radio"]:checked + label::before {
   border-color: #f0b518;
 }
-/* line 99, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-warning input[type=radio]:checked + label:after {
+/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-warning input[type="radio"]:checked + label::after {
   background-color: #f0b518;
 }
 
-/* line 91, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-success input[type=radio] + label:after {
+/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-success input[type="radio"] + label::after {
   background-color: #64bd63;
 }
-/* line 96, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-success input[type=radio]:checked + label:before {
+/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-success input[type="radio"]:checked + label::before {
   border-color: #64bd63;
 }
-/* line 99, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
-.radio-success input[type=radio]:checked + label:after {
+/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio-success input[type="radio"]:checked + label::after {
   background-color: #64bd63;
 }
 

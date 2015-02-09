@@ -3,12 +3,12 @@
 // --------------------------------------------------
 
 @mixin checkbox-variant($parent, $color) {
-  #{$parent} input[type=checkbox]:checked + label{
-    &:before {
+  #{$parent} input[type="checkbox"]:checked + label{
+    &::before {
       background-color: $color;
       border-color: $color;
     }
-    &:after{
+    &::after{
       color: #fff;
     }
   }
@@ -16,13 +16,14 @@
 
 
 .checkbox{
+  padding-left: 20px;
 
   label{
     display: inline-block;
     position: relative;
     padding-left: 5px;
 
-    &:before{
+    &::before{
       content: "";
       display: inline-block;
       position: absolute;
@@ -36,7 +37,7 @@
       @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out);
     }
 
-    &:after{
+    &::after{
       display: inline-block;
       position: absolute;
       width: 16px;
@@ -51,10 +52,14 @@
     }
   }
 
-  input[type=checkbox]{
-    display: none;
+  input[type="checkbox"]{
+    opacity: 0;
 
-    &:checked + label:after{
+    &:focus + label::before{
+      @include tab-focus();
+    }
+
+    &:checked + label::after{
       font-family: 'FontAwesome';
       content: $fa-var-check;
     }
@@ -62,7 +67,7 @@
     &:disabled + label{
       opacity: 0.65;
 
-      &:before{
+      &::before{
         background-color: $gray-lighter;
         cursor: not-allowed;
       }
@@ -70,8 +75,12 @@
 
   }
 
-  &.checkbox-circle label:before{
+  &.checkbox-circle label::before{
     border-radius: 50%;
+  }
+
+  &.checkbox-inline{
+    margin-top: 0;
   }
 }
 
@@ -86,17 +95,17 @@
 // --------------------------------------------------
 
 @mixin radio-variant($parent, $color) {
-  #{$parent} input[type=radio]{
+  #{$parent} input[type="radio"]{
     & + label{
-      &:after{
+      &::after{
         background-color: $color;
       }
     }
     &:checked + label{
-      &:before {
+      &::before {
         border-color: $color;
       }
-      &:after{
+      &::after{
         background-color: $color;
       }
     }
@@ -104,13 +113,14 @@
 }
 
 .radio{
+  padding-left: 20px;
 
   label{
     display: inline-block;
     position: relative;
     padding-left: 5px;
 
-    &:before{
+    &::before{
       content: "";
       display: inline-block;
       position: absolute;
@@ -124,7 +134,7 @@
       @include transition(border 0.15s ease-in-out);
     }
 
-    &:after{
+    &::after{
       display: inline-block;
       position: absolute;
       content: " ";
@@ -142,21 +152,29 @@
     }
   }
 
-  input[type=radio]{
-    display: none;
+  input[type="radio"]{
+    opacity: 0;
 
-    &:checked + label:after{
+    &:focus + label::before{
+      @include tab-focus();
+    }
+
+    &:checked + label::after{
       @include scale(1, 1);
     }
 
     &:disabled + label{
       opacity: 0.65;
 
-      &:before{
+      &::before{
         cursor: not-allowed;
       }
     }
 
+  }
+
+  &.radio-inline{
+    margin-top: 0;
   }
 }
 

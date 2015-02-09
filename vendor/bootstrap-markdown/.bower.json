@@ -20,6 +20,5 @@
   },
   "_source": "git://github.com/toopay/bootstrap-markdown.git",
   "_target": "~2.8.0",
-  "_originalSource": "bootstrap-markdown",
-  "_direct": true
+  "_originalSource": "bootstrap-markdown"
 }

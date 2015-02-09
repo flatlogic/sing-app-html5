@@ -10,6 +10,5 @@
   },
   "_source": "git://github.com/addyosmani/backbone.paginator.git",
   "_target": "~2.0.2",
-  "_originalSource": "backbone.paginator",
-  "_direct": true
+  "_originalSource": "backbone.paginator"
 }

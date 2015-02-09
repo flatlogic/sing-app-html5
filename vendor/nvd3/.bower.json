@@ -52,6 +52,5 @@
   },
   "_source": "git://github.com/novus/nvd3.git",
   "_target": "~1.7.1",
-  "_originalSource": "nvd3",
-  "_direct": true
+  "_originalSource": "nvd3"
 }

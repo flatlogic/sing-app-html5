@@ -40,6 +40,5 @@
   },
   "_source": "git://github.com/abpetkov/switchery.git",
   "_target": "~0.7.0",
-  "_originalSource": "switchery",
-  "_direct": true
+  "_originalSource": "switchery"
 }

@@ -57,6 +57,5 @@
   },
   "_source": "git://github.com/Vestride/Shuffle.git",
   "_target": "~3.0.2",
-  "_originalSource": "shufflejs",
-  "_direct": true
+  "_originalSource": "shufflejs"
 }

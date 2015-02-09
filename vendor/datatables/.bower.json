@@ -33,6 +33,5 @@
   },
   "_source": "git://github.com/DataTables/DataTables.git",
   "_target": "~1.10.4",
-  "_originalSource": "datatables",
-  "_direct": true
+  "_originalSource": "datatables"
 }
