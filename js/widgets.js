@@ -291,6 +291,7 @@ $(function(){
                     attrs : {
                         fill: Sing.colors['gray-lighter']
                         , stroke : Sing.colors['gray']
+                        , "stroke-width" : 0.25
                     },
                     attrsHover : {
                         fill : Sing.colors['gray-light'],

@@ -32,7 +32,7 @@
     "type": "commit",
     "commit": "03632df8ad238e3d043c0fd471a6c78494e1bdfc"
   },
-  "_source": "https://github.com/wyuenho/backgrid-paginator.git",
+  "_source": "git://github.com/wyuenho/backgrid-paginator.git",
   "_target": "03632df8ad238e3d043c0fd471a6c78494e1bdfc",
-  "_originalSource": "https://github.com/wyuenho/backgrid-paginator.git"
+  "_originalSource": "backgrid-paginator"
 }

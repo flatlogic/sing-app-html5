@@ -16,8 +16,8 @@ $(function(){
                     fill: '#bdbdbd',
                     "fill-opacity": 1,
                     stroke: '#bdbdbd',
-                    "stroke-width": 0,
-                    "stroke-opacity": 0
+                    "stroke-width": 0.25,
+                    "stroke-opacity": 1
                 },
                 hover: {
                     "fill-opacity": 0.8

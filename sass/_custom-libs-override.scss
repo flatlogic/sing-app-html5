@@ -178,25 +178,9 @@
  */
 
 .dropzone{
+  border: 2px dashed #ccc;
   @include border-radius($border-radius-base);
 }
-
-/**
- * Set correct urls
- */
-.dropzone .dz-default.dz-message,
-.dropzone .dz-preview .dz-error-mark,
-.dropzone-previews .dz-preview .dz-error-mark,
-.dropzone .dz-preview .dz-success-mark,
-.dropzone-previews .dz-preview .dz-success-mark,
-.dropzone .dz-preview .dz-progress .dz-upload,
-.dropzone-previews .dz-preview .dz-progress .dz-upload{
-  background-image: url("#{$vendor-folder}/dropzone/downloads/images/spritemap.png");
-  @include retina{
-    background-image: url("#{$vendor-folder}/dropzone/downloads/images/spritemap@2x.png");
-  }
-}
-
 /**
  * Mapael
  */
@@ -433,6 +417,10 @@ $slider-handle-size: 26px;
   }
   .tooltip-inner {
     white-space: nowrap;
+  }
+
+  .tooltip.top {
+    top: -30px;
   }
 }
 .slider-track {

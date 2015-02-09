@@ -642,3 +642,14 @@ h6, .h6 { &.panel-title{ font-size: $font-size-h6; }}
     }
   }
 }
+
+//
+// Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+  @media screen and (min-width: $screen-sm-min) {
+    padding-left: $jumbotron-padding;
+    padding-right: $jumbotron-padding;
+  }
+}

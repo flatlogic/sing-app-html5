@@ -80,7 +80,7 @@ $(function(){
                 var $activeTabPane = $($activeTab.find('a[data-toggle=tab]').attr('href')),
                     $form = $activeTabPane.find('form');
 
-                // validate form in casa there is form
+                // validate form in case there is form
                 if ($form.length){
                     return $form.parsley().validate();
                 }

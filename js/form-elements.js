@@ -62,7 +62,7 @@ $(function(){
         new Switchery(document.getElementById('checkbox-ios2'),{color: Sing.colors['brand-primary']});
 
         $('#datetimepicker1').datetimepicker({
-            pickTime: false
+            format: 'MM/dd/YYYY'
         });
         $('#datetimepicker2').datetimepicker({
         });
