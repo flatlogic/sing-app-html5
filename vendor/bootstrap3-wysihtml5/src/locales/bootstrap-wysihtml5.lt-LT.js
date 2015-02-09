@@ -17,6 +17,9 @@
               italic: "Kursyvas",
               underline: "Pabrauktas"
         },
+        paragraph: {
+            paragraph: "¶"
+        },
         lists: {
               unordered: "Suženklintas sąrašas",
               ordered: "Numeruotas sąrašas",

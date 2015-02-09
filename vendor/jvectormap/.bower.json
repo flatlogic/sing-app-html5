@@ -1,14 +1,13 @@
 {
   "name": "jvectormap",
-  "homepage": "https://github.com/bjornd/jvectormap",
-  "version": "1.2.2",
-  "_release": "1.2.2",
-  "_resolution": {
-    "type": "version",
-    "tag": "1.2.2",
-    "commit": "60059b8d6e68d37ef544ab542060f5ab87b5018a"
+  "_cacheHeaders": {
+    "ETag": "\"544270bc-64b3\"",
+    "Last-Modified": "Sat, 18 Oct 2014 13:53:00 GMT",
+    "Content-Length": "25779",
+    "Content-Type": "application/zip"
   },
-  "_source": "git://github.com/bjornd/jvectormap.git",
+  "_release": "e-tag:544270bc-",
+  "_source": "http://jvectormap.com/binary/jquery-jvectormap-1.2.2.zip",
   "_target": "*",
-  "_originalSource": "git://github.com/bjornd/jvectormap.git"
+  "_originalSource": "http://jvectormap.com/binary/jquery-jvectormap-1.2.2.zip"
 }

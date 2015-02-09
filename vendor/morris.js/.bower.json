@@ -1,6 +1,6 @@
 {
   "name": "morris.js",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "main": [
     "./morris.js",
     "./morris.css"
@@ -18,13 +18,14 @@
     "sinon-chai": "~2.5.0"
   },
   "homepage": "https://github.com/oesmith/morris.js",
-  "_release": "0.5.0",
+  "_release": "0.5.1",
   "_resolution": {
     "type": "version",
-    "tag": "0.5.0",
-    "commit": "d31c072942bc5bf3f02247737c01b5219a35464c"
+    "tag": "0.5.1",
+    "commit": "d5cf1410eda7055eaf2c7d218d4cb24ec5ed55c8"
   },
   "_source": "git://github.com/oesmith/morris.js.git",
-  "_target": ">= 0.5.0",
-  "_originalSource": "morris.js"
+  "_target": "~0.5.1",
+  "_originalSource": "morris.js",
+  "_direct": true
 }

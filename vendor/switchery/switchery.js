@@ -1,5 +1,5 @@
 /**
- * Switchery 0.5.5
+ * Switchery 0.7.0
  * http://abpetkov.github.io/switchery/
  *
  * Authored by Alexander Petkov
@@ -16,7 +16,8 @@
  */
 
 var transitionize = require('transitionize')
-  , fastclick = require('fastclick');
+  , fastclick = require('fastclick')
+  , classes = require('classes');
 
 /**
  * Expose `Switchery`.
@@ -33,10 +34,12 @@ module.exports = Switchery;
 var defaults = {
     color          : '#64bd63'
   , secondaryColor : '#dfdfdf'
+  , jackColor      : '#fff'
   , className      : 'switchery'
   , disabled       : false
   , disabledOpacity: 0.5
   , speed          : '0.4s'
+  , size           : 'default'
 };
 
 /**
@@ -130,7 +133,7 @@ Switchery.prototype.isChecked = function() {
  */
 
 Switchery.prototype.isDisabled = function() {
-  return this.options.disabled || this.element.disabled;
+  return this.options.disabled || this.element.disabled || this.element.readOnly;
 };
 
 /**
@@ -162,6 +165,7 @@ Switchery.prototype.setPosition = function (clicked) {
     this.switcher.style.boxShadow = 'inset 0 0 0 0 ' + this.options.secondaryColor;
     this.switcher.style.borderColor = this.options.secondaryColor;
     this.switcher.style.backgroundColor = (this.options.secondaryColor !== defaults.secondaryColor) ? this.options.secondaryColor : '#fff';
+    this.jack.style.backgroundColor = this.options.jackColor;
     this.setSpeed();
   }
 };
@@ -194,17 +198,27 @@ Switchery.prototype.setSpeed = function() {
 };
 
 /**
- * Copy the input name and id attributes.
+ * Set switch size.
  *
  * @api private
  */
 
-Switchery.prototype.setAttributes = function() {
-  var id = this.element.getAttribute('id')
-    , name = this.element.getAttribute('name');
+Switchery.prototype.setSize = function() {
+  var small = 'switchery-small'
+    , normal = 'switchery-default'
+    , large = 'switchery-large';
 
-  if (id) this.switcher.setAttribute('id', id);
-  if (name) this.switcher.setAttribute('name', name);
+  switch (this.options.size) {
+    case 'small':
+      classes(this.switcher).add(small)
+      break;
+    case 'large':
+      classes(this.switcher).add(large)
+      break;
+    default:
+      classes(this.switcher).add(normal)
+      break;
+  }
 };
 
 /**
@@ -214,9 +228,12 @@ Switchery.prototype.setAttributes = function() {
  */
 
 Switchery.prototype.colorize = function() {
+  var switcherHeight = this.switcher.offsetHeight / 2;
+
   this.switcher.style.backgroundColor = this.options.color;
   this.switcher.style.borderColor = this.options.color;
-  this.switcher.style.boxShadow = 'inset 0 0 0 16px ' + this.options.color;
+  this.switcher.style.boxShadow = 'inset 0 0 0 ' + switcherHeight + 'px ' + this.options.color;
+  this.jack.style.backgroundColor = this.options.jackColor;
 };
 
 /**
@@ -227,7 +244,7 @@ Switchery.prototype.colorize = function() {
  */
 
 Switchery.prototype.handleOnchange = function(state) {
-  if (typeof Event === 'function' || !document.fireEvent) {
+  if (document.dispatchEvent) {
     var event = document.createEvent('HTMLEvents');
     event.initEvent('change', true, true);
     this.element.dispatchEvent(event);
@@ -266,55 +283,27 @@ Switchery.prototype.handleChange = function() {
 
 Switchery.prototype.handleClick = function() {
   var self = this
-    , switcher = this.switcher;
+    , switcher = this.switcher
+    , parent = self.element.parentNode.tagName.toLowerCase()
+    , labelParent = (parent === 'label') ? false : true;
 
   if (this.isDisabled() === false) {
     fastclick(switcher);
 
     if (switcher.addEventListener) {
-      switcher.addEventListener('click', function() {
-        self.setPosition(true);
+      switcher.addEventListener('click', function(e) {
+        self.setPosition(labelParent);
         self.handleOnchange(self.element.checked);
       });
     } else {
       switcher.attachEvent('onclick', function() {
-        self.setPosition(true);
+        self.setPosition(labelParent);
         self.handleOnchange(self.element.checked);
       });
     }
   } else {
     this.element.disabled = true;
     this.switcher.style.opacity = this.options.disabledOpacity;
-  }
-};
-
-/*
- * Disable attached labels default behaviour.
- *
- * @api private
- */
-
-Switchery.prototype.disableLabel = function() {
-  var parent = this.element.parentNode
-    , labels = document.getElementsByTagName('label')
-    , attached = null;
-
-  for (var i = 0; i < labels.length; i ++) {
-    if (labels[i].getAttribute('for') === this.element.id) {
-      attached = true;
-    }
-  }
-
-  if (attached === true || parent.tagName.toLowerCase() === 'label') {
-    if (parent.addEventListener) {
-      parent.addEventListener('click', function(e) {
-        e.preventDefault();
-      });
-    } else {
-      parent.attachEvent('onclick', function(e) {
-        e.returnValue = false;
-      });
-    }
   }
 };
 
@@ -347,10 +336,9 @@ Switchery.prototype.markedAsSwitched = function() {
 Switchery.prototype.init = function() {
   this.hide();
   this.show();
+  this.setSize();
   this.setPosition();
-  this.setAttributes();
   this.markAsSwitched();
-  this.disableLabel();
   this.handleChange();
   this.handleClick();
 };
