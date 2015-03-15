@@ -1641,3 +1641,20 @@ a.fc-event{
     $i: $i + 1;
   }
 }
+
+/***********************/
+/*       wysihtml5     */
+/***********************/
+
+/* fix wysihtml5 iframe width*/
+.wysihtml5-sandbox{
+  max-width: 100%;
+}
+
+/***********************/
+/*  bootstrap-select   */
+/***********************/
+
+.selectpicker.form-control {
+  height: auto;
+}
