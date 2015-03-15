@@ -36,6 +36,7 @@
 }
 .checkbox input[type="checkbox"] {
   opacity: 0;
+  z-index: 1;
 }
 .checkbox input[type="checkbox"]:focus + label::before {
   outline: thin dotted;
@@ -58,6 +59,9 @@
 }
 .checkbox.checkbox-inline {
   margin-top: 0;
+}
+.checkbox.checkbox-single label {
+  height: 17px;
 }
 .checkbox-primary input[type="checkbox"]:checked + label::before {
   background-color: #428bca;
@@ -139,6 +143,7 @@
 }
 .radio input[type="radio"] {
   opacity: 0;
+  z-index: 1;
 }
 .radio input[type="radio"]:focus + label::before {
   outline: thin dotted;
@@ -159,6 +164,9 @@
 }
 .radio.radio-inline {
   margin-top: 0;
+}
+.radio.radio-single label {
+  height: 17px;
 }
 .radio-primary input[type="radio"] + label::after {
   background-color: #428bca;

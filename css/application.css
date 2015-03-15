@@ -16678,17 +16678,17 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   position: absolute !important;
 }
 
-/* line 18, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 20, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox {
   padding-left: 20px;
 }
-/* line 21, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 23, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox label {
   display: inline-block;
   position: relative;
   padding-left: 5px;
 }
-/* line 26, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 28, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox label::before {
   content: "";
   display: inline-block;
@@ -16704,7 +16704,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
   transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
 }
-/* line 40, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 42, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox label::after {
   display: inline-block;
   position: absolute;
@@ -16718,100 +16718,105 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   font-size: 11px;
   color: #555555;
 }
-/* line 55, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 57, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox input[type="checkbox"] {
   opacity: 0;
+  z-index: 1;
 }
-/* line 58, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 61, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox input[type="checkbox"]:focus + label::before {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-/* line 62, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 65, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox input[type="checkbox"]:checked + label::after {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   content: "\f00c";
 }
-/* line 67, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 70, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox input[type="checkbox"]:disabled + label {
   opacity: 0.65;
 }
-/* line 70, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 73, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox input[type="checkbox"]:disabled + label::before {
   background-color: #eeeeee;
   cursor: not-allowed;
 }
-/* line 78, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 81, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox.checkbox-circle label::before {
   border-radius: 50%;
 }
-/* line 82, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 85, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox.checkbox-inline {
   margin-top: 0;
 }
+/* line 89, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.checkbox.checkbox-single label {
+  height: 17px;
+}
 
-/* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 9, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-primary input[type="checkbox"]:checked + label::before {
   background-color: #5d8fc2;
   border-color: #5d8fc2;
 }
-/* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 13, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-primary input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
-/* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 9, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-danger input[type="checkbox"]:checked + label::before {
   background-color: #dd5826;
   border-color: #dd5826;
 }
-/* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 13, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-danger input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
-/* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 9, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-info input[type="checkbox"]:checked + label::before {
   background-color: #5dc4bf;
   border-color: #5dc4bf;
 }
-/* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 13, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-info input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
-/* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 9, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-warning input[type="checkbox"]:checked + label::before {
   background-color: #f0b518;
   border-color: #f0b518;
 }
-/* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 13, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-warning input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
-/* line 7, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 9, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-success input[type="checkbox"]:checked + label::before {
   background-color: #64bd63;
   border-color: #64bd63;
 }
-/* line 11, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 13, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .checkbox-success input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
-/* line 115, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 122, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio {
   padding-left: 20px;
 }
-/* line 118, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 125, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio label {
   display: inline-block;
   position: relative;
   padding-left: 5px;
 }
-/* line 123, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 130, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio label::before {
   content: "";
   display: inline-block;
@@ -16827,7 +16832,7 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   -o-transition: border 0.15s ease-in-out;
   transition: border 0.15s ease-in-out;
 }
-/* line 137, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 144, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio label::after {
   display: inline-block;
   position: absolute;
@@ -16848,97 +16853,102 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   -o-transition: -o-transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
   transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
 }
-/* line 155, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 162, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio input[type="radio"] {
   opacity: 0;
+  z-index: 1;
 }
-/* line 158, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 166, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio input[type="radio"]:focus + label::before {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-/* line 162, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 170, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio input[type="radio"]:checked + label::after {
   -webkit-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 166, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 174, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio input[type="radio"]:disabled + label {
   opacity: 0.65;
 }
-/* line 169, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 177, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio input[type="radio"]:disabled + label::before {
   cursor: not-allowed;
 }
-/* line 176, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 184, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio.radio-inline {
   margin-top: 0;
 }
+/* line 188, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+.radio.radio-single label {
+  height: 17px;
+}
 
-/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 107, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-primary input[type="radio"] + label::after {
   background-color: #5d8fc2;
 }
-/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 112, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-primary input[type="radio"]:checked + label::before {
   border-color: #5d8fc2;
 }
-/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 115, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-primary input[type="radio"]:checked + label::after {
   background-color: #5d8fc2;
 }
 
-/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 107, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-danger input[type="radio"] + label::after {
   background-color: #dd5826;
 }
-/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 112, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-danger input[type="radio"]:checked + label::before {
   border-color: #dd5826;
 }
-/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 115, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-danger input[type="radio"]:checked + label::after {
   background-color: #dd5826;
 }
 
-/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 107, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-info input[type="radio"] + label::after {
   background-color: #5dc4bf;
 }
-/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 112, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-info input[type="radio"]:checked + label::before {
   border-color: #5dc4bf;
 }
-/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 115, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-info input[type="radio"]:checked + label::after {
   background-color: #5dc4bf;
 }
 
-/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 107, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-warning input[type="radio"] + label::after {
   background-color: #f0b518;
 }
-/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 112, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-warning input[type="radio"]:checked + label::before {
   border-color: #f0b518;
 }
-/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 115, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-warning input[type="radio"]:checked + label::after {
   background-color: #f0b518;
 }
 
-/* line 100, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 107, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-success input[type="radio"] + label::after {
   background-color: #64bd63;
 }
-/* line 105, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 112, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-success input[type="radio"]:checked + label::before {
   border-color: #64bd63;
 }
-/* line 108, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
+/* line 115, ../vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss */
 .radio-success input[type="radio"]:checked + label::after {
   background-color: #64bd63;
 }
@@ -17185,9 +17195,10 @@ legend {
 .radio label,
 .checkbox label {
   margin-bottom: 5px;
+  min-height: 0;
 }
 
-/* line 129, ../sass/_bootstrap-override.scss */
+/* line 130, ../sass/_bootstrap-override.scss */
 .table td > .checkbox,
 .table th > .checkbox {
   position: relative;
@@ -17196,7 +17207,7 @@ legend {
   margin-bottom: 0;
   padding-left: 0;
 }
-/* line 136, ../sass/_bootstrap-override.scss */
+/* line 137, ../sass/_bootstrap-override.scss */
 .table td > .checkbox > label:before,
 .table td > .checkbox > label:after,
 .table th > .checkbox > label:before,
@@ -17204,19 +17215,19 @@ legend {
   margin-left: 0;
 }
 
-/* line 142, ../sass/_bootstrap-override.scss */
+/* line 143, ../sass/_bootstrap-override.scss */
 .table > thead > tr > th {
   font-weight: 600;
   text-transform: uppercase;
   border-bottom-width: 1px;
 }
 
-/* line 148, ../sass/_bootstrap-override.scss */
+/* line 149, ../sass/_bootstrap-override.scss */
 .table-bordered th {
   background-color: #eeeeee;
 }
 
-/* line 157, ../sass/_bootstrap-override.scss */
+/* line 158, ../sass/_bootstrap-override.scss */
 .table-lg > thead > tr > th,
 .table-lg > thead > tr > td,
 .table-lg > tbody > tr > th,
@@ -17226,7 +17237,7 @@ legend {
   padding: 10px;
 }
 
-/* line 170, ../sass/_bootstrap-override.scss */
+/* line 171, ../sass/_bootstrap-override.scss */
 .table-sm > thead > tr > th,
 .table-sm > thead > tr > td,
 .table-sm > tbody > tr > th,
@@ -17236,33 +17247,33 @@ legend {
   padding: 6px;
 }
 
-/* line 178, ../sass/_bootstrap-override.scss */
+/* line 179, ../sass/_bootstrap-override.scss */
 .table-hover > tbody > tr:hover .progress {
   background-color: white;
 }
 
-/* line 186, ../sass/_bootstrap-override.scss */
+/* line 187, ../sass/_bootstrap-override.scss */
 .dropdown-menu {
   font-size: 13px;
 }
-/* line 189, ../sass/_bootstrap-override.scss */
+/* line 190, ../sass/_bootstrap-override.scss */
 .dropdown-menu > li > a {
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-/* line 199, ../sass/_bootstrap-override.scss */
+/* line 200, ../sass/_bootstrap-override.scss */
 .nav-tabs {
   border-bottom: none;
   background-color: #dddddd;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 204, ../sass/_bootstrap-override.scss */
+/* line 205, ../sass/_bootstrap-override.scss */
 .nav-tabs > li {
   margin-bottom: 0;
 }
-/* line 206, ../sass/_bootstrap-override.scss */
+/* line 207, ../sass/_bootstrap-override.scss */
 .nav-tabs > li > a {
   padding: 12px 18px;
   border: none;
@@ -17271,30 +17282,30 @@ legend {
   -o-transition: color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out;
 }
-/* line 211, ../sass/_bootstrap-override.scss */
+/* line 212, ../sass/_bootstrap-override.scss */
 .nav-tabs > li > a:hover {
   background-color: transparent;
   color: #555555;
 }
-/* line 218, ../sass/_bootstrap-override.scss */
+/* line 219, ../sass/_bootstrap-override.scss */
 .nav-tabs > li.open > a, .nav-tabs > li.open > a:hover, .nav-tabs > li.open > a:focus {
   background-color: white;
   color: #555555;
 }
-/* line 227, ../sass/_bootstrap-override.scss */
+/* line 228, ../sass/_bootstrap-override.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   border: none;
   -webkit-box-shadow: 1px 1px 2px #cccccc;
   box-shadow: 1px 1px 2px #cccccc;
 }
 
-/* line 237, ../sass/_bootstrap-override.scss */
+/* line 238, ../sass/_bootstrap-override.scss */
 .tab-content {
   position: relative;
   z-index: 1;
   background-color: white;
 }
-/* line 241, ../sass/_bootstrap-override.scss */
+/* line 242, ../sass/_bootstrap-override.scss */
 .tab-content > .tab-pane {
   padding: 20px;
 }
@@ -17309,37 +17320,37 @@ legend {
   clear: both;
 }
 
-/* line 259, ../sass/_bootstrap-override.scss */
+/* line 260, ../sass/_bootstrap-override.scss */
 .tab-content {
   overflow: auto;
 }
 
-/* line 264, ../sass/_bootstrap-override.scss */
+/* line 265, ../sass/_bootstrap-override.scss */
 .tabs-below > .nav-tabs,
 .tabs-right > .nav-tabs,
 .tabs-left > .nav-tabs {
   border-bottom: 0;
 }
 
-/* line 271, ../sass/_bootstrap-override.scss */
+/* line 272, ../sass/_bootstrap-override.scss */
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
   display: none;
 }
 
-/* line 275, ../sass/_bootstrap-override.scss */
+/* line 276, ../sass/_bootstrap-override.scss */
 .tab-content > .active,
 .pill-content > .active {
   display: block;
 }
 
-/* line 284, ../sass/_bootstrap-override.scss */
+/* line 285, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li,
 .tabs-right > .nav-tabs > li {
   float: none;
 }
 
-/* line 288, ../sass/_bootstrap-override.scss */
+/* line 289, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
   min-width: 74px;
@@ -17347,19 +17358,19 @@ legend {
   margin-bottom: 3px;
 }
 
-/* line 295, ../sass/_bootstrap-override.scss */
+/* line 296, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li:last-child > a,
 .tabs-right > .nav-tabs > li:last-child > a {
   margin-bottom: 0;
 }
 
-/* line 301, ../sass/_bootstrap-override.scss */
+/* line 302, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs {
   float: left;
   border-top-right-radius: 0;
 }
 
-/* line 305, ../sass/_bootstrap-override.scss */
+/* line 306, ../sass/_bootstrap-override.scss */
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
   -moz-border-radius: 4px 0 0 4px;
@@ -17367,13 +17378,13 @@ legend {
   border-radius: 4px 0 0 4px;
 }
 
-/* line 311, ../sass/_bootstrap-override.scss */
+/* line 312, ../sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs {
   float: right;
   border-top-left-radius: 0;
 }
 
-/* line 315, ../sass/_bootstrap-override.scss */
+/* line 316, ../sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
   -moz-border-radius: 0 4px 4px 0;
@@ -17381,42 +17392,42 @@ legend {
   border-radius: 0 4px 4px 0;
 }
 
-/* line 320, ../sass/_bootstrap-override.scss */
+/* line 321, ../sass/_bootstrap-override.scss */
 .tabs-right > .nav-tabs > li.active > a {
   -webkit-box-shadow: -1px 1px 2px #cccccc;
   box-shadow: -1px 1px 2px #cccccc;
 }
 
-/* line 329, ../sass/_bootstrap-override.scss */
+/* line 330, ../sass/_bootstrap-override.scss */
 .navbar {
   border: none;
   font-size: 13px;
   font-weight: 500;
 }
-/* line 334, ../sass/_bootstrap-override.scss */
+/* line 335, ../sass/_bootstrap-override.scss */
 .navbar h5 {
   font-size: 13px;
 }
-/* line 338, ../sass/_bootstrap-override.scss */
+/* line 339, ../sass/_bootstrap-override.scss */
 .navbar .deemphasize {
   font-size: 12px;
 }
 
-/* line 344, ../sass/_bootstrap-override.scss */
+/* line 345, ../sass/_bootstrap-override.scss */
 .navbar-form .form-control {
   font-size: 13px;
 }
-/* line 348, ../sass/_bootstrap-override.scss */
+/* line 349, ../sass/_bootstrap-override.scss */
 .navbar-form .input-group {
   width: 245px;
 }
-/* line 352, ../sass/_bootstrap-override.scss */
+/* line 353, ../sass/_bootstrap-override.scss */
 .navbar-form .input-group-addon {
   color: #666666;
 }
 
 @media (min-width: 768px) {
-  /* line 359, ../sass/_bootstrap-override.scss */
+  /* line 360, ../sass/_bootstrap-override.scss */
   .container > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-header,
@@ -17426,66 +17437,66 @@ legend {
   }
 }
 
-/* line 368, ../sass/_bootstrap-override.scss */
+/* line 369, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav {
   float: left;
   margin-left: 15px;
   margin-right: 15px;
 }
-/* line 371, ../sass/_bootstrap-override.scss */
+/* line 372, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav.navbar-right {
   float: right;
 }
 @media (max-width: 767px) {
-  /* line 368, ../sass/_bootstrap-override.scss */
+  /* line 369, ../sass/_bootstrap-override.scss */
   .navbar-header > .navbar-nav {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  /* line 382, ../sass/_bootstrap-override.scss */
+  /* line 383, ../sass/_bootstrap-override.scss */
   .navbar-header > .navbar-nav + .navbar-brand {
     height: 60px;
     line-height: 30px;
   }
 }
-/* line 388, ../sass/_bootstrap-override.scss */
+/* line 389, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav > li {
   float: left;
 }
-/* line 390, ../sass/_bootstrap-override.scss */
+/* line 391, ../sass/_bootstrap-override.scss */
 .navbar-header > .navbar-nav > li > a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 @media (min-width: 768px) {
-  /* line 398, ../sass/_bootstrap-override.scss */
+  /* line 399, ../sass/_bootstrap-override.scss */
   .navbar-nav.navbar-right:last-child {
     margin-right: 0;
   }
 }
-/* line 408, ../sass/_bootstrap-override.scss */
+/* line 409, ../sass/_bootstrap-override.scss */
 .breadcrumb {
   color: #999999;
 }
-/* line 411, ../sass/_bootstrap-override.scss */
+/* line 412, ../sass/_bootstrap-override.scss */
 .breadcrumb > .active {
   font-weight: 600;
 }
-/* line 415, ../sass/_bootstrap-override.scss */
+/* line 416, ../sass/_bootstrap-override.scss */
 .content .breadcrumb {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 425, ../sass/_bootstrap-override.scss */
+/* line 426, ../sass/_bootstrap-override.scss */
 .btn-rounded {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 
-/* line 429, ../sass/_bootstrap-override.scss */
+/* line 430, ../sass/_bootstrap-override.scss */
 .btn-gray {
   color: #555555;
   background-color: #dddddd;
@@ -17512,51 +17523,51 @@ legend {
   background-color: #555555;
 }
 
-/* line 433, ../sass/_bootstrap-override.scss */
+/* line 434, ../sass/_bootstrap-override.scss */
 .btn-link:focus,
 .btn-link:active:focus,
 .btn-link.active:focus {
   outline: 0;
 }
 
-/* line 443, ../sass/_bootstrap-override.scss */
+/* line 444, ../sass/_bootstrap-override.scss */
 .label {
   font-size: 11px;
   font-weight: 600;
 }
 
-/* line 453, ../sass/_bootstrap-override.scss */
+/* line 454, ../sass/_bootstrap-override.scss */
 .btn-toolbar {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* line 462, ../sass/_bootstrap-override.scss */
+/* line 463, ../sass/_bootstrap-override.scss */
 .progress {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 466, ../sass/_bootstrap-override.scss */
+/* line 467, ../sass/_bootstrap-override.scss */
 .progress-bar {
   border-radius: 4px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 471, ../sass/_bootstrap-override.scss */
+/* line 472, ../sass/_bootstrap-override.scss */
 .progress-sm {
   height: 10px;
   margin-bottom: 10px;
 }
 
-/* line 476, ../sass/_bootstrap-override.scss */
+/* line 477, ../sass/_bootstrap-override.scss */
 .progress-xs {
   height: 5px;
   margin-bottom: 10px;
 }
 
-/* line 482, ../sass/_bootstrap-override.scss */
+/* line 483, ../sass/_bootstrap-override.scss */
 .progress-bar-gray {
   background-color: #555555;
 }
@@ -17567,7 +17578,7 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 486, ../sass/_bootstrap-override.scss */
+/* line 487, ../sass/_bootstrap-override.scss */
 .progress-bar-gray-light {
   background-color: #999999;
 }
@@ -17578,57 +17589,57 @@ legend {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
 }
 
-/* line 496, ../sass/_bootstrap-override.scss */
+/* line 497, ../sass/_bootstrap-override.scss */
 .widget-body.no-padding > .list-group {
   margin: 0;
 }
-/* line 499, ../sass/_bootstrap-override.scss */
+/* line 500, ../sass/_bootstrap-override.scss */
 .widget-body.no-padding > .list-group .list-group-item {
   border-width: 1px 0;
 }
 
-/* line 507, ../sass/_bootstrap-override.scss */
+/* line 508, ../sass/_bootstrap-override.scss */
 .list-group-lg .list-group-item {
   padding: 15px 15px;
 }
-/* line 511, ../sass/_bootstrap-override.scss */
+/* line 512, ../sass/_bootstrap-override.scss */
 .list-group:last-of-type .list-group-item:last-child {
   border-bottom: 0;
 }
 
-/* line 520, ../sass/_bootstrap-override.scss */
+/* line 521, ../sass/_bootstrap-override.scss */
 .panel {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 525, ../sass/_bootstrap-override.scss */
+/* line 526, ../sass/_bootstrap-override.scss */
 .panel-heading {
   padding-top: 13px;
   padding-bottom: 13px;
 }
 
-/* line 531, ../sass/_bootstrap-override.scss */
+/* line 532, ../sass/_bootstrap-override.scss */
 .panel-title > a {
   display: block;
 }
-/* line 534, ../sass/_bootstrap-override.scss */
+/* line 535, ../sass/_bootstrap-override.scss */
 .panel-title > a > i {
   -webkit-transition: -webkit-transform 0.35s ease;
   -moz-transition: -moz-transform 0.35s ease;
   -o-transition: -o-transform 0.35s ease;
   transition: transform 0.35s ease;
 }
-/* line 538, ../sass/_bootstrap-override.scss */
+/* line 539, ../sass/_bootstrap-override.scss */
 .panel-title > a.collapsed {
   color: #999999;
 }
-/* line 540, ../sass/_bootstrap-override.scss */
+/* line 541, ../sass/_bootstrap-override.scss */
 .panel-title > a.collapsed:hover {
   color: #343434;
 }
-/* line 543, ../sass/_bootstrap-override.scss */
+/* line 544, ../sass/_bootstrap-override.scss */
 .panel-title > a.collapsed > i {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -17636,103 +17647,103 @@ legend {
   transform: rotate(180deg);
 }
 
-/* line 551, ../sass/_bootstrap-override.scss */
+/* line 552, ../sass/_bootstrap-override.scss */
 h1.panel-title, .h1.panel-title {
   font-size: 36px;
 }
 
-/* line 552, ../sass/_bootstrap-override.scss */
+/* line 553, ../sass/_bootstrap-override.scss */
 h2.panel-title, .h2.panel-title {
   font-size: 30px;
 }
 
-/* line 553, ../sass/_bootstrap-override.scss */
+/* line 554, ../sass/_bootstrap-override.scss */
 h3.panel-title, .h3.panel-title {
   font-size: 24px;
 }
 
-/* line 554, ../sass/_bootstrap-override.scss */
+/* line 555, ../sass/_bootstrap-override.scss */
 h4.panel-title, .h4.panel-title {
   font-size: 18px;
 }
 
-/* line 555, ../sass/_bootstrap-override.scss */
+/* line 556, ../sass/_bootstrap-override.scss */
 h5.panel-title, .h5.panel-title {
   font-size: 14px;
 }
 
-/* line 556, ../sass/_bootstrap-override.scss */
+/* line 557, ../sass/_bootstrap-override.scss */
 h6.panel-title, .h6.panel-title {
   font-size: 12px;
 }
 
-/* line 559, ../sass/_bootstrap-override.scss */
+/* line 560, ../sass/_bootstrap-override.scss */
 .dropdown-menu > .panel {
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-/* line 565, ../sass/_bootstrap-override.scss */
+/* line 566, ../sass/_bootstrap-override.scss */
 .panel-heading {
   border-color: #dddddd;
 }
 
-/* line 573, ../sass/_bootstrap-override.scss */
+/* line 574, ../sass/_bootstrap-override.scss */
 .tooltip-inner {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 
-/* line 582, ../sass/_bootstrap-override.scss */
+/* line 583, ../sass/_bootstrap-override.scss */
 .alert-sm {
   padding: 10px 12px;
   font-size: 13px;
 }
-/* line 586, ../sass/_bootstrap-override.scss */
+/* line 587, ../sass/_bootstrap-override.scss */
 .alert-sm .close {
   font-size: 18px;
 }
 
-/* line 591, ../sass/_bootstrap-override.scss */
+/* line 592, ../sass/_bootstrap-override.scss */
 .alert-dismissable .close {
   position: static;
   color: black;
 }
 
-/* line 600, ../sass/_bootstrap-override.scss */
+/* line 601, ../sass/_bootstrap-override.scss */
 .popover {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 605, ../sass/_bootstrap-override.scss */
+/* line 606, ../sass/_bootstrap-override.scss */
 .popover-content {
   padding: 20px;
 }
 
-/* line 616, ../sass/_bootstrap-override.scss */
+/* line 617, ../sass/_bootstrap-override.scss */
 .modal-open .content-wrap, .modal-open.nav-collapsed .content-wrap, .modal-open.nav-static .content-wrap {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
   position: static;
 }
-/* line 623, ../sass/_bootstrap-override.scss */
+/* line 624, ../sass/_bootstrap-override.scss */
 .modal-open .sidebar, .modal-open.nav-collapsed .sidebar, .modal-open.nav-static .sidebar {
   z-index: -1;
 }
 
-/* line 633, ../sass/_bootstrap-override.scss */
+/* line 634, ../sass/_bootstrap-override.scss */
 .pagination {
   font-weight: 400;
 }
-/* line 636, ../sass/_bootstrap-override.scss */
+/* line 637, ../sass/_bootstrap-override.scss */
 .pagination > li {
   display: inline;
 }
-/* line 638, ../sass/_bootstrap-override.scss */
+/* line 639, ../sass/_bootstrap-override.scss */
 .pagination > li > a,
 .pagination > li > span {
   border-radius: 4px;
@@ -17740,7 +17751,7 @@ h6.panel-title, .h6.panel-title {
 }
 
 @media screen and (min-width: 768px) {
-  /* line 650, ../sass/_bootstrap-override.scss */
+  /* line 651, ../sass/_bootstrap-override.scss */
   .jumbotron {
     padding-left: 30px;
     padding-right: 30px;
