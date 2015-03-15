@@ -1,6 +1,6 @@
 {
   "name": "sing",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Sing Dashboard App",
   "main": "index.html",
   "authors": [
@@ -21,6 +21,7 @@
     "animate.css": "~3.2.0",
     "jquery-touchswipe": "~1.6.8",
     "awesome-bootstrap-checkbox": "~0.3.3",
+
     "backbone": "~1.1.2",
     "backbone.paginator": "~2.0.2",
     "backgrid": "~0.3.5",
