@@ -1,4 +1,4 @@
-Sing App v1.1.0
+Sing App v1.1.1
 =========
 
 **Sing Web App** is a brand new admin dashboard template with pixel perfect stylish design and tons of ready-to-use programming
@@ -66,6 +66,10 @@ Please note that support is provided via email as mentioned in the documentation
 
 Changelog
 -
+
+**Version 1.1.1**
+
+  - Angular Datatables fix (Angular version)
 
 **Version 1.1.0**
 
