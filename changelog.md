@@ -2,6 +2,14 @@
 Changelog
 --
 
+**Version 1.2.0**
+
+  - Bootstrap 3.3.4 update
+
+Version 1.2.0 upgrade instructions
+
+1.2.0 upgrade introduces no new features, so no special steps needed.
+
 **Version 1.1.1**
 
   - Angular Datatables fix (Angular version)

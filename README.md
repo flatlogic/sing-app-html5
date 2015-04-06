@@ -5,9 +5,9 @@ Sing App v1.2.0
 features. Sing App goes beyond normal admin templates and provides you entire **intuitive** programming framework which boosts
 the speed, quality and maintenance of your web application.
 
-Available in two versions: [**basic ajax**](http://demo.flatlogic.com/sing-bootstrapbay/1.1/ajax/) and [**Angular js**](http://demo.flatlogic.com/sing-bootstrapbay/1.1/angular/)!
+Available in two versions: [**basic ajax**](http://demo.flatlogic.com/sing/ajax/) and [**Angular js**](http://demo.flatlogic.com/sing/angular/)!
 
-![Sing Preview](http://demo.flatlogic.com/sing-bootstrapbay/ajax/img/sing-preview.png)
+![Sing Preview](http://demo.flatlogic.com/sing/ajax/img/sing-preview.png)
 
 
 Sing App is **mobile-first** dashboard with gestures-enabled touch interface.  
