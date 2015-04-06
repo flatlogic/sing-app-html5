@@ -1,11 +1,11 @@
-Sing App v1.1.1
+Sing App v1.2.0
 =========
 
 **Sing Web App** is a brand new admin dashboard template with pixel perfect stylish design and tons of ready-to-use programming
 features. Sing App goes beyond normal admin templates and provides you entire **intuitive** programming framework which boosts
 the speed, quality and maintenance of your web application.
 
-Available in two versions: [**basic ajax**](http://demo.flatlogic.com/sing-bootstrapbay/ajax/) and [**Angular js**](http://demo.flatlogic.com/sing-bootstrapbay/angular/)!
+Available in two versions: [**basic ajax**](http://demo.flatlogic.com/sing-bootstrapbay/1.1/ajax/) and [**Angular js**](http://demo.flatlogic.com/sing-bootstrapbay/1.1/angular/)!
 
 ![Sing Preview](http://demo.flatlogic.com/sing-bootstrapbay/ajax/img/sing-preview.png)
 
@@ -66,6 +66,10 @@ Please note that support is provided via email as mentioned in the documentation
 
 Changelog
 -
+
+**Version 1.2.0**
+
+  - Bootstrap 3.3.4 update
 
 **Version 1.1.1**
 
