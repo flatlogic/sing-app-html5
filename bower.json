@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "jquery": "2.1.4",
-    "jquery-pjax": "~1.9.4",
+    "jquery-pjax": "1.9.6",
     "bootstrap-sass": "3.3.4",
     "font-awesome": "~4.3.0",
     "bootstrap-select": "~1.6.3",
