@@ -19,7 +19,7 @@
     "widgster": "0.0.2",
     "pace.js": "git://github.com/HubSpot/pace.git#v0.7.1",
     "animate.css": "3.4.0",
-    "jquery-touchswipe": "~1.6.8",
+    "jquery-touchswipe": "1.6.9",
     "awesome-bootstrap-checkbox": "~0.3.3",
 
     "backbone": "~1.1.2",
