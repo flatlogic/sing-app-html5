@@ -10,7 +10,7 @@
     "jquery": "2.1.4",
     "jquery-pjax": "1.9.6",
     "bootstrap-sass": "3.3.5",
-    "font-awesome": "~4.3.0",
+    "font-awesome": "4.4.0",
     "bootstrap-select": "~1.6.3",
     "select2": "~3.5.2",
     "select2-bootstrap-css": "~1.4.6",
