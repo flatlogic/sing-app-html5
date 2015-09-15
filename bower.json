@@ -29,7 +29,7 @@
     "jquery.sparkline": "http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js",
     "d3": "3.5.6",
     "rickshaw": "1.5.1",
-    "nvd3": "~1.7.1",
+    "nvd3": "1.8.1",
     "morris.js": "~0.5.1",
     "flot": "~0.8.3",
     "flot.animator": "https://github.com/Codicode/flotanimator.git#3c256c0183d713fd3bf41d04417873928eb1a751",
