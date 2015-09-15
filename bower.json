@@ -28,7 +28,7 @@
     "backgrid-paginator": "03632df8ad238e3d043c0fd471a6c78494e1bdfc",
     "jquery.sparkline": "http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.min.js",
     "d3": "3.5.6",
-    "rickshaw": "~1.5.1",
+    "rickshaw": "1.5.1",
     "nvd3": "~1.7.1",
     "morris.js": "~0.5.1",
     "flot": "~0.8.3",
