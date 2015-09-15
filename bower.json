@@ -31,7 +31,7 @@
     "rickshaw": "1.5.1",
     "nvd3": "1.8.1",
     "morris.js": "0.5.1",
-    "flot": "~0.8.3",
+    "flot": "0.8.3",
     "flot.animator": "https://github.com/Codicode/flotanimator.git#3c256c0183d713fd3bf41d04417873928eb1a751",
     "flot-orderBars": "https://github.com/emmerich/flot-orderBars.git#d44ff4f2fec4c8bb1254e59567ee39fa3684372e",
     "jquery-autosize": "~1.18.17",
