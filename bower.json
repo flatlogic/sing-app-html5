@@ -42,7 +42,7 @@
     "holderjs": "2.8.0",
     "dropzone": "4.0.1",
     "jQuery-Mapael": "https://github.com/neveldo/jQuery-Mapael.git#v1.1.0",
-    "gmaps": "~0.4.16",
+    "gmaps": "0.4.19",
     "markdown": "~0.5.0",
     "to-markdown": "~0.0.3",
     "bootstrap-markdown": "~2.8.0",
