@@ -36,7 +36,7 @@
     "flot-orderBars": "https://github.com/emmerich/flot-orderBars.git#d44ff4f2fec4c8bb1254e59567ee39fa3684372e",
     "jquery-autosize": "1.18.18",
     "bootstrap3-wysihtml5": "git://github.com/schnawel007/bootstrap3-wysihtml5.git#5f07036cb228c1cc8bab2d271701ceff0de66828",
-    "switchery": "~0.7.0",
+    "switchery": "0.8.1",
     "eonasdan-bootstrap-datetimepicker": "~3.1.3",
     "mjolnic-bootstrap-colorpicker": "~2.0.1",
     "holderjs": "~2.5.0",
