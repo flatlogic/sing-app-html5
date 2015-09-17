@@ -2,6 +2,38 @@
 Changelog
 --
 
+**Version 2.0.0**
+
+  - Component structure upgrade for angular version (better project organization)
+  - Profile page added
+  - Angular chat App
+  - Full library list update
+  - Bootstrap 3.3.5 update
+
+
+Version 2.0.0 upgrade instructions
+
+Ajax version. Following files are changed:
+
+  - bower.json
+  - profile.html (**new**)
+  - sass/_base.scss
+  - sass/_widgets.scss
+  - sass/_custom-libs-override.scss
+
+Angular version. The entire application structure has been rewritten according to latest angular/front-end best practices.
+Codebase is now organized in a modules structure (see `src/app/modules/` folder). To start the app you need to run
+following commands:
+
+  1. `npm install -g gulp bower`
+  2. `npm install`
+  3. `bower install`
+  4. `gulp serve`
+  5. Go to [http://localhost:3000/](http://localhost:3000/)
+
+That's it. It will launch a local web server and serve the app from project folder.
+
+
 **Version 1.2.0**
 
   - Bootstrap 3.3.4 update

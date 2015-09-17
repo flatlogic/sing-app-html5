@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sing - List Groups</title>
+    <title>Sing - Profile</title>
     <link href="css/application.min.css" rel="stylesheet">
     <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
     <!--[if IE 9]>
@@ -86,7 +86,7 @@
                     Charts
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a href="profile.html">
                     <span class="icon">
                         <i class="glyphicon glyphicon-user"></i>
@@ -113,21 +113,21 @@
                     <li><a href="form_wizard.html">Form Wizard</a></li>
                 </ul>
             </li>
-            <li class="active">
-                <a href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
+            <li>
+                <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="glyphicon glyphicon-tree-conifer"></i>
                     </span>
                     UI Elements
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-ui" class="collapse in">
+                <ul id="sidebar-ui" class="collapse">
                     <li><a href="ui_components.html">Components</a></li>
                     <li><a href="ui_notifications.html">Notifications</a></li>
                     <li><a href="ui_icons.html">Icons</a></li>
                     <li><a href="ui_buttons.html">Buttons</a></li>
                     <li><a href="ui_tabs_accordion.html">Tabs & Accordion</a></li>
-                    <li class="active"><a href="ui_list_groups.html">List Groups</a></li>
+                    <li><a href="ui_list_groups.html">List Groups</a></li>
                 </ul>
             </li>
             <li>
@@ -709,132 +709,166 @@
 <div class="content-wrap">
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
-        <!-- jquery ui sortable chrome overflow-x fix. when set to hidden does not behaves as expected. resetting back
-             just for this page.
-             http://bugs.jqueryui.com/ticket/9588 -->
-        <style>
-            body{
-                overflow-x: visible;
-            }
-        </style>
         <ol class="breadcrumb">
             <li>YOU ARE HERE</li>
-            <li class="active">UI List Groups</li>
+            <li class="active">Profile</li>
         </ol>
-        <h1 class="page-title">Lists - <span class="fw-semi-bold">Sortable Groups</span></h1>
-        <section class="widget">
-            <header>
-                <h4>
-                    Grouped <span class="fw-semi-bold">Lists</span>
-                </h4>
-                <div class="widget-controls">
-                    <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#"><i class="fa fa-refresh"></i></a>
-                    <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <h3>Closest <span class="fw-semi-bold">Stars</span></h3>
-                <p>Try to play around with this list. Are you ready to pass an exam on astronomy? </p>
-                <ul class="list-group list-group-sortable mt-lg" id="sortable">
-                    <li class="list-group-item">
-                        <i class="fa fa-sort"></i>
-                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
-                        &nbsp;&nbsp;&nbsp; 03 &nbsp;&nbsp;&nbsp;
-                        Barnard's Star
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa fa-sort"></i>
-                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
-                        &nbsp;&nbsp;&nbsp; 01 &nbsp;&nbsp;&nbsp;
-                        The Sun
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa fa-sort"></i>
-                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
-                        &nbsp;&nbsp;&nbsp; 04 &nbsp;&nbsp;&nbsp;
-                        Wolf 359
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa fa-sort"></i>
-                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
-                        &nbsp;&nbsp;&nbsp; 02 &nbsp;&nbsp;&nbsp;
-                        Proxima Centauri
-                    </li>
-                    <li class="list-group-item">
-                        <i class="fa fa-sort"></i>
-                        <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
-                        &nbsp;&nbsp;&nbsp; 05 &nbsp;&nbsp;&nbsp;
-                        Lalande 21185
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="widget mt-lg">
-            <header>
-                <h4>
-                    List <span class="fw-semi-bold">Groups</span>
-                </h4>
-                <div class="widget-controls">
-                    <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#"><i class="fa fa-refresh"></i></a>
-                    <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <h3>Nestable <span class="fw-semi-bold">List</span></h3>
-                <p class="fs-mini">There is a scientific theory that you can arrange this list in such way that there will
-                    be no more saddness
-                in the whole world. Can you? Touch devices supported</p>
-                <div class="row">
-                    <div class="col-md-6 mt-lg">
-                        <div class="dd" id="nestable1">
-                            <ol class="dd-list">
-                                <li class="dd-item" data-id="1">
-                                    <div class="dd-handle">Item 1</div>
-                                </li>
-                                <li class="dd-item" data-id="2">
-                                    <div class="dd-handle">Item 2</div>
-                                    <ol class="dd-list">
-                                        <li class="dd-item" data-id="3"><div class="dd-handle">Item 3</div></li>
-                                        <li class="dd-item" data-id="4"><div class="dd-handle">Item 4</div></li>
-                                        <li class="dd-item" data-id="5">
-                                            <div class="dd-handle">Item 5</div>
-                                            <ol class="dd-list">
-                                                <li class="dd-item" data-id="6"><div class="dd-handle">Item 6</div></li>
-                                                <li class="dd-item" data-id="7"><div class="dd-handle">Item 7</div></li>
-                                                <li class="dd-item" data-id="8"><div class="dd-handle">Item 8</div></li>
-                                            </ol>
-                                        </li>
-                                        <li class="dd-item" data-id="9"><div class="dd-handle">Item 9</div></li>
-                                    </ol>
-                                </li>
-                            </ol>
+        <h1 class="page-title">User - <span class="fw-semi-bold">Profile</span></h1>
+        <div class="row">
+            <div class="col-md-6">
+                <section class="widget bg-transparent">
+                    <div class="widget-body">
+                        <div class="widget-top-overflow text-white">
+                            <div class="height-250 overflow-hidden">
+                                <img class="img-responsive" src="demo/img/pictures/19.jpg">
+                            </div>
+                            <div class="btn-toolbar">
+                                <a href="#" class="btn btn-outline btn-sm pull-right">
+                                    <i class="fa fa-twitter mr-xs"></i>
+                                    Follow
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5 text-center">
+                                <div class="post-user post-user-profile">
+                                    <span class="thumb-xlg">
+                                        <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+                                    </span>
+                                    <h4 class="fw-normal">Adam <span class="fw-semi-bold">Johns</span></h4>
+                                    <p>UI/UX designer</p>
+                                    <a href="#" class="btn btn-danger btn-sm mt">
+                                        &nbsp;Send
+                                        <i class="fa fa-envelope ml-xs"></i>&nbsp;
+                                    </a>
+                                    <ul class="contacts">
+                                        <li><i class="fa fa-phone fa-fw mr-xs"></i><a href="#"> +375 29 555-55-55</a></li>
+                                        <li><i class="fa fa-envelope fa-fw mr-xs"></i><a href="#"> psmith@example.com</a></li>
+                                        <li><i class="fa fa-map-marker fa-fw mr-xs"></i><a href="#"> Minsk, Belarus</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="stats-row stats-row-profile mt text-right">
+                                    <div class="stat-item">
+                                        <p class="value">251</p>
+                                        <h5 class="name">Posts</h5>
+                                    </div>
+                                    <div class="stat-item">
+                                        <p class="value">9.38%</p>
+                                        <h5 class="name">Conversion</h5>
+                                    </div>
+                                    <div class="stat-item">
+                                        <p class="value">842</p>
+                                        <h5 class="name">Followers</h5>
+                                    </div>
+                                </div>
+                                <p class="text-right mt-lg">
+                                    <a href="#" class="label label-warning"> UI/UX </a>
+                                    <a href="#" class="label label-danger ml-xs"> Web Design </a>
+                                    <a href="#" class="label label-default ml-xs"> Mobile Apps </a>
+                                </p>
+                                <p class="lead mt-lg">
+                                    My name is Adam Johns and here is my new Sing user profile page.
+                                </p>
+                                <p>
+                                    I love reading people's summaries page especially those who are in the same industry as me.
+                                    Sometimes it's much easier to find your concentration during the night.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 mt-lg">
-                        <div class="dd" id="nestable2">
-                            <ol class="dd-list">
-                                <li class="dd-item" data-id="13">
-                                    <div class="dd-handle">Item 13</div>
-                                </li>
-                                <li class="dd-item" data-id="14">
-                                    <div class="dd-handle">Item 14</div>
-                                </li>
-                                <li class="dd-item" data-id="15">
-                                    <div class="dd-handle">Item 15</div>
-                                    <ol class="dd-list">
-                                        <li class="dd-item" data-id="16"><div class="dd-handle">Item 16</div></li>
-                                        <li class="dd-item" data-id="17"><div class="dd-handle">Item 17</div></li>
-                                        <li class="dd-item" data-id="18"><div class="dd-handle">Item 18</div></li>
-                                    </ol>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
+            <div class="col-md-6">
+                <section class="activities">
+                    <h2>Activities</h2>
+                    <section class="event">
+                        <span class="thumb-sm avatar pull-left mr-sm">
+                            <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+                        </span>
+                        <h4 class="event-heading"><a href="#">Bob Nilson</a> <small><a href="#">@nils</a></small></h4>
+                        <p class="fs-sm text-muted">February 22, 2014 at 01:59 PM</p>
+                        <p class="fs-mini">
+                            There is no such thing as maturity. There is instead an ever-evolving process of maturing.
+                            Because when there is a maturity, there is ...
+                        </p>
+                        <footer>
+                            <ul class="post-links">
+                                <li><a href="#">1 hour</a></li>
+                                <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
+                                <li><a href="#">Comment</a></li>
+                            </ul>
+                        </footer>
+                    </section>
+                    <section class="event">
+                        <h4 class="event-heading"><a href="#">Jessica Smith</a> <small>@jess</small></h4>
+                        <p class="fs-sm text-muted">February 22, 2014 at 01:59 PM</p>
+                        <p class="fs-mini">
+                            Check out this awesome photo I made in Italy last summer. Seems it was lost somewhere deep inside
+                            my brand new HDD 40TB. Thanks god I found it!
+                        </p>
+                        <footer>
+                            <div class="clearfix">
+                                <ul class="post-links mt-sm pull-left">
+                                    <li><a href="#">1 hour</a></li>
+                                    <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
+                                    <li><a href="#">Comment</a></li>
+                                </ul>
+
+                                <span class="thumb thumb-sm pull-right">
+                                    <a href="#">
+                                        <img class="img-circle" src="demo/img/people/a1.jpg">
+                                    </a>
+                                </span>
+                                <span class="thumb thumb-sm pull-right">
+                                    <a href="#"><img class="img-circle" src="demo/img/people/a5.jpg"></a>
+                                </span>
+                                <span class="thumb thumb-sm pull-right">
+                                    <a href="#"><img class="img-circle" src="demo/img/people/a3.jpg"></a>
+                                </span>
+                            </div>
+                            <ul class="post-comments mt-sm">
+                                <li>
+                                    <span class="thumb-xs avatar pull-left mr-sm">
+                                        <img class="img-circle" src="demo/img/people/a1.jpg" alt="...">
+                                    </span>
+                                    <div class="comment-body">
+                                        <h6 class="author fw-semi-bold">Ignacio Abad <small>6 mins ago</small></h6>
+                                        <p>Hey, have you heard anything about that?</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="thumb-xs avatar pull-left mr-sm">
+                                        <img class="img-circle" src="img/avatar.png" alt="...">
+                                    </span>
+                                    <div class="comment-body">
+                                        <input class="form-control input-sm" type="text" placeholder="Write your comment...">
+                                    </div>
+                                </li>
+                            </ul>
+                        </footer>
+                    </section>
+                    <form class="mt" action="#">
+                        <div class="form-group mb-0">
+                            <label class="sr-only" for="new-event">New event</label>
+                            <textarea class="form-control" id="new-event" placeholder="Post something..." rows="3"></textarea>
+                        </div>
+                        <div class="btn-toolbar">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-gray">
+                                    <i class="fa fa-camera fa-lg"></i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-gray">
+                                    <i class="fa fa-map-marker fa-lg"></i>
+                                </a>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-sm pull-right">Post</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
     </main>
 </div>
 <!-- The Loader. Is shown when pjax happens -->
@@ -861,14 +895,8 @@
 <script src="js/app.js"></script>
 
 <!-- page specific libs -->
-<script src="vendor/jquery-ui/ui/core.js"></script>
-<script src="vendor/jquery-ui/ui/widget.js"></script>
-<script src="vendor/jquery-ui/ui/mouse.js"></script>
-<script src="vendor/jquery-ui/ui/sortable.js"></script>
-<script src="vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-<script src="vendor/jquery.nestable/jquery.nestable.js"></script>
 
 <!-- page specific js -->
-<script src="js/ui-list-groups.js"></script>
+
 </body>
 </html>
