@@ -431,6 +431,15 @@ legend {
   @include button-variant($text-color, $gray-semi-lighter, darken($gray-semi-lighter, 5%));
 }
 
+.btn-outline{
+  @include button-variant($white, transparent, $white);
+
+  &:hover,
+  &:focus {
+    background-color: rgba($white, .1);
+  }
+}
+
 .btn-link:focus,
 .btn-link:active:focus,
 .btn-link.active:focus{

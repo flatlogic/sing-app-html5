@@ -648,6 +648,80 @@
 }
 
 /***********************************/
+/**           Profile             **/
+/***********************************/
+
+.post-user-profile {
+  margin-top: -75px;
+
+  .contacts {
+    display: block;
+    margin-top: 25px;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-left: 0;
+    text-align: center;
+
+    > li {
+      display: inline-block;
+      line-height: 2.2;
+      list-style: none;
+      text-align: left;
+      margin: 0 10px;
+
+      @media (min-width: $screen-md-min) {
+        width: 150px;
+        white-space: nowrap;
+      }
+
+      > a {
+        color: lighten($text-color, 30%);
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          color: $text-color;
+        }
+      }
+    }
+
+    .fa {
+      font-size: $font-size-large;
+      vertical-align: middle;
+    }
+  }
+}
+
+.stats-row-profile {
+  .stat-item {
+    border-left: 0;
+    padding-left: 15px;
+    text-align: center;
+
+    @media (min-width: $screen-md-min) {
+      padding-right: 0;
+    }
+
+    .value {
+      font-size: 28px;
+      font-weight: $font-weight-base;
+    }
+  }
+}
+
+.activities{
+  margin-top: -20px;
+  h2 {
+    margin-left: 20px
+  }
+}
+.event{
+  .activities &{
+    margin-top: $line-height-computed;
+    width: 100%;
+  }
+}
+/***********************************/
 /**           Time Line           **/
 /***********************************/
 
@@ -687,14 +761,14 @@
 }
 
 .event{
+  background: $white;
+  border-radius: $border-radius-base;
+  padding: 20px 20px 0;
+  position: relative;
 
   .timeline & {
     float: right;
     width: 68%;
-    background: $white;
-    border-radius: $border-radius-base;
-    padding: 20px 20px 0;
-    position: relative;
 
     &:before{
       right: 100%;
@@ -706,24 +780,24 @@
       border-right-color: $white;
       top: 15px;
     }
+  }
 
-    > footer{
-      margin: 20px -20px 0;
-      padding: 10px 20px;
-      border-bottom-left-radius: $border-radius-base;
-      border-bottom-right-radius: $border-radius-base;
-      background-color: #f3f3f3;
+  .post-comments{
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 
-      @include clearfix();
+  > footer{
+    margin: 20px -20px 0;
+    padding: 10px 20px;
+    border-bottom-left-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+    background-color: #f3f3f3;
 
-      .thumb{
-        margin-left: 10px;
-      }
-    }
+    @include clearfix();
 
-    .post-comments{
-      margin-left: -20px;
-      margin-right: -20px;
+    .thumb{
+      margin-left: 10px;
     }
   }
 
