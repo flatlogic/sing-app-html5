@@ -51,7 +51,7 @@ $(function(){
         $("#destination").inputmask({mask: "99999"});
         $("#credit").inputmask({mask: "9999-9999-9999-9999"});
         $("#expiration-date").datetimepicker({
-            pickTime: false
+            format: false
         });
         $('#wizard').bootstrapWizard({
             onTabShow: function($activeTab, $navigation, index) {
