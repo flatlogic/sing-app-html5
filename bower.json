@@ -43,7 +43,7 @@
     "dropzone": "4.0.1",
     "jQuery-Mapael": "https://github.com/neveldo/jQuery-Mapael.git#v0.7.1",
     "gmaps": "0.4.19",
-    "markdown": "0.6.0-beta1",
+    "markdown": "0.5.0",
     "to-markdown": "1.2.1",
     "bootstrap-markdown": "~2.8.0",
     "seiyria-bootstrap-slider": "~4.4.2",
