@@ -63,7 +63,7 @@
     "shufflejs": "~3.0.2",
     "magnific-popup": "~1.0.0",
     "jquery-animateNumber": "https://github.com/aishek/jquery-animateNumber.git#v0.0.10",
-    "MetroJS": "https://github.com/drewgreenwell/MetroJS.git#b70806b32e070073c17677402e64ed909e24a6ef",
+    "MetroJS": "https://github.com/drewgreenwell/MetroJS.git#349ab828fe4deecff40496357d5bcba06f470413",
     "skycons": "https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed"
   },
   "private": true,
