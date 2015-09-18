@@ -60,7 +60,7 @@
     "messenger": "1.4.2",
     "jquery.easy-pie-chart": "~2.1.6",
     "fullcalendar": "~1.6.7",
-    "shufflejs": "~3.0.2",
+    "shufflejs": "3.1.1",
     "magnific-popup": "~1.0.0",
     "jquery-animateNumber": "https://github.com/aishek/jquery-animateNumber.git#v0.0.10",
     "MetroJS": "https://github.com/drewgreenwell/MetroJS.git#349ab828fe4deecff40496357d5bcba06f470413",
