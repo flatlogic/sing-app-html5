@@ -51,7 +51,7 @@
     "jvectormap": "http://jvectormap.com/binary/jquery-jvectormap-2.0.4.zip",
     "jvectormap-world": "http://jvectormap.com/js/jquery-jvectormap-world-mill.js",
     "parsleyjs": "2.2.0-rc1",
-    "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#62a9aca8cc61fdb496c4bf7b92e1ff70c698667e",
+    "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#44a6d38bcdebc2cb40f5344dd60581e381387ea4",
     "bootstrap-application-wizard": "git://github.com/amoffat/bootstrap-application-wizard.git#3768da3142f43428c5f63284407a2481a9e283d3",
     "jquery-ui": "~1.11.2",
     "jquery-ui-touch-punch": "git://github.com/furf/jquery-ui-touch-punch.git#4bc009145202d9c7483ba85f3a236a8f3470354d",
