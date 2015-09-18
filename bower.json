@@ -57,7 +57,7 @@
     "jquery-ui-touch-punch": "git://github.com/furf/jquery-ui-touch-punch.git#4bc009145202d9c7483ba85f3a236a8f3470354d",
     "datatables": "1.10.9",
     "jquery.nestable": "git://github.com/dbushell/Nestable.git#4f93032cfafe2002f24ed6bd7dc1510931498503",
-    "messenger": "~1.4.1",
+    "messenger": "1.4.2",
     "jquery.easy-pie-chart": "~2.1.6",
     "fullcalendar": "~1.6.7",
     "shufflejs": "~3.0.2",
