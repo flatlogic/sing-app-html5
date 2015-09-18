@@ -1,7 +1,7 @@
 $(function(){
     function initVMap(){
         $('#vmap').vectorMap({
-            map: 'world_mill_en',
+            map: 'world_mill',
             scaleColors: ['#C8EEFF', '#0071A4'],
             normalizeFunction: 'polynomial',
             focusOn:{
