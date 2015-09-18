@@ -53,7 +53,7 @@
     "parsleyjs": "2.2.0-rc1",
     "twitter-bootstrap-wizard": "git://github.com/VinceG/twitter-bootstrap-wizard.git#44a6d38bcdebc2cb40f5344dd60581e381387ea4",
     "bootstrap-application-wizard": "git://github.com/amoffat/bootstrap-application-wizard.git#3768da3142f43428c5f63284407a2481a9e283d3",
-    "jquery-ui": "~1.11.2",
+    "jquery-ui": "1.11.4",
     "jquery-ui-touch-punch": "git://github.com/furf/jquery-ui-touch-punch.git#4bc009145202d9c7483ba85f3a236a8f3470354d",
     "datatables": "~1.10.4",
     "jquery.nestable": "git://github.com/dbushell/Nestable.git#4f93032cfafe2002f24ed6bd7dc1510931498503",
