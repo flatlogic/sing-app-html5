@@ -70,6 +70,7 @@ Changelog
 
   - Component structure upgrade for angular version (better project organization)
   - Profile page added
+  - Angular seed version (minimal setup)
   - Angular chat App
   - Full library list update
   - Bootstrap 3.3.5 update
