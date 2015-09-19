@@ -771,7 +771,7 @@ input.parsley-error{
       }
     }
 
-    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
+    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-computed,  $border-radius-small);
   }
 }
 

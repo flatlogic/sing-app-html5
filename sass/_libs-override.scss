@@ -70,8 +70,28 @@
  */
 .pace .pace-progress{
   background: $brand-primary;
+  position: absolute;
+  top: $navbar-height;
 }
 
+.pace .pace-activity{
+  position: absolute;
+  top: $navbar-height + 15px;
+  border-width: 1px;
+  left: 15px;
+  right: auto;
+  width: 18px;
+  height: 18px;
+  border-top-color: $brand-primary;
+  border-left-color: $brand-primary;
+}
+
+
+
+.pace .pace-progress-inner{
+  right: -10px;
+  width: 10px;
+}
 /**
  * No More Tables
  * http://css-tricks.com/responsive-data-tables/
