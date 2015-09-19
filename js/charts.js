@@ -259,12 +259,10 @@ $(function(){
 
             chart.xAxis
                 .showMaxMin(false)
-                .ticks(1000)
                 .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
 
             chart.yAxis
                 .showMaxMin(false)
-                .ticks(0)
                 .tickFormat(d3.format(',f'));
 
             d3.select('#nvd31 svg')
@@ -293,12 +291,10 @@ $(function(){
 
             chart.xAxis
                 .showMaxMin(false)
-                .ticks(1000)
                 .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
 
             chart.yAxis
                 .showMaxMin(false)
-                .ticks(0)
                 .tickFormat(d3.format(',f'));
 
 //            chart.controls.margin({left: 0});

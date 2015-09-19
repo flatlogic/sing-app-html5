@@ -519,6 +519,7 @@ $slider-handle-size: 26px;
 .calendar .event{
   color: white;
   font-weight: bold;
+  background-color: transparent;
 
   &:hover{
     > a{

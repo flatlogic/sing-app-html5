@@ -321,7 +321,7 @@ $opacity-variants: (10: .1, 20: .2, 30: .3, 40: .4, 50: .5, 60: .6, 70: .7, 80: 
 
 @include property-variants('.opacity', 'opacity', $opacity-variants);
 
-$z-index-variants: (more: 1, less: -1);
+$z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 
 @include property-variants('.z-index', 'z-index', $z-index-variants);
 

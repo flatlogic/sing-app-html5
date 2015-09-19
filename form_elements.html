@@ -92,6 +92,9 @@
                         <i class="glyphicon glyphicon-user"></i>
                     </span>
                     Profile
+                    <sup class="text-warning fw-semi-bold">
+                        new
+                    </sup>
                 </a>
             </li>
         </ul>
@@ -893,7 +896,7 @@
                                         <div class="form-group">
                                             <label for="type-dropdown-appended">Types dropdown</label>
 
-                                            <div class="input-group">
+                                            <div class="input-group z-index-10">
                                                 <input type="text" class="form-control" id="type-dropdown-appended">
                                                 <div class="input-group-btn">
                                                     <select id="phone-type" class="selectpicker"
@@ -2041,10 +2044,8 @@ Enjoy!
                                     </label>
                                     <div id="datetimepicker2" class="input-group">
                                         <input id="datepicker2i" type="text" class="form-control" />
-                                        <span class="input-group-btn">
-                                            <a href="#" class="btn btn-success">
-                                                <span class="glyphicon glyphicon-calendar"></span>
-                                            </a>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
                                         </span>
                                     </div>
                                 </div>
@@ -2061,7 +2062,7 @@ Enjoy!
                                         </span>
                                     </label>
                                     <div id="colorpicker" class="input-group">
-                                        <input type="text" value="" class="form-control" id="colorpickeri"/>
+                                        <input type="text" value="#999999" class="form-control" id="colorpickeri"/>
                                         <span class="input-group-addon"><i></i></span>
                                     </div>
                                 </div>
@@ -2317,7 +2318,7 @@ Enjoy!
 <script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
 <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="vendor/widgster/widgster.js"></script>
-<script src="vendor/pace.js/pace.min.js" data-pace-options="{ 'target': '.content-wrap', 'ghostTime': 1000 }"></script>
+<script src="vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
 <script src="vendor/jquery-touchswipe/jquery.touchSwipe.js"></script>
 
 <!-- common app js -->
