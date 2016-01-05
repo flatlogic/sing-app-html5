@@ -20,6 +20,6 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('styles:watch', function () {
+gulp.task('watch', function () {
     gulp.watch('./sass/*.scss', ['styles']);
 });
