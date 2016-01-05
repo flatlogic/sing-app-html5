@@ -109,7 +109,7 @@
                         <li><a href="#dashboard">Dashboard</a></li>
                         <li><a href="#changelog">Change Log</a></li>
                     </ol>
-                    <h2 id="about">About Template (Sing App 2.0.0)</h2>
+                    <h2 id="about">About Template (Sing App 2.0.1)</h2>
                     <hr>
                     <p><strong>Sing App</strong> is next-generation, carefully hand-coded and powerful front-end template. It can be used for designing either your next
                         web application or admin entrance for it.</p>
@@ -119,7 +119,7 @@
                         and <a href="../angular/dist">Angular version</a> - which is built on top of <a href="https://angularjs.org/">Angular JS</a> front-end framework and
                         its extension <a href="http://angular-ui.github.io/bootstrap/">UI Bootstrap</a>.</p>
 
-                    <h2 id="running">Running the project (angular version)</h2>
+                    <h2 id="running">Running the project <small><span class="label label-info" style="font-size: 13px">angular version</span></small></h2>
                     <hr>
                     <p>Since 2.0.0 update Angular version has been fully automated; you only need to run a bunch of commands to have application set up and running. Here is the list:</p>
                     <ol start="0">
@@ -209,7 +209,7 @@
                         libs used in Sing. Libs that go after <strong>23</strong> line (<code>"awesome-bootstrap-checkbox": "~0.3.5"</code>)
                         are not required and may be removed. They are used only for demos.</p>
 
-                    <h2 id="scss">Scss</h2>
+                    <h2 id="scss">Scss <small><span class="label label-success" style="font-size: 13px">ajax version</span></small></h2>
                     <hr>
                     <div class="alert alert-warning">
                         <p>
@@ -218,7 +218,7 @@
                         </p>
                     </div>
                     <p>Sing uses <a href="http://sass-lang.com/">scss</a> to generate css. This choice has been made because of significant boost
-                        scss gives when developing front-end apps like this one. We used <a href="http://compass-style.org/">compass</a> to compile scss to css, but what to use
+                        scss gives when developing front-end apps like this one. We used <a href="https://www.npmjs.com/package/gulp-sass">gulp-sass</a> to compile scss to css, but what to use
                         is absolutely up to your choice. Anyway editing css is a good old way, right? :)</p>
                     <p>The main scss file is <a href="../ajax/sass/application.scss">application.scss</a>. It includes all libraries and partial files.</p>
                     <ul>
@@ -242,37 +242,12 @@
                         <li><p><a href="../ajax/sass/_variables.scss">variables.scss</a> - all template variables like colors, button sizes, etc.</p></li>
                         <li><p><a href="../ajax/sass/_widgets.scss">widgets.scss</a> - custom widgets classes (email widget, charts, etc). This file <strong class="text-success">can be removed</strong>.</p></li>
                     </ul>
-                    <h3>Sass 3.3</h3>
-                    <p>Sass 3.3 is used in Sing. In order to correctly use please update compass:</p>
-                    <ul>
-                        <li>update compass - run <code>gem install compass -v '1.0.0.alpha.19'</code> (or greater version
-                            if available)</li>
-                        <li>install wdm - as of <a href="https://github.com/chriseppstein/compass/issues/1470">compass
-                            issue discussion</a> run <code>gem install wdm</code></li>
-                    </ul>
+                    <p>To compile scss files into css you need to execute the following command:</p>
+                    <pre><code>gulp styles</code></pre>
+                    <p>This assumes that you have bower & gulp installed <code>npm install -g bower gulp</code>.</p>
+                    <p>For development you can use <code>gulp watch</code> command; it will track changes in scss folder and automatically recompile application.css and application.min.css files.</p>
 
-                    <h2 id="scss-import">Css files import</h2>
-                    <hr>
-                    <div class="alert alert-warning">
-                        <p>
-                            This part does not apply for angular version. All of angular version automation is done using gulp. Please read
-                            <a href="#running">running</a> section.
-                        </p>
-                    </div>
-                    <p>Unfortunately lots of libs used in Sing do not provide sass versions of stylesheets which creates
-                        few problems for us cause we want to serve just one application.<strong>css</strong> file and keep
-                        imports consistent. This is solved either by simply copy-pasting lib styles into
-                        <a href="../ajax/sass/application.scss">application.scss</a> (bad) or by finding a way to import .css
-                        files into .scss file (good).</p>
-                    <p>There is a ruby gem called <a href="https://github.com/chriseppstein/sass-css-importer">
-                        sass-css-importer</a> which allows us to do what's needed. To install it:</p>
-                    <ul>
-                        <li>install sass-css-importer - run <code>gem install --pre sass-css-importer</code></li>
-                    </ul>
-                    <p>There is a line in <a href="../ajax/config.rb">config.rb:9</a> <code>require 'sass-css-importer'</code>
-                        which tells compass to use sass-css-importer when processing <code>@import</code>'s.</p>
-
-                    <h2 id="pjax">Pjax</h2>
+                    <h2 id="pjax">Pjax <small><span class="label label-success" style="font-size: 13px">ajax version</span></small></h2>
                     <hr>
                     <p>Sing App uses <a href="https://github.com/defunkt/jquery-pjax">jquery-pjax</a> library that
                         uses ajax and pushState which makes page loading super fast.</p>
@@ -308,7 +283,7 @@
                         contacts. Just wire it up with your backend contacts management system. In case you don't need it
                         this layout may be removed.</p>
 
-                    <h2 id="angular">Angular Core</h2>
+                    <h2 id="angular">Angular Core <small><span class="label label-info" style="font-size: 13px">angular version</span></small></h2>
                     <hr>
                     <p>There is a angular module we use for routing in Sing App called <a href="https://github.com/angular-ui/ui-router">Angular UI Router</a>. It is more
                         expendable then the default one provided with angular framework. The idea is that your app has states instead of usual urls.</p>
@@ -320,7 +295,7 @@
                     <p>Which is an equivalent of:</p>
                     <pre><code>$('textarea').autosize({append: &quot;\n&quot;})</code></pre>
 
-                    <h2 id="directives">Sing Angular Core Directives</h2>
+                    <h2 id="directives">Sing Angular Core Directives <small><span class="label label-info" style="font-size: 13px">angular version</span></small></h2>
                     <hr>
                     <h3>sn-action</h3>
                     <p>Allows to execute a built-in Sing Angular action when clicked on element. For example to collapse navigation add this directive
@@ -359,6 +334,13 @@
 
                     <h2 id="changelog">Change Log</h2>
                     <p>For upgrade instructions please check <a href="../changelog.md" target="_blank">changelog.md</a>.</p>
+                    <h4><strong>Version 2.0.1</strong></h4>
+                    <ul>
+                        <li><code>npm install</code> fix (node-sass)</li>
+                        <li>Use node-sass instead of compass for ajax version</li>
+                        <li>npm libraries update</li>
+                    </ul>
+                    <hr>
                     <h4><strong>Version 2.0.0</strong></h4>
                     <ul>
                         <li>Component structure upgrade for angular version (better project organization)</li>
@@ -371,19 +353,19 @@
                     <hr>
                     <h4><strong>Version 1.2.0</strong></h4>
                     <ul>
-                        <li>- Bootstrap 3.3.4 update</li>
+                        <li> Bootstrap 3.3.4 update</li>
                     </ul>
                     <hr>
                     <h4><strong>Version 1.1.1</strong></h4>
                     <ul>
-                        <li>- Angular Datatables fix (Angular version)</li>
+                        <li> Angular Datatables fix (Angular version)</li>
                     </ul>
                     <hr>
                     <h4><strong>Version 1.1.0</strong></h4>
                     <ul>
-                        <li>- Bootstrap 3.3 update</li>
-                        <li>- Angular 1.3.8 update</li>
-                        <li>- Font awesome 4.3.0</li>
+                        <li> Bootstrap 3.3 update</li>
+                        <li> Angular 1.3.8 update</li>
+                        <li> Font awesome 4.3.0</li>
                     </ul>
                     <hr>
                     <h4><strong>Version 1.0.0</strong></h4>

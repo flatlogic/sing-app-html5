@@ -2,6 +2,32 @@
 Changelog
 --
 
+**Version 2.0.1**
+
+  - npm install fix (node-sass)
+  - Use node-sass instead of compass for ajax version
+  - npm libraries update
+
+Version 2.0.1 upgrade instructions
+
+Ajax version. Following files are changed:
+
+  - package.json (**new**)
+  - gulpfile.js (**new**)
+
+To watch for scss changes now you need to run:
+
+  1. `npm install -g gulp bower`
+  2. `npm install`
+  3. `bower install`
+  4. **`gulp watch`**
+
+Angular version. Following files are changed:
+
+  - package.json
+
+Run `npm update` to update npm packages (including broken node-sass)
+
 **Version 2.0.0**
 
   - Component structure upgrade for angular version (better project organization)
