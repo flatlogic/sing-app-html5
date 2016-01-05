@@ -23,6 +23,10 @@
   }
 }
 
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
 
 // Generates single property classes
 // -------------------------
