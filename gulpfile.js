@@ -19,3 +19,7 @@ gulp.task('styles', function () {
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./css'));
 });
+
+gulp.task('styles:watch', function () {
+    gulp.watch('./sass/*.scss', ['styles']);
+});
