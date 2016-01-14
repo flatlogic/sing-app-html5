@@ -1,2 +1,0 @@
-1. ~~ipad 1024 px add gestures~~
-2. ~~ipad grid modal doesn't work~~
