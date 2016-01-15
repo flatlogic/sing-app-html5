@@ -1,0 +1,2 @@
+all you need in one app
+cool BS Sing.isScreen('md') methods
