@@ -1,3 +1,12 @@
+@mixin progress-bar-variant($color) {
+  background-color: $color;
+
+  // Deprecated parent class requirement as of v3.2.0
+  .progress-striped & {
+    @include gradient-striped;
+  }
+}
+
 // Classes to be applied for high ppi displays
 // -------------------------
 @mixin retina(){

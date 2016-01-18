@@ -23,7 +23,7 @@
  */
 
 .select2-drop{
-  @include border-radius(0 0 $border-radius-base $border-radius-base);
+  @include border-radius(0 0 $border-radius $border-radius);
 }
 
 /**
@@ -62,7 +62,7 @@
  */
 
 .animated{
-  @include animation-duration(.5s);
+  animation: duration .5s;
 }
 
 /**
@@ -76,7 +76,7 @@
 
 .pace .pace-activity{
   position: absolute;
-  top: $navbar-height + 15px;
+  top: $navbar-height + 0.9375rem;
   border-width: 1px;
   left: 15px;
   right: auto;
@@ -97,39 +97,3 @@
  * http://css-tricks.com/responsive-data-tables/
  * Just mark your cells with col header attribute <td data-col-title="Surname">Otto</td>
  */
-
-.table-no-more{
-  @media (max-width: $screen-xs-max) {
-    /* Force table to not be like tables anymore */
-    &, thead, tbody, th, td, tr {
-      display: block;
-    }
-
-    /* Hide table headers (but not display: none;, for accessibility) */
-    thead > tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-
-    tbody > tr > td {
-      /* Behave  like a "row" */
-      border: none;
-      border-bottom: 1px solid #eee;
-      position: relative;
-      padding-left: 50%;
-    }
-
-    tbody > tr > td:before {
-      /* Now like a table header */
-      position: absolute;
-      /* Top/left values mimic padding */
-      top: 6px;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      content: attr(data-col-title);
-    }
-  }
-}

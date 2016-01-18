@@ -7,7 +7,7 @@
  */
 
 .switchery{
-  @include box-sizing(content-box);
+  box-sizing: content-box;
   margin-left: -20px;
 }
 
@@ -16,12 +16,12 @@
  */
 .bootstrap-datetimepicker-widget
 {
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
 
   td,
   th
   {
-    border-radius: $border-radius-base;
+    border-radius: $border-radius;
   }
 
   td
@@ -55,7 +55,7 @@
 
     span
     {
-      border-radius: $border-radius-base;
+      border-radius: $border-radius;
 
       &:hover
       {
@@ -136,14 +136,14 @@
 
 .fileinput-new.input-group .btn-file,
 .fileinput-new .input-group .btn-file {
-  border-radius: 0 $border-radius-base $border-radius-base 0;
+  border-radius: 0 $border-radius $border-radius 0;
 
   &.btn-xs,
   &.btn-sm {
-    border-radius: 0 $border-radius-small $border-radius-small 0;
+    border-radius: 0 $border-radius-sm $border-radius-sm 0;
   }
   &.btn-lg {
-    border-radius: 0 $border-radius-large $border-radius-large 0;
+    border-radius: 0 $border-radius-lg $border-radius-lg 0;
   }
 }
 
@@ -179,7 +179,7 @@
 
 .dropzone{
   border: 2px dashed #ccc;
-  @include border-radius($border-radius-base);
+  @include border-radius($border-radius);
 }
 /**
  * Mapael
@@ -193,8 +193,8 @@
   display: none;
   background-color : #fff;
   border: 1px solid #ccc;
-  border-radius: $border-radius-base;
-  font-size: $font-size-small;
+  border-radius: $border-radius;
+  font-size: $font-size-sm;
   color: $text-color;
 }
 
@@ -205,17 +205,17 @@
   width: 20px;
   height: 20px;
 
-  @include box-sizing(content-box);
+  box-sizing: content-box;
   border: 1px solid #ccc;
   background-color: #fff;
   color: $text-color;
   line-height: 20px;
   text-align: center;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
   cursor: pointer;
   font-weight: $font-weight-bold;
 
-  @include user-select(none);
+  user-select: none;
 }
 
 .zoomOut {
@@ -242,9 +242,8 @@
  * nvd3
  */
 .nvtooltip {
-  padding: $padding-small-vertical $padding-small-horizontal;
   font-family: $font-family-base;
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   text-align: center;
 
   p{
@@ -259,7 +258,7 @@
 }
 
 svg text {
-  font: $font-weight-base $font-size-small $font-family-base;
+  font: $font-weight-base $font-size-sm $font-family-base;
   fill: $text-color;
 }
 
@@ -268,7 +267,7 @@ svg .title {
 }
 
 .nvd3.nv-noData {
-  font-size: $font-size-large;
+  font-size: $font-size-lg;
   font-weight: $font-weight-bold;
 }
 
@@ -277,7 +276,7 @@ svg .title {
 }
 
 .nv-controlsWrap{
-  @include translate(-40px, -50px);
+  transform: translate(-40px, -50px);
 
   .nv-legend-symbol{
     fill: #666 !important;
@@ -304,7 +303,6 @@ svg .title {
   }
 
   > .md-preview {
-    padding: $padding-base-vertical $padding-base-horizontal;
     background: $panel-bg;
     border-top: 1px dashed $table-border-color;
     min-height: 10px;
@@ -429,14 +427,14 @@ $slider-handle-size: 26px;
   @include gradient-vertical(#eee, #f8f8f8);
 
   @include box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
 }
 .slider-selection {
   position: absolute;
   background-color: $brand-primary;
   @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
-  @include box-sizing(border-box);
-  border-radius: $border-radius-base;
+  box-sizing: border-box;
+  border-radius: $border-radius;
 
   .slider-danger &{
     background-color: $brand-danger;
@@ -576,7 +574,7 @@ input.parsley-error{
 }
 
 .parsley-errors-list{
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   padding-left: 0;
   margin-bottom: 5px;
 
@@ -610,19 +608,6 @@ input.parsley-error{
       color: $white;
       cursor: pointer;
     }
-    @media (min-width: $screen-sm-min) {
-      &.nav-justified{
-        > li {
-          padding: 0 5px;
-          &:first-child{
-            padding-left: 0;
-          }
-          &:last-child{
-            padding-right: 0;
-          }
-        }
-      }
-    }
   }
 
   .tab-pane{
@@ -633,7 +618,7 @@ input.parsley-error{
   .pager > li.disabled > .btn{
     cursor: not-allowed;
     pointer-events: none; // Future-proof disabling of clicks
-    @include opacity(.65);
+    opacity: .65;
     @include box-shadow(none);
   }
 
@@ -706,7 +691,7 @@ input.parsley-error{
     display: inline-block;
     padding-left: 0;
     margin: $line-height-computed 0;
-    border-radius: $border-radius-base;
+    border-radius: $border-radius;
 
     > li {
       display: inline; // Remove list-style and block-level defaults
@@ -719,7 +704,7 @@ input.parsley-error{
         color: $pagination-color;
         background-color: $pagination-bg;
         border: 1px solid $pagination-border;
-        border-radius: $border-radius-base;
+        border-radius: $border-radius;
         margin: 0 2px;
 
         > .fa-lg{
@@ -771,8 +756,6 @@ input.parsley-error{
         cursor: not-allowed;
       }
     }
-
-    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-computed,  $border-radius-small);
   }
 }
 
@@ -875,10 +858,10 @@ table.dataTable tfoot th{
   color: $text-color;
   text-decoration: none;
   background: $white;
-  border: 1px solid $list-group-border;
-  border-radius: $border-radius-base;
+  border: 1px solid $list-group-border-color;
+  border-radius: $border-radius;
 
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 .dd-item > button {
@@ -928,8 +911,7 @@ table.dataTable tfoot th{
   background: $gray-semi-lighter;
   border: 1px dashed $gray-light;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius;
 }
 
 .dd-empty {
@@ -998,13 +980,9 @@ table.dataTable tfoot th{
   font-weight: bold;
   border: 1px solid #ccc;
   background: #fafafa;
-  background: -webkit-linear-gradient(top, #fafafa 0%, #eee 100%);
-  background: -moz-linear-gradient(top, #fafafa 0%, #eee 100%);
   background: linear-gradient(top, #fafafa 0%, #eee 100%);
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
 }
 
 .dd3-content:hover {
@@ -1301,9 +1279,6 @@ ul.messenger.messenger-spinner-active .messenger-spinner .messenger-spinner {
 
 /* line 16, ../../src/sass/messenger-theme-air.sass */
 ul.messenger-theme-air {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
   user-select: none;
   font-family: "Raleway", sans-serif;
 }
@@ -1546,7 +1521,6 @@ ul.messenger-theme-air .messenger-message{
 
 .chart-tooltip{
   position: fixed;
-  padding: $padding-small-vertical $padding-small-horizontal;
   border: 1px solid $gray-semi-lighter;
   font-size: $font-size-mini;
   background-color: $white;

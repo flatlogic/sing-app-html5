@@ -5,28 +5,35 @@
 
 @import "../vendor/bootstrap/scss/bootstrap";
 
+@import "../vendor/font-awesome/scss/font-awesome";
+@import "../vendor/animate.css/animate";
+@import "../vendor/bootstrap-select/dist/css/bootstrap-select";
+@import "../vendor/select2/select2"; //import as css to keep image urls correct
+@import "../vendor/pace.js/themes/pace-theme-minimal";
 
+@import "bootstrap-override";
+@import "libs-override";
 //
 
-@import "../vendor/rickshaw/rickshaw.css";
-@import "../vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css";
-@import "../vendor/switchery/dist/switchery.css";
-@import "../vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css";
-@import "../vendor/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css";
-@import "../vendor/dropzone/dist/dropzone.css";
-@import "../vendor/nvd3/build/nv.d3.css";
-@import "../vendor/morris.js/morris.css";
-@import "../vendor/jvectormap/jquery-jvectormap-2.0.3.css";
-@import "../vendor/bootstrap-application-wizard/src/bootstrap-wizard.css";
-@import "../vendor/backgrid/lib/backgrid.css";
-@import "../vendor/datatables/media/css/jquery.dataTables.css";
-@import "../vendor/messenger/build/css/messenger.css";
-@import "../vendor/messenger/build/css/messenger-spinner.css";
-@import "../vendor/fullcalendar/fullcalendar.css";
+@import "../vendor/rickshaw/rickshaw";
+@import "../vendor/bootstrap3-wysihtml5/src/bootstrap-wysihtml5";
+@import "../vendor/switchery/dist/switchery";
+@import "../vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker";
+@import "../vendor/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker";
+@import "../vendor/dropzone/dist/dropzone";
+@import "../vendor/nvd3/build/nv.d3";
+@import "../vendor/morris.js/morris";
+@import "../vendor/jvectormap/jquery-jvectormap-2.0.3";
+@import "../vendor/bootstrap-application-wizard/src/bootstrap-wizard";
+@import "../vendor/backgrid/lib/backgrid";
+@import "../vendor/datatables/media/css/jquery.dataTables";
+@import "../vendor/messenger/build/css/messenger";
+@import "../vendor/messenger/build/css/messenger-spinner";
+@import "../vendor/fullcalendar/fullcalendar";
 @import "../vendor/magnific-popup/src/css/main";
-@import "../vendor/MetroJS/release/MetroJs.Full/MetroJs.css";
+@import "../vendor/MetroJS/release/MetroJs.Full/MetroJs";
 
-
+@import "custom-libs-override";
 
 //end custom libs
 
