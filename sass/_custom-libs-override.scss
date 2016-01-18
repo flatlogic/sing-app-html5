@@ -608,6 +608,19 @@ input.parsley-error{
       color: $white;
       cursor: pointer;
     }
+    @include respond-to(sm){
+      &.nav-justified{
+        > li {
+          padding: 0 5px;
+          &:first-child{
+            padding-left: 0;
+          }
+          &:last-child{
+            padding-right: 0;
+          }
+        }
+      }
+    }
   }
 
   .tab-pane{

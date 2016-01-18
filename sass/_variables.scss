@@ -101,6 +101,14 @@ $widget-bg-color: $white;
 // ------------------------
 // ------------------------
 
+$screen-xs-max:              543px !default;
+$screen-sm-max:              767px !default;
+$screen-md-max:              991px !default;
+$screen-lg-max:              1199px !default;
+
+$grid-float-breakpoint:     768px !default;
+
+
 //== Scaffolding
 //
 $body-bg: #eee !default;

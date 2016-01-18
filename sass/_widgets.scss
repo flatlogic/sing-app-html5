@@ -111,6 +111,12 @@
   .status{
     margin-top: 15px;
   }
+
+  @media (max-width: $screen-md-max) {
+    .description + .progress{
+      margin-bottom: 0;
+    }
+  }
 }
 
 /***********************/
@@ -419,6 +425,12 @@
   }
 }
 
+.widget-calendar{
+  @include respond-to(lg){
+    margin-top: -100px;
+  }
+}
+
 /***********************************/
 /**          Post Links           **/
 /***********************************/
@@ -591,6 +603,15 @@
     overflow: hidden;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
+    @include respond-to(sm){
+      display: inline-block;
+      margin: -20px 0 -20px -20px;
+      float: left;
+      width: 200px;
+    }
+    @media (max-width: $screen-xs-max) {
+      max-height: 200px;
+    }
   }
 
   .image{
@@ -612,11 +633,21 @@
   }
 }
 
+.search-result-item-body{
+  @include respond-to(sm){
+    margin-left: 200px;
+  }
+}
+
 .search-result-item-heading{
   font-weight: $font-weight-normal;
 
   > a {
     color: $text-color;
+  }
+
+  @include respond-to(sm){
+    margin: 0;
   }
 }
 
@@ -642,6 +673,11 @@
       text-align: left;
       margin: 0 10px;
 
+      @include respond-to(md){
+        width: 150px;
+        white-space: nowrap;
+      }
+
       > a {
         color: lighten($text-color, 30%);
         text-decoration: none;
@@ -665,6 +701,10 @@
     border-left: 0;
     padding-left: 15px;
     text-align: center;
+
+    @include respond-to(md){
+      padding-right: 0;
+    }
 
     .value {
       font-size: 28px;
@@ -715,6 +755,11 @@
     content: " ";
     margin-left: -4px;
     background-color: $white;
+
+    @include respond-to(md){
+      left: 50%;
+      margin-left: -4px;
+    }
   }
 
 }
@@ -759,6 +804,22 @@
       margin-left: 10px;
     }
   }
+
+  @include respond-to(md){
+    .timeline & {
+      width: 45%;
+    }
+
+    .timeline > li.on-left &{
+      float: left;
+      &:before{
+        right: auto;
+        left: 100%;
+        border-right-color: rgba(0,0,0,0);
+        border-left-color: $white;
+      }
+    }
+  }
 }
 
 .event-time{
@@ -777,6 +838,18 @@
       display: block;
       font-size: $font-size-lg;
       font-weight: $font-weight-normal;
+    }
+  }
+
+  @include respond-to(md){
+    .timeline &{
+      width: 46%;
+    }
+
+    .timeline > li.on-left &{
+
+      float: right;
+      text-align: left;
     }
   }
 }
@@ -806,6 +879,10 @@
     &.event-icon-info,
     &.event-icon-primary{
       color: $white;
+    }
+
+    @include respond-to(md){
+      left: 50%;
     }
 
     > img{
@@ -869,6 +946,9 @@
   font-size: 80px;
   font-weight: $font-weight-normal;
   color: $gray-dark;
+  @include respond-to(sm){
+    font-size: 180px;
+  }
 }
 
 .error-info{

@@ -67,6 +67,14 @@ legend {
   }
 }
 
+.form-horizontal.form-label-left {
+  @include respond-to(sm){
+    .control-label {
+      text-align: left;
+    }
+  }
+}
+
 // Feedback states
 .has-success {
   @include form-control-validation($brand-success);
@@ -347,6 +355,17 @@ legend {
   }
 }
 
+.container,
+.container-fluid {
+  > .navbar-header,
+  > .navbar-collapse {
+    @media (min-width: $grid-float-breakpoint) {
+      margin-right: -$navbar-padding-horizontal;
+      margin-left:  -$navbar-padding-horizontal;
+    }
+  }
+}
+
 .navbar-header > .navbar-nav{
   float: left;
 
@@ -357,12 +376,28 @@ legend {
   margin-left: $navbar-padding-horizontal;
   margin-right: $navbar-padding-horizontal;
 
+  @media (max-width: $screen-xs-max) {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    + .navbar-brand{
+      height: 60px;
+      line-height: 30px;
+    }
+  }
+
   > li {
     float: left;
     > a {
       padding-top:    $navbar-padding-vertical;
       padding-bottom: $navbar-padding-vertical;
     }
+  }
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
   }
 }
 
@@ -615,6 +650,22 @@ h6, .h6 { &.panel-title{ font-size: $font-size-h6; }}
       border-radius: $border-radius;
       margin: 0 2px;
     }
+  }
+}
+
+//
+// Jumbotron
+// --------------------------------------------------
+
+.jumbotron {
+  @include respond-to(sm){
+    padding-left: $jumbotron-padding;
+    padding-right: $jumbotron-padding;
+  }
+
+  @media screen {
+    padding-left: $jumbotron-padding;
+    padding-right: $jumbotron-padding;
   }
 }
 
