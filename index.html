@@ -30,12 +30,12 @@
 <nav id="sidebar" class="sidebar" role="navigation">
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
-        <header class="logo hidden-xs">
+        <header class="logo hidden-xs-down">
             <a href="index.html">sing</a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
-        <div class="sidebar-status visible-xs">
+        <div class="sidebar-status hidden-xs-up">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="thumb-sm avatar pull-right">
                     <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
@@ -81,7 +81,7 @@
             <li>
                 <a href="charts.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-stats"></i>
+                        <i class="fa fa-bar-chart"></i>
                     </span>
                     Charts
                 </a>
@@ -89,7 +89,7 @@
             <li>
                 <a href="profile.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-user"></i>
+                        <i class="fa fa-user"></i>
                     </span>
                     Profile
                     <sup class="text-warning fw-semi-bold">
@@ -99,13 +99,13 @@
             </li>
         </ul>
         <!-- every .sidebar-nav may have a title -->
-        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="fa fa-refresh"></i></a></h5>
         <ul class="sidebar-nav">
             <li>
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-align-right"></i>
+                        <i class="fa fa-align-right"></i>
                     </span>
                     Forms
                     <i class="toggle fa fa-angle-down"></i>
@@ -119,7 +119,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-tree-conifer"></i>
+                        <i class="fa fa-tree"></i>
                     </span>
                     UI Elements
                     <i class="toggle fa fa-angle-down"></i>
@@ -136,7 +136,7 @@
             <li>
                 <a href="grid.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-th"></i>
+                        <i class="fa fa-th"></i>
                     </span>
                     Grid
                 </a>
@@ -144,7 +144,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-map-marker"></i>
+                        <i class="fa fa-map-marker"></i>
                     </span>
                     Maps
                     <i class="toggle fa fa-angle-down"></i>
@@ -211,7 +211,7 @@
                 </ul>
             </li>
         </ul>
-        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="fa fa-plus-square-o"></i></a></h5>
         <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
         <ul class="sidebar-labels">
             <li>
@@ -240,17 +240,13 @@
             <div class="alert fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Sales Report</span> <br>
-                <div class="progress progress-xs mt-xs mb-0">
-                    <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
-                </div>
+                <progress class="progress progress-xs progress-bar-gray-light mt-xs mb-0" value="16" max="100"></progress>
                 <small>Calculating x-axis bias... 65%</small>
             </div>
             <div class="alert fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-                <div class="progress progress-xs mt-xs mb-0">
-                    <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
-                </div>
+                <progress class="progress progress-xs progress-danger mt-xs mb-0" value="23" max="100"></progress>
                 <small>Provide required notes</small>
             </div>
         </div>
@@ -264,19 +260,19 @@
             <ul class="nav navbar-nav">
                 <li>
                     <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
-                    <a class="hidden-sm hidden-xs" id="nav-state-toggle" href="#" title="Turn on/off sidebar collapsing" data-placement="bottom">
+                    <a class="hidden-sm-down" id="nav-state-toggle" href="#" title="Turn on/off sidebar collapsing" data-placement="bottom">
                         <i class="fa fa-bars fa-lg"></i>
                     </a>
                     <!-- shown on xs & sm screen. collapses and expands navigation -->
-                    <a class="visible-sm visible-xs" id="nav-collapse-toggle" href="#" title="Show/hide sidebar" data-placement="bottom">
-                        <span class="rounded rounded-lg bg-gray text-white visible-xs"><i class="fa fa-bars fa-lg"></i></span>
-                        <i class="fa fa-bars fa-lg hidden-xs"></i>
+                    <a class="hidden-xs-up" id="nav-collapse-toggle" href="#" title="Show/hide sidebar" data-placement="bottom">
+                        <span class="rounded rounded-lg bg-gray text-white hidden-xs-up"><i class="fa fa-bars fa-lg"></i></span>
+                        <i class="fa fa-bars fa-lg hidden-xs-up"></i>
                     </a>
                 </li>
-                <li class="ml-sm mr-n-xs hidden-xs"><a href="#"><i class="fa fa-refresh fa-lg"></i></a></li>
-                <li class="ml-n-xs hidden-xs"><a href="#"><i class="fa fa-times fa-lg"></i></a></li>
+                <li class="ml-sm mr-n-xs hidden-xs-down"><a href="#"><i class="fa fa-refresh fa-lg"></i></a></li>
+                <li class="ml-n-xs hidden-xs-down"><a href="#"><i class="fa fa-times fa-lg"></i></a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right visible-xs">
+            <ul class="nav navbar-nav navbar-right hidden-xs-up">
                 <li>
                     <!-- toggles chat -->
                     <a href="#" data-toggle="chat-sidebar">
@@ -285,7 +281,7 @@
                 </li>
             </ul>
             <!-- xs & sm screen logo -->
-            <a class="navbar-brand visible-xs" href="index.html">
+            <a class="navbar-brand hidden-xs-up" href="index.html">
                 <i class="fa fa-circle text-gray mr-n-sm"></i>
                 <i class="fa fa-circle text-warning"></i>
                 &nbsp;
@@ -848,11 +844,7 @@
                                 <p class="value">3.38%</p>
                             </div>
                         </div>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
-                                 aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                            </div>
-                        </div>
+                        <progress class="progress progress-xs progress-success" value="60" max="100"></progress>
                         <p>
                             <small><span class="circle bg-warning"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
                             <span class="fw-semi-bold">17% higher</span>
@@ -886,11 +878,7 @@
                                 <p class="value">9 695</p>
                             </div>
                         </div>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-                                 aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                            </div>
-                        </div>
+                        <progress class="progress progress-xs progress-danger" value="60" max="100"></progress>
                         <p>
                             <small><span class="circle bg-warning"><i class="fa fa-chevron-down"></i></span></small>
                             <span class="fw-semi-bold">8% lower</span>
@@ -925,11 +913,7 @@
                                 <p class="value">7,211M</p>
                             </div>
                         </div>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                 aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                            </div>
-                        </div>
+                        <progress class="progress progress-xs" value="60" max="100"></progress>
                         <p>
                             <small><span class="circle bg-warning"><i class="fa fa-plus"></i></span></small>
                             <span class="fw-semi-bold">8 734 higher</span>
@@ -1012,7 +996,7 @@
                             <thead class="no-bd">
                             <tr>
                                 <th>
-                                    <div class="checkbox">
+                                    <div class="abc-checkbox">
                                         <input id="checkbox210" type="checkbox" data-check-all="">
                                         <label for="checkbox210"></label>
                                     </div>
@@ -1024,7 +1008,7 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <div class="checkbox">
+                                    <div class="abc-checkbox">
                                         <input id="checkbox212" type="checkbox">
                                         <label for="checkbox212"></label>
                                     </div>
@@ -1034,7 +1018,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div class="checkbox">
+                                    <div class="abc-checkbox">
                                         <input id="checkbox214" type="checkbox">
                                         <label for="checkbox214"></label>
                                     </div>

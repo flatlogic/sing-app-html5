@@ -242,6 +242,7 @@
  * nvd3
  */
 .nvtooltip {
+  padding: $padding-small-vertical $padding-small-horizontal;
   font-family: $font-family-base;
   font-size: $font-size-sm;
   text-align: center;
@@ -303,6 +304,7 @@ svg .title {
   }
 
   > .md-preview {
+    padding: $padding-base-vertical $padding-base-horizontal;
     background: $panel-bg;
     border-top: 1px dashed $table-border-color;
     min-height: 10px;
@@ -769,6 +771,8 @@ input.parsley-error{
         cursor: not-allowed;
       }
     }
+
+    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-sm, $line-height-computed,  $border-radius-sm);
   }
 }
 
@@ -1534,6 +1538,7 @@ ul.messenger-theme-air .messenger-message{
 
 .chart-tooltip{
   position: fixed;
+  padding: $padding-small-vertical $padding-small-horizontal;
   border: 1px solid $gray-semi-lighter;
   font-size: $font-size-mini;
   background-color: $white;
