@@ -3,7 +3,7 @@
 -->
 <div class="list-group-item bg-attention">
     <span class="thumb-sm pull-left mr">
-            <i class="glyphicon glyphicon-ok text-success fa-lg"></i>
+            <i class="fa fa-check text-success fa-lg"></i>
         </span>
     <p class="overflow-hidden no-margin">
         2 issues require your approval. <a href="#">The Search Project</a> completed on time!
@@ -37,7 +37,7 @@
 </div>
 <a class="list-group-item" href="#">
     <span class="thumb-sm pull-left mr">
-        <i class="glyphicon glyphicon-upload fa-lg"></i>
+        <i class="fa fa-upload fa-lg"></i>
     </span>
     <p class="text-ellipsis no-margin">
         2.1.0-pre-alpha just released. </p>
@@ -62,8 +62,8 @@
     <p class="no-margin overflow-hidden">
         User <a href="#">Jeff</a> registered
         &nbsp;&nbsp;
-        <button class="btn btn-xs btn-success">Allow</button>
-        <button class="btn btn-xs btn-danger">Deny</button>
+        <a class="label label-success">Allow</a>
+        <a class="label label-danger">Deny</a>
         <time class="help-block no-margin">
             12:18 AM
         </time>

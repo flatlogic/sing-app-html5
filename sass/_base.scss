@@ -23,7 +23,7 @@
   left: $sidebar-width;
   @include transition(left $sidebar-transition-time ease-in-out);
 
-  @include respond-to(sm) {
+  @include respond-to(md) {
     margin-left: $sidebar-icon-state-width;
     left: $sidebar-width - $sidebar-icon-state-width;
   }
@@ -33,7 +33,7 @@
   }
 
   .nav-static & {
-    @include respond-to(md) {
+    @include respond-to(lg) {
       @include transition(none);
       left: 0;
       margin-left: $sidebar-width;
@@ -53,7 +53,7 @@
   }
 
   .nav-static & {
-    @include respond-to(md) {
+    @include respond-to(lg) {
       right: 0;
     }
   }
@@ -63,7 +63,7 @@
   position: absolute;
   z-index: 1;
 
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-sm-max) {
     font-size: 16px;
 
     .navbar-brand{
@@ -103,13 +103,13 @@
   }
 
   .navbar-form.navbar-left{
-    @include respond-to(sm) {
+    @include respond-to(md) {
       padding-right: 0;
     }
   }
 
   .navbar-form.navbar-left{
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-md-max) {
       padding-right: 0;
     }
   }
@@ -137,7 +137,7 @@
   padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
   background-color: $body-bg;
 
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-sm-max) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -164,7 +164,7 @@
   }
 
   .nav-static &{
-    @include respond-to(md) {
+    @include respond-to(lg) {
       width: 100%;
       @include transition(none);
     }
@@ -174,11 +174,11 @@
 .sidebar-nav{
   padding: 10px 0;
   font-size: 14px;
-  @include respond-to(md){
+  @include respond-to(lg){
     font-size: 16px;
   }
 
-  @media (min-height: $screen-md-height), (max-width: $screen-xs-max){
+  @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
     font-size: 16px;
   }
 
@@ -216,11 +216,11 @@
       background-color: $sidebar-item-hover-bg-color;
     }
 
-    @include respond-to(md){
+    @include respond-to(lg){
       line-height: 44px;
     }
 
-    @media (min-height: $screen-md-height), (max-width: $screen-xs-max){
+    @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
       line-height: 44px;
     }
 
@@ -234,11 +234,11 @@
       line-height: 28px;
       text-align: center;
 
-      @include respond-to(md){
+      @include respond-to(lg){
         top: 8px;
       }
 
-      @media (min-height: $screen-md-height), (max-width: $screen-xs-max){
+      @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
         top: 8px;
       }
 
@@ -274,10 +274,10 @@
 
     .toggle{
       line-height: 35px;
-      @include respond-to(md){
+      @include respond-to(lg){
         line-height: 44px;
       }
-      @media (min-height: $screen-md-height), (max-width: $screen-xs-max){
+      @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
         line-height: 44px;
       }
     }
@@ -316,11 +316,11 @@
     background-color: lighten($sidebar-bg-color, 5%);
     list-style: none;
 
-    @include respond-to(md){
+    @include respond-to(lg){
       font-size: 14px;
     }
 
-    @media (min-height: $screen-md-height), (max-width: $screen-xs-max){
+    @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
       font-size: 14px;
     }
 
@@ -389,7 +389,7 @@
   }
 
   .nav-static &{
-    @include respond-to(md){
+    @include respond-to(lg){
       opacity: 1;
       @include transition(none);
     }
@@ -505,7 +505,7 @@
       }
 
       .nav-static &{
-        @include respond-to(md){
+        @include respond-to(lg){
           .circle,
           .circle-o,
           .fa-circle{
@@ -536,7 +536,7 @@
   }
 
   .nav-static &{
-    @include respond-to(md){
+    @include respond-to(lg){
       opacity: 1;
       @include transition(none);
     }
@@ -601,7 +601,7 @@
 
 
 .chat-sidebar-contacts{
-  padding: 20px;
+  padding: 20px 0;
   left: -100%;
   @include transition(left .4s ease-in-out);
   &.open{
@@ -710,7 +710,7 @@
   margin-left: 10px;
   margin-right: 10px;
   text-transform: uppercase;
-  font-size: $font-size-larger;
+  font-size: $font-size-base;
   font-weight: $font-weight-normal;
 }
 
@@ -718,7 +718,6 @@
   margin-top: 10px;
   .list-group-item{
     background-color: transparent;
-    margin-left: -20px;
     margin-right: -20px;
     margin-bottom: 0;
     padding: 10px 20px;
@@ -734,7 +733,7 @@
         color: $brand-warning;
       }
 
-      .badge{
+      .label{
         background-color: $brand-danger;
         color: $white;
       }
@@ -754,7 +753,7 @@
       line-height: 37px;
     }
 
-    .badge{
+    .label{
       margin-top: 9px;
       margin-right: 6px;
       padding: 3px 5px;
@@ -803,7 +802,7 @@
 
 .chat-notification{
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 35px;
   z-index: 20;
   margin-top: 3px;
@@ -853,7 +852,7 @@
 .chat-notification-sing{
   position: absolute;
   top: 15px;
-  left: 11px;
+  left: 12px;
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -866,7 +865,7 @@
 }
 
 .notifications{
-  @include respond-to(sm){
+  @include respond-to(lg){
     width: 333px;
   }
   .list-group{
@@ -923,7 +922,7 @@
   }
 
   .nav-static & {
-    @include respond-to(md){
+    @include respond-to(lg){
       @include transition(opacity .2s ease-out, background-color .2s ease-out);
       transform: translate(0, 0);
       margin-left: $sidebar-width;
@@ -1134,7 +1133,7 @@
     z-index: 1;
     margin-right: $widget-padding-horizontal;
 
-    @include respond-to(sm){
+    @include respond-to(md){
       top: auto;
       bottom: 0;
     }

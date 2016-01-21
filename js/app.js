@@ -607,7 +607,7 @@ function initAppPlugins(){
 
         $.fn.animateProgressBar = function () {
             return this.each(function () {
-                var $bar = $(this).find('.progress-bar');
+                var $bar = $(this);
                 setTimeout(function(){
                     $bar.css('width', $bar.data('width'));
                 }, 0)
@@ -737,7 +737,7 @@ function initAppFunctions(){
             var $this = $(this),
                 $target = $($this.attr('href')),
                 $targetTitle = $target.find('.title');
-            $this.removeClass('active').find('.badge').remove();
+            $this.removeClass('active').find('.label').remove();
             $target.addClass('open');
             $('.chat-sidebar-contacts').removeClass('open');
             $('.chat-sidebar-footer').addClass('open');
@@ -837,7 +837,7 @@ function initDemoFunctions(){
         $('[data-toggle="chat-sidebar"]').one('click', function(){
             setTimeout(function(){
                 $('.chat-sidebar-user-group:first-of-type .list-group-item:first-child').addClass('active')
-                    .find('.fa-circle').after('<span class="badge badge-danger pull-right animated bounceInDown">3</span>');
+                    .find('.fa-circle').after('<span class="label label-pill label-danger pull-right animated bounceInDown">3</span>');
             }, 1000)
         });
 

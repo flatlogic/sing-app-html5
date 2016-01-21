@@ -19,7 +19,7 @@
 @mixin form-inline {
 
   // Kick in the inline
-  @include respond-to(sm) {
+  @include respond-to(md) {
     // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;

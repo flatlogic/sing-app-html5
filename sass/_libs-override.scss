@@ -62,7 +62,7 @@
  */
 
 .animated{
-  animation: duration .5s;
+  animation-duration: .5s;
 }
 
 /**
@@ -99,7 +99,7 @@
  */
 
 .table-no-more{
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-sm-max) {
     /* Force table to not be like tables anymore */
     &, thead, tbody, th, td, tr {
       display: block;

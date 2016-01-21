@@ -610,7 +610,7 @@ input.parsley-error{
       color: $white;
       cursor: pointer;
     }
-    @include respond-to(sm){
+    @include respond-to(md){
       &.nav-justified{
         > li {
           padding: 0 5px;
