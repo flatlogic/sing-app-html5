@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sing - Forms</title>
+    <title>Sing - Dashboard</title>
     <link href="css/application.min.css" rel="stylesheet">
     <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
     <!--[if IE 9]>
-        <link href="css/application-ie9-part2.css" rel="stylesheet">
+    <link href="css/application-ie9-part2.css" rel="stylesheet">
     <![endif]-->
     <link rel="shortcut icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,9 +15,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <script>
         /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
-           chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
-                      https://code.google.com/p/chromium/issues/detail?id=332189
-        */
+         chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+         https://code.google.com/p/chromium/issues/detail?id=332189
+         */
     </script>
 </head>
 <body>
@@ -30,12 +30,12 @@
 <nav id="sidebar" class="sidebar" role="navigation">
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
-        <header class="logo hidden-xs">
+        <header class="logo hidden-xs-down">
             <a href="index.html">sing</a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
-        <div class="sidebar-status visible-xs">
+        <div class="sidebar-status hidden-xs-up">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="thumb-sm avatar pull-right">
                     <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
@@ -53,17 +53,17 @@
         </div>
         <!-- main notification links are placed inside of .sidebar-nav -->
         <ul class="sidebar-nav">
-            <li>
+            <li class="active">
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a class="collapsed" href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-desktop"></i>
                     </span>
                     Dashboard
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-dashboard" class="collapse">
-                    <li><a href="index.html">Dashboard</a></li>
+                <ul id="sidebar-dashboard" class="collapse in">
+                    <li class="active"><a href="index.html">Dashboard</a></li>
                     <li><a href="widgets.html">Widgets</a></li>
                 </ul>
             </li>
@@ -81,7 +81,7 @@
             <li>
                 <a href="charts.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-stats"></i>
+                        <i class="fa fa-bar-chart"></i>
                     </span>
                     Charts
                 </a>
@@ -89,7 +89,7 @@
             <li>
                 <a href="profile.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-user"></i>
+                        <i class="fa fa-user"></i>
                     </span>
                     Profile
                     <sup class="text-warning fw-semi-bold">
@@ -99,19 +99,19 @@
             </li>
         </ul>
         <!-- every .sidebar-nav may have a title -->
-        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="fa fa-refresh"></i></a></h5>
         <ul class="sidebar-nav">
-            <li class="active">
+            <li>
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-align-right"></i>
+                        <i class="fa fa-align-right"></i>
                     </span>
                     Forms
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-forms" class="collapse in">
-                    <li class="active"><a href="form_elements.html">Form Elements</a></li>
+                <ul id="sidebar-forms" class="collapse">
+                    <li><a href="form_elements.html">Form Elements</a></li>
                     <li><a href="form_validation.html">Form Validation</a></li>
                     <li><a href="form_wizard.html">Form Wizard</a></li>
                 </ul>
@@ -119,7 +119,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-tree-conifer"></i>
+                        <i class="fa fa-tree"></i>
                     </span>
                     UI Elements
                     <i class="toggle fa fa-angle-down"></i>
@@ -136,7 +136,7 @@
             <li>
                 <a href="grid.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-th"></i>
+                        <i class="fa fa-th"></i>
                     </span>
                     Grid
                 </a>
@@ -144,7 +144,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-map-marker"></i>
+                        <i class="fa fa-map-marker"></i>
                     </span>
                     Maps
                     <i class="toggle fa fa-angle-down"></i>
@@ -211,7 +211,7 @@
                 </ul>
             </li>
         </ul>
-        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="fa fa-plus-square-o"></i></a></h5>
         <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
         <ul class="sidebar-labels">
             <li>
@@ -240,16 +240,16 @@
             <div class="alert fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Sales Report</span> <br>
-                <div class="progress progress-xs mt-xs mb-0">
-                    <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
+                <div class="bg-gray-transparent progress-bar">
+                    <progress class="progress progress-xs progress-bar-gray-light mt-xs mb-0" value="100" max="100" style="width: 16%"></progress>
                 </div>
                 <small>Calculating x-axis bias... 65%</small>
             </div>
             <div class="alert fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-                <div class="progress progress-xs mt-xs mb-0">
-                    <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
+                <div class="bg-gray-transparent progress-bar">
+                    <progress class="progress progress-xs progress-danger mt-xs mb-0" value="100" max="100" style="width: 23%"></progress>
                 </div>
                 <small>Provide required notes</small>
             </div>
@@ -262,21 +262,21 @@
         <!-- .navbar-header contains links seen on xs & sm screens -->
         <div class="navbar-header">
             <ul class="nav navbar-nav">
-                <li>
+                <li class="nav-item">
                     <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
-                    <a class="hidden-sm hidden-xs" id="nav-state-toggle" href="#" title="Turn on/off sidebar collapsing" data-placement="bottom">
+                    <a class="hidden-md-down nav-link" id="nav-state-toggle" href="#" data-toggle="tooltip" data-original-title="Turn on/off sidebar collapsing" data-placement="bottom">
                         <i class="fa fa-bars fa-lg"></i>
                     </a>
                     <!-- shown on xs & sm screen. collapses and expands navigation -->
-                    <a class="visible-sm visible-xs" id="nav-collapse-toggle" href="#" title="Show/hide sidebar" data-placement="bottom">
-                        <span class="rounded rounded-lg bg-gray text-white visible-xs"><i class="fa fa-bars fa-lg"></i></span>
-                        <i class="fa fa-bars fa-lg hidden-xs"></i>
+                    <a class="hidden-lg-up nav-link" id="nav-collapse-toggle" href="#" title="Show/hide sidebar" data-placement="bottom">
+                        <span class="rounded rounded-lg bg-gray text-white hidden-md-up"><i class="fa fa-bars fa-lg"></i></span>
+                        <i class="fa fa-bars fa-lg hidden-sm-down"></i>
                     </a>
                 </li>
-                <li class="ml-sm mr-n-xs hidden-xs"><a href="#"><i class="fa fa-refresh fa-lg"></i></a></li>
-                <li class="ml-n-xs hidden-xs"><a href="#"><i class="fa fa-times fa-lg"></i></a></li>
+                <li class="nav-item hidden-sm-down"><a href="#" class="nav-link"><i class="fa fa-refresh fa-lg"></i></a></li>
+                <li class="nav-item ml-n-xs hidden-sm-down"><a href="#" class="nav-link"><i class="fa fa-times fa-lg"></i></a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right visible-xs">
+            <ul class="nav navbar-nav navbar-right hidden-md-up">
                 <li>
                     <!-- toggles chat -->
                     <a href="#" data-toggle="chat-sidebar">
@@ -285,7 +285,7 @@
                 </li>
             </ul>
             <!-- xs & sm screen logo -->
-            <a class="navbar-brand visible-xs" href="index.html">
+            <a class="navbar-brand hidden-md-up" href="index.html">
                 <i class="fa fa-circle text-gray mr-n-sm"></i>
                 <i class="fa fa-circle text-warning"></i>
                 &nbsp;
@@ -299,19 +299,19 @@
         <!-- this part is hidden for xs screens -->
         <div class="collapse navbar-collapse">
             <!-- search form! link it to your search server -->
-            <form class="navbar-form navbar-left" role="search">
+            <form class="navbar-form pull-left" role="search">
                 <div class="form-group">
                     <div class="input-group input-group-no-border">
-                        <span class="input-group-addon">
-                            <i class="fa fa-search"></i>
-                        </span>
+                    <span class="input-group-addon">
+                        <i class="fa fa-search"></i>
+                    </span>
                         <input class="form-control" type="text" placeholder="Search Dashboard">
                     </div>
                 </div>
             </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle dropdown-toggle-notifications" id="notifications-dropdown-toggle" data-toggle="dropdown">
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown nav-item">
+                    <a href="#" class="dropdown-toggle dropdown-toggle-notifications nav-link" id="notifications-dropdown-toggle" data-toggle="dropdown">
                         <span class="thumb-sm avatar pull-left">
                             <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                         </span>
@@ -325,28 +325,28 @@
                          consists of three components:
                          notifications, messages, progress. leave or add what's important for you.
                          uses Sing's ajax-load plugin for async content loading. See #load-notifications-btn -->
-                    <div class="dropdown-menu animated fadeInUp" id="notifications-dropdown-menu">
-                        <section class="panel notifications">
-                            <header class="panel-heading">
-                                <div class="text-align-center mb-sm">
+                    <div class="dropdown-menu dropdown-menu-right animated fadeInUp" id="notifications-dropdown-menu">
+                        <section class="card notifications">
+                            <header class="card-header">
+                                <div class="text-xs-center mb-sm">
                                     <strong>You have 13 notifications</strong>
                                 </div>
                                 <div class="btn-group btn-group-sm btn-group-justified" id="notifications-toggle" data-toggle="buttons">
-                                    <label class="btn btn-default active">
+                                    <label class="btn btn-secondary active">
                                         <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
                                              only requirement for async reloading -->
                                         <input type="radio" checked
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/notifications.html"
-                                               data-ajax-target="#notifications-list"> Notifications
+                                               data-ajax-target="body"> Notifications
                                     </label>
-                                    <label class="btn btn-default">
+                                    <label class="btn btn-secondary">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/messages.html"
-                                               data-ajax-target="#notifications-list"> Messages
+                                               data-ajax-target="body"> Messages
                                     </label>
-                                    <label class="btn btn-default">
+                                    <label class="btn btn-secondary">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/progress.html"
@@ -357,9 +357,9 @@
                             <!-- notification list with .thin-scroll which styles scrollbar for webkit -->
                             <div id="notifications-list" class="list-group thin-scroll">
                                 <div class="list-group-item">
-                                    <span class="thumb-sm pull-left mr clearfix">
-                                        <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
-                                    </span>
+                                <span class="thumb-sm pull-left mr clearfix">
+                                    <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
+                                </span>
                                     <p class="no-margin overflow-hidden">
                                         1 new user just signed up! Check out
                                         <a href="#">Monica Smith</a>'s account.
@@ -369,9 +369,9 @@
                                     </p>
                                 </div>
                                 <a class="list-group-item" href="#">
-                                    <span class="thumb-sm pull-left mr">
-                                        <i class="glyphicon glyphicon-upload fa-lg"></i>
-                                    </span>
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="fa fa-upload fa-lg"></i>
+                                </span>
                                     <p class="text-ellipsis no-margin">
                                         2.1.0-pre-alpha just released. </p>
                                     <time class="help-block no-margin">
@@ -379,9 +379,9 @@
                                     </time>
                                 </a>
                                 <a class="list-group-item" href="#">
-                                    <span class="thumb-sm pull-left mr">
-                                        <i class="fa fa-bolt fa-lg"></i>
-                                    </span>
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="fa fa-bolt fa-lg"></i>
+                                </span>
                                     <p class="text-ellipsis no-margin">
                                         Server load limited. </p>
                                     <time class="help-block no-margin">
@@ -389,14 +389,14 @@
                                     </time>
                                 </a>
                                 <div class="list-group-item">
-                                    <span class="thumb-sm pull-left mr clearfix">
-                                        <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
-                                    </span>
+                                <span class="thumb-sm pull-left mr clearfix">
+                                    <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+                                </span>
                                     <p class="no-margin overflow-hidden">
                                         User <a href="#">Jeff</a> registered
                                         &nbsp;&nbsp;
-                                        <button class="btn btn-xs btn-success">Allow</button>
-                                        <button class="btn btn-xs btn-danger">Deny</button>
+                                        <a class="label label-success">Allow</a>
+                                        <a class="label label-danger">Deny</a>
                                         <time class="help-block no-margin">
                                             12:18 AM
                                         </time>
@@ -415,11 +415,11 @@
                                     </p>
                                 </div>
                                 <a class="list-group-item" href="#">
-                                    <span class="thumb-sm pull-left mr">
-                                        <span class="rounded bg-primary rounded-lg">
-                                            <i class="fa fa-facebook text-white"></i>
-                                        </span>
+                                <span class="thumb-sm pull-left mr">
+                                    <span class="rounded bg-primary rounded-lg">
+                                        <i class="fa fa-facebook text-white"></i>
                                     </span>
+                                </span>
                                     <p class="text-ellipsis no-margin">
                                         New <strong>76</strong> facebook likes received.</p>
                                     <time class="help-block no-margin">
@@ -427,11 +427,11 @@
                                     </time>
                                 </a>
                                 <a class="list-group-item" href="#">
-                                    <span class="thumb-sm pull-left mr">
-                                        <span class="circle circle-lg bg-gray-dark">
-                                            <i class="fa fa-circle-o text-white"></i>
-                                        </span>
+                                <span class="thumb-sm pull-left mr">
+                                    <span class="circle circle-lg bg-gray-dark">
+                                        <i class="fa fa-circle-o text-white"></i>
                                     </span>
+                                </span>
                                     <p class="text-ellipsis no-margin">
                                         Dark matter detected.</p>
                                     <time class="help-block no-margin">
@@ -439,10 +439,10 @@
                                     </time>
                                 </a>
                             </div>
-                            <footer class="panel-footer text-sm">
+                            <footer class="card-footer text-sm">
                                 <!-- ajax-load button. loads demo/ajax/notifications.php to #notifications-list
                                      when clicked -->
-                                <button class="btn btn-xs btn-link pull-right"
+                                <button class="btn-label btn-link pull-right"
                                         id="load-notifications-btn"
                                         data-ajax-load="demo/ajax/notifications.php"
                                         data-ajax-target="#notifications-list"
@@ -454,21 +454,21 @@
                         </section>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <li class="dropdown nav-item">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <i class="fa fa-cog fa-lg"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox &nbsp;&nbsp;<span class="badge bg-danger animated bounceIn">9</span></a></li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out"></i> &nbsp; Log Out</a></li>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> &nbsp; My Account</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Calendar</a></li>
+                        <li><a class="dropdown-item" href="#">Inbox &nbsp;&nbsp;<span class="label label-pill label-danger animated bounceIn">9</span></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i> &nbsp; Log Out</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#" data-toggle="chat-sidebar">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-toggle="chat-sidebar">
                         <i class="fa fa-globe fa-lg"></i>
                     </a>
                     <div id="chat-notification" class="chat-notification hide">
@@ -491,7 +491,7 @@
 <div class="chat-sidebar" id="chat">
     <div class="chat-sidebar-content">
         <header class="chat-sidebar-header">
-            <h4 class="chat-sidebar-title">Contacts</h4>
+            <h5 class="chat-sidebar-title">Contacts</h5>
             <div class="form-group no-margin">
                 <div class="input-group input-group-dark">
                     <input class="form-control fs-mini" id="chat-sidebar-search" type="text" placeholder="Search...">
@@ -509,7 +509,7 @@
                     <span class="thumb-sm pull-left mr">
                         <img class="img-circle" src="demo/img/people/a2.jpg" alt="...">
                     </span>
-                    <h5 class="message-sender">Chris Gray</h5>
+                    <h6 class="message-sender">Chris Gray</h6>
                     <p class="message-preview">Hey! What's up? So many times since we</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-2">
@@ -517,7 +517,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="img/avatar.png" alt="...">
                 </span>
-                    <h5 class="message-sender">Jamey Brownlow</h5>
+                    <h6 class="message-sender">Jamey Brownlow</h6>
                     <p class="message-preview">Good news coming tonight. Seems they agreed to proceed</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-3">
@@ -525,7 +525,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a1.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Livia Walsh</h5>
+                    <h6 class="message-sender">Livia Walsh</h6>
                     <p class="message-preview">Check out my latest email plz!</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-4">
@@ -533,7 +533,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="img/avatar.png" alt="...">
                 </span>
-                    <h5 class="message-sender">Jaron Fitzroy</h5>
+                    <h6 class="message-sender">Jaron Fitzroy</h6>
                     <p class="message-preview">What about summer break?</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-5">
@@ -541,7 +541,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a4.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Mike Lewis</h5>
+                    <h6 class="message-sender">Mike Lewis</h6>
                     <p class="message-preview">Just ain't sure about the weekend now. 90% I'll make it.</p>
                 </a>
             </div>
@@ -552,7 +552,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a6.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Freda Edison</h5>
+                    <h6 class="message-sender">Freda Edison</h6>
                     <p class="message-preview">Hey what's up? Me and Monica going for a lunch somewhere. Wanna join?</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-7">
@@ -560,7 +560,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Livia Walsh</h5>
+                    <h6 class="message-sender">Livia Walsh</h6>
                     <p class="message-preview">Check out my latest email plz!</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-8">
@@ -568,7 +568,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Jaron Fitzroy</h5>
+                    <h6 class="message-sender">Jaron Fitzroy</h6>
                     <p class="message-preview">What about summer break?</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-9">
@@ -576,18 +576,18 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="img/avatar.png" alt="...">
                 </span>
-                    <h5 class="message-sender">Mike Lewis</h5>
+                    <h6 class="message-sender">Mike Lewis</h6>
                     <p class="message-preview">Just ain't sure about the weekend now. 90% I'll make it.</p>
                 </a>
             </div>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-1">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Chris Gray
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
                 <li class="message">
                     <span class="thumb-sm">
@@ -624,82 +624,82 @@
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-2">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Jamey Brownlow
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-3">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Livia Walsh
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-4">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Jaron Fitzroy
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-5">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Mike Lewis
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-6">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Freda Edison
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-7">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Livia Walsh
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-8">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Jaron Fitzroy
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-9">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Mike Lewis
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
@@ -725,22 +725,22 @@
                             Inputs
                         </h5>
                         <div class="widget-controls">
-                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-cog"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
                         <form class="form-horizontal" role="form">
                             <fieldset>
                                 <legend><strong>Horizontal</strong> form</legend>
-                                <div class="form-group">
-                                    <label for="normal-field" class="col-sm-4 control-label">Normal field</label>
+                                <div class="form-group row">
+                                    <label for="normal-field" class="col-sm-4 form-control-label">Normal field</label>
                                     <div class="col-sm-7">
                                         <input type="text" id="normal-field" class="form-control" placeholder="May have placeholder">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label for="hint-field" class="col-sm-4 control-label">
                                         Label hint
                                         <span class="help-block">Some help text</span>
@@ -749,7 +749,7 @@
                                         <input type="text" id="hint-field" class="form-control">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="tooltip-enabled">Tooltip enabled</label>
                                     <div class="col-sm-7">
                                         <input type="text" id="tooltip-enabled" class="form-control"
@@ -757,14 +757,14 @@
                                                placeholder="Hover over me..">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="disabled-input">Disabled input</label>
                                     <div class="col-sm-7">
                                         <input type="text" id="disabled-input" class="form-control"
                                                disabled="disabled" value="Default value" >
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="max-length">Max length</label>
                                     <div class="col-sm-7">
                                         <input type="text" id="max-length" maxlength="3"
@@ -773,7 +773,7 @@
                                                data-placement="top" data-original-title="You cannot write more than 3 characters.">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="prepended-input">Prepended input</label>
                                     <div class="col-sm-7">
                                         <div class="input-group">
@@ -782,7 +782,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="password-field">Password</label>
                                     <div class="col-sm-7">
                                         <div class="input-group">
@@ -791,7 +791,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="appended-input">Appended input</label>
                                     <div class="col-sm-7">
                                         <div class="input-group">
@@ -800,7 +800,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="combined-input">Combined</label>
                                     <div class="col-sm-7">
                                         <div class="input-group">
@@ -810,7 +810,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="transparent-input">
                                         Append Transparent
                                     </label>
@@ -843,9 +843,9 @@
                             Prepended and appended inputs
                         </h5>
                         <div class="widget-controls">
-                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-cog"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -859,7 +859,7 @@
                                             <div class="input-group">
                                                 <input type="search" class="form-control" id="search-input">
                                                 <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-default">Search</button>
+                                                    <button type="button" class="btn btn-secondary">Search</button>
                                                 </span>
                                             </div>
                                         </div>
@@ -879,16 +879,16 @@
                                             <div class="input-group">
                                                 <input type="text" class="form-control" id="dropdown-appended">
                                                 <div class="input-group-btn">
-                                                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                                    <button class="btn btn-success" data-toggle="dropdown">
                                                         Action
                                                         <i class="fa fa-caret-down"></i>
                                                     </button>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="#">Action</a></li>
-                                                        <li><a href="#">Another action</a></li>
-                                                        <li><a href="#">Something else here</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Separated link</a></li>
+                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        <li class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -902,9 +902,9 @@
                                                     <select id="phone-type" class="selectpicker"
                                                             data-style="btn-primary"
                                                             data-width="auto">
-                                                        <option>Another type</option>
-                                                        <option>Type one</option>
-                                                        <option>Next type</option>
+                                                        <option class="dropdown-item">Another type</option>
+                                                        <option class="dropdown-item">Type one</option>
+                                                        <option class="dropdown-item">Next type</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -916,15 +916,15 @@
                                                 <input id="segmented-dropdown" class="form-control" type="text">
                                                 <div class="input-group-btn">
                                                     <button class="btn btn-warning" tabindex="-1">Action</button>
-                                                    <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                                    <button class="btn btn-warning" data-toggle="dropdown">
                                                         <i class="fa fa-caret-down"></i>
                                                     </button>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="#">Action</a></li>
-                                                        <li><a href="#">Another action</a></li>
-                                                        <li><a href="#">Something else here</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="#">Separated link</a></li>
+                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                        <li class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -934,6 +934,7 @@
                                             <label for="no-borders-input">Transparent input</label>
                                             <input id="no-borders-input" class="form-control input-no-border bg-gray-lighter" type="text"
                                                     placeholder="Search Dashboard">
+                                            <!--TODO rename 'bg-gray-lighter' class-->
                                             <p class="help-block">With <code>.bg-gray-lighter</code>. White by default.</p>
                                         </div>
                                     </div>
@@ -941,7 +942,7 @@
                             </fieldset>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-inverse">Save Changes</button>
-                                <button type="button" class="btn btn-default">Cancel</button>
+                                <button type="button" class="btn btn-secondary">Cancel</button>
                             </div>
                         </form>
                     </div>
@@ -956,9 +957,9 @@
                             Form <span class="fw-semi-bold">Options</span>
                         </h5>
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -968,19 +969,19 @@
                                     Control sizing
                                 </legend>
                                 <p>
-                                    Set input heights using classes like <code>.input-lg</code> and <code>.input-sm</code>.
+                                    Set input heights using classes like <code>.form-control-lg</code> and <code>..form-control-sm</code>.
                                     Also works with <code>type="search"</code> inputs and selects. For input groups use
                                     <code>.input-group-lg</code> & <code>.input-group-sm</code>.
                                 </p>
                                 <br/>
                                 <div class="form-group">
-                                    <input type="text" class="form-control input-lg" placeholder=".input-lg">
+                                    <input type="text" class="form-control form-control-lg" placeholder=".input-lg">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="default input">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control input-sm" placeholder=".input-sm">
+                                    <input type="text" class="form-control form-control-sm" placeholder=".input-sm">
                                 </div>
                             </fieldset>
                         </form>
@@ -994,9 +995,9 @@
                             Form <span class="fw-semi-bold">Options</span>
                         </h5>
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -1043,22 +1044,22 @@
                             Textareas
                         </h5>
                         <div class="widget-controls">
-                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-cog"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
                         <form class="form-horizontal" role="form">
                             <fieldset>
                                 <legend>Small form</legend>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-3 control-label" for="default-textarea">Default textarea</label>
                                     <div class="col-sm-9">
                                         <textarea rows="4" class="form-control" id="default-textarea"></textarea>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-3 control-label" for="elastic-textarea">
                                         Auto-growing textarea
                                     </label>
@@ -1067,25 +1068,27 @@
                                                   placeholder="Try to add few new lines.."></textarea>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-3 control-label" for="wysiwyg">
                                         Wysiwyg
                                         <span class="help-block">
                                             With bottom toolbar appended
                                         </span>
+                                        <!--TODO add button "Normal text"-->
                                     </label>
                                     <div class="col-sm-9">
                                         <textarea rows="4" class="form-control" id="wysiwyg"></textarea>
                                         <div class="btn-toolbar">
-                                            <button type="button" class="btn btn-sm btn-default pull-right">Clear</button>
+                                            <button type="button" class="btn btn-sm btn-secondary pull-right">Clear</button>
                                             <button type="button" class="btn btn-sm btn-danger pull-right">Save</button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-3 control-label" for="markdown">
                                         Markdown Editor
                                     </label>
+                                    <!--TODO add toolsbar-->
                                     <div class="col-sm-9">
                                         <textarea class="form-control" id="markdown" data-provide="markdown" rows="6">### Hello there
 How are you?
@@ -1116,16 +1119,17 @@ Enjoy!
                             Selects
                         </h5>
                         <div class="widget-controls">
-                            <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
+                            <a href="#"><i class="fa fa-cog"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
                         <form class="form-horizontal form-label-left" role="form">
                             <fieldset>
                                 <legend>Default form with labels on left</legend>
-                                <div class="form-group">
+                                <!--TODO problem with input-->
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="default-select">Default select</label>
                                     <div class="col-sm-8">
                                         <select data-placeholder="Which galaxy is closest to Milky Way?"
@@ -1140,7 +1144,7 @@ Enjoy!
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="country-select">Select with search</label>
                                     <div class="col-sm-8">
                                         <select id="country-select"
@@ -1393,7 +1397,7 @@ Enjoy!
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="multiple-select">
                                         Multiple select
                                         <span class="help-block">Search enabled</span>
@@ -1650,7 +1654,7 @@ Enjoy!
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="grouped-select">Select with groups</label>
                                     <div class="col-sm-8">
                                         <select data-placeholder="Your Favorite Football Team"
@@ -1713,20 +1717,21 @@ Enjoy!
                             </fieldset>
                             <fieldset>
                                 <legend>Dropdown based colored selects</legend>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="simple-select">Simple select</label>
                                     <div class="col-sm-8">
-                                        <select class="selectpicker" data-style="btn-default"
+                                        <select class="selectpicker" data-style="btn-btn-secondary"
                                                 data-width="auto"
                                                 tabindex="-1" id="simple-select">
-                                            <option value="0">Option One</option>
-                                            <option value="1">Option Two</option>
-                                            <option value="2">Option Three</option>
+                                            <!--TODO option One-->
+                                            <option class="dropdown-item" value="0">Option One</option>
+                                            <option class="dropdown-item" value="1">Option Two</option>
+                                            <option class="dropdown-item" value="2">Option Three</option>
                                         </select>
                                         <span class="help-block">Auto size</span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="simple-red-select">
                                         Colored ones
                                         <span class="help-block">
@@ -1738,30 +1743,30 @@ Enjoy!
                                                 data-style="btn-danger btn-sm"
                                                 data-width="auto"
                                                 tabindex="-1" id="simple-red-select">
-                                            <option value="0">Ichi</option>
-                                            <option value="1">Ni</option>
-                                            <option value="2">San</option>
+                                            <option class="dropdown-item" value="0">Ichi</option>
+                                            <option class="dropdown-item" value="1">Ni</option>
+                                            <option class="dropdown-item" value="2">San</option>
                                         </select>
                                         <select class="selectpicker"
                                                 data-style="btn-warning btn-sm"
                                                 data-width="auto"
                                                 tabindex="-1" id="simple-orange-select">
-                                            <option value="0">Shi</option>
-                                            <option value="1">Go</option>
-                                            <option value="2">Roku</option>
+                                            <option class="dropdown-item" value="0">Shi</option>
+                                            <option class="dropdown-item" value="1">Go</option>
+                                            <option class="dropdown-item" value="2">Roku</option>
                                         </select>
                                         <select class="selectpicker"
                                                 data-style="btn-success btn-sm"
                                                 data-width="auto"
                                                 tabindex="-1" id="simple-green-select">
-                                            <option value="0">Hichi</option>
-                                            <option value="1">Hachi</option>
-                                            <option value="2">Ku</option>
-                                            <option value="3">Ju</option>
+                                            <option class="dropdown-item" value="0">Hichi</option>
+                                            <option class="dropdown-item" value="1">Hachi</option>
+                                            <option class="dropdown-item" value="2">Ku</option>
+                                            <option class="dropdown-item" value="3">Ju</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="col-sm-4 control-label" for="simple-big-select">
                                         Big One
                                         <span class="help-block">
@@ -1770,11 +1775,11 @@ Enjoy!
                                     </label>
                                     <div class="col-sm-8">
                                         <select class="selectpicker"
-                                                data-style="btn-default btn-lg"
+                                                data-style="btn-secondary btn-lg"
                                                 tabindex="-1" id="simple-big-select">
-                                            <option value="0">Fourth Item</option>
-                                            <option value="1">Fifth Item</option>
-                                            <option value="2">Sixth item</option>
+                                            <option class="dropdown-item" value="0">Fourth Item</option>
+                                            <option class="dropdown-item" value="1">Fifth Item</option>
+                                            <option class="dropdown-item" value="2">Sixth item</option>
                                         </select>
                                     </div>
                                 </div>
@@ -1791,10 +1796,11 @@ Enjoy!
                         <h5>
                             Checkbox <strong>Controls</strong>
                         </h5>
+                        <!--TODO add new checkbox-->
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -1914,9 +1920,9 @@ Enjoy!
                             Radio <strong>Controls</strong>
                         </h5>
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -2020,9 +2026,9 @@ Enjoy!
                             Pickers
                         </h5>
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -2042,10 +2048,11 @@ Enjoy!
                                             Can be customized for both 24 hour and 12 hour clocks.
                                         </span>
                                     </label>
+                                    <!--TODO select Time-->
                                     <div id="datetimepicker2" class="input-group">
                                         <input id="datepicker2i" type="text" class="form-control" />
                                         <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
+                                            <span class="fa fa-calendar"></span>
                                         </span>
                                     </div>
                                 </div>
@@ -2078,9 +2085,9 @@ Enjoy!
                             Input <strong>Masks</strong>
                         </h5>
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -2089,7 +2096,8 @@ Enjoy!
                                 <legend>
                                     Masked inputs
                                 </legend>
-                                <div class="form-group">
+                                <!--TODO label in line-->
+                                <div class="form-group row">
                                     <label class="control-label col-sm-4" for="mask-phone">
                                         Phone
                                         <span class="help-block">(123) 456-7890</span>
@@ -2098,7 +2106,7 @@ Enjoy!
                                         <input id="mask-phone" type="text" class="form-control">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="control-label col-sm-4" for="mask-int-phone">
                                         International Phone
                                         <span class="help-block">+375 123 456 789</span>
@@ -2107,7 +2115,7 @@ Enjoy!
                                         <input id="mask-int-phone" type="text" class="form-control">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="control-label col-sm-4" for="mask-date">
                                         Date Format
                                         <span class="help-block">07-03-2013</span>
@@ -2116,7 +2124,7 @@ Enjoy!
                                         <input id="mask-date" type="text" class="form-control">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="control-label col-sm-4" for="mask-time">
                                         Time
                                         <span class="help-block">13:43</span>
@@ -2138,10 +2146,11 @@ Enjoy!
                         <h5>
                             Sliders
                         </h5>
+                        <!--TODO sliders-->
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -2221,10 +2230,11 @@ Enjoy!
                         <h5>
                             Simple <strong>file uploads</strong>
                         </h5>
+                        <!--TODO select file buttons-->
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -2234,7 +2244,7 @@ Enjoy!
                                     <p>The man who is really serious, with the urge to find out what truth is, has no style at all. He lives only in what is.</p>
                                     <footer>Bruce Lee</footer>
                                 </blockquote>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="control-label col-sm-4" for="fileupload1">
                                         File input widget
                                     </label>
@@ -2244,17 +2254,17 @@ Enjoy!
                                                 <i class="glyphicon glyphicon-file fileinput-exists"></i>
                                                 <span class="fileinput-filename"></span>
                                             </div>
-                                            <span class="input-group-addon btn btn-default btn-file">
+                                            <span class="input-group-addon btn btn-secondary btn-file">
                                                 <span class="fileinput-new">Select file</span>
                                                 <span class="fileinput-exists">Change</span>
                                                 <input id="fileupload1" type="file">
                                             </span>
-                                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                            <a href="#" class="input-group-addon btn btn-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
                                         </div>
                                         <span class="help-block">Awesome file input plugin allows you to create a visually appealing file or image inputs.</span>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group row">
                                     <label class="control-label col-sm-4" for="fileupload1">
                                         Image upload widget
                                     </label>
@@ -2265,8 +2275,8 @@ Enjoy!
                                             </div>
                                             <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
                                             <div>
-                                                <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-                                                <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                                                <span class="btn btn-secondary btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                                                <a href="#" class="btn btn-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
                                             </div>
                                         </div>
                                         <span class="help-block">Showing a thumbnail instead of the filename when uploading an image.</span>
@@ -2284,9 +2294,9 @@ Enjoy!
                             <strong>Drop</strong> Zone
                         </h5>
                         <div class="widget-controls">
-                            <a class="bg-gray-transparent" href="#"><i class="glyphicon glyphicon-cog text-white"></i></a>
+                            <a class="bg-gray-transparent" href="#"><i class="fa fa-cog text-white"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-times"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
