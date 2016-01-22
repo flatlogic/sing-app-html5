@@ -1,3 +1,7 @@
+body {
+  color: $gray;
+}
+
 //
 // Typography
 // --------------------------------------------------
@@ -15,6 +19,7 @@ h1, h2, h3, h4, h5, h6,
   small,
   .small {
     font-weight: $headings-font-weight;
+    font-size: 65%;
   }
 }
 
@@ -205,6 +210,14 @@ legend {
 //
 // Navs
 // --------------------------------------------------
+
+.nav-pills .nav-link {
+  border-radius: 0;
+}
+
+.nav-pills .nav-item + .nav-item {
+  margin-left: 0;
+}
 
 .nav-tabs {
   border-bottom: none;
@@ -473,6 +486,10 @@ legend {
 
   .nav.navbar-nav > li:first-child a {
     padding-left: 0;
+
+    .circle {
+      color: $gray;
+    }
   }
 
   .nav.navbar-nav li:nth-child(2) > a:after {
@@ -832,8 +849,8 @@ legend {
 
 @mixin bg-variant($parent, $color) {
   #{$parent} {
-    color: $gray-dark !important;
     background-color: $color !important;
+    color: $gray !important;
   }
   a#{$parent} {
     @include hover-focus {

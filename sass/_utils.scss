@@ -5,6 +5,11 @@
 // Util Components
 // ----------------------------
 
+.nav-justified {
+  @include nav-justified;
+  @include nav-tabs-justified;
+}
+
 .transition-height{
   @include transition(height .15s ease-in-out);
 }
@@ -436,6 +441,10 @@ $z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 
 .fs-mini{
   font-size: $font-size-mini;
+}
+
+.fs-smaller{
+  font-size: $font-size-smaller;
 }
 
 .fs-sm{

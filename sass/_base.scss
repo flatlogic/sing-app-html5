@@ -130,6 +130,11 @@
   position: relative;
   z-index: 0;
   height: 100%;
+
+  .fa-refresh {
+    font-size: $font-size-smaller;
+    padding-top: 2px;
+  }
 }
 
 .content{
@@ -940,7 +945,6 @@
   padding: $widget-padding-vertical $widget-padding-horizontal;
   background: $widget-bg-color;
   border-radius: $border-radius-sm;
-
   > header{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
     padding: $widget-padding-vertical $widget-padding-horizontal;
@@ -1044,7 +1048,9 @@
 
 .widget-icon{
   opacity: .5;
-  font-size: 42px;
+  font-size: 45px;
+  vertical-align: top;
+  margin: 1px;
 }
 
 .widget-image{

@@ -48,7 +48,7 @@
   .chart-value{
     margin-bottom: 0;
     font-weight: $font-weight-bold;
-    font-size: $font-size-h4 + 3;
+    font-size: $font-size-h6 + 0.1875rem;
     line-height: 1;
     color: $white;
   }
@@ -56,6 +56,7 @@
   .chart-value-change{
     color: rgba($white, .7);
     font-size: $font-size-smaller;
+    margin-bottom: $chart-spacer-y;
   }
 }
 
@@ -165,10 +166,9 @@
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
 
-  > li > a{
-    padding-left: 0;
-    padding-right: 0;
+  > .nav-item > .nav-link{
     border-radius: 0;
+    padding: .6rem 0 .6rem 0;
 
     color: $gray;
     &:hover{
@@ -177,7 +177,7 @@
     }
   }
 
-  > li.active > a{
+  > .nav-item.active > .nav-link{
     &, &:hover{
       background-color: $white;
       color: $gray;
@@ -185,11 +185,11 @@
     }
   }
 
-  > li:first-child > a{
+  > .nav-item:first-child > a{
     border-bottom-left-radius: $border-radius;
   }
 
-  > li:last-child > a{
+  > .nav-item:last-child > a{
     border-bottom-right-radius: $border-radius;
   }
 }
@@ -1209,7 +1209,7 @@
 
     .time{
       float: right;
-      font-size: $font-size-sm;
+      font-size: $font-size-smaller;
       color: $link-color;
     }
 

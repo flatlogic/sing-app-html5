@@ -48,8 +48,8 @@ $text-color:            $gray !default;
 //$text-color: #57534A; //a bit brown?
 
 $font-size-base:          0.875rem !default;
-$font-size-larger:        $font-size-base + 1;    // 14px
-$font-size-mini:          $font-size-base - 1;
+$font-size-larger:        $font-size-base + 0.0625rem;
+$font-size-mini:          $font-size-base - 0.0625rem;
 
 $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
@@ -95,6 +95,8 @@ $screen-lg-height: 670px !default;
 $widget-padding-vertical: 15px !default;
 $widget-padding-horizontal: 20px !default;
 $widget-bg-color: $white;
+
+$chart-spacer-y: .5rem !default;
 
 
 // Bootstrap variables
