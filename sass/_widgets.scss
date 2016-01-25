@@ -647,6 +647,12 @@
 /**           Profile             **/
 /***********************************/
 
+.user-profile {
+  .label {
+    padding: 5px;
+  }
+}
+
 .post-user-profile {
   margin-top: -75px;
 
@@ -706,8 +712,7 @@
 }
 
 .activities{
-  margin-top: -20px;
-  h2 {
+  h3 {
     margin-left: 20px
   }
 }
