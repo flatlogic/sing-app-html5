@@ -132,8 +132,8 @@ legend {
 // Tables
 // --------------------------------------------------
 
-.table td > .checkbox,
-.table th > .checkbox{
+.table td > .abc-checkbox,
+.table th > .abc-checkbox{
   position: relative;
   top: -8px;
   margin-top: 0;
@@ -725,12 +725,16 @@ legend {
 .pagination{
   font-weight: $font-weight-normal;
 
-  > li {
+  > .page-item {
     display: inline; // Remove list-style and block-level defaults
-    > a,
+    > .page-link,
     > span{
       border-radius: $border-radius;
       margin: 0 2px;
+    }
+
+    >.page-link {
+      text-decoration: none;
     }
   }
 }

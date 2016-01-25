@@ -4,8 +4,8 @@ $(function(){
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
                 "<div class='btn-group'>" +
-                "<a class='btn btn-" + size + " btn-default' data-wysihtml5-command='bold' title='CTRL+B' tabindex='-1'><i class='glyphicon glyphicon-bold'></i></a>" +
-                "<a class='btn btn-" + size + " btn-default' data-wysihtml5-command='italic' title='CTRL+I' tabindex='-1'><i class='glyphicon glyphicon-italic'></i></a>" +
+                "<a class='btn btn-" + size + " btn-secondary' data-wysihtml5-command='bold' title='CTRL+B' tabindex='-1'><i class='fa fa-bold'></i></a>" +
+                "<a class='btn btn-" + size + " btn-secondary' data-wysihtml5-command='italic' title='CTRL+I' tabindex='-1'><i class='fa fa-italic'></i></a>" +
                 "</div>" +
                 "</li>";
         },
@@ -18,27 +18,27 @@ $(function(){
                 "<div class='modal-content'>"+
                 "<div class='modal-header'>" +
                 "<a class='close' data-dismiss='modal'>&times;</a>" +
-                "<h4>" + locale.link.insert + "</h4>" +
+                "<h5>" + locale.link.insert + "</h5>" +
                 "</div>" +
                 "<div class='modal-body'>" +
                 "<input value='http://' class='bootstrap-wysihtml5-insert-link-url form-control'>" +
                 "<label class='checkbox'> <input type='checkbox' class='bootstrap-wysihtml5-insert-link-target' checked>" + locale.link.target + "</label>" +
                 "</div>" +
                 "<div class='modal-footer'>" +
-                "<button class='btn btn-default' data-dismiss='modal'>" + locale.link.cancel + "</button>" +
+                "<button class='btn btn-secondary' data-dismiss='modal'>" + locale.link.cancel + "</button>" +
                 "<button href='#' class='btn btn-primary' data-dismiss='modal'>" + locale.link.insert + "</button>" +
                 "</div>" +
                 "</div>" +
                 "</div>" +
                 "</div>" +
-                "<a class='btn btn-" + size + " btn-default' data-wysihtml5-command='createLink' title='" + locale.link.insert + "' tabindex='-1'><i class='fa fa-share'></i></a>" +
+                "<a class='btn btn-" + size + " btn-secondary' data-wysihtml5-command='createLink' title='" + locale.link.insert + "' tabindex='-1'><i class='fa fa-share'></i></a>" +
                 "</li>";
         },
         "html": function(locale, options) {
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
                 "<div class='btn-group'>" +
-                "<a class='btn btn-" + size + " btn-default' data-wysihtml5-action='change_view' title='" + locale.html.edit + "' tabindex='-1'><i class='fa fa-pencil'></i></a>" +
+                "<a class='btn btn-" + size + " btn-secondary' data-wysihtml5-action='change_view' title='" + locale.html.edit + "' tabindex='-1'><i class='fa fa-pencil'></i></a>" +
                 "</div>" +
                 "</li>";
         }
@@ -133,7 +133,7 @@ $(function(){
             },
 
             render: function() {
-                this.$el.attr('class', this.model.get("current") ? 'active' : '');
+                this.$el.attr('class', this.model.get("current") ? 'nav-item active' : 'nav-item');
                 this.$el.html(this.template(this.model.toJSON()));
                 return this;
             },
@@ -247,7 +247,7 @@ $(function(){
 
             render: function() {
                 $('#widget-email-header').html(
-                        "<h4>" + this.model.get('subject') + "</h4>" +
+                        "<h5>" + this.model.get('subject') + "</h5>" +
                         '<div class="widget-controls"><a href="#"><i class="fa fa-print"></i></a></div>'
                 );
                 $('#folder-stats').addClass('hide');
@@ -302,7 +302,7 @@ $(function(){
 
             render: function() {
                 $('#widget-email-header').html(
-                    '<h4>Compose <span class="fw-semi-bold">New</span></h4>'
+                    '<h5>Compose <span class="fw-semi-bold">New</span></h5>'
                 );
                 $('#folder-stats').addClass('hide');
                 $('#back-btn').removeClass('hide');

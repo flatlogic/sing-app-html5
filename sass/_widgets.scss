@@ -577,14 +577,6 @@
       background-color: $gray-semi-lighter;
       color: $text-color;
     }
-
-    > .glyphicon{
-      margin-right: 5px;
-    }
-
-    > .badge{
-      float: right;
-    }
   }
 }
 
@@ -977,7 +969,7 @@
 
 
 .nav-email-folders{
-  > li > a {
+  > li > .nav-link {
     color: $gray-semi-light;
     font-weight: $font-weight-normal;
     &:hover{
@@ -985,20 +977,16 @@
       color: $text-color;
     }
 
-    > .glyphicon{
-      margin-right: 5px;
-    }
-
     > .fa-circle{
       margin-top: 3px;
     }
-
-    > .badge{
-      background-color: $brand-danger;
-    }
   }
 
-  > li.active > a{
+  > li > .nav-link > .label {
+    padding-bottom: 5px;
+  }
+
+  > li.active > .nav-link{
     &,
     &:hover,
     &:focus {
@@ -1006,8 +994,9 @@
       color: $text-color;
       font-weight: $font-weight-semi-bold;
 
-      > .badge{
+      > .label{
         color: $text-color;
+        background-color: $white;
       }
     }
   }
@@ -1036,9 +1025,18 @@
 .table-emails{
   margin-bottom: 0;
 
-  td > .checkbox,
-  th > .checkbox{
-    top: -9px;
+  thead > tr > th {
+    border-top: none;
+  }
+
+  td,
+  th {
+    padding: 7px 5px 7px 5px;
+  }
+
+  td > .abc-checkbox,
+  th > .abc-checkbox{
+    top: -6px;
   }
 
   .name,
