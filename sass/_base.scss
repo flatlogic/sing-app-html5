@@ -1044,6 +1044,10 @@
     position: relative;
     top: -1px;
   }
+
+  .dropdown-toggle:after {
+    content: none;
+  }
 }
 
 .widget-icon{
