@@ -30,12 +30,12 @@
 <nav id="sidebar" class="sidebar" role="navigation">
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
-        <header class="logo hidden-xs">
+        <header class="logo hidden-xs-down">
             <a href="index.html">sing</a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
-        <div class="sidebar-status visible-xs">
+        <div class="sidebar-status hidden-xs-up">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="thumb-sm avatar pull-right">
                     <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
@@ -81,7 +81,7 @@
             <li class="active">
                 <a href="charts.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-stats"></i>
+                        <i class="fa fa-bar-chart"></i>
                     </span>
                     Charts
                 </a>
@@ -89,7 +89,7 @@
             <li>
                 <a href="profile.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-user"></i>
+                        <i class="fa fa-user"></i>
                     </span>
                     Profile
                     <sup class="text-warning fw-semi-bold">
@@ -99,13 +99,13 @@
             </li>
         </ul>
         <!-- every .sidebar-nav may have a title -->
-        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="fa fa-refresh"></i></a></h5>
         <ul class="sidebar-nav">
             <li>
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-align-right"></i>
+                        <i class="fa fa-align-right"></i>
                     </span>
                     Forms
                     <i class="toggle fa fa-angle-down"></i>
@@ -119,7 +119,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-tree-conifer"></i>
+                        <i class="fa fa-tree"></i>
                     </span>
                     UI Elements
                     <i class="toggle fa fa-angle-down"></i>
@@ -136,7 +136,7 @@
             <li>
                 <a href="grid.html">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-th"></i>
+                        <i class="fa fa-th"></i>
                     </span>
                     Grid
                 </a>
@@ -144,7 +144,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="glyphicon glyphicon-map-marker"></i>
+                        <i class="fa fa-map-marker"></i>
                     </span>
                     Maps
                     <i class="toggle fa fa-angle-down"></i>
@@ -211,7 +211,7 @@
                 </ul>
             </li>
         </ul>
-        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="fa fa-plus-square-o"></i></a></h5>
         <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
         <ul class="sidebar-labels">
             <li>
@@ -240,16 +240,16 @@
             <div class="alert fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Sales Report</span> <br>
-                <div class="progress progress-xs mt-xs mb-0">
-                    <div class="progress-bar progress-bar-gray-light" style="width: 16%"></div>
+                <div class="bg-gray-transparent progress-bar">
+                    <progress class="progress progress-xs progress-bar-gray-light mt-xs mb-0" value="100" max="100" style="width: 16%"></progress>
                 </div>
                 <small>Calculating x-axis bias... 65%</small>
             </div>
             <div class="alert fade in">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-                <div class="progress progress-xs mt-xs mb-0">
-                    <div class="progress-bar progress-bar-danger" style="width: 23%"></div>
+                <div class="bg-gray-transparent progress-bar">
+                    <progress class="progress progress-xs progress-danger mt-xs mb-0" value="100" max="100" style="width: 23%"></progress>
                 </div>
                 <small>Provide required notes</small>
             </div>
@@ -262,21 +262,21 @@
         <!-- .navbar-header contains links seen on xs & sm screens -->
         <div class="navbar-header">
             <ul class="nav navbar-nav">
-                <li>
+                <li class="nav-item">
                     <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
-                    <a class="hidden-sm hidden-xs" id="nav-state-toggle" href="#" title="Turn on/off sidebar collapsing" data-placement="bottom">
+                    <a class="hidden-md-down nav-link" id="nav-state-toggle" href="#" data-toggle="tooltip" data-original-title="Turn on/off sidebar collapsing" data-placement="bottom">
                         <i class="fa fa-bars fa-lg"></i>
                     </a>
                     <!-- shown on xs & sm screen. collapses and expands navigation -->
-                    <a class="visible-sm visible-xs" id="nav-collapse-toggle" href="#" title="Show/hide sidebar" data-placement="bottom">
-                        <span class="rounded rounded-lg bg-gray text-white visible-xs"><i class="fa fa-bars fa-lg"></i></span>
-                        <i class="fa fa-bars fa-lg hidden-xs"></i>
+                    <a class="hidden-lg-up nav-link" id="nav-collapse-toggle" href="#" title="Show/hide sidebar" data-placement="bottom">
+                        <span class="rounded rounded-lg bg-gray text-white hidden-md-up"><i class="fa fa-bars fa-lg"></i></span>
+                        <i class="fa fa-bars fa-lg hidden-sm-down"></i>
                     </a>
                 </li>
-                <li class="ml-sm mr-n-xs hidden-xs"><a href="#"><i class="fa fa-refresh fa-lg"></i></a></li>
-                <li class="ml-n-xs hidden-xs"><a href="#"><i class="fa fa-times fa-lg"></i></a></li>
+                <li class="nav-item hidden-sm-down"><a href="#" class="nav-link"><i class="fa fa-refresh fa-lg"></i></a></li>
+                <li class="nav-item ml-n-xs hidden-sm-down"><a href="#" class="nav-link"><i class="fa fa-times fa-lg"></i></a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right visible-xs">
+            <ul class="nav navbar-nav navbar-right hidden-md-up">
                 <li>
                     <!-- toggles chat -->
                     <a href="#" data-toggle="chat-sidebar">
@@ -285,7 +285,7 @@
                 </li>
             </ul>
             <!-- xs & sm screen logo -->
-            <a class="navbar-brand visible-xs" href="index.html">
+            <a class="navbar-brand hidden-md-up" href="index.html">
                 <i class="fa fa-circle text-gray mr-n-sm"></i>
                 <i class="fa fa-circle text-warning"></i>
                 &nbsp;
@@ -299,19 +299,19 @@
         <!-- this part is hidden for xs screens -->
         <div class="collapse navbar-collapse">
             <!-- search form! link it to your search server -->
-            <form class="navbar-form navbar-left" role="search">
+            <form class="navbar-form pull-left" role="search">
                 <div class="form-group">
                     <div class="input-group input-group-no-border">
-                        <span class="input-group-addon">
-                            <i class="fa fa-search"></i>
-                        </span>
+                    <span class="input-group-addon">
+                        <i class="fa fa-search"></i>
+                    </span>
                         <input class="form-control" type="text" placeholder="Search Dashboard">
                     </div>
                 </div>
             </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle dropdown-toggle-notifications" id="notifications-dropdown-toggle" data-toggle="dropdown">
+            <ul class="nav navbar-nav pull-right">
+                <li class="dropdown nav-item">
+                    <a href="#" class="dropdown-toggle dropdown-toggle-notifications nav-link" id="notifications-dropdown-toggle" data-toggle="dropdown">
                         <span class="thumb-sm avatar pull-left">
                             <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                         </span>
@@ -325,14 +325,14 @@
                          consists of three components:
                          notifications, messages, progress. leave or add what's important for you.
                          uses Sing's ajax-load plugin for async content loading. See #load-notifications-btn -->
-                    <div class="dropdown-menu animated fadeInUp" id="notifications-dropdown-menu">
-                        <section class="panel notifications">
-                            <header class="panel-heading">
-                                <div class="text-align-center mb-sm">
+                    <div class="dropdown-menu dropdown-menu-right animated fadeInUp" id="notifications-dropdown-menu">
+                        <section class="card notifications">
+                            <header class="card-header">
+                                <div class="text-xs-center mb-sm">
                                     <strong>You have 13 notifications</strong>
                                 </div>
                                 <div class="btn-group btn-group-sm btn-group-justified" id="notifications-toggle" data-toggle="buttons">
-                                    <label class="btn btn-default active">
+                                    <label class="btn btn-secondary active">
                                         <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
                                              only requirement for async reloading -->
                                         <input type="radio" checked
@@ -340,13 +340,13 @@
                                                data-ajax-load="demo/ajax/notifications.html"
                                                data-ajax-target="#notifications-list"> Notifications
                                     </label>
-                                    <label class="btn btn-default">
+                                    <label class="btn btn-secondary">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/messages.html"
                                                data-ajax-target="#notifications-list"> Messages
                                     </label>
-                                    <label class="btn btn-default">
+                                    <label class="btn btn-secondary">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/progress.html"
@@ -357,9 +357,9 @@
                             <!-- notification list with .thin-scroll which styles scrollbar for webkit -->
                             <div id="notifications-list" class="list-group thin-scroll">
                                 <div class="list-group-item">
-                                    <span class="thumb-sm pull-left mr clearfix">
-                                        <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
-                                    </span>
+                                <span class="thumb-sm pull-left mr clearfix">
+                                    <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
+                                </span>
                                     <p class="no-margin overflow-hidden">
                                         1 new user just signed up! Check out
                                         <a href="#">Monica Smith</a>'s account.
@@ -369,9 +369,9 @@
                                     </p>
                                 </div>
                                 <a class="list-group-item" href="#">
-                                    <span class="thumb-sm pull-left mr">
-                                        <i class="glyphicon glyphicon-upload fa-lg"></i>
-                                    </span>
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="fa fa-upload fa-lg"></i>
+                                </span>
                                     <p class="text-ellipsis no-margin">
                                         2.1.0-pre-alpha just released. </p>
                                     <time class="help-block no-margin">
@@ -379,9 +379,9 @@
                                     </time>
                                 </a>
                                 <a class="list-group-item" href="#">
-                                    <span class="thumb-sm pull-left mr">
-                                        <i class="fa fa-bolt fa-lg"></i>
-                                    </span>
+                                <span class="thumb-sm pull-left mr">
+                                    <i class="fa fa-bolt fa-lg"></i>
+                                </span>
                                     <p class="text-ellipsis no-margin">
                                         Server load limited. </p>
                                     <time class="help-block no-margin">
@@ -389,14 +389,14 @@
                                     </time>
                                 </a>
                                 <div class="list-group-item">
-                                    <span class="thumb-sm pull-left mr clearfix">
-                                        <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
-                                    </span>
+                                <span class="thumb-sm pull-left mr clearfix">
+                                    <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+                                </span>
                                     <p class="no-margin overflow-hidden">
                                         User <a href="#">Jeff</a> registered
                                         &nbsp;&nbsp;
-                                        <button class="btn btn-xs btn-success">Allow</button>
-                                        <button class="btn btn-xs btn-danger">Deny</button>
+                                        <a class="label label-success">Allow</a>
+                                        <a class="label label-danger">Deny</a>
                                         <time class="help-block no-margin">
                                             12:18 AM
                                         </time>
@@ -415,11 +415,11 @@
                                     </p>
                                 </div>
                                 <a class="list-group-item" href="#">
-                                    <span class="thumb-sm pull-left mr">
-                                        <span class="rounded bg-primary rounded-lg">
-                                            <i class="fa fa-facebook text-white"></i>
-                                        </span>
+                                <span class="thumb-sm pull-left mr">
+                                    <span class="rounded bg-primary rounded-lg">
+                                        <i class="fa fa-facebook text-white"></i>
                                     </span>
+                                </span>
                                     <p class="text-ellipsis no-margin">
                                         New <strong>76</strong> facebook likes received.</p>
                                     <time class="help-block no-margin">
@@ -427,11 +427,11 @@
                                     </time>
                                 </a>
                                 <a class="list-group-item" href="#">
-                                    <span class="thumb-sm pull-left mr">
-                                        <span class="circle circle-lg bg-gray-dark">
-                                            <i class="fa fa-circle-o text-white"></i>
-                                        </span>
+                                <span class="thumb-sm pull-left mr">
+                                    <span class="circle circle-lg bg-gray-dark">
+                                        <i class="fa fa-circle-o text-white"></i>
                                     </span>
+                                </span>
                                     <p class="text-ellipsis no-margin">
                                         Dark matter detected.</p>
                                     <time class="help-block no-margin">
@@ -439,10 +439,10 @@
                                     </time>
                                 </a>
                             </div>
-                            <footer class="panel-footer text-sm">
+                            <footer class="card-footer text-sm">
                                 <!-- ajax-load button. loads demo/ajax/notifications.php to #notifications-list
                                      when clicked -->
-                                <button class="btn btn-xs btn-link pull-right"
+                                <button class="btn-label btn-link pull-right"
                                         id="load-notifications-btn"
                                         data-ajax-load="demo/ajax/notifications.php"
                                         data-ajax-target="#notifications-list"
@@ -454,21 +454,21 @@
                         </section>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <li class="dropdown nav-item">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <i class="fa fa-cog fa-lg"></i>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox &nbsp;&nbsp;<span class="badge bg-danger animated bounceIn">9</span></a></li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out"></i> &nbsp; Log Out</a></li>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> &nbsp; My Account</a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Calendar</a></li>
+                        <li><a class="dropdown-item" href="#">Inbox &nbsp;&nbsp;<span class="label label-pill label-danger animated bounceIn">9</span></a></li>
+                        <li class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i> &nbsp; Log Out</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#" data-toggle="chat-sidebar">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-toggle="chat-sidebar">
                         <i class="fa fa-globe fa-lg"></i>
                     </a>
                     <div id="chat-notification" class="chat-notification hide">
@@ -491,7 +491,7 @@
 <div class="chat-sidebar" id="chat">
     <div class="chat-sidebar-content">
         <header class="chat-sidebar-header">
-            <h4 class="chat-sidebar-title">Contacts</h4>
+            <h5 class="chat-sidebar-title">Contacts</h5>
             <div class="form-group no-margin">
                 <div class="input-group input-group-dark">
                     <input class="form-control fs-mini" id="chat-sidebar-search" type="text" placeholder="Search...">
@@ -509,7 +509,7 @@
                     <span class="thumb-sm pull-left mr">
                         <img class="img-circle" src="demo/img/people/a2.jpg" alt="...">
                     </span>
-                    <h5 class="message-sender">Chris Gray</h5>
+                    <h6 class="message-sender">Chris Gray</h6>
                     <p class="message-preview">Hey! What's up? So many times since we</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-2">
@@ -517,7 +517,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="img/avatar.png" alt="...">
                 </span>
-                    <h5 class="message-sender">Jamey Brownlow</h5>
+                    <h6 class="message-sender">Jamey Brownlow</h6>
                     <p class="message-preview">Good news coming tonight. Seems they agreed to proceed</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-3">
@@ -525,7 +525,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a1.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Livia Walsh</h5>
+                    <h6 class="message-sender">Livia Walsh</h6>
                     <p class="message-preview">Check out my latest email plz!</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-4">
@@ -533,7 +533,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="img/avatar.png" alt="...">
                 </span>
-                    <h5 class="message-sender">Jaron Fitzroy</h5>
+                    <h6 class="message-sender">Jaron Fitzroy</h6>
                     <p class="message-preview">What about summer break?</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-5">
@@ -541,7 +541,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a4.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Mike Lewis</h5>
+                    <h6 class="message-sender">Mike Lewis</h6>
                     <p class="message-preview">Just ain't sure about the weekend now. 90% I'll make it.</p>
                 </a>
             </div>
@@ -552,7 +552,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a6.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Freda Edison</h5>
+                    <h6 class="message-sender">Freda Edison</h6>
                     <p class="message-preview">Hey what's up? Me and Monica going for a lunch somewhere. Wanna join?</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-7">
@@ -560,7 +560,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Livia Walsh</h5>
+                    <h6 class="message-sender">Livia Walsh</h6>
                     <p class="message-preview">Check out my latest email plz!</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-8">
@@ -568,7 +568,7 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
                 </span>
-                    <h5 class="message-sender">Jaron Fitzroy</h5>
+                    <h6 class="message-sender">Jaron Fitzroy</h6>
                     <p class="message-preview">What about summer break?</p>
                 </a>
                 <a class="list-group-item" href="#chat-sidebar-user-9">
@@ -576,18 +576,18 @@
                 <span class="thumb-sm pull-left mr">
                     <img class="img-circle" src="img/avatar.png" alt="...">
                 </span>
-                    <h5 class="message-sender">Mike Lewis</h5>
+                    <h6 class="message-sender">Mike Lewis</h6>
                     <p class="message-preview">Just ain't sure about the weekend now. 90% I'll make it.</p>
                 </a>
             </div>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-1">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Chris Gray
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
                 <li class="message">
                     <span class="thumb-sm">
@@ -624,82 +624,82 @@
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-2">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Jamey Brownlow
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-3">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Livia Walsh
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-4">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Jaron Fitzroy
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-5">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Mike Lewis
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-6">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Freda Edison
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-7">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Livia Walsh
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-8">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Jaron Fitzroy
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
         <div class="chat-sidebar-chat chat-sidebar-panel" id="chat-sidebar-user-9">
-            <h5 class="title">
+            <h6 class="title">
                 <a class="js-back" href="#">
                     <i class="fa fa-angle-left mr-xs"></i>
                     Mike Lewis
                 </a>
-            </h5>
+            </h6>
             <ul class="message-list">
             </ul>
         </div>
@@ -710,24 +710,24 @@
 </div>
 
 <div class="content-wrap">
-    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
             <li>YOU ARE HERE</li>
-            <li class="active">Tables Basic</li>
+            <li class="active">Charts</li>
         </ol>
         <h1 class="page-title">Visual - <span class="fw-semi-bold">Charts</span></h1>
         <div class="row">
-            <div class="col-md-6 col-lg-5">
+            <div class="col-lg-6 col-xl-5">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Flot <span class="fw-semi-bold">Charts</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="fa fa-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -737,13 +737,13 @@
                             Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
                             focus on simple usage, attractive looks and interactive features.
                         </p>
-                        <h4 class="mt">Interactive <span class="fw-semi-bold">Sparklines</span></h4>
+                        <h5 class="mt">Interactive <span class="fw-semi-bold">Sparklines</span></h5>
                         <div class="row mt">
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                                 <div class="stats-row">
                                     <div class="stat-item">
-                                        <p class="value4 fw-thin">34 567</p>
-                                        <h6 class="name text-muted no-margin">Overall Values</h6>
+                                        <p class="value5 fw-thin">34 567</p>
+                                        <h6 class="name text-muted no-margin fs-mini">Overall Values</h6>
                                     </div>
                                     <div class="stat-item stat-item-mini-chart">
                                         <div class="sparkline" data-type="bar" data-bar-color="#f0b518"
@@ -751,11 +751,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                                 <div class="stats-row">
                                     <div class="stat-item">
-                                        <p class="value4 fw-thin">34 567</p>
-                                        <h6 class="name text-muted no-margin">Overall Values</h6>
+                                        <p class="value5 fw-thin">34 567</p>
+                                        <h6 class="name text-muted no-margin fs-mini">Overall Values</h6>
                                     </div>
                                     <div class="stat-item stat-item-mini-chart">
                                         <div class="sparkline" data-type="bar" data-bar-color="#FFA587"
@@ -772,16 +772,16 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-lg-6 col-xl-4">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Realtime <span class="fw-semi-bold">Rickshaw</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="fa fa-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -791,9 +791,9 @@
                             It's all based on <span class="fw-semi-bold">d3</span> underneath, so graphs are drawn with standard SVG and styled with CSS.
                             Customize all you like with techniques you already know.
                         </p>
-                        <h4>720 Users</h4>
-                        <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-gray-light" style="width: 60%;"></div>
+                        <h5>720 Users</h5>
+                        <div class="bg-gray-lighter progress-bar">
+                            <progress class="progress progress-xs progress-bar-gray-light" value="100" max="100" style="width: 60%"></progress>
                         </div>
                         <p class="fs-mini text-muted mb-lg">
                             <span class="circle bg-success text-white">
@@ -807,16 +807,16 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-lg-6 col-xl-3">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Line <span class="fw-semi-bold">Sparkline</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="fa fa-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -840,31 +840,31 @@
                 </section>
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Sparkline <span class="fw-semi-bold">Pie Charts</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
                         <p class="fs-mini text-muted">
                             Each example displayed below takes just 1 line of HTML or javascript to generate.
                         </p>
-                        <div id="sparkline2" class="chart-overflow-bottom mb-0 text-align-center"></div>
+                        <div id="sparkline2" class="chart-overflow-bottom mb-0 text-xs-center"></div>
                     </div>
                 </section>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-7 col-lg-8">
+            <div class="col-lg-7 col-xl-8">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             <span class="fw-semi-bold">D3</span> Charts
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -878,14 +878,14 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-5 col-lg-4">
+            <div class="col-lg-5 col-xl-4">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             <span class="fw-semi-bold">D3</span> Charts
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -901,16 +901,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Morris <span class="fw-semi-bold">Area Charts</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="fa fa-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -924,16 +924,16 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Morris <span class="fw-semi-bold">Line Charts</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="fa fa-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -949,20 +949,20 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-lg-6 col-xl-4">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Easy <span class="fw-semi-bold">Pie Charts</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="fa fa-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body clearfix">
-                        <div class="text-align-center">
+                        <div class="text-xs-center">
                             <div class="easy-pie-chart mb-lg" id="easy-pie1" data-percent="73">
                                 73
                             </div>
@@ -975,16 +975,16 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-6 col-lg-4">
+            <div class="col-lg-6 col-xl-4">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Morris <span class="fw-semi-bold">Donut Charts</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="fa fa-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -999,16 +999,16 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-12 col-lg-4">
+            <div class="col-lg-12 col-xl-4">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Flot <span class="fw-semi-bold">Bars</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i class="fa fa-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="fa fa-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="fa fa-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
@@ -1031,12 +1031,13 @@
 <!-- common libraries. required for every page-->
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/jquery-pjax/jquery.pjax.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="vendor/tether/dist/js/tether.js"></script>
+<script src="vendor/bootstrap/js/dist/util.js"></script>
+<script src="vendor/bootstrap/js/dist/collapse.js"></script>
+<script src="vendor/bootstrap/js/dist/dropdown.js"></script>
+<script src="vendor/bootstrap/js/dist/button.js"></script>
+<script src="vendor/bootstrap/js/dist/tooltip.js"></script>
+<script src="vendor/bootstrap/js/dist/alert.js"></script>
 <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="vendor/widgster/widgster.js"></script>
 <script src="vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>

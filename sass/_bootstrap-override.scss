@@ -484,7 +484,7 @@ legend {
     padding: $navbar-padding-horizontal;
   }
 
-  .nav.navbar-nav > li:first-child a {
+  .nav.navbar-nav > li:first-child .dropdown-toggle {
     padding-left: 0;
 
     .circle {
