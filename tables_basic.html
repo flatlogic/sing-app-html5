@@ -55,15 +55,15 @@
         <ul class="sidebar-nav">
             <li>
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                <a class="collapsed" href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-desktop"></i>
                     </span>
                     Dashboard
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-dashboard" class="collapse in">
-                    <li class="active"><a href="index.html">Dashboard</a></li>
+                <ul id="sidebar-dashboard" class="collapse">
+                    <li><a href="index.html">Dashboard</a></li>
                     <li><a href="widgets.html">Widgets</a></li>
                 </ul>
             </li>
@@ -152,21 +152,21 @@
                 <ul id="sidebar-maps" class="collapse">
                     <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
                          target page -->
-                    <li><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li class="active"><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
                     <li><a href="maps_vector.html">Vector Maps</a></li>
                 </ul>
             </li>
             <li  class="active">
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
+                <a href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-table"></i>
                     </span>
                     Tables
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-tables" class="collapse">
-                    <li><a href="tables_basic.html">Tables Basic</a></li>
+                <ul id="sidebar-tables" class="collapse in">
+                    <li class="active"><a href="tables_basic.html">Tables Basic</a></li>
                     <li><a href="tables_dynamic.html">Tables Dynamic</a></li>
                 </ul>
             </li>
@@ -338,13 +338,13 @@
                                         <input type="radio" checked
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/notifications.html"
-                                               data-ajax-target="body"> Notifications
+                                               data-ajax-target="#notifications-list"> Notifications
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/messages.html"
-                                               data-ajax-target="body"> Messages
+                                               data-ajax-target="#notifications-list"> Messages
                                     </label>
                                     <label class="btn btn-secondary">
                                         <input type="radio"
@@ -710,7 +710,7 @@
 </div>
 
 <div class="content-wrap">
-    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
             <li>YOU ARE HERE</li>
@@ -718,12 +718,12 @@
         </ol>
         <h1 class="page-title">Tables - <span class="fw-semi-bold">Static</span></h1>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Table <span class="fw-semi-bold">Styles</span>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
                             <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
                             <a data-widgster="close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
@@ -772,8 +772,8 @@
                                     45.6 KB
                                 </td>
                                 <td class="width-150">
-                                    <div class="progress progress-sm mt-xs js-progress-animate">
-                                        <div class="progress-bar progress-bar-success" data-width="29%" style="width: 0;"></div>
+                                    <div class="bg-gray-lighter progress-bar">
+                                        <progress class="progress progress-sm progress-success js-progress-animate" value="100" max="100" style="width: 0%" data-width="29%"></progress>
                                     </div>
                                 </td>
                             </tr>
@@ -806,8 +806,8 @@
                                     15.3 MB
                                 </td>
                                 <td class="width-150">
-                                    <div class="progress progress-sm mt-xs js-progress-animate">
-                                        <div class="progress-bar progress-bar-warning" data-width="33%" style="width: 0;"></div>
+                                    <div class="bg-gray-lighter progress-bar">
+                                        <progress class="progress progress-sm progress-warning js-progress-animate" value="100" max="100" style="width: 0%" data-width="33%"></progress>
                                     </div>
                                 </td>
                             </tr>
@@ -842,8 +842,8 @@
                                     49.0 KB
                                 </td>
                                 <td class="width-150">
-                                    <div class="progress progress-sm mt-xs js-progress-animate">
-                                        <div class="progress-bar progress-bar-gray" data-width="38%" style="width: 0;"></div>
+                                    <div class="bg-gray-lighter progress-bar">
+                                        <progress class="progress progress-sm progress-bar-gray js-progress-animate" value="100" max="100" style="width: 0%" data-width="38%"></progress>
                                     </div>
                                 </td>
                             </tr>
@@ -876,8 +876,8 @@
                                     69.1 KB
                                 </td>
                                 <td class="width-150">
-                                    <div class="progress progress-sm mt-xs js-progress-animate">
-                                        <div class="progress-bar progress-bar-danger" data-width="17%" style="width: 0;"></div>
+                                    <div class="bg-gray-lighter progress-bar">
+                                        <progress class="progress progress-sm progress-danger js-progress-animate" value="100" max="100" style="width: 0%" data-width="17%"></progress>
                                     </div>
                                 </td>
                             </tr>
@@ -910,8 +910,8 @@
                                     2.3 MB
                                 </td>
                                 <td class="width-150">
-                                    <div class="progress progress-sm mt-xs js-progress-animate">
-                                        <div class="progress-bar" data-width="41%" style="width: 0;"></div>
+                                    <div class="bg-gray-lighter progress-bar">
+                                        <progress class="progress progress-sm js-progress-animate" value="100" max="100" style="width: 0%" data-width="41%"></progress>
                                     </div>
                                 </td>
                             </tr>
@@ -926,14 +926,13 @@
                                 <div class="btn-group">
                                     <button class="btn btn-sm btn-inverse dropdown-toggle" data-toggle="dropdown">
                                         &nbsp; Clear &nbsp;
-                                        <i class="fa fa-caret-down"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-right">
-                                        <li><a href="#">Clear</a></li>
-                                        <li><a href="#">Move ...</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
+                                        <li><a class="dropdown-item" href="#">Clear</a></li>
+                                        <li><a class="dropdown-item" href="#">Move ...</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -944,17 +943,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <section class="widget">
                     <header>
-                        <h5>Table <span class="fw-semi-bold">Styles</span></h5>
+                        <h6>Table <span class="fw-semi-bold">Styles</span></h6>
                         <div class="widget-controls">
                             <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
                             <a data-widgster="close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
-                        <h3>Stripped <span class="fw-semi-bold">Table</span></h3>
+                        <h4>Stripped <span class="fw-semi-bold">Table</span></h4>
                         <p>Each row is highlighted. You will never lost there. Just <code>.table-striped</code> it.</p>
                         <table class="table table-striped">
                             <thead>
@@ -991,7 +990,7 @@
                                 </td>
                                 <td>Jacob <span class="label label-warning text-gray-dark">ALERT!</span></td>
                                 <td>Thornton</td>
-                                <td><span class="label bg-gray-light">Away</span></td>
+                                <td><span class="label bg-gray-light text-white">Away</span></td>
                             </tr>
                             <tr>
                                 <td>
@@ -1007,7 +1006,7 @@
                             </tbody>
                         </table>
                         <br><br>
-                        <h3>Hover <span class="fw-semi-bold">Table</span></h3>
+                        <h4>Hover <span class="fw-semi-bold">Table</span></h4>
                         <p>Trace only what's really important. <code>.table-hover</code> is made for it.</p>
                         <div class="table-responsive">
                             <table class="table table-hover">
@@ -1026,28 +1025,28 @@
                                     <td>Mark</td>
                                     <td>Otto</td>
                                     <td><a href="#">ottoto@example.com</a></td>
-                                    <td><span class="badge bg-gray-lighter text-gray">Pending</span></td>
+                                    <td><span class="label label-pill bg-gray-lighter text-gray">Pending</span></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Jacob</td>
                                     <td>Thornton</td>
                                     <td><a href="#">fat.thor@example.com</a></td>
-                                    <td><span class="badge bg-gray-lighter text-gray-light">Unconfirmed</span></td>
+                                    <td><span class="label label-pill bg-gray-lighter text-gray-light">Unconfirmed</span></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Larry</td>
                                     <td>the Bird</td>
                                     <td><a href="#">larry@example.com</a></td>
-                                    <td><span class="badge bg-gray-lighter text-gray">New</span></td>
+                                    <td><span class="label label-pill bg-gray-lighter text-gray">New</span></td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Peter</td>
                                     <td>Horadnia</td>
                                     <td><a href="#">peter@example.com</a></td>
-                                    <td><span class="badge bg-gray-lighter text-gray-light">Active</span></td>
+                                    <td><span class="label label-pill bg-gray-lighter text-gray-light">Active</span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -1055,17 +1054,17 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <section class="widget">
                     <header>
-                        <h5>Table <span class="fw-semi-bold">Styles</span></h5>
+                        <h6>Table <span class="fw-semi-bold">Styles</span></h6>
                         <div class="widget-controls">
                             <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
                             <a data-widgster="close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
-                        <h3>Bordered  <span class="fw-semi-bold">Table</span></h3>
+                        <h4>Bordered  <span class="fw-semi-bold">Table</span></h4>
                         <p>Each row is highlighted. You will never lost there. That's how
                             all of us learned in school the table should look like. Just add
                             <code>.table-bordered</code> to it.</p>
@@ -1079,8 +1078,8 @@
                                     </div>
                                 </th>
                                 <th>Product</th>
-                                <th class="text-align-right">Price</th>
-                                <th class="text-align-center">Sales</th>
+                                <th class="text-xs-right">Price</th>
+                                <th class="text-xs-center">Sales</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -1092,8 +1091,8 @@
                                     </div>
                                 </td>
                                 <td>On the Road</td>
-                                <td class="text-align-right">$25 224.2</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$25 224.2</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#618fb0">13,14,16,15,4,14,20</div>
                                 </td>
                             </tr>
@@ -1105,8 +1104,8 @@
                                     </div>
                                 </td>
                                 <td>HP Core i7</td>
-                                <td class="text-align-right">$87 346.1</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$87 346.1</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#999">14,12,16,11,17,19,16</div>
                                 </td>
                             </tr>
@@ -1118,8 +1117,8 @@
                                     </div>
                                 </td>
                                 <td>Let's Dance</td>
-                                <td class="text-align-right">$57 944.6</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$57 944.6</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#f0b518">11,17,19,16,14,12,16</div>
                                 </td>
                             </tr>
@@ -1131,8 +1130,8 @@
                                     </div>
                                 </td>
                                 <td>Air Pro</td>
-                                <td class="text-align-right">$118 533.1</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$118 533.1</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#e5603b">13,14,20,16,15,4,14</div>
                                 </td>
                             </tr>
@@ -1144,8 +1143,8 @@
                                     </div>
                                 </td>
                                 <td>Version Control</td>
-                                <td class="text-align-right">$72 854.5</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$72 854.5</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#618fb0">16,15,4,14,13,14,20</div>
                                 </td>
                             </tr>
@@ -1155,14 +1154,14 @@
                 </section>
                 <section class="widget">
                     <header>
-                        <h5>Table <span class="fw-semi-bold">Styles</span></h5>
+                        <h6>Table <span class="fw-semi-bold">Styles</span></h6>
                         <div class="widget-controls">
                             <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
                             <a data-widgster="close" href="#"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
-                        <h3>Overflow  <span class="fw-semi-bold">Table</span></h3>
+                        <h4>Overflow  <span class="fw-semi-bold">Table</span></h4>
                         <p>
                             Add any non-bordered .table within a widget for a seamless design.
                             Awesome look for no cost.
@@ -1181,8 +1180,8 @@
                                     </div>
                                 </th>
                                 <th>Product</th>
-                                <th class="text-align-right">Price</th>
-                                <th class="text-align-center">Sales</th>
+                                <th class="text-xs-right">Price</th>
+                                <th class="text-xs-center">Sales</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -1194,8 +1193,8 @@
                                     </div>
                                 </td>
                                 <td>On the Road</td>
-                                <td class="text-align-right">$25 224.2</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$25 224.2</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#618fb0">13,14,16,15,4,14,20</div>
                                 </td>
                             </tr>
@@ -1207,8 +1206,8 @@
                                     </div>
                                 </td>
                                 <td>HP Core i7</td>
-                                <td class="text-align-right">$87 346.1</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$87 346.1</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#999">14,12,16,11,17,19,16</div>
                                 </td>
                             </tr>
@@ -1220,8 +1219,8 @@
                                     </div>
                                 </td>
                                 <td>Let's Dance</td>
-                                <td class="text-align-right">$57 944.6</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$57 944.6</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#f0b518">11,17,19,16,14,12,16</div>
                                 </td>
                             </tr>
@@ -1233,8 +1232,8 @@
                                     </div>
                                 </td>
                                 <td>Air Pro</td>
-                                <td class="text-align-right">$118 533.1</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$118 533.1</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#e5603b">13,14,20,16,15,4,14</div>
                                 </td>
                             </tr>
@@ -1246,8 +1245,8 @@
                                     </div>
                                 </td>
                                 <td>Version Control</td>
-                                <td class="text-align-right">$72 854.5</td>
-                                <td class="text-align-center">
+                                <td class="text-xs-right">$72 854.5</td>
+                                <td class="text-xs-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#618fb0">16,15,4,14,13,14,20</div>
                                 </td>
                             </tr>
@@ -1267,12 +1266,13 @@
 <!-- common libraries. required for every page-->
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/jquery-pjax/jquery.pjax.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="vendor/tether/dist/js/tether.js"></script>
+<script src="vendor/bootstrap/js/dist/util.js"></script>
+<script src="vendor/bootstrap/js/dist/collapse.js"></script>
+<script src="vendor/bootstrap/js/dist/dropdown.js"></script>
+<script src="vendor/bootstrap/js/dist/button.js"></script>
+<script src="vendor/bootstrap/js/dist/tooltip.js"></script>
+<script src="vendor/bootstrap/js/dist/alert.js"></script>
 <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="vendor/widgster/widgster.js"></script>
 <script src="vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>

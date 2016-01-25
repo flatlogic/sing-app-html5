@@ -605,7 +605,7 @@ legend {
 
 
 .progress-bar-gray {
-  @include progress-bar-variant($gray);
+  @include progress-variant($gray);
 }
 
 .progress-bar-gray-light {
