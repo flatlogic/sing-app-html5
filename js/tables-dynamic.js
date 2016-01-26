@@ -108,7 +108,7 @@ $(function(){
     function initDataTables(){
         /* Set the defaults for DataTables initialisation */
         $.extend( true, $.fn.dataTable.defaults, {
-            "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
+            "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
             "sPaginationType": "bootstrap",
             "oLanguage": {
                 "sLengthMenu": "_MENU_ records per page"
@@ -153,8 +153,8 @@ $(function(){
 
                     $(nPaging).append(
                             '<ul class="pagination no-margin">'+
-                            '<li class="prev disabled"><a href="#">'+oLang.sPrevious+'</a></li>'+
-                            '<li class="next disabled"><a href="#">'+oLang.sNext+'</a></li>'+
+                            '<li class="prev disabled page-item"><a class="page-link" href="#">'+oLang.sPrevious+'</a></li>'+
+                            '<li class="next disabled page-item"><a class="page-link" href="#">'+oLang.sNext+'</a></li>'+
                             '</ul>'
                     );
                     var els = $('a', nPaging);
@@ -189,8 +189,8 @@ $(function(){
 
                         // Add the new list items and their event handlers
                         for ( j=iStart ; j<=iEnd ; j++ ) {
-                            sClass = (j==oPaging.iPage+1) ? 'class="active"' : '';
-                            $('<li '+sClass+'><a href="#">'+j+'</a></li>')
+                            sClass = (j==oPaging.iPage+1) ? 'class="page-item active"' : 'class="page-item"';
+                            $('<li '+sClass+'><a class="page-link" href="#">'+j+'</a></li>')
                                 .insertBefore( $('li:last', an[i])[0] )
                                 .bind('click', function (e) {
                                     e.preventDefault();
@@ -226,7 +226,7 @@ $(function(){
         });
 
         $("#datatable-table").dataTable({
-            "sDom": "<'row'<'col-md-6 hidden-xs'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
+            "sDom": "<'row'<'col-lg-6 hidden-sm-down'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
             "oLanguage": {
                 "sLengthMenu": "_MENU_",
                 "sInfo": "Showing <strong>_START_ to _END_</strong> of _TOTAL_ entries"

@@ -772,7 +772,24 @@ input.parsley-error{
       }
     }
 
-    @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-sm, $line-height-computed,  $border-radius-sm);
+    > li > a {
+      padding: $padding-small-vertical $padding-small-horizontal;
+      font-size: $font-size-sm;
+      line-height: $line-height-computed;
+    }
+
+    > li {
+      &:first-child {
+        > a {
+          @include border-left-radius($border-radius-sm);
+        }
+      }
+      &:last-child {
+        > a {
+          @include border-right-radius($border-radius-sm);
+        }
+      }
+    }
   }
 }
 
@@ -822,6 +839,12 @@ table.dataTable tfoot th{
 .dataTables_wrapper .dataTables_paginate{
   font-size: $font-size-mini;
   color: $gray-semi-light;
+}
+
+table.table-hover.dataTable > tbody > tr:hover > td {
+  .progress-bar {
+    background-color: $white !important;
+  }
 }
 
 /**
