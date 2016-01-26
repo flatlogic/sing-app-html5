@@ -539,7 +539,11 @@
 /***********************************/
 
 .gallery{
-  .thumbnail{
+  .img-thumbnail{
+
+    figcaption {
+      margin: 0.75rem 0.5rem 0.75rem 0.5rem;
+    }
 
     a{
       display: inline-block;
@@ -547,6 +551,7 @@
       max-width: 100%;
       > img{
         transition: transform .15s ease;
+        max-width: 100%;
       }
     }
     &:hover{

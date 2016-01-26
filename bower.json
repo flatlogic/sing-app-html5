@@ -43,6 +43,7 @@
     "gmaps": "0.4.19",
     "markdown": "0.5.0",
     "to-markdown": "1.2.1",
+    "bootstrap-markdown": "2.10.0",
     "seiyria-bootstrap-slider": "5.1.1",
     "bootstrap_calendar": "1.0.1",
     "jvectormap": "http://jvectormap.com/binary/jquery-jvectormap-2.0.3.zip",

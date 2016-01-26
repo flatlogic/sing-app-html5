@@ -55,15 +55,15 @@
         <ul class="sidebar-nav">
             <li>
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                <a class="collapsed" href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-desktop"></i>
                     </span>
                     Dashboard
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-dashboard" class="collapse in">
-                    <li class="active"><a href="index.html">Dashboard</a></li>
+                <ul id="sidebar-dashboard" class="collapse">
+                    <li><a href="index.html">Dashboard</a></li>
                     <li><a href="widgets.html">Widgets</a></li>
                 </ul>
             </li>
@@ -171,20 +171,20 @@
                 </ul>
             </li>
             <li class="active">
-                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+                <a href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-leaf"></i>
                     </span>
                     Extra
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-extra" class="collapse">
+                <ul id="sidebar-extra" class="collapse in">
                     <li><a href="calendar.html">Calendar</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
                     <li><a href="login.html" target="_blank" data-no-pjax>Login Page</a></li>
                     <li><a href="error.html" target="_blank" data-no-pjax>Error Page</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="search.html">Search Results</a></li>
+                    <li class="active"><a href="search.html">Search Results</a></li>
                     <li><a href="time_line.html" data-no-pjax>Time Line</a></li>
                 </ul>
             </li>

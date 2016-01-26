@@ -55,15 +55,15 @@
         <ul class="sidebar-nav">
             <li>
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                <a class="collapsed" href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-desktop"></i>
                     </span>
                     Dashboard
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-dashboard" class="collapse in">
-                    <li class="active"><a href="index.html">Dashboard</a></li>
+                <ul id="sidebar-dashboard" class="collapse">
+                    <li><a href="index.html">Dashboard</a></li>
                     <li><a href="widgets.html">Widgets</a></li>
                 </ul>
             </li>
@@ -171,19 +171,19 @@
                 </ul>
             </li>
             <li class="active">
-                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+                <a href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fa fa-leaf"></i>
                     </span>
                     Extra
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-extra" class="collapse">
+                <ul id="sidebar-extra" class="collapse in">
                     <li><a href="calendar.html">Calendar</a></li>
                     <li><a href="invoice.html">Invoice</a></li>
                     <li><a href="login.html" target="_blank" data-no-pjax>Login Page</a></li>
                     <li><a href="error.html" target="_blank" data-no-pjax>Error Page</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
                     <li><a href="search.html">Search Results</a></li>
                     <li><a href="time_line.html" data-no-pjax>Time Line</a></li>
                 </ul>
@@ -733,160 +733,160 @@
         </div>
         <div class="row gallery" id="grid">
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["nature"]' data-title="Mountains">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/13.jpg"><img src="demo/img/pictures/1.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Mountains</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/13.jpg"><img class="figure-img" src="demo/img/pictures/1.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Mountains</h6>
                         <ul class="post-links">
                             <li><a href="#">10 mins</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["people"]' data-title="Empire State Pigeon">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/2.jpg"><img src="demo/img/pictures/2.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Empire State Pigeon</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/2.jpg"><img class="figure-img" src="demo/img/pictures/2.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Empire State Pigeon</h6>
                         <ul class="post-links">
                             <li><a href="#">1 hour</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["nature"]' data-title="Big Lake">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/3.jpg"><img src="demo/img/pictures/3.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Big Lake</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/3.jpg"><img class="figure-img" src="demo/img/pictures/3.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Big Lake</h6>
                         <ul class="post-links">
                             <li><a href="#">2 mins</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["nature"]' data-title="Forest">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/4.jpg"><img src="demo/img/pictures/4.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Forest</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/4.jpg"><img class="figure-img" src="demo/img/pictures/4.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Forest</h6>
                         <ul class="post-links">
                             <li><a href="#">2 mins</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["people"]' data-title="Smile">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/5.jpg"><img src="demo/img/pictures/5.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Smile</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/5.jpg"><img class="figure-img" src="demo/img/pictures/5.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Smile</h6>
                         <ul class="post-links">
                             <li><a href="#">2 mins</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["people"]' data-title="Smile">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/6.jpg"><img src="demo/img/pictures/6.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Smile</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/6.jpg"><img class="figure-img" src="demo/img/pictures/6.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Smile</h6>
                         <ul class="post-links">
                             <li><a href="#">1 hour</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["nature"]' data-title="Fog">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/8.jpg"><img src="demo/img/pictures/8.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Fog</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/8.jpg"><img class="figure-img" src="demo/img/pictures/8.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Fog</h6>
                         <ul class="post-links">
                             <li><a href="#">2 mins</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["people"]' data-title="Beach">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/9.jpg"><img src="demo/img/pictures/9.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Beach</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/9.jpg"><img class="figure-img" src="demo/img/pictures/9.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Beach</h6>
                         <ul class="post-links">
                             <li><a href="#">2 mins</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["people"]' data-title="Pause">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/10.jpg"><img src="demo/img/pictures/10.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Pause</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/10.jpg"><img class="figure-img" src="demo/img/pictures/10.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Pause</h6>
                         <ul class="post-links">
                             <li><a href="#">3 hour</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["space"]' data-title="Space">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/11.jpg"><img src="demo/img/pictures/11.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Space</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/11.jpg"><img class="figure-img" src="demo/img/pictures/11.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Space</h6>
                         <ul class="post-links">
                             <li><a href="#">3 hour</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["space"]' data-title="Shuttle">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/13.jpg"><img src="demo/img/pictures/13.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Shuttle</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/13.jpg"><img class="figure-img" src="demo/img/pictures/13.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Shuttle</h6>
                         <ul class="post-links">
                             <li><a href="#">35 mins</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 gallery-item" data-groups='["space"]' data-title="Sky">
-                <div class="thumbnail">
-                    <a href="demo/img/pictures/14.jpg"><img src="demo/img/pictures/14.jpg" alt="..."></a>
-                    <div class="caption">
-                        <h5 class="mt-0 mb-xs">Sky</h5>
+                <figure class="figure img-thumbnail">
+                    <a href="demo/img/pictures/14.jpg"><img class="figure-img" src="demo/img/pictures/14.jpg" alt="..."></a>
+                    <figcaption class="figure-caption">
+                        <h6 class="mt-0 mb-xs">Sky</h6>
                         <ul class="post-links">
                             <li><a href="#">2 mins</a></li>
                             <li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a></li>
                             <li><a href="#">Details</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </figcaption>
+                </figure>
             </div>
             <div class="col-sm-6 col-md-3 js-shuffle-sizer"></div>
         </div>
