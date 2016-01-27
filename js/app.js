@@ -348,7 +348,7 @@ $(function(){
         clearTimeout(this.showLoaderTimeout);
         this.$loaderWrap.addClass('hiding');
         var view = this;
-        this.$loaderWrap.one(function () {
+        this.$loaderWrap.one($.support.transition.end, function () {
             view.$loaderWrap.addClass('hide');
         }).emulateTransitionEnd(200)
     };
