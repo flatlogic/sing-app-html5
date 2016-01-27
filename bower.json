@@ -43,7 +43,6 @@
     "gmaps": "0.4.19",
     "markdown": "0.5.0",
     "to-markdown": "1.2.1",
-    "bootstrap-markdown": "2.10.0",
     "seiyria-bootstrap-slider": "5.1.1",
     "bootstrap_calendar": "1.0.1",
     "jvectormap": "http://jvectormap.com/binary/jquery-jvectormap-2.0.3.zip",
@@ -64,7 +63,8 @@
     "MetroJS": "https://github.com/drewgreenwell/MetroJS.git#349ab828fe4deecff40496357d5bcba06f470413",
     "skycons": "https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed",
     "bootstrap": "4.0.0-alpha.2",
-    "bootstrap-sass": "3.3.5"
+    "bootstrap-sass": "3.3.5",
+    "sass-bootstrap-glyphicons": "1.0.0"
   },
   "private": true,
   "ignore": [

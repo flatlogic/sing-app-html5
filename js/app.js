@@ -43,6 +43,7 @@ $(function(){
         this.pageLoadCallbacks = {};
         this.resizeCallbacks = [];
         this.screenSizeCallbacks = {
+            xs:{enter:[], exit:[]},
             sm:{enter:[], exit:[]},
             md:{enter:[], exit:[]},
             lg:{enter:[], exit:[]},
@@ -178,7 +179,7 @@ $(function(){
     SingAppView.prototype.checkNavigationState = function(){
         if (this.isNavigationStatic()){
             this.staticNavigationState();
-            if (Sing.isScreen('md') || Sing.isScreen('sm')){
+            if (Sing.isScreen('md') || Sing.isScreen('sm') || Sing.isScreen('xs')){
                 this.collapseNavigation();
             }
         } else {
@@ -235,7 +236,7 @@ $(function(){
     };
 
     SingAppView.prototype._collapseNavIfSmallScreen = function(){
-        if (Sing.isScreen('sm') || Sing.isScreen('md')){
+        if (Sing.isScreen('xs') || Sing.isScreen('sm') || Sing.isScreen('md')){
             this.collapseNavigation();
         }
     };
@@ -380,7 +381,7 @@ $(function(){
     /**
      * Specify a function to execute when window entered/exited particular size.
      * Page independent. Runs regardless of current page (on every page).
-     * @param size ('sm','md','lg','xl')
+     * @param size ('xs','sm','md','lg','xl')
      * @param fn callback(newScreenSize, prevScreenSize)
      * @param onEnter whether to run a callback when screen enters `size` or exits. true by default @optional
      */
@@ -649,6 +650,11 @@ function initAppFunctions(){
         SingApp.onScreenSize('sm', moveBackNotificationsDropdown, false);
 
         Sing.isScreen('sm') && moveNotificationsDropdown();
+
+        SingApp.onScreenSize('xs', moveNotificationsDropdown);
+        SingApp.onScreenSize('xs', moveBackNotificationsDropdown, false);
+
+        Sing.isScreen('xs') && moveNotificationsDropdown();
 
         /**
          * Set Sidebar zindex higher than .content and .page-controls so the notifications dropdown is seen

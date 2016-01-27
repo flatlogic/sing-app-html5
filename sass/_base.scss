@@ -415,7 +415,8 @@
 
   .dropdown-menu{
     position: fixed;
-    top: 60px;
+    top: 57px;
+    left: 0;
     margin: 0 20px;
     width: 320px;
     color: $text-color;
@@ -433,7 +434,7 @@
     }
 
     .notifications{
-      .panel-heading{
+      .card-header{
         position: absolute;
         top: 0;
         left: 0;
@@ -449,9 +450,9 @@
         height: auto;
       }
 
-      .panel-footer{
+      .card-footer{
         position: absolute;
-        bottom: 0;
+        bottom: -5px;
         left: 0;
         right: 0;
       }
@@ -873,6 +874,20 @@
   @include respond-to(lg){
     width: 333px;
   }
+
+  .card-header {
+    .btn-group-justified {
+      display: flex;
+
+      label {
+        flex: 1;
+        font-size: $font-size-smaller;
+      }
+    }
+  }
+
+  height: 100%;
+
   .list-group{
     height: 320px;
     overflow-y: scroll;

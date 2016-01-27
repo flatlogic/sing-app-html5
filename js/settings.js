@@ -23,6 +23,8 @@ $(function(){
         },
 
         screens: {
+            'xs-max': 543,
+            'sm-min': 544,
             'sm-max': 767,
             'md-min': 768,
             'md-max': 991,
@@ -33,12 +35,13 @@ $(function(){
 
         isScreen: function(size){
             var screenPx = window.innerWidth;
-            return (screenPx >= this.screens[size + '-min'] || size == 'sm') && (screenPx <= this.screens[size + '-max'] || size == 'xl');
+            return (screenPx >= this.screens[size + '-min'] || size == 'xs') && (screenPx <= this.screens[size + '-max'] || size == 'xl');
         },
 
         getScreenSize: function(){
             var screenPx = window.innerWidth;
-            if (screenPx <= this.screens['sm-max']) return 'sm';
+            if (screenPx <= this.screens['xs-max']) return 'xs';
+            if ((screenPx >= this.screens['sm-min']) && (screenPx <= this.screens['sm-max'])) return 'sm';
             if ((screenPx >= this.screens['md-min']) && (screenPx <= this.screens['md-max'])) return 'md';
             if ((screenPx >= this.screens['lg-min']) && (screenPx <= this.screens['lg-max'])) return 'lg';
             if (screenPx >= this.screens['xl-min']) return 'xl';

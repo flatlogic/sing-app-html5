@@ -30,12 +30,12 @@
 <nav id="sidebar" class="sidebar" role="navigation">
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
-        <header class="logo hidden-xs-down">
+        <header class="logo hidden-sm-down">
             <a href="index.html">sing</a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
-        <div class="sidebar-status hidden-xs-up">
+        <div class="sidebar-status hidden-md-up">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="thumb-sm avatar pull-right">
                     <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
@@ -834,9 +834,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-xs">StackExchange</td>
+                                <td class="name hidden-sm-down">StackExchange</td>
                                 <td class="subject">New Python questions for this week!</td>
-                                <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
+                                <td class="hidden-sm-down"><i class="fa fa-paperclip"></i></td>
                                 <td class="date">Aug 14</td>
                             </tr><tr class="">
                                 <td>
@@ -846,9 +846,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-xs">notifications@facebook.com</td>
+                                <td class="name hidden-sm-down">notifications@facebook.com</td>
                                 <td class="subject">Someone just commented on your photo!</td>
-                                <td class="hidden-xs"></td>
+                                <td class="hidden-sm-down"></td>
                                 <td class="date">Aug 7</td>
                             </tr><tr class="unread">
                                 <td>
@@ -858,9 +858,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star"></i></span></td>
-                                <td class="name hidden-xs">Twitter</td>
+                                <td class="name hidden-sm-down">Twitter</td>
                                 <td class="subject">@hackernews is now following you on Twitter</td>
-                                <td class="hidden-xs"></td>
+                                <td class="hidden-sm-down"></td>
                                 <td class="date">Jul 31</td>
                             </tr><tr class="">
                                 <td>
@@ -870,9 +870,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-xs">Nikola Foley</td>
+                                <td class="name hidden-sm-down">Nikola Foley</td>
                                 <td class="subject">Quiet led own cause three him</td>
-                                <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
+                                <td class="hidden-sm-down"><i class="fa fa-paperclip"></i></td>
                                 <td class="date">Jul 22</td>
                             </tr><tr class="">
                                 <td>
@@ -882,9 +882,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-xs">Ernst Hardy</td>
+                                <td class="name hidden-sm-down">Ernst Hardy</td>
                                 <td class="subject">Raising say express had chiefly detract demands she</td>
-                                <td class="hidden-xs"></td>
+                                <td class="hidden-sm-down"></td>
                                 <td class="date">Jul 15</td>
                             </tr><tr class="">
                                 <td>
@@ -894,9 +894,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-xs">LinkedIn</td>
+                                <td class="name hidden-sm-down">LinkedIn</td>
                                 <td class="subject">Jobs you may be interested in</td>
-                                <td class="hidden-xs"></td>
+                                <td class="hidden-sm-down"></td>
                                 <td class="date">Jul 12</td>
                             </tr><tr class="">
                                 <td>
@@ -906,9 +906,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star"></i></span></td>
-                                <td class="name hidden-xs">Naevius Victorsson</td>
+                                <td class="name hidden-sm-down">Naevius Victorsson</td>
                                 <td class="subject">Front no party young abode state up</td>
-                                <td class="hidden-xs"></td>
+                                <td class="hidden-sm-down"></td>
                                 <td class="date">Jul 11</td>
                             </tr></tbody>
                         </table>
@@ -984,9 +984,9 @@
         </div>
     </td>
     <td><span class="starred"><i class="<%= starred ? 'fa fa-star' : 'fa fa-star-o'%>"></i></span></td>
-    <td class="name hidden-xs"><%= sender ? sender : senderMail %></td>
+    <td class="name hidden-sm-down"><%= sender ? sender : senderMail %></td>
     <td class="subject"><%= subject %></td>
-    <td class="hidden-xs"><% if (attachment) {%><i class="fa fa-paperclip"><% } %></i></td>
+    <td class="hidden-sm-down"><% if (attachment) {%><i class="fa fa-paperclip"><% } %></i></td>
     <td class="date"><%= this.formatDate(timestamp) %></td>
 </script>
 
