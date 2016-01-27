@@ -1040,14 +1040,12 @@
 
     &:hover{
       color: rgba($black, .1);
-    }
-
-    > .fa{
-      vertical-align: middle;
+      text-decoration: none;
     }
 
     > .glyphicon{
       vertical-align: -1px;
+      font-size: 12px;
     }
   }
 
