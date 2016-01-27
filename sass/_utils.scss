@@ -14,6 +14,10 @@
   @include transition(height .15s ease-in-out);
 }
 
+.btn-default {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
 /**
  * .circle & .rounded are pretty cool way to add a bit of beauty to raw data.
  * should be used with bg-* and text-* classes for colors.

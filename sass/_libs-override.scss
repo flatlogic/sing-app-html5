@@ -608,3 +608,57 @@
 .select2-container-multi .select2-choices .select2-search-field input.select2-active{
   background-image: url("#{$vendor-folder}/select2/select2-spinner.gif");
 }
+
+/**
+ * Wysihtml
+ */
+
+.wysihtml5-toolbar {
+  .dropdown-menu > li > a {
+    display: block;
+    width: 100%; // For `<button>`s
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: $line-height;
+    color: $dropdown-link-color;
+    text-align: inherit; // For `<button>`s
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    background: none; // For `<button>`s
+    border: 0; // For `<button>`s
+
+    @include hover-focus {
+      color: $dropdown-link-hover-color;
+      text-decoration: none;
+      background-color: $dropdown-link-hover-bg;
+    }
+
+    // Active state
+    &.active {
+      @include plain-hover-focus {
+        color: $dropdown-link-active-color;
+        text-decoration: none;
+        background-color: $dropdown-link-active-bg;
+        outline: 0;
+      }
+    }
+
+    // Disabled state
+    //
+    // Gray out text and ensure the hover/focus state remains gray
+    &.disabled {
+      @include plain-hover-focus {
+        color: $dropdown-link-disabled-color;
+      }
+
+      // Nuke hover/focus effects
+      @include hover-focus {
+        text-decoration: none;
+        cursor: $cursor-disabled;
+        background-color: transparent;
+        background-image: none; // Remove CSS gradient
+        @include reset-filter();
+      }
+    }
+  }
+}
