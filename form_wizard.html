@@ -710,21 +710,21 @@
 </div>
 
 <div class="content-wrap">
-    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
             <li>YOU ARE HERE</li>
             <li class="active">Form Wizard</li>
         </ol>
-        <h1 class="page-title">Form - <span class="fw-semi-bold">Wizards</span></h1>
+        <h2 class="page-title">Form - <span class="fw-semi-bold">Wizards</span></h2>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <section class="widget">
                     <header>
-                        <h4>
+                        <h5>
                             Wizard
                             <small>Tunable widget</small>
-                        </h4>
+                        </h5>
                         <div class="widget-controls">
                             <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
                             <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
@@ -733,8 +733,8 @@
                     </header>
                     <div class="widget-body">
                         <div class="row">
-                            <div class="col-md-8">
-                                <h4>Inpage <strong>Wizard</strong></h4>
+                            <div class="col-lg-8">
+                                <h5>Inpage <strong>Wizard</strong></h5>
                                 <p>An example of complete wizard form in widget.</p>
 
                                 <div id="wizard" class="form-wizard">
@@ -752,9 +752,9 @@
                                             <small>4.</small>
                                             Thank you!</a></li>
                                     </ul>
-                                    <progress id="bar" class="progress-bar">
-                                        <progress class="progress-bar"></progress>
-                                    </progress>
+                                    <div class="bg-gray-lighter progress-bar mt-xs">
+                                        <progress id="bar" class="progress progress-xs progress-bar-gray-light progress-animated" value="100" max="100"></progress>
+                                    </div>
                                     <div class="tab-content">
                                         <div class="tab-pane bg-gray-lighter" id="tab1">
                                             <form action='' method="POST"
@@ -1153,8 +1153,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <h4>Modal <strong>Application Wizard</strong></h4>
+                            <div class="col-lg-4">
+                                <h5>Modal <strong>Application Wizard</strong></h5>
                                 <p>An example of complete wizard form in a modal.</p>
                                 <button class="btn btn-info btn-rounded" id="open-wizard" type="button" >
                                     Launch Wizard
@@ -1166,7 +1166,7 @@
                                         <h3>Name & FQDN</h3>
 
                                         <div class="wizard-input-section">
-                                            <div class="form-group">
+                                            <div class="form-group row">
                                                 <div class="col-sm-6">
                                                     <input type="text" class="form-control" id="label" name="label" placeholder="Server label" data-validate="validateServerLabel">
                                                 </div>
@@ -1178,7 +1178,7 @@
                                                 Full Qualified Domain Name
                                             </p>
 
-                                            <div class="form-group">
+                                            <div class="form-group row">
                                                 <div class="col-sm-8">
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" id="fqdn" name="fqdn" placeholder="FQDN" data-validate="validateFQDN" data-is-valid="0" data-lookup="0" />
@@ -1196,7 +1196,7 @@
                                                 Server ip.
                                             </p>
 
-                                            <div class="form-group">
+                                            <div class="form-group row">
                                                 <div class="col-sm-8">
                                                     <input type="text" class="form-control" id="ip" name="ip" placeholder="IP" data-serialize="1" />
                                                 </div>
@@ -1431,12 +1431,13 @@
 <!-- common libraries. required for every page-->
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/jquery-pjax/jquery.pjax.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="vendor/tether/dist/js/tether.js"></script>
+<script src="vendor/bootstrap/js/dist/util.js"></script>
+<script src="vendor/bootstrap/js/dist/collapse.js"></script>
+<script src="vendor/bootstrap/js/dist/dropdown.js"></script>
+<script src="vendor/bootstrap/js/dist/button.js"></script>
+<script src="vendor/bootstrap/js/dist/tooltip.js"></script>
+<script src="vendor/bootstrap/js/dist/alert.js"></script>
 <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="vendor/widgster/widgster.js"></script>
 <script src="vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
@@ -1448,14 +1449,14 @@
 
 <!-- page specific libs -->
 <script src="vendor/parsleyjs/dist/parsley.min.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+<script src="vendor/bootstrap/js/dist/tab.js"></script>
 <script src="vendor/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
 <script src="vendor/select2/select2.js"></script>
 <script src="vendor/moment/min/moment.min.js"></script>
 <script src="vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="vendor/jasny-bootstrap/js/inputmask.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+<script src="vendor/bootstrap/js/dist/modal.js"></script>
+<script src="vendor/bootstrap/js/dist/popover.js"></script>
 <script src="vendor/bootstrap-application-wizard/src/bootstrap-wizard.js"></script>
 
 <!-- page specific js -->
