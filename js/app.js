@@ -348,7 +348,7 @@ $(function(){
         clearTimeout(this.showLoaderTimeout);
         this.$loaderWrap.addClass('hiding');
         var view = this;
-        this.$loaderWrap.one($.support.transition.end, function () {
+        this.$loaderWrap.one(Util.TRANSITION_END, function () {
             view.$loaderWrap.addClass('hide');
         }).emulateTransitionEnd(200)
     };
@@ -733,7 +733,7 @@ function initAppFunctions(){
                     // .content making this hack with temporary class which will be
                     // used by SingApp to check whether it is permitted to open navigation
                     // on swipeRight
-                    .addClass('chat-sidebar-closing').one($.support.transition.end, function () {
+                    .addClass('chat-sidebar-closing').one(Util.TRANSITION_END, function () {
                         $('body').removeClass('chat-sidebar-closing');
                     }).emulateTransitionEnd(300);
             }

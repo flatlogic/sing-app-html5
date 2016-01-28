@@ -668,7 +668,17 @@
  */
 
 .bootstrap-select {
-  width: 64px;
+  .dropdown-toggle {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 25px;
+
+    &:after {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
   .dropdown-menu > li > a {
     display: block;
     width: 100%; // For `<button>`s
