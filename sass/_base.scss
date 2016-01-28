@@ -1212,6 +1212,13 @@ input[type=search], input.search {
   @include button-variant($white, $gray, darken($gray, 10%));
 }
 
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
 /***********************/
 /*     Content Map     */
 /***********************/
