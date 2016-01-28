@@ -710,18 +710,18 @@
 </div>
 
 <div class="content-wrap">
-    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
             <li>YOU ARE HERE</li>
             <li class="active">UI Components</li>
         </ol>
-        <h1 class="page-title">Components - <span class="fw-semi-bold">Bootstrap</span></h1>
+        <h2 class="page-title">Components - <span class="fw-semi-bold">Bootstrap</span></h2>
         <section class="widget">
             <header>
-                <h5>
+                <h6>
                     Alert <span class="fw-semi-bold">Messages</span>
-                </h5>
+                </h6>
                 <div class="widget-controls">
                     <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
                     <a href="#"><i class="fa fa-refresh"></i></a>
@@ -729,7 +729,7 @@
                 </div>
             </header>
             <div class="widget-body">
-                <h3>Small <span class="fw-semi-bold">Elements</span></h3>
+                <h4>Small <span class="fw-semi-bold">Elements</span></h4>
                 <p class="mb-lg">Gaining direct user attention on some matter. Add dismiss functionality to all alert messages with this plugin.</p>
                 <div class="alert alert-success alert-sm">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -752,12 +752,12 @@
             </div>
         </section>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <section class="widget">
                     <header>
-                        <h5>
+                        <h6>
                             Labels & Badge <span class="fw-semi-bold">Options</span>
-                        </h5>
+                        </h6>
                         <div class="widget-controls">
                             <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
@@ -765,7 +765,7 @@
                         </div>
                     </header>
                     <div class="widget-body">
-                        <h3>Label <span class="fw-semi-bold">Colors</span></h3>
+                        <h4>Label <span class="fw-semi-bold">Colors</span></h4>
                         <p>Just add the <code>.label</code> class to inline element to create a label.</p>
                         <p>
                             <span class="label label-default">Default</span>
@@ -775,18 +775,18 @@
                             <span class="label label-warning">Warning</span>
                             <span class="label label-danger">Danger</span>
                         </p>
-                        <h3>Badge <span class="fw-semi-bold">Variations</span></h3>
-                        <p>Same as labels, just add the <code>.badge</code> class to inline element to create a badge.</p>
+                        <h4>Badge <span class="fw-semi-bold">Variations</span></h4>
+                        <p>Same as labels, just add the <code>.label-pill</code> class to inline element to create a badge.</p>
                         <p>
                             <button class="btn btn-primary" type="button">
                                 Notifications &nbsp;&nbsp; <span class="badge">3</span>
                             </button>
-                            <span class="badge bg-danger">01</span>
-                            <span class="badge bg-warning">20</span>
-                            <span class="badge bg-success">31</span>
-                            <span class="badge bg-info">18</span>
-                            <span class="badge bg-primary">41</span>
-                            <span class="badge">9</span>
+                            <span class="label label-pill label-danger">01</span>
+                            <span class="label label-pill label-warning">20</span>
+                            <span class="label label-pill label-success">31</span>
+                            <span class="label label-pill label-info">18</span>
+                            <span class="label label-pill label-primary">41</span>
+                            <span class="label label-pill">9</span>
                         </p>
                         <!--<p>Both labes and badge may be used with <code>.text-*</code> classes to produce cool-->
                         <!--<abbr title="User Interface">UI</abbr> look.</p>-->
@@ -800,12 +800,12 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <section class="widget">
                     <header>
-                        <h5>
+                        <h6>
                             Tooltips & Popover <span class="fw-semi-bold">Variations</span>
-                        </h5>
+                        </h6>
                         <div class="widget-controls">
                             <a href="#"><i class="glyphicon glyphicon-cog"></i></a>
                             <a href="#"><i class="fa fa-refresh"></i></a>
@@ -813,7 +813,7 @@
                         </div>
                     </header>
                     <div class="widget-body">
-                        <h3>Position <span class="fw-semi-bold">Tooltips</span></h3>
+                        <h4>Position <span class="fw-semi-bold">Tooltips</span></h4>
                         <p>Stable four position options available:</p>
                         <div class="btn-toolbar">
                             <a href="#" class="btn btn-secondary" data-toggle="tooltip" data-placement="left"
@@ -829,7 +829,7 @@
                                title="Tooltip on right">On right
                             </a>
                         </div>
-                        <h3>Popover <span class="fw-semi-bold">Options</span></h3>
+                        <h4>Popover <span class="fw-semi-bold">Options</span></h4>
                         <p>Placing help text where needed:</p>
                         <div class="btn-toolbar">
                             <button type="button" class="btn btn-secondary" data-toggle="popover" title=""
@@ -844,7 +844,7 @@
                                 Titled Popover
                             </button>
                         </div>
-                        <h3><span class="fw-semi-bold">Bootstrap</span> Modals</h3>
+                        <h4><span class="fw-semi-bold">Bootstrap</span> Modals</h4>
                         <p>Modals are streamlined, but flexible, dialog prompts with the minimum
                             required functionality and smart defaults.</p>
                         <button class="btn btn-gray" data-toggle="modal" data-target="#myModal18">
@@ -855,8 +855,8 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title text-align-center fw-bold mt" id="myModalLabel18">One more step</h4>
-                                        <p class="text-align-center fs-mini text-muted mt-sm">
+                                        <h6 class="modal-title text-xl-center fw-bold mt" id="myModalLabel18">One more step</h6>
+                                        <p class="text-xl-center fs-mini text-muted mt-sm">
                                             We need a bit of your detailed information to proceed. US ticketing system requires
                                             us to process and check your personal infromation before we can go.
                                         </p>
@@ -864,37 +864,37 @@
                                     <div class="modal-body bg-gray-lighter">
                                         <form>
                                             <div class="row">
-                                                <div class="col-md-8">
+                                                <div class="col-lg-8">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-no-border"
                                                                placeholder="Name">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-no-border"
                                                                placeholder="Middle Name">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-lg-12">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-no-border"
                                                                placeholder="Address">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-no-border"
                                                                placeholder="City">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-no-border"
                                                                placeholder="Country">
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-lg-4">
                                                     <div class="form-group">
                                                         <input type="text" class="form-control input-no-border"
                                                                placeholder="Zip">
@@ -927,56 +927,56 @@
             </header>
             <div class="widget-body">
                 <div class="row">
-                    <div class="col-md-4">
-                        <h3>Progress Bar <span class="fw-semi-bold">Colors</span></h3>
+                    <div class="col-lg-4">
+                        <h4>Progress Bar <span class="fw-semi-bold">Colors</span></h4>
                         <p class="fs-mini text-muted">Easily perceptible colored options for Bootstrap progress bars:</p>
                         <div class="row">
                             <div class="col-sm-10 col-sm-offset-1">
-                                <div class="progress progress-sm mt">
-                                    <div class="progress-bar progress-bar-danger" style="width: 75%;"></div>
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress progress-sm progress-danger" value="100" max="100" style="width: 75%;"></progress>
                             </div>
-                                <div class="progress progress-sm mt">
-                                    <div class="progress-bar progress-bar-warning" style="width: 60%;"></div>
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress progress-sm progress-warning" value="100" max="100" style="width: 60%;"></progress>
                         </div>
-                                <div class="progress progress-sm mt">
-                                    <div class="progress-bar progress-bar-success" style="width: 45%;"></div>
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress progress-sm progress-success" value="100" max="100" style="width: 45%;"></progress>
                     </div>
-                                <div class="progress progress-sm mt">
-                                    <div class="progress-bar progress-bar-primary" style="width: 30%;"></div>
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress progress-sm progress-primary" value="100" max="100" style="width: 30%;"></progress>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <h3>Progress Bar <span class="fw-semi-bold">Sizes</span></h3>
+                    <div class="col-lg-4">
+                        <h4>Progress Bar <span class="fw-semi-bold">Sizes</span></h4>
                         <p class="fs-mini text-muted">Three different sizes for all of possible use cases:</p>
                         <div class="row">
                             <div class="col-sm-10 col-sm-offset-1">
-                                <div class="progress progress-xs mt">
-                                    <div class="progress-bar progress-bar-gray" style="width: 60%;"></div>
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress progress-xs progress-bar-gray" value="100" max="100" style="width: 60%;"></progress>
                             </div>
-                                <div class="progress progress-xs mt">
-                                    <div class="progress-bar progress-bar-warning" style="width: 60%;"></div>
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress progress-sm progress-warning" value="100" max="100" style="width: 60%;"></progress>
                         </div>
-                                <div class="progress progress-sm mt">
-                                    <div class="progress-bar progress-bar-info" style="width: 33%;"></div>
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress progress progress-info" value="100" max="100" style="width: 33%;"></progress>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <h3>More <span class="fw-semi-bold">Options</span></h3>
+                    <div class="col-lg-4">
+                        <h4>More <span class="fw-semi-bold">Options</span></h4>
                         <p class="fs-mini text-muted">Animated, stripped and progress bars containing text:</p>
                         <div class="row">
                             <div class="col-sm-10 col-sm-offset-1">
-                                <div class="progress progress-striped active mt">
-                                    <div class="progress-bar progress-bar-info fw-semi-bold" style="width: 60%;">
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress progress-striped progress-info" value="100" max="100" style="width: 60%;">
                                         $24 818
-                                    </div>
+                                    </progress>
                                 </div>
-                                <div class="progress progress-striped progress-sm mt">
-                                    <div class="progress-bar progress-bar-gray-light" style="width: 60%;">
-                                    </div>
+                                <div class="bg-gray-lighter mt-md">
+                                    <progress class="progress  progress-sm progress-striped progress-bar-gray-light" value="100" max="100" style="width: 60%;">
+                                    </progress>
                                 </div>
                             </div>
                         </div>
@@ -994,12 +994,13 @@
 <!-- common libraries. required for every page-->
 <script src="vendor/jquery/dist/jquery.min.js"></script>
 <script src="vendor/jquery-pjax/jquery.pjax.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+<script src="vendor/tether/dist/js/tether.js"></script>
+<script src="vendor/bootstrap/js/dist/util.js"></script>
+<script src="vendor/bootstrap/js/dist/collapse.js"></script>
+<script src="vendor/bootstrap/js/dist/dropdown.js"></script>
+<script src="vendor/bootstrap/js/dist/button.js"></script>
+<script src="vendor/bootstrap/js/dist/tooltip.js"></script>
+<script src="vendor/bootstrap/js/dist/alert.js"></script>
 <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="vendor/widgster/widgster.js"></script>
 <script src="vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
@@ -1010,8 +1011,8 @@
 <script src="js/app.js"></script>
 
 <!-- page specific libs -->
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+<script src="vendor/bootstrap/js/dist/popover.js"></script>
+<script src="vendor/bootstrap/js/dist/modal.js"></script>
 <!-- page specific js -->
 <script src="js/ui-components.js"></script>
 </body>
