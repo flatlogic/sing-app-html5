@@ -2,7 +2,7 @@
 <?php sleep(2) //just some delay to simulate latency ?>
 -->
 <div class="list-group-item bg-attention">
-    <span class="thumb-sm pull-left mr">
+    <span class="thumb-sm pull-xs-left mr">
             <i class="fa fa-check text-success fa-lg"></i>
         </span>
     <p class="overflow-hidden no-margin">
@@ -13,7 +13,7 @@
     </p>
 </div>
 <div class="list-group-item bg-attention">
-    <span class="thumb-sm pull-left mr clearfix">
+    <span class="thumb-sm pull-xs-left mr clearfix">
         <img class="img-circle" src="demo/img/people/a6.jpg" alt="...">
     </span>
     <p class="no-margin overflow-hidden">
@@ -24,7 +24,7 @@
     </p>
 </div>
 <div class="list-group-item">
-    <span class="thumb-sm pull-left mr clearfix">
+    <span class="thumb-sm pull-xs-left mr clearfix">
         <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
     </span>
     <p class="no-margin overflow-hidden">
@@ -36,7 +36,7 @@
     </p>
 </div>
 <a class="list-group-item" href="#">
-    <span class="thumb-sm pull-left mr">
+    <span class="thumb-sm pull-xs-left mr">
         <i class="fa fa-upload fa-lg"></i>
     </span>
     <p class="text-ellipsis no-margin">
@@ -46,7 +46,7 @@
     </time>
 </a>
 <a class="list-group-item" href="#">
-    <span class="thumb-sm pull-left mr">
+    <span class="thumb-sm pull-xs-left mr">
         <i class="fa fa-bolt fa-lg"></i>
     </span>
     <p class="text-ellipsis no-margin">
@@ -56,7 +56,7 @@
     </time>
 </a>
 <div class="list-group-item">
-    <span class="thumb-sm pull-left mr clearfix">
+    <span class="thumb-sm pull-xs-left mr clearfix">
         <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
     </span>
     <p class="no-margin overflow-hidden">
@@ -70,7 +70,7 @@
     </p>
 </div>
 <div class="list-group-item">
-    <span class="thumb-sm pull-left mr">
+    <span class="thumb-sm pull-xs-left mr">
         <i class="fa fa-shield fa-lg"></i>
     </span>
     <p class="no-margin overflow-hidden">
@@ -82,7 +82,7 @@
     </p>
 </div>
 <a class="list-group-item" href="#">
-    <span class="thumb-sm pull-left mr">
+    <span class="thumb-sm pull-xs-left mr">
         <span class="rounded bg-primary rounded-lg">
             <i class="fa fa-facebook text-white"></i>
         </span>
@@ -94,7 +94,7 @@
     </time>
 </a>
 <a class="list-group-item" href="#">
-    <span class="thumb-sm pull-left mr">
+    <span class="thumb-sm pull-xs-left mr">
         <span class="circle circle-lg bg-gray-dark">
             <i class="fa fa-circle-o text-white"></i>
         </span>

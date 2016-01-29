@@ -880,7 +880,7 @@ function initDemoFunctions(){
         $('[data-toggle="chat-sidebar"]').one('click', function(){
             setTimeout(function(){
                 $('.chat-sidebar-user-group:first-of-type .list-group-item:first-child').addClass('active')
-                    .find('.fa-circle').after('<span class="label label-pill label-danger pull-right animated bounceInDown">3</span>');
+                    .find('.fa-circle').after('<span class="label label-pill label-danger pull-xs-right animated bounceInDown">3</span>');
             }, 1000)
         });
 

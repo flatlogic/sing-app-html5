@@ -66,7 +66,7 @@
 
 .widget-chart-stats-simple{
   > header{
-    #{headings()}{
+    h1,h2,h3,h4,h5,h6{
       margin-bottom: $line-height-computed/4;
     }
   }
@@ -372,10 +372,10 @@
 }
 
 .widget-login{
-  padding: 30px;
+  padding: 27px;
 
   > header{
-    #{headings()}{
+    h1,h2,h3,h4,h5,h6{
       font-weight: $font-weight-normal;
     }
   }

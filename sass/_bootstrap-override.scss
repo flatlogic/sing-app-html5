@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6,
   .small {
     font-weight: $headings-font-weight;
     font-size: 65%;
+    color: $text-muted;
   }
 }
 
@@ -595,6 +596,7 @@ legend {
 
 .progress{
   @include box-shadow(none);
+  transition: width 0.6s ease;
 }
 
 .progress-bar{
