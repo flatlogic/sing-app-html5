@@ -51,7 +51,7 @@
  */
 
 .table-no-more{
-  @media (max-width: $screen-sm-max) {
+  @include media-breakpoint-down(sm) {
     /* Force table to not be like tables anymore */
     &, thead, tbody, th, td, tr {
       display: block;

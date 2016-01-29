@@ -627,7 +627,7 @@ input.parsley-error{
       color: $white;
       cursor: pointer;
     }
-    @include respond-to(md){
+    @include media-breakpoint-up(md){
       &.nav-justified{
         > li {
           padding: 0 5px;

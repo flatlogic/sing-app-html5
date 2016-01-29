@@ -113,7 +113,7 @@
     margin-top: 15px;
   }
 
-  @media (max-width: $screen-lg-max) {
+  @include media-breakpoint-down(lg) {
     .description + .progress{
       margin-bottom: 0;
     }
@@ -426,7 +426,7 @@
 }
 
 .widget-calendar{
-  @include respond-to(xl){
+  @include media-breakpoint-up(xl){
     margin-top: -100px;
   }
 }
@@ -600,13 +600,13 @@
     overflow: hidden;
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
-    @include respond-to(md){
+    @include media-breakpoint-up(md){
       display: inline-block;
       margin: -20px 0 -20px -20px;
       float: left;
       width: 200px;
     }
-    @media (max-width: $screen-sm-max) {
+    @include media-breakpoint-down(sm) {
       max-height: 200px;
     }
   }
@@ -631,7 +631,11 @@
 }
 
 .search-result-item-body{
-  @include respond-to(md){
+  height: auto;
+  @include media-breakpoint-down(sm) {
+    margin-top: 10px;
+  }
+  @include media-breakpoint-up(md){
     margin-left: 200px;
   }
 }
@@ -643,7 +647,7 @@
     color: $text-color;
   }
 
-  @include respond-to(md){
+  @include media-breakpoint-up(md){
     margin: 0;
   }
 }
@@ -676,7 +680,7 @@
       text-align: left;
       margin: 0 10px;
 
-      @include respond-to(lg){
+      @include media-breakpoint-up(lg){
         width: 150px;
         white-space: nowrap;
       }
@@ -705,7 +709,7 @@
     padding-left: 15px;
     text-align: center;
 
-    @include respond-to(lg){
+    @include media-breakpoint-up(lg){
       padding-right: 0;
     }
 
@@ -758,7 +762,7 @@
     margin-left: -4px;
     background-color: $white;
 
-    @include respond-to(lg){
+    @include media-breakpoint-up(lg){
       left: 50%;
       margin-left: -4px;
     }
@@ -807,7 +811,7 @@
     }
   }
 
-  @include respond-to(lg){
+  @include media-breakpoint-up(lg){
     .timeline & {
       width: 45%;
     }
@@ -843,7 +847,7 @@
     }
   }
 
-  @include respond-to(lg){
+  @include media-breakpoint-up(lg){
     .timeline &{
       width: 46%;
     }
@@ -883,7 +887,7 @@
       color: $white;
     }
 
-    @include respond-to(lg){
+    @include media-breakpoint-up(lg){
       left: 50%;
     }
 
@@ -948,7 +952,7 @@
   font-size: 80px;
   font-weight: $font-weight-normal;
   color: $gray-dark;
-  @include respond-to(md){
+  @include media-breakpoint-up(md){
     font-size: 180px;
   }
 }

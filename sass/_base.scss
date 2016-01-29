@@ -23,7 +23,7 @@
   left: $sidebar-width;
   @include transition(left $sidebar-transition-time ease-in-out);
 
-  @include respond-to(md) {
+  @include media-breakpoint-up(md) {
     margin-left: $sidebar-icon-state-width;
     left: $sidebar-width - $sidebar-icon-state-width;
   }
@@ -33,7 +33,7 @@
   }
 
   .nav-static & {
-    @include respond-to(lg) {
+    @include media-breakpoint-up(lg) {
       @include transition(none);
       left: 0;
       margin-left: $sidebar-width;
@@ -53,7 +53,7 @@
   }
 
   .nav-static & {
-    @include respond-to(lg) {
+    @include media-breakpoint-up(lg) {
       right: 0;
     }
   }
@@ -63,7 +63,7 @@
   position: absolute;
   z-index: 1;
 
-  @media (max-width: $screen-sm-max) {
+  @include media-breakpoint-down(sm) {
     font-size: 16px;
 
     .navbar-brand{
@@ -105,13 +105,13 @@
   }
 
   .navbar-form.navbar-left{
-    @include respond-to(md) {
+    @include media-breakpoint-up(md) {
       padding-right: 0;
     }
   }
 
   .navbar-form.navbar-left{
-    @media (max-width: $screen-md-max) {
+    @include media-breakpoint-down(md) {
       padding-right: 0;
     }
   }
@@ -144,7 +144,7 @@
   padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
   background-color: $body-bg;
 
-  @media (max-width: $screen-sm-max) {
+  @include media-breakpoint-down(sm) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -171,7 +171,7 @@
   }
 
   .nav-static &{
-    @include respond-to(lg) {
+    @include media-breakpoint-up(lg) {
       width: 100%;
       @include transition(none);
     }
@@ -181,7 +181,7 @@
 .sidebar-nav{
   padding: 10px 0;
   font-size: 14px;
-  @include respond-to(lg){
+  @include media-breakpoint-up(lg){
     font-size: 16px;
   }
 
@@ -223,7 +223,7 @@
       background-color: $sidebar-item-hover-bg-color;
     }
 
-    @include respond-to(lg){
+    @include media-breakpoint-up(lg){
       line-height: 44px;
     }
 
@@ -241,7 +241,7 @@
       line-height: 28px;
       text-align: center;
 
-      @include respond-to(lg){
+      @include media-breakpoint-up(lg){
         top: 8px;
       }
 
@@ -281,7 +281,7 @@
 
     .toggle{
       line-height: 35px;
-      @include respond-to(lg){
+      @include media-breakpoint-up(lg){
         line-height: 44px;
       }
       @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
@@ -323,7 +323,7 @@
     background-color: lighten($sidebar-bg-color, 5%);
     list-style: none;
 
-    @include respond-to(lg){
+    @include media-breakpoint-up(lg){
       font-size: 14px;
     }
 
@@ -396,7 +396,7 @@
   }
 
   .nav-static &{
-    @include respond-to(lg){
+    @include media-breakpoint-up(lg){
       opacity: 1;
       @include transition(none);
     }
@@ -513,7 +513,7 @@
       }
 
       .nav-static &{
-        @include respond-to(lg){
+        @include media-breakpoint-up(lg){
           .circle,
           .circle-o,
           .fa-circle{
@@ -544,7 +544,7 @@
   }
 
   .nav-static &{
-    @include respond-to(lg){
+    @include media-breakpoint-up(lg){
       opacity: 1;
       @include transition(none);
     }
@@ -873,7 +873,7 @@
 }
 
 .notifications{
-  @include respond-to(lg){
+  @include media-breakpoint-up(lg){
     width: 333px;
   }
 
@@ -944,7 +944,7 @@
   }
 
   .nav-static & {
-    @include respond-to(lg){
+    @include media-breakpoint-up(lg){
       @include transition(opacity .2s ease-out, background-color .2s ease-out);
       transform: translate(0, 0);
       margin-left: $sidebar-width;
@@ -1158,7 +1158,7 @@
     z-index: 1;
     margin-right: $widget-padding-horizontal;
 
-    @include respond-to(md){
+    @include media-breakpoint-up(md){
       top: auto;
       bottom: 0;
     }

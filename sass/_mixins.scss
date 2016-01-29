@@ -1,16 +1,3 @@
-@mixin respond-to($breakpoint) {
-  @if map-has-key($grid-breakpoints, $breakpoint) {
-    @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
-      @content;
-    }
-  }
-
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
-  }
-}
-
 @mixin nav-justified {
   width: 100%;
 
@@ -28,7 +15,7 @@
     left: auto;
   }
 
-  @include respond-to(md) {
+  @include media-breakpoint-up(md) {
     .nav-item {
       display: table-cell;
       width: 1%;
@@ -59,7 +46,7 @@
 @mixin form-inline {
 
   // Kick in the inline
-  @include respond-to(md) {
+  @include media-breakpoint-up(md) {
     // Inline-block all the things for "inline"
     .form-group {
       display: inline-block;
