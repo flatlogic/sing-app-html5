@@ -567,6 +567,10 @@ legend {
   outline: 0;
 }
 
+.input-group > .input-group-btn:last-child > .btn[data-toggle="dropdown"] {
+  @include border-right-radius($btn-border-radius);
+}
+
 
 //
 // Labels
