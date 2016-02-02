@@ -63,7 +63,6 @@
     "MetroJS": "https://github.com/drewgreenwell/MetroJS.git#349ab828fe4deecff40496357d5bcba06f470413",
     "skycons": "https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed",
     "bootstrap-sass": "3.3.5",
-    "sass-bootstrap-glyphicons": "1.0.0",
     "bootstrap": "4.0.0-alpha.2",
     "bootstrap-markdown": "2.9.0"
   },
@@ -78,9 +77,9 @@
     "underscore": "1.8.3",
     "backbone": "^1.1.2",
     "bootstrap": "~4"
-
   },
   "devDependencies": {
-    "tether": "~1.1.1"
+    "tether": "~1.1.1",
+    "glyphicons-halflings": "*"
   }
 }

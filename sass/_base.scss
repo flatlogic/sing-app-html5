@@ -135,7 +135,6 @@
 
   .fa-refresh {
     font-size: $font-size-smaller;
-    padding-top: 2px;
   }
 }
 
@@ -1053,11 +1052,6 @@
 
   > .btn-group{
     vertical-align: baseline;
-  }
-
-  .fa-refresh{
-    position: relative;
-    top: -1px;
   }
 
   .dropdown-toggle:after {

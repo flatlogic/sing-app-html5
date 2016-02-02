@@ -302,10 +302,15 @@
     margin-right: 10px;
   }
 
+  .glyphicon {
+    top: 10px;
+  }
+
   &:hover{
     .glyphicon,
     .fa{
       font-size: 28px;
+      top: 2px;
     }
 
     .fa{
@@ -872,6 +877,10 @@
     border: 7px solid $white;
     border-radius: 50%;
     text-align: center;
+
+    .glyphicon {
+      top: 11px;
+    }
 
     &.event-icon-danger{ background-color: $brand-danger; border-color: lighten($brand-danger, 7%)}
     &.event-icon-warning{ background-color: $brand-warning; border-color: lighten($brand-warning, 7%)}
