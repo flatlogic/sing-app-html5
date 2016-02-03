@@ -696,6 +696,22 @@ input.parsley-error{
   }
 }
 
+.popover-body-error {
+  padding: 0;
+}
+
+.popover-content-error {
+  background-color:#F2DEDE;
+  color:#B94A48;
+  border-color:#953B39;
+  border-radius: $border-radius-lg;
+}
+
+.popover.popover-right .popover-arrow-error::after,
+.popover.bs-tether-element-attached-left .popover-arrow-error::after {
+  border-right-color: #F2DEDE;
+}
+
 /***********************************/
 /**           Backgrid            **/
 /***********************************/

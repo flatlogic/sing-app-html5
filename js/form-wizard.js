@@ -195,7 +195,7 @@ $(function(){
 
         wizard.el.find('.wizard-progress-container').empty()
             .append('<div class="bg-gray-lighter"><progress class="progress progress-xs" style="width: 0%" value="100" max="100"></progress></div>');
-        
+
         wizard.progress = wizard.modal.find('progress');
 
         $(".wizard-group-list").click(function() {
@@ -205,6 +205,27 @@ $(function(){
         $('#open-wizard').click(function(e) {
             e.preventDefault();
             wizard.show();
+            wizard.errorPopover = function(el, msg, allowHtml) {
+                this.log("launching popover on", el);
+                allowHtml = typeof allowHtml !== "undefined" ? allowHtml : false;
+                var popover = el.popover({
+                    content: msg,
+                    trigger: "manual",
+                    html: allowHtml,
+                    container: el.parents('.form-group')
+                }).addClass("error-popover").popover("show").next(".popover");
+
+                el.parents('.form-group').find('.popover').addClass("error-popover");
+                $('.popover-title').css('display', 'none');
+                $('.popover').addClass('popover-body-error');
+                $('.popover-content').addClass('popover-content-error');
+                $('.popover-arrow').addClass('popover-arrow-error');
+                Tether.position();
+
+                this.popovers.push(el);
+
+                return popover;
+            };
             $('.dropdown-menu > li > a').addClass('dropdown-item');
         });
     }
