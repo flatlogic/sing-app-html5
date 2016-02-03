@@ -685,6 +685,17 @@ input.parsley-error{
   border-right-color: transparent;
 }
 
+.wizard-nav-list li > a {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+}
+
+.wizard-input-section {
+  .open {
+  }
+}
+
 /***********************************/
 /**           Backgrid            **/
 /***********************************/
