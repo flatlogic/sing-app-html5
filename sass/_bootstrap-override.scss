@@ -320,13 +320,14 @@ legend {
 }
 
 .nav-tabs {
+  & .nav-item+.nav-item { margin-left: 0}
   border-bottom: none;
   background-color: $gray-semi-lighter;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
-  > li {
+  > .nav-item {
     margin-bottom: 0;
-    > a {
+    > .nav-link {
       padding: 12px 18px;
       border: none;
       color: $text-muted;
@@ -337,7 +338,7 @@ legend {
       }
     }
 
-    &.open > a{
+    .nav-link.open {
       &,
       &:hover,
       &:focus{
@@ -346,10 +347,12 @@ legend {
       }
     }
 
-    &.active > a {
+    .nav-link.active {
       &,
       &:hover,
       &:focus {
+        background-color: $nav-tabs-active-link-hover-bg;
+        color: $nav-tabs-active-link-hover-color;
         border: none;
         @include box-shadow(1px 1px 2px #ccc);
       }

@@ -710,15 +710,15 @@
 </div>
 
 <div class="content-wrap">
-    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
             <li>YOU ARE HERE</li>
             <li class="active">UI Tabs & Accordion</li>
         </ol>
-        <h1 class="page-title">Tabs & Accordion - <span class="fw-semi-bold">Components</span></h1>
+        <h2 class="page-title">Tabs & Accordion - <span class="fw-semi-bold">Components</span></h2>
         <div class="row mb-lg">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <div class="clearfix">
                     <ul id="tabs1" class="nav nav-tabs pull-xs-left"> <!-- remove pull-xs-left to get a cool effect too -->
                         <li class="nav-item"><a class="nav-link active" href="#tab1" data-toggle="tab">Basic</a></li>
@@ -726,15 +726,15 @@
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-item"><a href="#tab3" tabindex="-1" data-toggle="tab">@fat</a></li>
-                                <li class="dropdown-item"><a href="#tab4" tabindex="-1" data-toggle="tab">@mdo</a></li>
+                                <li><a class="dropdown-item" href="#tab3" tabindex="-1" data-toggle="tab">@fat</a></li>
+                                <li><a class="dropdown-item" href="#tab4" tabindex="-1" data-toggle="tab">@mdo</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
                 <div id="tabs1c" class="tab-content mb-lg">
                     <div class="tab-pane active clearfix" id="tab1">
-                        <h2>Tabs-enabled widget</h2>
+                        <h3>Tabs-enabled widget</h3>
                         <p>You will never know exactly how something will go until you try it.</p>
                         <p>You can think three hundred times and still have no precise result. If you see
                             attractive girl all you need to do is to go and ask her to give you her phone. You don’t
@@ -773,7 +773,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <div class="tabbable tabs-left mb-lg">
                     <ul id="tabs2" class="nav nav-tabs">
                         <li class="nav-item"><a class="nav-link active" href="#tab12" data-toggle="tab">Basic</a></li>
@@ -808,7 +808,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <div class="tabbable tabs-right">
                     <ul id="tabs3" class="nav nav-tabs">
                         <li class="nav-item"><a class="nav-link active" href="#tab13" data-toggle="tab">Basic</a></li>
@@ -979,6 +979,7 @@
 <!-- common app js -->
 <script src="js/settings.js"></script>
 <script src="js/app.js"></script>
+<script src="js/ui-tabs-accordion.js"></script>
 
 <!-- page specific libs -->
 <script src="vendor/bootstrap/js/dist/tab.js"></script>
