@@ -720,20 +720,26 @@
         <div class="row mb-lg">
             <div class="col-lg-6">
                 <div class="clearfix">
-                    <ul id="tabs1" class="nav nav-tabs pull-xs-left"> <!-- remove pull-xs-left to get a cool effect too -->
-                        <li class="nav-item"><a class="nav-link active" href="#tab1" data-toggle="tab">Basic</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tab2" data-toggle="tab">Assumtion</a></li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#tab3" tabindex="-1" data-toggle="tab">@fat</a></li>
-                                <li><a class="dropdown-item" href="#tab4" tabindex="-1" data-toggle="tab">@mdo</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <ul class="nav nav-tabs pull-xs-left" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-expanded="true">Basic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#assumtion" role="tab" aria-controls="assumtion" aria-expanded="false">Assumtion</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" id="dropdown1-tab" href="#dropdown1" role="tab" data-toggle="tab" aria-controls="dropdown1" aria-expanded="false">@fat</a>
+                            <a class="dropdown-item" id="dropdown2-tab" href="#dropdown2" role="tab" data-toggle="tab" aria-controls="dropdown2" aria-expanded="false">@mdo</a>
+                        </div>
+                    </li>
+                </ul>
                 </div>
-                <div id="tabs1c" class="tab-content mb-lg">
-                    <div class="tab-pane active clearfix" id="tab1">
+                <div class="tab-content mb-lg" id="myTabContent">
+                    <div role="tabpanel" class="tab-pane active in clearfix" id="basic" aria-labelledby="basic-tab" aria-expanded="true">
                         <h3>Tabs-enabled widget</h3>
                         <p>You will never know exactly how something will go until you try it.</p>
                         <p>You can think three hundred times and still have no precise result. If you see
@@ -748,7 +754,7 @@
                             <button class="btn btn-primary">Some button</button>
                         </div>
                     </div>
-                    <div class="tab-pane" id="tab2">
+                    <div class="tab-pane" id="assumtion" role="tabpanel" aria-labelledby="assumtion-tab" aria-expanded="false">
                         <p>Why don't use Lore Ipsum? I think if some one says don't use lore ipsum it's very controversial
                             point. I think the opposite actually. Everyone knows what is lore ipsum - it is easy to understand if text is lore ipsum.</p>
                         <div class="clearfix">
@@ -758,14 +764,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="tab3">
+                    <div class="tab-pane" id="dropdown1" role="tabpanel" aria-labelledby="dropdown1-tab" aria-expanded="false">
                         <p> If you will think too much it will sink in the swamp of never implemented plans and
                             ideas or will just go away or will be implemented by someone else.</p>
                         <p><strong>5 months of doing everything to achieve nothing.</strong></p>
                         <p>You'll automatically skip - because you know - it's just non-informative stub. But what if there some text like this one?</p>
                     </div>
-                    <div class="tab-pane" id="tab4">
-                        <blockquote class="blockquote-sm mb-xs">
+                    <div class="tab-pane" id="dropdown2" role="tabpanel" aria-labelledby="dropdown2-tab" aria-expanded="false">
+                        <blockquote class="blockquote-sm blockquote mb-xs">
                             Plan it? Make it!
                         </blockquote>
                         <p>The same thing is for startups and ideas. If you have an idea right away after it appears
