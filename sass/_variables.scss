@@ -4,6 +4,21 @@
 
 $vendor-folder: '../vendor' !default;
 
+// Glyphicons
+
+$glyphicons-halflings-include-bonus: false !default;
+$glyphicons-halflings-class-prefix: glyphicon !default;
+
+// Bootstrap options
+
+$enable-flex:               false !default;
+$enable-rounded:            true !default;
+$enable-shadows:            true !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+
 // Colors
 // ------------------------
 
