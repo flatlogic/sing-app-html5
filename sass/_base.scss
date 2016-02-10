@@ -1040,8 +1040,12 @@
     }
 
     > .glyphicon{
-      vertical-align: -1px;
+      vertical-align: 0;
       font-size: 12px;
+    }
+
+    > .fa{
+      vertical-align: 1px;
     }
   }
 
