@@ -245,6 +245,10 @@ legend {
   }
 }
 
+.table > thead > tr > th {
+  border-top: none;
+}
+
 .table > thead > tr > th{
   font-weight: $font-weight-semi-bold;
   text-transform: uppercase;
