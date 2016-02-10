@@ -666,6 +666,11 @@ legend {
 
 .btn-group > .btn[data-toggle="dropdown"][data-original-title][title] {
   @include border-right-radius($btn-border-radius);
+
+  &:focus,
+  &:active{
+    outline: none !important;
+  }
 }
 
 
