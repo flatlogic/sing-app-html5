@@ -1737,3 +1737,7 @@ a.fc-event{
   url('fonts/glyphicons-halflings-regular.ttf') format('truetype'),
   url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+.glyphicon-comment:before {
+  content:"\E111";
+}
