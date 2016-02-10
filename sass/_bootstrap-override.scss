@@ -674,6 +674,8 @@ legend {
 .label{
   font-size: 11px;
   font-weight: $font-weight-semi-bold;
+  padding: 6px;
+
 }
 
 
@@ -985,4 +987,6 @@ legend {
 .label-pill {
   color: $white;
   font-weight: bold;
+  padding: .25em .6em;
+  font-size: 12px;
 }
