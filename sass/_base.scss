@@ -41,6 +41,16 @@
   }
 }
 
+.page-controls {
+  .dropdown-toggle-notifications {
+    .circle {
+      width: #{$line-height-base}rem;
+      height: #{$line-height-base}rem;
+      line-height: #{$line-height-base}rem;
+    }
+  }
+}
+
 .page-controls{
   @include transition(
           left $sidebar-transition-time ease-in-out,
