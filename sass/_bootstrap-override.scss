@@ -982,3 +982,31 @@ legend {
   padding: .25em .6em;
   font-size: 12px;
 }
+
+//
+// Code
+// -----------------
+
+pre {
+  display: block;
+  padding: (($line-height-computed - 0.0625rem) / 2);
+  margin: 0 0 ($line-height-computed / 2);
+  font-size: ($font-size-base - 0.0625rem);
+  line-height: $line-height;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: $pre-color;
+  background-color: $pre-bg;
+  border: 1px solid $pre-border-color;
+  border-radius: $border-radius;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}

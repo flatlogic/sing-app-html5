@@ -77,7 +77,7 @@ $font-size-smaller: 85% !default;
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.428571429 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 $link-color: #218BC3 !default;
 
@@ -235,6 +235,12 @@ $progress-bg:                 $gray-lighter !default;
 //
 
 $tooltip-bg:                  rgba(#000, .85) !default;
+
+//== Code
+//
+
+$code-bg:                     #f9f2f4 !default;
+$pre-bg:                      #f5f5f5 !default;
 
 //== Panels
 //
