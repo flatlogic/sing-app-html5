@@ -167,7 +167,7 @@
   text-align: center;
   vertical-align: middle;
   font-weight: $font-weight-bold;
-  font-size: $font-size-lg;
+  font-size: $font-size-base + 0.25rem;
 
   @include transition(width .3s ease-in-out);
   a{
