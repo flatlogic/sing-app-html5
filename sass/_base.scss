@@ -216,9 +216,11 @@
 
     .label{
       float: right;
-      line-height: 15px;
+      line-height: 8px;
       margin-top: 11px;
       margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
+      padding: 7px;
+      border-radius: $border-radius-sm;
     }
   }
 
@@ -392,6 +394,10 @@
 
     .fa, .glyphicon{
       font-size: 9px;
+    }
+
+    .glyphicon {
+      top: 3px;
     }
   }
 
