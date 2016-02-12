@@ -1043,15 +1043,37 @@
   }
 }
 
+.widget-email {
+  header {
+    .dropdown-toggle {
+      &:after {
+        content: none;
+      }
+    }
+
+    .form-control {
+      font-size: 0.75rem;
+    }
+  }
+}
+
 .widget-email-pagination{
   margin: 0;
+
+  .page-link {
+    color: #888;
+  }
 }
 
 .table-emails{
   margin-bottom: 0;
+
+  .abc-checkbox label:before {
+    left: -13px;
+  }
   
   tbody > tr > td:first-child {
-    min-width: 50px;
+    width: 45px;
   }
 
   td,
