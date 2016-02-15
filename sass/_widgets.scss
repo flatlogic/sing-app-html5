@@ -38,7 +38,7 @@
   }
 
   .chart-title{
-    margin: $line-height-computed 0 0;
+    margin: 20px 0 0;
   }
 
   .chart-value, .chart-value-change{
@@ -48,7 +48,7 @@
   .chart-value{
     margin-bottom: 0;
     font-weight: $font-weight-bold;
-    font-size: $font-size-h6 + 0.1875rem;
+    font-size: $font-size-h5 + 0.2143rem;
     line-height: 1;
     color: $white;
   }
@@ -169,7 +169,7 @@
 
   > .nav-item > .nav-link{
     border-radius: 0;
-    padding: .6rem 0 .6rem 0;
+    padding: 0.7143rem 0 0.7143rem 0;
 
     color: $gray;
     &:hover{
@@ -378,7 +378,7 @@
 }
 
 .widget-login{
-  padding: 27px;
+  padding: 30px;
 
   > header{
     h1,h2,h3,h4,h5,h6{
@@ -548,7 +548,7 @@
   .img-thumbnail{
 
     figcaption {
-      margin: 0.75rem 0.5rem 0.75rem 0.5rem;
+      margin: 0.8571rem 0.5714rem 0.8571rem 0.5714rem;
     }
 
     a{
@@ -1052,7 +1052,7 @@
     }
 
     .form-control {
-      font-size: 0.75rem;
+      font-size: 0.8571rem;
     }
   }
 }
@@ -1295,15 +1295,4 @@
 
 .widget .widget-body svg {
   width: 100%;
-}
-
-/***********************************/
-/**         Glyphicons            **/
-/***********************************/
-
-.circle {
-  .glyphicon-map-marker {
-    top: 3px;
-    left: 0;
-  }
 }

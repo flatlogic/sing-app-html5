@@ -43,6 +43,10 @@
 
 .page-controls {
   .dropdown-toggle-notifications {
+    .img-circle {
+      margin-top: -1px;
+    }
+
     .circle {
       width: #{$line-height-base}rem;
       height: #{$line-height-base}rem;
@@ -142,10 +146,6 @@
   position: relative;
   z-index: 0;
   height: 100%;
-
-  .fa-refresh {
-    font-size: $font-size-smaller;
-  }
 }
 
 .content{
@@ -160,14 +160,14 @@
 }
 
 .logo{
-  margin: 10px 0 20px;
+  margin: 11px 0 19px;
   height: $navbar-height;
   width: 100%;
   line-height: $navbar-height;
   text-align: center;
   vertical-align: middle;
   font-weight: $font-weight-bold;
-  font-size: $font-size-base + 0.25rem;
+  font-size: $font-size-base + 0.2857rem;
 
   @include transition(width .3s ease-in-out);
   a{
@@ -190,11 +190,8 @@
 .sidebar-nav{
   padding: 10px 0;
   font-size: 14px;
-  @include media-breakpoint-up(lg){
-    font-size: 16px;
-  }
 
-  @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
+  @media (min-width: 992px) and (min-height: $screen-lg-height), (max-width: $screen-sm-max){
     font-size: 16px;
   }
 
@@ -234,15 +231,15 @@
       background-color: $sidebar-item-hover-bg-color;
     }
 
-    @include media-breakpoint-up(lg){
-      line-height: 44px;
-    }
-
-    @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
+    @media (min-width: 992px) and (min-height: $screen-lg-height), (max-width: $screen-sm-max){
       line-height: 44px;
     }
 
     .icon{
+      @media (min-width: 992px) and (min-height: $screen-lg-height), (max-width: $screen-sm-max){
+        top: 8px;
+      }
+
       display: block;
       position: absolute;
       top: 3px;
@@ -252,14 +249,6 @@
       line-height: 28px;
       text-align: center;
 
-      @include media-breakpoint-up(lg){
-        top: 8px;
-      }
-
-      @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
-        top: 8px;
-      }
-
       .fa, .glyphicon{
         font-size: 16px;
         color: rgba($sidebar-color, .7);
@@ -267,7 +256,7 @@
 
       .glyphicon{
         left: -1px;
-        top: 7px;
+        top: 5px;
       }
 
       .glyphicon-th{
@@ -278,19 +267,31 @@
         left: 0;
       }
 
+      .glyphicon-map-marker{
+        top: 6px;
+      }
+
       .fa-envelope{
         position: relative;
         top: -1px;
+      }
+
+      @media (min-width: 992px) and (min-height: $screen-lg-height), (max-width: $screen-sm-max){
+        .glyphicon {
+          top: 6px;
+        }
+
+        .glyphicon-map-marker {
+          top: 7px;
+        }
       }
 
     }
 
     .toggle{
       line-height: 35px;
-      @include media-breakpoint-up(lg){
-        line-height: 44px;
-      }
-      @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
+
+      @media (min-width: 992px) and (min-height: $screen-lg-height), (max-width: $screen-sm-max){
         line-height: 44px;
       }
     }
@@ -329,11 +330,7 @@
     background-color: lighten($sidebar-bg-color, 5%);
     list-style: none;
 
-    @include media-breakpoint-up(lg){
-      font-size: 14px;
-    }
-
-    @media (min-height: $screen-lg-height), (max-width: $screen-sm-max){
+    @media (min-width: 992px) and (min-height: $screen-lg-height), (max-width: $screen-sm-max){
       font-size: 14px;
     }
 
@@ -611,6 +608,10 @@
   padding: 10px;
   z-index: 3;
   background-color: $sidebar-bg-color;
+
+  .form-control {
+    padding: 0.6rem 0.85rem;
+  }
 }
 
 .chat-sidebar-content{
@@ -626,7 +627,7 @@
     left: 0;
   }
   .sidebar-nav-title{
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
 
     &:first-child{
@@ -725,10 +726,9 @@
 }
 
 .chat-sidebar-title{
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
   text-transform: uppercase;
-  font-size: $font-size-base;
+  font-size: 15px;
   font-weight: $font-weight-normal;
 }
 
@@ -820,7 +820,7 @@
 
 .chat-notification{
   position: absolute;
-  right: 15px;
+  right: 12px;
   top: 35px;
   z-index: 20;
   margin-top: 3px;
@@ -853,6 +853,7 @@
     margin: 0;
     font-weight: $font-weight-semi-bold;
     line-height: 28px;
+    font-size: $font-size-sm;
 
     .thumb-xs{
       vertical-align: -9px;
@@ -870,7 +871,7 @@
 .chat-notification-sing{
   position: absolute;
   top: 15px;
-  left: 12px;
+  left: 10px;
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -1074,11 +1075,16 @@
   }
 }
 
+.widget-card { min-height: 135px;}
+
 .widget-icon{
   opacity: .5;
-  font-size: 45px;
-  vertical-align: top;
-  margin: 1px;
+  font-size: 42px;
+  height: 70px;
+
+  .glyphicon {
+    top: 5px;
+  }
 }
 
 .widget-image{
@@ -1189,7 +1195,7 @@
 .widget-placeholder{
   background:  rgba($white, .4);
   border: 1px dashed $gray-light;
-  margin: -0.0625rem -0.0625rem ($grid-gutter-width - 0.0625rem) -0.0625rem;
+  margin: -0.07143rem -0.07143rem ($grid-gutter-width - 0.07143rem) -0.07143rem;
 }
 
 /***********************/
