@@ -894,9 +894,11 @@
 
       label {
         flex: 1;
-        font-size: $font-size-smaller;
+        padding-top: 5px;
+        padding-bottom: 5px;
       }
     }
+
   }
 
   height: 100%;
