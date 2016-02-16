@@ -28,7 +28,7 @@
 
 .pace .pace-activity{
   position: absolute;
-  top: $navbar-height + 0.9375rem;
+  top: $navbar-height + 1.071rem;
   border-width: 1px;
   left: 15px;
   right: auto;
@@ -669,10 +669,7 @@
 
 .bootstrap-select {
   .dropdown-toggle {
-    padding-top: 6px;
-    padding-bottom: 6px;
     padding-left: 10px;
-    padding-right: 25px;
 
     &:after {
       margin-right: 0;

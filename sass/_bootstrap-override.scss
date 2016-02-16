@@ -11,6 +11,16 @@ body {
   font-size: $font-size-base;
 }
 
+blockquote{
+  font-size: $font-size-lg;
+
+  footer {
+    font-size: 80%;
+    &:after {
+      content: '\00A0 \2014';
+    }
+  }
+}
 // Headings
 // -------------------------
 
@@ -19,7 +29,7 @@ h1, h2, h3, h4, h5, h6,
   small,
   .small {
     font-weight: $headings-font-weight;
-    font-size: 65%;
+    font-size: 75%;
     color: $text-muted;
   }
 }
@@ -56,7 +66,7 @@ h1, h2, h3, h4, h5, h6,
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: $font-size-sm;
+  font-size: $font-size-base;
   color: inherit;
 
   > a,
@@ -66,6 +76,10 @@ h1, h2, h3, h4, h5, h6,
   > .small > a {
     color: inherit;
   }
+}
+
+small, .small {
+  font-size: 85%;
 }
 
 // Collapsable panels (aka, accordion)
@@ -120,6 +134,7 @@ h1, h2, h3, h4, h5, h6,
 
 
 .form-control {
+  padding: 0.373rem 0.75rem;
   font-weight: $font-weight-normal;
   @include box-shadow(none);
   &:focus{
@@ -132,6 +147,8 @@ label {
 }
 
 .help-block{
+  margin-top: 5px;
+  margin-bottom: 10px;
   font-size: $font-size-smaller;
   color: $text-muted;
   display: block;
@@ -146,7 +163,7 @@ legend {
   color: $legend-color;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
-  font-size: $font-size-base + 0.0625rem;
+  font-size: $font-size-base + 0.07143rem;
   font-weight: $font-weight-normal;
 }
 
@@ -361,7 +378,7 @@ legend {
   z-index: 1;
   background-color: $white;
   > .tab-pane {
-    padding: $line-height-computed*2 $line-height-computed;
+    padding: $line-height-computed*2 $line-height-computed*2;
   }
 }
 
@@ -505,7 +522,7 @@ legend {
     }
   }
 
-  margin-left: $navbar-padding-horizontal + 0.5rem;
+  margin-left: $navbar-padding-horizontal + 0.7rem;
   margin-right: $navbar-padding-horizontal;
 
   @include media-breakpoint-down(sm) {
@@ -520,7 +537,7 @@ legend {
   > li {
     float: left;
     > a {
-      padding: $navbar-padding-horizontal $navbar-padding-vertical;
+      padding: $navbar-padding-horizontal+0.15rem $navbar-padding-vertical $navbar-padding-horizontal $navbar-padding-vertical;
 
 
     }
@@ -580,14 +597,23 @@ legend {
   }
 
   .nav.navbar-nav > li > a {
-    padding: $navbar-padding-horizontal;
+    padding: $navbar-padding-horizontal+0.15rem $navbar-padding-horizontal $navbar-padding-horizontal+0.03rem $navbar-padding-horizontal;
   }
 
   .nav.navbar-nav > li:first-child .dropdown-toggle {
-    padding-left: 0;
 
     .circle {
       color: $gray;
+    }
+  }
+
+  .nav.navbar-nav .nav-item {
+    li:first-child .dropdown-item {
+      padding-top: 10px;
+    }
+
+    li:last-child .dropdown-item {
+      padding-bottom: 10px;
     }
   }
 
@@ -600,8 +626,9 @@ legend {
   }
 
   .navbar-nav {
+
     .dropdown-menu {
-      margin-top: 0;
+      margin-top: 0px;
       padding: 0;
     }
   }
@@ -785,7 +812,6 @@ legend {
 
 .tooltip-inner{
   @include border-radius(3px);
-  font-size: $font-size-smaller;
   max-width: 75px;
 }
 
@@ -914,7 +940,7 @@ legend {
     color: $navbar-default-brand-color;
     margin-right: 0;
     padding-top: 10px;
-    font-size: $font-size-root;
+    font-size: $font-size-lg;
     &:hover,
     &:focus {
       color: $navbar-default-brand-hover-color;
@@ -950,6 +976,48 @@ legend {
       &:focus {
         color: $navbar-default-link-disabled-color;
         background-color: $navbar-default-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-active-bg;
+        color: $navbar-default-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: $navbar-default-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-hover-color;
+            background-color: $navbar-default-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-active-color;
+            background-color: $navbar-default-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-default-link-disabled-color;
+            background-color: $navbar-default-link-disabled-bg;
+          }
+        }
       }
     }
   }
@@ -1004,9 +1072,9 @@ legend {
 
 pre {
   display: block;
-  padding: (($line-height-computed - 0.0625rem) / 2);
+  padding: (($line-height-computed - 0.07143rem) / 2);
   margin: 0 0 ($line-height-computed / 2);
-  font-size: ($font-size-base - 0.0625rem);
+  font-size: ($font-size-base - 0.07143rem);
   line-height: $line-height;
   word-break: break-all;
   word-wrap: break-word;

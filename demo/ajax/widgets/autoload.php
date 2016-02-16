@@ -1,5 +1,5 @@
 <?php sleep(10) ?>
-<h4 class="text-xs-center no-margin animated bounceInDown">Sign up, <del>it's <strong>free</strong></del> and get <strong>$50 now!</strong></h4>
+<h3 class="text-xs-center no-margin animated bounceInDown">Sign up, <del>it's <strong>free</strong></del> and get <strong>$50 now!</strong></h3>
 <p class="lead text-muted text-xs-center">
     Faith makes it possible to achieve that which man's mind can conceive and believe.
 </p>
