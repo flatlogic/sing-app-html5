@@ -37,7 +37,7 @@
 </div>
 <a class="list-group-item" href="#">
     <span class="thumb-sm pull-xs-left mr">
-        <i class="fa fa-upload fa-lg"></i>
+        <i class="glyphicon glyphicon-upload fa-lg"></i>
     </span>
     <p class="text-ellipsis no-margin">
         2.1.0-pre-alpha just released. </p>
@@ -75,7 +75,7 @@
     </span>
     <p class="no-margin overflow-hidden">
         Instructions for changing your Envato Account password. Please
-        check your <a href="#">security page</a>.
+        check your account <a href="#">security page</a>.
         <time class="help-block no-margin">
             12:18 AM
         </time>

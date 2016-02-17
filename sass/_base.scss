@@ -911,8 +911,8 @@
     @include transition(background-color .15s ease-in-out);
     &:hover{
       background-color: $list-group-hover-bg;
-      .progress{
-        background-color: $white;
+      .progress-bar{
+        background-color: $white !important;
       }
     }
     .progress{

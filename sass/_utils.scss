@@ -391,20 +391,6 @@ $z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 // Text & Background Variations
 // ----------------------------
 
-//override bs .text-* classes so they use $brand-* variables
-
-@include text-emphasis-variant('.text-primary', $brand-primary);
-
-@include text-emphasis-variant('.text-success', $brand-success);
-
-@include text-emphasis-variant('.text-info', $brand-info);
-
-@include text-emphasis-variant('.text-warning', $brand-warning);
-
-@include text-emphasis-variant('.text-danger', $brand-danger);
-
-@include text-emphasis-variant('.text-link', $link-color);
-
 //copy bg classes after bootstrap so it's possible to overload other bootstrap classes
 
 @include bg-variant('.bg-primary', $brand-primary);
@@ -436,6 +422,20 @@ $z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info{
   @include transition(background-color .15s ease-in-out);
 }
+
+//override bs .text-* classes so they use $brand-* variables
+
+@include text-emphasis-variant('.text-primary', $brand-primary);
+
+@include text-emphasis-variant('.text-success', $brand-success);
+
+@include text-emphasis-variant('.text-info', $brand-info);
+
+@include text-emphasis-variant('.text-warning', $brand-warning);
+
+@include text-emphasis-variant('.text-danger', $brand-danger);
+
+@include text-emphasis-variant('.text-link', $link-color);
 
 @include text-emphasis-variant('.text-white', $white);
 @include text-emphasis-variant('.text-gray', $gray);

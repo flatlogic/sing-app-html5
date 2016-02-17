@@ -332,25 +332,25 @@
                                     <strong>You have 13 notifications</strong>
                                 </div>
                                 <div class="btn-group btn-group-sm btn-group-justified" id="notifications-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                        <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
+                                    <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
                                              only requirement for async reloading -->
+                                    <label class="btn btn-secondary active"
+                                           data-ajax-load="demo/ajax/notifications.html"
+                                           data-ajax-target="#notifications-list">
                                         <input type="radio" checked
-                                               data-ajax-trigger="change"
-                                               data-ajax-load="demo/ajax/notifications.html"
-                                               data-ajax-target="#notifications-list"> Notifications
+                                               data-ajax-trigger="change"> Notifications
                                     </label>
-                                    <label class="btn btn-secondary">
+                                    <label class="btn btn-secondary"
+                                           data-ajax-load="demo/ajax/messages.html"
+                                           data-ajax-target="#notifications-list">
                                         <input type="radio"
-                                               data-ajax-trigger="change"
-                                               data-ajax-load="demo/ajax/messages.html"
-                                               data-ajax-target="#notifications-list"> Messages
+                                               data-ajax-trigger="change"> Messages
                                     </label>
-                                    <label class="btn btn-secondary">
+                                    <label class="btn btn-secondary"
+                                           data-ajax-load="demo/ajax/progress.html"
+                                           data-ajax-target="#notifications-list">
                                         <input type="radio"
-                                               data-ajax-trigger="change"
-                                               data-ajax-load="demo/ajax/progress.html"
-                                               data-ajax-target="#notifications-list"> Progress
+                                               data-ajax-trigger="change"> Progress
                                     </label>
                                 </div>
                             </header>
@@ -370,7 +370,7 @@
                                 </div>
                                 <a class="list-group-item" href="#">
                                 <span class="thumb-sm pull-xs-left mr">
-                                    <i class="fa fa-upload fa-lg"></i>
+                                    <i class="glyphicon glyphicon-upload fa-lg"></i>
                                 </span>
                                     <p class="text-ellipsis no-margin">
                                         2.1.0-pre-alpha just released. </p>
