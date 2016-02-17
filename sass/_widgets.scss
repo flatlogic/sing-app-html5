@@ -1045,11 +1045,6 @@
 
 .widget-email {
   header {
-    .dropdown-toggle {
-      &:after {
-        content: none;
-      }
-    }
 
     .form-control {
       font-size: 0.8571rem;

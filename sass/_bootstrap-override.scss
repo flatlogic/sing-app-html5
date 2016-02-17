@@ -309,6 +309,12 @@ legend {
 // Dropdown menus
 // --------------------------------------------------
 
+.dropdown-toggle {
+  &:after {
+    content: none;
+  }
+}
+
 .dropdown-menu{
   font-size: $font-size-mini;
   border-radius: 0;
@@ -319,6 +325,17 @@ legend {
   }
 }
 
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top:   4px dashed;
+  border-top:   4px solid \9; // IE8
+  border-right: 4px solid transparent;
+  border-left:  4px solid transparent;
+}
 //
 // Navs
 // --------------------------------------------------
@@ -668,6 +685,11 @@ legend {
   .glyphicon {
     top: 3px;
   }
+}
+
+.btn-sm {
+  padding-top: .35rem;
+  padding-bottom: .35rem;
 }
 
 .btn-rounded{
