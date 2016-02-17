@@ -687,6 +687,12 @@ legend {
   }
 }
 
+.btn, .btn-inverse, .btn-gray {
+  &:not(.active) {
+    box-shadow: none !important;
+  }
+}
+
 .btn-sm {
   padding-top: .35rem;
   padding-bottom: .35rem;
