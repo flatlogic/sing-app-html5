@@ -332,25 +332,25 @@
                                     <strong>You have 13 notifications</strong>
                                 </div>
                                 <div class="btn-group btn-group-sm btn-group-justified" id="notifications-toggle" data-toggle="buttons">
-                                    <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
+                                    <label class="btn btn-secondary active">
+                                        <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
                                              only requirement for async reloading -->
-                                    <label class="btn btn-secondary active"
-                                           data-ajax-load="demo/ajax/notifications.html"
-                                           data-ajax-target="#notifications-list">
                                         <input type="radio" checked
-                                               data-ajax-trigger="change"> Notifications
+                                               data-ajax-trigger="change"
+                                               data-ajax-load="demo/ajax/notifications.html"
+                                               data-ajax-target="#notifications-list"> Notifications
                                     </label>
-                                    <label class="btn btn-secondary"
-                                           data-ajax-load="demo/ajax/messages.html"
-                                           data-ajax-target="#notifications-list">
+                                    <label class="btn btn-secondary">
                                         <input type="radio"
-                                               data-ajax-trigger="change"> Messages
+                                               data-ajax-trigger="change"
+                                               data-ajax-load="demo/ajax/messages.html"
+                                               data-ajax-target="#notifications-list"> Messages
                                     </label>
-                                    <label class="btn btn-secondary"
-                                           data-ajax-load="demo/ajax/progress.html"
-                                           data-ajax-target="#notifications-list">
+                                    <label class="btn btn-secondary">
                                         <input type="radio"
-                                               data-ajax-trigger="change"> Progress
+                                               data-ajax-trigger="change"
+                                               data-ajax-load="demo/ajax/progress.html"
+                                               data-ajax-target="#notifications-list"> Progress
                                     </label>
                                 </div>
                             </header>
@@ -869,6 +869,7 @@
 <script src="vendor/widgster/widgster.js"></script>
 <script src="vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
 <script src="vendor/jquery-touchswipe/jquery.touchSwipe.js"></script>
+<script src="js/bootstrap-fix/button.js"></script>
 
 <!-- common app js -->
 <script src="js/settings.js"></script>

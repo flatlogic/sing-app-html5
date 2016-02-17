@@ -570,20 +570,7 @@ function initAppPlugins(){
      * ========================================================================
      */
     !function($){
-        $(document).on('change', '[data-ajax-load]', function(e){
-            var $this = $(this),
-                $target = $($this.data('ajax-target'));
-            if ($target.length > 0 ){
-                e = $.Event('ajax-load:start', {originalEvent: e});
-                $this.trigger(e);
-
-                !e.isDefaultPrevented() && $target.load($this.data('ajax-load'), function(){
-                    $this.trigger('ajax-load:end');
-                });
-            }
-            return false;
-        });
-        $(document).on('click', '#load-notifications-btn', function(e){
+        $(document).on('click change', '[data-ajax-load], [data-ajax-trigger^=change]', function(e){
             var $this = $(this),
                 $target = $($this.data('ajax-target'));
             if ($target.length > 0 ){
