@@ -664,6 +664,12 @@ legend {
 // Buttons
 // --------------------------------------------------
 
+.btn {
+  .glyphicon {
+    top: 3px;
+  }
+}
+
 .btn-rounded{
   @include border-radius(6px);
 }
