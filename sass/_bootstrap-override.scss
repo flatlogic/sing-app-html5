@@ -733,6 +733,7 @@ legend {
 .progress{
   @include box-shadow(none);
   transition: width 0.6s ease;
+  height: 1.3rem;
 }
 
 .progress-bar{
