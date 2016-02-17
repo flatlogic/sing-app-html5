@@ -63,6 +63,15 @@ h1, h2, h3, h4, h5, h6,
 }
 
 // Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title>a.collapsed>i {
+  transform: rotate(180deg);
+  transition: transform 0.35s ease;
+}
+
+.panel-title>a>i {
+  transition: transform 0.35s ease;
+}
+
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
