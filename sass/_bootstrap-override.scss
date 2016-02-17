@@ -484,6 +484,8 @@ legend {
 .navbar-form{
   .form-control{
     font-size: $navbar-font-size;
+    padding: 0.6rem 0.85rem;
+
   }
 
   .input-group{
@@ -911,7 +913,7 @@ legend {
 // our navbars.
 
 .navbar-form {
-  padding: 10px 0 10px $navbar-padding-horizontal;
+  padding: 7px 0 7px $navbar-padding-horizontal;
 
   // Mixin behavior for optimum display
   @include form-inline;
