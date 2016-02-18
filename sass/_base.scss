@@ -276,10 +276,6 @@
         top: -1px;
       }
 
-      .fa {
-        vertical-align: 0;
-      }
-
       @media (min-width: 992px) and (min-height: $screen-lg-height), (max-width: $screen-sm-max){
         .glyphicon {
           top: 6px;
