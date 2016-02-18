@@ -91,7 +91,7 @@ $(function(){
         DEMO.init();
 
         $('#grid').magnificPopup({
-            delegate: '.thumbnail > a', // child items selector, by clicking on it popup will open
+            delegate: '.img-thumbnail > a', // child items selector, by clicking on it popup will open
             type: 'image',
             gallery: {
                 enabled: true
