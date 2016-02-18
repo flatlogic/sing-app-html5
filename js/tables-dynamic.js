@@ -1,6 +1,6 @@
 $(function(){
     function initBackgrid(){
-        Backgrid.InputCellEditor.prototype.attributes.class = 'form-control input-sm';
+        Backgrid.InputCellEditor.prototype.attributes.class = 'form-control form-control-sm';
 
         var Territory = Backbone.Model.extend({});
 
