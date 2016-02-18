@@ -361,6 +361,11 @@ legend {
       padding: 12px 18px;
       border: none;
       color: $text-muted;
+
+      .label {
+        margin-bottom: -2px;
+      }
+
       @include transition(color .15s ease-in-out);
       &:hover {
         background-color: transparent;
