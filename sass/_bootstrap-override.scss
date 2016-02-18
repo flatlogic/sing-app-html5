@@ -672,6 +672,7 @@ legend {
 
 .breadcrumb {
   color: $gray-light;
+  margin-bottom: $spacer-y*1,5;
 
   > .active {
     font-weight: $font-weight-semi-bold;
