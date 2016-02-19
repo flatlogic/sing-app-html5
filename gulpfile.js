@@ -9,11 +9,14 @@ var rename = require ('gulp-rename');
 gulp.task('styles', function () {
 
     gulp.src('./sass/application.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            precision: 10
+        }).on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 
     gulp.src('./sass/application.scss')
         .pipe(sass({
+            precision: 10,
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename({suffix: '.min'}))
