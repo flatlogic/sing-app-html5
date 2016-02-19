@@ -387,7 +387,15 @@ $(function(){
      */
     SingAppView.prototype.onScreenSize = function(size, fn, /**Boolean=*/ onEnter){
         onEnter = typeof onEnter !== 'undefined' ? onEnter : true;
-        this.screenSizeCallbacks[size][onEnter ? 'enter' : 'exit'].push(fn)
+        if (typeof size === 'object'){
+            for (var i=0; i < size.length; i++){
+                this.screenSizeCallbacks[size[i]][onEnter ? 'enter' : 'exit'].push(fn)
+            }
+        }
+        else {
+            this.screenSizeCallbacks[size][onEnter ? 'enter' : 'exit'].push(fn)
+        }
+
     };
 
     /**
@@ -683,14 +691,11 @@ function initAppFunctions(){
         function moveBackNotificationsDropdown(){
             $('#notifications-dropdown-toggle').after($('#notifications-dropdown-menu').detach());
         }
-        SingApp.onScreenSize('sm', moveNotificationsDropdown);
-        SingApp.onScreenSize('sm', moveBackNotificationsDropdown, false);
+
+        SingApp.onScreenSize(['sm','xs'], moveNotificationsDropdown);
+        SingApp.onScreenSize(['sm','xs'], moveBackNotificationsDropdown, false);
 
         Sing.isScreen('sm') && moveNotificationsDropdown();
-
-        SingApp.onScreenSize('xs', moveNotificationsDropdown);
-        SingApp.onScreenSize('xs', moveBackNotificationsDropdown, false);
-
         Sing.isScreen('xs') && moveNotificationsDropdown();
 
         /**

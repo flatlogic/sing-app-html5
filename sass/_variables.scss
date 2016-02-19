@@ -65,8 +65,8 @@ $text-color:            $gray !default;
 $font-size-root: 14px;
 
 $font-size-base:          1rem !default;
-$font-size-larger:        $font-size-base + 0.07143rem;
-$font-size-mini:          $font-size-base - 0.07143rem;
+$font-size-larger:        15px;
+$font-size-mini:          13px;
 
 $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
@@ -92,12 +92,12 @@ $sidebar-width: 200px + $sidebar-slim-scroll-width !default;
 
 $sidebar-transition-time: .3s !default;
 
-$navbar-height:                    3.571rem !default;
+$navbar-height:                    50px !default;
 $navbar-font-size:              13px !default;
 
 $chat-sidebar-width: 250px + $sidebar-slim-scroll-width !default;
 
-$content-padding-vertical: $line-height-computed*3 !default;
+$content-padding-vertical: 42px !default;
 $content-padding-top: $content-padding-vertical + $navbar-height !default;
 $content-padding-horizontal: 40px !default;
 
@@ -120,13 +120,6 @@ $chart-spacer-y: 0.65rem !default;
 // ------------------------
 // ------------------------
 
-$screen-xs-max:              543px !default;
-$screen-sm-max:              767px !default;
-$screen-md-max:              991px !default;
-$screen-lg-max:              1199px !default;
-
-$grid-float-breakpoint:     768px !default;
-$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 
 //== Components
 //
@@ -190,30 +183,30 @@ $nav-tabs-active-link-hover-border-color:   #ddd !default;
 $navbar-margin-bottom:             0 !default;
 $navbar-border-radius:             0 !default;
 
-$navbar-default-bg:                $white !default;
-$navbar-default-color:             #777 !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-dashboard-bg:                $white !default;
+$navbar-dashboard-color:             #777 !default;
+$navbar-dashboard-border:            darken($navbar-dashboard-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #666 !default;
+$navbar-dashboard-link-color:                #666 !default;
 
 // Navbar links
-$navbar-default-link-hover-color:          #333 !default;
-$navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
-$navbar-default-link-disabled-color:       #ccc !default;
-$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-dashboard-link-hover-color:          #333 !default;
+$navbar-dashboard-link-hover-bg:             transparent !default;
+$navbar-dashboard-link-active-color:         #555 !default;
+$navbar-dashboard-link-active-bg:            darken($navbar-dashboard-bg, 6.5%) !default;
+$navbar-dashboard-link-disabled-color:       #ccc !default;
+$navbar-dashboard-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
-$navbar-default-brand-color:               $navbar-default-link-color !default;
-$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
-$navbar-default-brand-hover-bg:            transparent !default;
+$navbar-dashboard-brand-color:               $navbar-dashboard-link-color !default;
+$navbar-dashboard-brand-hover-color:         darken($navbar-dashboard-brand-color, 10%) !default;
+$navbar-dashboard-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
-$navbar-default-toggle-border-color:       #ddd !default;
+$navbar-dashboard-toggle-hover-bg:           #ddd !default;
+$navbar-dashboard-toggle-icon-bar-bg:        #888 !default;
+$navbar-dashboard-toggle-border-color:       #ddd !default;
 
 
 
