@@ -145,6 +145,7 @@ small, .small {
 
 .form-control {
   font-weight: $font-weight-normal;
+  height: 34px;
   @include box-shadow(none);
   &:focus{
     @include box-shadow(none);
