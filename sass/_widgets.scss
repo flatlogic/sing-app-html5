@@ -334,10 +334,8 @@
   .print-buttons {
     .btn {
       @include media-breakpoint-down(xs) {
-        padding: $btn-padding-y-sm $btn-padding-x-sm;
-        font-size: $font-size-sm;
-        line-height: $line-height-sm;
-        @include border-radius($btn-border-radius-sm);
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
       }
     }
   }
