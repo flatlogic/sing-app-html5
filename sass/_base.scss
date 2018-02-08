@@ -193,10 +193,6 @@
   padding: 10px 0;
   font-size: 14px;
 
-  @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-    font-size: 16px;
-  }
-
   li a{
     display: block;
     color: $sidebar-color;
@@ -329,7 +325,7 @@
   > li ul{
     padding: 0;
     font-size: 13px;
-    background-color: lighten($sidebar-bg-color, 5%);
+    background-color: saturate(darken($sidebar-item-hover-bg-color, 5%), 10%);
     list-style: none;
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){

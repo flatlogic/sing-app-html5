@@ -7,7 +7,7 @@ window.PJAX_ENABLED = true;
  * Whether to print some log information
  * @type {boolean}
  */
-window.DEBUG = true;
+window.DEBUG = false;
 
 /**
  * Plugins configuration options

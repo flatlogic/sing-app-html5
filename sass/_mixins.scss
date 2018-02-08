@@ -131,3 +131,20 @@
     }
   }
 }
+
+@mixin progress-variant($color) {
+  &[value]::-webkit-progress-value {
+    color: $color;
+  }
+
+  &[value]::-moz-progress-bar {
+    color: $color;
+  }
+
+  // IE9
+  @media screen and (min-width:0\0) {
+    .progress-bar {
+      background-color: $color;
+    }
+  }
+}

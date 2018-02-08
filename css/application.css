@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,500i,600,700");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -258,11 +259,11 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #343434;
-  background-color: #eee; }
+  background-color: #f6f9fc; }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
@@ -1251,7 +1252,7 @@ pre {
   .table tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #eee; }
+    background-color: #f6f9fc; }
 
 .table-sm th,
 .table-sm td {
@@ -3783,7 +3784,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -3862,7 +3863,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -11672,7 +11673,8 @@ legend {
 .progress {
   box-shadow: none;
   transition: width 0.6s ease;
-  height: 1.3rem; }
+  height: 1.3rem;
+  border-radius: 0.25rem; }
 
 .progress-bar {
   border-radius: 0.25rem;
@@ -11897,7 +11899,7 @@ pre {
   border-color: #ccc;
   border-radius: 0.25rem;
   color: #555555;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #fff;
   filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
@@ -11906,7 +11908,7 @@ pre {
   border-color: #ccc;
   border-radius: 0.25rem;
   color: #555555;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #fff;
   filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
@@ -21471,7 +21473,7 @@ html body .black.accentBorderTop {
  */
 .nvtooltip {
   padding: 5px 10px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
   text-align: center; }
   .nvtooltip p {
@@ -21482,11 +21484,11 @@ html body .black.accentBorderTop {
     border-bottom: 0; }
 
 svg text {
-  font: 300 0.875rem "Open Sans", sans-serif;
+  font: 300 0.875rem "Montserrat", sans-serif;
   fill: #555555; }
 
 svg .title {
-  font: 700 1rem "Open Sans", sans-serif; }
+  font: 700 1rem "Montserrat", sans-serif; }
 
 .nvd3.nv-noData {
   font-size: 1.25rem;
@@ -21781,7 +21783,7 @@ input.parsley-error {
 /**         MODAL WIZARD          **/
 /***********************************/
 .wizard-header h3 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #555555; }
 
@@ -22776,11 +22778,11 @@ a {
   top: 0;
   bottom: 0;
   width: 204px;
-  background-color: #242424;
-  color: #aaa; }
+  background-color: #363f4e;
+  color: #babdc2; }
   .sidebar .slimScrollBar {
     border-radius: 0 !important;
-    background-color: #aaa !important; }
+    background-color: #babdc2 !important; }
 
 .page-controls, .content-wrap, .loader-wrap {
   left: 204px;
@@ -22864,7 +22866,7 @@ a {
 .content {
   min-height: 100%;
   padding: 92px 40px 42px;
-  background-color: #eee; }
+  background-color: #f6f9fc; }
   @media (max-width: 767px) {
     .content {
       padding-left: 20px;
@@ -22899,12 +22901,9 @@ a {
   /*
   First sub-menu
    */ }
-  @media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
-    .sidebar-nav {
-      font-size: 16px; } }
   .sidebar-nav li a {
     display: block;
-    color: #aaa;
+    color: #babdc2;
     text-decoration: none; }
     .sidebar-nav li a .toggle {
       float: right;
@@ -22922,11 +22921,11 @@ a {
       border-radius: 0.2rem; }
   .sidebar-nav > li > a {
     position: relative;
-    border-top: 1px solid #2d2d2d;
+    border-top: 1px solid transparent;
     padding-left: 50px;
     line-height: 35px; }
     .sidebar-nav > li > a:hover {
-      background-color: #111; }
+      background-color: #465060; }
     @media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
       .sidebar-nav > li > a {
         line-height: 44px; } }
@@ -22944,7 +22943,7 @@ a {
           top: 8px; } }
       .sidebar-nav > li > a .icon .fa, .sidebar-nav > li > a .icon .glyphicon {
         font-size: 16px;
-        color: rgba(170, 170, 170, 0.7); }
+        color: rgba(186, 189, 194, 0.7); }
       .sidebar-nav > li > a .icon .glyphicon {
         left: -1px;
         top: 5px; }
@@ -22968,21 +22967,21 @@ a {
         .sidebar-nav > li > a .toggle {
           line-height: 44px; } }
   .sidebar-nav > .open > a {
-    background-color: #161616; }
+    background-color: #4a5566; }
   .sidebar-nav > li:last-child > a {
-    border-bottom: 1px solid #2d2d2d; }
+    border-bottom: 1px solid transparent; }
   .sidebar-nav > .active > a {
     color: #F2BE35;
-    background-color: #242424; }
+    background-color: #363f4e; }
     .sidebar-nav > .active > a .icon {
       border-radius: 50%;
       background-color: #F2BE35; }
       .sidebar-nav > .active > a .icon .fa, .sidebar-nav > .active > a .icon .glyphicon {
-        color: #242424; }
+        color: #363f4e; }
   .sidebar-nav > li ul {
     padding: 0;
     font-size: 13px;
-    background-color: #313131;
+    background-color: #344258;
     list-style: none; }
     @media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
       .sidebar-nav > li ul {
@@ -22992,7 +22991,7 @@ a {
       .sidebar-nav > li ul > li > a {
         padding: 5px 0 5px 40px; }
         .sidebar-nav > li ul > li > a:hover {
-          background-color: #1e1e1e; }
+          background-color: #515c6f; }
       .sidebar-nav > li ul > li.active > a {
         font-weight: normal;
         color: #fff; }
@@ -23016,7 +23015,7 @@ a {
   opacity: 1;
   transition: opacity 0.3s ease-in-out; }
   .sidebar-nav-title .action-link {
-    color: #aaa;
+    color: #babdc2;
     float: right;
     margin-right: 15px;
     margin-top: -1px; }
@@ -23137,9 +23136,9 @@ a {
       font-size: 16px;
       text-shadow: none;
       opacity: 1;
-      color: #aaa; }
+      color: #babdc2; }
   .sidebar-alerts .progress {
-    background-color: #3e3e3e; }
+    background-color: #4b576c; }
 
 .chat-sidebar {
   position: fixed;
@@ -23147,7 +23146,7 @@ a {
   bottom: 0;
   right: -254px;
   width: 254px;
-  background-color: #242424;
+  background-color: #363f4e;
   transition: right 0.3s ease-in-out; }
 
 /* body tag is given this class */
@@ -23166,12 +23165,12 @@ a {
   top: 0;
   padding: 10px;
   z-index: 3;
-  background-color: #242424; }
+  background-color: #363f4e; }
   .chat-sidebar-header .form-control {
     padding: 0.6rem 0.85rem; }
 
 .chat-sidebar-content {
-  color: #aaa; }
+  color: #babdc2; }
 
 .chat-sidebar-contacts {
   padding: 20px 0;
@@ -23191,7 +23190,7 @@ a {
   right: -100%;
   padding-bottom: 54px;
   /*footer height*/
-  background-color: #242424;
+  background-color: #363f4e;
   transition: right 0.2s ease-in-out; }
   .chat-sidebar-chat.open {
     right: 0; }
@@ -23291,7 +23290,7 @@ a {
       padding: 3px 5px; }
   .chat-sidebar-user-group .thumb .status,
   .chat-sidebar-user-group .thumb-sm .status {
-    border-color: #242424; }
+    border-color: #363f4e; }
   .chat-sidebar-user-group a.list-group-item:hover {
     color: #eeeeee;
     background-color: rgba(0, 0, 0, 0.15); }
@@ -23406,7 +23405,7 @@ a {
   top: 0;
   bottom: 0;
   text-align: center;
-  background-color: #eee;
+  background-color: #f6f9fc;
   opacity: 1;
   transition: transform 0.3s ease-in-out, left 0.3s ease-in-out, opacity 0.2s ease-out, background-color 0.2s ease-out; }
   .loader-wrap.hiding {
@@ -23825,7 +23824,7 @@ input[type=search], input.search {
     cursor: pointer;
     transition: background-color 0.2s ease-out; }
     .news-list li:hover {
-      background: #f6f6f6; }
+      background: white; }
     .news-list li:last-child {
       margin-bottom: -10px; }
   .news-list img,
@@ -25421,18 +25420,18 @@ a.bg-danger-light:focus, a.bg-danger-light:hover {
   background-color: #ffc9bc; }
 
 .bg-body {
-  background-color: #eee !important;
+  background-color: #f6f9fc !important;
   color: #555555 !important; }
 
 a.bg-body:focus, a.bg-body:hover {
-  background-color: #d5d5d5; }
+  background-color: #d0e0ef; }
 
 .bg-body-light {
-  background-color: #f6f6f6 !important;
+  background-color: white !important;
   color: #555555 !important; }
 
 a.bg-body-light:focus, a.bg-body-light:hover {
-  background-color: gainsboro; }
+  background-color: #e6e6e6; }
 
 .bg-gray {
   background-color: #555555 !important;
@@ -25491,11 +25490,11 @@ a.bg-white:focus, a.bg-white:hover {
   background-color: #e6e6e6; }
 
 .bg-sidebar {
-  background-color: #242424 !important;
+  background-color: #363f4e !important;
   color: #555555 !important; }
 
 a.bg-sidebar:focus, a.bg-sidebar:hover {
-  background-color: #0b0b0b; }
+  background-color: #212730; }
 
 .bg-body, .bg-body-light, .bg-gray, .bg-gray-transparent, .bg-transparent,
 .bg-primary, .bg-success, .bg-warning, .bg-danger, .bg-info {
@@ -25580,10 +25579,10 @@ a.text-gray-lighter:focus, a.text-gray-lighter:hover {
   color: #d5d5d5; }
 
 .text-bg-sidebar {
-  color: #242424 !important; }
+  color: #363f4e !important; }
 
 a.text-bg-sidebar:focus, a.text-bg-sidebar:hover {
-  color: #0b0b0b; }
+  color: #212730; }
 
 .text-light {
   opacity: .8; }
@@ -25741,54 +25740,6 @@ a.text-bg-sidebar:focus, a.text-bg-sidebar:hover {
     margin-left: 83.3333333333%; }
   .col-print-offset-11 {
     margin-left: 91.6666666667%; } }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Open Sans Light"), local("OpenSans-Light"), url(fonts/google/open-sans-light.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url(fonts/google/open-sans.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url(fonts/google/open-sans-semibold.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(fonts/google/open-sans-bold.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300;
-  src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url(fonts/google/open-sans-light-italic.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Open Sans Italic"), local("OpenSans-Italic"), url(fonts/google/open-sans-italic.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 600;
-  src: local("Open Sans Semibold Italic"), local("OpenSans-SemiboldItalic"), url(fonts/google/open-sans-semibold-italic.woff) format("woff"); }
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url(fonts/google/open-sans-bold-italic.woff) format("woff"); }
 
 @font-face {
   font-family: 'Glyphicons Halflings';

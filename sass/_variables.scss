@@ -50,11 +50,11 @@ $brand-danger-light:          #fff2ef !default;
 $addition-bg: #f8f8f8 !default;
 
 
-$sidebar-bg-color: #242424 !default;
-$sidebar-color: #aaa !default;
-$sidebar-item-border-color: #2d2d2d !default;
+$sidebar-bg-color: #363f4e !default;
+$sidebar-color: #babdc2 !default;
+$sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: #F2BE35 !default;
-$sidebar-item-hover-bg-color: #111 !default;
+$sidebar-item-hover-bg-color: #465060 !default;
 
 // Typography
 // -------------------------
@@ -137,13 +137,13 @@ $padding-small-horizontal:  10px !default;
 
 //== Scaffolding
 //
-$body-bg: #eee !default;
+$body-bg: #f6f9fc !default;
 $body-bg-light: lighten($body-bg, 3%);
 
 // Typography
 // -------------------------
 
-$font-family-sans-serif: 'Open Sans', sans-serif !default;
+$font-family-sans-serif: 'Montserrat', sans-serif !default;
 
 $headings-font-weight: 300 !default;
 

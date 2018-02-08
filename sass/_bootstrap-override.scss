@@ -798,6 +798,7 @@ legend {
   @include box-shadow(none);
   transition: width 0.6s ease;
   height: 1.3rem;
+  border-radius: $border-radius;
 }
 
 .progress-bar{
