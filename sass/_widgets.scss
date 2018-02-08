@@ -747,6 +747,20 @@
     width: 100%;
   }
 }
+
+/***********************/
+/*       Package       */
+/***********************/
+
+.package-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.25 * $line-height-computed;
+  margin-right: $line-height-computed;
+  float: left;
+  @include border-radius(5px);
+}
+
 /***********************************/
 /**           Time Line           **/
 /***********************************/

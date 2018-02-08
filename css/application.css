@@ -4617,7 +4617,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -24191,6 +24191,17 @@ input[type=search], input.search {
 .activities .event {
   margin-top: 1rem;
   width: 100%; }
+
+/***********************/
+/*       Package       */
+/***********************/
+.package-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 0.25rem;
+  margin-right: 1rem;
+  float: left;
+  border-radius: 5px; }
 
 /***********************************/
 /**           Time Line           **/
