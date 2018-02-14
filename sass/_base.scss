@@ -78,6 +78,7 @@
 .page-controls{
   position: absolute;
   z-index: 1;
+  box-shadow: $widget-shadow;
 
   @include media-breakpoint-down(sm) {
     font-size: 16px;
@@ -258,6 +259,7 @@
       }
 
       .glyphicon-th{
+        top: 2px;
         left: 0;
       }
 
@@ -325,7 +327,7 @@
   > li ul{
     padding: 0;
     font-size: 13px;
-    background-color: saturate(darken($sidebar-item-hover-bg-color, 5%), 10%);
+    background-color: lighten($sidebar-bg-color, 5%);
     list-style: none;
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
@@ -335,6 +337,8 @@
     > li{
       > a{
         padding: 5px 0 5px 40px;
+        font-size: $font-size-mini;
+
         &:hover{
           background-color: lighten($sidebar-item-hover-bg-color, 5%);
         }
@@ -973,6 +977,8 @@
   padding: $widget-padding-vertical $widget-padding-horizontal;
   background: $widget-bg-color;
   border-radius: $border-radius-sm;
+  box-shadow: $widget-shadow;
+
   > header{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
     padding: $widget-padding-vertical $widget-padding-horizontal;
@@ -1022,6 +1028,10 @@
 
   .widget-table-overflow{
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+  }
+
+  &.bg-transparent {
+    box-shadow: none;
   }
 }
 

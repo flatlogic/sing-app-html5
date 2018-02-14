@@ -438,6 +438,8 @@
     font-size: $font-size-mini;
     cursor: pointer;
     border-radius: $border-radius;
+    border: 1px solid #ccc;
+    box-shadow: $widget-shadow;
   }
 }
 
@@ -584,6 +586,10 @@
   > div{
     max-width: 100%;
   }
+
+  .figure {
+    background-color: $white;
+  }
 }
 
 /***********************************/
@@ -608,6 +614,7 @@
 .search-result-item{
   padding: 20px;
   background-color: $white;
+  box-shadow: $widget-shadow;
   border-radius: $border-radius;
   @include clearfix();
 
@@ -745,6 +752,7 @@
   .activities &{
     margin-top: $line-height-computed;
     width: 100%;
+    box-shadow: $widget-shadow;
   }
 }
 
@@ -805,6 +813,7 @@
   border-radius: $border-radius;
   padding: 20px 20px 0;
   position: relative;
+  box-shadow: $widget-shadow;
 
   .timeline & {
     float: right;
@@ -832,7 +841,7 @@
     padding: 10px 20px;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
-    background-color: #f3f3f3;
+    background-color: #fafafa;
 
     @include clearfix();
 
@@ -899,6 +908,7 @@
     line-height: 37px;
     margin-left: -25px;
     background-color: $white;
+    box-shadow: $widget-shadow;
     border: 7px solid $white;
     border-radius: 50%;
     text-align: center;
@@ -1091,7 +1101,7 @@
   .abc-checkbox label:before {
     left: -13px;
   }
-  
+
   tbody > tr > td:first-child {
     width: 45px;
   }
