@@ -22940,6 +22940,7 @@ a {
   height: 100%; }
 
 .content {
+  position: relative;
   min-height: 100%;
   padding: 92px 40px 42px;
   background-color: #f5f5f5; }
@@ -22947,6 +22948,10 @@ a {
     .content {
       padding-left: 20px;
       padding-right: 20px; } }
+  .content .content-footer {
+    position: absolute;
+    bottom: 10px;
+    color: #999999; }
 
 .logo {
   margin: 11px 0 19px;
