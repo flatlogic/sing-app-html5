@@ -1312,6 +1312,18 @@ input[type=search], input.search {
     background-position: center;
     position: relative;
 
+    @include media-breakpoint-down(sm) {
+      height: 200px;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 250px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      height: 150px;
+    }
+
     .photo-label {
       position: absolute;
       left: 0;
@@ -1372,6 +1384,12 @@ input[type=search], input.search {
   &__price-wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  .rating {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 }
 
@@ -1449,12 +1467,21 @@ input[type=search], input.search {
 }
 
 .product-main {
-  margin-top: 45px;
   display: flex;
+  margin: 45px 0 0;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 -20px;
+    flex-direction: column;
+  }
 
   &__photo {
     background-position: center;
     background-size: cover;
+
+    @include media-breakpoint-down(sm) {
+      height: 300px;
+    }
   }
 
   &__info {
@@ -1637,6 +1664,10 @@ input[type=search], input.search {
         outline: none;
       }
     }
+
+    .slick-slide {
+      padding: 0 5px;
+    }
   }
 
   &__title {
@@ -1644,23 +1675,39 @@ input[type=search], input.search {
   text-align: center;
   font-weight: $font-weight-semi-bold;
   margin: 75px 0 35px;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+
+.product-gallery {
+  @include media-breakpoint-down(sm) {
+    background: white;
+
+    margin: 0 -20px -42px;
+    padding-bottom: 42px;
   }
 }
 
 .product-description {
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
 
-  & > div {
-    padding: 30px 20px;
-    font-weight: $font-weight-normal;
-    display: flex;
-    flex-direction: column;
+  &__desktop {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
-    &:nth-child(n + 4) {
-      padding-top: 0;
+    & > div {
+      padding: 30px 20px;
+      font-weight: $font-weight-normal;
+      display: flex;
+      flex-direction: column;
+
+      &:nth-child(n + 4) {
+        padding-top: 0;
+      }
     }
   }
 
@@ -1743,6 +1790,51 @@ input[type=search], input.search {
 
         &:hover {
           background-color: lighten(#1dcaff, 10%);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__mobile {
+      margin: 0 -20px;
+      display: block;
+      font-weight: normal;
+      padding: 0;
+    }
+
+    .card {
+      margin-bottom: 0;
+
+      .card-header {
+        border-bottom: none;
+        background: $white;
+      }
+
+      .card-body {
+        padding: 0 1rem 1rem;
+      }
+    }
+
+    .card + .card {
+      border-top: 1px solid $card-border-color;
+    }
+
+    .accordion-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: $gray-light;
+
+      .fa {
+        transition: .3s;
+
+      }
+
+      &:not(.collapsed) {
+        .fa {
+          transform: rotate(180deg);
         }
       }
     }

@@ -3,9 +3,11 @@ $(function () {
     var $carousel = $('.product-page__carousel');
     var $prev = $('.carousel-btn--left');
     var $next = $('.carousel-btn--right');
+    var slidesToShow = Sing.isScreen('xs') || Sing.isScreen('sm') ? 2 : 4;
+
 
     $carousel.slick({
-      slidesToShow: 4,
+      slidesToShow,
       prevArrow: $prev,
       nextArrow: $next,
     });
