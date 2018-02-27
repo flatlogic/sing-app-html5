@@ -1281,6 +1281,41 @@ input[type=search], input.search {
 .product-grid {
   &__filters {
     display: flex;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__filter-mobile {
+    display: none;
+    margin: auto -15px 25px;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+    }
+
+    .btn {
+      color: $text-color;
+      width: 50%;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 !important;
+
+      i {
+        color: #ccc;
+        margin-left: 10px;
+      }
+
+      &:first-child {
+        border-right: 1px solid #ccc;
+      }
+    }
   }
 
   &__filter-element {
@@ -1302,6 +1337,94 @@ input[type=search], input.search {
 
   &__element {
     margin-bottom: 60px;
+  }
+
+  &__filter-modal {
+    display: none;
+    min-height: calc(100vh - 50px);
+    background: white;
+    margin: -40px -20px;
+
+    &-title {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $gray-lighter;
+
+      button {
+        left: 35px;
+        padding: 0;
+        border: none;
+        position: absolute;
+        background: transparent;
+
+        &:focus {
+          outline: none;
+        }
+
+        img {
+          height: 15px;
+        }
+
+        & :global .back {
+          height: 17px;
+        }
+      }
+
+      h5 {
+        margin: 0;
+        font-weight: 400;
+      }
+    }
+
+  }
+
+  &__filter-modal-body {
+    display: none;
+    min-height: calc(100vh - 100px);
+    background-color: white;
+    padding-left: 35px;
+
+    li {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      border-bottom: 2px solid #f8f8f8;
+      font-weight: 400;
+
+      .filter-check {
+        margin: 0 20px 0 -10px;
+        transition: 0.3s;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #f8f8f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          transition: 0.3s;
+          width: 15px;
+          opacity: 0;
+        }
+      }
+
+      &.active {
+        span {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.option {
+        border-bottom: none;
+      }
+    }
   }
 }
 
@@ -1386,10 +1509,12 @@ input[type=search], input.search {
     justify-content: space-between;
   }
 
-  .rating {
-    @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(sm) {
+    .rating {
       display: none;
     }
+
+    padding: 0 5px;
   }
 }
 
@@ -1663,10 +1788,6 @@ input[type=search], input.search {
       &:focus {
         outline: none;
       }
-    }
-
-    .slick-slide {
-      padding: 0 5px;
     }
   }
 
