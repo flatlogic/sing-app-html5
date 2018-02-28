@@ -54,7 +54,7 @@
 
 .select2-container .select2-choice {
   height: $input-height;
-  line-height: $line-height;
+  line-height: $spacer;
 }
 
 /**
@@ -74,14 +74,14 @@
 .select2-container.input-sm .select2-choice,
 .input-group-sm .select2-container .select2-choice {
   height: $input-height-sm;
-  line-height: $line-height-sm;
+  line-height: $spacer * 0.75;
   border-radius: $border-radius-sm;
 }
 
 .select2-container.input-lg .select2-choice,
 .input-group-lg .select2-container .select2-choice {
   height: $input-height-lg;
-  line-height: $line-height-lg;
+  line-height: $spacer * 1.5;
   border-radius: $border-radius-lg;
 }
 
@@ -357,7 +357,7 @@
 .select2-container-multi .select2-choices .select2-search-choice {
   color: $input-color;
   background: $btn-default-bg;
-  border-color: $btn-secondary-border;
+  border-color: theme-color('secondary');
   @include reset-filter;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -365,8 +365,8 @@
 
 .select2-container-multi .select2-choices .select2-search-choice-focus {
   background: darken($btn-default-bg, 8%);
-  border-color: darken($btn-secondary-border, 12%);
-  color: $btn-secondary-color;
+  border-color: darken(theme-color('secondary'), 12%);
+  color: theme-color('secondary');
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -416,7 +416,7 @@
   .select2-choice,
   .select2-choices {
     cursor: not-allowed;
-    background-color: $input-bg-disabled;
+    background-color: $input-disabled-bg;
     border-color: $input-border-color;
     .select2-arrow,
     div /* 1 */ {

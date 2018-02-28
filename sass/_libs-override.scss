@@ -34,8 +34,8 @@
   right: auto;
   width: 18px;
   height: 18px;
-  border-top-color: $brand-primary;
-  border-left-color: $brand-primary;
+  border-top-color: theme-color('primary');
+  border-left-color: theme-color('primary');
 }
 
 
@@ -97,7 +97,7 @@
     padding: 3px 20px;
     clear: both;
     font-weight: normal;
-    line-height: $line-height;
+    line-height: $spacer;
     color: $dropdown-link-color;
     text-align: inherit; // For `<button>`s
     white-space: nowrap; // prevent links from randomly breaking onto new lines
@@ -159,7 +159,7 @@
     padding: 3px 20px;
     clear: both;
     font-weight: normal;
-    line-height: $line-height;
+    line-height: $spacer;
     color: $dropdown-link-color;
     text-align: inherit; // For `<button>`s
     white-space: nowrap; // prevent links from randomly breaking onto new lines
