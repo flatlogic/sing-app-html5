@@ -92,6 +92,7 @@
 
       > .fa-circle{
         font-size: 10px;
+        vertical-align: 2px;
       }
     }
 
@@ -834,7 +835,7 @@
 
 .chat-notification{
   position: absolute;
-  right: 12px;
+  right: 8px;
   top: 35px;
   z-index: 20;
   margin-top: 3px;

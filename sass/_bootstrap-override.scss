@@ -271,7 +271,6 @@ legend {
 .table td > .abc-checkbox,
 .table th > .abc-checkbox{
   position: relative;
-  top: -8px;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -581,7 +580,7 @@ legend {
 
     + .navbar-brand{
       height: 60px;
-      line-height: 30px;
+      line-height: 35px;
     }
   }
 
@@ -1003,15 +1002,25 @@ legend {
     flex-wrap: unset;
   }
 
-  .navbar-header.mobile-hidden {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    justify-content: space-between;
+  .navbar-header {
+    &.mobile-hidden {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: space-between;
 
-    .dropdown-toggle-notifications {
-      display: inline;
-      line-height: $navbar-height;
+      .dropdown-toggle-notifications {
+        display: inline;
+        line-height: $navbar-height;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+
+      &.mobile-hidden {
+        display: none;
+      }
     }
   }
 
