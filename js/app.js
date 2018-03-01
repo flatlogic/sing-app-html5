@@ -617,9 +617,7 @@ function initAppPlugins(){
         $.fn.animateProgressBar = function () {
             return this.each(function () {
                 var $bar = $(this);
-                setTimeout(function(){
-                    $bar.css('width', $bar.data('width'));
-                }, 0)
+                $bar.css('width', $bar.data('width'));
             })
         };
 

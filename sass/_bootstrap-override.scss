@@ -129,11 +129,6 @@ small, .small {
 }
 
 
-// Contextual variations
-.panel-default {
-  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
-}
-
 //
 // Forms
 // --------------------------------------------------
@@ -535,19 +530,30 @@ legend {
   }
 }
 
-.navbar-form{
-  .form-control{
-    font-size: $navbar-font-size;
-    padding: 0.6rem 0.85rem;
-
-  }
-
-  .input-group{
+.navbar-form {
+  .input-group {
     width: 245px;
-  }
+    display: flex;
 
-  .input-group-addon{
-    color: $navbar-dashboard-link-color;
+    .form-control {
+      order: 2;
+      font-size: $font-size-base;
+      padding: 0.6rem 0.85rem 0.6rem 0;
+      border-top-right-radius: $border-radius !important;
+      border-bottom-right-radius: $border-radius !important;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    .input-group-text {
+      order: 1;
+      color: $navbar-dashboard-link-color;
+      padding: 0.6rem 0.85rem;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+    }
   }
 }
 
@@ -789,7 +795,7 @@ legend {
 // --------------------------------------------------
 
 .js-progress-animate {
-  transition: width 0.6s ease;
+  transition: all 0.6s ease !important;
 }
 
 .progress{
@@ -860,6 +866,14 @@ legend {
 }
 
 .list-group-item{
+  &,
+  &:hover {
+    color: $text-color;
+  }
+
+  &:hover {
+    background: $gray-100;
+  }
 
   .list-group-lg & {
     padding: 15px 15px;
@@ -1132,7 +1146,6 @@ legend {
 @mixin bg-variant($parent, $color) {
   #{$parent} {
     background-color: $color !important;
-    color: $gray-700 !important;
   }
   a#{$parent} {
     @include hover-focus {
@@ -1173,65 +1186,9 @@ code {
   text-shadow: none;
   font-weight: $font-weight-bold;
   font-size: 11px;
+  color: white;
 }
 
 .badge-pill {
   padding: 2px 6px;
-}
-
-.badge-default {
-  @include badge-variant(theme-color('default'));
-  color: $text-color;
-}
-
-.badge-primary {
-  @include badge-variant(theme-color('primary'));
-}
-
-.badge-success {
-  @include badge-variant(theme-color('success'));
-
-  color: $white;
-
-  &[href] {
-    @include hover-focus {
-      color: $white;
-    }
-  }
-}
-
-.badge-info {
-  @include badge-variant(theme-color('info'));
-
-  color: $white;
-
-  &[href] {
-    @include hover-focus {
-      color: $white;
-    }
-  }
-}
-
-.badge-warning {
-  @include badge-variant(theme-color('warning'));
-
-  color: $white;
-
-  &[href] {
-    @include hover-focus {
-      color: $white;
-    }
-  }
-}
-
-.badge-danger {
-  @include badge-variant(theme-color('danger'));
-}
-
-.badge-important {
-  @include badge-variant(theme-color('danger'));
-}
-
-.badge-inverse {
-  @include badge-variant($gray-400);
 }

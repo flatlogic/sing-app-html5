@@ -73,7 +73,7 @@
                         <i class="fa fa-envelope"></i>
                     </span>
                     Email
-                    <span class="badge badge-danger">
+                    <span class="badge bg-danger">
                         9
                     </span>
                 </a>
@@ -261,19 +261,19 @@
         <h5 class="sidebar-nav-title">Projects</h5>
         <!-- A place for sidebar notifications & alerts -->
         <div class="sidebar-alerts">
-            <div class="alert fade in">
+            <div class="alert">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Sales Report</span> <br>
-                <div class="bg-gray-transparent progress-bar">
-                    <progress class="progress progress-xs progress-bar-gray-light mt-xs mb-0" value="100" max="100" style="width: 16%"></progress>
+                <div class="progress progress-xs mt-xs mb-0">
+                    <div class="progress-bar progress-bar-gray-light" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <small>Calculating x-axis bias... 65%</small>
             </div>
-            <div class="alert fade in">
+            <div class="alert">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-                <div class="bg-gray-transparent progress-bar">
-                    <progress class="progress progress-xs progress-danger mt-xs mb-0" value="100" max="100" style="width: 23%"></progress>
+                <div class="progress progress-xs mt-xs mb-0">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <small>Provide required notes</small>
             </div>
@@ -323,13 +323,15 @@
         <!-- this part is hidden for xs screens -->
         <div class="navbar-header mobile-hidden">
             <!-- search form! link it to your search server -->
-            <form class="navbar-form float-left" role="search">
+            <form class="navbar-form" role="search">
                 <div class="form-group">
                     <div class="input-group input-group-no-border">
-                    <span class="input-group-addon">
-                        <i class="fa fa-search"></i>
-                    </span>
                         <input class="form-control" type="text" placeholder="Search Dashboard">
+                        <span class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </span>
                     </div>
                 </div>
             </form>
@@ -495,7 +497,7 @@
                         <li><a class="dropdown-item" href="profile.html"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
                         <li class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="calendar.html">Calendar</a></li>
-                        <li><a class="dropdown-item" href="inbox.html">Inbox &nbsp;&nbsp;<span class="badge badge-pill badge-danger animated bounceIn">9</span></a></li>
+                        <li><a class="dropdown-item" href="inbox.html">Inbox &nbsp;&nbsp;<span class="badge badge-pill bg-danger animated bounceIn">9</span></a></li>
                         <li class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i> &nbsp; Log Out</a></li>
                     </ul>
@@ -780,7 +782,7 @@
             <div class="col-lg-7 col-xl-offset-1">
                 <section class="widget">
                     <header>
-                        <h5>Draggable Grid &nbsp;<span class="label label-danger fw-normal">since 2.1</span></h5>
+                        <h5>Draggable Grid &nbsp;<span class="badge bg-danger fw-normal">since 2.1</span></h5>
                     </header>
                     <div class="widget-body">
                         <p>
@@ -826,7 +828,7 @@
                          data-widgster-load="demo/ajax/widgets/shares.php">
                     <header>
                         <h6>
-                            <span class="label label-primary"><i class="fa fa-facebook"></i></span> &nbsp;
+                            <span class=" badge bg-primary"><i class="fa fa-facebook"></i></span> &nbsp;
                             Latest <span class="fw-semi-bold">Shares</span>
                         </h6>
                         <div class="widget-controls">
@@ -887,7 +889,7 @@
                             <ul class="dropdown-menu dropdown-menu-right">
                                 <li>
                                     <a class="dropdown-item" data-widgster="load" title="Reload" href="#">Reload
-                                        &nbsp;&nbsp;<span class="label label-pill label-success animated bounceIn"><strong>9</strong></span>
+                                        &nbsp;&nbsp;<span class="badge badge-pill bg-success animated bounceIn"><strong>9</strong></span>
                                     </a>
                                 </li>
                                 <li>
@@ -950,7 +952,7 @@ data-widgster-autoload="true"</code></pre>
                 <section class="widget" id="news-widget" data-widgster-load="demo/ajax/widgets/news.php">
                     <header>
                         <h6>
-                            News <span class="label label-pill label-success">17</span>
+                            News <span class="badge badge-pill bg-success">17</span>
                         </h6>
                         <span class="text-muted">spinning refresh button & close prompt</span>
                         <div class="widget-controls">

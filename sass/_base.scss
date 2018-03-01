@@ -46,7 +46,7 @@
 .page-controls {
   .dropdown-toggle-notifications {
     .rounded-circle {
-      margin-top: -1px;
+      margin-top: 6px;
     }
 
     .circle {
@@ -81,7 +81,7 @@
   box-shadow: $widget-shadow;
 
   @include media-breakpoint-down(sm) {
-    font-size: 16px;
+    font-size: $font-size-lg;
 
     .navbar-brand{
       position: absolute;
@@ -171,7 +171,7 @@
 }
 
 .logo{
-  margin: 11px 0 19px;
+  margin: 0.8rem 0 1.6rem;
   height: $navbar-height;
   width: 100%;
   line-height: $navbar-height;
@@ -218,13 +218,17 @@
       transform: rotate(90deg);
     }
 
-    .label{
+    .badge{
       float: right;
       line-height: 8px;
-      margin-top: 11px;
+      margin-top: 7px;
       margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       padding: 7px;
       border-radius: $border-radius-sm;
+
+      @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
+        margin-top: 11px;
+      }
     }
   }
 

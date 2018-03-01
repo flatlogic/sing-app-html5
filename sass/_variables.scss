@@ -8,16 +8,11 @@ $vendor-folder: '../vendor' !default;
 
 $glyphicons-halflings-include-bonus: false !default;
 $glyphicons-halflings-class-prefix: glyphicon !default;
+$glyphicons-halflings-font-base-size: 14px !default;
 
 // Bootstrap options
 
-$enable-flex:               false !default;
-$enable-rounded:            true !default;
 $enable-shadows:            true !default;
-$enable-gradients:          false !default;
-$enable-transitions:        true !default;
-$enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
 
 // Color system
 //
@@ -75,11 +70,13 @@ $sidebar-item-hover-bg-color: #111 !default;
 $text-color:            $gray-700 !default;
 //$text-color: #57534A; //a bit brown?
 
-$font-size-root: 14px;
-
+$font-size-initial:       14px; // reset default browser value from 16px to 13px
 $font-size-base:          1rem !default;
-$font-size-larger:        15px;
-$font-size-mini:          13px;
+$font-size-lg:            1.25rem !default;
+$font-size-sm:            0.875rem !default;
+$font-size-larger:        1.1rem;
+$font-size-mini:          0.9rem;
+$font-size-index:         0.7rem;
 
 $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;

@@ -73,7 +73,7 @@
                         <i class="fa fa-envelope"></i>
                     </span>
                     Email
-                    <span class="badge badge-danger">
+                    <span class="badge bg-danger">
                         9
                     </span>
                 </a>
@@ -261,19 +261,19 @@
         <h5 class="sidebar-nav-title">Projects</h5>
         <!-- A place for sidebar notifications & alerts -->
         <div class="sidebar-alerts">
-            <div class="alert fade in">
+            <div class="alert">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Sales Report</span> <br>
-                <div class="bg-gray-transparent progress-bar">
-                    <progress class="progress progress-xs progress-bar-gray-light mt-xs mb-0" value="100" max="100" style="width: 16%"></progress>
+                <div class="progress progress-xs mt-xs mb-0">
+                    <div class="progress-bar progress-bar-gray-light" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <small>Calculating x-axis bias... 65%</small>
             </div>
-            <div class="alert fade in">
+            <div class="alert">
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
-                <div class="bg-gray-transparent progress-bar">
-                    <progress class="progress progress-xs progress-danger mt-xs mb-0" value="100" max="100" style="width: 23%"></progress>
+                <div class="progress progress-xs mt-xs mb-0">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <small>Provide required notes</small>
             </div>
@@ -323,13 +323,15 @@
         <!-- this part is hidden for xs screens -->
         <div class="navbar-header mobile-hidden">
             <!-- search form! link it to your search server -->
-            <form class="navbar-form float-left" role="search">
+            <form class="navbar-form" role="search">
                 <div class="form-group">
                     <div class="input-group input-group-no-border">
-                    <span class="input-group-addon">
-                        <i class="fa fa-search"></i>
-                    </span>
                         <input class="form-control" type="text" placeholder="Search Dashboard">
+                        <span class="input-group-append">
+                            <span class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </span>
                     </div>
                 </div>
             </form>
@@ -495,7 +497,7 @@
                         <li><a class="dropdown-item" href="profile.html"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
                         <li class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="calendar.html">Calendar</a></li>
-                        <li><a class="dropdown-item" href="inbox.html">Inbox &nbsp;&nbsp;<span class="badge badge-pill badge-danger animated bounceIn">9</span></a></li>
+                        <li><a class="dropdown-item" href="inbox.html">Inbox &nbsp;&nbsp;<span class="badge badge-pill bg-danger animated bounceIn">9</span></a></li>
                         <li class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i> &nbsp; Log Out</a></li>
                     </ul>
@@ -806,8 +808,8 @@
                             <div class="col-md-9">
                                 <h6 class="name mt-3">Foreign Visits</h6>
                                 <p class="description deemphasize">Some Cool Text</p>
-                                <div class="bg-white progress-bar">
-                                    <progress class="progress progress-primary progress-sm js-progress-animate" value="100" max="100" style="width: 0%" data-width="60%"></progress>
+                                <div class="bg-white progress progress-sm">
+                                  <div class="progress-bar bg-primary js-progress-animate" style="width: 0;" data-width="60%"></div>
                                 </div>
                             </div>
                             <div class="col-md-3 text-center">
@@ -820,8 +822,8 @@
                             <div class="col-md-9">
                                 <h6 class="name mt-3">Local Visits</h6>
                                 <p class="description deemphasize">P. to C. Conversion</p>
-                                <div class="bg-white progress-bar">
-                                    <progress class="progress progress-sm progress-danger js-progress-animate" value="100" max="100" style="width: 0%" data-width="39%"></progress>
+                                <div class="bg-white progress progress-sm">
+                                  <div class="progress-bar bg-danger js-progress-animate" style="width: 0;" data-width="39%"></div>
                                 </div>
                             </div>
                             <div class="col-md-3 text-center">
@@ -834,8 +836,8 @@
                             <div class="col-md-9">
                                 <h6 class="name mt-3">Sound Frequencies</h6>
                                 <p class="description deemphasize">Average Bitrate</p>
-                                <div class="bg-white progress-bar">
-                                    <progress class="progress progress-sm progress-success js-progress-animate" value="100" max="100" style="width: 0%" data-width="80%"></progress>
+                                <div class="bg-white progress progress-sm">
+                                  <div class="progress-bar bg-success js-progress-animate" style="width: 0;" data-width="80%"></div>
                                 </div>
                             </div>
                             <div class="col-md-3 text-center">
@@ -890,8 +892,8 @@
                                 <p class="value">3.38%</p>
                             </div>
                         </div>
-                        <div class="bg-gray-lighter progress-bar">
-                            <progress class="progress progress-xs progress-success" value="100" max="100" style="width: 60%"></progress>
+                        <div class="bg-gray-lighter progress progress-xs">
+                          <div class="progress-bar bg-success" style="width: 60%"></div>
                         </div>
                         <p>
                             <small><span class="circle bg-warning"><i class="glyphicon glyphicon-chevron-up"></i></span></small>
@@ -926,8 +928,8 @@
                                 <p class="value">9 695</p>
                             </div>
                         </div>
-                        <div class="bg-gray-lighter progress-bar">
-                            <progress class="progress progress-xs progress-danger" value="100" max="100" style="width: 60%"></progress>
+                        <div class="bg-gray-lighter progress progress-xs">
+                          <div class="progress-bar bg-danger" style="width: 60%"></div>
                         </div>
                         <p>
                             <small><span class="circle bg-warning"><i class="fa fa-chevron-down"></i></span></small>
@@ -963,8 +965,8 @@
                                 <p class="value">7,211M</p>
                             </div>
                         </div>
-                        <div class="bg-gray-lighter progress-bar">
-                            <progress class="progress progress-primary progress-xs" value="100" max="100" style="width: 60%"></progress>
+                        <div class="bg-gray-lighter progress progress-xs">
+                          <div class="progress-bar progress-xs bg-primary" style="width: 60%"></div>
                         </div>
                         <p>
                             <small><span class="circle bg-warning"><i class="fa fa-plus"></i></span></small>
@@ -979,7 +981,7 @@
             <div class="col-lg-4">
                 <section class="widget">
                     <header>
-                        <h6><span class="badge badge-danger">New</span> Messages</h6>
+                        <h6><span class="badge bg-danger">New</span> Messages</h6>
                         <div class="widget-controls">
                             <a href="#"><i class="fa fa-refresh"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
@@ -1099,11 +1101,11 @@
                         <div id="events-calendar" class="bg-primary-light"></div>
                         <div class="list-group">
                             <a href="#" class="list-group-item text-ellipsis">
-                                <span class="label-pill label-warning float-right">6:45</span>
+                                <span class="badge badge-pill bg-warning float-right">6:45</span>
                                 Weed out the flower bed
                             </a>
                             <a href="#" class="list-group-item text-ellipsis">
-                                <span class="label-pill label-success float-right">9:41</span>
+                                <span class="badge badge-pill bg-success float-right">9:41</span>
                                 Stop world water pollution
                             </a>
                         </div>

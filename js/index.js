@@ -249,8 +249,6 @@ $(function(){
                 easing: 'easeInQuad'
             }, 1000);
         });
-
-        $('.js-progress-animate').animateProgressBar();
     }
 
     function pjaxPageLoad(){
