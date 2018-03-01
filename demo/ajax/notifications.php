@@ -14,7 +14,7 @@
 </div>
 <div class="list-group-item bg-attention">
     <span class="thumb-sm float-left mr clearfix">
-        <img class="img-circle" src="demo/img/people/a6.jpg" alt="...">
+        <img class="rounded-circle" src="demo/img/people/a6.jpg" alt="...">
     </span>
     <p class="no-margin overflow-hidden">
         <a href="#">Jeniffer Willington</a> has just endorsed you with 50 points!
@@ -25,7 +25,7 @@
 </div>
 <div class="list-group-item">
     <span class="thumb-sm float-left mr clearfix">
-        <img class="img-circle" src="demo/img/people/a3.jpg" alt="...">
+        <img class="rounded-circle" src="demo/img/people/a3.jpg" alt="...">
     </span>
     <p class="no-margin overflow-hidden">
         1 new user just signed up! Check out
@@ -57,7 +57,7 @@
 </a>
 <div class="list-group-item">
     <span class="thumb-sm float-left mr clearfix">
-        <img class="img-circle" src="demo/img/people/a5.jpg" alt="...">
+        <img class="rounded-circle" src="demo/img/people/a5.jpg" alt="...">
     </span>
     <p class="no-margin overflow-hidden">
         User <a href="#">Jeff</a> registered

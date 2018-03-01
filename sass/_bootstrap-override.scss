@@ -350,6 +350,11 @@ legend {
 
 .navbar-nav .dropdown-menu {
   position: absolute;
+
+  &.dropdown-menu-right {
+    right: 0;
+    left: auto;
+  }
 }
 
 .caret {
@@ -388,7 +393,7 @@ legend {
       border: none;
       color: $text-muted;
 
-      .label {
+      .badge {
         margin-bottom: -2px;
       }
 
@@ -718,6 +723,8 @@ legend {
   .glyphicon {
     top: 3px;
   }
+
+  color: white;
 }
 
 .btn, .btn-inverse, .btn-gray {
@@ -767,18 +774,6 @@ legend {
     outline: none !important;
   }
 }
-
-
-//
-// Labels
-// --------------------------------------------------
-.label{
-  font-size: 11px;
-  font-weight: $font-weight-semi-bold;
-  padding: 6px;
-
-}
-
 
 //
 // Button groups
@@ -1147,17 +1142,6 @@ legend {
 }
 
 //
-// Labels
-// -----------------
-
-.label-pill {
-  color: $white;
-  font-weight: bold;
-  padding: .25em .6em;
-  font-size: 12px;
-}
-
-//
 // Code
 // -----------------
 
@@ -1177,4 +1161,77 @@ pre {
 
 code {
   background: theme-color('danger-light');
+}
+
+//
+// Badges
+// --------------------------------------------------
+.badge {
+  display: inline-block;
+  padding: 2px 4px;
+  line-height: 14px; // ensure proper line-height if floated
+  text-shadow: none;
+  font-weight: $font-weight-bold;
+  font-size: 11px;
+}
+
+.badge-pill {
+  padding: 2px 6px;
+}
+
+.badge-default {
+  @include badge-variant(theme-color('default'));
+  color: $text-color;
+}
+
+.badge-primary {
+  @include badge-variant(theme-color('primary'));
+}
+
+.badge-success {
+  @include badge-variant(theme-color('success'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
+}
+
+.badge-info {
+  @include badge-variant(theme-color('info'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
+}
+
+.badge-warning {
+  @include badge-variant(theme-color('warning'));
+
+  color: $white;
+
+  &[href] {
+    @include hover-focus {
+      color: $white;
+    }
+  }
+}
+
+.badge-danger {
+  @include badge-variant(theme-color('danger'));
+}
+
+.badge-important {
+  @include badge-variant(theme-color('danger'));
+}
+
+.badge-inverse {
+  @include badge-variant($gray-400);
 }

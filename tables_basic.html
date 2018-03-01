@@ -335,7 +335,15 @@
             </form>
             <ul class="nav navbar-nav float-right">
                 <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle dropdown-toggle-notifications nav-link" id="notifications-dropdown-toggle" data-toggle="dropdown">
+                    <a
+                            href="#"
+                            role="button"
+                            class="dropdown-toggle dropdown-toggle-notifications nav-link"
+                            id="notifications-dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                    >
                         <span class="thumb-sm avatar float-left">
                             <img class="rounded-circle" src="demo/img/people/a5.jpg" alt="...">
                         </span>
@@ -344,19 +352,20 @@
                         <span class="circle bg-warning fw-bold">
                             13
                         </span>
-                        <b class="caret"></b></a>
-                    <!-- ready to use notifications dropdown.  inspired by smartadmin template.
-                         consists of three components:
-                         notifications, messages, progress. leave or add what's important for you.
-                         uses Sing's ajax-load plugin for async content loading. See #load-notifications-btn -->
-                    <div class="dropdown-menu dropdown-menu-right animated fadeInUp" id="notifications-dropdown-menu">
+                        <b class="caret"></b>
+                    </a>
+                    <div
+                            class="dropdown-menu dropdown-menu-right animated fadeInUp py-0"
+                            aria-labelledby="notifications-dropdown-toggle"
+                            id="notifications-dropdown-menu"
+                    >
                         <section class="card notifications">
                             <header class="card-header">
-                                <div class="text-xs-center mb-sm">
+                                <div class="text-center mb-sm">
                                     <strong>You have 13 notifications</strong>
                                 </div>
-                                <div class="btn-group btn-group-sm btn-group-justified" id="notifications-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
+                                <div class="btn-group btn-group-sm btn-group-toggle" id="notifications-toggle" data-toggle="buttons">
+                                    <label class="btn btn-default active">
                                         <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
                                              only requirement for async reloading -->
                                         <input type="radio" checked
@@ -364,13 +373,13 @@
                                                data-ajax-load="demo/ajax/notifications.html"
                                                data-ajax-target="#notifications-list"> Notifications
                                     </label>
-                                    <label class="btn btn-secondary">
+                                    <label class="btn btn-default">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/messages.html"
                                                data-ajax-target="#notifications-list"> Messages
                                     </label>
-                                    <label class="btn btn-secondary">
+                                    <label class="btn btn-default">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/progress.html"
@@ -419,8 +428,8 @@
                                     <p class="no-margin overflow-hidden">
                                         User <a href="#">Jeff</a> registered
                                         &nbsp;&nbsp;
-                                        <a class="badge badge-success">Allow</a>
-                                        <a class="badge badge-danger">Deny</a>
+                                        <button class="btn btn-xs btn-success">Allow</button>
+                                        <button class="btn btn-xs btn-danger">Deny</button>
                                         <time class="help-block no-margin">
                                             12:18 AM
                                         </time>
@@ -1121,8 +1130,8 @@
                                     </div>
                                 </th>
                                 <th>Product</th>
-                                <th class="text-xs-right">Price</th>
-                                <th class="text-xs-center">Sales</th>
+                                <th class="text-right">Price</th>
+                                <th class="text-center">Sales</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -1134,8 +1143,8 @@
                                     </div>
                                 </td>
                                 <td>On the Road</td>
-                                <td class="text-xs-right">$25 224.2</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$25 224.2</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#618fb0">13,14,16,15,4,14,20</div>
                                 </td>
                             </tr>
@@ -1147,8 +1156,8 @@
                                     </div>
                                 </td>
                                 <td>HP Core i7</td>
-                                <td class="text-xs-right">$87 346.1</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$87 346.1</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#999">14,12,16,11,17,19,16</div>
                                 </td>
                             </tr>
@@ -1160,8 +1169,8 @@
                                     </div>
                                 </td>
                                 <td>Let's Dance</td>
-                                <td class="text-xs-right">$57 944.6</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$57 944.6</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#f0b518">11,17,19,16,14,12,16</div>
                                 </td>
                             </tr>
@@ -1173,8 +1182,8 @@
                                     </div>
                                 </td>
                                 <td>Air Pro</td>
-                                <td class="text-xs-right">$118 533.1</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$118 533.1</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#e5603b">13,14,20,16,15,4,14</div>
                                 </td>
                             </tr>
@@ -1186,8 +1195,8 @@
                                     </div>
                                 </td>
                                 <td>Version Control</td>
-                                <td class="text-xs-right">$72 854.5</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$72 854.5</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#618fb0">16,15,4,14,13,14,20</div>
                                 </td>
                             </tr>
@@ -1223,8 +1232,8 @@
                                     </div>
                                 </th>
                                 <th>Product</th>
-                                <th class="text-xs-right">Price</th>
-                                <th class="text-xs-center">Sales</th>
+                                <th class="text-right">Price</th>
+                                <th class="text-center">Sales</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -1236,8 +1245,8 @@
                                     </div>
                                 </td>
                                 <td>On the Road</td>
-                                <td class="text-xs-right">$25 224.2</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$25 224.2</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#618fb0">13,14,16,15,4,14,20</div>
                                 </td>
                             </tr>
@@ -1249,8 +1258,8 @@
                                     </div>
                                 </td>
                                 <td>HP Core i7</td>
-                                <td class="text-xs-right">$87 346.1</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$87 346.1</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#999">14,12,16,11,17,19,16</div>
                                 </td>
                             </tr>
@@ -1262,8 +1271,8 @@
                                     </div>
                                 </td>
                                 <td>Let's Dance</td>
-                                <td class="text-xs-right">$57 944.6</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$57 944.6</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#f0b518">11,17,19,16,14,12,16</div>
                                 </td>
                             </tr>
@@ -1275,8 +1284,8 @@
                                     </div>
                                 </td>
                                 <td>Air Pro</td>
-                                <td class="text-xs-right">$118 533.1</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$118 533.1</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#e5603b">13,14,20,16,15,4,14</div>
                                 </td>
                             </tr>
@@ -1288,8 +1297,8 @@
                                     </div>
                                 </td>
                                 <td>Version Control</td>
-                                <td class="text-xs-right">$72 854.5</td>
-                                <td class="text-xs-center">
+                                <td class="text-right">$72 854.5</td>
+                                <td class="text-center">
                                     <div class="sparkline" data-type="bar" data-bar-color="#618fb0">16,15,4,14,13,14,20</div>
                                 </td>
                             </tr>

@@ -335,7 +335,15 @@
             </form>
             <ul class="nav navbar-nav float-right">
                 <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle dropdown-toggle-notifications nav-link" id="notifications-dropdown-toggle" data-toggle="dropdown">
+                    <a
+                            href="#"
+                            role="button"
+                            class="dropdown-toggle dropdown-toggle-notifications nav-link"
+                            id="notifications-dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                    >
                         <span class="thumb-sm avatar float-left">
                             <img class="rounded-circle" src="demo/img/people/a5.jpg" alt="...">
                         </span>
@@ -344,19 +352,20 @@
                         <span class="circle bg-warning fw-bold">
                             13
                         </span>
-                        <b class="caret"></b></a>
-                    <!-- ready to use notifications dropdown.  inspired by smartadmin template.
-                         consists of three components:
-                         notifications, messages, progress. leave or add what's important for you.
-                         uses Sing's ajax-load plugin for async content loading. See #load-notifications-btn -->
-                    <div class="dropdown-menu dropdown-menu-right animated fadeInUp" id="notifications-dropdown-menu">
+                        <b class="caret"></b>
+                    </a>
+                    <div
+                            class="dropdown-menu dropdown-menu-right animated fadeInUp py-0"
+                            aria-labelledby="notifications-dropdown-toggle"
+                            id="notifications-dropdown-menu"
+                    >
                         <section class="card notifications">
                             <header class="card-header">
-                                <div class="text-xs-center mb-sm">
+                                <div class="text-center mb-sm">
                                     <strong>You have 13 notifications</strong>
                                 </div>
-                                <div class="btn-group btn-group-sm btn-group-justified" id="notifications-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
+                                <div class="btn-group btn-group-sm btn-group-toggle" id="notifications-toggle" data-toggle="buttons">
+                                    <label class="btn btn-default active">
                                         <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
                                              only requirement for async reloading -->
                                         <input type="radio" checked
@@ -364,13 +373,13 @@
                                                data-ajax-load="demo/ajax/notifications.html"
                                                data-ajax-target="#notifications-list"> Notifications
                                     </label>
-                                    <label class="btn btn-secondary">
+                                    <label class="btn btn-default">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/messages.html"
                                                data-ajax-target="#notifications-list"> Messages
                                     </label>
-                                    <label class="btn btn-secondary">
+                                    <label class="btn btn-default">
                                         <input type="radio"
                                                data-ajax-trigger="change"
                                                data-ajax-load="demo/ajax/progress.html"
@@ -419,8 +428,8 @@
                                     <p class="no-margin overflow-hidden">
                                         User <a href="#">Jeff</a> registered
                                         &nbsp;&nbsp;
-                                        <a class="badge badge-success">Allow</a>
-                                        <a class="badge badge-danger">Deny</a>
+                                        <button class="btn btn-xs btn-success">Allow</button>
+                                        <button class="btn btn-xs btn-danger">Deny</button>
                                         <time class="help-block no-margin">
                                             12:18 AM
                                         </time>
@@ -893,7 +902,7 @@
                         <p class="fs-mini text-muted">
                             Each example displayed below takes just 1 line of HTML or javascript to generate.
                         </p>
-                        <div id="sparkline2" class="chart-overflow-bottom mb-0 text-xs-center"></div>
+                        <div id="sparkline2" class="chart-overflow-bottom mb-0 text-center"></div>
                     </div>
                 </section>
             </div>
@@ -1004,7 +1013,7 @@
                         </div>
                     </header>
                     <div class="widget-body clearfix">
-                        <div class="text-xs-center">
+                        <div class="text-center">
                             <div class="easy-pie-chart mb-lg" id="easy-pie1" data-percent="73">
                                 73
                             </div>

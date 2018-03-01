@@ -777,7 +777,7 @@ function initAppFunctions(){
 
             var $currentMessageList = $('.chat-sidebar-chat.open .message-list'),
                 $message = $('<li class="message from-me">' +
-                    '<span class="thumb-sm"><img class="img-circle" src="img/avatar.png" alt="..."></span>' +
+                    '<span class="thumb-sm"><img class="rounded-circle" src="img/avatar.png" alt="..."></span>' +
                     '<div class="message-body"></div>' +
                     '</li>');
             $message.appendTo($currentMessageList).find('.message-body').text(val);

@@ -45,7 +45,7 @@
 
 .page-controls {
   .dropdown-toggle-notifications {
-    .img-circle {
+    .rounded-circle {
       margin-top: -1px;
     }
 
@@ -903,26 +903,23 @@
     width: 333px;
   }
 
-  .card-header {
-    .btn-group-justified {
-      display: flex;
-
-      label {
-        flex: 1;
-        padding-top: 5px;
-        padding-bottom: 5px;
-      }
-    }
-
-  }
-
   height: 100%;
+
+  .btn-group-toggle {
+    display: flex;
+
+    .btn {
+      flex: 1;
+    }
+  }
 
   .list-group{
     height: 320px;
     overflow-y: scroll;
   }
   .list-group-item{
+    color: $text-color;
+
     @include transition(background-color .15s ease-in-out);
     &:hover{
       background-color: $list-group-hover-bg;
@@ -937,6 +934,10 @@
 
   .btn-notifications-reload{
     color: $navbar-dashboard-link-color;
+  }
+
+  .btn-link {
+    border: none;
   }
 }
 
