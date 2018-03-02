@@ -766,8 +766,8 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>YOU ARE HERE</li>
-            <li class="active">UI Components</li>
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">UI Components</li>
         </ol>
         <h1 class="page-title">Components - <span class="fw-semi-bold">Bootstrap</span></h1>
         <section class="widget">
@@ -980,57 +980,53 @@
             </header>
             <div class="widget-body">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-12">
                         <h3>Progress Bar <span class="fw-semi-bold">Colors</span></h3>
-                        <p class="text-muted">Easily perceptible colored options for Bootstrap progress bars:</p>
+                        <p class="fs-mini text-muted">Easily perceptible colored options for Bootstrap progress bars:</p>
                         <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress-sm progress-danger" value="100" max="100" style="width: 75%;"></progress>
-                            </div>
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress-sm progress-warning" value="100" max="100" style="width: 60%;"></progress>
-                        </div>
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress-sm progress-success" value="100" max="100" style="width: 45%;"></progress>
-                    </div>
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress-sm progress-primary" value="100" max="100" style="width: 30%;"></progress>
+                            <div class="col-md-10 col-md-offset-1 col-12">
+                                <div class="bg-gray-lighter progress progress-sm">
+                                    <div  class="progress-bar progress-sm bg-danger" style="width: 75%;"></div>
+                                </div>
+                                <div class="bg-gray-lighter progress progress-sm">
+                                    <div class="progress-bar progress-sm bg-warning" style="width: 60%;"></div>
+                                </div>
+                                <div class="bg-gray-lighter progress progress-sm">
+                                    <div class="progress-bar progress-sm bg-success" style="width: 45%;"></div>
+                                </div>
+                                <div class="bg-gray-lighter progress progress-sm">
+                                    <div class="progress-bar progress-sm bg-primary" style="width: 30%;"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-12">
                         <h3>Progress Bar <span class="fw-semi-bold">Sizes</span></h3>
-                        <p class="text-muted">Three different sizes for all of possible use cases:</p>
+                        <p class="fs-mini text-muted">Three different sizes for all of possible use cases:</p>
                         <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress-xs progress-bar-gray" value="100" max="100" style="width: 60%;"></progress>
-                            </div>
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress-sm progress-warning" value="100" max="100" style="width: 60%;"></progress>
-                        </div>
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress progress-info" value="100" max="100" style="width: 33%;"></progress>
+                            <div class="col-md-10 col-md-offset-1 col-12">
+                                <div class="bg-gray-lighter progress progress-xs">
+                                    <div class="progress-bar progress-xs progress-bar-gray" style="width: 60%;"></div>
+                                </div>
+                                <div class="bg-gray-lighter progress progress-sm">
+                                    <div class="progress-bar progress-sm bg-warning" style="width: 60%"></div>
+                                </div>
+                                <div class="bg-gray-lighter progress">
+                                    <div class="progress-bar bg-info" style="width: 33%;"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-12">
                         <h3>More <span class="fw-semi-bold">Options</span></h3>
-                        <div class="alert alert-warning alert-sm">Animated and containg text progress bars are not yet supported in Bootstrap 4</div>
-                        <p class="text-muted">Animated, stripped and progress bars containing text:</p>
+                        <p class="text-muted fs-mini">Animated, stripped and progress bars containing text:</p>
                         <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress-striped progress-animated progress-info" value="100" max="100" style="width: 60%;">
-                                        $24 818
-                                    </progress>
+                            <div class="col-md-10 col-md-offset-1 col-12">
+                                <div class="progress bg-gray-lighter">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 51%" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100">51%</div>
                                 </div>
-                                <div class="bg-gray-lighter mt-md">
-                                    <progress class="progress progress-sm progress-striped progress-bar-gray-light" value="100" max="100" style="width: 60%;">
-                                    </progress>
+                                <div class="progress progress-sm bg-gray-lighter mt-2">
+                                    <div class="progress-bar progress-sm progress-bar-striped progress-bar-animated progress-bar-gray-light" role="progressbar" style="width: 51%" aria-valuenow="51" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -1053,7 +1049,8 @@
 <script src="vendor/jquery-pjax/jquery.pjax.js"></script>
 <script src="vendor/popper.js/dist/umd/popper.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
-<script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="vendor/bootstrap/js/dist/util.js"></script>
+<script src="vendor/slimScroll/jquery.slimscroll.js"></script>
 <script src="vendor/widgster/widgster.js"></script>
 <script src="vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
 <script src="vendor/jquery-touchswipe/jquery.touchSwipe.js"></script>
