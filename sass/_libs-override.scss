@@ -153,6 +153,7 @@
       margin-left: 0;
     }
   }
+
   .dropdown-menu > li > a {
     display: block;
     width: 100%; // For `<button>`s
@@ -200,4 +201,18 @@
       }
     }
   }
+
+  .show .dropdown-menu.inner {
+    display: block;
+  }
+}
+
+.input-group-append .bootstrap-select > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group-prepend .bootstrap-select > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }

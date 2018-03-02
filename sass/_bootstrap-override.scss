@@ -151,7 +151,8 @@ small, .small {
   padding: $padding-small-vertical $padding-small-horizontal;
 }
 
-.input-group-btn>.btn {
+.input-group-append>.btn,
+.input-group-prepend>.btn {
   padding-top: $padding-base-vertical;
   padding-bottom: $padding-base-vertical;
 }
@@ -243,20 +244,6 @@ legend {
 
 .input-rounded{
   border-radius: $border-radius;
-}
-
-
-// Checkboxes and radios
-//
-
-.radio,
-.checkbox {
-  padding-left: 20px;
-
-  label {
-    margin-bottom: 5px;
-    min-height: 0;
-  }
 }
 
 //
@@ -760,20 +747,6 @@ legend {
 .btn-link:active:focus,
 .btn-link.active:focus{
   outline: 0;
-}
-
-.input-group > .input-group-btn:last-child > .btn[data-toggle="dropdown"] {
-  @include border-right-radius($btn-border-radius);
-}
-
-
-.btn-group > .btn[data-toggle="dropdown"][data-original-title][title] {
-  @include border-right-radius($btn-border-radius);
-
-  &:focus,
-  &:active{
-    outline: none !important;
-  }
 }
 
 //

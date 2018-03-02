@@ -3,15 +3,6 @@
  */
 
 /**
- * Switchery.
- */
-
-.switchery{
-  box-sizing: content-box;
-  margin-left: -20px;
-}
-
-/**
  * Datetimepicker for Bootstrap v3
  */
 .bootstrap-datetimepicker-widget
@@ -192,6 +183,24 @@
   }
   .thumbnail {
     border-color: $state-success-border;
+  }
+}
+
+.fileinput {
+  &.input-group {
+    display: flex;
+  }
+
+  .form-control {
+    padding: $padding-base-vertical $padding-base-horizontal;
+    display: inline-block;
+    margin-bottom: 0px;
+    vertical-align: middle;
+    cursor: text;
+  }
+
+  .input-group-addon {
+    padding: $padding-base-vertical $padding-base-horizontal;
   }
 }
 
@@ -1724,14 +1733,6 @@ a.fc-event{
 /* fix wysihtml5 iframe width*/
 .wysihtml5-sandbox{
   max-width: 100%;
-}
-
-/***********************/
-/*  bootstrap-select   */
-/***********************/
-
-.selectpicker.form-control {
-  height: auto;
 }
 
 /***********************/
