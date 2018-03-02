@@ -24999,16 +24999,11 @@ input[type=search], input.search {
 
 .table-emails {
   margin-bottom: 0; }
-  .table-emails .abc-checkbox label:before {
-    left: -13px; }
   .table-emails tbody > tr > td:first-child {
     width: 45px; }
   .table-emails td,
   .table-emails th {
     padding: 7px 5px 7px 5px; }
-  .table-emails td > .abc-checkbox,
-  .table-emails th > .abc-checkbox {
-    top: -6px; }
   .table-emails .name,
   .table-emails .subject,
   .table-emails .date {
@@ -26139,7 +26134,8 @@ a.text-bg-sidebar:focus, a.text-bg-sidebar:hover {
   color: #0b0b0b; }
 
 .text-light {
-  opacity: .8; }
+  opacity: .8;
+  color: inherit !important; }
 
 .fs-mini {
   font-size: 13px; }

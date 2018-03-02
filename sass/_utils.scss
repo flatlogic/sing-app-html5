@@ -457,6 +457,7 @@ $z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 
 .text-light{
   opacity: .8;
+  color: inherit !important;
 }
 
 .fs-mini{
