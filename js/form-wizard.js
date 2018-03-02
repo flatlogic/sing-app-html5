@@ -220,7 +220,6 @@ $(function(){
                 $('.popover').addClass('popover-body-error');
                 $('.popover-content').addClass('popover-content-error');
                 $('.popover-arrow').addClass('popover-arrow-error');
-                Tether.position();
 
                 this.popovers.push(el);
 

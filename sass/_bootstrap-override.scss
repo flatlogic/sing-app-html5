@@ -30,102 +30,8 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-//
-// Panels
-// --------------------------------------------------
-
-// Base class
-.panel {
-  margin-bottom: $spacer;
-  background-color: $panel-bg;
-  border: none;
-}
-
-// Panel contents
-.panel-body {
-  padding: $panel-body-padding;
-  @include clearfix;
-}
-
-// Optional heading
-.panel-heading {
-  padding: 13px 15px;
-  border-bottom: 1px solid transparent;
-  @include border-top-radius(($border-radius));
-
-  > .dropdown .dropdown-toggle {
-    color: inherit;
-  }
-}
-
-// Within heading, strip any `h*` tag of its default margins for spacing.
-.panel-title>a.collapsed>i {
-  transform: rotate(180deg);
-  transition: transform 0.35s ease;
-}
-
-.panel-title>a>i {
-  transition: transform 0.35s ease;
-}
-
-.panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: $font-size-base;
-  color: inherit;
-
-  > a,
-  > small,
-  > .small,
-  > small > a,
-  > .small > a {
-    color: inherit;
-    display: block;
-  }
-}
-
 small, .small {
   font-size: 85%;
-}
-
-// Collapsable panels (aka, accordion)
-//
-// Wrap a series of panels in `.panel-group` to turn them into an accordion with
-// the help of our collapse JavaScript plugin.
-
-.panel-group {
-  margin-bottom: $spacer;
-
-  // Tighten up margin so it's only between panels
-  .panel {
-    margin-bottom: 0;
-    border-radius: $border-radius;
-
-    + .panel {
-      margin-top: 5px;
-    }
-  }
-
-  .panel-heading {
-    border-bottom: 0;
-
-    + .panel-collapse > .panel-body,
-    + .panel-collapse > .list-group {
-      border-top: 1px solid $list-group-border-color;
-    }
-
-    .collapsed {
-      &,
-      i {
-        opacity: 0.6;
-      }
-
-      &:hover,
-      &:hover > i{
-        opacity: 1;
-      }
-    }
-  }
 }
 
 
@@ -354,10 +260,6 @@ legend {
 // Navs
 // --------------------------------------------------
 
-.nav-pills .nav-link {
-  border-radius: 0;
-}
-
 .nav-pills .nav-item + .nav-item {
   margin-left: 0;
 }
@@ -475,6 +377,7 @@ legend {
 .tabs-left > .nav-tabs {
   float: left;
   border-top-right-radius: 0;
+  border-bottom-left-radius: $border-radius;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
@@ -485,6 +388,7 @@ legend {
 .tabs-right > .nav-tabs {
   float: right;
   border-top-left-radius: 0;
+  border-bottom-right-radius: $border-radius;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
@@ -712,7 +616,10 @@ legend {
     top: 3px;
   }
 
-  color: white;
+  &,
+  &.disabled {
+    color: white;
+  }
 }
 
 .btn, .btn-inverse, .btn-gray {
@@ -756,6 +663,11 @@ legend {
 .btn-toolbar{
   margin-top: $spacer/2;
   margin-bottom: $spacer/2;
+
+  > .btn + .btn,
+  > .btn-group + .btn-group {
+    margin-left: $spacer / 2;
+  }
 }
 
 //
@@ -908,6 +820,16 @@ legend {
 
     .sidebar{
       z-index: -1;
+    }
+  }
+}
+
+.modal {
+  .close {
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }
@@ -1155,8 +1077,57 @@ code {
   font-weight: $font-weight-bold;
   font-size: 11px;
   color: white;
+
+  &.bg-default {
+    color: $text-color;
+  }
+}
+
+a.badge {
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .badge-pill {
   padding: 2px 6px;
+}
+
+//
+// Accordion
+// --------------------------------------------------
+
+.accordion {
+  .card {
+    background: transparent;
+  }
+
+  .card + .card {
+    margin-top: $spacer / 2;
+  }
+
+  .card-header {
+    background: $gray-light;
+    border-bottom: none;
+    border-radius: $border-radius;
+
+    a {
+      &,
+      &:hover,
+      &:active {
+        color: $text-color;
+        text-decoration: none;
+      }
+
+      .fa {
+        transition: $transition-base;
+      }
+
+      &.collapsed .fa {
+        transform: rotate(-180deg);
+      }
+    }
+  }
 }

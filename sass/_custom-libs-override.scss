@@ -333,7 +333,7 @@ svg .title {
   > .md-header, .md-footer {
     display: block;
     padding: 6px 4px;
-    background: $panel-default-heading-bg;
+    background: $gray-800;
   }
 
   > .md-header {
@@ -346,7 +346,7 @@ svg .title {
 
   > .md-preview {
     padding: $padding-base-vertical $padding-base-horizontal;
-    background: $panel-bg;
+    background: $gray-600;
     border-top: 1px dashed $table-border-color;
     min-height: 10px;
   }
@@ -678,6 +678,12 @@ input.parsley-error{
     @include box-shadow(none);
   }
 
+  .pager {
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: $spacer;
+  }
+
   //fix conflict with MODAL WIZARD
   .pager.wizard{
     display: block;
@@ -688,11 +694,22 @@ input.parsley-error{
 /**         MODAL WIZARD          **/
 /***********************************/
 
-.wizard-header h3 {
-  font-family: $font-family-base;
-  font-weight: $headings-font-weight;
-  color: $text-color;
+.wizard-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  h3 {
+    font-family: $font-family-base;
+    font-weight: $headings-font-weight;
+    color: $text-color;
+  }
+
+  .close {
+    order: 1;
+  }
 }
+
 
 .wizard-nav-list > li.already-visited > a.wizard-nav-link,
 .wizard-nav-list > li.already-visited.active > a.wizard-nav-link{
@@ -705,15 +722,27 @@ input.parsley-error{
   color: $white;
 }
 
-.wizard-dialog .popover.error-popover .arrow {
-  border-right-color: transparent;
+.wizard-dialog {
+  max-width: none;
+
+  .popover.error-popover .arrow {
+    border-right-color: transparent;
+  }
 }
 
-.wizard-nav-list li > a {
-  display: inline-block;
-  text-decoration: none;
+
+.wizard-nav-list li
+{
   width: 100%;
+
+  & > a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 15px;
+  }
 }
+
 
 .wizard-input-section {
   .open {
