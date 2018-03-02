@@ -927,7 +927,7 @@
     @include transition(background-color .15s ease-in-out);
     &:hover{
       background-color: $list-group-hover-bg;
-      .progress-bar{
+      .progress {
         background-color: $white !important;
       }
     }
@@ -996,6 +996,7 @@
   background: $widget-bg-color;
   border-radius: $border-radius-sm;
   box-shadow: $widget-shadow;
+  overflow: hidden;
 
   > header{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
@@ -1005,12 +1006,12 @@
     }
 
     + .widget-body,
-    + .widget-body.no-padding{
+    + .widget-body.p-0{
       margin-top: $widget-padding-vertical;
     }
   }
 
-  > .widget-body.no-padding{
+  > .widget-body.p-0{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
 
     + footer{
@@ -1156,11 +1157,11 @@
   height: 373px;
 }
 
-.windget-padding-md {
+.widget-padding-md {
   padding: $widget-padding-vertical $widget-padding-horizontal;
 }
 
-.windget-padding-lg {
+.widget-padding-lg {
   padding: $widget-padding-vertical*2 $widget-padding-horizontal*2;
 }
 

@@ -413,6 +413,12 @@
       background-color: $gray-light;
     }
   }
+
+  .abc-checkbox {
+    label:before {
+      top: 0;
+    }
+  }
 }
 
 /***********************************/
@@ -567,6 +573,7 @@
       display: inline-block;
       overflow: hidden;
       max-width: 100%;
+
       > img{
         transition: transform .15s ease;
         max-width: 100%;
@@ -583,8 +590,8 @@
     display: inline;
   }
 
-  > div{
-    max-width: 100%;
+  .js-shuffle-sizer {
+    pointer-events: none;
   }
 
   .figure {
@@ -962,7 +969,6 @@
 .event-map{
   height: 200px;
   margin: 0 -20px -20px;
-  overflow: visible !important;
 }
 
 .event-image{

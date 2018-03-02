@@ -736,7 +736,7 @@ legend {
 }
 
 .list-group{
-  .widget-body.no-padding > &{
+  .widget-body.p-0 > &{
     margin: 0;
 
     .list-group-item{
@@ -761,6 +761,10 @@ legend {
 
   .list-group:last-of-type &:last-child{
     border-bottom: 0;
+  }
+
+  &:first-child {
+    border-radius: 0;
   }
 }
 
@@ -839,21 +843,37 @@ legend {
 // --------------------------------------------------
 
 .pagination{
-  font-weight: $font-weight-normal;
+  margin-top: $spacer;
 
-  > .page-item {
-    display: inline; // Remove list-style and block-level defaults
-    > .page-link,
+  .page-item {
+    .page-link,
     > span{
       border-radius: $border-radius;
       margin: 0 2px;
     }
 
-    >.page-link {
-      text-decoration: none;
+    .page-link {
+      color: $text-color;
       border: none;
     }
+
+    &.active {
+      .page-link {
+        background: $gray-300;
+        color: $gray-800;
+      }
+    }
+
+    &.disabled {
+      .page-link {
+        color: $text-muted;
+      }
+    }
   }
+}
+
+.pagination-sm .page-link {
+  padding: $pagination-padding-y-sm $pagination-padding-x;
 }
 
 //

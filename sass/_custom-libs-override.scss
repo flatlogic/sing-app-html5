@@ -939,9 +939,13 @@ table.dataTable tfoot th{
 }
 
 table.table-hover.dataTable > tbody > tr:hover > td {
-  .progress-bar {
+  .progress {
     background-color: $white !important;
   }
+}
+
+.dataTables_wrapper {
+  display: block;
 }
 
 /**
