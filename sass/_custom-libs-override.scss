@@ -938,6 +938,16 @@ table.dataTable tfoot th{
   color: $gray-600;
 }
 
+.dataTables_wrapper .dataTables_paginate .pagination {
+  justify-content: center;
+}
+
+.dataTables_wrapper .hidden-sm-down {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
 table.table-hover.dataTable > tbody > tr:hover > td {
   .progress {
     background-color: $white !important;

@@ -101,7 +101,8 @@ $(function(){
             if (e.target != e.currentTarget) return;
 
             var $triggerLink = $(this).prev('[data-toggle=collapse]');
-            $($triggerLink.data('parent')).find('.collapse.in').not($(this)).collapse('hide');
+            console.log($($triggerLink.data('parent')).find('.collapse.show').not($(this)));
+            $($triggerLink.data('parent')).find('.collapse.show').not($(this)).collapse('hide');
         })
             /* adding additional classes to navigation link li-parent for several purposes. see navigation styles */
             .on('show.bs.collapse', function(e){
