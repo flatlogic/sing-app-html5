@@ -53,7 +53,7 @@
         </div>
         <!-- main notification links are placed inside of .sidebar-nav -->
         <ul class="sidebar-nav">
-            <li class="active">
+            <li>
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
@@ -63,7 +63,7 @@
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-dashboard" class="collapse in">
-                    <li class="active"><a href="index.html">Dashboard</a></li>
+                    <li><a href="index.html">Dashboard</a></li>
                     <li><a href="widgets.html">Widgets</a></li>
                 </ul>
             </li>
@@ -165,7 +165,7 @@
                     Grid
                 </a>
             </li>
-            <li>
+            <li class="active">
                 <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="glyphicon glyphicon-map-marker"></i>
@@ -176,7 +176,7 @@
                 <ul id="sidebar-maps" class="collapse">
                     <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
                          target page -->
-                    <li><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li class="active"><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
                     <li><a href="maps_vector.html">Vector Maps</a></li>
                 </ul>
             </li>
