@@ -846,7 +846,7 @@ function initDemoFunctions(){
         $('[data-toggle="chat-sidebar"]').one('click', function(){
             setTimeout(function(){
                 $('.chat-sidebar-user-group:first-of-type .list-group-item:first-child').addClass('active')
-                    .append('<span class="badge badge-pill badge-danger float-right animated bounceInDown ml-auto">3</span>');
+                    .find('.fa-circle').before('<span class="badge badge-pill badge-danger float-right animated bounceInDown ml-auto">3</span>');
             }, 1000)
         });
 

@@ -617,7 +617,8 @@ legend {
   }
 
   &,
-  &.disabled {
+  &.disabled,
+  &:hover {
     color: white;
   }
 }
