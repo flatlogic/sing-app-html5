@@ -771,7 +771,7 @@
             <li class="breadcrumb-item">YOU ARE HERE</li>
             <li class="breadcrumb-item active">Email</li>
         </ol>
-        <div class="alert alert-warning alert-sm pull-right no-margin animated bounceInLeft hide" id="app-alert">
+        <div class="alert alert-warning alert-sm float-right no-margin animated bounceInLeft hide" id="app-alert">
             <button type="button" class="ml-lg close" data-dismiss="alert" aria-hidden="true">×</button>
             Hey! This is a <span class="fw-semi-bold">real app</span> with CRUD and Search functions. Have fun!
         </div>
@@ -783,7 +783,7 @@
                 <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mt" id="folders-list">
                     <li class="nav-item active">
                         <a class="nav-link" href="inbox.html">
-                            <span class="badge badge-pill bg-default pull-right">2</span>
+                            <span class="badge badge-pill bg-default float-right">2</span>
                             Inbox
                         </a>
                     </li>
@@ -791,7 +791,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Sent Mail</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <span class="badge badge-pill bg-danger pull-right">3</span>
+                            <span class="badge badge-pill bg-danger float-right">3</span>
                             Draft
                         </a>
                     </li>
@@ -799,14 +799,14 @@
                 </ul>
                 <h6 class="mt">QUICK VIEW</h6>
                 <ul class="nav flex-column nav-pills nav-stacked nav-email-folders mb-lg fs-mini">
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger pull-right"></i> Work </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white pull-right"></i> Private </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light pull-right"></i> Saved </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-danger float-right"></i> Work </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-white float-right"></i> Private </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-circle text-gray-light float-right"></i> Saved </a></li>
                 </ul>
             </div>
             <div class="col-lg-9 col-xl-10">
                 <div class="clearfix mb-xs">
-                    <a class="btn btn-default btn-sm width-50 pull-left hide" id="back-btn" href="inbox.html">
+                    <a class="btn btn-default btn-sm width-50 float-left hide" id="back-btn" href="inbox.html">
                         <i class="fa fa-angle-left fa-lg"></i>
                     </a>
                     <div class="d-flex justify-content-end" id="folder-stats">
@@ -854,7 +854,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
-                                <input class="form-control form-control-sm width-200 pull-right" id="mailbox-search" type="text" placeholder="Search Messages">
+                                <input class="form-control form-control-sm width-200 float-right" id="mailbox-search" type="text" placeholder="Search Messages">
                             </div>
                         </div>
                     </header>
@@ -879,9 +879,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star"></i></span></td>
-                                <td class="name hidden-xs">Philip Horbacheuski</td>
+                                <td class="name d-none d-md-table-cell">Philip Horbacheuski</td>
                                 <td class="subject">Hi, Welcome to Google Mail</td>
-                                <td class="hidden-xs"><i class="fa fa-paperclip"></i></td>
+                                <td class="d-none d-md-table-cell"><i class="fa fa-paperclip"></i></td>
                                 <td class="date">May 19</td>
                             </tr><tr class="unread">
                                 <td>
@@ -891,9 +891,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-sm-down">StackExchange</td>
+                                <td class="name d-none d-md-table-cell">StackExchange</td>
                                 <td class="subject">New Python questions for this week!</td>
-                                <td class="hidden-sm-down"><i class="fa fa-paperclip"></i></td>
+                                <td class="d-none d-md-table-cell"><i class="fa fa-paperclip"></i></td>
                                 <td class="date">Aug 14</td>
                             </tr><tr class="">
                                 <td>
@@ -903,9 +903,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-sm-down">notifications@facebook.com</td>
+                                <td class="name d-none d-md-table-cell">notifications@facebook.com</td>
                                 <td class="subject">Someone just commented on your photo!</td>
-                                <td class="hidden-sm-down"></td>
+                                <td class="d-none d-md-table-cell"></td>
                                 <td class="date">Aug 7</td>
                             </tr><tr class="unread">
                                 <td>
@@ -915,9 +915,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star"></i></span></td>
-                                <td class="name hidden-sm-down">Twitter</td>
+                                <td class="name d-none d-md-table-cell">Twitter</td>
                                 <td class="subject">@hackernews is now following you on Twitter</td>
-                                <td class="hidden-sm-down"></td>
+                                <td class="d-none d-md-table-cell"></td>
                                 <td class="date">Jul 31</td>
                             </tr><tr class="">
                                 <td>
@@ -927,9 +927,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-sm-down">Nikola Foley</td>
+                                <td class="name d-none d-md-table-cell">Nikola Foley</td>
                                 <td class="subject">Quiet led own cause three him</td>
-                                <td class="hidden-sm-down"><i class="fa fa-paperclip"></i></td>
+                                <td class="d-none d-md-table-cell"><i class="fa fa-paperclip"></i></td>
                                 <td class="date">Jul 22</td>
                             </tr><tr class="">
                                 <td>
@@ -939,9 +939,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-sm-down">Ernst Hardy</td>
+                                <td class="name d-none d-md-table-cell">Ernst Hardy</td>
                                 <td class="subject">Raising say express had chiefly detract demands she</td>
-                                <td class="hidden-sm-down"></td>
+                                <td class="d-none d-md-table-cell"></td>
                                 <td class="date">Jul 15</td>
                             </tr><tr class="">
                                 <td>
@@ -951,9 +951,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star-o"></i></span></td>
-                                <td class="name hidden-sm-down">LinkedIn</td>
+                                <td class="name d-none d-md-table-cell">LinkedIn</td>
                                 <td class="subject">Jobs you may be interested in</td>
-                                <td class="hidden-sm-down"></td>
+                                <td class="d-none d-md-table-cell"></td>
                                 <td class="date">Jul 12</td>
                             </tr><tr class="">
                                 <td>
@@ -963,9 +963,9 @@
                                     </div>
                                 </td>
                                 <td><span class="starred"><i class="fa fa-star"></i></span></td>
-                                <td class="name hidden-sm-down">Naevius Victorsson</td>
+                                <td class="name d-none d-md-table-cell">Naevius Victorsson</td>
                                 <td class="subject">Front no party young abode state up</td>
-                                <td class="hidden-sm-down"></td>
+                                <td class="d-none d-md-table-cell"></td>
                                 <td class="date">Jul 11</td>
                             </tr></tbody>
                         </table>
@@ -1027,7 +1027,7 @@
 
 <script type="text/template" id="folder-template">
         <a class="nav-link" href="#">
-            <% if (unread) {%><span class="badge badge-pill bg-danger pull-right"><%= unread %></span><% } %>
+            <% if (unread) {%><span class="badge badge-pill bg-danger float-right"><%= unread %></span><% } %>
             <%= name %>
         </a>
 </script>
@@ -1041,26 +1041,26 @@
         </div>
     </td>
     <td><span class="starred"><i class="<%= starred ? 'fa fa-star' : 'fa fa-star-o'%>"></i></span></td>
-    <td class="name hidden-sm-down"><%= sender ? sender : senderMail %></td>
+    <td class="name d-none d-md-table-cell"><%= sender ? sender : senderMail %></td>
     <td class="subject"><%= subject %></td>
-    <td class="hidden-sm-down"><% if (attachment) {%><i class="fa fa-paperclip"><% } %></i></td>
+    <td class="d-none d-md-table-cell"><% if (attachment) {%><i class="fa fa-paperclip"><% } %></i></td>
     <td class="date"><%= this.formatDate(timestamp) %></td>
 </script>
 
 <script type="text/template" id="email-view-template">
     <div class="email-details clearfix">
         <div class="email-details-content">
-            <span class="thumb thumb-sm pull-left">
+            <span class="thumb thumb-sm float-left">
                 <img class="rounded-circle" src="demo/img/people/a5.jpg" alt="<%= sender %>" title="<%= sender %>">
             </span>
-            <div class="pull-left">
+            <div class="float-left">
                 <strong><%= sender ? sender : senderMail %></strong>
                 <% if (senderMail) { %>
                 <span class="email">&lt;<%= senderMail %>&gt;</span>
                 <% } %>
                 <span class="receiver">to Wrapbootstrap</span>
             </div>
-            <div class="email-actions pull-right">
+            <div class="email-actions float-right">
                 <div class="btn-group">
                     <button id="email-opened-reply" class="btn btn-sm btn-gray">
                         <i class="fa fa-reply"></i> Reply
@@ -1068,7 +1068,7 @@
                     <button class="btn btn-sm btn-gray dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-angle-down"></i>
                     </button>
-                    <ul class="dropdown-menu pull-right">
+                    <ul class="dropdown-menu float-right">
                         <li><a class="dropdown-item" href="#"><i class="fa fa-reply reply-btn"></i> Reply</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-right reply-btn"></i> Forward</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-print"></i> Print</a></li>
@@ -1078,7 +1078,7 @@
                     </ul>
                 </div>
             </div>
-            <time class="email-date pull-right">
+            <time class="email-date float-right">
                 <%= this.formatDate(timestamp) %>
             </time>
         </div>
@@ -1130,7 +1130,7 @@
             <textarea rows="10" class="form-control" id="wysiwyg" placeholder="Message"><%- body %></textarea>
         </div>
         <div class="clearfix">
-            <div class="btn-toolbar pull-right">
+            <div class="btn-toolbar float-right">
                 <button type="reset" id="compose-discard-button" class="btn btn-gray">Discard</button>
                 <button type="button" id="compose-save-button" class="btn btn-gray">&nbsp;&nbsp;Save&nbsp;&nbsp;</button>
                 <button type="submit" id="compose-send-button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;Send&nbsp;&nbsp;&nbsp;</button>
@@ -1173,7 +1173,7 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <input class="form-control form-control-sm width-200 pull-right" id="mailbox-search" type="text" placeholder="Search Messages">
+            <input class="form-control form-control-sm width-200 float-right" id="mailbox-search" type="text" placeholder="Search Messages">
         </div>
     </div>
 </script>

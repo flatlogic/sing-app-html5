@@ -823,9 +823,14 @@
                             <tr>
                                 <th>#</th>
                                 <th>Item</th>
-                                <th class="hidden-sm-down">Description</th>
-                                <th>Quantity</th>
-                                <th class="hidden-sm-down">Price per Unit</th>
+                                <th class="d-none d-md-table-cell">Description</th>
+                                <th>
+                                    <span class="d-md-block d-none">
+                                        Quantity
+                                    </span>
+                                    <span class="d-md-none">QTY</span>
+                                </th>
+                                <th class="d-none d-md-table-cell">Price per Unit</th>
                                 <th>Total</th>
                             </tr>
                             </thead>
@@ -833,33 +838,33 @@
                             <tr>
                                 <th scope="row">1</th>
                                 <td>Brand-new 27' monitor</td>
-                                <td class="hidden-sm-down">2,560x1,440-pixel (WQHD) resolution supported!</td>
+                                <td class="d-none d-md-table-cell">2,560x1,440-pixel (WQHD) resolution supported!</td>
                                 <td>2</td>
-                                <td class="hidden-sm-down">700</td>
+                                <td class="d-none d-md-table-cell">700</td>
                                 <td>1,400.00</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>Domain: okendoken.com</td>
-                                <td class="hidden-sm-down">6-month registration</td>
+                                <td class="d-none d-md-table-cell">6-month registration</td>
                                 <td>1</td>
-                                <td class="hidden-sm-down">10.99</td>
+                                <td class="d-none d-md-table-cell">10.99</td>
                                 <td>21.88</td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
                                 <td>Atlas Shrugged</td>
-                                <td class="hidden-sm-down">Novel by Ayn Rand, first published in 1957 in the US</td>
+                                <td class="d-none d-md-table-cell">Novel by Ayn Rand, first published in 1957 in the US</td>
                                 <td>5</td>
-                                <td class="hidden-sm-down">35</td>
+                                <td class="d-none d-md-table-cell">35</td>
                                 <td>175.00</td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
                                 <td>New Song by Dr. Pre</td>
-                                <td class="hidden-sm-down">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
+                                <td class="d-none d-md-table-cell">Lyrics: praesent blandit augue non sapien ornare imperdiet</td>
                                 <td>1</td>
-                                <td class="hidden-sm-down">2</td>
+                                <td class="d-none d-md-table-cell">2</td>
                                 <td>2.00</td>
                             </tr>
                             </tbody>
@@ -873,13 +878,13 @@
                             </div>
                             <div class="col-md-4 col-print-6">
                                 <div class="row text-right">
-                                    <div class="col-xs-6"></div> <!-- instead of offset -->
-                                    <div class="col-xs-3">
+                                    <div class="col-4 col-md-6"></div> <!-- instead of offset -->
+                                    <div class="col-4 col-md-3">
                                         <p>Subtotal</p>
                                         <p>Tax(10%)</p>
                                         <p class="no-margin"><strong>Total</strong></p>
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-4 col-md-3">
                                         <p>1,598.88</p>
                                         <p>159.89</p>
                                         <p class="no-margin"><strong>1,758.77</strong></p>
@@ -893,13 +898,13 @@
                         <p class="text-right">
                             <span class="fw-semi-bold">Bob Smith</span>
                         </p>
-                        <div class="btn-toolbar mt-lg hidden-print print-buttons">
-                            <button id="print" class="btn btn-inverse">
+                        <div class="btn-toolbar mt-lg hidden-print justify-content-end">
+                            <button id="print" class="btn btn-inverse mb-2">
                                 <i class="fa fa-print"></i>
                                 &nbsp;&nbsp;
                                 Print
                             </button>
-                            <button class="btn btn-danger">
+                            <button class="btn btn-danger mb-2">
                                 Proceed with Payment
                                 &nbsp;
                                 <span class="circle bg-white">

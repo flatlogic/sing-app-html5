@@ -21819,6 +21819,7 @@ input.parsley-error {
 .form-wizard .nav-pills > li > a {
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-bottom: 0.5rem;
   background-color: #eeeeee;
   color: #999999;
   border-radius: 3px;
@@ -21840,6 +21841,10 @@ input.parsley-error {
       padding-left: 0; }
     .form-wizard .nav-pills.nav-justified > li:last-child {
       padding-right: 0; } }
+
+@media (max-width: 767.98px) {
+  .form-wizard .nav-pills {
+    flex-direction: column; } }
 
 .form-wizard .tab-pane {
   padding: 1rem 20px;
@@ -26162,7 +26167,10 @@ a.text-bg-sidebar:focus, a.text-bg-sidebar:hover {
   border-bottom-right-radius: 0.25rem; }
 
 .hide {
-  display: none !important; }
+  display: none; }
+
+.show {
+  display: block; }
 
 .show {
   display: block !important; }

@@ -636,6 +636,7 @@ input.parsley-error{
     > li > a{
       padding-top: 15px;
       padding-bottom: 15px;
+      margin-bottom: $spacer * 0.5;
       background-color: $gray-200;
       color: $gray-600;
       @include border-radius(3px);
@@ -663,6 +664,10 @@ input.parsley-error{
           }
         }
       }
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
     }
   }
 

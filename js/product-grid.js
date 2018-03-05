@@ -4,7 +4,8 @@ $(function() {
     brands: {items: ['All', 'Nike', 'Adidas'], checked: ''},
     size: {items: ['All', '7', '8', '9', '10', '11', '12'], checked: ''},
     color: {items: ['All', 'White', 'Black'], checked: ''},
-    range: {items: ['All', '0 - 49', '50 - 149', '150 - 499', '500+'], checked: ''}
+    range: {items: ['All', '0 - 49', '50 - 149', '150 - 499', '500+'], checked: ''},
+    sort: {items: ['Favourite, Price, Popular']}
   };
 
   function showFiltersModal() {
@@ -34,10 +35,18 @@ $(function() {
     $('.product-grid__main').removeClass('hide');
   }
 
+  function initFilterChecking(listName, listId) {
+      $('#' + listId).find('li').on('click', function () {
+          $(this).addClass('active').siblings().removeClass('active');
+          filters[listName].checked = $(this).find('.name').html();
+          console.log(filters[listName].checked);
+      });
+  }
+
   function generateSubFilterMenu(listObjectName) {
     var listObject = filters[listObjectName];
     var $list = '';
-    listObject.items.forEach(function (l, index) {
+    listObject.items.forEach(function (l) {
       if (listObject.checked === l) {
         $list += '<li class="option active"><span class="filter-check"><img src="./demo/img/check.svg" alt="check" /></span><span class="name">'+ l +'</span></li>';
       } else {
@@ -46,11 +55,8 @@ $(function() {
 
     });
 
-    $('#type-subfilters-list').empty().append($list).find('li').on('click', function () {
-        $(this).addClass('active').siblings().removeClass('active');
-        filters[listObjectName].checked = $(this).find('.name').html();
-        console.log(filters[listObjectName].checked);
-    });
+    $('#type-subfilters-list').empty().append($list);
+    initFilterChecking(listObjectName, 'type-subfilters-list');
   }
 
 
@@ -61,6 +67,7 @@ $(function() {
       declareModalFilterTitle('Sort');
       showButton('close_modal');
     });
+    initFilterChecking('sort', 'sort-filters-list');
     $('#other-filters').on('click', function () {
       showFiltersModal();
       showFiltersList('#type-filters-list');
