@@ -1842,6 +1842,10 @@ input[type=search], input.search {
         padding-top: 0;
       }
     }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   h5 {

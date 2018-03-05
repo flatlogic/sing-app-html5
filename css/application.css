@@ -24138,6 +24138,9 @@ input[type=search], input.search {
     flex-direction: column; }
     .product-description__desktop > div:nth-child(n + 4) {
       padding-top: 0; }
+  @media (max-width: 767.98px) {
+    .product-description__desktop {
+      display: none; } }
 
 .product-description h5 {
   font-weight: 600;
