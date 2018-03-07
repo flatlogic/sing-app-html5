@@ -497,5 +497,5 @@ $z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 }
 
 .show {
-  display: block;
+  display: block !important;
 }

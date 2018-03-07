@@ -111,9 +111,9 @@
             <li class="active">
                 <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fa fa-file"></i>
+                        <i class="fa fa-dollar"></i>
                     </span>
-                    Pages
+                    E-commerce
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-pages" class="collapse show">
@@ -767,14 +767,14 @@
 <div class="content-wrap">
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
     <main id="content" class="content" role="main">
-        <div class="product-grid__main">
+        <div class="product-grid">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">YOU ARE HERE</li>
                 <li class="breadcrumb-item active">E-commerce</li>
             </ol>
             <h1 class="page-title">E-commerce - <span class="fw-semi-bold">Product Grid</span></h1>
-            <div class="product-grid__filters">
-                <div class="product-grid__filter-element">
+            <div class="product-filters">
+                <div class="product-filter ml-0">
                     <label>Type</label>
                     <div class="btn-group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -794,7 +794,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product-grid__filter-element">
+                <div class="product-filter">
                     <label>Brands</label>
                     <div class="btn-group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -814,7 +814,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product-grid__filter-element">
+                <div class="product-filter">
                     <label>Size</label>
                     <div class="btn-group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -840,7 +840,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product-grid__filter-element">
+                <div class="product-filter">
                     <label>Colour</label>
                     <div class="btn-group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -860,7 +860,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product-grid__filter-element">
+                <div class="product-filter">
                     <label>Range</label>
                     <div class="btn-group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -883,7 +883,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="product-grid__filter-element">
+                <div class="product-filter">
                     <label>Sort</label>
                     <div class="btn-group">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -904,7 +904,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-grid__filter-mobile">
+            <div class="product-filters-mobile">
                 <button id="sort-filters" class="btn btn-transparent btn-lg">
                     Sort <i class="fa fa-2x fa-angle-down"></i>
                 </button>
@@ -912,124 +912,140 @@
                     Filter <i class="fa fa-2x fa-angle-down"></i>
                 </button>
             </div>
-            <div class="product-grid__elements row" id="product-grid">
-                <div class="col-md-3 col-6 product-grid__element product-card">
-                    <div class="product-card__photo" style="background-image: url(demo/img/products/product1.jpg)">
-                        <div class="star star--fill">
-                            <i class="fa fa-star"></i>
+            <div class="product-elements row" id="product-grid">
+                <div class="col-md-3 col-6">
+                    <div class="product-element product-card">
+                        <div class="card-photo" style="background-image: url(demo/img/products/product1.jpg)">
+                            <div class="star star--fill">
+                                <i class="fa fa-star"></i>
+                            </div>
                         </div>
-                    </div>
-                    <h5 class="product-card__title">TRAINERS</h5>
-                    <div class="product-card__description">Trainers In White</div>
-                    <div class="price">
-                        $76
+                        <h5 class="card-title">TRAINERS</h5>
+                        <div class="card-description">Trainers In White</div>
+                        <div class="price">
+                            $76
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 product-grid__element product-card">
-                    <div class="product-card__photo" style="background-image: url(demo/img/products/product5.jpeg)">
-                        <div class="photo-label red">Sale</div>
-                        <div class="star">
-                            <i class="fa fa-star-o"></i>
+                <div class="col-md-3 col-6">
+                    <div class="product-element product-card">
+                        <div class="card-photo" style="background-image: url(demo/img/products/product5.jpeg)">
+                            <div class="badge bg-danger">Sale</div>
+                            <a role="button" class="star">
+                                <i class="fa fa-star-o"></i>
+                            </a>
                         </div>
-                    </div>
-                    <h5 class="product-card__title">BOOTS</h5>
-                    <div class="product-card__description">Trainers In Blue</div>
-                    <div class="price price--sale">
-                        <span class="old">$56</span>
-                        20% off
-                        <span class="new"> $45</span>
+                        <h5 class="card-title">BOOTS</h5>
+                        <div class="card-description">Trainers In Blue</div>
+                        <div class="price price-sale">
+                            <span class="old">$56</span>
+                            20% off
+                            <span class="new"> $45</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 product-grid__element product-card">
-                    <div class="product-card__photo" style="background-image: url(demo/img/products/product4.jpeg)">
-                        <div class="photo-label green">New</div>
-                        <div class="star">
-                            <i class="fa fa-star-o"></i>
+                <div class="col-md-3 col-6">
+                    <div class="product-element product-card">
+                        <div class="card-photo" style="background-image: url(demo/img/products/product4.jpeg)">
+                            <div class="badge bg-success">New</div>
+                            <a role="button" class="star">
+                                <i class="fa fa-star-o"></i>
+                            </a>
                         </div>
-                    </div>
-                    <h5 class="product-card__title">FLAT SANDALS</h5>
-                    <div class="product-card__description">Trainers In Black</div>
-                    <div class="price">$55</div>
-                </div>
-                <div class="col-md-3 col-6 product-grid__element product-card">
-                    <div class="product-card__photo" style="background-image: url(demo/img/products/product7.jpg)">
-                        <div class="star">
-                            <i class="fa fa-star-o"></i>
-                        </div>
-                    </div>
-                    <h5 class="product-card__title">TRAINERS</h5>
-                    <div class="product-card__description">Trainers In White</div>
-                    <div class="price price--sale">
-                        <span class="old">$101</span>
-                        30% off
-                        <span class="new"> $70</span>
+                        <h5 class="card-title">FLAT SANDALS</h5>
+                        <div class="card-description">Trainers In Black</div>
+                        <div class="price">$55</div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 product-grid__element product-card">
-                    <div class="product-card__photo" style="background-image: url(demo/img/products/product6.jpg)">
-                        <div class="star">
-                            <i class="fa fa-star-o"></i>
+                <div class="col-md-3 col-6">
+                    <div class="product-element product-card">
+                        <div class="card-photo" style="background-image: url(demo/img/products/product7.jpg)">
+                            <a role="button" class="star">
+                                <i class="fa fa-star-o"></i>
+                            </a>
                         </div>
-                    </div>
-                    <h5 class="product-card__title">TRAINERS</h5>
-                    <div class="product-card__description">Trainers In White</div>
-                    <div class="price">$76</div>
-                </div>
-                <div class="col-md-3 col-6 product-grid__element product-card">
-                    <div class="product-card__photo" style="background-image: url(demo/img/products/product3.jpg)">
-                        <div class="photo-label red">Sale</div>
-                        <div class="star">
-                            <i class="fa fa-star-o"></i>
+                        <h5 class="card-title">TRAINERS</h5>
+                        <div class="card-description">Trainers In White</div>
+                        <div class="price price-sale">
+                            <span class="old">$101</span>
+                            30% off
+                            <span class="new"> $70</span>
                         </div>
-                    </div>
-                    <h5 class="product-card__title">BOOTS</h5>
-                    <div class="product-card__description">Trainers In Orange</div>
-                    <div class="price price--sale">
-                        <span class="old">$56</span>
-                        20% off
-                        <span class="new"> $45</span>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 product-grid__element product-card">
-                    <div class="product-card__photo" style="background-image: url(demo/img/products/product8.jpg)">
-                        <div class="photo-label red">Sale</div>
-                        <div class="star">
-                            <i class="fa fa-star-o"></i>
+                <div class="col-md-3 col-6">
+                    <div class="product-element product-card">
+                        <div class="card-photo" style="background-image: url(demo/img/products/product6.jpg)">
+                            <a role="button" class="star">
+                                <i class="fa fa-star-o"></i>
+                            </a>
                         </div>
-                    </div>
-                    <h5 class="product-card__title">TRAINERS</h5>
-                    <div class="product-card__description">Trainers In White</div>
-                    <div class="price price--sale">
-                        <span class="old">$101</span>
-                        30% off
-                        <span class="new"> $70</span>
+                        <h5 class="card-title">TRAINERS</h5>
+                        <div class="card-description">Trainers In White</div>
+                        <div class="price">$76</div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 product-grid__element product-card">
-                    <div class="product-card__photo" style="background-image: url(demo/img/products/product2.jpg)">
-                        <div class="photo-label green">New</div>
-                        <div class="star">
-                            <i class="fa fa-star-o"></i>
+                <div class="col-md-3 col-6">
+                    <div class="product-element product-card">
+                        <div class="card-photo" style="background-image: url(demo/img/products/product3.jpg)">
+                            <div class="badge bg-danger">Sale</div>
+                            <a role="button" class="star">
+                                <i class="fa fa-star-o"></i>
+                            </a>
+                        </div>
+                        <h5 class="card-title">BOOTS</h5>
+                        <div class="card-description">Trainers In Orange</div>
+                        <div class="price price-sale">
+                            <span class="old">$56</span>
+                            20% off
+                            <span class="new"> $45</span>
                         </div>
                     </div>
-                    <h5 class="product-card__title">TRAINERS</h5>
-                    <div class="product-card__description">Trainers In White</div>
-                    <div class="price">$55</div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="product-element product-card">
+                        <div class="card-photo" style="background-image: url(demo/img/products/product8.jpg)">
+                            <div class="badge bg-danger">Sale</div>
+                            <a role="button" class="star">
+                                <i class="fa fa-star-o"></i>
+                            </a>
+                        </div>
+                        <h5 class="card-title">TRAINERS</h5>
+                        <div class="card-description">Trainers In White</div>
+                        <div class="price price-sale">
+                            <span class="old">$101</span>
+                            30% off
+                            <span class="new"> $70</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="product-element product-card">
+                        <div class="card-photo" style="background-image: url(demo/img/products/product2.jpg)">
+                            <div class="badge bg-success">New</div>
+                            <a role="button" class="star">
+                                <i class="fa fa-star-o"></i>
+                            </a>
+                        </div>
+                        <h5 class="card-title">TRAINERS</h5>
+                        <div class="card-description">Trainers In White</div>
+                        <div class="price">$55</div>
+                    </div>
                 </div>
             </div>
             <footer class="content-footer">
                 Sing HTML5 Version - Made by <a href="https://flatlogic.com" rel="nofollow" target="_blank">Flatlogic</a>
             </footer>
         </div>
-        <div class="product-grid__filter-modal">
-            <div class="product-grid__filter-modal-title">
-                <button>
+        <div class="product-filter-modal">
+            <div class="filter-modal-title">
+                <button class="close">
                     <img id="close_modal" class="hide" src="./demo/img/cancel.svg" alt="close" />
                     <img id="back_modal" class="hide" src="./demo/img/back.svg" alt="back" />
                 </button>
-                <h5></h5>
+                <h5 class="mb-0"></h5>
             </div>
-            <ul id="sort-filters-list" class="product-grid__filter-modal-body">
+            <ul id="sort-filters-list" class="filter-modal-body">
                 <li class="option">
                     <span class="filter-check">
                         <img src='./demo/img/check.svg' alt="check" />
@@ -1049,14 +1065,14 @@
                     <span class="name">Popular</span>
                 </li>
             </ul>
-            <ul id="type-filters-list" class="product-grid__filter-modal-body">
+            <ul id="type-filters-list" class="filter-modal-body">
                 <li>Type</li>
                 <li>Brands</li>
                 <li>Size</li>
                 <li>Color</li>
                 <li>Range</li>
             </ul>
-            <ul id="type-subfilters-list" class="product-grid__filter-modal-body">
+            <ul id="type-subfilters-list" class="filter-modal-body">
             </ul>
         </div>
     </main>

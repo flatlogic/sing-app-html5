@@ -1,8 +1,8 @@
 $(function () {
   function _initCarousel() {
-    var $carousel = $('.product-page__carousel');
-    var $prev = $('.carousel-btn--left');
-    var $next = $('.carousel-btn--right');
+    var $carousel = $('.product-carousel');
+    var $prev = $('.carousel-left');
+    var $next = $('.carousel-right');
     var slidesToShow = Sing.isScreen('xs') || Sing.isScreen('sm') ? 2 : 4;
 
 
@@ -14,7 +14,7 @@ $(function () {
   }
 
   function _initStarController() {
-    $(".star").on("click", function () {
+    $(".star, .btn-star").on("click", function () {
       var starred = $(this).children().hasClass("fa-star");
 
       if (starred) {

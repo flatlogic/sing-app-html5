@@ -9,8 +9,8 @@ $(function() {
   };
 
   function showFiltersModal() {
-    $('.product-grid__filter-modal').addClass('show');
-    $('.product-grid__main').addClass('hide');
+    $('.product-filter-modal').addClass('show');
+    $('.product-grid').addClass('hide');
   }
 
   function showFiltersList(list) {
@@ -18,11 +18,11 @@ $(function() {
   }
 
   function declareModalFilterTitle(title) {
-    $('.product-grid__filter-modal-title > h5').html(title);
+    $('.filter-modal-title > h5').html(title);
   }
 
   function showButton(id) {
-    $('.product-grid__filter-modal-title #' + id)
+    $('.filter-modal-title #' + id)
         .addClass('show')
         .removeClass('hide')
         .siblings()
@@ -31,8 +31,8 @@ $(function() {
   }
 
   function hideFiltersModal() {
-    $('.product-grid__filter-modal').removeClass('show');
-    $('.product-grid__main').removeClass('hide');
+    $('.product-filter-modal').removeClass('show');
+    $('.product-grid').removeClass('hide');
   }
 
   function initFilterChecking(listName, listId) {
