@@ -30,109 +30,10 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-//
-// Panels
-// --------------------------------------------------
-
-// Base class
-.panel {
-  margin-bottom: $line-height-computed;
-  background-color: $panel-bg;
-  border: none;
-}
-
-// Panel contents
-.panel-body {
-  padding: $panel-body-padding;
-  @include clearfix;
-}
-
-// Optional heading
-.panel-heading {
-  padding: 13px 15px;
-  border-bottom: 1px solid transparent;
-  @include border-top-radius(($border-radius));
-
-  > .dropdown .dropdown-toggle {
-    color: inherit;
-  }
-}
-
-// Within heading, strip any `h*` tag of its default margins for spacing.
-.panel-title>a.collapsed>i {
-  transform: rotate(180deg);
-  transition: transform 0.35s ease;
-}
-
-.panel-title>a>i {
-  transition: transform 0.35s ease;
-}
-
-.panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: $font-size-base;
-  color: inherit;
-
-  > a,
-  > small,
-  > .small,
-  > small > a,
-  > .small > a {
-    color: inherit;
-    display: block;
-  }
-}
-
 small, .small {
   font-size: 85%;
 }
 
-// Collapsable panels (aka, accordion)
-//
-// Wrap a series of panels in `.panel-group` to turn them into an accordion with
-// the help of our collapse JavaScript plugin.
-
-.panel-group {
-  margin-bottom: $line-height-computed;
-
-  // Tighten up margin so it's only between panels
-  .panel {
-    margin-bottom: 0;
-    border-radius: $border-radius;
-
-    + .panel {
-      margin-top: 5px;
-    }
-  }
-
-  .panel-heading {
-    border-bottom: 0;
-
-    + .panel-collapse > .panel-body,
-    + .panel-collapse > .list-group {
-      border-top: 1px solid $list-group-border-color;
-    }
-
-    .collapsed {
-      &,
-      i {
-        opacity: 0.6;
-      }
-
-      &:hover,
-      &:hover > i{
-        opacity: 1;
-      }
-    }
-  }
-}
-
-
-// Contextual variations
-.panel-default {
-  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
-}
 
 //
 // Forms
@@ -156,7 +57,8 @@ small, .small {
   padding: $padding-small-vertical $padding-small-horizontal;
 }
 
-.input-group-btn>.btn {
+.input-group-append>.btn,
+.input-group-prepend>.btn {
   padding-top: $padding-base-vertical;
   padding-bottom: $padding-base-vertical;
 }
@@ -185,7 +87,7 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: $line-height-computed;
+  margin-bottom: $spacer;
   line-height: inherit;
   color: $legend-color;
   border: 0;
@@ -195,12 +97,12 @@ legend {
 }
 
 .form-group {
-  margin-bottom: $line-height-computed;
+  margin-bottom: $spacer;
 }
 
 .input-group-addon{
   &.bg-primary{
-    border-color: darken($brand-primary, 10%);
+    border-color: darken(theme-color('primary'), 10%);
   }
   &.bg-success{
     border-color: darken($state-success-bg, 10%);
@@ -226,13 +128,13 @@ legend {
 
 // Feedback states
 .has-success {
-  @include form-control-validation($brand-success);
+  @include form-control-validation(theme-color('success'));
 }
 .has-warning {
-  @include form-control-validation($brand-warning);
+  @include form-control-validation(theme-color('warning'));
 }
 .has-error {
-  @include form-control-validation($brand-danger);
+  @include form-control-validation(theme-color('danger'));
 }
 
 //turn off shadow
@@ -250,31 +152,18 @@ legend {
   border-radius: $border-radius;
 }
 
-
-// Checkboxes and radios
-//
-
-.radio,
-.checkbox {
-  padding-left: 20px;
-
-  label {
-    margin-bottom: 5px;
-    min-height: 0;
-  }
-}
-
 //
 // Tables
 // --------------------------------------------------
 
 .table td > .abc-checkbox,
 .table th > .abc-checkbox{
-  position: relative;
-  top: -8px;
-  margin-top: 0;
-  margin-bottom: 0;
   padding-left: 0;
+
+  > label {
+    padding-left: 0;
+  }
+
   > label:before,
   > label:after{
     margin-left: 0;
@@ -292,7 +181,7 @@ legend {
 }
 
 .table-bordered th{
-  background-color: $gray-lighter;
+  background-color: $gray-200;
 }
 
 .table-lg {
@@ -349,6 +238,15 @@ legend {
   }
 }
 
+.navbar-nav .dropdown-menu {
+  position: absolute;
+
+  &.dropdown-menu-right {
+    right: 0;
+    left: auto;
+  }
+}
+
 .caret {
   display: inline-block;
   width: 0;
@@ -364,10 +262,6 @@ legend {
 // Navs
 // --------------------------------------------------
 
-.nav-pills .nav-link {
-  border-radius: 0;
-}
-
 .nav-pills .nav-item + .nav-item {
   margin-left: 0;
 }
@@ -375,7 +269,7 @@ legend {
 .nav-tabs {
   & .nav-item+.nav-item { margin-left: 0}
   border-bottom: none;
-  background-color: $gray-semi-lighter;
+  background-color: $gray-light;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   > .nav-item {
@@ -385,7 +279,7 @@ legend {
       border: none;
       color: $text-muted;
 
-      .label {
+      .badge {
         margin-bottom: -2px;
       }
 
@@ -423,7 +317,7 @@ legend {
   z-index: 1;
   background-color: $white;
   > .tab-pane {
-    padding: $line-height-computed*2 $line-height-computed*2;
+    padding: $spacer*2 $spacer*2;
   }
 }
 
@@ -485,6 +379,7 @@ legend {
 .tabs-left > .nav-tabs {
   float: left;
   border-top-right-radius: 0;
+  border-bottom-left-radius: $border-radius;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
@@ -495,6 +390,7 @@ legend {
 .tabs-right > .nav-tabs {
   float: right;
   border-top-left-radius: 0;
+  border-bottom-right-radius: $border-radius;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
@@ -527,19 +423,30 @@ legend {
   }
 }
 
-.navbar-form{
-  .form-control{
-    font-size: $navbar-font-size;
-    padding: 0.6rem 0.85rem;
-
-  }
-
-  .input-group{
+.navbar-form {
+  .input-group {
     width: 245px;
-  }
+    display: flex;
 
-  .input-group-addon{
-    color: $navbar-dashboard-link-color;
+    .form-control {
+      order: 2;
+      font-size: $font-size-base;
+      padding: 0.6rem 0.85rem 0.6rem 0;
+      border-top-right-radius: $border-radius !important;
+      border-bottom-right-radius: $border-radius !important;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    .input-group-text {
+      order: 1;
+      color: $navbar-dashboard-link-color;
+      padding: 0.6rem 0.85rem;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+    }
   }
 }
 
@@ -548,8 +455,8 @@ legend {
   > .navbar-header,
   > .navbar-collapse {
     @media (min-width: map_get($grid-breakpoints, md)) {
-      margin-right: -$navbar-padding-horizontal;
-      margin-left:  -$navbar-padding-horizontal;
+      margin-right: -$spacer;
+      margin-left:  -$spacer;
     }
   }
 }
@@ -561,7 +468,7 @@ legend {
     float: right;
 
     @include media-breakpoint-down(sm) {
-      padding-top: $navbar-padding-horizontal;
+      padding-top: $spacer;
 
       > li > a {
         padding-right: 0;
@@ -569,22 +476,22 @@ legend {
     }
   }
 
-  margin-left: calc(#{$navbar-padding-horizontal} + 10px);
-  margin-right: $navbar-padding-horizontal;
+  margin-left: calc(#{$spacer} + 10px);
+  margin-right: $spacer;
 
   @include media-breakpoint-down(sm) {
-    margin-left: $navbar-padding-vertical;
+    margin-left: $spacer / 2;
 
     + .navbar-brand{
       height: 60px;
-      line-height: 30px;
+      line-height: 35px;
     }
   }
 
   > li {
     float: left;
     > a {
-      padding: 16px $navbar-padding-vertical $navbar-padding-horizontal $navbar-padding-vertical;
+      padding: 16px ($spacer / 2) $spacer ($spacer / 2);
 
 
     }
@@ -603,8 +510,8 @@ legend {
 
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: $navbar-padding-horizontal;
-  padding-left:  $navbar-padding-horizontal;
+  padding-right: $spacer;
+  padding-left:  $spacer;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
   @include clearfix;
@@ -650,7 +557,7 @@ legend {
   .nav.navbar-nav > li:first-child .dropdown-toggle {
 
     .circle {
-      color: $gray;
+      color: $gray-700;
     }
   }
 
@@ -691,22 +598,17 @@ legend {
 
 
 .breadcrumb {
-  color: $gray-light;
-  margin-bottom: $spacer-y*1.5;
+  padding-left: 0;
+  padding-right: 0;
+  color: $gray-600;
+  margin-bottom: $spacer*1.5;
 
   > .active {
+    color: $text-color;
     font-weight: $font-weight-semi-bold;
   }
-
-  .content &{
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 }
 
-.breadcrumb>li+li::before {
-  content: ">";
-}
 //
 // Buttons
 // --------------------------------------------------
@@ -714,6 +616,12 @@ legend {
 .btn {
   .glyphicon {
     top: 3px;
+  }
+
+  &,
+  &.disabled,
+  &:hover {
+    color: white;
   }
 }
 
@@ -733,11 +641,11 @@ legend {
 }
 
 .btn-gray{
-  @include button-variant($text-color, $gray-semi-lighter, darken($gray-semi-lighter, 5%));
+  @include button-variant($gray-light, darken($gray-light, 5%));
 }
 
 .btn-outline{
-  @include button-variant($white, transparent, $white);
+  @include button-variant(transparent, $white);
 
   &:hover,
   &:focus {
@@ -751,39 +659,18 @@ legend {
   outline: 0;
 }
 
-.input-group > .input-group-btn:last-child > .btn[data-toggle="dropdown"] {
-  @include border-right-radius($btn-border-radius);
-}
-
-
-.btn-group > .btn[data-toggle="dropdown"][data-original-title][title] {
-  @include border-right-radius($btn-border-radius);
-
-  &:focus,
-  &:active{
-    outline: none !important;
-  }
-}
-
-
-//
-// Labels
-// --------------------------------------------------
-.label{
-  font-size: 11px;
-  font-weight: $font-weight-semi-bold;
-  padding: 6px;
-
-}
-
-
 //
 // Button groups
 // --------------------------------------------------
 
 .btn-toolbar{
-  margin-top: $line-height-computed/2;
-  margin-bottom: $line-height-computed/2;
+  margin-top: $spacer/2;
+  margin-bottom: $spacer/2;
+
+  > .btn + .btn,
+  > .btn-group + .btn-group {
+    margin-left: $spacer / 2;
+  }
 }
 
 //
@@ -791,7 +678,7 @@ legend {
 // --------------------------------------------------
 
 .js-progress-animate {
-  transition: width 0.6s ease;
+  transition: all 0.6s ease !important;
 }
 
 .progress{
@@ -808,25 +695,25 @@ legend {
 
 .progress-sm{
   height: 10px;
-  margin-bottom: $line-height-computed/2;
+  margin-bottom: $spacer/2;
 }
 
 .progress-xs{
   height: 5px;
-  margin-bottom: $line-height-computed/2;
+  margin-bottom: $spacer/2;
 }
 
 
 .progress-bar-gray {
-  @include progress-variant($gray);
+  background-color: $gray-300;
 }
 
 .progress-bar-gray-light {
-  @include progress-variant($gray-light);
+  background-color: $gray-600;
 }
 
 .progress-primary {
-  @include progress-variant($brand-primary)
+  background-color: theme-color('primary');
 }
 
 
@@ -852,7 +739,7 @@ legend {
 }
 
 .list-group{
-  .widget-body.no-padding > &{
+  .widget-body.p-0 > &{
     margin: 0;
 
     .list-group-item{
@@ -862,6 +749,14 @@ legend {
 }
 
 .list-group-item{
+  &,
+  &:hover {
+    color: $text-color;
+  }
+
+  &:hover {
+    background: $gray-100;
+  }
 
   .list-group-lg & {
     padding: 15px 15px;
@@ -869,6 +764,10 @@ legend {
 
   .list-group:last-of-type &:last-child{
     border-bottom: 0;
+  }
+
+  &:first-child {
+    border-radius: 0;
   }
 }
 
@@ -932,26 +831,52 @@ legend {
   }
 }
 
+.modal {
+  .close {
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 //
 // Pagination
 // --------------------------------------------------
 
 .pagination{
-  font-weight: $font-weight-normal;
+  margin-top: $spacer;
 
-  > .page-item {
-    display: inline; // Remove list-style and block-level defaults
-    > .page-link,
+  .page-item {
+    .page-link,
     > span{
       border-radius: $border-radius;
       margin: 0 2px;
     }
 
-    >.page-link {
-      text-decoration: none;
+    .page-link {
+      color: $text-color;
       border: none;
     }
+
+    &.active {
+      .page-link {
+        background: $gray-300;
+        color: $gray-800;
+      }
+    }
+
+    &.disabled {
+      .page-link {
+        color: $text-muted;
+      }
+    }
   }
+}
+
+.pagination-sm .page-link {
+  padding: $pagination-padding-y-sm $pagination-padding-x;
 }
 
 //
@@ -972,7 +897,7 @@ legend {
 // our navbars.
 
 .navbar-form {
-  padding: 7px 0 6.5px $navbar-padding-horizontal;
+  padding: 7px 0 6.5px $spacer;
 
   .form-group {
     margin-bottom: 0;
@@ -995,6 +920,32 @@ legend {
   background-color: $navbar-dashboard-bg;
   border-color: $navbar-dashboard-border;
 
+  .container-fluid {
+    flex-wrap: unset;
+  }
+
+  .navbar-header {
+    &.mobile-hidden {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: space-between;
+
+      .dropdown-toggle-notifications {
+        display: inline;
+        line-height: $navbar-height;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+
+      &.mobile-hidden {
+        display: none;
+      }
+    }
+  }
+
   .navbar-brand {
     color: $navbar-dashboard-brand-color;
     margin-right: 0;
@@ -1012,7 +963,10 @@ legend {
   }
 
   .navbar-nav {
+    flex-direction: row;
+
     > li > a {
+      position: relative;
       color: $navbar-dashboard-link-color;
 
       &:hover,
@@ -1105,7 +1059,6 @@ legend {
 @mixin bg-variant($parent, $color) {
   #{$parent} {
     background-color: $color !important;
-    color: $gray !important;
   }
   a#{$parent} {
     @include hover-focus {
@@ -1115,40 +1068,89 @@ legend {
 }
 
 //
-// Labels
-// -----------------
-
-.label-pill {
-  color: $white;
-  font-weight: bold;
-  padding: .25em .6em;
-  font-size: 12px;
-}
-
-//
 // Code
 // -----------------
 
 pre {
-  display: block;
   padding: 6.5px;
-  margin: 0 0 ($line-height-computed / 2);
-  font-size: 13px;
-  line-height: $line-height;
+  margin: 0 0 ($spacer / 2);
+  line-height: $spacer;
   word-break: break-all;
   word-wrap: break-word;
-  color: $pre-color;
   background-color: $pre-bg;
-  border: 1px solid $pre-border-color;
   border-radius: $border-radius;
 
-  // Account for some code outputs that place code tags in pre tags
   code {
-    padding: 0;
-    font-size: inherit;
-    color: inherit;
-    white-space: pre-wrap;
-    background-color: transparent;
-    border-radius: 0;
+    background: transparent;
+  }
+}
+
+code {
+  background: theme-color('danger-light');
+}
+
+//
+// Badges
+// --------------------------------------------------
+.badge {
+  display: inline-block;
+  padding: 2px 4px;
+  line-height: 14px; // ensure proper line-height if floated
+  text-shadow: none;
+  font-weight: $font-weight-bold;
+  font-size: 11px;
+  color: white;
+
+  &.bg-default {
+    color: $text-color;
+  }
+}
+
+a.badge {
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.badge-pill {
+  padding: 2px 6px;
+}
+
+//
+// Accordion
+// --------------------------------------------------
+
+.accordion {
+  .card {
+    background: transparent;
+  }
+
+  .card + .card {
+    margin-top: $spacer / 2;
+  }
+
+  .card-header {
+    background: $gray-light;
+    border-bottom: none;
+    border-radius: $border-radius;
+
+    a {
+      &,
+      &:hover,
+      &:active {
+        color: $text-color;
+        text-decoration: none;
+      }
+
+      .fa {
+        transition: $transition-base;
+      }
+
+      &.collapsed .fa {
+        transform: rotate(-180deg);
+      }
+    }
   }
 }

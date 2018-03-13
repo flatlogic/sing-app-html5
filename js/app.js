@@ -101,7 +101,7 @@ $(function(){
             if (e.target != e.currentTarget) return;
 
             var $triggerLink = $(this).prev('[data-toggle=collapse]');
-            $($triggerLink.data('parent')).find('.collapse.in').not($(this)).collapse('hide');
+            $($triggerLink.data('parent')).find('.collapse.show').not($(this)).collapse('hide');
         })
             /* adding additional classes to navigation link li-parent for several purposes. see navigation styles */
             .on('show.bs.collapse', function(e){
@@ -208,9 +208,8 @@ $(function(){
     SingAppView.prototype.collapseNavigation = function(){
         //this method only makes sense for non-static navigation state
         if (this.isNavigationStatic() && (Sing.isScreen('lg') || Sing.isScreen('xl'))) return;
-
         $('body').addClass('nav-collapsed');
-        this.$sidebar.find('.collapse.in').collapse('hide')
+        this.$sidebar.find('.collapse.show').collapse('hide')
             .siblings('[data-toggle=collapse]').addClass('collapsed');
     };
 
@@ -617,50 +616,11 @@ function initAppPlugins(){
         $.fn.animateProgressBar = function () {
             return this.each(function () {
                 var $bar = $(this);
-                setTimeout(function(){
-                    $bar.css('width', $bar.data('width'));
-                }, 0)
+                $bar.css('width', $bar.data('width'));
             })
         };
 
         $('.js-progress-animate').animateProgressBar();
-    }(jQuery);
-
-    /* ========================================================================
-     * Reposition Tooltip
-     * ========================================================================
-     */
-    !function($){
-        $.fn.onPositionChanged = function (trigger, millis) {
-            if (millis == null) millis = 100;
-            var o = $(this[0]); // our jquery object
-            if (o.length < 1) return o;
-
-            var lastPos = null;
-            var lastOff = null;
-            setInterval(function () {
-                if (o == null || o.length < 1) return o; // abort if element is non existend eny more
-                if (lastPos == null) lastPos = o.position();
-                if (lastOff == null) lastOff = o.offset();
-                var newPos = o.position();
-                var newOff = o.offset();
-                if (lastPos.top != newPos.top || lastPos.left != newPos.left) {
-                    $(this).trigger('onPositionChanged', { lastPos: lastPos, newPos: newPos });
-                    if (typeof (trigger) == "function") trigger(lastPos, newPos);
-                    lastPos = o.position();
-                }
-                if (lastOff.top != newOff.top || lastOff.left != newOff.left) {
-                    $(this).trigger('onOffsetChanged', { lastOff: lastOff, newOff: newOff});
-                    if (typeof (trigger) == "function") trigger(lastOff, newOff);
-                    lastOff= o.offset();
-                }
-            }, millis);
-
-            return o;
-        };
-
-        $('#nav-state-toggle').onPositionChanged(function(){Tether.position();},0);
-        $('#nav-collapse-toggle').onPositionChanged(function(){Tether.position();},0);
     }(jQuery);
 }
 
@@ -710,7 +670,7 @@ function initAppFunctions(){
         /**
          * Show help tooltips
          */
-        $('#nav-state-toggle, #nav-collapse-toggle').tooltip();
+        $('[data-toggle="tooltip"]').tooltip();
 
         function initSidebarScroll(){
             var $sidebarContent = $('.js-sidebar-content');
@@ -814,7 +774,7 @@ function initAppFunctions(){
 
             var $currentMessageList = $('.chat-sidebar-chat.open .message-list'),
                 $message = $('<li class="message from-me">' +
-                    '<span class="thumb-sm"><img class="img-circle" src="img/avatar.png" alt="..."></span>' +
+                    '<span class="thumb-sm"><img class="rounded-circle" src="img/avatar.png" alt="..."></span>' +
                     '<div class="message-body"></div>' +
                     '</li>');
             $message.appendTo($currentMessageList).find('.message-body').text(val);
@@ -885,7 +845,7 @@ function initDemoFunctions(){
         $('[data-toggle="chat-sidebar"]').one('click', function(){
             setTimeout(function(){
                 $('.chat-sidebar-user-group:first-of-type .list-group-item:first-child').addClass('active')
-                    .find('.fa-circle').after('<span class="label label-pill label-danger pull-xs-right animated bounceInDown">3</span>');
+                    .find('.fa-circle').before('<span class="badge badge-pill badge-danger float-right animated bounceInDown ml-auto">3</span>');
             }, 1000)
         });
 

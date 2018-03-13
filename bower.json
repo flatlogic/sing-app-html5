@@ -19,7 +19,7 @@
     "pace.js": "https://github.com/HubSpot/pace.git#v0.7.1",
     "animate.css": "3.5.0",
     "jquery-touchswipe": "1.6.9",
-    "awesome-bootstrap-checkbox": "1.0.0-alpha.2",
+    "awesome-bootstrap-checkbox": "1.0.0",
     "backbone": "1.2.3",
     "backbone.paginator": "2.0.2",
     "backgrid": "0.3.5",
@@ -62,8 +62,9 @@
     "jquery-animateNumber": "https://github.com/aishek/jquery-animateNumber.git#v0.0.11",
     "MetroJS": "https://github.com/drewgreenwell/MetroJS.git#349ab828fe4deecff40496357d5bcba06f470413",
     "skycons": "https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed",
-    "bootstrap": "4.0.0-alpha.2",
-    "bootstrap-markdown": "2.9.0"
+    "bootstrap": "4.0.0",
+    "bootstrap-markdown": "2.9.0",
+    "slick-carousel": "^1.8.1"
   },
   "private": true,
   "ignore": [
@@ -78,7 +79,7 @@
     "bootstrap": "~4"
   },
   "devDependencies": {
-    "tether": "~1.1.1",
-    "glyphicons-halflings": "*"
+    "glyphicons-halflings": "*",
+    "popper.js": "1.12.9"
   }
 }

@@ -8,44 +8,52 @@ $vendor-folder: '../vendor' !default;
 
 $glyphicons-halflings-include-bonus: false !default;
 $glyphicons-halflings-class-prefix: glyphicon !default;
+$glyphicons-halflings-font-base-size: 14px !default;
 
 // Bootstrap options
 
-$enable-flex:               false !default;
-$enable-rounded:            true !default;
 $enable-shadows:            true !default;
-$enable-gradients:          false !default;
-$enable-transitions:        true !default;
-$enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
 
-// Colors
-// ------------------------
+// Color system
+//
 
 $white: #fff !default;
+$gray-100: #f5f5f5 !default;
+$gray-200: #eeeeee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #555 !default;
+$gray-800: #343434 !default;
+$gray-900: #242424 !default;
 $black: #000 !default;
+$gray-light: #ddd !default;
 
-//copy from BS
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              #343434 !default;
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 60%) !default;   // #999
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
-$gray-semi-light:        #777;
-$gray-semi-lighter:      #ddd;
 
-$brand-primary:         #5d8fc2 !default; //#618fb0 !default;
-$brand-success:         #64bd63 !default;
-$brand-info:            #5dc4bf !default; //#61c4b8 !default; //#5DADE2 !default;
-$brand-warning:         #f0b518 !default;
-$brand-danger:          #dd5826 !default; // #e5603b !default;
+$blue: #5d8fc2 !default;
+$red: #dd5826 !default;
+$yellow: #f0b518 !default;
+$green: #64bd63 !default;
+$cyan: #5dc4bf !default;
 
-$brand-primary-light: #dee4ee !default;
-
-$brand-success-light:         #ecfaec !default;
-$brand-info-light:            #f2fafa !default;
-$brand-warning-light:         lighten($brand-warning, 43%) !default;
-$brand-danger-light:          #fff2ef !default;
+$theme-colors: (
+        primary: $blue,
+        secondary: $gray-600,
+        success: $green,
+        primary-light: #dee4ee,
+        success-light: #ecfaec,
+        info-light: #f2fafa,
+        warning-light: #fdf7e6,
+        danger-light: #fff2ef,
+        info: $cyan,
+        warning: $yellow,
+        danger: $red,
+        dark: $gray-800,
+        inverse: $gray-700,
+        gray: $gray-300,
+        default: #f8f8f8
+);
 
 $addition-bg: #f8f8f8 !default;
 
@@ -59,14 +67,16 @@ $sidebar-item-hover-bg-color: #111 !default;
 // Typography
 // -------------------------
 
-$text-color:            $gray !default;
+$text-color:            $gray-700 !default;
 //$text-color: #57534A; //a bit brown?
 
-$font-size-root: 14px;
-
+$font-size-initial:       14px; // reset default browser value from 16px to 13px
 $font-size-base:          1rem !default;
-$font-size-larger:        15px;
-$font-size-mini:          13px;
+$font-size-lg:            1.25rem !default;
+$font-size-sm:            0.875rem !default;
+$font-size-larger:        1.1rem;
+$font-size-mini:          0.9rem;
+$font-size-index:         0.7rem;
 
 $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
@@ -79,8 +89,6 @@ $font-size-smaller: 85% !default;
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.428571429 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
-
 $link-color: #218BC3 !default;
 
 //== Scaffolding
@@ -126,6 +134,14 @@ $chart-spacer-y: 0.65rem !default;
 // ------------------------
 // ------------------------
 
+$grid-gutter-width:          1.875rem !default; // 30px
+
+//== Breadcrumbs
+//
+$breadcrumb-divider: '>';
+$breadcrumb-padding-y: 0;
+$breadcrumb-bg: transparent;
+
 
 //== Components
 //
@@ -141,11 +157,6 @@ $padding-small-vertical:    5px !default;
 $padding-small-horizontal:  10px !default;
 
 
-//== Scaffolding
-//
-$body-bg: #f6f9fc !default;
-$body-bg-light: lighten($body-bg, 3%);
-
 // Typography
 // -------------------------
 
@@ -157,19 +168,20 @@ $headings-font-weight: 300 !default;
 //
 $input-border-focus:             #4D90FE !default; //webkit focus color
 $legend-color:                   lighten($text-color, 15%) !default;
+$cursor-disabled:                not-allowed !default;
 
 //== Tables
 //
 
 $table-bg-accent:               #f3f3f3 !default;
-$table-bg-hover:                $gray-lighter !default;
-$table-border-color:            $gray-semi-lighter !default;
+$table-bg-hover:                $gray-200 !default;
+$table-border-color:            $gray-light !default;
 
 //== Buttons
 //
 
 $btn-default-bg: $addition-bg !default;
-$btn-secondary-bg: $addition-bg !default;
+$btn-default-border: rgba(0, 0, 0, 0.15) !default;
 
 //== Dropdowns
 //
@@ -180,7 +192,7 @@ $dropdown-link-color:            $text-color !default;
 //
 
 $nav-tabs-active-link-hover-bg:             $white !default;
-$nav-tabs-active-link-hover-color:          $gray !default;
+$nav-tabs-active-link-hover-color:          $gray-700 !default;
 $nav-tabs-active-link-hover-border-color:   #ddd !default;
 
 //== Navbar
@@ -220,17 +232,28 @@ $navbar-dashboard-toggle-border-color:       #ddd !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-bg:               $brand-success-light;
-$state-info-bg:                  $brand-info-light !default;
-$state-warning-bg:               $brand-warning-light !default;
-$state-danger-bg:                $brand-danger-light !default;
+$state-success-bg:               #ecfaec !default;
+$state-info-bg:                  #f2fafa !default;
+$state-warning-bg:               #fdf7e6 !default;
+$state-danger-bg:                #fff2ef !default;
 
+$state-success-text:             #3c763d !default;
+$state-success-border:           darken($state-success-bg, 5%) !default;
+
+$state-info-text:                #31708f !default;
+$state-info-border:              darken($state-info-bg, 7%) !default;
+
+$state-warning-text:             #8a6d3b !default;
+$state-warning-border:           darken($state-warning-bg, 5%) !default;
+
+$state-danger-text:              #a94442 !default;
+$state-danger-border:            darken($state-danger-bg, 5%) !default;
 
 //== Progress bars
 //
 
 //** Background color of the whole progress component
-$progress-bg:                 $gray-lighter !default;
+$progress-bg:                 $gray-200 !default;
 
 //== Tooltips
 //
@@ -243,36 +266,6 @@ $tooltip-bg:                  rgba(#000, .85) !default;
 $code-bg:                     #f9f2f4 !default;
 $pre-bg:                      #f5f5f5 !default;
 
-//== Panels
-//
-//##
-
-$panel-bg:                    transparent !default;
-$panel-body-padding:          15px !default;
-
-$panel-default-text:          $gray-dark !default;
-$panel-default-border:        transparent !default;
-$panel-default-heading-bg:    $gray-semi-lighter !default;
-
-//$panel-primary-text:          #fff !default;
-//$panel-primary-border:        $brand-primary !default;
-//$panel-primary-heading-bg:    $brand-primary !default;
-//
-//$panel-success-text:          $state-success-text !default;
-//$panel-success-border:        $state-success-border !default;
-//$panel-success-heading-bg:    $state-success-bg !default;
-//
-//$panel-info-text:             $state-info-text !default;
-//$panel-info-border:           $state-info-border !default;
-//$panel-info-heading-bg:       $state-info-bg !default;
-//
-//$panel-warning-text:          $state-warning-text !default;
-//$panel-warning-border:        $state-warning-border !default;
-//$panel-warning-heading-bg:    $state-warning-bg !default;
-//
-//$panel-danger-text:           $state-danger-text !default;
-//$panel-danger-border:         $state-danger-border !default;
-//$panel-danger-heading-bg:     $state-danger-bg !default;
 
 //== Popovers
 //
@@ -300,19 +293,19 @@ $breadcrumb-separator:          ">" !default;
 //
 //##
 
-$pagination-color:                     $gray-semi-light !default;
+$pagination-color:                     $gray-600 !default;
 $pagination-bg:                        #fff !default;
 $pagination-border:                    transparent !default;
 
 $pagination-hover-color:               $text-color !default;
-$pagination-hover-bg:                  $gray-lighter !default;
+$pagination-hover-bg:                  $gray-200 !default;
 $pagination-hover-border:              transparent !default;
 
 $pagination-active-color:              $text-color !default;
-$pagination-active-bg:                 $gray-lighter !default;
+$pagination-active-bg:                 $gray-200 !default;
 $pagination-active-border:             transparent !default;
 
-$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-color:            $gray-600 !default;
 $pagination-disabled-bg:               #fff !default;
 $pagination-disabled-border:           transparent !default;
 

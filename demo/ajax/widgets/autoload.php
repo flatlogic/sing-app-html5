@@ -1,6 +1,6 @@
 <?php sleep(10) ?>
-<h3 class="text-xs-center no-margin animated bounceInDown">Sign up, <del>it's <strong>free</strong></del> and get <strong>$50 now!</strong></h3>
-<p class="lead text-muted text-xs-center">
+<h3 class="text-center no-margin animated bounceInDown">Sign up, <del>it's <strong>free</strong></del> and get <strong>$50 now!</strong></h3>
+<p class="lead text-muted text-center">
     Faith makes it possible to achieve that which man's mind can conceive and believe.
 </p>
 <form>
@@ -25,7 +25,7 @@ data-widgster-autoload="true"</code></pre>
     2000 will refresh widget every 2 seconds.
     </p>
     <div class="clearfix">
-        <div class="btn-toolbar pull-xs-right">
+        <div class="btn-toolbar float-right">
             <button type="submit" class="btn btn-transparent">Cancel</button>
             <button type="submit" class="btn btn-success animated wobble">&nbsp;Submit&nbsp;</button>
         </div>

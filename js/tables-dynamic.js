@@ -232,7 +232,7 @@ $(function(){
                 "sInfo": "Showing <strong>_START_ to _END_</strong> of _TOTAL_ entries"
             },
             "oClasses": {
-              "sFilter": "pull-xs-right",
+              "sFilter": "float-right",
               "sFilterInput": "form-control input-rounded ml-sm"
             },
             "aoColumns": unsortableColumns
