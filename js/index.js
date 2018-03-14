@@ -253,6 +253,7 @@ $(function(){
 
     function pjaxPageLoad(){
         $('.widget').widgster();
+        $('.js-progress-animate').animateProgressBar();
         initMap();
         initCalendar();
         initRickshaw();

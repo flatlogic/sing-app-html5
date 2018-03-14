@@ -612,15 +612,12 @@ function initAppPlugins(){
      * ========================================================================
      */
     !function($){
-
         $.fn.animateProgressBar = function () {
             return this.each(function () {
                 var $bar = $(this);
                 $bar.css('width', $bar.data('width'));
             })
         };
-
-        $('.js-progress-animate').animateProgressBar();
     }(jQuery);
 }
 
