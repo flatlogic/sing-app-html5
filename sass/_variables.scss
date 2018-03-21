@@ -17,36 +17,40 @@ $enable-shadows:            true !default;
 // Color system
 //
 
-$white: #fff !default;
-$gray-100: #f5f5f5 !default;
-$gray-200: #eeeeee !default;
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #555 !default;
-$gray-800: #343434 !default;
-$gray-900: #242424 !default;
-$black: #000 !default;
+$gray-500: #bfccd1 !default;
+$gray-600: #798fa5 !default;
+$gray-700: #44515e !default;
+$gray-800: #363f4e !default;
+$gray-900: #292f3b !default;
+$black:    #000 !default;
 $gray-light: #ddd !default;
 
-
-$blue: #5d8fc2 !default;
-$red: #dd5826 !default;
-$yellow: #f0b518 !default;
-$green: #64bd63 !default;
-$cyan: #5dc4bf !default;
+$blue:    #547fff !default;
+$indigo:  #7f3ddb !default;
+$purple:  #9964e3 !default;
+$pink:    #e54e9a !default;
+$red:     #f55d5d !default;
+$orange:  #ff7d47 !default;
+$yellow:  #ffc247 !default;
+$green:   #68ca66 !default;
+$teal:    #3abf94 !default;
+$cyan:    #17a2b8 !default;
 
 $theme-colors: (
         primary: $blue,
         secondary: $gray-600,
-        success: $green,
+        success: $teal,
         primary-light: #dee4ee,
         success-light: #ecfaec,
         info-light: #f2fafa,
         warning-light: #fdf7e6,
         danger-light: #fff2ef,
-        info: $cyan,
+        info: $purple,
         warning: $yellow,
         danger: $red,
         dark: $gray-800,
@@ -55,19 +59,20 @@ $theme-colors: (
         default: #f8f8f8
 );
 
-$addition-bg: #f8f8f8 !default;
+$addition-bg: #e8f0f7 !default;
 
-
-$sidebar-bg-color: #242424 !default;
-$sidebar-color: #aaa !default;
+$sidebar-action-bg: #2d3543 !default;
+$sidebar-bg-color: $gray-800 !default;
+$sidebar-color: $gray-600 !default;
 $sidebar-item-border-color: transparent !default;
-$sidebar-item-active-color: #F2BE35 !default;
-$sidebar-item-hover-bg-color: #111 !default;
+$sidebar-item-active-color: $yellow !default;
+$sidebar-item-hover-bg-color: $sidebar-action-bg;
+$sidebar-ul-background: $sidebar-action-bg;
 
 // Typography
 // -------------------------
 
-$text-color:            $gray-700 !default;
+$text-color:            #4d4d4d !default;
 //$text-color: #57534A; //a bit brown?
 
 $font-size-initial:       14px; // reset default browser value from 16px to 13px
@@ -93,7 +98,7 @@ $link-color: #218BC3 !default;
 
 //== Scaffolding
 //
-$body-bg: #f5f5f5 !default;
+$body-bg: #f6f9fc !default;
 $body-bg-light: lighten($body-bg, 3%);
 
 // Layout
@@ -181,7 +186,7 @@ $table-border-color:            $gray-light !default;
 //
 
 $btn-default-bg: $addition-bg !default;
-$btn-default-border: rgba(0, 0, 0, 0.15) !default;
+$btn-default-border: $addition-bg !default;
 
 //== Dropdowns
 //
@@ -308,6 +313,10 @@ $pagination-active-border:             transparent !default;
 $pagination-disabled-color:            $gray-600 !default;
 $pagination-disabled-bg:               #fff !default;
 $pagination-disabled-border:           transparent !default;
+
+// Alerts
+
+$alert-transparent: 0.25;
 
 //-- Iconography
 //

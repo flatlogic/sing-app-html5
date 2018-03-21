@@ -339,7 +339,7 @@
   > li ul{
     padding: 0;
     font-size: 13px;
-    background-color: lighten($sidebar-bg-color, 5%);
+    background-color: $sidebar-ul-background;
     list-style: none;
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
@@ -350,10 +350,10 @@
       > a{
         padding: 5px 0 5px 40px;
         font-size: $font-size-mini;
+      }
 
-        &:hover{
-          background-color: lighten($sidebar-item-hover-bg-color, 5%);
-        }
+      &:hover{
+        background-color: lighten($sidebar-ul-background, 5%);
       }
 
       &.active{
