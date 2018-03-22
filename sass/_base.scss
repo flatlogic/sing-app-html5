@@ -1,9 +1,6 @@
 /***********************/
 /*        Layout       */
 /***********************/
-.chat-sidebar-container {
-  color: $text-color;
-}
 
 .sidebar{
   position: fixed;
@@ -12,6 +9,7 @@
   top: 0;
   bottom: 0;
   width: $sidebar-width;
+  border-right: 1px solid $gray-100;
   background-color: $sidebar-bg-color;
   color: $sidebar-color;
 
@@ -75,10 +73,10 @@
   }
 }
 
-.page-controls{
+.page-controls {
   position: absolute;
   z-index: 1;
-  box-shadow: $widget-shadow;
+  background: none;
 
   @include media-breakpoint-down(sm) {
     font-size: $font-size-lg;
@@ -182,7 +180,7 @@
 
   @include transition(width .3s ease-in-out);
   a{
-    color: $white;
+    color: $text-color;
     text-decoration: none;
   }
 
@@ -243,12 +241,12 @@
     }
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-      line-height: 44px;
+      line-height: 55px;
     }
 
     .icon{
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        top: 8px;
+        top: 12px;
       }
 
       display: block;
@@ -259,6 +257,7 @@
       height: 28px;
       line-height: 28px;
       text-align: center;
+      font-size: 16px;
 
       .fa, .glyphicon{
         font-size: 16px;
@@ -348,7 +347,7 @@
 
     > li{
       > a{
-        padding: 5px 0 5px 40px;
+        padding: 10px 0 10px 40px;
         font-size: $font-size-mini;
       }
 
@@ -358,8 +357,7 @@
 
       &.active{
         > a{
-          font-weight: normal;
-          color: $white;
+          font-weight: $font-weight-semi-bold;
         }
       }
 
@@ -1230,12 +1228,7 @@
 .form-actions{
   margin: $spacer 0 0;
   padding: $spacer;
-  background-color: #f5f5f5;
-
-  .form-horizontal & .row{
-    margin-left: ($grid-gutter-width/-2) - $spacer;
-    margin-right: ($grid-gutter-width/-2) - $spacer;
-  }
+  background-color: $gray-100;
 }
 
 input[type=search], input.search {

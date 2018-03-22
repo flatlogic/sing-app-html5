@@ -675,22 +675,6 @@ function initAppFunctions(){
          */
         $('[data-toggle="tooltip"]').tooltip();
 
-        function initSidebarScroll(){
-            var $sidebarContent = $('.js-sidebar-content');
-            if ($('#sidebar').find('.slimScrollDiv').length != 0){
-                $sidebarContent.slimscroll({
-                    destroy: true
-                })
-            }
-            $sidebarContent.slimscroll({
-                height: window.innerHeight,
-                size: '4px'
-            });
-        }
-
-        SingApp.onResize(initSidebarScroll, true);
-        initSidebarScroll();
-
         /*
          When widget is closed remove its parent if it is .col-*
          */
@@ -798,23 +782,6 @@ function initAppFunctions(){
                 }).removeClass('hide');
             }
         });
-
-        function initChatSidebarScroll(){
-            var $sidebarContent = $('.chat-sidebar-contacts');
-            if ($('#chat').find('.slimScrollDiv').length != 0){
-                $sidebarContent.slimscroll({
-                    destroy: true
-                })
-            }
-            $sidebarContent.slimscroll({
-                height: window.innerHeight,
-                width: '',
-                size: '4px'
-            });
-        }
-
-        SingApp.onResize(initChatSidebarScroll, true);
-        initChatSidebarScroll();
     }(jQuery);
 }
 
