@@ -1254,6 +1254,40 @@ input[type=search], input.search {
   @include button-variant($gray-700, darken($gray-700, 10%));
 }
 
+.btn-outline {
+  &-default {
+    color: $btn-default-bg;
+  }
+
+  &-primary {
+    color: theme-color('primary');
+  }
+
+  &-info {
+    color: theme-color('info');
+  }
+
+  &-success {
+    color: theme-color('success');
+  }
+
+  &-warning {
+    color: theme-color('warning');
+  }
+
+  &-danger {
+    color: theme-color('danger');
+  }
+
+  &-gray {
+    color: #ddd;
+  }
+
+  &-inverse {
+    color: theme-color('inverse');
+  }
+}
+
 .btn-xs {
   padding: 1px 5px;
   font-size: 12px;
