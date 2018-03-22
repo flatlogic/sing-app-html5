@@ -56,14 +56,14 @@ $theme-colors: (
         dark: $gray-800,
         inverse: $gray-700,
         gray: $gray-300,
-        default: #f8f8f8
+        default: #e9ecef
 );
 
 $addition-bg: #e8f0f7 !default;
 
-$sidebar-action-bg: #2d3543 !default;
-$sidebar-bg-color: $gray-800 !default;
-$sidebar-color: $gray-600 !default;
+$sidebar-action-bg: transparent !default;
+$sidebar-bg-color: #fff !default;
+$sidebar-color: #667 !default;
 $sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: $yellow !default;
 $sidebar-item-hover-bg-color: $sidebar-action-bg;
@@ -72,7 +72,7 @@ $sidebar-ul-background: $sidebar-action-bg;
 // Typography
 // -------------------------
 
-$text-color:            #4d4d4d !default;
+$text-color:            #4d4d54 !default;
 //$text-color: #57534A; //a bit brown?
 
 $font-size-initial:       14px; // reset default browser value from 16px to 13px
@@ -98,7 +98,7 @@ $link-color: #218BC3 !default;
 
 //== Scaffolding
 //
-$body-bg: #f6f9fc !default;
+$body-bg: #fafbff !default;
 $body-bg-light: lighten($body-bg, 3%);
 
 // Layout
@@ -106,7 +106,7 @@ $body-bg-light: lighten($body-bg, 3%);
 $sidebar-padding-horizontal: 11px;
 $sidebar-icon-state-width: 50px !default;
 $sidebar-slim-scroll-width: 4px;
-$sidebar-width: 200px + $sidebar-slim-scroll-width !default;
+$sidebar-width: 220px + $sidebar-slim-scroll-width !default;
 
 $sidebar-transition-time: .3s !default;
 
@@ -127,10 +127,10 @@ $screen-lg-height: 670px !default;
 // Widgets
 // -------------------------
 
-$widget-padding-vertical: 15px !default;
+$widget-padding-vertical: 20px !default;
 $widget-padding-horizontal: 20px !default;
 $widget-bg-color: $white;
-$widget-shadow: 0 0 10px darken($body-bg, 5%);
+$widget-shadow: 0 0 40px darken($body-bg, 1%);
 
 $chart-spacer-y: 0.65rem !default;
 
@@ -138,8 +138,6 @@ $chart-spacer-y: 0.65rem !default;
 // Bootstrap variables
 // ------------------------
 // ------------------------
-
-$grid-gutter-width:          1.875rem !default; // 30px
 
 //== Breadcrumbs
 //

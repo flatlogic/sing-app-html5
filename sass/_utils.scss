@@ -8,10 +8,6 @@
   @include transition(height .15s ease-in-out);
 }
 
-.btn-default {
-  @include button-variant($btn-default-bg, $btn-default-border);
-}
-
 .badge-white {
   @include badge-variant($white);
 }
