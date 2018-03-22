@@ -1,12 +1,13 @@
 {
   "name": "Sing",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Sing App - Bootstrap 4 Admin Dashboard",
   "dependencies": {},
   "devDependencies": {
     "gulp": "~3.9.0",
-    "gulp-sass": "2.1.1",
-    "gulp-rename": "1.2.2"
+    "gulp-clean": "^0.4.0",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.1.1"
   },
   "engines": {
     "node": ">=0.10.0"
