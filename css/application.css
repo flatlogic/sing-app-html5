@@ -15081,6 +15081,9 @@ legend {
 .tooltip-inner {
   border-radius: 3px; }
 
+.alert-rounded {
+  border-radius: 100px; }
+
 .alert-sm {
   padding: 10px 12px;
   font-size: 0.9rem; }
@@ -27213,6 +27216,30 @@ input[type=search], input.search {
     .btn-inverse:not(:disabled):not(.disabled):active:focus, .btn-inverse:not(:disabled):not(.disabled).active:focus,
     .show > .btn-inverse.dropdown-toggle:focus {
       box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0.2rem rgba(47, 56, 64, 0.5); }
+
+.btn-outline-default {
+  color: #e8f0f7; }
+
+.btn-outline-primary {
+  color: #547fff; }
+
+.btn-outline-info {
+  color: #9964e3; }
+
+.btn-outline-success {
+  color: #3abf94; }
+
+.btn-outline-warning {
+  color: #ffc247; }
+
+.btn-outline-danger {
+  color: #f55d5d; }
+
+.btn-outline-gray {
+  color: #ddd; }
+
+.btn-outline-inverse {
+  color: #44515e; }
 
 .btn-xs {
   padding: 1px 5px;
