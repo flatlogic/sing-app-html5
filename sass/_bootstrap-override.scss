@@ -491,9 +491,7 @@ legend {
   > li {
     float: left;
     > a {
-      padding: 16px ($spacer / 2) $spacer ($spacer / 2);
-
-
+      padding: $spacer ($spacer / 2);
     }
   }
 
@@ -1015,11 +1013,6 @@ legend {
       flex-grow: 1;
       align-items: center;
       justify-content: space-between;
-
-      .dropdown-toggle-notifications {
-        display: inline;
-        line-height: $navbar-height;
-      }
     }
 
     @include media-breakpoint-down(sm) {
