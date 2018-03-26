@@ -9,13 +9,14 @@
   top: 0;
   bottom: 0;
   width: $sidebar-width;
-  border-right: 1px solid $gray-100;
+  border-right: 1px solid darken($sidebar-ul-background, 2%);
   background-color: $sidebar-bg-color;
   color: $sidebar-color;
 
   .slimScrollBar{
     @include border-radius(0 !important);
-    background-color: $sidebar-color !important;
+    background-color: lighten($sidebar-color, 30%) !important;
+    right: 0 !important;
   }
 }
 
@@ -77,6 +78,8 @@
   position: absolute;
   z-index: 1;
   background: none;
+  height: $navbar-height;
+
 
   @include media-breakpoint-down(sm) {
     font-size: $font-size-lg;
@@ -102,7 +105,7 @@
 
   .avatar{
     width: 30px;
-    margin-top: -5px;
+    margin-top: -12px;
     &.float-left,
     &.pull-left{
       margin-right: 5px;
@@ -169,7 +172,9 @@
 }
 
 .logo{
-  margin: 0.8rem 0 1.6rem;
+  position: relative;
+  z-index: 100;
+  margin: 0 0 2.6rem;
   height: $navbar-height;
   width: 100%;
   line-height: $navbar-height;
@@ -177,6 +182,7 @@
   vertical-align: middle;
   font-weight: $font-weight-bold;
   font-size: 18px;
+  background-color: $logo-background;
 
   @include transition(width .3s ease-in-out);
   a{
@@ -303,7 +309,7 @@
       line-height: 35px;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        line-height: 44px;
+        line-height: 55px;
       }
     }
 
@@ -325,7 +331,7 @@
       border-radius: 50%;
       background-color: $sidebar-item-active-color;
 
-      .fa, .glyphicon, .fi{
+      .fa, .glyphicon, .fi {
         color: $sidebar-bg-color;
       }
     }
@@ -349,10 +355,6 @@
       > a{
         padding: 10px 0 10px 40px;
         font-size: $font-size-mini;
-      }
-
-      &:hover{
-        background-color: lighten($sidebar-ul-background, 5%);
       }
 
       &.active{

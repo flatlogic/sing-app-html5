@@ -59,9 +59,17 @@ $theme-colors: (
         default: #e9ecef
 );
 
+
+//== Scaffolding
+//
+$body-bg: #f9fafe !default;
+$body-bg-light: lighten($body-bg, 3%);
+
 $addition-bg: #e8f0f7 !default;
 
-$sidebar-action-bg: transparent !default;
+$logo-background: $yellow;
+
+$sidebar-action-bg: #fafbff !default;
 $sidebar-bg-color: #fff !default;
 $sidebar-color: #667 !default;
 $sidebar-item-border-color: transparent !default;
@@ -96,11 +104,6 @@ $line-height-base:        1.428571429 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 $link-color: #218BC3 !default;
 
-//== Scaffolding
-//
-$body-bg: #fafbff !default;
-$body-bg-light: lighten($body-bg, 3%);
-
 // Layout
 // -------------------------
 $sidebar-padding-horizontal: 11px;
@@ -110,7 +113,7 @@ $sidebar-width: 220px + $sidebar-slim-scroll-width !default;
 
 $sidebar-transition-time: .3s !default;
 
-$navbar-height:                    50px !default;
+$navbar-height:                    60px !default;
 $navbar-font-size:              13px !default;
 
 $chat-sidebar-width: 250px + $sidebar-slim-scroll-width !default;
