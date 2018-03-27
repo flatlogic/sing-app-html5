@@ -62,14 +62,14 @@ $theme-colors: (
 
 //== Scaffolding
 //
-$body-bg: #f9fafe !default;
+$body-bg: #fafbff !default;
 $body-bg-light: lighten($body-bg, 3%);
 
 $addition-bg: #e8f0f7 !default;
 
 $logo-background: $yellow;
 
-$sidebar-action-bg: #fafbff !default;
+$sidebar-action-bg: #f9fafe !default;
 $sidebar-bg-color: #fff !default;
 $sidebar-color: #667 !default;
 $sidebar-item-border-color: transparent !default;
@@ -122,6 +122,8 @@ $content-padding-vertical: 42px !default;
 $content-padding-top: $content-padding-vertical + $navbar-height !default;
 $content-padding-horizontal: 40px !default;
 
+$grid-gutter-width: 40px;
+
 // Screens
 // -------------------------
 
@@ -133,7 +135,7 @@ $screen-lg-height: 670px !default;
 $widget-padding-vertical: 20px !default;
 $widget-padding-horizontal: 20px !default;
 $widget-bg-color: $white;
-$widget-shadow: 0 0 40px darken($body-bg, 1%);
+$widget-shadow: 0 0 40px darken($body-bg, 2%);
 
 $chart-spacer-y: 0.65rem !default;
 
