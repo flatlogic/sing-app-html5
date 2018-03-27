@@ -134,9 +134,10 @@
       padding-right: 0;
     }
   }
-  .navbar-nav .fa-times{
-    font-size: 20px;
-    vertical-align: -2px;
+  .navbar-nav {
+    .fa {
+      font-size: 20px;
+    }
   }
 }
 
@@ -180,13 +181,14 @@
   line-height: $navbar-height;
   text-align: center;
   vertical-align: middle;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semi-bold;
   font-size: 18px;
+  text-transform: uppercase;
   background-color: $logo-background;
 
   @include transition(width .3s ease-in-out);
   a{
-    color: $text-color;
+    color: $headings-color;
     text-decoration: none;
   }
 
@@ -889,7 +891,7 @@
 
 .chat-notification-sing{
   position: absolute;
-  top: 15px;
+  top: 0;
   left: 6px;
   display: inline-block;
   width: 8px;
@@ -899,7 +901,7 @@
 }
 
 .page-title{
-  margin: 0 0 calc(#{$spacer} + 6px);
+  margin: 0 0 2*$spacer;
 }
 
 .notifications{
