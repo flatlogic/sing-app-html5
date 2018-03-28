@@ -18,7 +18,6 @@
     "widgster": "0.0.2",
     "pace.js": "https://github.com/HubSpot/pace.git#v0.7.1",
     "animate.css": "3.5.0",
-    "jquery-touchswipe": "1.6.9",
     "awesome-bootstrap-checkbox": "1.0.0",
     "backbone": "1.2.3",
     "backbone.paginator": "2.0.2",
@@ -64,7 +63,9 @@
     "skycons": "https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed",
     "bootstrap": "4.0.0",
     "bootstrap-markdown": "2.9.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "hammerjs": "hammer#^2.0.8",
+    "jquery-hammerjs": "^2.0.0"
   },
   "private": true,
   "ignore": [
