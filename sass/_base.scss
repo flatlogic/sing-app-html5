@@ -117,7 +117,7 @@
   }
 
   .navbar-nav > li > a {
-    .rounded.rounded-lg,
+    .square.square-lg,
     .circle.circle.lg{
       margin: -7px -7px -8px;
     }
@@ -165,7 +165,7 @@
   }
 }
 
-.logo{
+.logo {
   position: relative;
   z-index: 100;
   margin: 0 0 2.6rem;
@@ -176,12 +176,15 @@
   vertical-align: middle;
   font-weight: $font-weight-semi-bold;
   font-size: 18px;
-  background-color: $logo-background;
 
-  @include transition(width .3s ease-in-out);
-  a{
-    color: $gray-800;
+  @include transition(width $sidebar-transition-time ease-in-out);
+  > a {
+    display: block;
+    color: $logo-color;
     text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0 2px;
   }
 
   .nav-collapsed &{
@@ -1006,6 +1009,11 @@
     }
   }
 
+  > .widget-body > hr {
+    margin-left: (-$widget-padding-horizontal);
+    margin-right: (-$widget-padding-horizontal);
+  }
+
   > .widget-body.p-0{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
 
@@ -1040,7 +1048,7 @@
     }
   }
 
-  .widget-table-overflow{
+  .widget-table-overlay{
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
   }
 
@@ -1165,8 +1173,8 @@
   height: 100%;
 }
 
-.widget-top-overflow,
-.widget-middle-overflow{
+.widget-top-overlay,
+.widget-middle-overlay{
   position: relative;
   margin: 0 (-$widget-padding-horizontal);
 
@@ -1175,7 +1183,7 @@
   }
 }
 
-.widget-top-overflow{
+.widget-top-overlay{
   margin-top: (-$widget-padding-vertical);
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
@@ -1508,7 +1516,7 @@ input[type=search], input.search {
       }
 
       .fa {
-        color: #363f4e;
+        color: $gray-800;
       }
       
     }

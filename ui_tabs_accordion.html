@@ -57,7 +57,7 @@
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fi flaticon-home"></i>
+                        <i class="fa fa-desktop"></i>
                     </span>
                     Dashboard
                     <i class="toggle fa fa-angle-down"></i>
@@ -68,39 +68,9 @@
                 </ul>
             </li>
             <li>
-                <a href="package.html">
-                    <span class="icon">
-                         <i class="fi flaticon-database-1"></i>
-                    </span>
-                    Sing Package
-                    <sup class="text-warning fm-semi-bold">
-                        4.0
-                    </sup>
-                </a>
-            </li>
-            <li>
-                <a href="charts.html">
-                    <span class="icon">
-                         <i class="fi flaticon-controls"></i>
-                    </span>
-                    Charts
-                </a>
-            </li>
-            <li>
-                <a href="profile.html">
-                    <span class="icon">
-                        <i class="fi flaticon-user"></i>
-                    </span>
-                    Profile
-                    <sup class="text-warning fw-semi-bold">
-                        new
-                    </sup>
-                </a>
-            </li>
-            <li>
                 <a href="inbox.html">
                     <span class="icon">
-                      <i class="fi flaticon-paper-plane"></i>
+                        <i class="fa fa-envelope"></i>
                     </span>
                     Email
                     <span class="badge bg-danger">
@@ -109,9 +79,39 @@
                 </a>
             </li>
             <li>
+                <a href="charts.html">
+                    <span class="icon">
+                        <i class="glyphicon glyphicon-stats"></i>
+                    </span>
+                    Charts
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <span class="icon">
+                        <i class="glyphicon glyphicon-user"></i>
+                    </span>
+                    Profile
+                    <sup class="text-warning fw-semi-bold">
+                        new
+                    </sup>
+                </a>
+            </li>
+            <li>
+                <a href="package.html">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    Sing Package
+                    <sup class="text-warning fw-semi-bold">
+                        4.0
+                    </sup>
+                </a>
+            </li>
+            <li>
                 <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fi flaticon-diamond"></i>
+                        <i class="fa fa-dollar"></i>
                     </span>
                     E-commerce
                     <i class="toggle fa fa-angle-down"></i>
@@ -129,7 +129,7 @@
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fi flaticon-list"></i>
+                        <i class="glyphicon glyphicon-align-right"></i>
                     </span>
                     Forms
                     <i class="toggle fa fa-angle-down"></i>
@@ -143,7 +143,7 @@
             <li class="active">
                 <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fi flaticon-layers"></i>
+                        <i class="glyphicon glyphicon-tree-conifer"></i>
                     </span>
                     UI Elements
                     <i class="toggle fa fa-angle-down"></i>
@@ -160,7 +160,7 @@
             <li>
                 <a href="grid.html">
                     <span class="icon">
-                        <i class="fi flaticon-menu-4"></i>
+                        <i class="glyphicon glyphicon-th"></i>
                     </span>
                     Grid
                 </a>
@@ -168,7 +168,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fi flaticon-map-location"></i>
+                        <i class="glyphicon glyphicon-map-marker"></i>
                     </span>
                     Maps
                     <i class="toggle fa fa-angle-down"></i>
@@ -184,7 +184,7 @@
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fi flaticon-equal-1"></i>
+                        <i class="fa fa-table"></i>
                     </span>
                     Tables
                     <i class="toggle fa fa-angle-down"></i>
@@ -197,7 +197,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fi flaticon-star"></i>
+                        <i class="fa fa-leaf"></i>
                     </span>
                     Extra
                     <i class="toggle fa fa-angle-down"></i>
@@ -215,7 +215,7 @@
             <li>
                 <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
-                        <i class="fi flaticon-folder-10"></i>
+                        <i class="fa fa-folder-open"></i>
                     </span>
                     Menu Levels
                     <i class="toggle fa fa-angle-down"></i>
@@ -292,8 +292,8 @@
                         <i class="fa fa-bars fa-lg"></i>
                     </a>
                     <!-- shown on xs & sm screen. collapses and expands navigation -->
-                    <a class="d-lg-none nav-link" id="nav-collapse-toggle" href="#">
-                        <span class="rounded rounded-lg bg-gray text-white d-md-none"><i class="fa fa-bars fa-lg"></i></span>
+                    <a class="d-lg-none nav-link" id="nav-collapse-toggle" href="#" data-toggle="tooltip" data-html="true" title="Show/hide<br>sidebar" data-placement="bottom">
+                        <span class="square square-lg bg-gray text-white d-md-none"><i class="fa fa-bars fa-lg"></i></span>
                         <i class="fa fa-bars fa-lg d-none d-md-block"></i>
                     </a>
                 </li>
@@ -304,7 +304,7 @@
                 <li>
                     <!-- toggles chat -->
                     <a href="#" data-toggle="chat-sidebar">
-                        <span class="rounded rounded-lg bg-gray text-white"><i class="fa fa-globe fa-lg"></i></span>
+                        <span class="square square-lg bg-gray text-white"><i class="fa fa-globe fa-lg"></i></span>
                     </a>
                 </li>
             </ul>
@@ -451,7 +451,7 @@
                                 </div>
                                 <a class="list-group-item" href="#">
                                 <span class="thumb-sm float-left mr">
-                                    <span class="rounded bg-primary rounded-lg">
+                                    <span class="square bg-primary square-lg">
                                         <i class="fa fa-facebook text-white"></i>
                                     </span>
                                 </span>
@@ -1036,8 +1036,8 @@
 <script src="vendor/slimScroll/jquery.slimscroll.js"></script>
 <script src="vendor/widgster/widgster.js"></script>
 <script src="vendor/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
-<script src="vendor/hammerjs/hammer.js"></script>
-<script src="vendor/jquery-hammerjs/jquery.hammer.js"></script>
+<script src="vendor/jquery-touchswipe/jquery.touchSwipe.js"></script>
+
 
 <!-- common app js -->
 <script src="js/settings.js"></script>

@@ -28,7 +28,7 @@ $gray-700: #44515e !default;
 $gray-800: #363f4e !default;
 $gray-900: #292f3b !default;
 $black:    #000 !default;
-$gray-light: #ddd !default;
+$gray-light: $gray-100 !default;
 
 $blue:    #547fff !default;
 $indigo:  #7f3ddb !default;
@@ -65,9 +65,9 @@ $theme-colors: (
 $body-bg: #fafbff !default;
 $body-bg-light: lighten($body-bg, 3%);
 
-$addition-bg: #e8f0f7 !default;
+$addition-bg: $gray-100 !default;
 
-$logo-background: $yellow;
+$logo-color: $yellow;
 
 $sidebar-action-bg: #f9fafe !default;
 $sidebar-bg-color: #fff !default;
@@ -170,7 +170,7 @@ $padding-small-horizontal:  10px !default;
 
 $font-family-sans-serif: 'Montserrat', sans-serif !default;
 
-$headings-font-weight: 300 !default;
+$headings-font-weight: 400 !default;
 
 //== Forms
 //

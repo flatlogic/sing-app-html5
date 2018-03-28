@@ -31,7 +31,7 @@
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
         <header class="logo d-none d-md-block">
-            <a href="index.html">sing <span class="text-white">app</span></a>
+            <a href="index.html">sing <span class="text-gray-dark">app</span></a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
@@ -125,6 +125,21 @@
         <!-- every .sidebar-nav may have a title -->
         <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
         <ul class="sidebar-nav">
+            <li>
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-network"></i>
+                    </span>
+                    Core
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-core" class="collapse">
+                    <li><a href="core_typography.html">Typography</a></li>
+                    <li><a href="core_colors.html">Colors</a></li>
+                    <li><a href="core_grid.html">Grid</a></li>
+                </ul>
+            </li>
             <li class="active">
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
@@ -293,7 +308,7 @@
                     </a>
                     <!-- shown on xs & sm screen. collapses and expands navigation -->
                     <a class="d-lg-none nav-link" id="nav-collapse-toggle" href="#" data-toggle="tooltip" data-html="true" title="Show/hide<br>sidebar" data-placement="bottom">
-                        <span class="rounded rounded-lg bg-gray text-white d-md-none"><i class="la la-bars"></i></span>
+                        <span class="square square-lg bg-gray text-white d-md-none"><i class="la la-bars"></i></span>
                         <i class="la la-bars d-none d-md-block"></i>
                     </a>
                 </li>
@@ -304,7 +319,7 @@
                 <li>
                     <!-- toggles chat -->
                     <a href="#" data-toggle="chat-sidebar">
-                        <span class="rounded rounded-lg bg-gray text-white"><i class="la la-globe"></i></span>
+                        <span class="square square-lg bg-gray text-white"><i class="la la-globe"></i></span>
                     </a>
                 </li>
             </ul>
@@ -451,7 +466,7 @@
                                 </div>
                                 <a class="list-group-item" href="#">
                                 <span class="thumb-sm float-left mr">
-                                    <span class="rounded bg-primary rounded-lg">
+                                    <span class="square bg-primary square-lg">
                                         <i class="la la-facebook text-white"></i>
                                     </span>
                                 </span>
@@ -1942,7 +1957,7 @@ Enjoy!
                                         </legend>
                                         <p>
                                             <code>.abc-checkbox-circle</code> for roundness. No more sad controls controls.
-                                            Check out this brand-new rounded checkboxes!
+                                            Check out this brand-new square checkboxes!
                                         </p>
                                         <div class="form-check abc-checkbox abc-checkbox-circle">
                                             <input id="checkbox7" type="checkbox">
