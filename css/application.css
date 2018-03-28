@@ -5,6 +5,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url(../node_modules/line-awesome/dist/css/line-awesome.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,500i,600,700");
 :root {
   --blue: #547fff;
@@ -26403,13 +26404,8 @@ a {
   @media (max-width: 991.98px) {
     .page-controls .navbar-form.navbar-left {
       padding-right: 0; } }
-  .page-controls .navbar-nav .fa {
+  .page-controls .navbar-nav .fa, .page-controls .navbar-nav .la {
     font-size: 20px; }
-
-/* ff icons valign fix */
-@-moz-document url-prefix() {
-  .page-controls .navbar-nav > li > a > .rounded-lg > i {
-    vertical-align: -8%; } }
 
 .content-wrap {
   position: relative;
@@ -26441,11 +26437,10 @@ a {
   vertical-align: middle;
   font-weight: 600;
   font-size: 18px;
-  text-transform: uppercase;
   background-color: #ffc247;
   transition: width 0.3s ease-in-out; }
   .logo a {
-    color: inherit;
+    color: #363f4e;
     text-decoration: none; }
   .nav-collapsed .logo {
     width: 50px; }
@@ -26483,7 +26478,7 @@ a {
       border-radius: 0.2rem; }
       @media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
         .sidebar-nav li a .badge {
-          margin-top: 11px; } }
+          margin-top: 14px; } }
   .sidebar-nav > li > a {
     position: relative;
     border-top: 1px solid transparent;
@@ -26539,7 +26534,8 @@ a {
     border-bottom: 1px solid transparent; }
   .sidebar-nav > .active > a {
     color: #ffc247;
-    background-color: #fff; }
+    background-color: #fff;
+    font-weight: 400; }
     .sidebar-nav > .active > a .icon {
       border-radius: 50%;
       background-color: #ffc247; }
