@@ -26257,6 +26257,9 @@ html {
 body {
   font-weight: 300;
   overflow-x: hidden; }
+  @media (max-width: 767.98px) {
+    body {
+      cursor: pointer; } }
 
 th {
   font-weight: 600; }
