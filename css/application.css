@@ -26481,7 +26481,7 @@ a {
       border-radius: 0.2rem; }
       @media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
         .sidebar-nav li a .badge {
-          margin-top: 14px; } }
+          margin-top: 15px; } }
   .sidebar-nav > li > a {
     position: relative;
     border-top: 1px solid transparent;
@@ -26504,7 +26504,7 @@ a {
       font-size: 16px; }
       @media (min-width: 992px) and (min-height: 670px), (max-width: 767px) {
         .sidebar-nav > li > a .icon {
-          top: 12px; } }
+          top: 14px; } }
       .sidebar-nav > li > a .icon .fa, .sidebar-nav > li > a .icon .glyphicon {
         font-size: 16px;
         color: rgba(102, 102, 119, 0.7); }
@@ -26542,7 +26542,7 @@ a {
     .sidebar-nav > .active > a .icon {
       border-radius: 50%;
       background-color: #ffc247; }
-      .sidebar-nav > .active > a .icon .fa, .sidebar-nav > .active > a .icon .glyphicon, .sidebar-nav > .active > a .icon .fi {
+      .sidebar-nav > .active > a .icon .fa, .sidebar-nav > .active > a .icon .glyphicon, .sidebar-nav > .active > a .icon .fi, .sidebar-nav > .active > a .icon .la {
         color: #fff; }
   .sidebar-nav > li ul {
     padding: 0;

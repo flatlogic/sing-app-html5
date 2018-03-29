@@ -228,7 +228,7 @@
       border-radius: $border-radius-sm;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        margin-top: 14px;
+        margin-top: 15px;
       }
     }
   }
@@ -249,7 +249,7 @@
 
     .icon{
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        top: 12px;
+        top: 14px;
       }
 
       display: block;
@@ -329,7 +329,7 @@
       border-radius: 50%;
       background-color: $sidebar-item-active-color;
 
-      .fa, .glyphicon, .fi {
+      .fa, .glyphicon, .fi, .la {
         color: $sidebar-bg-color;
       }
     }
