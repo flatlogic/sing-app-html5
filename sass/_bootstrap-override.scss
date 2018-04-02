@@ -601,15 +601,12 @@ legend {
 // --------------------------------------------------
 
 .btn {
-  .glyphicon {
-    top: 3px;
-  }
+  // add tiny gradient to background
+  background-image: linear-gradient(to right, #ffffff26, #fff0);
+}
 
-  &,
-  &.disabled,
-  &:hover {
-    color: white;
-  }
+.btn .glyphicon {
+  top: 3px;
 }
 
 .btn, .btn-inverse, .btn-gray {
