@@ -26309,6 +26309,9 @@ body {
 th {
   font-weight: 600; }
 
+b, strong {
+  font-weight: 600; }
+
 a {
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out; }
 
