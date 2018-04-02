@@ -14930,9 +14930,6 @@ legend {
 .btn .glyphicon {
   top: 3px; }
 
-.btn, .btn.disabled, .btn:hover {
-  color: white; }
-
 .btn:not(.active), .btn-inverse:not(.active), .btn-gray:not(.active) {
   box-shadow: none !important; }
 
@@ -26467,6 +26464,7 @@ a {
   .sidebar-nav li a {
     display: block;
     color: #667;
+    font-weight: 400;
     text-decoration: none; }
     .sidebar-nav li a .toggle {
       float: right;
