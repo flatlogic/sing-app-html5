@@ -1,0 +1,274 @@
+<!--
+  Main sidebar seen on the left. may be static or collapsing depending on selected state.
+
+    * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
+    * Static - stays always open.
+-->
+<nav id="sidebar" class="sidebar" role="navigation">
+    <!-- need this .js class to initiate slimscroll -->
+    <div class="js-sidebar-content">
+        <header class="logo d-none d-md-block">
+            <a href="index.html">sing <span class="text-gray-dark">app</span></a>
+        </header>
+        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+             looks good, so adding it and enhancing with notifications -->
+        <div class="sidebar-status d-md-none">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="thumb-sm avatar float-right">
+                    <img class="rounded-circle" src="demo/img/people/a5.jpg" alt="...">
+                </span>
+                <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
+                     should be used with bg-* and text-* classes for colors -->
+                <span class="circle bg-warning fw-bold text-gray-dark">
+                    13
+                </span>
+                &nbsp;
+                Philip <strong>Smith</strong>
+                <b class="caret"></b>
+            </a>
+            <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
+        </div>
+        <!-- main notification links are placed inside of .sidebar-nav -->
+        <ul class="sidebar-nav">
+            <li class="{{#activeClass active "dashboard_dashboard dashboard_widgets"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-home"></i>
+                    </span>
+                    Dashboard
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-dashboard" class="collapse {{#activeClass active "dashboard_dashboard dashboard_widgets"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "dashboard_dashboard"}} active {{/activeClass}}"><a href="index.html">Dashboard</a></li>
+                    <li class="{{#activeClass active "dashboard_widgets"}} active {{/activeClass}}"><a href="widgets.html">Widgets</a></li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "email"}} active {{/activeClass}}">
+                <a href="inbox.html">
+                    <span class="icon">
+                        <i class="fi flaticon-paper-plane"></i>
+                    </span>
+                    Email
+                    <span class="badge bg-danger">
+                        9
+                    </span>
+                </a>
+            </li>
+            <li class="{{#activeClass active "charts"}} active {{/activeClass}}">
+                <a href="charts.html">
+                    <span class="icon">
+                        <i class="fi flaticon-controls"></i>
+                    </span>
+                    Charts
+                </a>
+            </li>
+            <li class="{{#activeClass active "profile"}} active {{/activeClass}}">
+                <a href="profile.html">
+                    <span class="icon">
+                        <i class="fi flaticon-user"></i>
+                    </span>
+                    Profile
+                    <sup class="text-warning fw-semi-bold">
+                        new
+                    </sup>
+                </a>
+            </li>
+            <li class="{{#activeClass active "package"}} active {{/activeClass}}">
+                <a href="package.html">
+                    <span class="icon">
+                      <i class="fi flaticon-database-1"></i>
+                    </span>
+                    Sing Package
+                    <sup class="text-warning fw-semi-bold">
+                        4.0
+                    </sup>
+                </a>
+            </li>
+            <li class="{{#activeClass active "product_detail product_grid"}} active {{/activeClass}}">
+                <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="la la-dollar"></i>
+                    </span>
+                    E-commerce
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-pages" class="collapse {{#activeClass active "product_detail product_grid"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "product_detail"}} active {{/activeClass}}"><a href="product_detail.html">Product Detail</a></li>
+                    <li class="{{#activeClass active "product_grid"}} active {{/activeClass}}"><a href="product_grid.html">Product Grid</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- every .sidebar-nav may have a title -->
+        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+        <ul class="sidebar-nav">
+            <li class="{{#activeClass active "core_typography core_colors core_grid"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-network"></i>
+                    </span>
+                    Core
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-core" class="collapse {{#activeClass active "core_typography core_colors core_grid"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "core_typography"}} active {{/activeClass}}"><a href="core_typography.html">Typography</a></li>
+                    <li class="{{#activeClass active "core_colors"}} active {{/activeClass}}"><a href="core_colors.html">Colors</a></li>
+                    <li class="{{#activeClass active "core_grid"}} active {{/activeClass}}"><a href="core_grid.html">Grid</a></li>
+                </ul> 
+            </li>
+            <li class="{{#activeClass active "form_elements form_validation form_wizard"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-list"></i>
+                    </span>
+                    Forms
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-forms" class="collapse {{#activeClass active "form_elements form_validation form_wizard"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "form_elements"}} active {{/activeClass}}"><a href="form_elements.html">Form Elements</a></li>
+                    <li class="{{#activeClass active "form_validation"}} active {{/activeClass}}"><a href="form_validation.html">Form Validation</a></li>
+                    <li class="{{#activeClass active "form_wizard"}} active {{/activeClass}}"><a href="form_wizard.html">Form Wizard</a></li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "ui_components ui_notifications ui_icons ui_buttons ui_tabs_accordion ui_list_groups"}} active {{/activeClass}}">
+                <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-layers"></i>
+                    </span>
+                    UI Elements
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-ui" class="collapse {{#activeClass active "ui_components ui_notifications ui_icons ui_buttons ui_tabs_accordion ui_list_groups"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "ui_components"}} active {{/activeClass}}"><a href="ui_components.html">Components</a></li>
+                    <li class="{{#activeClass active "ui_notifications"}} active {{/activeClass}}"><a href="ui_notifications.html">Notifications</a></li>
+                    <li class="{{#activeClass active "ui_icons"}} active {{/activeClass}}"><a href="ui_icons.html">Icons</a></li>
+                    <li class="{{#activeClass active "ui_buttons"}} active {{/activeClass}}"><a href="ui_buttons.html">Buttons</a></li>
+                    <li class="{{#activeClass active "ui_tabs_accordion"}} active {{/activeClass}}"><a href="ui_tabs_accordion.html">Tabs & Accordion</a></li>
+                    <li class="{{#activeClass active "ui_list_groups"}} active {{/activeClass}}"><a href="ui_list_groups.html">List Groups</a></li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "grid"}} active {{/activeClass}}">
+                <a href="grid.html">
+                    <span class="icon">
+                        <i class="fi flaticon-menu-4"></i>
+                    </span>
+                    Grid
+                </a>
+            </li>
+            <li class="{{#activeClass active "maps_google maps_vector"}} active {{/activeClass}}">
+                <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-map-location"></i>
+                    </span>
+                    Maps
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-maps" class="collapse {{#activeClass active "maps_google maps_vector"}} show {{/activeClass}}">
+                    <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
+                         target page -->
+                    <li class="{{#activeClass active "maps_google"}} active {{/activeClass}}"><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li class="{{#activeClass active "maps_vector"}} active {{/activeClass}}"><a href="maps_vector.html">Vector Maps</a></li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "tables_basic tables_dynamic"}} active {{/activeClass}}">
+                <!-- an example of nested submenu. basic bootstrap collapse component -->
+                <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-equal-1"></i>
+                    </span>
+                    Tables
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-tables" class="collapse {{#activeClass active "tables_basic tables_dynamic"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "tables_basic"}} active {{/activeClass}}"><a href="tables_basic.html">Tables Basic</a></li>
+                    <li class="{{#activeClass active "tables_dynamic"}} active {{/activeClass}}"><a href="tables_dynamic.html">Tables Dynamic</a></li>
+                </ul>
+            </li>
+            <li class="{{#activeClass active "calendar invoice login error gallery search time_line"}} active {{/activeClass}}">
+                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-star"></i>
+                    </span>
+                    Extra
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-extra" class="collapse {{#activeClass active "calendar invoice login error gallery search time_line"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "calendar"}} active {{/activeClass}}"><a href="calendar.html">Calendar</a></li>
+                    <li class="{{#activeClass active "invoice"}} active {{/activeClass}}"><a href="invoice.html">Invoice</a></li>
+                    <li class="{{#activeClass active "login"}} active {{/activeClass}}"><a href="login.html" target="_blank" data-no-pjax>Login Page</a></li>
+                    <li class="{{#activeClass active "error"}} active {{/activeClass}}"><a href="error.html" target="_blank" data-no-pjax>Error Page</a></li>
+                    <li class="{{#activeClass active "gallery"}} active {{/activeClass}}"><a href="gallery.html">Gallery</a></li>
+                    <li class="{{#activeClass active "search"}} active {{/activeClass}}"><a href="search.html">Search Results</a></li>
+                    <li class="{{#activeClass active "time_line"}} active {{/activeClass}}"><a href="time_line.html" data-no-pjax>Time Line</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
+                    <span class="icon">
+                        <i class="fi flaticon-folder-10"></i>
+                    </span>
+                    Menu Levels
+                    <i class="toggle fa fa-angle-down"></i>
+                </a>
+                <ul id="sidebar-levels" class="collapse">
+                    <li><a href="#">Level 1</a></li>
+                    <li>
+                        <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
+                            Level 2
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-sub-levels" class="collapse">
+                            <li><a href="#">Level 3</a></li>
+                            <li><a href="#">Level 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+        <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+        <ul class="sidebar-labels">
+            <li>
+                <a href="#">
+                    <!-- yep, .circle again -->
+                    <i class="fa fa-circle text-warning mr-xs"></i>
+                    <span class="label-name">My Recent</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle text-gray mr-xs"></i>
+                    <span class="label-name">Starred</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-circle text-danger mr-xs"></i>
+                    <span class="label-name">Background</span>
+                </a>
+            </li>
+        </ul>
+        <h5 class="sidebar-nav-title">Projects</h5>
+        <!-- A place for sidebar notifications & alerts -->
+        <div class="sidebar-alerts">
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="text-white fw-semi-bold">Sales Report</span> <br>
+                <div class="progress progress-xs mt-xs mb-0">
+                    <div class="progress-bar progress-bar-gray-light" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small>Calculating x-axis bias... 65%</small>
+            </div>
+            <div class="alert">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="text-white fw-semi-bold">Personal Responsibility</span> <br>
+                <div class="progress progress-xs mt-xs mb-0">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <small>Provide required notes</small>
+            </div>
+        </div>
+    </div>
+</nav>

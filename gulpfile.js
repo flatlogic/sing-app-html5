@@ -1,52 +1,62 @@
 'use strict';
 
 var gulp = require('gulp');
-
 var sass = require('gulp-sass');
-
 var rename = require ('gulp-rename');
+var hb = require('gulp-hb');
+var layouts = require('handlebars-layouts');
 
-var clean = require('gulp-clean');
+hb.handlebars.registerHelper(layouts(hb.handlebars));
 
+// Copy demo, img, js, fonts folders from src to dist
+gulp.task('copy', function () {
+    gulp.src('./src/demo/**/*')
+        .pipe(gulp.dest('dist/demo'));
+    
+    gulp.src('./src/img/**/*')
+        .pipe(gulp.dest('dist/img'));
+
+    gulp.src('./src/js/**/*')
+        .pipe(gulp.dest('dist/js'));
+    
+    gulp.src('./src/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts'));
+});
+
+// Handle handlebars
+gulp.task('hbs', function () {
+    gulp.src('src/*.hbs')
+        .pipe(hb({
+            partials: './src/partials/*.hbs',
+            helpers: [
+                './node_modules/handlebars-layouts/index.js',
+                './src/helpers/index.js'
+            ]
+        }))
+        .pipe(rename({extname: ".html"}))
+        .pipe(gulp.dest('dist'));
+});
+
+// Handle sass
 gulp.task('styles', function () {
-
-    gulp.src('./sass/application.scss')
+    gulp.src('./src/sass/application.scss')
         .pipe(sass({
             precision: 10
         }).on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
-
-    gulp.src('./sass/application.scss')
+        .pipe(gulp.dest('./dist/css'));
+    gulp.src('./src/sass/application.scss')
         .pipe(sass({
             precision: 10,
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./css'));
-});
-
-gulp.task('watch', function () {
-    gulp.watch('./sass/*.scss', ['styles']);
-});
-
-gulp.task('clean', function () {
-    return gulp.src('dist', {read: false})
-        .pipe(clean());
-});
-
-gulp.task('copy', ['clean'], function () {
-    gulp.src('./*.html')
-        .pipe(gulp.dest('./dist'));
-    gulp.src('./css/**/*')
         .pipe(gulp.dest('./dist/css'));
-    gulp.src('./demo/**/*')
-        .pipe(gulp.dest('./dist/demo'));
-    gulp.src('./js/**/*')
-        .pipe(gulp.dest('./dist/js'));
-    gulp.src('./img/**/*')
-        .pipe(gulp.dest('./dist/img'));
-    gulp.src('./vendor/**/*')
-        .pipe(gulp.dest('./dist/vendor'));
 });
 
-gulp.task('build', ['styles', 'copy']);
+// Development
+gulp.task('watch', ['hbs', 'styles', 'copy'], function () {
+    gulp.watch('./src/sass/*.scss', ['styles']);
+    gulp.watch('./src/**/*.hbs', ['hbs']);
+});
+
+gulp.task('build', ['hbs', 'styles', 'copy']);
