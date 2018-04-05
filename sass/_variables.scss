@@ -2,7 +2,7 @@
 // -------------------------
 // -------------------------
 
-$vendor-folder: '../vendor' !default;
+$vendor-folder: '../../bower_components' !default;
 
 // Glyphicons
 
@@ -324,10 +324,10 @@ $alert-transparent: 0.25;
 //-- Iconography
 //
 
-$icon-font-path: "../vendor/bootstrap-sass/assets/fonts/bootstrap/" !default;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/" !default;
 
 // Font Awesome variables
 // ------------------------
 // ------------------------
 
-$fa-font-path: "../vendor/font-awesome/fonts" !default;
+$fa-font-path: "../../bower_components/font-awesome/fonts" !default;
