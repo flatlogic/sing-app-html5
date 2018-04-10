@@ -688,7 +688,7 @@ function initAppFunctions(){
             });
         }
 
-        SingApp.onResize(initSidebarScroll, true);
+        // SingApp.onResize(initSidebarScroll, true);
         initSidebarScroll();
 
         /*

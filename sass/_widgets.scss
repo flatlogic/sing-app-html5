@@ -293,7 +293,7 @@
   font-size: 14px;
   line-height: 32px;
   > a{
-    color: $text-color;
+    color: $body-color;
     text-decoration: none;
   }
 
@@ -613,7 +613,7 @@
     font-weight: $font-weight-normal;
     &:hover{
       background-color: $gray-light;
-      color: $text-color;
+      color: $body-color;
     }
   }
 }
@@ -678,7 +678,7 @@
   font-weight: $font-weight-normal;
 
   > a {
-    color: $text-color;
+    color: $body-color;
   }
 
   @include media-breakpoint-up(md){
@@ -720,12 +720,12 @@
       }
 
       > a {
-        color: lighten($text-color, 30%);
+        color: lighten($body-color, 30%);
         text-decoration: none;
 
         &:hover,
         &:focus {
-          color: $text-color;
+          color: $body-color;
         }
       }
     }
@@ -1043,7 +1043,7 @@
     font-weight: $font-weight-normal;
     &:hover{
       background-color: #e5e5e5;
-      color: $text-color;
+      color: $body-color;
     }
 
     > .fa-circle{
@@ -1061,11 +1061,11 @@
     &:hover,
     &:focus {
       background-color: $gray-light;
-      color: $text-color;
+      color: $body-color;
       font-weight: $font-weight-semi-bold;
 
       > .label{
-        color: $text-color;
+        color: $body-color;
         background-color: $white;
       }
     }
@@ -1130,7 +1130,7 @@
 
   .unread{
     font-weight: $font-weight-semi-bold;
-    color: $text-color;
+    color: $body-color;
   }
 
   .starred{
@@ -1138,7 +1138,7 @@
     cursor: pointer;
     @include transition(color .2s);
     &:hover{
-      color: $text-color;
+      color: $body-color;
     }
 
     .fa-star{

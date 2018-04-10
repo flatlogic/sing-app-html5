@@ -158,6 +158,10 @@
     padding-right: 20px;
   }
 
+  @include media-breakpoint-up(sm) {
+    user-select: auto !important;
+  }
+
   .content-footer {
     position: absolute;
     bottom: 10px;
@@ -174,8 +178,9 @@
   line-height: $navbar-height;
   text-align: center;
   vertical-align: middle;
-  font-weight: $font-weight-semi-bold;
+  font-weight: $font-weight-normal;
   font-size: 18px;
+  letter-spacing: 1px;
 
   @include transition(width $sidebar-transition-time ease-in-out);
   > a {
@@ -184,7 +189,7 @@
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
-    padding: 0 2px;
+    padding: 0 1px;
   }
 
   .nav-collapsed &{
@@ -206,7 +211,6 @@
   li a {
     display: block;
     color: $sidebar-color;
-    font-weight: $font-weight-normal;
     text-decoration: none;
 
     .toggle{
@@ -226,7 +230,7 @@
       margin-top: 7px;
       margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       padding: 7px;
-      border-radius: $border-radius-sm;
+      border-radius: 50%;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
         margin-top: 15px;
@@ -262,44 +266,6 @@
       line-height: 28px;
       text-align: center;
       font-size: 16px;
-
-      .fa, .glyphicon{
-        font-size: 16px;
-        color: rgba($sidebar-color, .7);
-      }
-
-      .glyphicon{
-        left: -1px;
-        top: 5px;
-      }
-
-      .glyphicon-th{
-        top: 2px;
-        left: 0;
-      }
-
-      .glyphicon-tree-conifer{
-        left: 0;
-      }
-
-      .glyphicon-map-marker{
-        top: 6px;
-      }
-
-      .fa-envelope{
-        position: relative;
-        top: -1px;
-      }
-
-      @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        .glyphicon {
-          top: 6px;
-        }
-
-        .glyphicon-map-marker {
-          top: 7px;
-        }
-      }
 
     }
 
@@ -441,7 +407,7 @@
     left: 0;
     margin: 0 20px;
     width: 320px;
-    color: $text-color;
+    color: $body-color;
     @media (max-width: 380px) {
       width: 100%;
       margin: 0;
@@ -489,9 +455,8 @@
   font-size: $font-size-mini;
   > li{
     > a{
-      color: $gray-200;
+      color: $sidebar-color;
       text-decoration: none;
-      font-weight: normal;
 
       .circle,
       .circle-o{
@@ -549,12 +514,13 @@
     }
 
     + li {
-      margin-top: $spacer/2;
+      margin-top: $spacer;
     }
   }
 }
 
-.sidebar-alerts{
+.sidebar-alerts {
+  margin-bottom: 2*$spacer;
   font-size: $font-size-mini;
   @include transition(opacity $sidebar-transition-time ease-in-out);
   opacity: 1;
@@ -580,10 +546,6 @@
       opacity: 1;
       color: $sidebar-color;
     }
-  }
-
-  .progress{
-    background-color: lighten($sidebar-bg-color, 10%);
   }
 }
 
@@ -702,7 +664,7 @@
     font-size: $font-size-mini;
     font-weight: $font-weight-normal;
     background-color: $gray-200;
-    color: $text-color;
+    color: $body-color;
     border-radius: $border-radius;
 
     &:before{
@@ -921,7 +883,7 @@
     overflow-y: scroll;
   }
   .list-group-item{
-    color: $text-color;
+    color: $body-color;
 
     @include transition(background-color .15s ease-in-out);
     &:hover{
@@ -1352,7 +1314,7 @@ input[type=search], input.search {
     }
 
     .btn {
-      color: $text-color;
+      color: $body-color;
       width: 50%;
       background: transparent;
       display: flex;
@@ -1955,7 +1917,7 @@ input[type=search], input.search {
       align-items: center;
       justify-content: space-between;
       text-decoration: none;
-      color: $text-color;
+      color: $body-color;
 
       .fa {
         transition: $transition-base;
