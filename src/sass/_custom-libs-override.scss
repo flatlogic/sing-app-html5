@@ -233,7 +233,7 @@
   border: 1px solid #ccc;
   border-radius: $border-radius;
   font-size: $font-size-sm;
-  color: $text-color;
+  color: $body-color;
 }
 
 .zoomIn, .zoomOut {
@@ -246,7 +246,7 @@
   box-sizing: content-box;
   border: 1px solid #ccc;
   background-color: #fff;
-  color: $text-color;
+  color: $body-color;
   line-height: 20px;
   text-align: center;
   border-radius: $border-radius;
@@ -298,7 +298,7 @@
 
 svg text {
   font: $font-weight-base $font-size-sm $font-family-base;
-  fill: $text-color;
+  fill: $body-color;
 }
 
 svg .title {
@@ -584,7 +584,7 @@ $slider-handle-size: 26px;
   }
 
   .popover{
-    color: $text-color;
+    color: $body-color;
   }
 }
 .calendar .table td{
@@ -707,7 +707,7 @@ input.parsley-error{
   h3 {
     font-family: $font-family-base;
     font-weight: $headings-font-weight;
-    color: $text-color;
+    color: $body-color;
   }
 
   .close {
@@ -718,7 +718,7 @@ input.parsley-error{
 
 .wizard-nav-list > li.already-visited > a.wizard-nav-link,
 .wizard-nav-list > li.already-visited.active > a.wizard-nav-link{
-  color: $text-color;
+  color: $body-color;
 }
 
 .wizard-nav-list li.active > a,
@@ -777,7 +777,7 @@ input.parsley-error{
 .table-editable{
 
   th > a{
-    color: $text-color;
+    color: $body-color;
     cursor: pointer;
   }
 
@@ -931,7 +931,7 @@ table.dataTable tfoot th{
 .dataTables_wrapper .dataTables_info,
 .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate{
-  color: $text-color;
+  color: $body-color;
 }
 
 .dataTables_wrapper .dataTables_length,
@@ -1011,7 +1011,7 @@ table.table-hover.dataTable > tbody > tr:hover > td {
   height: 30px;
   margin: 5px 0;
   padding: 5px 10px;
-  color: $text-color;
+  color: $body-color;
   text-decoration: none;
   background: $white;
   border: 1px solid $list-group-border-color;
@@ -1038,7 +1038,7 @@ table.table-hover.dataTable > tbody > tr:hover > td {
   line-height: 1;
   text-align: center;
   font-weight: bold;
-  color: $text-color;
+  color: $body-color;
 
   &:focus,
   &:active{
@@ -1716,7 +1716,7 @@ ul.messenger-theme-air .messenger-message{
   border: none;
   font-weight: $font-weight-normal;
   background-color: $gray-light;
-  color: $text-color;
+  color: $body-color;
 }
 
 .fc-today{

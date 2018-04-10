@@ -286,7 +286,7 @@ legend {
       @include transition(color .15s ease-in-out);
       &:hover {
         background-color: transparent;
-        color: $text-color;
+        color: $body-color;
       }
     }
 
@@ -649,7 +649,7 @@ legend {
   margin-bottom: $spacer*1.5;
 
   > .active {
-    color: $text-color;
+    color: $body-color;
     font-weight: $font-weight-semi-bold;
   }
 }
@@ -797,7 +797,7 @@ legend {
 .list-group-item{
   &,
   &:hover {
-    color: $text-color;
+    color: $body-color;
   }
 
   &:hover {
@@ -983,7 +983,7 @@ legend {
     }
 
     .page-link {
-      color: $text-color;
+      color: $body-color;
       border: none;
     }
 
@@ -1285,7 +1285,7 @@ code {
   color: white;
 
   &.bg-default {
-    color: $text-color;
+    color: $body-color;
   }
 }
 
@@ -1323,7 +1323,7 @@ a.badge {
       &,
       &:hover,
       &:active {
-        color: $text-color;
+        color: $body-color;
         text-decoration: none;
       }
 

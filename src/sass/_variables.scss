@@ -22,11 +22,11 @@ $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
-$gray-500: #bfccd1 !default;
-$gray-600: #798fa5 !default;
-$gray-700: #44515e !default;
-$gray-800: #363f4e !default;
-$gray-900: #292f3b !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
 $black:    #000 !default;
 $gray-light: $gray-100 !default;
 
@@ -70,7 +70,7 @@ $logo-color: $yellow;
 
 $sidebar-action-bg: #f9fafe !default;
 $sidebar-bg-color: #fff !default;
-$sidebar-color: #667 !default;
+$sidebar-color: $gray-600 !default;
 $sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: $yellow !default;
 $sidebar-item-hover-bg-color: $sidebar-action-bg;
@@ -79,8 +79,8 @@ $sidebar-ul-background: $sidebar-action-bg;
 // Typography
 // -------------------------
 
-$text-color:            #4d4d54 !default;
-//$text-color: #57534A; //a bit brown?
+$body-color:            $gray-700 !default;
+//$body-color: #57534A; //a bit brown?
 
 $font-size-initial:       14px; // reset default browser value from 16px to 13px
 $font-size-base:          1rem !default;
@@ -174,15 +174,12 @@ $headings-font-weight: 400 !default;
 //== Forms
 //
 $input-border-focus:             #4D90FE !default; //webkit focus color
-$legend-color:                   lighten($text-color, 15%) !default;
+$legend-color:                   lighten($body-color, 15%) !default;
 $cursor-disabled:                not-allowed !default;
 
 //== Tables
 //
 
-$table-bg-accent:               #f3f3f3 !default;
-$table-bg-hover:                $gray-200 !default;
-$table-border-color:            $gray-light !default;
 
 //== Buttons
 //
@@ -192,7 +189,7 @@ $btn-default-border: $addition-bg !default;
 
 //== Dropdowns
 //
-$dropdown-link-color:            $text-color !default;
+$dropdown-link-color:            $body-color !default;
 
 
 //== Navs
@@ -292,8 +289,8 @@ $thumbnail-bg:                $white !default;
 
 $breadcrumb-padding-horizontal: 0 !default;
 $breadcrumb-bg:                 transparent !default;
-$breadcrumb-color:              $text-color !default;
-$breadcrumb-active-color:       $text-color !default;
+$breadcrumb-color:              $body-color !default;
+$breadcrumb-active-color:       $body-color !default;
 $breadcrumb-separator:          ">" !default;
 
 //== Pagination
@@ -304,11 +301,11 @@ $pagination-color:                     $gray-600 !default;
 $pagination-bg:                        #fff !default;
 $pagination-border:                    transparent !default;
 
-$pagination-hover-color:               $text-color !default;
+$pagination-hover-color:               $body-color !default;
 $pagination-hover-bg:                  $gray-200 !default;
 $pagination-hover-border:              transparent !default;
 
-$pagination-active-color:              $text-color !default;
+$pagination-active-color:              $body-color !default;
 $pagination-active-bg:                 $gray-200 !default;
 $pagination-active-border:             transparent !default;
 

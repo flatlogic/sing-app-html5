@@ -57,6 +57,7 @@ gulp.task('styles', function () {
 gulp.task('watch', ['hbs', 'styles', 'copy'], function () {
     gulp.watch('./src/sass/*.scss', ['styles']);
     gulp.watch('./src/**/*.hbs', ['hbs']);
+    gulp.watch('./src/**/*.js', ['copy']);
 });
 
 gulp.task('build', ['hbs', 'styles', 'copy']);
