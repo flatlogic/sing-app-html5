@@ -8,18 +8,21 @@ $(function(){
         colors: {
             'white': '#fff',
             'black': '#000',
-            'gray-light': '#999',
-            'gray-lighter': '#eee',
-            'gray': '#666',
-            'gray-dark': '#343434',
-            'gray-darker': '#222',
-            'gray-semi-light': '#777',
-            'gray-semi-lighter': '#ddd',
-            'brand-primary': '#5d8fc2',
-            'brand-success': '#64bd63',
-            'brand-warning': '#f0b518',
-            'brand-danger': '#dd5826',
-            'brand-info': '#5dc4bf'
+            'gray-100': '#f8f9fa',
+            'gray-200': '#e9ecef',
+            'gray-300': '#dee2e6',
+            'gray-400': '#ced4da',
+            'gray-500': '#adb5bd',
+            'gray-600': '#6c757d',
+            'gray-700': '#495057',
+            'gray-800': '#343a40',
+            'gray-900': '#212529',
+            'brand-primary': '#547fff',
+            'brand-success': '#3abf94',
+            'brand-warning': '#ffc247',
+            'brand-danger': '#f55d5d',
+            'brand-info': '#9964e3',
+            'body-bg': '#fafbff'
         },
 
         screens: {

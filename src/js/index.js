@@ -7,8 +7,12 @@ $(function(){
             map:{
                 name : "usa_states",
                 defaultArea : {
+                    attrs: {
+                        fill: '#e5e7f1',
+                        stroke: Sing.colors['body-bg'],
+                    },
                     attrsHover: {
-                        fill: '#242424',
+                        fill: '#e9ebf6',
                         animDuration : 100
                     },
                     tooltip: {
@@ -249,6 +253,7 @@ $(function(){
                 easing: 'easeInQuad'
             }, 1000);
         });
+        $('.js-progress-animate').animateProgressBar();
     }
 
     function pjaxPageLoad(){

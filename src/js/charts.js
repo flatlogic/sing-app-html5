@@ -63,7 +63,7 @@ $(function(){
                     font :{
                         lineHeight: 13,
                         weight: "bold",
-                        color: Sing.colors['gray-semi-light']
+                        color: Sing.colors['gray-500']
                     }
                 },
                 yaxis: {
@@ -72,7 +72,7 @@ $(function(){
                     font :{
                         lineHeight: 13,
                         weight: "bold",
-                        color: Sing.colors['gray-semi-light']
+                        color: Sing.colors['gray-500']
                     }
                 },
                 grid: {

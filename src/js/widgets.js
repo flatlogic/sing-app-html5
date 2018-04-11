@@ -5,14 +5,14 @@ $(function(){
             type: 'line',
             width: '100%',
             height: '60',
-            lineColor: Sing.colors['gray'],
+            lineColor: Sing.colors['gray-600'],
             fillColor: 'transparent',
             spotRadius: 5,
-            spotColor: Sing.colors['gray'],
-            valueSpots: {'0:':Sing.colors['gray']},
+            spotColor: Sing.colors['gray-600'],
+            valueSpots: {'0:':Sing.colors['gray-600']},
             highlightSpotColor: Sing.colors['white'],
-            highlightLineColor: Sing.colors['gray'],
-            minSpotColor: Sing.colors['gray'],
+            highlightLineColor: Sing.colors['gray-600'],
+            minSpotColor: Sing.colors['gray-600'],
             maxSpotColor: Sing.colors['brand-danger'],
             tooltipFormat: new $.SPFormatClass('<span style="color: white">&#9679;</span> {{prefix}}{{y}}{{suffix}}'),
             chartRangeMin: _(data).min() - 1
@@ -96,7 +96,7 @@ $(function(){
         $el.sparkline(backgroundData,{
             type: 'bar',
             height: 26,
-            barColor: Sing.colors['gray-lighter'],
+            barColor: Sing.colors['gray-200'],
             barWidth: 7,
             barSpacing: 5,
             chartRangeMin: _(data).min(),
@@ -158,7 +158,7 @@ $(function(){
                     tickColor: "rgba(255,255,255,1)",
                     borderWidth: 0
                 },
-                colors: [Sing.darken(Sing.colors['gray-lighter'], .05), Sing.colors['brand-danger']]
+                colors: [Sing.darken(Sing.colors['gray-200'], .05), Sing.colors['brand-danger']]
             });
         }
 
@@ -237,11 +237,11 @@ $(function(){
             renderer: 'area',
             series: [
                 {
-                    color: Sing.colors['gray-dark'],
+                    color: Sing.colors['gray-800'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: Sing.colors['gray'],
+                    color: Sing.colors['gray-600'],
                     data: seriesData[1],
                     name: 'Downloads'
                 }
@@ -289,12 +289,12 @@ $(function(){
                 name : "world_countries",
                 defaultArea : {
                     attrs : {
-                        fill: Sing.colors['gray-lighter']
-                        , stroke : Sing.colors['gray']
+                        fill: Sing.colors['gray-200']
+                        , stroke : Sing.colors['gray-600']
                         , "stroke-width" : 0.25
                     },
                     attrsHover : {
-                        fill : Sing.colors['gray-light'],
+                        fill : Sing.colors['gray-100'],
                         animDuration : 100
                     }
                 },
@@ -340,7 +340,7 @@ $(function(){
                             min :10000000,
                             max :50000000,
                             attrs : {
-                                fill : Sing.colors['gray-lighter']
+                                fill : Sing.colors['gray-200']
                             },
                             label :"Between 10M and 50M"
                         },
@@ -413,15 +413,15 @@ $(function(){
         icons.set("partly-cloudy-day-1", "partly-cloudy-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray']});
+        icons = new Skycons({"color": Sing.colors['gray-600']});
         icons.set("clear-day-2", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray-light']});
+        icons = new Skycons({"color": Sing.colors['gray-100']});
         icons.set("wind-1", "wind");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray-light']});
+        icons = new Skycons({"color": Sing.colors['gray-100']});
         icons.set("rain-1", "rain");
         icons.play();
     }

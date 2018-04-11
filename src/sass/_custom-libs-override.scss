@@ -1795,63 +1795,12 @@ a.fc-event{
   vertical-align: -15%;
 }
 
-/***********************/
-/*    owl-carousel     */
-/***********************/
-
-.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
-  -ms-touch-action: auto;
-      touch-action: auto;
+.jvectormap-zoomin {
+  top: auto;
+  bottom: 40px;
 }
 
-.owl-nav {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  left: -95px;
-  width: calc(100% + 190px);
-  top: calc(50% - 47.5px);
-
-  @include media-breakpoint-down (lg) {
-    display: none;
-  }
-
-  button {
-    img {
-      width: 50px;
-    }
-
-    &:first-child {
-      img {
-        transform: rotate(180deg);
-      }
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-}
-
-.owl-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-
-  button.owl-dot {
-    margin: 0 5px;
-    transition: 0.3s;
-    height: 17.5px;
-    width: 17.5px;
-    background: rgba(#72adf2, 0.2);
-    border-radius: 50%;
-    
-    &.active {
-      background: #72adf2;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
+.jvectormap-zoomout {
+  bottom: 20px;
+  top: auto;
 }
