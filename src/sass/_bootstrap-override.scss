@@ -957,6 +957,64 @@ legend {
     padding-left: $jumbotron-padding;
     padding-right: $jumbotron-padding;
   }
+
+  .landing & {
+    background: none;
+
+    h1 {
+      color: #2e3957;
+      font-weight: $font-weight-thin;
+      line-height: 1;
+      margin-top: 20%;
+      letter-spacing: -1px;
+      word-spacing: 4px;
+      font-size: 95px;
+  
+      @include media-breakpoint-down(lg) {
+        font-size: 80px;
+      }
+  
+      @include media-breakpoint-down(md) {
+        font-size: 60px;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 49px;
+      }
+  
+      span {
+        font-weight: $font-weight-semi-bold;
+      }
+    }
+  
+    p {
+      color: $text-color;
+      font-size: 24px;
+      line-height: 1.7;
+      text-align: left;
+      font-weight: $font-weight-normal;
+  
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+      }
+    }
+  
+    .btn {
+      letter-spacing: 0.5px;
+      max-width: 100%;
+      min-width: 330px;
+  
+      @include media-breakpoint-down(md) {
+        min-width: 300px;
+      }
+  
+      @include media-breakpoint-down(sm) {
+        min-width: 100%;
+      }
+    }
+  }
 }
 
 
