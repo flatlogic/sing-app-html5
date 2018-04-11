@@ -233,7 +233,7 @@
   border: 1px solid #ccc;
   border-radius: $border-radius;
   font-size: $font-size-sm;
-  color: $body-color;
+  color: $text-color;
 }
 
 .zoomIn, .zoomOut {
@@ -246,7 +246,7 @@
   box-sizing: content-box;
   border: 1px solid #ccc;
   background-color: #fff;
-  color: $body-color;
+  color: $text-color;
   line-height: 20px;
   text-align: center;
   border-radius: $border-radius;
@@ -298,7 +298,7 @@
 
 svg text {
   font: $font-weight-base $font-size-sm $font-family-base;
-  fill: $body-color;
+  fill: $text-color;
 }
 
 svg .title {
@@ -371,7 +371,7 @@ svg .title {
   }
 
   // Hover state
-  $color: $input-focus-border-color;
+  $color: $input-border-focus;
   &.active {
     border-color: $color;
     outline: 0;
@@ -584,7 +584,7 @@ $slider-handle-size: 26px;
   }
 
   .popover{
-    color: $body-color;
+    color: $text-color;
   }
 }
 .calendar .table td{
@@ -707,7 +707,7 @@ input.parsley-error{
   h3 {
     font-family: $font-family-base;
     font-weight: $headings-font-weight;
-    color: $body-color;
+    color: $text-color;
   }
 
   .close {
@@ -718,7 +718,7 @@ input.parsley-error{
 
 .wizard-nav-list > li.already-visited > a.wizard-nav-link,
 .wizard-nav-list > li.already-visited.active > a.wizard-nav-link{
-  color: $body-color;
+  color: $text-color;
 }
 
 .wizard-nav-list li.active > a,
@@ -777,7 +777,7 @@ input.parsley-error{
 .table-editable{
 
   th > a{
-    color: $body-color;
+    color: $text-color;
     cursor: pointer;
   }
 
@@ -931,7 +931,7 @@ table.dataTable tfoot th{
 .dataTables_wrapper .dataTables_info,
 .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate{
-  color: $body-color;
+  color: $text-color;
 }
 
 .dataTables_wrapper .dataTables_length,
@@ -1011,7 +1011,7 @@ table.table-hover.dataTable > tbody > tr:hover > td {
   height: 30px;
   margin: 5px 0;
   padding: 5px 10px;
-  color: $body-color;
+  color: $text-color;
   text-decoration: none;
   background: $white;
   border: 1px solid $list-group-border-color;
@@ -1038,7 +1038,7 @@ table.table-hover.dataTable > tbody > tr:hover > td {
   line-height: 1;
   text-align: center;
   font-weight: bold;
-  color: $body-color;
+  color: $text-color;
 
   &:focus,
   &:active{
@@ -1716,7 +1716,7 @@ ul.messenger-theme-air .messenger-message{
   border: none;
   font-weight: $font-weight-normal;
   background-color: $gray-light;
-  color: $body-color;
+  color: $text-color;
 }
 
 .fc-today{
@@ -1795,12 +1795,63 @@ a.fc-event{
   vertical-align: -15%;
 }
 
-.jvectormap-zoomin {
-  top: auto;
-  bottom: 40px;
+/***********************/
+/*    owl-carousel     */
+/***********************/
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+  -ms-touch-action: auto;
+      touch-action: auto;
 }
 
-.jvectormap-zoomout {
-  bottom: 20px;
-  top: auto;
+.owl-nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: -95px;
+  width: calc(100% + 190px);
+  top: calc(50% - 47.5px);
+
+  @include media-breakpoint-down (lg) {
+    display: none;
+  }
+
+  button {
+    img {
+      width: 50px;
+    }
+
+    &:first-child {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+
+  button.owl-dot {
+    margin: 0 5px;
+    transition: 0.3s;
+    height: 17.5px;
+    width: 17.5px;
+    background: rgba(#72adf2, 0.2);
+    border-radius: 50%;
+    
+    &.active {
+      background: #72adf2;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 }

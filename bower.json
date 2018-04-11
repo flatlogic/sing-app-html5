@@ -65,7 +65,8 @@
     "bootstrap-markdown": "2.9.0",
     "slick-carousel": "^1.8.1",
     "hammerjs": "hammer#^2.0.8",
-    "jquery-hammerjs": "^2.0.0"
+    "jquery-hammerjs": "^2.0.0",
+    "owl.carousel": "^2.3.3"
   },
   "private": true,
   "ignore": [
