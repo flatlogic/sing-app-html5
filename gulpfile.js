@@ -25,7 +25,7 @@ gulp.task('copy', function () {
 
 // Handle handlebars
 gulp.task('hbs', function () {
-    gulp.src('src/*.hbs')
+    gulp.src(['src/*.hbs', 'src/components/*.hbs'])
         .pipe(hb({
             partials: './src/partials/*.hbs',
             helpers: [
