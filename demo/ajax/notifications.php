@@ -24,9 +24,9 @@
     </p>
 </div>
 <div class="list-group-item">
-    <span class="thumb-sm float-left mr clearfix">
-        <img class="rounded-circle" src="demo/img/people/a3.jpg" alt="...">
-    </span>
+<span class="thumb-sm float-left mr clearfix">
+    <img class="rounded-circle" src="demo/img/people/a3.jpg" alt="...">
+</span>
     <p class="no-margin overflow-hidden">
         1 new user just signed up! Check out
         <a href="#">Monica Smith</a>'s account.
@@ -36,9 +36,9 @@
     </p>
 </div>
 <a class="list-group-item" href="#">
-    <span class="thumb-sm float-left mr">
-        <i class="glyphicon glyphicon-upload fa-lg"></i>
-    </span>
+<span class="thumb-sm float-left mr">
+    <i class="glyphicon glyphicon-upload fa-lg"></i>
+</span>
     <p class="text-ellipsis no-margin">
         2.1.0-pre-alpha just released. </p>
     <time class="help-block no-margin">
@@ -46,9 +46,9 @@
     </time>
 </a>
 <a class="list-group-item" href="#">
-    <span class="thumb-sm float-left mr">
-        <i class="fa fa-bolt fa-lg"></i>
-    </span>
+<span class="thumb-sm float-left mr">
+    <i class="fa fa-bolt fa-lg"></i>
+</span>
     <p class="text-ellipsis no-margin">
         Server load limited. </p>
     <time class="help-block no-margin">
@@ -56,14 +56,14 @@
     </time>
 </a>
 <div class="list-group-item">
-    <span class="thumb-sm float-left mr clearfix">
-        <img class="rounded-circle" src="demo/img/people/a5.jpg" alt="...">
-    </span>
+<span class="thumb-sm float-left mr clearfix">
+    <img class="rounded-circle" src="demo/img/people/a5.jpg" alt="...">
+</span>
     <p class="no-margin overflow-hidden">
         User <a href="#">Jeff</a> registered
         &nbsp;&nbsp;
-        <a class="badge badge-success">Allow</a>
-        <a class="badge badge-danger">Deny</a>
+        <button class="btn btn-xs btn-success">Allow</button>
+        <button class="btn btn-xs btn-danger">Deny</button>
         <time class="help-block no-margin">
             12:18 AM
         </time>
@@ -82,11 +82,11 @@
     </p>
 </div>
 <a class="list-group-item" href="#">
-    <span class="thumb-sm float-left mr">
-        <span class="rounded bg-primary rounded-lg">
-            <i class="fa fa-facebook text-white"></i>
-        </span>
+<span class="thumb-sm float-left mr">
+    <span class="square bg-primary square-lg">
+        <i class="fa fa-facebook text-white"></i>
     </span>
+</span>
     <p class="text-ellipsis no-margin">
         New <strong>76</strong> facebook likes received.</p>
     <time class="help-block no-margin">
@@ -94,11 +94,11 @@
     </time>
 </a>
 <a class="list-group-item" href="#">
-    <span class="thumb-sm float-left mr">
-        <span class="circle circle-lg bg-gray-dark">
-            <i class="fa fa-circle-o text-white"></i>
-        </span>
+<span class="thumb-sm float-left mr">
+    <span class="circle circle-lg bg-gray-dark">
+        <i class="fa fa-circle-o text-white"></i>
     </span>
+</span>
     <p class="text-ellipsis no-margin">
         Dark matter detected.</p>
     <time class="help-block no-margin">
