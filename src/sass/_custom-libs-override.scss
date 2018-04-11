@@ -371,7 +371,7 @@ svg .title {
   }
 
   // Hover state
-  $color: $input-border-focus;
+  $color: $input-focus-border-color;
   &.active {
     border-color: $color;
     outline: 0;

@@ -178,7 +178,7 @@
   line-height: $navbar-height;
   text-align: center;
   vertical-align: middle;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-semi-bold;
   font-size: 18px;
   letter-spacing: 1px;
 
@@ -187,9 +187,9 @@
     display: block;
     color: $logo-color;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     white-space: nowrap;
-    padding: 0 1px;
+    padding: 0 2px;
   }
 
   .nav-collapsed &{
@@ -631,8 +631,7 @@
     > a{
       display: block;
       padding: $padding-large-vertical $padding-large-horizontal;
-      background-color: rgba(255,255,255, .1);
-      color: $gray-200;
+      color: $gray-600;
       text-decoration: none;
     }
   }
@@ -641,6 +640,7 @@
     list-style: none;
     padding-left: 0;
     padding-top: $spacer/2;
+    background: $gray-100;
   }
 
   .message{
@@ -683,13 +683,12 @@
   .chat-sidebar-chat .message.from-me &{
     margin-left: 0;
     margin-right: 50px;
-    background-color: theme-color('warning');
     color: $gray-800;
     &:before{
       right: auto;
       left: 100%;
       border-right-color: rgba(0,0,0,0);
-      border-left-color: theme-color('warning');
+      border-left-color: $gray-200;
     }
   }
 }
@@ -718,7 +717,7 @@
     background-color: transparent;
     margin-right: -20px;
     margin-bottom: 0;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: 0;
     color: $gray-600;
     border-radius: 0;
@@ -791,7 +790,7 @@
   width: 100%;
   margin-bottom: 0;
   padding: 10px;
-  background-color: #3a3a3a;
+  background-color: $white;
 
   @include transition(right .2s ease-in-out);
   &.open{
