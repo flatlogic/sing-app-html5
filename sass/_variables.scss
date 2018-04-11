@@ -117,7 +117,7 @@ $sidebar-transition-time: .3s !default;
 $navbar-height:                    60px !default;
 $navbar-font-size:              13px !default;
 
-$chat-sidebar-width: 250px + $sidebar-slim-scroll-width !default;
+$chat-sidebar-width: 270px + $sidebar-slim-scroll-width !default;
 
 $content-padding-vertical: 42px !default;
 $content-padding-top: $content-padding-vertical + $navbar-height !default;
@@ -175,7 +175,6 @@ $headings-font-weight: 400 !default;
 
 //== Forms
 //
-$input-border-focus:             #4D90FE !default; //webkit focus color
 $legend-color:                   lighten($body-color, 15%) !default;
 $cursor-disabled:                not-allowed !default;
 
