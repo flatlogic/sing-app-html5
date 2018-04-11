@@ -9,7 +9,7 @@
   top: 0;
   bottom: 0;
   width: $sidebar-width;
-  border-right: 1px solid darken($sidebar-ul-background, 2%);
+  border-right: 1px solid $sidebar-border-color;
   background-color: $sidebar-bg-color;
   color: $sidebar-color;
 
@@ -134,7 +134,7 @@
       padding-right: 0;
     }
   }
-  .navbar-nav {
+  .navbar-nav .nav-link {
     .fa, .la {
       font-size: 20px;
     }
@@ -549,18 +549,19 @@
   }
 }
 
-.chat-sidebar{
+.chat-sidebar {
   position: fixed;
   top:0;
   bottom: 0;
   right: -$chat-sidebar-width;
   width: $chat-sidebar-width;
+  border-left: 1px solid $sidebar-border-color;
   background-color: $sidebar-bg-color;
   @include transition(right $sidebar-transition-time ease-in-out);
 }
 
 /* body tag is given this class */
-.chat-sidebar-container{
+.chat-sidebar-container {
   position: relative;
   &, .sidebar{
     left: 0;
@@ -704,7 +705,7 @@
 .chat-sidebar-title{
   margin: 10px;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: $font-size-larger;
   font-weight: $font-weight-normal;
 }
 
@@ -719,7 +720,7 @@
     margin-bottom: 0;
     padding: 10px 20px;
     border: 0;
-    color: $gray-200;
+    color: $gray-600;
     border-radius: 0;
     width: 100%;
 
@@ -727,7 +728,7 @@
       &,
       &:focus,
       &:hover{
-        background-color: rgba(255,255,255, .1);
+        background-color: $gray-100;
         color: theme-color('warning');
       }
 
@@ -764,8 +765,8 @@
   }
 
   a.list-group-item:hover{
-    color: $gray-200;
-    background-color: rgba(0,0,0,.15);
+    color: $gray-700;
+    background-color: $gray-100;
   }
 
   .message-preview{
@@ -775,7 +776,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: $font-size-smaller;
-    color: $text-muted;
+    color: $gray-500;
   }
 
   .message-sender{
@@ -800,7 +801,7 @@
 
 .chat-notification{
   position: absolute;
-  right: 8px;
+  right: 27px;
   top: 35px;
   z-index: 20;
   margin-top: 3px;
@@ -903,6 +904,7 @@
 
   .btn-link {
     border: none;
+    text-decoration: none;
   }
 }
 

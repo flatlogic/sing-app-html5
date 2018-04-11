@@ -75,6 +75,7 @@ $sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: $yellow !default;
 $sidebar-item-hover-bg-color: $sidebar-action-bg;
 $sidebar-ul-background: $sidebar-action-bg;
+$sidebar-border-color: darken($sidebar-ul-background, 2%);
 
 // Typography
 // -------------------------
@@ -190,6 +191,7 @@ $btn-default-border: $addition-bg !default;
 //== Dropdowns
 //
 $dropdown-link-color:            $body-color !default;
+$dropdown-border-color:          $gray-200;
 
 
 //== Navs
