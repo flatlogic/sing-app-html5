@@ -2370,13 +2370,15 @@ input[type=search], input.search {
         margin-bottom: 25px;
         font-size: 16px;
         line-height: 1.7;
-        color: #000;
+        color: $text-color;
+        font-weight: $font-weight-thin;
       }
   
       > p {
         font-size: 16px;
         margin-bottom: 2px;
         line-height: 1.7;
+        color: $text-color;
       }
     }
   
@@ -2406,9 +2408,9 @@ input[type=search], input.search {
   .footer-basement {
     margin-top: 2*$spacer;
     font-size: 12px;
-    color: #000;
+    color: $gray-600;
     line-height: 40px;
-  
+
     a {
       color: inherit;
   
@@ -2416,22 +2418,28 @@ input[type=search], input.search {
         margin-left: 10px;
       }
     }
+
+    .copyright {
+      min-width: 320px;
+    }
   }
   
   .footer-nav {
+    justify-content: center;
     > li {
-      float: left;
+     margin: 0 10px;
       > a {
         &:hover,
         &:focus {
           background: none;
+          text-decoration: none;
         }
       }
     }
   }
   
   .footer-nav-primary {
-    margin: -10px -20px 0;
+    margin: 0 -20px;
     text-align: center;
   
     @include media-breakpoint-down(sm) {
@@ -2439,19 +2447,17 @@ input[type=search], input.search {
     }
   
     > li {
-      display: inline-block;
-      float: none;
       > a {
         font-size: 16px;
-        color: #000;
+        color: theme-color('primary');
         &:hover,
         &:focus {
-          color: #000;
+          color: theme-color('warning');
         }
       }
   
       &.active > a {
-        font-weight: 400;
+        font-weight: $font-weight-normal;
       }
   
       .btn-default{
@@ -2466,44 +2472,49 @@ input[type=search], input.search {
   }
   
   .footer-nav-secondary {
-    margin: -10px 0 0;
-  
-    @include media-breakpoint-up(lg) {
-      margin-left: -15px;
-      margin-right: -15px;
-      margin-bottom: 80px;
-  
-      > li {
-        float: right;
-  
-        >a{
-          font-size: 16px;
-          color: #000;
-  
-          &:hover{
-            color: #000;
-          }
+    justify-content: flex-end;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 80px;
+
+    > li {
+      >a{
+        font-size: 16px;
+        color: $text-color;
+
+        &:hover{
+          color: theme-color('warning');
         }
       }
+    }
+
+    @include media-breakpoint-down(md) {
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
   
   .footer-form {
-    margin: 20px -5px 0;
+    margin: 45px -5px 0;
     color: #000;
   
-    @include media-breakpoint-down(lg) {
-      margin-top: 50px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 50px;
     }
   
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       margin-bottom: 40px;
       margin-left: 5px;
       margin-right: 5px;
     }
   
     p {
-      color: #000;
+      color: $gray-600;
       font-size: 11px;
       text-align: center;
     }
@@ -2521,22 +2532,18 @@ input[type=search], input.search {
       font-size: 13px;
       line-height: 27px;
       border-radius: 0 3px 3px 0 !important;
-      background-color: #000;
-      border-color: #000;
+      background-color: theme-color('primary');
+      border-color: theme-color('primary');
     }
   }
   
   .footer-social {
-    text-align: center;
+    text-align: right;
   
-    @media (min-width: 1201px) {
-      text-align: right;
-    }
-  
-  
-  
-    @media (max-width: 767px) {
+    @include media-breakpoint-down(md) {
       margin-bottom: 40px;
+      text-align: center;
+      margin-top: $spacer;
     }
   
     > a {
@@ -2548,13 +2555,13 @@ input[type=search], input.search {
   
     .fa {
       transition: 0.3s;
-      color: #000;
+      color: theme-color('primary');
       width: 30px;
       height: 30px;
       opacity: .8;
   
       &:hover {
-        color: #000;
+        color: theme-color('warning');
       }
     }
   }  
