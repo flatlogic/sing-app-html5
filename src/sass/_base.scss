@@ -1967,10 +1967,63 @@ input[type=search], input.search {
 
   .header {
     position: absolute;
-    top: 50px;
+    top: 55px;
     left: 0;
     right: 0;
     z-index: 3;
+
+    .navbar {
+      margin: 25px 0;
+
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+      }
+
+      .navbar-collapse {
+        @include media-breakpoint-down(sm) {
+          background: #fff;
+          margin: 0 -20px;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+          padding: 15px;
+        }
+      }
+    }
+
+    .navbar-brand {
+      color: $text-color;
+      font-size: 24px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+    }
+
+    .navbar-toggler {
+      padding: 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .navbar-nav {
+      li {
+        margin: 5px 0 0 15px;
+        font-size: 18px;
+
+        @include media-breakpoint-down(sm) {
+          margin: 0;
+          padding: 15px 0;
+          display: flex;
+          justify-content: center;
+        }
+        
+        a {
+          color: $text-color;
+          font-weight: $font-weight-normal;
+        }
+      }
+    }
   }
 
   .section{
@@ -2053,7 +2106,7 @@ input[type=search], input.search {
     }
   
     .main-photo {
-      margin-top: 13%;
+      margin-top: 180px;
       min-width: 150%;
   
       @include media-breakpoint-down (lg) {
@@ -2329,12 +2382,8 @@ input[type=search], input.search {
         padding: 0;
         background: white;
   
-        @include media-breakpoint-down (xs) {
-          font-size: 16px;
-        }
-  
         @include media-breakpoint-down (sm) {
-          margin-top: 40px;
+          font-size: 16px !important;
         }
       }
     }
@@ -2376,7 +2425,7 @@ input[type=search], input.search {
       }
   
       > p {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 2px;
         line-height: 1.7;
         color: $text-color;
