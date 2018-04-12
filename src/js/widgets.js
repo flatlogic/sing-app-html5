@@ -282,7 +282,7 @@ $(function(){
     function initYearsMap(){
 
         var $map = $('#map-years-mapael');
-        $map.css('height', 394).css('margin-bottom', -15)
+        $map.css('height', 394).css('margin-bottom', -20)
             .find('.map').css('height', parseInt($map.parents('.widget').css('height')) - 40);
         $map.mapael({
             map:{

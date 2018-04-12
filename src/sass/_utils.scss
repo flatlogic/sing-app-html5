@@ -187,7 +187,7 @@
   @include transition(background-color ease-in-out .15s);
 
   &:focus{
-    background-color: #f1f1f1;
+    background-color: $gray-100;
   }
 }
 
@@ -251,7 +251,7 @@
     width: 8px;
   }
   &::-webkit-scrollbar:hover {
-    background-color: #e9e9e9;
+    background-color: $gray-200;
     border: none;
   }
   &::-webkit-scrollbar-thumb {
@@ -288,7 +288,7 @@ $i: 0;
   .value#{$i}{
     margin: 0;
     font-size: $font-size;
-    font-weight: $font-weight-semi-bold;
+    font-weight: $font-weight-normal;
   }
   $i: $i + 1 !global;
 }
