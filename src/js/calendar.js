@@ -46,7 +46,7 @@ $(function(){
                                 start: start,
                                 end: end,
                                 allDay: allDay,
-                                backgroundColor: '#64bd63',
+                                backgroundColor: Sing.colors['brand-success'],
                                 textColor: '#fff'
                             },
                             true
@@ -89,7 +89,7 @@ $(function(){
                 {
                     title: 'All Day Event',
                     start: new Date(y, m, 1),
-                    backgroundColor: '#79A5F0',
+                    backgroundColor: Sing.colors['brand-primary'],
                     textColor: '#fff'
                 },
                 {
@@ -108,7 +108,7 @@ $(function(){
                     start: new Date(y, m, 28),
                     end: new Date(y, m, 29),
                     url: 'http://flatlogic.com/',
-                    backgroundColor: '#e5603b',
+                    backgroundColor: Sing.colors['brand-danger'],
                     textColor: '#fff'
                 }
             ],

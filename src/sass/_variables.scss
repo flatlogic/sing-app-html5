@@ -20,13 +20,13 @@ $enable-shadows:            true !default;
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-300: #d6dee5 !default;
+$gray-400: #c1ccd3 !default;
+$gray-500: #a3aeb7 !default;
+$gray-600: #798892 !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-800: #3c484f !default;
+$gray-900: #29323a !default;
 $black:    #000 !default;
 $gray-light: $gray-100 !default;
 
@@ -70,7 +70,7 @@ $logo-color: $yellow;
 
 $sidebar-action-bg: #f9fafe !default;
 $sidebar-bg-color: #fff !default;
-$sidebar-color: $gray-600 !default;
+$sidebar-color: #6c757d !default;
 $sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: $yellow !default;
 $sidebar-item-hover-bg-color: $sidebar-action-bg;
@@ -99,9 +99,7 @@ $font-weight-base: $font-weight-thin !default;
 
 $font-size-smaller: 85% !default;
 
-//** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
-//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-base:        1.55 !default;
 $link-color: #218BC3 !default;
 
 // Layout
@@ -285,6 +283,7 @@ $popover-arrow-color:                 $popover-bg !default;
 //##
 
 $thumbnail-bg:                $white !default;
+$thumbnail-box-shadow: $widget-shadow;
 
 //== Breadcrumbs
 //

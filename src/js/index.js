@@ -204,11 +204,11 @@ $(function(){
             renderer: 'area',
             series: [
                 {
-                    color: '#F7653F',
+                    color: Sing.colors['brand-danger'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: '#F7D9C5',
+                    color: Sing.lighten(Sing.colors['brand-danger'], .5),
                     data: seriesData[1],
                     name: 'Downloads'
                 }
