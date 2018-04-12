@@ -417,11 +417,11 @@ $(function(){
         icons.set("clear-day-2", "clear-day");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray-100']});
+        icons = new Skycons({"color": Sing.colors['gray-400']});
         icons.set("wind-1", "wind");
         icons.play();
 
-        icons = new Skycons({"color": Sing.colors['gray-100']});
+        icons = new Skycons({"color": Sing.colors['gray-400']});
         icons.set("rain-1", "rain");
         icons.play();
     }
