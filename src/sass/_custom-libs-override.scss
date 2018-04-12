@@ -411,7 +411,7 @@ $slider-handle-size: 26px;
         border-width: 0 $slider-line-height/2 $slider-line-height/2 $slider-line-height/2;
         width: 0;
         height: 0;
-        border-bottom-color: #0480be;
+        border-bottom-color: theme-color('primary');
         margin-top: 0;
       }
     }
@@ -439,7 +439,7 @@ $slider-handle-size: 26px;
         border-width: $slider-line-height/2 0 $slider-line-height/2 $slider-line-height/2;
         width: 1px;
         height: 1px;
-        border-left-color: #0480be;
+        border-left-color: theme-color('primary');
         margin-left: 0;
       }
     }
@@ -760,7 +760,7 @@ input.parsley-error{
 
 .popover-content-error {
   background-color:#F2DEDE;
-  color:#B94A48;
+  color:theme-color('danger');
   border-color:#953B39;
   border-radius: $border-radius-lg;
 }
@@ -1134,8 +1134,8 @@ table.table-hover.dataTable > tbody > tr:hover > td {
   color: #333;
   text-decoration: none;
   font-weight: bold;
-  border: 1px solid #ccc;
-  background: #fafafa;
+  border: 1px solid $gray-300;
+  background: $gray-100;
   background: linear-gradient(top, #fafafa 0%, #eee 100%);
   border-radius: 3px;
   box-sizing: border-box;

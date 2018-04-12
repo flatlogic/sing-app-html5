@@ -95,7 +95,6 @@
 /***********************/
 
 .chart-stats{
-  border-top: 1px solid $gray-200;
 }
 
 /***********************/
@@ -139,9 +138,6 @@
   .name{
     margin-bottom: 2px;
     margin-top: 10px;
-  }
-  .value{
-    font-weight: bold;
   }
 
   &.stat-item-mini-chart{
@@ -510,7 +506,7 @@
 
   > li {
     padding: 10px;
-    border-top: 1px solid #e7e7e7;
+    border-top: 1px solid $gray-200;
     list-style: none;
     @include clearfix();
 
@@ -530,7 +526,7 @@
   .author{
     margin-top: 0;
     margin-bottom: 2px;
-    color: #7ca9dd;
+    color: $gray-600;
   }
 
   .comment-body{
@@ -851,7 +847,7 @@
     padding: 10px 20px;
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
-    background-color: #fafafa;
+    background-color: $gray-100;
 
     @include clearfix();
 
@@ -958,7 +954,7 @@
   font-weight: $font-weight-semi-bold;
   > a {
     text-decoration: none;
-    color: #7ca9dd;
+    color: $gray-700;
   }
   > small{
     font-weight: $font-weight-semi-bold;
@@ -1266,10 +1262,9 @@
 
 .widget-chat-list-group{
   padding-top: $spacer/2;
+
   .list-group-item{
-    margin-left: $widget-padding-horizontal;
-    margin-right: $widget-padding-horizontal;
-    padding: 0;
+    padding: $spacer/2 $widget-padding-horizontal;
     border: 0;
 
     & + .list-group-item{
@@ -1297,7 +1292,6 @@
 
     .body{
       font-size: $font-size-mini;
-      color: $text-muted;
     }
 
     &.on-right{

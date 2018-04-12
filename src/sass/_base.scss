@@ -1074,8 +1074,9 @@
   font-size: 42px;
   height: 70px;
 
-  .glyphicon {
-    top: 5px;
+  .fi {
+    position: relative;
+    top: -7px;
   }
 }
 
