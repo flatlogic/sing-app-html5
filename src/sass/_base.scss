@@ -630,7 +630,7 @@
     margin-bottom: 0;
     > a{
       display: block;
-      padding: $padding-large-vertical $padding-large-horizontal;
+      padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
       color: $gray-600;
       text-decoration: none;
     }
@@ -958,7 +958,6 @@
   background: $widget-bg-color;
   border-radius: $border-radius-sm;
   box-shadow: $widget-shadow;
-  overflow: hidden;
 
   > header{
     margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);

@@ -42,34 +42,10 @@ small, .small {
 
 .form-control {
   font-weight: $font-weight-normal;
-  padding: $padding-base-vertical $padding-base-horizontal;
   @include box-shadow(none);
   &:focus{
     @include box-shadow(none);
   }
-}
-
-.form-control-lg {
-  padding: $padding-large-vertical $padding-large-horizontal;
-}
-
-.form-control-sm {
-  padding: $padding-small-vertical $padding-small-horizontal;
-}
-
-.input-group-append>.btn,
-.input-group-prepend>.btn {
-  padding-top: $padding-base-vertical;
-  padding-bottom: $padding-base-vertical;
-}
-
-.btn-group.bootstrap-select > .btn {
-  padding-top: $padding-base-vertical;
-  padding-bottom: $padding-base-vertical;
-}
-
-.btn-lg, .btn-group-lg>.btn {
- padding: $btn-padding-y-lg $btn-padding-x-lg !important;
 }
 
 label {

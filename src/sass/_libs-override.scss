@@ -156,10 +156,8 @@
   .dropdown-menu > li > a {
     display: block;
     width: 100%; // For `<button>`s
-    padding: 3px 20px;
     clear: both;
     font-weight: normal;
-    line-height: $spacer;
     color: $dropdown-link-color;
     text-align: inherit; // For `<button>`s
     white-space: nowrap; // prevent links from randomly breaking onto new lines
