@@ -433,8 +433,6 @@ legend {
     float: right;
 
     @include media-breakpoint-down(sm) {
-      padding-top: $spacer;
-
       > li > a {
         padding-right: 0;
       }
