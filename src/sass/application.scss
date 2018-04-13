@@ -21,7 +21,11 @@
 @import "../../bower_components/rickshaw/rickshaw";
 @import "../../bower_components/bootstrap3-wysihtml5/src/bootstrap-wysihtml5";
 @import "../../bower_components/switchery/dist/switchery";
-@import "../../bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker";
+//for tempusdominus-bootstrap-4 lib we need to define some obsolete bs4 variables:
+//$btn-primary-bg: theme-color('primary');
+//$btn-primary-color: $white;
+//$gray-lighter: $gray-300;
+@import "../../bower_components/tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4";
 @import "../../bower_components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker";
 @import "../../bower_components/dropzone/dist/dropzone";
 @import "../../bower_components/nvd3/build/nv.d3";
