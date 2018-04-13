@@ -5,96 +5,13 @@
 /**
  * Datetimepicker for Bootstrap v3
  */
-.bootstrap-datetimepicker-widget
-{
-  border-radius: $border-radius;
-
-  td {
-    padding: 5px 0;
+.bootstrap-datetimepicker-widget {
+  &.dropdown-menu {
+    width: auto;
   }
 
-  td,
-  th
-  {
-    border-radius: $border-radius;
-  }
-
-  td
-  {
-    &.day:hover,
-    &.hour:hover,
-    &.minute:hover,
-    &.second:hover
-    {
-      background: $gray-200;
-    }
-
-    &.old,
-    &.new
-    {
-      color: $gray-600;
-    }
-
-    &.active,
-    &.active:hover
-    {
-      background-color: theme-color('primary');
-      text-shadow: none;
-    }
-
-    &.disabled,
-    &.disabled:hover
-    {
-      color: $gray-600;
-    }
-
-    span
-    {
-      border-radius: $border-radius;
-
-      &:hover
-      {
-        background: $gray-200;
-      }
-
-      &.active
-      {
-        background-color: theme-color('primary');
-      }
-
-      &.old
-      {
-        color: $gray-600;
-      }
-
-      &.disabled,
-      &.disabled:hover
-      {
-        color: $gray-600;
-      }
-    }
-  }
-  th
-  {
-    &.next,
-    &.prev
-    {
-      font-size: $font-size-base * 1.5;
-    }
-    &.disabled,
-    &.disabled:hover
-    {
-      color: $gray-600;
-    }
-  }
-  thead tr:first-child th
-  {
-    padding: 5px 0 8px 0;
-
-    &:hover
-    {
-      background: $gray-200;
-    }
+  table td.active.today:before {
+    border-bottom-color: transparent;
   }
 }
 

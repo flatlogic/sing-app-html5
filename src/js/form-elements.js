@@ -61,10 +61,10 @@ $(function(){
         new Switchery(document.getElementById('checkbox-ios1'));
         new Switchery(document.getElementById('checkbox-ios2'),{color: Sing.colors['brand-primary']});
 
-        $('#datetimepicker1').datetimepicker({
-            format: 'MM/DD/YYYY'
+        $('#datetimepicker4').datetimepicker({
+            format: 'L'
         });
-        $('#datetimepicker2').datetimepicker({
+        $('#datetimepicker1').datetimepicker({
         });
 
         $('#colorpicker').colorpicker({color: Sing.colors['gray-100']});
