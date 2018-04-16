@@ -34,7 +34,7 @@
     "jquery-autosize": "1.18.18",
     "bootstrap3-wysihtml5": "git://github.com/schnawel007/bootstrap3-wysihtml5.git#5f07036cb228c1cc8bab2d271701ceff0de66828",
     "switchery": "0.8.1",
-    "tempusdominus-bootstrap-4": "git@github.com:tempusdominus/bootstrap-4.git#v5.0.0-alpha18",
+    "tempusdominus-bootstrap-4": "git://github.com/tempusdominus/bootstrap-4.git#v5.0.0-alpha18",
     "mjolnic-bootstrap-colorpicker": "2.3.0",
     "holderjs": "2.5.0",
     "dropzone": "4.0.1",
