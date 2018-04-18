@@ -8,14 +8,14 @@
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
         <header class="logo d-none d-md-block">
-            <a href="index.html">sing <span class="text-gray-dark">app</span></a>
+            <a href="../dashboard/index.html">sing <span class="text-gray-dark">app</span></a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
         <div class="sidebar-status d-md-none">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="thumb-sm avatar float-right">
-                    <img class="rounded-circle" src="demo/img/people/a5.jpg" alt="...">
+                    <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
                 </span>
                 <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
                      should be used with bg-* and text-* classes for colors -->
@@ -40,12 +40,12 @@
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-dashboard" class="collapse {{#activeClass active "dashboard_dashboard dashboard_widgets"}} show {{/activeClass}}">
-                    <li class="{{#activeClass active "dashboard_dashboard"}} active {{/activeClass}}"><a href="index.html">Dashboard</a></li>
-                    <li class="{{#activeClass active "dashboard_widgets"}} active {{/activeClass}}"><a href="widgets.html">Widgets</a></li>
+                    <li class="{{#activeClass active "dashboard_dashboard"}} active {{/activeClass}}"><a href="../dashboard/index.html">Dashboard</a></li>
+                    <li class="{{#activeClass active "dashboard_widgets"}} active {{/activeClass}}"><a href="../dashboard/widgets.html">Widgets</a></li>
                 </ul>
             </li>
             <li class="{{#activeClass active "package"}} active {{/activeClass}}">
-                <a href="package.html">
+                <a href="../other/package.html">
                     <span class="icon">
                       <i class="fi flaticon-database-1"></i>
                     </span>
@@ -56,7 +56,7 @@
                 </a>
             </li>
             <li class="{{#activeClass active "charts"}} active {{/activeClass}}">
-                <a href="charts.html">
+                <a href="../other/charts.html">
                     <span class="icon">
                         <i class="fi flaticon-controls"></i>
                     </span>
@@ -64,7 +64,7 @@
                 </a>
             </li>
             <li class="{{#activeClass active "profile"}} active {{/activeClass}}">
-                <a href="profile.html">
+                <a href="../other/profile.html">
                     <span class="icon">
                         <i class="fi flaticon-user"></i>
                     </span>
@@ -72,7 +72,7 @@
                 </a>
             </li>
             <li class="{{#activeClass active "email"}} active {{/activeClass}}">
-                <a href="inbox.html">
+                <a href="../other/inbox.html">
                     <span class="icon">
                         <i class="fi flaticon-paper-plane"></i>
                     </span>
@@ -91,8 +91,8 @@
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-pages" class="collapse {{#activeClass active "product_detail product_grid"}} show {{/activeClass}}">
-                    <li class="{{#activeClass active "product_detail"}} active {{/activeClass}}"><a href="product_detail.html">Product Detail</a></li>
-                    <li class="{{#activeClass active "product_grid"}} active {{/activeClass}}"><a href="product_grid.html">Product Grid</a></li>
+                    <li class="{{#activeClass active "product_detail"}} active {{/activeClass}}"><a href="../e-commerce/product_detail.html">Product Detail</a></li>
+                    <li class="{{#activeClass active "product_grid"}} active {{/activeClass}}"><a href="../e-commerce/product_grid.html">Product Grid</a></li>
                 </ul>
             </li>
         </ul>
@@ -109,9 +109,9 @@
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-core" class="collapse {{#activeClass active "core_typography core_colors core_grid"}} show {{/activeClass}}">
-                    <li class="{{#activeClass active "core_typography"}} active {{/activeClass}}"><a href="core_typography.html">Typography</a></li>
-                    <li class="{{#activeClass active "core_colors"}} active {{/activeClass}}"><a href="core_colors.html">Colors</a></li>
-                    <li class="{{#activeClass active "core_grid"}} active {{/activeClass}}"><a href="core_grid.html">Grid</a></li>
+                    <li class="{{#activeClass active "core_typography"}} active {{/activeClass}}"><a href="../core/core_typography.html">Typography</a></li>
+                    <li class="{{#activeClass active "core_colors"}} active {{/activeClass}}"><a href="../core/core_colors.html">Colors</a></li>
+                    <li class="{{#activeClass active "core_grid"}} active {{/activeClass}}"><a href="../core/core_grid.html">Grid</a></li>
                 </ul> 
             </li>
             <li class="{{#activeClass active "ui_components ui_notifications ui_icons ui_buttons ui_tabs_accordion ui_list_groups"}} active {{/activeClass}}">
@@ -122,13 +122,23 @@
                     UI Elements
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-ui" class="collapse {{#activeClass active "ui_components ui_notifications ui_icons ui_buttons ui_tabs_accordion ui_list_groups"}} show {{/activeClass}}">
-                    <li class="{{#activeClass active "ui_components"}} active {{/activeClass}}"><a href="ui_components.html">Components</a></li>
-                    <li class="{{#activeClass active "ui_notifications"}} active {{/activeClass}}"><a href="ui_notifications.html">Notifications</a></li>
-                    <li class="{{#activeClass active "ui_icons"}} active {{/activeClass}}"><a href="ui_icons.html">Icons</a></li>
-                    <li class="{{#activeClass active "ui_buttons"}} active {{/activeClass}}"><a href="ui_buttons.html">Buttons</a></li>
-                    <li class="{{#activeClass active "ui_tabs_accordion"}} active {{/activeClass}}"><a href="ui_tabs_accordion.html">Tabs & Accordion</a></li>
-                    <li class="{{#activeClass active "ui_list_groups"}} active {{/activeClass}}"><a href="ui_list_groups.html">List Groups</a></li>
+                <ul id="sidebar-ui" class="collapse {{#activeClass active "ui_modal ui_navbar ui_jumbotron ui_nav ui_carousel ui_components ui_notifications ui_icons ui_buttons ui_tabs_accordion ui_list_groups ui_card ui_alerts ui_badge ui_progress ui_popovers_tooltips"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "ui_alerts"}} active {{/activeClass}}"><a href="../components/ui_alerts.html">Alerts</a></li>
+                    <li class="{{#activeClass active "ui_badge"}} active {{/activeClass}}"><a href="../components/ui_badge.html">Badge</a></li>
+                    <li class="{{#activeClass active "ui_buttons"}} active {{/activeClass}}"><a href="../components/ui_buttons.html">Buttons</a></li>
+                    <li class="{{#activeClass active "ui_card"}} active {{/activeClass}}"><a href="../components/ui_card.html">Card</a></li>
+                    <li class="{{#activeClass active "ui_carousel"}} active {{/activeClass}}"><a href="../components/ui_carousel.html">Carousel</a></li>
+                    <li class="{{#activeClass active "ui_jumbotron"}} active {{/activeClass}}"><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
+                    <li class="{{#activeClass active "ui_icons"}} active {{/activeClass}}"><a href="../components/ui_icons.html">Icons</a></li>
+                    <li class="{{#activeClass active "ui_list_groups"}} active {{/activeClass}}"><a href="../components/ui_list_groups.html">List Groups</a></li>
+                    <li class="{{#activeClass active "ui_modal"}} active {{/activeClass}}"><a href="../components/ui_modal.html">Modal</a></li>
+                    <li class="{{#activeClass active "ui_nav"}} active {{/activeClass}}"><a href="../components/ui_nav.html">Nav</a></li>
+                    <li class="{{#activeClass active "ui_navbar"}} active {{/activeClass}}"><a href="../components/ui_navbar.html">Navbar</a></li>
+                    <li class="{{#activeClass active "ui_notifications"}} active {{/activeClass}}"><a href="../components/ui_notifications.html">Notifications</a></li>
+                    <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
+                    <li class="{{#activeClass active "ui_popovers_tooltips"}} active {{/activeClass}}"><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
+                    <li class="{{#activeClass active "ui_progress"}} active {{/activeClass}}"><a href="../components/ui_progress.html">Progress</a></li>
+                    <li class="{{#activeClass active "ui_tabs_accordion"}} active {{/activeClass}}"><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
                 </ul>
             </li>
             <li class="{{#activeClass active "form_elements form_validation form_wizard"}} active {{/activeClass}}">
@@ -141,13 +151,13 @@
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-forms" class="collapse {{#activeClass active "form_elements form_validation form_wizard"}} show {{/activeClass}}">
-                    <li class="{{#activeClass active "form_elements"}} active {{/activeClass}}"><a href="form_elements.html">Form Elements</a></li>
-                    <li class="{{#activeClass active "form_validation"}} active {{/activeClass}}"><a href="form_validation.html">Form Validation</a></li>
-                    <li class="{{#activeClass active "form_wizard"}} active {{/activeClass}}"><a href="form_wizard.html">Form Wizard</a></li>
+                    <li class="{{#activeClass active "form_elements"}} active {{/activeClass}}"><a href="../form/form_elements.html">Form Elements</a></li>
+                    <li class="{{#activeClass active "form_validation"}} active {{/activeClass}}"><a href="../form/form_validation.html">Form Validation</a></li>
+                    <li class="{{#activeClass active "form_wizard"}} active {{/activeClass}}"><a href="../form/form_wizard.html">Form Wizard</a></li>
                 </ul>
             </li>
             <li class="{{#activeClass active "grid"}} active {{/activeClass}}">
-                <a href="grid.html">
+                <a href="../other/grid.html">
                     <span class="icon">
                         <i class="fi flaticon-menu-4"></i>
                     </span>
@@ -165,8 +175,8 @@
                 <ul id="sidebar-maps" class="collapse {{#activeClass active "maps_google maps_vector"}} show {{/activeClass}}">
                     <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
                          target page -->
-                    <li class="{{#activeClass active "maps_google"}} active {{/activeClass}}"><a href="maps_google.html" data-no-pjax>Google Maps</a></li>
-                    <li class="{{#activeClass active "maps_vector"}} active {{/activeClass}}"><a href="maps_vector.html">Vector Maps</a></li>
+                    <li class="{{#activeClass active "maps_google"}} active {{/activeClass}}"><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
+                    <li class="{{#activeClass active "maps_vector"}} active {{/activeClass}}"><a href="../maps/maps_vector.html">Vector Maps</a></li>
                 </ul>
             </li>
             <li class="{{#activeClass active "tables_basic tables_dynamic"}} active {{/activeClass}}">
@@ -179,8 +189,8 @@
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-tables" class="collapse {{#activeClass active "tables_basic tables_dynamic"}} show {{/activeClass}}">
-                    <li class="{{#activeClass active "tables_basic"}} active {{/activeClass}}"><a href="tables_basic.html">Tables Basic</a></li>
-                    <li class="{{#activeClass active "tables_dynamic"}} active {{/activeClass}}"><a href="tables_dynamic.html">Tables Dynamic</a></li>
+                    <li class="{{#activeClass active "tables_basic"}} active {{/activeClass}}"><a href="../tables/tables_basic.html">Tables Basic</a></li>
+                    <li class="{{#activeClass active "tables_dynamic"}} active {{/activeClass}}"><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
                 </ul>
             </li>
             <li class="{{#activeClass active "calendar invoice login error gallery search time_line"}} active {{/activeClass}}">
@@ -192,13 +202,13 @@
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-extra" class="collapse {{#activeClass active "calendar invoice login error gallery search time_line"}} show {{/activeClass}}">
-                    <li class="{{#activeClass active "calendar"}} active {{/activeClass}}"><a href="calendar.html">Calendar</a></li>
-                    <li class="{{#activeClass active "invoice"}} active {{/activeClass}}"><a href="invoice.html">Invoice</a></li>
-                    <li class="{{#activeClass active "login"}} active {{/activeClass}}"><a href="login.html" target="_blank" data-no-pjax>Login Page</a></li>
-                    <li class="{{#activeClass active "error"}} active {{/activeClass}}"><a href="error.html" target="_blank" data-no-pjax>Error Page</a></li>
-                    <li class="{{#activeClass active "gallery"}} active {{/activeClass}}"><a href="gallery.html">Gallery</a></li>
-                    <li class="{{#activeClass active "search"}} active {{/activeClass}}"><a href="search.html">Search Results</a></li>
-                    <li class="{{#activeClass active "time_line"}} active {{/activeClass}}"><a href="time_line.html" data-no-pjax>Time Line</a></li>
+                    <li class="{{#activeClass active "calendar"}} active {{/activeClass}}"><a href="../extra/calendar.html">Calendar</a></li>
+                    <li class="{{#activeClass active "invoice"}} active {{/activeClass}}"><a href="../extra/invoice.html">Invoice</a></li>
+                    <li class="{{#activeClass active "login"}} active {{/activeClass}}"><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
+                    <li class="{{#activeClass active "error"}} active {{/activeClass}}"><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
+                    <li class="{{#activeClass active "gallery"}} active {{/activeClass}}"><a href="../extra/gallery.html">Gallery</a></li>
+                    <li class="{{#activeClass active "search"}} active {{/activeClass}}"><a href="../extra/search.html">Search Results</a></li>
+                    <li class="{{#activeClass active "time_line"}} active {{/activeClass}}"><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
                 </ul>
             </li>
             <li>

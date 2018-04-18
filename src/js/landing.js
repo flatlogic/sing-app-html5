@@ -6,7 +6,7 @@ $(function(){
       margin: 10,
       nav: false,
       dots: true,
-      navText: ['<img src="img/landing/arrow.svg">', '<img src="img/landing/arrow.svg">'],
+      navText: ['<img src="../img/landing/arrow.svg">', '<img src="../img/landing/arrow.svg">'],
       responsive: [{
         breakpoint: 992,
         nav: true,

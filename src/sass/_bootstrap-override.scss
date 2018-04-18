@@ -262,7 +262,7 @@ legend {
       @include transition(color .15s ease-in-out);
       &:hover {
         background-color: transparent;
-        color: $text-color;
+        color: $body-color;
       }
     }
 
@@ -385,7 +385,6 @@ legend {
 .navbar {
   border: none;
   font-size: $navbar-font-size;
-  font-weight: 500;
   min-height: 50px;
   margin-bottom: 0;
   padding: 0;
@@ -568,44 +567,44 @@ legend {
       padding: 15px;
     }
   }
-}
 
-.navbar-brand {
-  color: $text-color;
-  font-size: 24px;
-
-  @include media-breakpoint-down(sm) {
-    font-size: 18px;
-  }
-}
-
-.navbar-toggler {
-  padding: 0;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-.navbar-nav {
-  .nav-item {
-    margin: 5px 0 0 15px;
-    font-size: 18px;
+  .navbar-brand {
+    color: $body-color;
+    font-size: 24px;
 
     @include media-breakpoint-down(sm) {
-      margin: 0;
-      padding: 15px 0;
-      display: flex;
-      justify-content: center;
+      font-size: 18px;
     }
-    
-    .nav-link {
-      color: $text-color;
-      font-weight: $font-weight-normal;
+  }
 
-      &:hover {
-        color: theme-color('warning');
-        text-decoration: none;
+  .navbar-toggler {
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin: 5px 0 0 15px;
+      font-size: 18px;
+
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .nav-link {
+        color: $body-color;
+        font-weight: $font-weight-normal;
+
+        &:hover {
+          color: theme-color('warning');
+          text-decoration: none;
+        }
       }
     }
   }
@@ -623,7 +622,7 @@ legend {
   margin-bottom: $spacer*1.5;
 
   > .active {
-    color: $text-color;
+    color: $body-color;
     font-weight: $font-weight-semi-bold;
   }
 }
@@ -771,7 +770,7 @@ legend {
 .list-group-item{
   &,
   &:hover {
-    color: $text-color;
+    color: $body-color;
   }
 
   &:hover {
@@ -957,7 +956,7 @@ legend {
     }
 
     .page-link {
-      color: $text-color;
+      color: $body-color;
       border: none;
     }
 
@@ -1022,7 +1021,7 @@ legend {
     }
   
     p {
-      color: $text-color;
+      color: $body-color;
       font-size: 24px;
       line-height: 1.7;
       text-align: left;
@@ -1259,7 +1258,7 @@ code {
   color: white;
 
   &.bg-default {
-    color: $text-color;
+    color: $body-color;
   }
 }
 
@@ -1297,7 +1296,7 @@ a.badge {
       &,
       &:hover,
       &:active {
-        color: $text-color;
+        color: $body-color;
         text-decoration: none;
       }
 
@@ -1310,4 +1309,14 @@ a.badge {
       }
     }
   }
+}
+
+//
+// Card
+// --------------------------------------------------
+
+.card-img-bg {
+  padding: 1.25rem;
+  background-size: cover;
+  background-position: center;
 }

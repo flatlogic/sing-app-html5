@@ -25,7 +25,7 @@ gulp.task('copy', function () {
 
 // Handle handlebars
 gulp.task('hbs', function () {
-    gulp.src(['src/*.hbs', 'src/components/*.hbs'])
+    gulp.src('./src/pages/**/*.hbs')
         .pipe(hb({
             partials: './src/partials/*.hbs',
             helpers: [
@@ -56,7 +56,7 @@ gulp.task('styles', function () {
 // Development
 gulp.task('watch', ['hbs', 'styles', 'copy'], function () {
     gulp.watch('./src/sass/*.scss', ['styles']);
-    gulp.watch('./src/**/*.hbs', ['hbs']);
+    gulp.watch(['./src/pages/**/*.hbs', './src/partials/*.hbs'], ['hbs']);
     gulp.watch('./src/**/*.js', ['copy']);
 });
 
