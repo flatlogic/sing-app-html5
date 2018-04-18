@@ -103,7 +103,7 @@ $(function(){
 
             model: Folder,
 
-            url: 'demo/json/folders.json',
+            url: '../demo/json/folders.json',
 
 
             comparator: 'order',
@@ -153,7 +153,7 @@ $(function(){
 
             model: Email,
 
-            url: 'demo/json/emails.json',
+            url: '../demo/json/emails.json',
 
 
             comparator: function(mail){

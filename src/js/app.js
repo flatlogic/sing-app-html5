@@ -683,7 +683,7 @@ function initAppFunctions(){
                 })
             }
             $sidebarContent.slimscroll({
-                height: window.innerHeight,
+                height: '100vh',
                 size: '4px'
             });
         }

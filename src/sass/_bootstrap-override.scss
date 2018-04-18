@@ -567,44 +567,44 @@ legend {
       padding: 15px;
     }
   }
-}
 
-.navbar-brand {
-  color: $text-color;
-  font-size: 24px;
-
-  @include media-breakpoint-down(sm) {
-    font-size: 18px;
-  }
-}
-
-.navbar-toggler {
-  padding: 0;
-
-  &:focus {
-    outline: none;
-  }
-}
-
-.navbar-nav {
-  .nav-item {
-    margin: 5px 0 0 15px;
-    font-size: 18px;
+  .navbar-brand {
+    color: $body-color;
+    font-size: 24px;
 
     @include media-breakpoint-down(sm) {
-      margin: 0;
-      padding: 15px 0;
-      display: flex;
-      justify-content: center;
+      font-size: 18px;
     }
-    
-    .nav-link {
-      color: $text-color;
-      font-weight: $font-weight-normal;
+  }
 
-      &:hover {
-        color: theme-color('warning');
-        text-decoration: none;
+  .navbar-toggler {
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      margin: 5px 0 0 15px;
+      font-size: 18px;
+
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .nav-link {
+        color: $body-color;
+        font-weight: $font-weight-normal;
+
+        &:hover {
+          color: theme-color('warning');
+          text-decoration: none;
+        }
       }
     }
   }
@@ -1021,7 +1021,7 @@ legend {
     }
   
     p {
-      color: $text-color;
+      color: $body-color;
       font-size: 24px;
       line-height: 1.7;
       text-align: left;
