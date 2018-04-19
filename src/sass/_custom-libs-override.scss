@@ -1669,7 +1669,7 @@ a.fc-event{
   justify-content: space-between;
   left: -95px;
   width: calc(100% + 190px);
-  top: calc(50% - 47.5px);
+  top: calc(50% - 50px);
 
   @include media-breakpoint-down (lg) {
     display: none;
@@ -1695,18 +1695,18 @@ a.fc-event{
 .owl-dots {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: $spacer * 2;
 
   button.owl-dot {
-    margin: 0 5px;
-    transition: 0.3s;
-    height: 17.5px;
-    width: 17.5px;
-    background: rgba(#72adf2, 0.2);
+    margin: 0 $spacer * 0.3;
+    transition: $transition-base;
+    height: 18px;
+    width: 18px;
+    background: rgba(theme-color('primary'), 0.2);
     border-radius: 50%;
     
     &.active {
-      background: #72adf2;
+      background: rgba(theme-color('primary'), 0.6);
     }
 
     &:focus {
