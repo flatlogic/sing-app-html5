@@ -1667,9 +1667,9 @@ a.fc-event{
   position: absolute;
   display: flex;
   justify-content: space-between;
-  left: -95px;
-  width: calc(100% + 190px);
-  top: calc(50% - 50px);
+  left: -6.8rem;
+  width: calc(100% + 13.5rem);
+  top: calc(50% - 3.5rem);
 
   @include media-breakpoint-down (lg) {
     display: none;
