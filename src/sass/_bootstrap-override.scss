@@ -553,7 +553,7 @@ legend {
 }
 
 .landing .navbar {
-  margin: 25px 0;
+  margin: 1.75rem 0;
 
   @include media-breakpoint-down(sm) {
     margin: 0;
@@ -561,19 +561,19 @@ legend {
 
   .navbar-collapse {
     @include media-breakpoint-down(sm) {
-      background: #fff;
-      margin: 0 -20px;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
-      padding: 15px;
+      background: $white;
+      margin: 0 -1.4rem;
+      box-shadow: 0 0 .75rem 0 rgba(0, 0, 0, 0.15);
+      padding: 1rem;
     }
   }
 
   .navbar-brand {
     color: $body-color;
-    font-size: 24px;
+    font-size: 1.7rem;
 
     @include media-breakpoint-down(sm) {
-      font-size: 18px;
+      font-size: $font-size-base * 1.3;
     }
   }
 
@@ -587,12 +587,12 @@ legend {
 
   .navbar-nav {
     .nav-item {
-      margin: 5px 0 0 15px;
+      margin: .3rem 0 0 1rem;
       font-size: 18px;
 
       @include media-breakpoint-down(sm) {
         margin: 0;
-        padding: 15px 0;
+        padding: 1rem 0;
         display: flex;
         justify-content: center;
       }

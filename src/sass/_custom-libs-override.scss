@@ -1654,6 +1654,67 @@ a.fc-event{
   vertical-align: -15%;
 }
 
+/***********************/
+/*    owl-carousel     */
+/***********************/
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+  -ms-touch-action: auto;
+      touch-action: auto;
+}
+
+.owl-nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: -95px;
+  width: calc(100% + 190px);
+  top: calc(50% - 50px);
+
+  @include media-breakpoint-down (lg) {
+    display: none;
+  }
+
+  button {
+    img {
+      width: 50px;
+    }
+
+    &:first-child {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: $spacer * 2;
+
+  button.owl-dot {
+    margin: 0 $spacer * 0.3;
+    transition: $transition-base;
+    height: 18px;
+    width: 18px;
+    background: rgba(theme-color('primary'), 0.2);
+    border-radius: 50%;
+    
+    &.active {
+      background: rgba(theme-color('primary'), 0.6);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
 .jvectormap-zoomin {
   top: auto;
   bottom: 40px;
