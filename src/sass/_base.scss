@@ -2084,9 +2084,21 @@ input[type=search], input.search {
       align-items: center;
       justify-content: space-between;
   
-      span:first-child {
+      .version-title {
         display: flex;
         align-items: center;
+        margin-bottom: 0;
+
+        > a {
+          display: flex;
+          align-items: center;
+          color: inherit;
+          text-decoration: none;
+        }
+
+        &:hover {
+          color: $gray-500;
+        }
       }
 
       .icon, i {

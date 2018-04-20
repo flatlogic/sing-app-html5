@@ -62,10 +62,12 @@ $(function(){
          */
         $(document).on('click', '.nav-collapsed #sidebar', $.proxy(this.expandNavigation, this));
         //we don't need this cool feature for big boys
-        ('ontouchstart' in window) && this.$content
-            .hammer()
-            .bind('swipeleft', $.proxy(this._contentSwipeLeft, this))
-            .bind('swiperight', $.proxy(this._contentSwipeRight, this));
+        if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
+            ('ontouchstart' in window) && this.$content
+                .hammer()
+                .bind('swipeleft', $.proxy(this._contentSwipeLeft, this))
+                .bind('swiperight', $.proxy(this._contentSwipeRight, this));
+        }
 
         this.checkNavigationState();
 
@@ -721,27 +723,32 @@ function initAppFunctions(){
          * Open chat on swipe left but first check if navigation is collapsed
          * otherwise do nothing
          */
-        $('#content').hammer().bind('swipeleft', function(e){
-            if ($('body').is('.nav-collapsed')){
-                $chatContainer.addClass('chat-sidebar-opened');
-            }
-        })
+        if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
+            ('ontouchstart' in window) && this.$content
+                .hammer()
+                .bind('swipeleft', function(e){
+                if ($('body').is('.nav-collapsed')){
+                    $chatContainer.addClass('chat-sidebar-opened');
+                }
+            })
+
             /*
              * Hide chat on swipe right but first check if navigation is collapsed
              * otherwise do nothing
              */
-            .bind('swiperight', function(e){
-                if ($('body').is('.nav-collapsed.chat-sidebar-opened')){
-                    $chatContainer.removeClass('chat-sidebar-opened')
+                .bind('swiperight', function(e){
+                    if ($('body').is('.nav-collapsed.chat-sidebar-opened')){
+                        $chatContainer.removeClass('chat-sidebar-opened')
                         // as there is no way to cancel swipeLeft handlers attached to
                         // .content making this hack with temporary class which will be
                         // used by SingApp to check whether it is permitted to open navigation
                         // on swipeRight
-                        .addClass('chat-sidebar-closing').one(Util.TRANSITION_END, function () {
+                            .addClass('chat-sidebar-closing').one(Util.TRANSITION_END, function () {
                             $('body').removeClass('chat-sidebar-closing');
                         }).emulateTransitionEnd(300);
-                }
-        });
+                    }
+                });
+        }
 
         $(document).on('click', '.chat-sidebar-user-group > a', function(){
             var $this = $(this),

@@ -26,8 +26,8 @@ $(function(){
         },
 
         screens: {
-            'xs-max': 543,
-            'sm-min': 544,
+            'xs-max': 575,
+            'sm-min': 576,
             'sm-max': 767,
             'md-min': 768,
             'md-max': 991,
