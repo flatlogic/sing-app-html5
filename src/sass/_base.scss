@@ -1039,8 +1039,6 @@
     @include transition(opacity .15s);
   }
 
-
-
   > a{
     padding: 1px 4px;
     border-radius: 4px;
@@ -1950,7 +1948,9 @@ input[type=search], input.search {
   }
 }
 
-// Landing
+/***********************/
+/*     Landing    */
+/***********************/
 
 .landing {
   background: $white;

@@ -1,11 +1,12 @@
 {{#extend "layout" title="Sing App - Charts"}}
     {{#content "sidebar"}}
-        {{> sidebar active="charts"}}
+        {{> sidebar active="charts_overview"}}
     {{/content}}
     {{#content "content" mode="replace"}}
-      <ol class="breadcrumb">
+        <ol class="breadcrumb">
             <li class="breadcrumb-item">YOU ARE HERE</li>
             <li class="breadcrumb-item active">Charts</li>
+            <li class="breadcrumb-item active">Overview</li>
         </ol>
         <h1 class="page-title">Visual - <span class="fw-semi-bold">Charts</span></h1>
         <div class="row">
@@ -16,8 +17,10 @@
                             Flot <span class="fw-semi-bold">Charts</span>
                         </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
@@ -25,7 +28,8 @@
                         <div class="mt mb" id="flot-main" style="width: 100%; height: 260px;"></div>
                         <div class="chart-tooltip" id="flot-main-tooltip" style="opacity: 0"></div>
                         <p class="fs-mini text-muted">
-                            Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
+                            Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery,
+                            with a
                             focus on simple usage, attractive looks and interactive features.
                         </p>
                         <h5 class="mt">Interactive <span class="fw-semi-bold">Sparklines</span></h5>
@@ -38,7 +42,9 @@
                                     </div>
                                     <div class="stat-item stat-item-mini-chart">
                                         <div class="sparkline" data-type="bar" data-bar-color="#f0b518"
-                                             data-height="30" data-bar-width="6" data-bar-spacing="2">9,12,14,15,10,14,20</div>
+                                             data-height="30" data-bar-width="6" data-bar-spacing="2">
+                                            9,12,14,15,10,14,20
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +56,9 @@
                                     </div>
                                     <div class="stat-item stat-item-mini-chart">
                                         <div class="sparkline" data-type="bar" data-bar-color="#FFA587"
-                                             data-height="30" data-bar-width="6" data-bar-spacing="2">9,12,14,15,10,14,20</div>
+                                             data-height="30" data-bar-width="6" data-bar-spacing="2">
+                                            9,12,14,15,10,14,20
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -70,8 +78,10 @@
                             Realtime <span class="fw-semi-bold">Rickshaw</span>
                         </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
@@ -79,12 +89,14 @@
                         <p class="fs-mini text-muted mb-lg">
                             Rickshaw provides the elements you need to create interactive graphs: renderers, legends,
                             hovers, range selectors, etc. You put the pieces together.
-                            It's all based on <span class="fw-semi-bold">d3</span> underneath, so graphs are drawn with standard SVG and styled with CSS.
+                            It's all based on <span class="fw-semi-bold">d3</span> underneath, so graphs are drawn with
+                            standard SVG and styled with CSS.
                             Customize all you like with techniques you already know.
                         </p>
                         <h5>720 Users</h5>
                         <div class="bg-gray-lighter progress progress-xs">
-                            <div class="progress-bar progress-xs progress-bar-gray-light" style="width: 60%;" data-width="60%"></div>
+                            <div class="progress-bar progress-xs progress-bar-gray-light" style="width: 60%;"
+                                 data-width="60%"></div>
                         </div>
                         <p class="fs-mini text-muted mb-lg">
                             <span class="circle bg-success text-white">
@@ -105,8 +117,10 @@
                             Line <span class="fw-semi-bold">Sparkline</span>
                         </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
@@ -160,7 +174,8 @@
                     </header>
                     <div class="widget-body">
                         <p class="fs-mini text-muted">
-                            This project is an attempt to build re-usable charts and chart components for <span class="fw-semi-bold">d3.js</span> without
+                            This project is an attempt to build re-usable charts and chart components for <span
+                                class="fw-semi-bold">d3.js</span> without
                             taking away the power that d3.js gives you.
                         </p>
                         <div id="nvd31">
@@ -199,8 +214,10 @@
                             Morris <span class="fw-semi-bold">Area Charts</span>
                         </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
@@ -222,8 +239,10 @@
                             Morris <span class="fw-semi-bold">Line Charts</span>
                         </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
@@ -247,14 +266,16 @@
                             Easy <span class="fw-semi-bold">Pie Charts</span>
                         </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body clearfix">
                         <div class="text-center">
-                            <div class="easy-pie-chart mb-lg" id="easy-pie1" data-percent="73">
+                            <div class="easy-pie-chart-lg mb-lg" id="easy-pie1" data-percent="73">
                                 73
                             </div>
                         </div>
@@ -273,8 +294,10 @@
                             Morris <span class="fw-semi-bold">Donut Charts</span>
                         </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
@@ -284,7 +307,8 @@
                         <p class="fs-mini text-muted">
                             Donuts a great for representing some parted information like traffice sources,
                             disk partitions, etc.
-                            This really couldn't be easier. Create a Donut chart using <code>Morris.Donut(options)</code>,
+                            This really couldn't be easier. Create a Donut chart using
+                            <code>Morris.Donut(options)</code>,
                             with only few options.
                         </p>
                     </div>
@@ -297,15 +321,18 @@
                             Flot <span class="fw-semi-bold">Bars</span>
                         </h5>
                         <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
                             <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
                         </div>
                     </header>
                     <div class="widget-body">
                         <div class="mt-lg" id="flot-bar" style="width: 100%; height: 260px;"></div>
                         <p class="fs-mini text-muted">
-                            Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery, with a
+                            Flot is a <span class="fw-semi-bold">pure</span> JavaScript plotting library for jQuery,
+                            with a
                             focus on simple usage, attractive looks and interactive features.
                         </p>
                     </div>
@@ -314,21 +341,24 @@
         </div>
     {{/content}}
     {{#content "scripts"}}
-      <script src="../../bower_components/jQuery-Mapael/js/raphael/raphael-min.js"></script>
-      <script src="../../bower_components/jquery.sparkline/index.js"></script>
-      <script src="../../bower_components/d3/d3.min.js"></script>
-      <script src="../../bower_components/rickshaw/rickshaw.min.js"></script>
-      <script src="../../bower_components/flot.animator/jquery.flot.animator.min.js"></script>
-      <script src="../../bower_components/flot/jquery.flot.js"></script>
-      <script src="../../bower_components/flot-orderBars/js/jquery.flot.orderBars.js"></script>
-      <script src="../../bower_components/flot/jquery.flot.selection.js"></script>
-      <script src="../../bower_components/flot/jquery.flot.time.js"></script>
 
-      <script src="../../bower_components/nvd3/build/nv.d3.min.js"></script>
-      <script src="../../bower_components/morris.js/morris.min.js"></script>
-      <script src="../../bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
 
-      <!-- page specific js -->
-      <script src="../js/charts.js"></script>
+        <script src="../../bower_components/jQuery-Mapael/js/raphael/raphael-min.js"></script>
+        <script src="../../bower_components/jquery.sparkline/index.js"></script>
+        <script src="../../bower_components/d3/d3.min.js"></script>
+        <script src="../../bower_components/rickshaw/rickshaw.min.js"></script>
+
+        <script src="../../bower_components/flot.animator/jquery.flot.animator.min.js"></script>
+        <script src="../../bower_components/flot/jquery.flot.js"></script>
+        <script src="../../bower_components/flot-orderBars/js/jquery.flot.orderBars.js"></script>
+        <script src="../../bower_components/flot/jquery.flot.selection.js"></script>
+        <script src="../../bower_components/flot/jquery.flot.time.js"></script>
+
+        <script src="../../bower_components/nvd3/build/nv.d3.min.js"></script>
+        <script src="../../bower_components/morris.js/morris.min.js"></script>
+        <script src="../../bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+        <!-- page specific js -->
+        <script src="../js/charts/charts.js"></script>
     {{/content}}
 {{/extend}}

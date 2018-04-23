@@ -302,7 +302,7 @@ $(function(){
                     size: 17,
                     attrs : {
                         fill : Sing.colors['brand-warning'],
-                        stroke : "#fff",
+                        stroke : Sing.colors['white'],
                         "stroke-width" : 0,
                         "stroke-linejoin" : "round"
                     },

@@ -150,7 +150,7 @@
   border: 1px solid #ccc;
   border-radius: $border-radius;
   font-size: $font-size-sm;
-  color: $text-color;
+  color: $body-color;
 }
 
 .zoomIn, .zoomOut {
@@ -163,7 +163,7 @@
   box-sizing: content-box;
   border: 1px solid #ccc;
   background-color: #fff;
-  color: $text-color;
+  color: $body-color;
   line-height: 20px;
   text-align: center;
   border-radius: $border-radius;
@@ -215,7 +215,9 @@
 
 svg text {
   font: $font-weight-base $font-size-sm $font-family-base;
-  fill: $text-color;
+  fill: $gray-400;
+  font-size: $font-size-larger;
+  font-weight: 100;
 }
 
 svg .title {
@@ -289,7 +291,7 @@ svg .title {
   }
 
   // Hover state
-  $color: $input-border-focus;
+  $color: $input-focus-border-color;
   &.active {
     border-color: $color;
     outline: 0;
@@ -503,7 +505,7 @@ $slider-handle-size: 26px;
   }
 
   .popover{
-    color: $text-color;
+    color: $body-color;
   }
 }
 .calendar .table td{
@@ -626,7 +628,7 @@ input.parsley-error{
   h3 {
     font-family: $font-family-base;
     font-weight: $headings-font-weight;
-    color: $text-color;
+    color: $body-color;
   }
 
   .close {
@@ -637,7 +639,7 @@ input.parsley-error{
 
 .wizard-nav-list > li.already-visited > a.wizard-nav-link,
 .wizard-nav-list > li.already-visited.active > a.wizard-nav-link{
-  color: $text-color;
+  color: $body-color;
 }
 
 .wizard-nav-list li.active > a,
@@ -696,7 +698,7 @@ input.parsley-error{
 .table-editable{
 
   th > a{
-    color: $text-color;
+    color: $body-color;
     cursor: pointer;
   }
 
@@ -850,7 +852,7 @@ table.dataTable tfoot th{
 .dataTables_wrapper .dataTables_info,
 .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate{
-  color: $text-color;
+  color: $body-color;
 }
 
 .dataTables_wrapper .dataTables_length,
@@ -930,7 +932,7 @@ table.table-hover.dataTable > tbody > tr:hover > td {
   height: 30px;
   margin: 5px 0;
   padding: 5px 10px;
-  color: $text-color;
+  color: $body-color;
   text-decoration: none;
   background: $white;
   border: 1px solid $list-group-border-color;
@@ -957,7 +959,7 @@ table.table-hover.dataTable > tbody > tr:hover > td {
   line-height: 1;
   text-align: center;
   font-weight: bold;
-  color: $text-color;
+  color: $body-color;
 
   &:focus,
   &:active{
@@ -1547,12 +1549,9 @@ ul.messenger-theme-air .messenger-message{
 /***********************/
 
 
-.easy-pie-chart{
+%easy-pie-chart {
   position: relative;
   display: inline-block;
-  line-height: 120px;
-  height: 120px;
-  width: 120px;
   text-align: center;
   color: $gray-600;
   canvas{
@@ -1560,6 +1559,20 @@ ul.messenger-theme-air .messenger-message{
     top: 0;
     left: 0
   }
+}
+
+.easy-pie-chart-md {
+  @extend %easy-pie-chart;
+  line-height: 120px;
+  height: 120px;
+  width: 120px;
+}
+
+.easy-pie-chart-lg {
+  @extend %easy-pie-chart;
+  line-height: 140px;
+  height: 140px;
+  width: 140px;
 }
 
 /***********************/
@@ -1575,7 +1588,7 @@ ul.messenger-theme-air .messenger-message{
   border: none;
   font-weight: $font-weight-normal;
   background-color: $gray-light;
-  color: $text-color;
+  color: $body-color;
 }
 
 .fc-today{
@@ -1713,4 +1726,14 @@ a.fc-event{
       outline: none;
     }
   }
+}
+
+.jvectormap-zoomin {
+  top: auto;
+  bottom: 40px;
+}
+
+.jvectormap-zoomout {
+  bottom: 20px;
+  top: auto;
 }

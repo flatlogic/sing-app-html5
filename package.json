@@ -6,6 +6,7 @@
     "line-awesome": "github:icons8/line-awesome"
   },
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "~3.9.0",
     "gulp-clean": "^0.4.0",
     "gulp-rename": "1.2.2",
