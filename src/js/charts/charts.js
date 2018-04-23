@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
 
     function initFlot(){
         var data1 = [
@@ -39,7 +39,7 @@ $(function(){
                     fill: .3,
                     lineWidth: 0
                 },
-                color:['#ccc']
+                color:[Sing.colors['gray-400']]
             },{
                 label: "Traffic",
                 data: data2,
@@ -47,14 +47,14 @@ $(function(){
                     fill: 0.6,
                     lineWidth: 0
                 },
-                color:['#F7653F']
+                color:[Sing.palette['brand-info-light']]
             },{
                 label: "Traffic",
                 data: data1,
                 animator: {steps: 60, duration: 1000, start:0},
                 lines: {lineWidth:2},
                 shadowSize:0,
-                color: '#F7553F'
+                color: Sing.palette['brand-danger-pale']
             }],{
                 xaxis: {
                     tickLength: 0,
@@ -68,7 +68,7 @@ $(function(){
                 },
                 yaxis: {
                     tickDecimals: 0,
-                    tickColor: "#f3f3f3",
+                    tickColor: Sing.colors['gray-200'],
                     font :{
                         lineHeight: 13,
                         weight: "bold",
@@ -76,9 +76,9 @@ $(function(){
                     }
                 },
                 grid: {
-                    backgroundColor: { colors: [ "#fff", "#fff" ] },
+                    backgroundColor: { colors: [ Sing.colors['white'], Sing.colors['white'] ] },
                     borderWidth:1,
-                    borderColor:"#f0f0f0",
+                    borderColor: Sing.colors['white'],
                     margin:0,
                     minBorderMargin:0,
                     labelMargin:20,
@@ -127,11 +127,11 @@ $(function(){
             renderer: 'area',
             series: [
                 {
-                    color: '#96E593',
+                    color: Sing.palette['brand-primary-pale'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: '#ecfaec',
+                    color: Sing.palette['brand-success-light'],
                     data: seriesData[1],
                     name: 'Downloads'
                 }
@@ -160,35 +160,39 @@ $(function(){
             }
         } );
 
-        setInterval( function() {
+        let intervalId = setInterval( function() {
             random.removeData(seriesData);
             random.addData(seriesData);
             graph.update();
 
         }, 1000 );
+
+        $(document).on('pjax:start', () => {
+            clearInterval(intervalId);
+        });
     }
 
     function initSparkline1(){
         function _initChart(){
             $('#sparkline1').sparkline([2,4,6,2,7,5,3,7,8,3,6],{
                 width: '100%',
-                fillColor: '#ddd',
+                fillColor: Sing.palette['brand-warning-light'],
                 height: '100px',
                 lineColor: 'transparent',
-                spotColor: '#c0d0f0',
+                spotColor: Sing.palette[7],
                 minSpotColor: null,
                 maxSpotColor: null,
-                highlightSpotColor: '#ddd',
-                highlightLineColor: '#ddd'
+                highlightSpotColor: Sing.palette['brand-warning-light'],
+                highlightLineColor: Sing.palette['brand-warning-light'],
             }).sparkline([5,3,7,8,3,6,2,4,6,2,7],{
                 composite: true,
                 lineColor: 'transparent',
-                spotColor: '#c0d0f0',
-                fillColor: 'rgba(192, 208, 240, 0.76)',
+                spotColor: Sing.palette['brand-info-light'],
+                fillColor: Sing.palette['brand-info-pale'],
                 minSpotColor: null,
                 maxSpotColor: null,
-                highlightSpotColor: '#ddd',
-                highlightLineColor: '#ddd'
+                highlightSpotColor: Sing.palette['brand-info-light'],
+                highlightLineColor: Sing.palette['brand-info-light'],
             })
         }
 
@@ -202,7 +206,7 @@ $(function(){
             type: 'pie',
             width: '100px',
             height: '100px',
-            sliceColors: ['#F5CB7B', '#FAEEE5', '#f0f0f0']
+            sliceColors: Object.values(Sing.palette)
         });
     }
 
@@ -255,7 +259,7 @@ $(function(){
             var chart = nv.models.lineChart()
                 .useInteractiveGuideline(true)
                 .margin({left: 28, bottom: 30, right: 0})
-                .color(['#82DFD6', '#ddd']);
+                .color([Sing.palette['brand-success-pale'], Sing.colors['gray-300']]);
 
             chart.xAxis
                 .showMaxMin(false)
@@ -287,7 +291,7 @@ $(function(){
         nv.addGraph(function() {
             var chart = nv.models.multiBarChart()
                 .margin({left: 28, bottom: 30, right: 0})
-                .color(['#F7653F', '#ddd']);
+                .color([Sing.colors['gray-300'], Sing.palette['brand-info-light']]);
 
             chart.xAxis
                 .showMaxMin(false)
@@ -333,7 +337,7 @@ $(function(){
             xkey: 'y',
             ykeys: ['a', 'b'],
             labels: ['Series A', 'Series B'],
-            lineColors: ['#88C4EE', '#ccc']
+            lineColors: [Sing.palette['brand-success-light'], Sing.palette['brand-danger-pale']]
         });
     }
 
@@ -354,7 +358,7 @@ $(function(){
             xkey: 'y',
             ykeys: ['a', 'b'],
             labels: ['Series A', 'Series B'],
-            lineColors: ['#80DE78', '#9EEE9B'],
+            lineColors: [Sing.palette['brand-success-light'], Sing.palette['brand-warning-light']],
             lineWidth: 0
         });
     }
@@ -363,23 +367,24 @@ $(function(){
         $('#morris3').css({height: 180});
         Morris.Donut({
             element: 'morris3',
+            resize: true,
             data: [
                 {label: "Download Sales", value: 12},
                 {label: "In-Store Sales", value: 30},
                 {label: "Mail-Order Sales", value: 20}
             ],
-            colors: ['#F7653F', '#F8C0A2', '#e6e6e6']
+            colors: Object.values(Sing.palette).slice(4)
         });
 
     }
 
     function initEasyPie(){
         $('#easy-pie1').easyPieChart({
-            barColor: '#5dc4bf',
-            trackColor: '#ddd',
+            barColor: Sing.palette['brand-primary-light'],
+            trackColor: Sing.colors['gray-200'],
             scaleColor: false,
             lineWidth: 10,
-            size: 120
+            size: 140
         });
     }
 
@@ -467,7 +472,11 @@ $(function(){
                     backgroundColor: "transparent",
                     labelBoxBorderColor: "none"
                 },
-                colors: ["#64bd63", "#f0b518", "#F7653F"]
+                colors: [
+                    Sing.palette['brand-danger-pale'],
+                    Sing.palette['brand-success-light'],
+                    Sing.palette['brand-primary-light'],
+                ]
             });
         }
 
@@ -478,7 +487,11 @@ $(function(){
 
     }
 
-    function pageLoad(){
+    function pageLoad() {
+        // Restore d3 version used as dependency when charts are created. Unfortunately, rickshaw charts uses global
+        // scope to find d3.
+       // window.d3 = d3v3;
+
         $('.widget').widgster();
         $('.sparkline').each(function(){
             $(this).sparkline('html', $(this).data());

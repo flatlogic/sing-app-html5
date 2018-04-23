@@ -1,37 +1,58 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var rename = require ('gulp-rename');
-var hb = require('gulp-hb');
-var layouts = require('handlebars-layouts');
+const gulp = require('gulp');
+const del = require('del');
+const sass = require('gulp-sass');
+const rename = require ('gulp-rename');
+const hb = require('gulp-hb');
+const layouts = require('handlebars-layouts');
+
+const srcPaths = {
+    scripts: ['./src/js/**/*'],
+    fonts: ['./src/fonts/**/*'],
+    images: ['./src/img/**/*'],
+    styles: ['./src/sass/*.scss'],
+    static: ['./src/demo/**/*'],
+    templates: [
+        'src/*.hbs',
+        'src/pages/**/*.hbs'
+    ],
+    partials: ['./src/partials/*.hbs'],
+    helpers: [
+        './node_modules/handlebars-layouts/index.js',
+        './src/helpers/index.js'
+    ]
+};
 
 hb.handlebars.registerHelper(layouts(hb.handlebars));
 
+gulp.task('clean', () => {
+   del(['dist']);
+});
+
 // Copy demo, img, js, fonts folders from src to dist
-gulp.task('copy', function () {
-    gulp.src('./src/demo/**/*')
+gulp.task('copy', ['copy:js'], function () {
+    gulp.src(srcPaths.static)
         .pipe(gulp.dest('dist/demo'));
     
-    gulp.src('./src/img/**/*')
+    gulp.src(srcPaths.images)
         .pipe(gulp.dest('dist/img'));
 
-    gulp.src('./src/js/**/*')
-        .pipe(gulp.dest('dist/js'));
-    
-    gulp.src('./src/fonts/**/*')
+    gulp.src(srcPaths.fonts)
         .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('copy:js', function () {
+    gulp.src(srcPaths.scripts)
+        .pipe(gulp.dest('dist/js'));
 });
 
 // Handle handlebars
 gulp.task('hbs', function () {
-    gulp.src('./src/pages/**/*.hbs')
+    gulp.src(srcPaths.templates)
         .pipe(hb({
-            partials: './src/partials/*.hbs',
-            helpers: [
-                './node_modules/handlebars-layouts/index.js',
-                './src/helpers/index.js'
-            ]
+            partials: srcPaths.partials,
+            helpers: srcPaths.helpers
         }))
         .pipe(rename({extname: ".html"}))
         .pipe(gulp.dest('dist'));
@@ -39,7 +60,7 @@ gulp.task('hbs', function () {
 
 // Handle sass
 gulp.task('styles', function () {
-    gulp.src('./src/sass/application.scss')
+    gulp.src(srcPaths.styles)
         .pipe(sass({
             precision: 10
         }).on('error', sass.logError))
@@ -54,10 +75,10 @@ gulp.task('styles', function () {
 });
 
 // Development
-gulp.task('watch', ['hbs', 'styles', 'copy'], function () {
-    gulp.watch('./src/sass/*.scss', ['styles']);
-    gulp.watch(['./src/pages/**/*.hbs', './src/partials/*.hbs'], ['hbs']);
-    gulp.watch('./src/**/*.js', ['copy']);
+gulp.task('watch', ['build'], function () {
+    gulp.watch(srcPaths.scripts, ['copy:js']);
+    gulp.watch(srcPaths.styles, ['styles']);
+    gulp.watch(srcPaths.templates, ['hbs']);
 });
 
 gulp.task('build', ['hbs', 'styles', 'copy']);

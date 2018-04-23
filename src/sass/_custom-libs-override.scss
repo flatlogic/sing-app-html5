@@ -215,7 +215,9 @@
 
 svg text {
   font: $font-weight-base $font-size-sm $font-family-base;
-  fill: $body-color;
+  fill: $gray-400;
+  font-size: $font-size-larger;
+  font-weight: 100;
 }
 
 svg .title {
@@ -1547,12 +1549,9 @@ ul.messenger-theme-air .messenger-message{
 /***********************/
 
 
-.easy-pie-chart{
+%easy-pie-chart {
   position: relative;
   display: inline-block;
-  line-height: 120px;
-  height: 120px;
-  width: 120px;
   text-align: center;
   color: $gray-600;
   canvas{
@@ -1560,6 +1559,20 @@ ul.messenger-theme-air .messenger-message{
     top: 0;
     left: 0
   }
+}
+
+.easy-pie-chart-md {
+  @extend %easy-pie-chart;
+  line-height: 120px;
+  height: 120px;
+  width: 120px;
+}
+
+.easy-pie-chart-lg {
+  @extend %easy-pie-chart;
+  line-height: 140px;
+  height: 140px;
+  width: 140px;
 }
 
 /***********************/
