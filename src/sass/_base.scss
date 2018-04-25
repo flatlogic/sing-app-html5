@@ -2034,7 +2034,7 @@ input[type=search], input.search {
   
     .main-photo {
       margin-top: 180px;
-      min-width: 150%;
+      max-width: 160%;
   
       @include media-breakpoint-down (lg) {
         min-width: 200%;
