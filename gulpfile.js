@@ -78,7 +78,7 @@ gulp.task('styles', function () {
 gulp.task('watch', ['build'], function () {
     gulp.watch(srcPaths.scripts, ['copy:js']);
     gulp.watch(srcPaths.styles, ['styles']);
-    gulp.watch(srcPaths.templates, ['hbs']);
+    gulp.watch([...srcPaths.templates, ...srcPaths.partials], ['hbs']);
 });
 
 gulp.task('build', ['hbs', 'styles', 'copy']);
