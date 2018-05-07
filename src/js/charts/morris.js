@@ -30,7 +30,10 @@ $(function() {
                 xkey: 'y',
                 ykeys: ['a', 'b'],
                 labels: ['Users A', 'Series B'],
-                lineColors: [Sing.palette['brand-info-pale'], Sing.colors['brand-danger']],
+                lineColors: [
+                    Sing.palette['brand-success-light'],
+                    Sing.palette['brand-danger-pale']
+                ],
                 lineWidth: 0
             });
         }
@@ -51,7 +54,10 @@ $(function() {
                 xkey: 'y',
                 ykeys: ['a', 'b'],
                 labels: ['Series A', 'Series B'],
-                lineColors: [ Sing.colors['brand-success'], Sing.colors['brand-warning'] ]
+                lineColors: [
+                    Sing.palette['brand-success-light'],
+                    Sing.palette['brand-warning-light']
+                ]
             });
         }
 
@@ -64,7 +70,11 @@ $(function() {
                     {label: "In-Store Sales", value: 30},
                     {label: "Mail-Order Sales", value: 20}
                 ],
-                colors:[Sing.palette['brand-primary-light'], Sing.colors['brand-warning'], Sing.palette['brand-info-pale']]
+                colors:[
+                    Sing.palette['brand-danger-pale'],
+                    Sing.palette['brand-warning-light'],
+                    Sing.palette['brand-info-pale']
+                ]
             });
         }
 
@@ -108,7 +118,10 @@ $(function() {
                 ykeys: ['a', 'b'],
                 labels: ['Total Income', 'Total Outcome'],
                 hideHover: 'auto',
-                barColors: [Sing.colors['brand-success'], Sing.palette['brand-danger-light']],
+                barColors: [
+                    Sing.palette['brand-success-light'],
+                    Sing.palette['brand-danger-light']
+                ],
                 gridTextColor: Sing.colors['gray-100']
             });
         }
@@ -119,21 +132,21 @@ $(function() {
                 stacked: true,
                 resize: true,
                 data: [
-                    { y: '2012', a: 3, b: 7,  c: 90, d: 0  },
-                    { y: '2013', a: 2, b: 7,  c: 75, d: 14 },
-                    { y: '2014', a: 3, b: 15, c: 65, d: 4  },
-                    { y: '2015', a: 3, b: 17, c: 56, d: 20 },
-                    { y: '2016', a: 5, b: 16, c: 49, d: 30 },
-                    { y: '2017', a: 4, b: 20, c: 40, d: 36 },
-                    { y: '2018', a: 5, b: 20, c: 40, d: 35 }
+                    { y: '2012', a: 3, c: 90, d: 0  },
+                    { y: '2013', a: 2, c: 75, d: 14 },
+                    { y: '2014', a: 3, c: 65, d: 4  },
+                    { y: '2015', a: 3, c: 56, d: 20 },
+                    { y: '2016', a: 5, c: 49, d: 30 },
+                    { y: '2017', a: 4, c: 40, d: 36 },
+                    { y: '2018', a: 5, c: 40, d: 35 }
                 ],
                 xkey: 'y',
                 ykeys: ['a', 'b', 'c', 'd'],
                 barColors: [
-                    Sing.palette['brand-info-light'],
                     Sing.palette['brand-primary-light'],
-                    Sing.palette['brand-warning-light'],
-                    Sing.palette['brand-danger-light']
+                    Sing.palette['brand-info-pale'],
+                    Sing.palette['brand-warning-pale'],
+                    Sing.palette['brand-danger-pale']
                 ],
                 labels: ['Linux', 'MacOS', 'Windows', 'Other'],
                 hoverCallback: function (index, options, content, row) {

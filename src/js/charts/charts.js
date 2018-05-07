@@ -1,6 +1,6 @@
 $(function() {
 
-    function initFlot(){
+    function initFlot() {
         var data1 = [
                 [1, 20],
                 [2, 20],
@@ -36,25 +36,27 @@ $(function() {
                 label: "Traffic",
                 data: data3,
                 lines: {
-                    fill: .3,
+                    fill: 1,
                     lineWidth: 0
                 },
-                color:[Sing.colors['gray-400']]
+                color: Sing.palette['brand-warning-pale']
             },{
                 label: "Traffic",
                 data: data2,
                 lines: {
-                    fill: 0.6,
+                    fill: 1,
                     lineWidth: 0
                 },
-                color:[Sing.palette['brand-info-light']]
+                color:[Sing.palette['brand-warning-light']]
             },{
                 label: "Traffic",
                 data: data1,
                 animator: {steps: 60, duration: 1000, start:0},
-                lines: {lineWidth:2},
+                lines: {
+                    lineWidth: 2
+                },
                 shadowSize:0,
-                color: Sing.palette['brand-danger-pale']
+                color: [Sing.colors['brand-warning']]
             }],{
                 xaxis: {
                     tickLength: 0,
@@ -62,7 +64,6 @@ $(function() {
                     min:2,
                     font :{
                         lineHeight: 13,
-                        weight: "bold",
                         color: Sing.colors['gray-500']
                     }
                 },
@@ -71,7 +72,6 @@ $(function() {
                     tickColor: Sing.colors['gray-200'],
                     font :{
                         lineHeight: 13,
-                        weight: "bold",
                         color: Sing.colors['gray-500']
                     }
                 },
@@ -111,155 +111,51 @@ $(function() {
         SingApp.onResize(_initChart);
     }
 
-    function initRickshaw(){
-        "use strict";
-
-        var seriesData = [ [], [] ];
-        var random = new Rickshaw.Fixtures.RandomData(30);
-
-        for (var i = 0; i < 30; i++) {
-            random.addData(seriesData);
-        }
-
-        var graph = new Rickshaw.Graph( {
-            element: document.getElementById("rickshaw"),
-            height: 130,
-            renderer: 'area',
-            series: [
-                {
-                    color: Sing.palette['brand-primary-pale'],
-                    data: seriesData[0],
-                    name: 'Uploads'
-                }, {
-                    color: Sing.palette['brand-success-light'],
-                    data: seriesData[1],
-                    name: 'Downloads'
-                }
-            ]
-        } );
-
-        function onResize(){
-            var $chart = $('#rickshaw');
-            graph.configure({
-                width: $chart.width(),
-                height: 130
-            });
-            graph.render();
-
-            $chart.find('svg').css({height: '130px'});
-        }
-
-        SingApp.onResize(onResize);
-        onResize();
-
-
-        var hoverDetail = new Rickshaw.Graph.HoverDetail( {
-            graph: graph,
-            xFormatter: function(x) {
-                return new Date(x * 1000).toString();
-            }
-        } );
-
-        let intervalId = setInterval( function() {
-            random.removeData(seriesData);
-            random.addData(seriesData);
-            graph.update();
-
-        }, 1000 );
-
-        $(document).on('pjax:start', () => {
-            clearInterval(intervalId);
+    function initEasyPie() {
+        $('#easy-pie1').easyPieChart({
+            barColor: Sing.palette['brand-success-pale'],
+            trackColor: Sing.colors['gray-200'],
+            scaleColor: false,
+            lineWidth: 8,
+            size: 140
         });
     }
 
-    function initSparkline1(){
-        function _initChart(){
-            $('#sparkline1').sparkline([2,4,6,2,7,5,3,7,8,3,6],{
-                width: '100%',
-                fillColor: Sing.palette['brand-warning-light'],
-                height: '100px',
-                lineColor: 'transparent',
-                spotColor: Sing.palette[7],
-                minSpotColor: null,
-                maxSpotColor: null,
-                highlightSpotColor: Sing.palette['brand-warning-light'],
-                highlightLineColor: Sing.palette['brand-warning-light'],
-            }).sparkline([5,3,7,8,3,6,2,4,6,2,7],{
-                composite: true,
-                lineColor: 'transparent',
-                spotColor: Sing.palette['brand-info-light'],
-                fillColor: Sing.palette['brand-info-pale'],
-                minSpotColor: null,
-                maxSpotColor: null,
-                highlightSpotColor: Sing.palette['brand-info-light'],
-                highlightLineColor: Sing.palette['brand-info-light'],
-            })
-        }
-
-        _initChart();
-
-        SingApp.onResize(_initChart);
-    }
-
-    function initSparkline2(){
-        $('#sparkline2').sparkline([2,4,6],{
+    function initSparkline2() {
+        $('#sparkline2').sparkline([1,4,5],{
             type: 'pie',
             width: '100px',
             height: '100px',
-            sliceColors: Object.values(Sing.palette)
+            highlightLighten: 1.05,
+            sliceColors: [
+                Sing.palette['brand-info-light'],
+                Sing.palette['brand-warning-light'],
+                Sing.colors['gray-100'],
+            ]
         });
     }
 
-    /* Inspired by Lee Byron's test data generator. */
-    function _stream_layers(n, m, o) {
-        if (arguments.length < 3) o = 0;
-        function bump(a) {
-            var x = 1 / (.1 + Math.random()),
-                y = 2 * Math.random() - .5,
-                z = 10 / (.1 + Math.random());
-            for (var i = 0; i < m; i++) {
-                var w = (i / m - y) * z;
-                a[i] += x * Math.exp(-w * w);
-            }
-        }
-        return d3.range(n).map(function() {
-            var a = [], i;
-            for (i = 0; i < m; i++) a[i] = o + o * Math.random();
-            for (i = 0; i < 5; i++) bump(a);
-            return a.map(function(d, i) {
-                return {x: i, y: Math.max(0, d)};
-            });
+    function initSparkline3() {
+        $('#sparkline3').sparkline([1,2,4,2,3,7], {
+            width: '100%',
+            height: '100px',
+            lineColor: Sing.colors['brand-warning'],
+            fillColor: false,
+            highlightLineColor: Sing.palette['brand-success-light'],
+            spotColor: Sing.palette['brand-success-light'],
+            minSpotColor: Sing.colors['brand-warning'],
+            maxSpotColor: Sing.colors['brand-warning'],
+            spotRadius: 2,
+            lineWidth: 2
         });
     }
 
-    function testData(stream_names, pointsCount) {
-        var now = new Date().getTime(),
-            day = 1000 * 60 * 60 * 24, //milliseconds
-            daysAgoCount = 60,
-            daysAgo = daysAgoCount * day,
-            daysAgoDate = now - daysAgo,
-            pointsCount = pointsCount || 45, //less for better performance
-            daysPerPoint = daysAgoCount / pointsCount;
-        return _stream_layers(stream_names.length, pointsCount, .1).map(function(data, i) {
-            return {
-                key: stream_names[i],
-                values: data.map(function(d,j){
-                    return {
-                        x: daysAgoDate + d.x * day * daysPerPoint,
-                        y: Math.floor(d.y * 100) //just a coefficient,
-                    }
-                })
-            };
-        });
-    }
-
-    function initNvd31(){
-
+    function initNvd31() {
         nv.addGraph(function() {
             var chart = nv.models.lineChart()
                 .useInteractiveGuideline(true)
                 .margin({left: 28, bottom: 30, right: 0})
-                .color([Sing.palette['brand-success-pale'], Sing.colors['gray-300']]);
+                .color([Sing.palette['brand-danger-pale'], Sing.palette['brand-info-pale']]);
 
             chart.xAxis
                 .showMaxMin(false)
@@ -286,12 +182,11 @@ $(function() {
         });
     }
 
-    function initNvd32(){
-
+    function initNvd32() {
         nv.addGraph(function() {
             var chart = nv.models.multiBarChart()
                 .margin({left: 28, bottom: 30, right: 0})
-                .color([Sing.colors['gray-300'], Sing.palette['brand-info-light']]);
+                .color([Sing.palette['brand-success-light'], Sing.palette['brand-danger-pale']]);
 
             chart.xAxis
                 .showMaxMin(false)
@@ -301,8 +196,6 @@ $(function() {
                 .showMaxMin(false)
                 .tickFormat(d3.format(',f'));
 
-//            chart.controls.margin({left: 0});
-
             d3.select('#nvd32 svg')
                 .style('height', '300px')
                 .datum(testData(['Uploads', 'Downloads'], 10).map(function(el, i){
@@ -310,9 +203,7 @@ $(function() {
                     return el;
                 }))
                 .transition().duration(500)
-                .call(chart)
-            ;
-
+                .call(chart);
 
             SingApp.onResize(chart.update);
 
@@ -320,28 +211,68 @@ $(function() {
         });
     }
 
-    function initMorris1(){
-        $('#morris1').css({height: '343px'}); //safari svg height fix
-        Morris.Line({
-            element: 'morris1',
-            resize: true,
-            data: [
-                { y: '2006', a: 100, b: 90 },
-                { y: '2007', a: 75,  b: 65 },
-                { y: '2008', a: 50,  b: 40 },
-                { y: '2009', a: 75,  b: 65 },
-                { y: '2010', a: 50,  b: 40 },
-                { y: '2011', a: 75,  b: 65 },
-                { y: '2012', a: 100, b: 90 }
-            ],
-            xkey: 'y',
-            ykeys: ['a', 'b'],
-            labels: ['Series A', 'Series B'],
-            lineColors: [Sing.palette['brand-success-light'], Sing.palette['brand-danger-pale']]
+    function initRickshaw() {
+        "use strict";
+
+        var seriesData = [ [], [] ];
+        var random = new Rickshaw.Fixtures.RandomData(30);
+
+        for (var i = 0; i < 30; i++) {
+            random.addData(seriesData);
+        }
+
+        var graph = new Rickshaw.Graph( {
+            element: document.getElementById("rickshaw"),
+            height: 100,
+            renderer: 'stack',
+            series: [
+                {
+                    color: Sing.palette['brand-warning-light'],
+                    data: seriesData[0],
+                    name: 'Uploads'
+                }, {
+                    color: Sing.palette['brand-warning-pale'],
+                    data: seriesData[1],
+                    name: 'Downloads'
+                }
+            ]
+        } );
+
+        function onResize(){
+            var $chart = $('#rickshaw');
+            graph.configure({
+                width: $chart.width(),
+                height: 100
+            });
+            graph.render();
+
+            $chart.find('svg').css({height: '100px'});
+        }
+
+        SingApp.onResize(onResize);
+        onResize();
+
+
+        var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+            graph: graph,
+            xFormatter: function(x) {
+                return new Date(x * 1000).toString();
+            }
+        } );
+
+        let intervalId = setInterval( function() {
+            random.removeData(seriesData);
+            random.addData(seriesData);
+            graph.update();
+
+        }, 1000 );
+
+        $(document).on('pjax:start', () => {
+            clearInterval(intervalId);
         });
     }
 
-    function initMorris2(){
+    function initMorris2() {
         $('#morris2').css({height: '343px'}); //safari svg height fix
         Morris.Area({
             element: 'morris2',
@@ -358,37 +289,65 @@ $(function() {
             xkey: 'y',
             ykeys: ['a', 'b'],
             labels: ['Series A', 'Series B'],
-            lineColors: [Sing.palette['brand-success-light'], Sing.palette['brand-warning-light']],
-            lineWidth: 0
+            lineColors: [Sing.palette['brand-danger-light'], Sing.colors['brand-danger']],
+            lineWidth: 0,
+            pointSize: 0,
+            fillOpacity: 0.6
         });
     }
 
-    function initMorris3(){
-        $('#morris3').css({height: 180});
-        Morris.Donut({
-            element: 'morris3',
+    function initMorris1() {
+        $('#morris1').css({height: '343px'}); //safari svg height fix
+        Morris.Line({
+            element: 'morris1',
             resize: true,
             data: [
-                {label: "Download Sales", value: 12},
-                {label: "In-Store Sales", value: 30},
-                {label: "Mail-Order Sales", value: 20}
+                { y: '2006', a: 100, b: 90 },
+                { y: '2007', a: 75,  b: 65 },
+                { y: '2008', a: 50,  b: 40 },
+                { y: '2009', a: 75,  b: 65 },
+                { y: '2010', a: 50,  b: 40 },
+                { y: '2011', a: 75,  b: 65 },
+                { y: '2012', a: 100, b: 90 }
             ],
-            colors: Object.values(Sing.palette).slice(4)
-        });
-
-    }
-
-    function initEasyPie(){
-        $('#easy-pie1').easyPieChart({
-            barColor: Sing.palette['brand-primary-light'],
-            trackColor: Sing.colors['gray-200'],
-            scaleColor: false,
-            lineWidth: 10,
-            size: 140
+            xkey: 'y',
+            ykeys: ['a', 'b'],
+            labels: ['Series A', 'Series B'],
+            lineColors: [Sing.palette['brand-success-light'], Sing.palette['brand-warning-light']],
+            pointSize: 0
         });
     }
 
-    function initFlotBar(){
+    function initSparkline1() {
+        function _initChart() {
+            $('#sparkline1').sparkline([2,4,6,2,7,5,3,7,8,3,6],{
+                width: '100%',
+                fillColor: Sing.palette['brand-info-pale'],
+                height: '100px',
+                lineColor: 'transparent',
+                spotColor: Sing.palette[7],
+                minSpotColor: null,
+                maxSpotColor: null,
+                highlightSpotColor: Sing.palette['brand-warning-light'],
+                highlightLineColor: Sing.palette['brand-warning-light'],
+            }).sparkline([5,3,7,8,3,6,2,4,6,2,7],{
+                composite: true,
+                lineColor: 'transparent',
+                spotColor: Sing.palette['brand-info-light'],
+                fillColor: Sing.palette['brand-info-light'],
+                minSpotColor: null,
+                maxSpotColor: null,
+                highlightSpotColor: Sing.palette['brand-info-light'],
+                highlightLineColor: Sing.palette['brand-info-light'],
+            })
+        }
+
+        _initChart();
+
+        SingApp.onResize(_initChart);
+    }
+
+    function initFlotBar() {
         var bar_customised_1 = [[1388534400000, 120], [1391212800000, 70],  [1393632000000, 100], [1396310400000, 60], [1398902400000, 35]];
         var bar_customised_2 = [[1388534400000, 90], [1391212800000, 60], [1393632000000, 30], [1396310400000, 73], [1398902400000, 30]];
         var bar_customised_3 = [[1388534400000, 80], [1391212800000, 40], [1393632000000, 47], [1396310400000, 22], [1398902400000, 24]];
@@ -430,7 +389,7 @@ $(function() {
 
         ];
 
-        function _initChart(){
+        function _initChart() {
             $.plot($("#flot-bar"), data, {
                 series: {
                     bars: {
@@ -442,7 +401,7 @@ $(function() {
                             colors: [{
                                 opacity: 1
                             }, {
-                                opacity: 0.7
+                                opacity: 1
                             }]
                         }
                     }
@@ -456,13 +415,21 @@ $(function() {
                     axisLabel: 'Month',
                     axisLabelUseCanvas: true,
                     axisLabelFontSizePixels: 13,
-                    axisLabelPadding: 15
+                    axisLabelPadding: 15,
+                    font :{
+                        lineHeight: 13,
+                        color: Sing.colors['gray-500']
+                    }
                 },
                 yaxis: {
                     axisLabel: 'Value',
                     axisLabelUseCanvas: true,
                     axisLabelFontSizePixels: 13,
-                    axisLabelPadding: 5
+                    axisLabelPadding: 5,
+                    font :{
+                        lineHeight: 13,
+                        color: Sing.colors['gray-500']
+                    }
                 },
                 grid: {
                     hoverable: true,
@@ -473,9 +440,9 @@ $(function() {
                     labelBoxBorderColor: "none"
                 },
                 colors: [
-                    Sing.palette['brand-danger-pale'],
                     Sing.palette['brand-success-light'],
-                    Sing.palette['brand-primary-light'],
+                    Sing.palette['brand-info-light'],
+                    Sing.palette['brand-warning-light']
                 ]
             });
         }
@@ -483,15 +450,22 @@ $(function() {
         _initChart();
 
         SingApp.onResize(_initChart);
+    }
 
-
+    function initMorris3() {
+        $('#morris3').css({height: 180});
+        Morris.Donut({
+            element: 'morris3',
+            resize: true,
+            data: [
+                {label: "In-Store Sales", value: 30},
+                {label: "Mail-Order Sales", value: 20}
+            ],
+            colors: [Sing.palette['brand-danger-pale'], Sing.palette['brand-warning-light']],
+        });
     }
 
     function pageLoad() {
-        // Restore d3 version used as dependency when charts are created. Unfortunately, rickshaw charts uses global
-        // scope to find d3.
-       // window.d3 = d3v3;
-
         $('.widget').widgster();
         $('.sparkline').each(function(){
             $(this).sparkline('html', $(this).data());
@@ -501,6 +475,7 @@ $(function() {
         initRickshaw();
         initSparkline1();
         initSparkline2();
+        initSparkline3();
         initNvd31();
         initNvd32();
         initMorris1();
@@ -512,3 +487,46 @@ $(function() {
     pageLoad();
     SingApp.onPageLoad(pageLoad);
 });
+
+/* Inspired by Lee Byron's test data generator. */
+function _stream_layers(n, m, o) {
+    if (arguments.length < 3) o = 0;
+    function bump(a) {
+        var x = 1 / (.1 + Math.random()),
+            y = 2 * Math.random() - .5,
+            z = 10 / (.1 + Math.random());
+        for (var i = 0; i < m; i++) {
+            var w = (i / m - y) * z;
+            a[i] += x * Math.exp(-w * w);
+        }
+    }
+    return d3.range(n).map(function() {
+        var a = [], i;
+        for (i = 0; i < m; i++) a[i] = o + o * Math.random();
+        for (i = 0; i < 5; i++) bump(a);
+        return a.map(function(d, i) {
+            return {x: i, y: Math.max(0, d)};
+        });
+    });
+}
+
+function testData(stream_names, pointsCount) {
+    var now = new Date().getTime(),
+        day = 1000 * 60 * 60 * 24, //milliseconds
+        daysAgoCount = 60,
+        daysAgo = daysAgoCount * day,
+        daysAgoDate = now - daysAgo,
+        pointsCount = pointsCount || 45, //less for better performance
+        daysPerPoint = daysAgoCount / pointsCount;
+    return _stream_layers(stream_names.length, pointsCount, .1).map(function(data, i) {
+        return {
+            key: stream_names[i],
+            values: data.map(function(d,j){
+                return {
+                    x: daysAgoDate + d.x * day * daysPerPoint,
+                    y: Math.floor(d.y * 100) //just a coefficient,
+                }
+            })
+        };
+    });
+}

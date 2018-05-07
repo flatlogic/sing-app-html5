@@ -15,7 +15,7 @@ $(function () {
             composite: true,
             lineColor: 'transparent',
             spotColor: '#c0d0f0',
-            fillColor: Sing.colors['brand-success'],
+            fillColor: Sing.palette['brand-success-pale'],
             minSpotColor: null,
             maxSpotColor: null,
             highlightSpotColor: '#ddd',
@@ -25,11 +25,11 @@ $(function () {
     }
 
     function initSparkline2() {
-        $('#sparkline2').sparkline(generateRandomArr(6, 4, 15), {
+        $('#sparkline2').sparkline(generateRandomArr(4, 4, 15), {
             type: 'pie',
             width: '200px',
             height: '200px',
-            sliceColors: Object.values(Sing.palette),
+            sliceColors: Object.values(Sing.palette).slice(5),
             highlightLighten: 1.05
         });
     }
@@ -65,7 +65,7 @@ $(function () {
             barWidth: 6,
             barSpacing: 3,
             barColor: Sing.palette['brand-warning-light'],
-            negBarColor: Sing.colors['brand-danger']
+            negBarColor: Sing.palette['brand-danger-light']
         });
 
         // Chrome and Safari fix for to set correct width to chart
@@ -83,7 +83,7 @@ $(function () {
             negBarColor: Sing.palette['brand-info-light'],
             zeroBarColor: Sing.colors['gray-300'],
             barWidth: 5,
-            barSpacing: 3,
+            barSpacing: 7,
             zeroAxis: true
         });
 
@@ -106,7 +106,7 @@ $(function () {
             type: 'pie',
             width: '100px',
             height: '100px',
-            sliceColors: [Sing.palette['brand-primary-light'], Sing.palette['brand-danger-pale']],
+            sliceColors: [Sing.palette['brand-danger-light'], Sing.palette['brand-danger-pale']],
             highlightLighten: 1.1
         });
     }
