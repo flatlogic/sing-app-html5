@@ -2,11 +2,11 @@ $(function () {
     'use strict';
 
     const COLORS = {
-        lineChart: [Sing.colors['brand-warning'], Sing.colors['brand-success'], Sing.palette['brand-danger-pale']],
-        barChart: [Sing.palette['brand-primary-light'], Sing.palette['brand-warning-pale']],
-        trackingChart: [Sing.palette['brand-primary-light'], Sing.palette['brand-danger-pale']],
+        lineChart: [Sing.palette['brand-warning-light'], Sing.palette['brand-warning-pale'], Sing.colors['brand-warning']],
+        barChart: [Sing.palette['brand-primary-light'], Sing.palette['brand-success-pale'], Sing.palette['brand-danger-pale']],
+        trackingChart: [Sing.palette['brand-success-light'], Sing.palette['brand-danger-pale']],
         pieChart: Object.values(Sing.palette).slice(5),
-        markers: Object.values(Sing.palette),
+        markers: Object.values(Sing.palette).slice(3),
         donutChart: Object.values(Sing.palette).slice(6),
         fontColor: Sing.colors['gray-400'],
         gridBorder: Sing.colors['white']
@@ -27,14 +27,14 @@ $(function () {
                 label: "Traffic",
                 data: data[2],
                 lines: {
-                    fill: .3,
+                    fill: 1,
                     lineWidth: 0
                 }
             }, {
                 label: "Traffic",
                 data: data[1],
                 lines: {
-                    fill: 0.6,
+                    fill: 1,
                     lineWidth: 0
                 }
             }, {
@@ -113,7 +113,6 @@ $(function () {
                 bars: {
                     show: true,
                     barWidth: 12 * 24 * 60 * 60 * 300,
-                    fill: 0.5,
                     lineWidth: 0,
                     order: 1
                 }
@@ -123,7 +122,6 @@ $(function () {
                 bars: {
                     show: true,
                     barWidth: 12 * 24 * 60 * 60 * 300,
-                    fill: 0.5,
                     lineWidth: 0,
                     order: 2
                 }
@@ -133,7 +131,6 @@ $(function () {
                 bars: {
                     show: true,
                     barWidth: 12 * 24 * 60 * 60 * 300,
-                    fill: 0.5,
                     lineWidth: 0,
                     order: 3
                 }
@@ -154,7 +151,7 @@ $(function () {
                             colors: [{
                                 opacity: 1
                             }, {
-                                opacity: 0.7
+                                opacity: 0.9
                             }]
                         }
                     }
@@ -395,7 +392,7 @@ $(function () {
                     axisLabelFontSizePixels: 13,
                     axisLabelPadding: 15
                 },
-                colors: Object.values(Sing.palette).slice(2)
+                colors: Object.values(Sing.palette).slice(1)
             });
         }
     }

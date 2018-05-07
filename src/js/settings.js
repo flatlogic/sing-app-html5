@@ -27,16 +27,16 @@ $(function(){
 
         // Brand colors modifications
         palette: {
-            'brand-primary-light': '#658eff',
-            'brand-primary-pale': '#a8c9ff',
-            'brand-info-light': '#6f68ff',
-            'brand-info-pale': '#c0c9f8',
+            'brand-primary-light': '#a7beff',
+            'brand-primary-pale': '#d1dcff',
+            'brand-info-light': '#b7b3ff',
+            'brand-info-pale': '#e2e1ff',
             'brand-danger-light': '#f59f9f',
-            'brand-danger-pale': '#f5c1c4',
-            'brand-success-light': '#60bfa3',
-            'brand-success-pale': '#7cbfb2',
-            'brand-warning-light': '#ffe589',
-            'brand-warning-pale': '#ffe8b7',
+            'brand-danger-pale': '#ffd7de',
+            'brand-success-light': '#8fe5d4',
+            'brand-success-pale': '#ace5d1',
+            'brand-warning-light': '#ffebb2',
+            'brand-warning-pale': '#fff8e3',
         },
 
         screens: {
