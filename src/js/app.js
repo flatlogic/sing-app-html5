@@ -841,7 +841,7 @@ function initAppFixes(){
  */
 function initDemoFunctions(){
     !function($){
-        $('.theme-helper__btn').click((el) => {
+        $('.theme-helper-toggler').click(() => {
             $('.theme-helper').toggleClass('theme-helper-opened');
         });
         $('#load-notifications-btn').on('ajax-load:end', function () {
