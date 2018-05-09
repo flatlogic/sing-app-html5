@@ -31,6 +31,7 @@
     "flot": "0.8.3",
     "flot.animator": "https://github.com/Codicode/flotanimator.git#3c256c0183d713fd3bf41d04417873928eb1a751",
     "flot-orderBars": "https://github.com/emmerich/flot-orderBars.git#d44ff4f2fec4c8bb1254e59567ee39fa3684372e",
+    "flot.dashes": "https://github.com/cquartier/flot.dashes.git#454016a8d61b3e7af375e4ffda36c7c55413f62b",
     "jquery-autosize": "1.18.18",
     "bootstrap3-wysihtml5": "git://github.com/schnawel007/bootstrap3-wysihtml5.git#5f07036cb228c1cc8bab2d271701ceff0de66828",
     "switchery": "0.8.1",
