@@ -782,7 +782,7 @@ function initAppFunctions(){
 
             var $currentMessageList = $('.chat-sidebar-chat.open .message-list'),
                 $message = $('<li class="message from-me">' +
-                    '<span class="thumb-sm"><img class="rounded-circle" src="img/avatar.png" alt="..."></span>' +
+                    '<span class="thumb-sm"><img class="rounded-circle" src="../img/avatar.png" alt="..."></span>' +
                     '<div class="message-body"></div>' +
                     '</li>');
             $message.appendTo($currentMessageList).find('.message-body').text(val);
@@ -841,6 +841,9 @@ function initAppFixes(){
  */
 function initDemoFunctions(){
     !function($){
+        $('.theme-helper__btn').click((el) => {
+            $('.theme-helper').toggleClass('theme-helper-opened');
+        });
         $('#load-notifications-btn').on('ajax-load:end', function () {
             setTimeout(function(){
                 $('#notifications-list').find('.bg-attention').removeClass('bg-attention');
@@ -856,6 +859,23 @@ function initDemoFunctions(){
                     .find('.fa-circle').before('<span class="badge badge-pill badge-danger float-right animated bounceInDown ml-auto">3</span>');
             }, 1000)
         });
+
+        // theme switcher
+        let $darkStyles;
+        $('#css-dark').click(function () {
+            if (!$darkStyles) {
+                $darkStyles = $('<link href="../css/application-dark.min.css" rel="stylesheet">').appendTo($('head'));
+            }
+
+            if ($darkStyles[0].disabled)
+                $darkStyles[0].disabled = false;
+        });
+
+        $('#css-light').click(function () {
+            if (!$darkStyles[0].disabled)
+                $darkStyles[0].disabled = true;
+        });
+
 
         setTimeout(function(){
             var $chatNotification = $('#chat-notification');

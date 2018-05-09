@@ -12,6 +12,7 @@ const srcPaths = {
     fonts: ['./src/fonts/**/*'],
     images: ['./src/img/**/*'],
     styles: ['./src/sass/*.scss'],
+    cssEntries: ['./src/sass/application.scss', './src/sass/application-dark.scss'],
     static: ['./src/demo/**/*'],
     templates: [
         'src/*.hbs',
@@ -65,7 +66,7 @@ gulp.task('styles', function () {
             precision: 10
         }).on('error', sass.logError))
         .pipe(gulp.dest('./dist/css'));
-    gulp.src('./src/sass/application.scss')
+    gulp.src(srcPaths.cssEntries)
         .pipe(sass({
             precision: 10,
             outputStyle: 'compressed'

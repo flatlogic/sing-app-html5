@@ -8,8 +8,8 @@ $(function(){
                 name : "usa_states",
                 defaultArea : {
                     attrs: {
-                        fill: '#e5e7f1',
-                        stroke: Sing.colors['body-bg'],
+                        fill: '#e4eaf1',
+                        stroke: '#ccd8e3',
                     },
                     attrsHover: {
                         fill: '#e9ebf6',

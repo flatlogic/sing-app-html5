@@ -31,6 +31,10 @@
         {{#block "chat"}}
             {{> chat }}
         {{/block}}
+        {{#block "theme-helper"}}
+            {{> theme-helper }}
+        {{/block}}
+
         <div class="{{#if wrapperClass}}{{wrapperClass}}{{else}}content-wrap{{/if}}">
             <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
             <main id="content" class="{{#if contentClass}}{{contentClass}}{{else}}content{{/if}}" role="main">
