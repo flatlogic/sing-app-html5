@@ -11,7 +11,7 @@ $(function () {
         fontColor: Sing.colors['gray-400'],
         gridBorder: Sing.colors['white']
     };
-    let denouncedTimeout = 0;
+    let debouncedTmeout = 0;
 
     class StackedLineChart {
         constructor(data) {
@@ -470,13 +470,13 @@ $(function () {
     }
 
     function resizeCharts() {
-        if (!denouncedTimeout) {
-            denouncedTimeout = 400;
+        if (!debouncedTmeout) {
+            debouncedTmeout = 400;
 
             setTimeout(() => {
-                denouncedTimeout = 0;
+                debouncedTmeout = 0;
                 createCharts()
-            }, denouncedTimeout);
+            }, debouncedTmeout);
         }
 
     }
