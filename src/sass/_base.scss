@@ -77,7 +77,7 @@
 .page-controls {
   position: absolute;
   z-index: 1;
-  background: none;
+  background: $navbar-bg;
   height: $navbar-height;
 
 
@@ -208,6 +208,7 @@
 .sidebar-nav{
   padding: 10px 0;
   font-size: 14px;
+  font-weight: $sidebar-font-weight;
 
   li a {
     display: block;
@@ -246,6 +247,7 @@
     line-height: 35px;
 
     &:hover{
+      color: $sidebar-item-hover-color;
       background-color: $sidebar-item-hover-bg-color;
     }
 
@@ -289,9 +291,12 @@
   }
 
   > .active > a{
-    color: $sidebar-item-active-color;
     background-color: $sidebar-bg-color;
     font-weight: $font-weight-normal;
+
+    &, &:hover {
+      color: $sidebar-item-active-color;
+    }
 
     .icon{
       border-radius: 50%;
@@ -548,6 +553,10 @@
       color: $sidebar-color;
     }
   }
+
+  .progress {
+    background-color: $sidebar-action-bg;
+  }
 }
 
 .chat-sidebar {
@@ -641,7 +650,7 @@
     list-style: none;
     padding-left: 0;
     padding-top: $spacer/2;
-    background: $gray-100;
+    background: $sidebar-action-bg;
   }
 
   .message{
@@ -728,7 +737,7 @@
       &,
       &:focus,
       &:hover{
-        background-color: $gray-100;
+        background-color: $sidebar-item-hover-bg-color;
         color: theme-color('warning');
       }
 
@@ -765,8 +774,8 @@
   }
 
   a.list-group-item:hover{
-    color: $gray-700;
-    background-color: $gray-100;
+    color: $sidebar-item-hover-color;
+    background-color: $sidebar-item-hover-bg-color;
   }
 
   .message-preview{
@@ -2324,6 +2333,21 @@ input[type=search], input.search {
           font-size: $font-size-larger !important;
         }
       }
+    }
+  }
+
+  .team {
+    background: linear-gradient(rgba(#fff,.87), rgba(#fff,.87)), url('../img/landing/team.png') repeat-x;
+    height: 200px;
+    margin: $spacer 0;
+    padding-top: 50px;
+    background-size: cover;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-left: -100px;
+      margin-right: -100px;
     }
   }
 

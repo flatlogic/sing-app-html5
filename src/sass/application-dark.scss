@@ -1,0 +1,61 @@
+@import "variables-dark";
+@import "mixins";
+
+@import "../../bower_components/bootstrap/scss/bootstrap";
+
+@import '../fonts/flaticon/flaticon';
+@import "../../bower_components/font-awesome/scss/font-awesome";
+@import "../../node_modules/line-awesome/dist/css/line-awesome.css";
+@import "../../bower_components/animate.css/animate";
+@import "../../bower_components/bootstrap-select/dist/css/bootstrap-select";
+@import "../../bower_components/select2/select2"; //import as css to keep image urls correct
+@import "../../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
+@import "../../bower_components/pace.js/themes/pace-theme-minimal";
+@import "../../bower_components/glyphicons-halflings/scss/glyphicons-halflings";
+
+@import "bootstrap-override";
+@import "select2-bootstrap-css-override";
+@import "libs-override";
+//
+
+@import "../../bower_components/rickshaw/rickshaw";
+@import "../../bower_components/bootstrap3-wysihtml5/src/bootstrap-wysihtml5";
+@import "../../bower_components/switchery/dist/switchery";
+//for tempusdominus-bootstrap-4 lib we need to define some obsolete bs4 variables:
+//$btn-primary-bg: theme-color('primary');
+//$btn-primary-color: $white;
+//$gray-lighter: $gray-300;
+@import "../../bower_components/tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4";
+@import "../../bower_components/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker";
+@import "../../bower_components/dropzone/dist/dropzone";
+@import "../../bower_components/nvd3/build/nv.d3";
+@import "../../bower_components/morris.js/morris";
+@import "../../bower_components/jvectormap/jquery-jvectormap-2.0.3";
+@import "../../bower_components/bootstrap-application-wizard/src/bootstrap-wizard";
+@import "../../bower_components/backgrid/lib/backgrid";
+@import "../../bower_components/datatables/media/css/jquery.dataTables";
+@import "../../bower_components/messenger/build/css/messenger";
+@import "../../bower_components/messenger/build/css/messenger-spinner";
+@import "../../bower_components/fullcalendar/fullcalendar";
+@import "../../bower_components/magnific-popup/src/css/main";
+@import "../../bower_components/MetroJS/release/MetroJs.Full/MetroJs";
+@import "../../bower_components/bootstrap-markdown/css/bootstrap-markdown.min";
+@import "../../bower_components/jasny-bootstrap/dist/css/jasny-bootstrap";
+@import '../../bower_components/slick-carousel/slick/slick.scss';
+@import '../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css';
+
+@import "custom-libs-override";
+
+//end custom libs
+
+//everything below this line is required for essential styling
+
+@import "general";
+@import "global-transitions";
+@import "base";
+
+@import "widgets";
+@import "utils";
+@import "print";
+
+@import "font";

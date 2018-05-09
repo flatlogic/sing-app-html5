@@ -1325,3 +1325,88 @@
 .widget .widget-body svg {
   width: 100%;
 }
+
+/***********************************/
+/**        Theme helper           **/
+/***********************************/
+
+.theme-helper {
+  width: $sidebar-width;
+  position: fixed;
+  right: -$sidebar-width;
+  top: $navbar-height * 1.5;
+  z-index: 100;
+  @include transition(right $sidebar-transition-time ease-in-out);
+
+  &.theme-helper-opened {
+    right: 0;
+  }
+
+  .theme-helper__btn {
+    width: $sidebar-width / 4;
+    margin-left: -($sidebar-width / 4);
+    cursor: pointer;
+
+    i {
+      animation-duration: 6500ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    i:first-of-type {
+      animation-name: spin;
+      margin-right: -$spacer * 1.15;
+      vertical-align: text-bottom;
+    }
+
+    i:last-of-type {
+      animation-name: spin-reverse;
+      vertical-align: $font-size-sm;
+    }
+  }
+
+  .theme-helper__spinner {
+    z-index: 200;
+    border-radius: 50% 0 0 50%;
+    padding: $spacer * 0.8 $spacer / 2 $spacer * 0.8 $spacer;
+    font-size: $font-size-lg * 1.4;
+    line-height: initial;
+    box-shadow: $widget-shadow-designated;
+  }
+
+  .theme-helper__header {
+    padding-top: 0;
+
+    h6 {
+      margin: auto;
+    }
+  }
+
+  .theme-helper__content {
+    box-shadow: $widget-shadow-designated;
+    border-radius: 0;
+  }
+
+  .theme-helper__sharing, .theme-helper__css-switcher {
+    font-size: $font-size-lg;
+    cursor: pointer;
+  }
+
+  @keyframes spin {
+    0% {
+      transform:rotate(0deg);
+    }
+    50% {
+      transform:rotate(360deg);
+    }
+  }
+
+  @keyframes spin-reverse {
+    0% {
+      transform:rotate(0deg);
+    }
+    50% {
+      transform:rotate(-360deg);
+    }
+  }
+}

@@ -1737,3 +1737,20 @@ a.fc-event{
   bottom: 20px;
   top: auto;
 }
+
+/**********************************/
+/*   Awesome Bootstrap Checkbox   */
+/**********************************/
+
+@include checkbox-variant('.abc-checkbox-secondary', theme-color(secondary));
+@include checkbox-variant-indeterminate('.abc-checkbox-secondary', theme-color(secondary));
+@include radio-variant('.abc-radio-secondary', theme-color(secondary));
+
+// Fix input height
+.abc-radio {
+  label {
+    &::before, &::after {
+      margin-top: -10px;
+    }
+  }
+}

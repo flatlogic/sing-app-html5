@@ -61,12 +61,12 @@ $theme-colors: (
 
 //== Scaffolding
 //
-$body-bg: #fafbff !default;
+$body-bg: #f6f9fc !default;
 $body-bg-light: lighten($body-bg, 3%);
 
 $addition-bg: $gray-100 !default;
 
-$logo-color: $gray-800;
+$logo-color: #fff;
 
 // Typography
 // -------------------------
@@ -102,10 +102,10 @@ $sidebar-width: 220px + $sidebar-slim-scroll-width !default;
 
 $sidebar-transition-time: .3s !default;
 
-$sidebar-action-bg: #f9fafe !default;
-$sidebar-bg-color: #fff !default;
-$sidebar-color: #6c757d !default;
-$sidebar-font-weight: 300;
+$sidebar-action-bg: #2e3542 !default;
+$sidebar-bg-color: #313947 !default;
+$sidebar-color: #6e829e !default;
+$sidebar-font-weight: 400;
 $sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: $yellow !default;
 $sidebar-item-hover-color: lighten($sidebar-color, 10%);
@@ -115,7 +115,7 @@ $sidebar-border-color: darken($sidebar-ul-background, 2%);
 
 $navbar-height:                    60px !default;
 $navbar-font-size:              13px !default;
-$navbar-bg: transparent;
+$navbar-bg: #fff;
 
 $chat-sidebar-width: 270px + $sidebar-slim-scroll-width !default;
 
@@ -141,6 +141,7 @@ $widget-shadow: 0 0 40px darken($body-bg, 2%);
 $widget-shadow-designated: -1px 0 8px $gray-400;
 
 $chart-spacer-y: 0.65rem !default;
+
 
 // Bootstrap variables
 // ------------------------
