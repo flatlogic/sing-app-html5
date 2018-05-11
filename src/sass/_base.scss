@@ -2615,7 +2615,8 @@ input[type=search], input.search {
   .visit-element {
     max-width: 50%;
     width: 33%;
-    min-width: 85px;
+    min-width: 80px;
+    text-align: center;
   }
 
   .big-stat-title {
@@ -2635,8 +2636,8 @@ input[type=search], input.search {
     justify-content: center;
     min-width: calc(100% - 150px);
   }
-  
-  .notifications {
+
+  .analytics-side .notifications {
     .la {
       font-size: $font-size-lg;
       margin-top: 0.15 * $spacer;
