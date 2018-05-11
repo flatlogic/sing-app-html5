@@ -1334,7 +1334,7 @@
   width: $sidebar-width;
   position: fixed;
   right: -$sidebar-width;
-  top: $navbar-height * 1.5;
+  top: $navbar-height * 2;
   z-index: 100;
   @include transition(right $sidebar-transition-time ease-in-out);
 

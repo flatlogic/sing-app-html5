@@ -30,7 +30,7 @@
         </div>
         <!-- main notification links are placed inside of .sidebar-nav -->
         <ul class="sidebar-nav">
-            <li class="{{#activeClass active "dashboard_dashboard dashboard_widgets"}} active {{/activeClass}}">
+            <li class="{{#activeClass active "dashboard_analytics dashboard_visits dashboard_widgets"}} active {{/activeClass}}">
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
                 <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
@@ -39,9 +39,9 @@
                     Dashboard
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
-                <ul id="sidebar-dashboard" class="collapse {{#activeClass active "dashboard_dashboard dashboard_widgets"}} show {{/activeClass}}">
-                    <li class="{{#activeClass active "dashboard_dashboard"}} active {{/activeClass}}"><a href="../dashboard/index.html">Dashboard</a></li>
-                    <li class="{{#activeClass active "dashboard_analytics"}} active {{/activeClass}}"><a href="../dashboard/analytics.html">Analytics</a></li>
+                <ul id="sidebar-dashboard" class="collapse {{#activeClass active "dashboard_analytics dashboard_visits dashboard_widgets"}} show {{/activeClass}}">
+                    <li class="{{#activeClass active "dashboard_analytics"}} active {{/activeClass}}"><a href="../dashboard/index.html">Analytics</a></li>
+                    <li class="{{#activeClass active "dashboard_visits"}} active {{/activeClass}}"><a href="../dashboard/visits.html">Visits</a></li>
                     <li class="{{#activeClass active "dashboard_widgets"}} active {{/activeClass}}"><a href="../dashboard/widgets.html">Widgets</a></li>
                 </ul>
             </li>
