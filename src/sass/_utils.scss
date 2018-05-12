@@ -319,6 +319,14 @@ $margin-horizontal-variants: (lg: 20px, md: 15px, sm: 10px, xs: 5px, 0: 0);
   padding: 0;
 }
 
+$padding-vertical-variants: (xlg: 40px, lg: $spacer*3/2, md: $spacer, sm: $spacer/2, xs: $spacer/4, 0: 0);
+$padding-horizontal-variants: (lg: 20px, md: 15px, sm: 10px, xs: 5px, 0: 0);
+
+@include property-variants('.pt', 'padding-top', $padding-vertical-variants);
+@include property-variants('.pb', 'padding-bottom', $padding-vertical-variants);
+@include property-variants('.pl', 'padding-left', $padding-horizontal-variants);
+@include property-variants('.pr', 'padding-right', $padding-horizontal-variants);
+
 $display-variants: (inline: inline, inline-block: inline-block, block: block);
 
 @include property-variants('.display', 'display', $display-variants);
