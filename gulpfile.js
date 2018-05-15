@@ -5,6 +5,7 @@ const del = require('del');
 const sass = require('gulp-sass');
 const rename = require ('gulp-rename');
 const hb = require('gulp-hb');
+const flatten = require('gulp-flatten');
 const layouts = require('handlebars-layouts');
 
 const srcPaths = {
@@ -28,7 +29,7 @@ const srcPaths = {
 hb.handlebars.registerHelper(layouts(hb.handlebars));
 
 gulp.task('clean', () => {
-   del(['dist']);
+   return del(['./dist/*']);
 });
 
 // Copy demo, img, js, fonts folders from src to dist
@@ -56,6 +57,7 @@ gulp.task('hbs', function () {
             helpers: srcPaths.helpers
         }))
         .pipe(rename({extname: ".html"}))
+        .pipe(flatten())
         .pipe(gulp.dest('dist'));
 });
 
@@ -83,3 +85,6 @@ gulp.task('watch', ['build'], function () {
 });
 
 gulp.task('build', ['hbs', 'styles', 'copy']);
+
+// Default Task
+gulp.task('default', ['build']);
