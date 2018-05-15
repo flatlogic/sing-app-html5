@@ -8,6 +8,7 @@
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "~3.9.0",
+    "gulp-flatten": "^0.4.0",
     "gulp-hb": "^7.0.1",
     "gulp-rename": "1.2.2",
     "gulp-sass": "2.1.1",
