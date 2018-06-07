@@ -11,7 +11,9 @@
     "gulp-hb": "^7.0.1",
     "gulp-rename": "1.2.2",
     "gulp-sass": "2.1.1",
-    "handlebars-layouts": "^3.1.4"
+    "gulp-sourcemaps": "^2.6.4",
+    "handlebars-layouts": "^3.1.4",
+    "run-sequence": "^2.2.1"
   },
   "engines": {
     "node": ">=0.10.0"

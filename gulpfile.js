@@ -6,6 +6,8 @@ const sass = require('gulp-sass');
 const rename = require ('gulp-rename');
 const hb = require('gulp-hb');
 const layouts = require('handlebars-layouts');
+const runSequence = require('run-sequence');
+const sourcemaps = require('gulp-sourcemaps');
 
 const srcPaths = {
     scripts: ['./src/js/**/*'],
@@ -28,29 +30,23 @@ const srcPaths = {
 hb.handlebars.registerHelper(layouts(hb.handlebars));
 
 gulp.task('clean', () => {
-   del(['dist']);
+   return del(['dist/*']);
 });
 
 // Copy demo, img, js, fonts folders from src to dist
 gulp.task('copy', ['copy:js'], function () {
-    gulp.src(srcPaths.static)
-        .pipe(gulp.dest('dist/demo'));
-    
-    gulp.src(srcPaths.images)
-        .pipe(gulp.dest('dist/img'));
-
-    gulp.src(srcPaths.fonts)
-        .pipe(gulp.dest('dist/fonts'));
+    return gulp.src([...srcPaths.static, ...srcPaths.images, ...srcPaths.fonts], {base: './src'})
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('copy:js', function () {
-    gulp.src(srcPaths.scripts)
+    return gulp.src(srcPaths.scripts)
         .pipe(gulp.dest('dist/js'));
 });
 
 // Handle handlebars
 gulp.task('hbs', function () {
-    gulp.src(srcPaths.templates)
+    return gulp.src(srcPaths.templates)
         .pipe(hb({
             partials: srcPaths.partials,
             helpers: srcPaths.helpers
@@ -61,17 +57,14 @@ gulp.task('hbs', function () {
 
 // Handle sass
 gulp.task('styles', function () {
-    gulp.src(srcPaths.styles)
-        .pipe(sass({
-            precision: 10
-        }).on('error', sass.logError))
-        .pipe(gulp.dest('./dist/css'));
-    gulp.src(srcPaths.cssEntries)
+    return gulp.src(srcPaths.styles)
+        .pipe(sourcemaps.init())
         .pipe(sass({
             precision: 10,
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename({suffix: '.min'}))
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./dist/css'));
 });
 
@@ -83,3 +76,8 @@ gulp.task('watch', ['build'], function () {
 });
 
 gulp.task('build', ['hbs', 'styles', 'copy']);
+
+// Default Task
+gulp.task('default', function(callback) {
+    return runSequence('clean', 'build', callback);
+});
