@@ -1,14 +1,14 @@
 @import "variables";
 @import "mixins";
 
-@import "../../bower_components/bootstrap/scss/bootstrap";
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
 
 @import '../fonts/flaticon/flaticon';
 @import "../../bower_components/font-awesome/scss/font-awesome";
 @import "../../node_modules/line-awesome/dist/css/line-awesome.css";
 @import "../../bower_components/animate.css/animate";
 @import "../../bower_components/bootstrap-select/dist/css/bootstrap-select";
-@import "../../bower_components/select2/select2"; //import as css to keep image urls correct
+@import "../../bower_components/select2/dist/css/select2"; //import as css to keep image urls correct
 @import "../../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
 @import "../../bower_components/pace.js/themes/pace-theme-minimal";
 @import "../../bower_components/glyphicons-halflings/scss/glyphicons-halflings";
@@ -36,7 +36,7 @@
 @import "../../bower_components/datatables/media/css/jquery.dataTables";
 @import "../../bower_components/messenger/build/css/messenger";
 @import "../../bower_components/messenger/build/css/messenger-spinner";
-@import "../../bower_components/fullcalendar/fullcalendar";
+@import "../../bower_components/fullcalendar/dist/fullcalendar.min.css";
 @import "../../bower_components/magnific-popup/src/css/main";
 @import "../../bower_components/MetroJS/release/MetroJs.Full/MetroJs";
 @import "../../bower_components/bootstrap-markdown/css/bootstrap-markdown.min";

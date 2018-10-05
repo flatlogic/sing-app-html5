@@ -450,10 +450,10 @@ $slider-handle-size: 26px;
   cursor: pointer;
   color: $gray-800 !important;
   display: inline-block;
-  width: 30px;
   height: 30px;
   line-height: 30px;
   position: relative;
+  min-width: calc(100% - 15px);
 }
 .calendar td{
   text-align: center;
