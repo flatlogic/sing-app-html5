@@ -43,22 +43,25 @@ $(function () {
         createChart(color) {
             const randomData = [];
 
-            for (let i = 0; i < 25; i++) {
-                randomData.push(Math.random().toFixed(1) * 10);
+            for (let i = 0; i < 77; i++) {
+                randomData.push((i/9+Math.sin(i/6)*8+Math.random() * 2).toFixed(2));
             }
 
             return this.$container.sparkline(randomData, {
                 type: 'line',
-                lineWidth: 2,
+                lineWidth: 1.67,
                 lineColor: Sing.colors[color],
                 normalRangeMin: '10px',
+                width: '160px',
+                height: '20px',
                 fillColor: false,
                 spotColor: false,
                 minSpotColor: false,
                 maxSpotColor: false,
                 highlightSpotColor: false,
                 highlightLineColor: false,
-                drawNormalOnTop: false
+                drawNormalOnTop: false,
+                tooltipClassname: 'line-chart-tooltip'
             });
         }
     }
@@ -329,9 +332,9 @@ $(function () {
         });
 
         function changeTasksStat() {
-            const numberOfComplited = $tasksContainer.children('.checked').length;
+            const numberOfCompleted = $tasksContainer.children('.checked').length;
 
-            $tasksStat.innerHTML = `${numberOfComplited} of 11 complited`;
+            $tasksStat.innerHTML = `${numberOfCompleted} of 11 completed`;
         }
     }
 

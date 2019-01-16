@@ -78,6 +78,7 @@
   position: absolute;
   z-index: 1;
   background: $navbar-bg;
+  box-shadow: $navbar-shadow;
   height: $navbar-height;
 
 
@@ -207,7 +208,7 @@
 
 .sidebar-nav{
   padding: 10px 0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: $sidebar-font-weight;
 
   li a {
@@ -255,7 +256,7 @@
       line-height: 55px;
     }
 
-    .icon{
+    .icon {
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
         top: 14px;
       }
@@ -269,6 +270,7 @@
       line-height: 28px;
       text-align: center;
       font-size: 16px;
+      opacity: .6;
 
     }
 
@@ -301,6 +303,7 @@
     .icon{
       border-radius: 50%;
       background-color: $sidebar-item-active-color;
+      opacity: 1;
 
       .fa, .glyphicon, .fi, .la {
         color: $sidebar-bg-color;
@@ -360,10 +363,11 @@
   }
 }
 
-.sidebar-nav-title{
+.sidebar-nav-title {
   margin: 35px 0 5px $sidebar-padding-horizontal;
   font-size: 14px;
   text-transform: uppercase;
+  color: darken(color-yiq($sidebar-bg-color), 13%);
 
   opacity: 1;
   @include transition(opacity $sidebar-transition-time ease-in-out);
@@ -966,7 +970,7 @@
   margin-bottom: $grid-gutter-width;
   padding: $widget-padding-vertical $widget-padding-horizontal;
   background: $widget-bg-color;
-  border-radius: $border-radius-sm;
+  border-radius: $widget-border-radius;
   box-shadow: $widget-shadow;
 
   > header{

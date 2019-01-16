@@ -199,8 +199,25 @@ legend {
 // --------------------------------------------------
 
 .dropdown-toggle {
-  &:after {
-    content: none;
+  &::after {
+    font-family: LineAwesome;
+    content: "\F110";
+    border: none;
+    width: auto;
+    height: auto;
+    vertical-align: baseline;
+    opacity: .8;
+    font-size: 85%;
+
+    .dropup & {
+      content: "\F113";
+      border: none;
+      vertical-align: baseline;
+    }
+  }
+
+  &.no-caret::after {
+    display: none;
   }
 }
 
@@ -221,18 +238,6 @@ legend {
     right: 0;
     left: auto;
   }
-}
-
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top:   4px dashed;
-  border-top:   4px solid \9; // IE8
-  border-right: 4px solid transparent;
-  border-left:  4px solid transparent;
 }
 //
 // Navs
@@ -596,7 +601,7 @@ legend {
         display: flex;
         justify-content: center;
       }
-      
+
       .nav-link {
         color: $body-color;
         font-weight: $font-weight-normal;
@@ -1000,11 +1005,11 @@ legend {
       letter-spacing: -1px;
       word-spacing: 4px;
       font-size: 95px;
-  
+
       @include media-breakpoint-down(lg) {
         font-size: 80px;
       }
-  
+
       @include media-breakpoint-down(md) {
         font-size: 60px;
         text-align: center;
@@ -1014,33 +1019,33 @@ legend {
       @include media-breakpoint-down(sm) {
         font-size: 49px;
       }
-  
+
       span {
         font-weight: $font-weight-semi-bold;
       }
     }
-  
+
     p {
       color: $body-color;
       font-size: 24px;
       line-height: 1.7;
       text-align: left;
       font-weight: $font-weight-normal;
-  
+
       @include media-breakpoint-down(sm) {
         font-size: 20px;
       }
     }
-  
+
     .btn {
       letter-spacing: 0.5px;
       max-width: 100%;
       min-width: 330px;
-  
+
       @include media-breakpoint-down(md) {
         min-width: 300px;
       }
-  
+
       @include media-breakpoint-down(sm) {
         min-width: 100%;
       }
@@ -1319,4 +1324,8 @@ a.badge {
   padding: 1.25rem;
   background-size: cover;
   background-position: center;
+}
+
+.card {
+  box-shadow: $widget-shadow;
 }

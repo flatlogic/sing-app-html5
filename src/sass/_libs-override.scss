@@ -213,3 +213,20 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+
+.line-chart-tooltip {
+  position: absolute;
+  box-sizing: content-box;
+  z-index: 1000;
+  border-radius: $tooltip-border-radius;
+  padding: 5px 10px;
+  background: rgba($tooltip-bg, .8);
+  color: $tooltip-color;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+
+  & * {
+    font-size: $tooltip-font-size !important;
+  }
+}
