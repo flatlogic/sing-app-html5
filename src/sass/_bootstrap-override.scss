@@ -801,7 +801,7 @@ legend {
 // --------------------------------------------------
 
 .tooltip-inner{
-  @include border-radius(3px);
+  box-shadow: 0 0 20px rgba(darken($body-bg, 75%),0.2), 0 0 15px rgba(darken($body-bg, 35%),0.06);
 }
 //
 // Alerts
@@ -1328,4 +1328,37 @@ a.badge {
 
 .card {
   box-shadow: $widget-shadow;
+}
+
+//
+// Toasts
+// --------------------------------------------------
+
+.toast-flatlogic {
+  position: fixed;
+  display: none;
+  z-index: 195;
+  top: $navbar-height;
+  right: 5rem;
+  width: 350px;
+  border: 0;
+  background-color: $white;
+
+  &.show:not(.toast-flatlogic-left) + .toast-flatlogic:not(.toast-flatlogic-left) {
+    margin-top: 90px;
+  }
+
+  &.toast-flatlogic-left {
+    right: auto;
+    left: 5rem;
+
+    &.show + .toast-flatlogic-left {
+      margin-top: 90px;
+    }
+  }
+}
+
+.toast-icon {
+  font-size: 20px;
+  margin-right: $toast-padding-x;
 }

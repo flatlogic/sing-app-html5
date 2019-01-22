@@ -259,7 +259,12 @@ $progress-bg:                 $gray-200 !default;
 //== Tooltips
 //
 
-$tooltip-bg:                  rgba(#000, .85) !default;
+$tooltip-bg:                  $widget-bg-color !default;
+$tooltip-opacity:             1;
+$tooltip-color:               $body-color;
+$tooltip-border-radius:       $widget-border-radius;
+$tooltip-padding-x:           .5rem;
+$tooltip-padding-y:           .75rem;
 
 //== Code
 //

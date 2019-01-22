@@ -965,7 +965,7 @@
 /*       Widget        */
 /***********************/
 
-.widget{
+.widget {
   position: relative;
   margin-bottom: $grid-gutter-width;
   padding: $widget-padding-vertical $widget-padding-horizontal;
@@ -978,6 +978,10 @@
     padding: $widget-padding-vertical $widget-padding-horizontal;
     h1,h2,h3,h4,h5,h6{
       margin: 0;
+
+      .badge {
+        vertical-align: 2px;
+      }
     }
 
     + .widget-body,

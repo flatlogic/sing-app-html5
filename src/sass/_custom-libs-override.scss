@@ -702,6 +702,13 @@ input.parsley-error{
     cursor: pointer;
   }
 
+  th > button {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
   .sort-caret {
     display: inline-block;
     width: 15px;

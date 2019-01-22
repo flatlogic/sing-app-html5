@@ -23,19 +23,19 @@
                                 </header>
                                 <div class="widget-body">
                                 <div class="d-flex justify-content-between align-items-center mb-lg">
-                                    <h2>4,332</h2>
+                                    <h2 data-toggle="tooltip" data-placement="right" title="+20% vs Yesterday">4,332</h2>
                                     <i class="la la-arrow-right text-success rotate-315"></i>
                                 </div>
                                 <div class="d-flex flex-wrap justify-content-between">
-                                        <div class="mt visit-element">
+                                        <div class="mt visit-element" data-toggle="tooltip" data-placement="top" title="+17.3% vs Yesterday">
                                             <h6>+830</h6>
                                             <p class="text-muted mb-0"><small>Logins</small></p>
                                         </div>
-                                        <div class="mt visit-element">
+                                        <div class="mt visit-element" data-toggle="tooltip" data-placement="top" title="10% per Month">
                                             <h6>0.5%</h6>
                                             <p class="text-muted mb-0"><small>Sign Out</small></p>
                                         </div>
-                                        <div class="mt visit-element">
+                                        <div class="mt visit-element" data-toggle="tooltip" data-placement="top" title="86.4% per Month">
                                             <h6>4.5%</h6>
                                             <p class="text-muted mb-0"><small>Rate</small></p>
                                         </div>
@@ -55,8 +55,11 @@
                                 </header>
                                 <div class="widget-body">
                                     <div class="row">
-                                        <div class="col-lg-7 col-md-6 col-xs-12" id="flot-donut" style="height: 100px;"></div>
-                                        <div class="col-lg-4 col-md-5 display-flex flex-column justify-content-center" id="flot-donut-legend"></div>
+                                        <div class="col-lg-7 col-md-6 col-xs-12"
+                                             data-toggle="tooltip" data-placement="top" title="Orders since last refresh"
+                                             id="flot-donut" style="height: 100px;"></div>
+                                        <div class="col-lg-4 col-md-5 display-flex flex-column justify-content-center"
+                                             id="flot-donut-legend"></div>
                                     </div>
                                 </div>
                             </section>
@@ -73,11 +76,13 @@
                                 </header>
                                 <div class="widget-body">
                                     <p class="text-muted d-flex flex-wrap">
-                                        <small class="mr-lg d-flex align-items-center">
+                                        <small class="mr-lg d-flex align-items-center"
+                                               data-toggle="tooltip" data-placement="top" title="Year 2019">
                                             <span class="circle bg-success text-success mr-xs" style="font-size: 4px;">.</span>
                                             This Period
                                         </small>
-                                        <small class="mr-lg d-flex align-items-center">
+                                        <small class="mr-lg d-flex align-items-center"
+                                               data-toggle="tooltip" data-placement="top" title="Year 2019">
                                             <span class="circle bg-warning text-warning mr-xs" style="font-size: 4px;">.</span>
                                             Last Period
                                         </small>
@@ -111,19 +116,25 @@
                                 </header>
                                 <div class="widget-body">
                                     <div class="d-flex justify-content-between flex-wrap mb-sm">
-                                        <p class="width-150"><small>60% / 37°С / 3.3 Ghz</small></p>
+                                        <p class="width-150"
+                                           data-toggle="tooltip" data-placement="top"
+                                           title="+23% vs last period"><small>60% / 37°С / 3.3 Ghz</small></p>
                                         <div class="sparkline-wrapper">
                                             <div id="sparkline"></div>
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-between flex-wrap mb-sm">
-                                        <p class="width-150"><small>54% / 31°С / 3.3 Ghz</small></p>
+                                        <p class="width-150"
+                                           data-toggle="tooltip" data-placement="top"
+                                           title="+30% vs last period"><small>54% / 31°С / 3.3 Ghz</small></p>
                                         <div class="sparkline-wrapper">
                                             <div id="sparkline-1"></div>
                                         </div>
                                     </div>
                                     <div class="d-none justify-content-between flex-wrap">
-                                        <p class="width-150"><small>57% / 21°С / 3.3 Ghz</small></p>
+                                        <p class="width-150"
+                                           data-toggle="tooltip" data-placement="top"
+                                           title="+21% vs last period"><small>57% / 21°С / 3.3 Ghz</small></p>
                                         <div class="sparkline-wrapper">
                                             <div id="sparkline-2"></div>
                                         </div>

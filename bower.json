@@ -62,7 +62,7 @@
     "jquery-animateNumber": "^0.0.14",
     "MetroJS": "https://github.com/drewgreenwell/MetroJS.git#349ab828fe4deecff40496357d5bcba06f470413",
     "skycons": "https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "4.2.1",
     "bootstrap-markdown": "^2.10.0",
     "slick-carousel": "^1.8.1",
     "hammerjs": "^2.0.8",
