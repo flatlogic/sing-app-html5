@@ -1128,7 +1128,7 @@ legend {
 
     > li > a {
       position: relative;
-      color: $navbar-dashboard-link-color;
+      color: rgba($navbar-dashboard-link-color, 0.5);
 
       &:hover,
       &:focus {

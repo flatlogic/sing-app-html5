@@ -9,9 +9,9 @@
   top: 0;
   bottom: 0;
   width: $sidebar-width;
-  border-right: 1px solid $sidebar-border-color;
-  background-color: $sidebar-bg-color;
   color: $sidebar-color;
+  padding: 10px 0;
+  margin: 0 0 0 15px;
 
   .slimScrollBar{
     @include border-radius(0 !important);
@@ -153,7 +153,6 @@
   position: relative;
   min-height: 100%;
   padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
-  background-color: $body-bg;
 
   @include media-breakpoint-down(sm) {
     padding-left: 20px;
@@ -215,9 +214,12 @@
     display: block;
     color: $sidebar-color;
     text-decoration: none;
+    border-radius: 6px;
 
     .toggle{
       float: right;
+      position: absolute;
+      right: -10px;
       line-height: 18px;
       margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       transition: transform .35s ease;
@@ -244,8 +246,12 @@
   > li > a{
     position: relative;
     border-top: 1px solid $sidebar-item-border-color;
-    padding-left: 50px;
+    padding: 0 20px;
     line-height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 
     &:hover{
       color: $sidebar-item-hover-color;
@@ -253,7 +259,7 @@
     }
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-      line-height: 55px;
+      line-height: 46px;
     }
 
     .icon {
@@ -262,14 +268,10 @@
       }
 
       display: block;
-      position: absolute;
-      top: 3px;
-      left: $sidebar-padding-horizontal;
       width: 28px;
       height: 28px;
       line-height: 28px;
       text-align: center;
-      font-size: 16px;
       opacity: .6;
 
     }
@@ -278,7 +280,7 @@
       line-height: 35px;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        line-height: 55px;
+        line-height: 46px;
       }
     }
 
@@ -293,16 +295,15 @@
   }
 
   > .active > a{
-    background-color: $sidebar-bg-color;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-bold;
 
     &, &:hover {
-      color: $sidebar-item-active-color;
+      background-color: $sidebar-item-hover-bg-color;
     }
 
     .icon{
       border-radius: 50%;
-      background-color: $sidebar-item-active-color;
+      //background-color: $sidebar-item-active-color;
       opacity: 1;
 
       .fa, .glyphicon, .fi, .la {
@@ -318,7 +319,6 @@
   > li ul{
     padding: 0;
     font-size: 13px;
-    background-color: $sidebar-ul-background;
     list-style: none;
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
@@ -329,6 +329,9 @@
       > a{
         padding: 10px 0 10px 40px;
         font-size: $font-size-mini;
+        &:hover{
+          background-color: $sidebar-item-hover-bg-color;
+        }
       }
 
       &.active{
@@ -367,7 +370,7 @@
   margin: 35px 0 5px $sidebar-padding-horizontal;
   font-size: 14px;
   text-transform: uppercase;
-  color: darken(color-yiq($sidebar-bg-color), 13%);
+  color: $white;
 
   opacity: 1;
   @include transition(opacity $sidebar-transition-time ease-in-out);
@@ -988,6 +991,10 @@
     + .widget-body.p-0{
       margin-top: $widget-padding-vertical;
     }
+
+    div > table > tbody{
+      color: $gray-100;
+    }
   }
 
   > .widget-body > hr {
@@ -1059,11 +1066,11 @@
   > a{
     padding: 1px 4px;
     border-radius: 4px;
-    color: rgba($black, .4);
+    color: rgba($white, .45);
     @include transition(color .15s ease-in-out);
 
     &:hover{
-      color: rgba($black, .1);
+      color: rgba($white, .6);
       text-decoration: none;
     }
 
@@ -2656,11 +2663,19 @@ input[type=search], input.search {
     overflow-x: auto;
   
     .table {
+      thead>tr>th{
+        border: none;
+      }
+      tbody tr:nth-of-type(odd){
+        background-color: $table-dark-accent-bg;
+      }
       th, tr {
         font-weight: $font-weight-normal;
+        color: $gray-100;
       }
   
       th, td {
+        border-top: 1px solid rgba(51, 51, 51, 0.35);
         padding-top: $spacer;
         padding-bottom: $spacer;
         min-width: 110px;

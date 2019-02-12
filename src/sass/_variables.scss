@@ -66,12 +66,12 @@ $body-bg-light: lighten($body-bg, 3%);
 
 $addition-bg: $gray-100 !default;
 
-$logo-color: $gray-800;
+$logo-color: $white;
 
 // Typography
 // -------------------------
 
-$body-color:            $gray-700 !default;
+$body-color:            $gray-100 !default;
 //$body-color: #57534A; //a bit brown?
 
 $font-size-initial:       14px; // reset default browser value from 16px to 13px
@@ -98,18 +98,18 @@ $link-color: #218BC3 !default;
 $sidebar-padding-horizontal: 11px;
 $sidebar-icon-state-width: 50px !default;
 $sidebar-slim-scroll-width: 4px;
-$sidebar-width: 220px + $sidebar-slim-scroll-width !default;
+$sidebar-width: 156px + $sidebar-slim-scroll-width !default;
 
 $sidebar-transition-time: .3s !default;
 
 $sidebar-action-bg: #f9fafe !default;
 $sidebar-bg-color: #fff !default;
-$sidebar-color: #6c757d !default;
+$sidebar-color: #fff !default;
 $sidebar-font-weight: 300;
 $sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: $yellow !default;
-$sidebar-item-hover-color: lighten($sidebar-color, 10%);
-$sidebar-item-hover-bg-color: $sidebar-action-bg;
+$sidebar-item-hover-color: #fff;
+$sidebar-item-hover-bg-color: rgba(0,0,0,0.07);
 $sidebar-ul-background: $sidebar-action-bg;
 $sidebar-border-color: darken($sidebar-ul-background, 2%);
 
@@ -140,7 +140,7 @@ $screen-lg-height: 670px !default;
 
 $widget-padding-vertical: 20px !default;
 $widget-padding-horizontal: 20px !default;
-$widget-bg-color: $white;
+$widget-bg-color: rgba(51, 51, 51, 0.425);
 $widget-shadow: 0 23px 20px -20px rgba(darken($body-bg, 35%),0.1), 0 0 15px rgba(darken($body-bg, 35%),0.06);
 
 $widget-shadow-designated: -1px 0 8px rgba(0,0,0,.2);
@@ -207,10 +207,10 @@ $navbar-dashboard-color:             #777 !default;
 $navbar-dashboard-border:            darken($navbar-dashboard-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-dashboard-link-color:                #666 !default;
+$navbar-dashboard-link-color:                $white !default;
 
 // Navbar links
-$navbar-dashboard-link-hover-color:          #333 !default;
+$navbar-dashboard-link-hover-color:          $white !default;
 $navbar-dashboard-link-hover-bg:             transparent !default;
 $navbar-dashboard-link-active-color:         #555 !default;
 $navbar-dashboard-link-active-bg:            darken($navbar-dashboard-bg, 6.5%) !default;
@@ -330,3 +330,11 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 // ------------------------
 
 $fa-font-path: "../../bower_components/font-awesome/fonts" !default;
+
+
+// Override variables
+// ------------------------
+// ------------------------
+
+$text-muted: #fff;
+$table-dark-accent-bg: rgba(51, 51, 51, 0.3);
