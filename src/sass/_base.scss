@@ -232,13 +232,12 @@
     .badge{
       float: right;
       line-height: 8px;
-      margin-top: 7px;
-      margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
+      margin-left: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       padding: 7px;
       border-radius: 50%;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        margin-top: 15px;
+        margin-top: 0px;
       }
     }
   }
@@ -252,6 +251,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    white-space: nowrap;
 
     &:hover{
       color: $sidebar-item-hover-color;
@@ -268,11 +268,11 @@
       }
 
       display: block;
-      width: 28px;
       height: 28px;
       line-height: 28px;
       text-align: center;
       opacity: .6;
+      margin-right: .5rem;
 
     }
 

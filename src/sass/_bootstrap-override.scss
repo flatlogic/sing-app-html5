@@ -1095,7 +1095,7 @@ legend {
       display: flex;
       flex-grow: 1;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
     }
 
     @include media-breakpoint-down(sm) {
