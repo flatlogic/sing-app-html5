@@ -30,31 +30,31 @@ $gray-900: #29323a !default;
 $black:    #000 !default;
 $gray-light: $gray-100 !default;
 
-$blue:    #547fff !default;
+$blue:    #4e85bd !default;
 $indigo:  #7f3ddb !default;
 $purple:  #9964e3 !default;
 $pink:    #e54e9a !default;
-$red:     #f55d5d !default;
+$red:     #db4912 !default;
 $orange:  #ff7d47 !default;
-$yellow:  #ffc247 !default;
-$green:   #68ca66 !default;
-$teal:    #3abf94 !default;
+$yellow:  #f0af03 !default;
+$green:   #57b955 !default;
+$teal:    #4ebfbb !default;
 $cyan:    #17a2b8 !default;
 
 $theme-colors: (
         primary: $blue,
         secondary: $gray-600,
-        success: $teal,
+        success: $green,
         primary-light: #dee4ee,
         success-light: #ecfaec,
         info-light: #f2fafa,
         warning-light: #fdf7e6,
         danger-light: #fff2ef,
-        info: $purple,
+        info: $teal,
         warning: $yellow,
         danger: $red,
         dark: $gray-800,
-        inverse: $gray-700,
+        inverse: $gray-100,
         gray: $gray-300,
         default: #e9ecef
 );
@@ -113,16 +113,16 @@ $sidebar-item-hover-bg-color: rgba(0,0,0,0.07);
 $sidebar-ul-background: $sidebar-action-bg;
 $sidebar-border-color: darken($sidebar-ul-background, 2%);
 
-$navbar-height:                    60px !default;
+$navbar-height:                    40px !default;
 $navbar-font-size:              13px !default;
 $navbar-bg: transparent;
 $navbar-shadow: none;
 
 $chat-sidebar-width: 270px + $sidebar-slim-scroll-width !default;
 
-$content-padding-vertical: 42px !default;
+$content-padding-vertical: 25px !default;
 $content-padding-top: $content-padding-vertical + $navbar-height !default;
-$content-padding-horizontal: 40px !default;
+$content-padding-horizontal: 2.5641% !default;
 
 $grid-gutter-width: 40px;
 
@@ -138,8 +138,8 @@ $screen-lg-height: 670px !default;
 // Widgets
 // -------------------------
 
-$widget-padding-vertical: 20px !default;
-$widget-padding-horizontal: 20px !default;
+$widget-padding-vertical: 12px !default;
+$widget-padding-horizontal: 17px !default;
 $widget-bg-color: rgba(51, 51, 51, 0.425);
 $widget-shadow: 0 23px 20px -20px rgba(darken($body-bg, 35%),0.1), 0 0 15px rgba(darken($body-bg, 35%),0.06);
 

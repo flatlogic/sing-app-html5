@@ -1,6 +1,9 @@
 /***********************/
 /*        Layout       */
 /***********************/
+h1,h2,h3,h4,h5,h6{
+  font-weight: 300;
+}
 
 .sidebar{
   position: fixed;
@@ -10,8 +13,8 @@
   bottom: 0;
   width: $sidebar-width;
   color: $sidebar-color;
-  padding: 10px 0;
-  margin: 0 0 0 15px;
+  padding: 0px 0;
+  margin: 15px 0 0 25px;
 
   .slimScrollBar{
     @include border-radius(0 !important);
@@ -37,7 +40,7 @@
     @include media-breakpoint-up(lg) {
       @include transition(none);
       left: 0;
-      margin-left: $sidebar-width;
+      margin-left: $sidebar-width + 25px;
     }
   }
 }
@@ -175,7 +178,7 @@
   position: relative;
   min-height: 100%;
   padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
-
+  
   @include media-breakpoint-down(sm) {
     padding-left: 20px;
     padding-right: 20px;
@@ -195,15 +198,15 @@
 .logo {
   position: relative;
   z-index: 100;
-  margin: 0 0 2.6rem;
+  margin: 0 0 20px;
   height: $navbar-height;
   width: 100%;
   line-height: $navbar-height;
   text-align: center;
   vertical-align: middle;
   font-weight: $font-weight-normal;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 16.25px;
+  letter-spacing: 0px;
 
   @include transition(width $sidebar-transition-time ease-in-out);
   > a {
@@ -228,7 +231,7 @@
 }
 
 .sidebar-nav{
-  padding: 10px 0;
+  padding: 0px 0;
   font-size: 13px;
   font-weight: $sidebar-font-weight;
 
@@ -267,8 +270,8 @@
   > li > a{
     position: relative;
     border-top: 1px solid $sidebar-item-border-color;
-    padding: 0 20px;
-    line-height: 35px;
+    padding: 10px 20px;
+    //line-height: 35px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -281,7 +284,7 @@
     }
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-      line-height: 46px;
+      //line-height: 46px;
     }
 
     .icon {
@@ -290,8 +293,8 @@
       }
 
       display: block;
-      height: 28px;
-      line-height: 28px;
+      // height: 28px;
+      // line-height: 28px;
       text-align: center;
       opacity: .6;
       margin-right: .5rem;
@@ -299,10 +302,10 @@
     }
 
     .toggle{
-      line-height: 35px;
+      // line-height: 35px;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        line-height: 46px;
+        // line-height: 46px;
       }
     }
 
@@ -899,7 +902,9 @@
 }
 
 .page-title{
-  margin: 0 0 2*$spacer;
+  font-weight: 300;
+  line-height: 1;
+  margin: 11px 0 18px;
 }
 
 .notifications{
@@ -999,11 +1004,16 @@
   box-shadow: $widget-shadow;
 
   > header{
-    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
-    padding: $widget-padding-vertical $widget-padding-horizontal;
+    // margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+    // padding: $widget-padding-vertical $widget-padding-horizontal;
+    position: relative;
+    top: 1px;
     h1,h2,h3,h4,h5,h6{
       margin: 0;
-
+      line-height: 19px;
+      font-weight: 600;
+      color: inherit;
+      
       .badge {
         vertical-align: 2px;
       }
@@ -1011,7 +1021,7 @@
 
     + .widget-body,
     + .widget-body.p-0{
-      margin-top: $widget-padding-vertical;
+      // margin-top: $widget-padding-vertical;
     }
 
     div > table > tbody{
@@ -1072,8 +1082,8 @@
   z-index: 1;
   top: 0;
   right: 0;
-  padding: 14px;
-  font-size: $font-size-sm;
+  word-spacing: 1px;
+  font-size: 12px;
 
   &.left{
     left: 0;
@@ -1170,7 +1180,7 @@
 }
 
 .widget-padding-md {
-  padding: $widget-padding-vertical $widget-padding-horizontal;
+  padding: ($widget-padding-vertical + 8px) ($widget-padding-horizontal + 3px);
 }
 
 .widget-padding-lg {
