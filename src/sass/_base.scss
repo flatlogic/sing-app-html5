@@ -136,9 +136,31 @@
       padding-right: 0;
     }
   }
-  .navbar-nav .nav-link {
+  .navbar-nav{
     .fa, .la {
       font-size: 20px;
+    }
+    .glyphicon{
+      font-size: 19.5px;
+    }
+    li.divider {
+      display: block;
+      height: 38px;
+      width: 1px;
+      margin: 0 20px;
+      background: linear-gradient(rgba(51, 51, 51, 0), rgba(51, 51, 51, 0.5), rgba(102, 102, 102, 0));
+    }
+    li .count {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      font-size: 9.1px;
+      font-weight: normal;
+      background: rgba(51, 51, 51, 0.55);
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1em;
+      padding: 2px 4px;
+      border-radius: 10px;
     }
   }
 }
