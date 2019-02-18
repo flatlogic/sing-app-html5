@@ -12,9 +12,6 @@ blockquote{
 
   footer {
     font-size: 80%;
-    &:after {
-      content: '\00A0 \2014';
-    }
   }
 }
 // Headings
@@ -24,29 +21,65 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
   small,
   .small {
-    font-weight: $headings-font-weight;
+    // font-weight: $headings-font-weight;
+    // font-size: 75%;
+    // color: #d2d2d2;
+    color: #d2d2d2;
+    font-weight: 300;
+  }
+}
+
+h1, 
+.h1{
+  small,
+  .small{
+    font-size: 22.75px;
+  }
+}
+
+h2, 
+.h2{
+  small,
+  .small{
+    font-size: 16.25px;
+  }
+}
+
+h3, 
+.h3{
+  small,
+  .small{
+    font-size: 13px;
+  }
+}
+
+h4, h5, h6,
+.h4, .h5, .h6{
+  small,
+  .small {
     font-size: 75%;
-    color: $text-muted;
   }
 }
 
 .widget{
-  h1, h2, h3, h4, h5, h6,
-  .h1, .h2, .h3, .h4, .h5, .h6{
-    small,
-    .small {
-      font-weight: 100;
-      font-size: 75%;
-      text-transform: lowercase;
-      color: #d2d2d2;
+  > header {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6{
+      small,
+      .small {
+        // font-weight: 100;
+        // font-size: 75%;
+        text-transform: lowercase;
+        color: #d2d2d2;
+      }
     }
   }
 }
 
 small, .small {
-  font-size: 85%;
+  font-size: 92%;
+  font-weight: 300;
 }
-
 
 //
 // Forms
@@ -54,12 +87,20 @@ small, .small {
 
 
 .form-control {
+  color: $gray-100;
+  height: 30px;
+  padding: 5px 12px;
+  font-size: 13px;
   font-weight: $font-weight-normal;
   @include box-shadow(none);
   &:focus{
     @include box-shadow(none);
+    color: $gray-100;
+    background: url(../img/search-white.png) 5px 5px no-repeat rgba(51,51,51,0.4);
+    border: none;
   }
 }
+
 
 label {
   font-weight: $font-weight-normal;
@@ -404,7 +445,6 @@ legend {
 .navbar {
   border: none;
   font-size: $navbar-font-size;
-  min-height: 50px;
   margin-bottom: 0;
   padding: 0;
 
@@ -1074,8 +1114,8 @@ legend {
 // our navbars.
 
 .navbar-form {
-  padding: 7px 0 6.5px $spacer;
-
+  padding: 0;
+  margin: 5px 15px 0 0;
   .form-group {
     margin-bottom: 0;
   }
@@ -1085,7 +1125,7 @@ legend {
     width: auto;
     border: 0;
     margin-left: 0;
-    margin-right: 0;
+    // margin-right: 0;
   }
 }
 
@@ -1106,10 +1146,8 @@ legend {
 
   .navbar-header {
     &.mobile-hidden {
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
       justify-content: flex-end;
+      min-height: 40px;
     }
 
     @include media-breakpoint-down(sm) {
@@ -1149,11 +1187,11 @@ legend {
       font-size: 19.5px;
       outline: 0;
       background: none;
-      text-align: center;
-      vertical-align: middle;
-      line-height: 36px;
       text-shadow: none;
       display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover,
       &:focus {
@@ -1273,6 +1311,10 @@ pre {
 
 code {
   background: theme-color('danger-light');
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  border-radius: 3px;
 }
 
 //
@@ -1405,5 +1447,61 @@ a.badge {
 }
 
 //
-// rewrite _spacing var
+// rewrite _type.scss
+// --------------------------------------------------
+.display-1, .display-2, .display-3, .display-4{
+  font-size: 35.75px;
+  line-height: 1.1;
+}
+
+.lead {
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  @media (min-width: 768px)
+  {
+    font-size: 16px;
+  }
+}
+
+.blockquote{
+  padding: 9px 18px;
+  margin: 0 0 18px;
+  font-size: 16.25px;
+  border-left: 5px solid rgba(51, 51, 51, 0.425);
+  footer, small, .small {
+    color: #999999;
+  }
+}
+
+
+//
+// rewrite _alert.scss
+// --------------------------------------------------
+.alert{
+  background: rgba(51, 51, 51, 0.4);
+  border: none;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 19px;
+  margin-bottom: 0;
+  padding: 3px 9px;
+  color: #f8f8f8;
+  text-shadow: none;
+  border-radius: 10px;
+}
+
+
+//
+// rewrite _close.scss
+// --------------------------------------------------
+.close{
+  text-shadow: none;
+  opacity: 0.2;
+  font-size: 19.5px;
+}
+
+//
+// rewrite _close.scss
 // --------------------------------------------------

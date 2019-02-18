@@ -1331,6 +1331,7 @@
 /***********************************/
 
 .theme-helper {
+  display: none;
   width: $sidebar-width;
   position: fixed;
   right: -$sidebar-width;

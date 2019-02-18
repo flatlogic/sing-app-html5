@@ -372,24 +372,7 @@
                     <!-- this part is hidden for xs screens -->
                     <div class="navbar-header mobile-hidden">
                         <!-- search form! link it to your search server -->
-                        <div class="notifications pull-right">
-                            <div class="alert pull-right">
-                                <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
-                                <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!
-                            </div>
-                        </div>
-                        <form class="navbar-form" role="search">
-                            <div class="form-group">
-                                <div class="input-group input-group-no-border">
-                                    <input class="form-control" type="text" placeholder="Search Dashboard">
-                                    <span class="input-group-append">
-                                        <span class="input-group-text">
-                                            <i class="la la-search"></i>
-                                        </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </form>
+                        
                         <ul class="nav navbar-nav float-right">
                             <li class="dropdown">
                                 <a href="#" title="Messages" id="messages"
@@ -438,7 +421,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link" data-toggle="chat-sidebar">
                                     <i class="glyphicon glyphicon-globe"></i>
                                     <span class="count">8</span>
@@ -456,7 +439,7 @@
                                 </div>
                             </li>
                             <li class="divider"></li>
-                            <li class="dropdown nav-item">
+                            <li class="hidden-xs">
                                 <a href="#" class="dropdown-toggle no-caret nav-link" data-toggle="dropdown">
                                     <i class="glyphicon glyphicon-cog"></i>
                                 </a>
@@ -500,8 +483,17 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item ml-n-xs d-none d-md-block"><a href="#" class="nav-link"><i class="glyphicon glyphicon-off"></i></a></li>
+                            <li class="hidden-xs"><a href="#" class="nav-link"><i class="glyphicon glyphicon-off"></i></a></li>
                         </ul>
+                        <form id="search-form" class="navbar-form pull-right" role="search">
+                            <input type="search" class="form-control search-query" placeholder="Search...">
+                        </form>
+                        <div class="notifications pull-right">
+                            <div class="alert pull-right">
+                                <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
+                                <i class="fa fa-info-circle mr-xs"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>            <div class="chat-sidebar" id="chat">
