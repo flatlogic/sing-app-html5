@@ -25,10 +25,11 @@ h1,h2,h3,h4,h5,h6{
 
 .page-controls, .content-wrap, .loader-wrap{
   left: $sidebar-width;
+  margin-left: $sidebar-width + 25px;
   @include transition(left $sidebar-transition-time ease-in-out);
 
   @include media-breakpoint-up(md) {
-    margin-left: $sidebar-icon-state-width;
+    margin-left: $sidebar-width + 25px;
     left: $sidebar-width - $sidebar-icon-state-width;
   }
 
@@ -64,8 +65,10 @@ h1,h2,h3,h4,h5,h6{
           left $sidebar-transition-time ease-in-out,
           right $sidebar-transition-time ease-in-out
   );
-  right: -$sidebar-width;
-
+  //right: -$sidebar-width;
+  @media (max-width: 768px) {
+    right: -$sidebar-width;
+  }
   .nav-collapsed &{
     right: 0
   }
