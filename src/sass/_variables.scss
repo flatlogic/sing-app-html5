@@ -30,31 +30,31 @@ $gray-900: #29323a !default;
 $black:    #000 !default;
 $gray-light: $gray-100 !default;
 
-$blue:    #547fff !default;
+$blue:    #4e85bd !default;
 $indigo:  #7f3ddb !default;
 $purple:  #9964e3 !default;
 $pink:    #e54e9a !default;
-$red:     #f55d5d !default;
+$red:     #db4912 !default;
 $orange:  #ff7d47 !default;
-$yellow:  #ffc247 !default;
-$green:   #68ca66 !default;
-$teal:    #3abf94 !default;
+$yellow:  #f0af03 !default;
+$green:   #57b955 !default;
+$teal:    #4ebfbb !default;
 $cyan:    #17a2b8 !default;
 
 $theme-colors: (
         primary: $blue,
         secondary: $gray-600,
-        success: $teal,
+        success: $green,
         primary-light: #dee4ee,
         success-light: #ecfaec,
         info-light: #f2fafa,
         warning-light: #fdf7e6,
-        danger-light: #fff2ef,
-        info: $purple,
+        danger-light: #f9f2f4,
+        info: $teal,
         warning: $yellow,
         danger: $red,
         dark: $gray-800,
-        inverse: $gray-700,
+        inverse: $gray-100,
         gray: $gray-300,
         default: #e9ecef
 );
@@ -66,12 +66,12 @@ $body-bg-light: lighten($body-bg, 3%);
 
 $addition-bg: $gray-100 !default;
 
-$logo-color: $gray-800;
+$logo-color: $white;
 
 // Typography
 // -------------------------
 
-$body-color:            $gray-700 !default;
+$body-color:            $gray-100 !default;
 //$body-color: #57534A; //a bit brown?
 
 $font-size-initial:       14px; // reset default browser value from 16px to 13px
@@ -91,36 +91,36 @@ $font-weight-base: $font-weight-thin !default;
 $font-size-smaller: 85% !default;
 
 $line-height-base:        1.55 !default;
-$link-color: #218BC3 !default;
+$link-color: #8ec5fd !default;
 
 // Layout
 // -------------------------
 $sidebar-padding-horizontal: 11px;
 $sidebar-icon-state-width: 50px !default;
 $sidebar-slim-scroll-width: 4px;
-$sidebar-width: 220px + $sidebar-slim-scroll-width !default;
+$sidebar-width: 156px + $sidebar-slim-scroll-width !default;
 
 $sidebar-transition-time: .3s !default;
 
 $sidebar-action-bg: #f9fafe !default;
 $sidebar-bg-color: #fff !default;
-$sidebar-color: #6c757d !default;
+$sidebar-color: #fff !default;
 $sidebar-font-weight: 300;
 $sidebar-item-border-color: transparent !default;
 $sidebar-item-active-color: $yellow !default;
-$sidebar-item-hover-color: lighten($sidebar-color, 10%);
-$sidebar-item-hover-bg-color: $sidebar-action-bg;
+$sidebar-item-hover-color: #fff;
+$sidebar-item-hover-bg-color: rgba(0,0,0,0.07);
 $sidebar-ul-background: $sidebar-action-bg;
 $sidebar-border-color: darken($sidebar-ul-background, 2%);
 
-$navbar-height:                    60px !default;
+$navbar-height:                    40px !default;
 $navbar-font-size:              13px !default;
 $navbar-bg: transparent;
 $navbar-shadow: none;
 
 $chat-sidebar-width: 270px + $sidebar-slim-scroll-width !default;
 
-$content-padding-vertical: 42px !default;
+$content-padding-vertical: 25px !default;
 $content-padding-top: $content-padding-vertical + $navbar-height !default;
 $content-padding-horizontal: 40px !default;
 
@@ -138,9 +138,9 @@ $screen-lg-height: 670px !default;
 // Widgets
 // -------------------------
 
-$widget-padding-vertical: 20px !default;
+$widget-padding-vertical: 15px !default;
 $widget-padding-horizontal: 20px !default;
-$widget-bg-color: $white;
+$widget-bg-color: rgba(51, 51, 51, 0.425);
 $widget-shadow: 0 23px 20px -20px rgba(darken($body-bg, 35%),0.1), 0 0 15px rgba(darken($body-bg, 35%),0.06);
 
 $widget-shadow-designated: -1px 0 8px rgba(0,0,0,.2);
@@ -165,7 +165,7 @@ $breadcrumb-bg: transparent;
 
 $font-family-sans-serif: 'Montserrat', sans-serif !default;
 
-$headings-font-weight: 400 !default;
+$headings-font-weight: 300 !default;
 
 //== Forms
 //
@@ -207,10 +207,10 @@ $navbar-dashboard-color:             #777 !default;
 $navbar-dashboard-border:            darken($navbar-dashboard-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-dashboard-link-color:                #666 !default;
+$navbar-dashboard-link-color:                rgb(51,51,51) !default;
 
 // Navbar links
-$navbar-dashboard-link-hover-color:          #333 !default;
+$navbar-dashboard-link-hover-color:          $white !default;
 $navbar-dashboard-link-hover-bg:             transparent !default;
 $navbar-dashboard-link-active-color:         #555 !default;
 $navbar-dashboard-link-active-bg:            darken($navbar-dashboard-bg, 6.5%) !default;
@@ -330,3 +330,11 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 // ------------------------
 
 $fa-font-path: "../../bower_components/font-awesome/fonts" !default;
+
+
+// Override variables
+// ------------------------
+// ------------------------
+$mark-bg: rgba(229, 190, 86, 0.28);
+$text-muted: #fff;
+$table-dark-accent-bg: rgba(51, 51, 51, 0.3);

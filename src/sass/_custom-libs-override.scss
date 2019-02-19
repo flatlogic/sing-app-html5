@@ -448,7 +448,7 @@ $slider-handle-size: 26px;
 .calendar td > a{
   text-decoration: none;
   cursor: pointer;
-  color: $gray-800 !important;
+  color: $gray-500 !important;
   display: inline-block;
   height: 30px;
   line-height: 30px;
@@ -460,7 +460,7 @@ $slider-handle-size: 26px;
 }
 .calendar .header{
   padding: 10px 0 10px 0;
-  color: #666;
+  color: $gray-100;
   i{
     cursor: pointer;
   }
@@ -476,7 +476,7 @@ $slider-handle-size: 26px;
   font-weight: 500;
 }
 .calendar .week_days{
-  color: $gray-600;
+  color: $gray-100;
 }
 .calendar .event{
   color: white;
@@ -521,7 +521,7 @@ $slider-handle-size: 26px;
 .calendar .week_days td{
 }
 .calendar .visualmonthyear {
-  color: $gray-600;
+  color: $gray-100;
 }
 .dropdown-menu .calendar td a {
   padding: 0px;

@@ -12,9 +12,6 @@ blockquote{
 
   footer {
     font-size: 80%;
-    &:after {
-      content: '\00A0 \2014';
-    }
   }
 }
 // Headings
@@ -24,16 +21,65 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
   small,
   .small {
-    font-weight: $headings-font-weight;
+    // font-weight: $headings-font-weight;
+    // font-size: 75%;
+    // color: #d2d2d2;
+    color: #d2d2d2;
+    font-weight: 300;
+  }
+}
+
+h1, 
+.h1{
+  small,
+  .small{
+    font-size: 22.75px;
+  }
+}
+
+h2, 
+.h2{
+  small,
+  .small{
+    font-size: 16.25px;
+  }
+}
+
+h3, 
+.h3{
+  small,
+  .small{
+    font-size: 13px;
+  }
+}
+
+h4, h5, h6,
+.h4, .h5, .h6{
+  small,
+  .small {
     font-size: 75%;
-    color: $text-muted;
+  }
+}
+
+.widget{
+  > header {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6{
+      small,
+      .small {
+        // font-weight: 100;
+        // font-size: 75%;
+        text-transform: lowercase;
+        color: #d2d2d2;
+      }
+    }
   }
 }
 
 small, .small {
-  font-size: 85%;
+  font-size: 92%;
+  font-weight: 300;
 }
-
 
 //
 // Forms
@@ -41,12 +87,20 @@ small, .small {
 
 
 .form-control {
+  color: $gray-100;
+  height: 30px;
+  padding: 5px 12px;
+  font-size: 13px;
   font-weight: $font-weight-normal;
   @include box-shadow(none);
   &:focus{
     @include box-shadow(none);
+    color: $gray-100;
+    background: url(../img/search-white.png) 5px 5px no-repeat rgba(51,51,51,0.4);
+    border: none;
   }
 }
+
 
 label {
   font-weight: $font-weight-normal;
@@ -200,6 +254,7 @@ legend {
 
 .dropdown-toggle {
   &::after {
+    display: none;
     font-family: LineAwesome;
     content: "\F110";
     border: none;
@@ -390,7 +445,6 @@ legend {
 .navbar {
   border: none;
   font-size: $navbar-font-size;
-  min-height: 50px;
   margin-bottom: 0;
   padding: 0;
 
@@ -1060,8 +1114,8 @@ legend {
 // our navbars.
 
 .navbar-form {
-  padding: 7px 0 6.5px $spacer;
-
+  padding: 0;
+  margin: 5px 15px 0 0;
   .form-group {
     margin-bottom: 0;
   }
@@ -1071,7 +1125,7 @@ legend {
     width: auto;
     border: 0;
     margin-left: 0;
-    margin-right: 0;
+    // margin-right: 0;
   }
 }
 
@@ -1092,10 +1146,8 @@ legend {
 
   .navbar-header {
     &.mobile-hidden {
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
+      min-height: 40px;
     }
 
     @include media-breakpoint-down(sm) {
@@ -1125,10 +1177,21 @@ legend {
 
   .navbar-nav {
     flex-direction: row;
+    align-items: center;
 
     > li > a {
       position: relative;
-      color: $navbar-dashboard-link-color;
+      color: rgba($navbar-dashboard-link-color, 0.5);
+      width: 40px;
+      padding: 0;
+      font-size: 19.5px;
+      outline: 0;
+      background: none;
+      text-shadow: none;
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover,
       &:focus {
@@ -1248,6 +1311,10 @@ pre {
 
 code {
   background: theme-color('danger-light');
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  border-radius: 3px;
 }
 
 //
@@ -1362,3 +1429,87 @@ a.badge {
   font-size: 20px;
   margin-right: $toast-padding-x;
 }
+
+//
+// row/column restyle
+// --------------------------------------------------
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto{
+  position: relative;
+  min-height: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.col-md-6{
+  @media (min-width: 768px)
+  {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  @media (min-width: 992px)
+  {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+//
+// rewrite _type.scss
+// --------------------------------------------------
+.display-1, .display-2, .display-3, .display-4{
+  font-size: 35.75px;
+  line-height: 1.1;
+}
+
+.lead {
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  @media (min-width: 768px)
+  {
+    font-size: 16px;
+  }
+}
+
+.blockquote{
+  padding: 9px 18px;
+  margin: 0 0 18px;
+  font-size: 16.25px;
+  border-left: 5px solid rgba(51, 51, 51, 0.425);
+  footer, small, .small {
+    color: #999999;
+  }
+}
+
+
+//
+// rewrite _alert.scss
+// --------------------------------------------------
+.alert{
+  background: rgba(51, 51, 51, 0.4);
+  border: none;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 19px;
+  margin-bottom: 0;
+  padding: 3px 9px;
+  color: #f8f8f8;
+  text-shadow: none;
+  border-radius: 10px;
+}
+
+
+//
+// rewrite _close.scss
+// --------------------------------------------------
+.close{
+  text-shadow: none;
+  opacity: 0.2;
+  font-size: 19.5px;
+}
+
+//
+// rewrite _close.scss
+// --------------------------------------------------

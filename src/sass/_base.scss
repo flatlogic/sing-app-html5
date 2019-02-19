@@ -1,6 +1,9 @@
 /***********************/
 /*        Layout       */
 /***********************/
+h1,h2,h3,h4,h5,h6{
+  font-weight: 300;
+}
 
 .sidebar{
   position: fixed;
@@ -9,9 +12,9 @@
   top: 0;
   bottom: 0;
   width: $sidebar-width;
-  border-right: 1px solid $sidebar-border-color;
-  background-color: $sidebar-bg-color;
   color: $sidebar-color;
+  padding: 0px 0;
+  margin: 15px 0 0 15px;
 
   .slimScrollBar{
     @include border-radius(0 !important);
@@ -22,10 +25,11 @@
 
 .page-controls, .content-wrap, .loader-wrap{
   left: $sidebar-width;
+  margin-left: $sidebar-width + 15px;
   @include transition(left $sidebar-transition-time ease-in-out);
 
   @include media-breakpoint-up(md) {
-    margin-left: $sidebar-icon-state-width;
+    margin-left: $sidebar-width + 15px;
     left: $sidebar-width - $sidebar-icon-state-width;
   }
 
@@ -37,7 +41,7 @@
     @include media-breakpoint-up(lg) {
       @include transition(none);
       left: 0;
-      margin-left: $sidebar-width;
+      margin-left: $sidebar-width + 15px;
     }
   }
 }
@@ -61,8 +65,10 @@
           left $sidebar-transition-time ease-in-out,
           right $sidebar-transition-time ease-in-out
   );
-  right: -$sidebar-width;
-
+  //right: -$sidebar-width;
+  @media (max-width: 768px) {
+    right: -$sidebar-width;
+  }
   .nav-collapsed &{
     right: 0
   }
@@ -136,9 +142,31 @@
       padding-right: 0;
     }
   }
-  .navbar-nav .nav-link {
+  .navbar-nav{
     .fa, .la {
       font-size: 20px;
+    }
+    .glyphicon{
+      font-size: 19.5px;
+    }
+    li.divider {
+      display: block;
+      height: 38px;
+      width: 1px;
+      margin: 0 20px;
+      background: linear-gradient(rgba(51, 51, 51, 0), rgba(51, 51, 51, 0.5), rgba(102, 102, 102, 0));
+    }
+    li .count {
+      position: absolute;
+      bottom: -5px;
+      right: 2px;
+      font-size: 9.1px;
+      font-weight: normal;
+      background: rgba(51, 51, 51, 0.55);
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1em;
+      padding: 2px 4px;
+      border-radius: 10px;
     }
   }
 }
@@ -152,9 +180,8 @@
 .content{
   position: relative;
   min-height: 100%;
-  padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
-  background-color: $body-bg;
-
+  padding: $content-padding-top $content-padding-horizontal 15px 25px;
+  
   @include media-breakpoint-down(sm) {
     padding-left: 20px;
     padding-right: 20px;
@@ -166,23 +193,23 @@
 
   .content-footer {
     position: absolute;
-    bottom: 10px;
-    color: $text-muted;
+    bottom: -85px;
+    color: #d2d2d2;
   }
 }
 
 .logo {
   position: relative;
   z-index: 100;
-  margin: 0 0 2.6rem;
+  margin: 0 0 20px;
   height: $navbar-height;
   width: 100%;
   line-height: $navbar-height;
   text-align: center;
   vertical-align: middle;
   font-weight: $font-weight-normal;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: 16.25px;
+  letter-spacing: 0px;
 
   @include transition(width $sidebar-transition-time ease-in-out);
   > a {
@@ -207,7 +234,7 @@
 }
 
 .sidebar-nav{
-  padding: 10px 0;
+  padding: 0px 0;
   font-size: 13px;
   font-weight: $sidebar-font-weight;
 
@@ -215,9 +242,12 @@
     display: block;
     color: $sidebar-color;
     text-decoration: none;
+    border-radius: 6px;
 
     .toggle{
       float: right;
+      position: absolute;
+      right: -10px;
       line-height: 18px;
       margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       transition: transform .35s ease;
@@ -230,13 +260,12 @@
     .badge{
       float: right;
       line-height: 8px;
-      margin-top: 7px;
-      margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
+      margin-left: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       padding: 7px;
       border-radius: 50%;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        margin-top: 15px;
+        margin-top: 0px;
       }
     }
   }
@@ -244,8 +273,13 @@
   > li > a{
     position: relative;
     border-top: 1px solid $sidebar-item-border-color;
-    padding-left: 50px;
-    line-height: 35px;
+    padding: 10px 20px;
+    //line-height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
 
     &:hover{
       color: $sidebar-item-hover-color;
@@ -253,7 +287,7 @@
     }
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-      line-height: 55px;
+      //line-height: 46px;
     }
 
     .icon {
@@ -262,23 +296,19 @@
       }
 
       display: block;
-      position: absolute;
-      top: 3px;
-      left: $sidebar-padding-horizontal;
-      width: 28px;
-      height: 28px;
-      line-height: 28px;
+      // height: 28px;
+      // line-height: 28px;
       text-align: center;
-      font-size: 16px;
       opacity: .6;
+      margin-right: .5rem;
 
     }
 
     .toggle{
-      line-height: 35px;
+      // line-height: 35px;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        line-height: 55px;
+        // line-height: 46px;
       }
     }
 
@@ -293,16 +323,15 @@
   }
 
   > .active > a{
-    background-color: $sidebar-bg-color;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-bold;
 
     &, &:hover {
-      color: $sidebar-item-active-color;
+      background-color: $sidebar-item-hover-bg-color;
     }
 
     .icon{
       border-radius: 50%;
-      background-color: $sidebar-item-active-color;
+      //background-color: $sidebar-item-active-color;
       opacity: 1;
 
       .fa, .glyphicon, .fi, .la {
@@ -318,7 +347,6 @@
   > li ul{
     padding: 0;
     font-size: 13px;
-    background-color: $sidebar-ul-background;
     list-style: none;
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
@@ -329,6 +357,9 @@
       > a{
         padding: 10px 0 10px 40px;
         font-size: $font-size-mini;
+        &:hover{
+          background-color: $sidebar-item-hover-bg-color;
+        }
       }
 
       &.active{
@@ -367,7 +398,7 @@
   margin: 35px 0 5px $sidebar-padding-horizontal;
   font-size: 14px;
   text-transform: uppercase;
-  color: darken(color-yiq($sidebar-bg-color), 13%);
+  color: $white;
 
   opacity: 1;
   @include transition(opacity $sidebar-transition-time ease-in-out);
@@ -874,10 +905,13 @@
 }
 
 .page-title{
-  margin: 0 0 2*$spacer;
+  font-weight: 300;
+  line-height: 1;
+  margin: 11px 0 18px;
 }
 
 .notifications{
+  margin: 6px 20px 6px -40px;
   @include media-breakpoint-up(lg){
     width: 333px;
   }
@@ -890,6 +924,11 @@
     .btn {
       flex: 1;
     }
+  }
+
+  .alert a {
+    color: #f8f8f8;
+    font-weight: bold;
   }
 
   .list-group{
@@ -974,11 +1013,16 @@
   box-shadow: $widget-shadow;
 
   > header{
-    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
-    padding: $widget-padding-vertical $widget-padding-horizontal;
+    // margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+    // padding: $widget-padding-vertical $widget-padding-horizontal;
+    position: relative;
+    top: 1px;
     h1,h2,h3,h4,h5,h6{
       margin: 0;
-
+      line-height: 19px;
+      font-weight: 600;
+      color: inherit;
+      
       .badge {
         vertical-align: 2px;
       }
@@ -986,7 +1030,11 @@
 
     + .widget-body,
     + .widget-body.p-0{
-      margin-top: $widget-padding-vertical;
+      // margin-top: $widget-padding-vertical;
+    }
+
+    div > table > tbody{
+      color: $gray-100;
     }
   }
 
@@ -1043,8 +1091,8 @@
   z-index: 1;
   top: 0;
   right: 0;
-  padding: 14px;
-  font-size: $font-size-sm;
+  word-spacing: 1px;
+  font-size: 12px;
 
   &.left{
     left: 0;
@@ -1059,11 +1107,11 @@
   > a{
     padding: 1px 4px;
     border-radius: 4px;
-    color: rgba($black, .4);
+    color: rgba($white, .45);
     @include transition(color .15s ease-in-out);
 
     &:hover{
-      color: rgba($black, .1);
+      color: rgba($white, .6);
       text-decoration: none;
     }
 
@@ -1141,7 +1189,7 @@
 }
 
 .widget-padding-md {
-  padding: $widget-padding-vertical $widget-padding-horizontal;
+  padding: ($widget-padding-vertical + 8px) ($widget-padding-horizontal + 3px);
 }
 
 .widget-padding-lg {
@@ -1220,10 +1268,21 @@ input[type=search], input.search {
   &, .input-group-lg > &, .input-group-sm > &{
     padding-left: 26px;
   }
-  background-color: $input-bg;
-  background:url(../img/search.png) 5px 60% no-repeat $input-bg;
+  color: #f8f8f8;
+  border: none;
+  background: url(../img/search-white.png) 5px 5px no-repeat rgba(51, 51, 51, 0.4);
+  padding-left: 26px;
+  -webkit-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  width: 200px;
 }
 
+.page-header .search-query:focus {
+  width: 240px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
 /***********************/
 /*       Buttons       */
 /***********************/
@@ -2656,11 +2715,19 @@ input[type=search], input.search {
     overflow-x: auto;
   
     .table {
+      thead>tr>th{
+        border: none;
+      }
+      tbody tr:nth-of-type(odd){
+        background-color: $table-dark-accent-bg;
+      }
       th, tr {
         font-weight: $font-weight-normal;
+        color: $gray-100;
       }
   
       th, td {
+        border-top: 1px solid rgba(51, 51, 51, 0.35);
         padding-top: $spacer;
         padding-bottom: $spacer;
         min-width: 110px;
