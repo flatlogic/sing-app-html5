@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6{
   width: $sidebar-width;
   color: $sidebar-color;
   padding: 0px 0;
-  margin: 15px 0 0 25px;
+  margin: 15px 0 0 15px;
 
   .slimScrollBar{
     @include border-radius(0 !important);
@@ -25,11 +25,11 @@ h1,h2,h3,h4,h5,h6{
 
 .page-controls, .content-wrap, .loader-wrap{
   left: $sidebar-width;
-  margin-left: $sidebar-width + 25px;
+  margin-left: $sidebar-width + 15px;
   @include transition(left $sidebar-transition-time ease-in-out);
 
   @include media-breakpoint-up(md) {
-    margin-left: $sidebar-width + 25px;
+    margin-left: $sidebar-width + 15px;
     left: $sidebar-width - $sidebar-icon-state-width;
   }
 
@@ -41,7 +41,7 @@ h1,h2,h3,h4,h5,h6{
     @include media-breakpoint-up(lg) {
       @include transition(none);
       left: 0;
-      margin-left: $sidebar-width + 25px;
+      margin-left: $sidebar-width + 15px;
     }
   }
 }
@@ -180,7 +180,7 @@ h1,h2,h3,h4,h5,h6{
 .content{
   position: relative;
   min-height: 100%;
-  padding: $content-padding-top $content-padding-horizontal 15px;
+  padding: $content-padding-top $content-padding-horizontal 15px 25px;
   
   @include media-breakpoint-down(sm) {
     padding-left: 20px;
