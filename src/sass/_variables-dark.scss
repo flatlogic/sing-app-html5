@@ -28,7 +28,15 @@ $gray-700: #495057 !default;
 $gray-800: #3c484f !default;
 $gray-900: #29323a !default;
 $black:    #000 !default;
-$gray-light: $gray-100 !default;
+
+$gray:     #666 !default;
+$gray-darker:           lighten(#000, 13.5%) !default; // #222
+$gray-dark:             #555 !default;
+$gray:                  #666;
+$gray-light:            lighten(#000, 60%) !default;   // #999
+$gray-lighter:          lighten(#000, 93.5%) !default; // #eee
+$gray-semi-light:       #777;
+$gray-semi-lighter:     #ddd;
 
 $blue:    #547fff !default;
 $indigo:  #7f3ddb !default;
@@ -67,6 +75,9 @@ $body-bg-light: lighten($body-bg, 3%);
 $addition-bg: $gray-100 !default;
 
 $logo-color: #fff;
+
+$bg-gradient-color-1:   #414e60;
+$bg-gradient-color-2:   #94a3b1;
 
 // Typography
 // -------------------------

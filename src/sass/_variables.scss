@@ -16,8 +16,6 @@ $enable-shadows:            true !default;
 
 // Color system
 //
-
-$white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #d6dee5 !default;
@@ -27,93 +25,109 @@ $gray-600: #798892 !default;
 $gray-700: #495057 !default;
 $gray-800: #3c484f !default;
 $gray-900: #29323a !default;
-$black:    #000 !default;
-$gray-light: $gray-100 !default;
 
-$blue:    #547fff !default;
+$gray:                  #666 !default;
+$gray-darker:           lighten(#000, 13.5%) !default; // #222
+$gray-dark:             #555 !default;
+$gray-light:            lighten(#000, 60%) !default;   // #999
+$gray-lighter:          lighten(#000, 93.5%) !default; // #eee
+$white-dark:            #f8f8f8 !default;
+$gray-semi-light:       #777;
+$gray-semi-lighter:     #ddd;
+$shadow-color:          rgba(#676767, .4) !default;
+
+$white:   #ffffff !default;
+$black:   #000000 !default;
+$blue:    #4e85bd !default;
 $indigo:  #7f3ddb !default;
-$purple:  #9964e3 !default;
-$pink:    #e54e9a !default;
-$red:     #f55d5d !default;
-$orange:  #ff7d47 !default;
+$purple:  #a700ae !default;
+$pink:    #e671b8 !default;
+$red:     #db4912 !default;
+$red-dark:#d04f4f !default;
+$orange:  #f0af03 !default;
 $yellow:  #ffc247 !default;
-$green:   #68ca66 !default;
-$teal:    #3abf94 !default;
-$cyan:    #17a2b8 !default;
+$green:   #57b955 !default;
+$teal:    #4ebfbb !default;
+$lime:    #8cbf26 !default;
 
 $theme-colors: (
         primary: $blue,
-        secondary: $gray-600,
-        success: $teal,
+        secondary: #798892,
+        success: $green,
         primary-light: #dee4ee,
         success-light: #ecfaec,
         info-light: #f2fafa,
         warning-light: #fdf7e6,
         danger-light: #fff2ef,
-        info: $purple,
-        warning: $yellow,
+        info: $teal,
+        warning: $orange,
         danger: $red,
-        dark: $gray-800,
-        inverse: $gray-700,
-        gray: $gray-300,
+        dark: #3c484f,
+        inverse: #495057,
+        gray: #666,
         default: #e9ecef
 );
 
+$bg-gradient-color-1: #414e60 !default;
+$bg-gradient-color-2: #94a3b1 !default;
+
 //== Scaffolding
 //
-$body-bg: #f9fbfd !default;
+$body-bg: $bg-gradient-color-1 !default;
 $body-bg-light: lighten($body-bg, 3%);
+$widget-bg-common: #333 !default; 
+$addition-bg: rgba($widget-bg-common, .3) !default;
 
-$addition-bg: $gray-100 !default;
-
-$logo-color: $gray-800;
+$logo-color: $white;
 
 // Typography
 // -------------------------
 
-$body-color:            $gray-700 !default;
-//$body-color: #57534A; //a bit brown?
+$body-color: $white-dark !default;
+$body-color-bold: lighten($body-color, 3%);
+$body-color-muted: darken($body-color, 15%) !default;
 
-$font-size-initial:       14px; // reset default browser value from 16px to 13px
+$font-size-initial:       13px; // reset default browser value from 16px to 13px
 $font-size-base:          1rem !default;
 $font-size-lg:            1.25rem !default;
-$font-size-sm:            0.875rem !default;
-$font-size-larger:        1.1rem;
-$font-size-mini:          0.9rem;
+$font-size-sm:            0.9231rem !default;
+$font-size-larger:        1.769rem;
+$font-size-mini:          0.75rem;
 $font-size-index:         0.7rem;
 
-$font-weight-bold: 700 !default;
+$font-weight-bold:      700 !default;
 $font-weight-semi-bold: 600 !default;
-$font-weight-normal: 400 !default;
-$font-weight-thin: 300 !default;
-$font-weight-base: $font-weight-thin !default;
+$font-weight-normal:    400 !default;
+$font-weight-thin:      300 !default;
+$font-weight-base:      $font-weight-thin !default;
 
-$font-size-smaller: 85% !default;
+$font-size-smaller:     85% !default;
 
-$line-height-base:        1.55 !default;
-$link-color: #218BC3 !default;
+$line-height-base:      1.428571429 !default;
+$link-color:            saturate(lighten($blue, 25%), 50%);
 
 // Layout
 // -------------------------
-$sidebar-padding-horizontal: 11px;
+
+$sidebar-padding-horizontal: 20px;
 $sidebar-icon-state-width: 50px !default;
-$sidebar-slim-scroll-width: 4px;
-$sidebar-width: 220px + $sidebar-slim-scroll-width !default;
+$sidebar-slim-scroll-width: 0;
+$sidebar-width: 170px !default;
 
-$sidebar-transition-time: .3s !default;
+$sidebar-transition-time: .2s !default;
 
-$sidebar-action-bg: #f9fafe !default;
-$sidebar-bg-color: #fff !default;
-$sidebar-color: #6c757d !default;
+$sidebar-action-bg: rgba($black,.07) !default;
+$sidebar-bg-color: transparent !default;
+$sidebar-color: $white !default;
 $sidebar-font-weight: 300;
 $sidebar-item-border-color: transparent !default;
-$sidebar-item-active-color: $yellow !default;
+$sidebar-item-active-color: $white !default;
 $sidebar-item-hover-color: lighten($sidebar-color, 10%);
 $sidebar-item-hover-bg-color: $sidebar-action-bg;
 $sidebar-ul-background: $sidebar-action-bg;
-$sidebar-border-color: darken($sidebar-ul-background, 2%);
+$sidebar-border-color: transparent;
 
-$navbar-height:                    60px !default;
+$navbar-height:                 40px !default;
 $navbar-font-size:              13px !default;
 $navbar-bg: transparent;
 $navbar-shadow: none;
@@ -126,9 +140,9 @@ $content-padding-horizontal: 40px !default;
 
 $grid-gutter-width: 40px;
 
-$border-radius:          0.3rem !default;
-$border-radius-lg:       0.35rem !default;
-$border-radius-sm:       0.25rem !default;
+$border-radius:          3px !default;
+$border-radius-lg:       6px !default;
+$border-radius-sm:       1px !default;
 
 // Screens
 // -------------------------
@@ -138,13 +152,13 @@ $screen-lg-height: 670px !default;
 // Widgets
 // -------------------------
 
-$widget-padding-vertical: 20px !default;
-$widget-padding-horizontal: 20px !default;
-$widget-bg-color: $white;
+$widget-padding-vertical: 12px !default;
+$widget-padding-horizontal: 17px !default;
+$widget-bg-color: rgba($widget-bg-common, .425);
 $widget-shadow: 0 23px 20px -20px rgba(darken($body-bg, 35%),0.1), 0 0 15px rgba(darken($body-bg, 35%),0.06);
 
 $widget-shadow-designated: -1px 0 8px rgba(0,0,0,.2);
-$widget-border-radius: $border-radius-lg;
+$widget-border-radius: $border-radius;
 
 $chart-spacer-y: 0.65rem !default;
 
@@ -163,19 +177,19 @@ $breadcrumb-bg: transparent;
 // Typography
 // -------------------------
 
-$font-family-sans-serif: 'Montserrat', sans-serif !default;
+$font-family-sans-serif: 'Open Sans', sans-serif !default;
 
 $headings-font-weight: 400 !default;
 
 //== Forms
 //
-$legend-color:                   lighten($body-color, 15%) !default;
+$legend-color:                   $white !default;
 $cursor-disabled:                not-allowed !default;
 
 //== Tables
 //
-$table-accent-bg:             $gray-100 !default;
-$table-hover-bg:              $gray-200 !default;
+$table-accent-bg:             $addition-bg !default;
+$table-hover-bg:              darken($addition-bg, 5%) !default;
 
 //== Buttons
 //
@@ -186,15 +200,15 @@ $btn-default-border: $addition-bg !default;
 //== Dropdowns
 //
 $dropdown-link-color:            $body-color !default;
-$dropdown-border-color:          $gray-200;
+$dropdown-border-color:          $body-color;
 
 
 //== Navs
 //
 
-$nav-tabs-active-link-hover-bg:             $white !default;
-$nav-tabs-active-link-hover-color:          $gray-700 !default;
-$nav-tabs-active-link-hover-border-color:   #ddd !default;
+$nav-tabs-active-link-hover-bg:             transparent !default;
+$nav-tabs-active-link-hover-color:          $white !default;
+$nav-tabs-active-link-hover-border-color:   transparent !default;
 
 //== Navbar
 //
@@ -202,12 +216,12 @@ $nav-tabs-active-link-hover-border-color:   #ddd !default;
 $navbar-margin-bottom:             0 !default;
 $navbar-border-radius:             0 !default;
 
-$navbar-dashboard-bg:                $white !default;
-$navbar-dashboard-color:             #777 !default;
-$navbar-dashboard-border:            darken($navbar-dashboard-bg, 6.5%) !default;
+$navbar-dashboard-bg:                transparent !default;
+$navbar-dashboard-color:             $white !default;
+$navbar-dashboard-border:            transparent !default;
 
 // Navbar links
-$navbar-dashboard-link-color:                #666 !default;
+$navbar-dashboard-link-color:                 $body-color !default;
 
 // Navbar links
 $navbar-dashboard-link-hover-color:          #333 !default;
@@ -233,35 +247,34 @@ $navbar-dashboard-toggle-border-color:       #ddd !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-bg:               #ecfaec !default;
-$state-info-bg:                  #f2fafa !default;
-$state-warning-bg:               #fdf7e6 !default;
-$state-danger-bg:                #fff2ef !default;
+$state-success-text:             $white !default;
+$state-success-border:           #d6e9c6 !default;
+$state-success-bg:               rgba($state-success-border, 0.28) !default;
 
-$state-success-text:             #3c763d !default;
-$state-success-border:           darken($state-success-bg, 5%) !default;
+$state-info-text:                $white !default;
+$state-info-border:              #4ab0ce !default;
+$state-info-bg:                  rgba($state-info-border, 0.29) !default;
 
-$state-info-text:                #31708f !default;
-$state-info-border:              darken($state-info-bg, 7%) !default;
+$state-warning-text:             $white !default;
+$state-warning-border:           #e5be56 !default;
+$state-warning-bg:               rgba($state-warning-border, 0.28) !default;
 
-$state-warning-text:             #8a6d3b !default;
-$state-warning-border:           darken($state-warning-bg, 5%) !default;
-
-$state-danger-text:              #a94442 !default;
-$state-danger-border:            darken($state-danger-bg, 5%) !default;
+$state-danger-text:              $white !default;
+$state-danger-border:            rgba(#F26349, .7) !default;
+$state-danger-bg:                rgba($state-danger-border, 0.29) !default;
 
 //== Progress bars
 //
 
 //** Background color of the whole progress component
-$progress-bg:                 $gray-200 !default;
+$progress-bg:                 $white !default;
 
 //== Tooltips
 //
 
 $tooltip-bg:                  $widget-bg-color !default;
 $tooltip-opacity:             1;
-$tooltip-color:               $body-color;
+$tooltip-color:               $white;
 $tooltip-border-radius:       $widget-border-radius;
 $tooltip-padding-x:           .5rem;
 $tooltip-padding-y:           .75rem;
@@ -269,23 +282,23 @@ $tooltip-padding-y:           .75rem;
 //== Code
 //
 
-$code-bg:                     #f9f2f4 !default;
-$pre-bg:                      #f5f5f5 !default;
+$code-bg:                     $addition-bg !default;
+$pre-bg:                      $addition-bg !default;
 
 
 //== Popovers
 //
 
-$popover-bg:                          #ebeff1 !default;
+$popover-bg:                          rgba($widget-bg-common, .85) !default;
 $popover-arrow-outer-color:           $popover-bg !default;
-$popover-arrow-color:                 $popover-bg !default;
+$popover-arrow-color:                 transparent !default;
 
 //== Thumbnails
 //
 //##
 
-$thumbnail-bg:                $white !default;
-$thumbnail-box-shadow: $widget-shadow;
+$thumbnail-bg:          $widget-bg-color !default;
+$thumbnail-box-shadow:  $widget-shadow;
 
 //== Breadcrumbs
 //
@@ -293,27 +306,27 @@ $thumbnail-box-shadow: $widget-shadow;
 $breadcrumb-padding-horizontal: 0 !default;
 $breadcrumb-bg:                 transparent !default;
 $breadcrumb-color:              $body-color !default;
-$breadcrumb-active-color:       $body-color !default;
+$breadcrumb-active-color:       darken($breadcrumb-color, 25%) !default;
 $breadcrumb-separator:          ">" !default;
 
 //== Pagination
 //
 //##
 
-$pagination-color:                     $gray-600 !default;
-$pagination-bg:                        #fff !default;
+$pagination-color:                     $body-color !default;
+$pagination-bg:                        transparent !default;
 $pagination-border:                    transparent !default;
 
-$pagination-hover-color:               $body-color !default;
-$pagination-hover-bg:                  $gray-200 !default;
+$pagination-hover-color:               $white !default;
+$pagination-hover-bg:                  $addition-bg !default;
 $pagination-hover-border:              transparent !default;
 
-$pagination-active-color:              $body-color !default;
-$pagination-active-bg:                 $gray-200 !default;
+$pagination-active-color:              $white !default;
+$pagination-active-bg:                 $addition-bg !default;
 $pagination-active-border:             transparent !default;
 
-$pagination-disabled-color:            $gray-600 !default;
-$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-color:            $gray-lighter !default;
+$pagination-disabled-bg:               transparent !default;
 $pagination-disabled-border:           transparent !default;
 
 // Alerts

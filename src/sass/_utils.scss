@@ -111,18 +111,18 @@
 }
 
 .input-dark{
-  background-color: rgba(0,0,0,.4);
+  background-color: rgbargba(51, 51, 51, 0.425);
   border: 0;
   color: $body-color;
   &:focus{
-    background-color: $gray-200
+    background-color: rgba(51, 51, 51, 0.425);
   }
 }
 
 .input-group-dark{
   .input-group-text,
   .form-control{
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(51, 51, 51, 0.425);
     border: 0;
     color: $body-color;
     @include transition(background-color .15s ease-in-out);
@@ -131,7 +131,7 @@
   .form-control:focus,
   .form-control:focus + .input-group-append .input-group-text,
   &.focus .input-group-text{
-    background-color: $gray-200
+    background-color: rgba(51, 51, 51, 0.425);
   }
 
   .input-group-append,
@@ -167,7 +167,7 @@
   }
 
   .input-group-text{
-    background-color: $input-bg;
+    background-color: rgba(51, 51, 51, 0.425);
     @include transition(border-color ease-in-out .15s);
   }
 
@@ -187,7 +187,7 @@
   @include transition(background-color ease-in-out .15s);
 
   &:focus{
-    background-color: $gray-100;
+    background-color: rgba(51, 51, 51, 0.425);
   }
 }
 
@@ -450,12 +450,12 @@ $z-index-variants: (more: 1, less: -1, '10': 10, '-10': -10);
 @include text-emphasis-variant('.text-link', $link-color);
 
 @include text-emphasis-variant('.text-white', $white);
-@include text-emphasis-variant('.text-gray', $gray-700);
-@include text-emphasis-variant('.text-gray-dark', $gray-800);
-@include text-emphasis-variant('.text-gray-light', $gray-600);
-@include text-emphasis-variant('.text-semi-muted', $gray-600);
-@include text-emphasis-variant('.text-gray-darker', $gray-900);
-@include text-emphasis-variant('.text-gray-lighter', $gray-200);
+@include text-emphasis-variant('.text-gray', $gray);
+@include text-emphasis-variant('.text-gray-dark', $gray-dark);
+@include text-emphasis-variant('.text-gray-light', $gray-light);
+@include text-emphasis-variant('.text-semi-muted', $gray-semi-light);
+@include text-emphasis-variant('.text-gray-darker', $gray-darker);
+@include text-emphasis-variant('.text-gray-lighter', $gray-lighter);
 @include text-emphasis-variant('.text-bg-sidebar', $sidebar-bg-color);
 
 

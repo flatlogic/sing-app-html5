@@ -3,25 +3,32 @@
 /***********************/
 
 .sidebar{
-  position: fixed;
-  z-index: 0;
+  position: absolute;
+  @media (min-height: 940px) {
+    position: fixed;
+  }
+  z-index: 1;
   left: 0;
   top: 0;
   bottom: 0;
+  padding: 10px 0;
   width: $sidebar-width;
-  border-right: 1px solid $sidebar-border-color;
+  // border-right: 1px solid $sidebar-border-color;
   background-color: $sidebar-bg-color;
   color: $sidebar-color;
+  margin: 0 0 0 25px;
+  font-weight: 300;
 
-  .slimScrollBar{
-    @include border-radius(0 !important);
-    background-color: lighten($sidebar-color, 30%) !important;
-    right: 0 !important;
-  }
+
+  // .slimScrollBar{
+  //   @include border-radius(0 !important);
+  //   background-color: lighten($sidebar-color, 30%) !important;
+  //   right: 0 !important;
+  // }
 }
 
 .page-controls, .content-wrap, .loader-wrap{
-  left: $sidebar-width;
+  left: $sidebar-width + 25px;
   @include transition(left $sidebar-transition-time ease-in-out);
 
   @include media-breakpoint-up(md) {
@@ -138,7 +145,11 @@
   }
   .navbar-nav .nav-link {
     .fa, .la {
-      font-size: 20px;
+      font-size: 13px;
+      color: #333;
+      &:hover{
+        color: $white;
+      }
     }
   }
 }
@@ -153,7 +164,7 @@
   position: relative;
   min-height: 100%;
   padding: $content-padding-top $content-padding-horizontal $content-padding-vertical;
-  background-color: $body-bg;
+  background-color: transparent;
 
   @include media-breakpoint-down(sm) {
     padding-left: 20px;
@@ -166,23 +177,29 @@
 
   .content-footer {
     position: absolute;
-    bottom: 10px;
-    color: $text-muted;
+    bottom: -150px;
+    color: darken($body-color, 15%);
   }
 }
 
 .logo {
   position: relative;
   z-index: 100;
-  margin: 0 0 2.6rem;
+  margin: 0 0 1.54rem;
   height: $navbar-height;
   width: 100%;
   line-height: $navbar-height;
   text-align: center;
   vertical-align: middle;
   font-weight: $font-weight-normal;
-  font-size: 18px;
-  letter-spacing: 1px;
+  font-size: $font-size-lg;
+  // letter-spacing: 1px;
+  
+  .text-warning{
+    color: $white !important;
+    transition: color 0.2s;
+    font-weight: normal;
+  }
 
   @include transition(width $sidebar-transition-time ease-in-out);
   > a {
@@ -192,6 +209,8 @@
     text-transform: capitalize;
     white-space: nowrap;
     padding: 0 2px;
+    font-weight: bold;
+    transition: color 0.2s;
   }
 
   .nav-collapsed &{
@@ -211,6 +230,11 @@
   font-size: 13px;
   font-weight: $sidebar-font-weight;
 
+  li{
+    list-style-type: none;
+    padding: 10px 20px;
+  }
+
   li a {
     display: block;
     color: $sidebar-color;
@@ -219,7 +243,6 @@
     .toggle{
       float: right;
       line-height: 18px;
-      margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       transition: transform .35s ease;
     }
 
@@ -230,22 +253,23 @@
     .badge{
       float: right;
       line-height: 8px;
-      margin-top: 7px;
+      // margin-top: 7px;
       margin-right: $sidebar-padding-horizontal + $sidebar-slim-scroll-width;
       padding: 7px;
       border-radius: 50%;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        margin-top: 15px;
+        // margin-top: 15px;
       }
     }
   }
 
   > li > a{
     position: relative;
-    border-top: 1px solid $sidebar-item-border-color;
-    padding-left: 50px;
-    line-height: 35px;
+    // border-top: 1px solid $sidebar-item-border-color;
+    padding-left: 20px;
+    line-height: $line-height-base;
+    border-radius: 6px;
 
     &:hover{
       color: $sidebar-item-hover-color;
@@ -253,32 +277,31 @@
     }
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-      line-height: 55px;
+      line-height: $line-height-base;
     }
 
     .icon {
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        top: 14px;
+        top: 0;
       }
 
       display: block;
       position: absolute;
-      top: 3px;
-      left: $sidebar-padding-horizontal;
-      width: 28px;
-      height: 28px;
-      line-height: 28px;
+      top: 0;
+      left: 0;
+      width: 16px;
+      // height: 28px;
+      line-height: 20px;
       text-align: center;
       font-size: 16px;
-      opacity: .6;
-
+      opacity: .4;
     }
 
     .toggle{
-      line-height: 35px;
+      line-height: 20px;
 
       @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-        line-height: 55px;
+        line-height: 20px;
       }
     }
 
@@ -293,21 +316,10 @@
   }
 
   > .active > a{
-    background-color: $sidebar-bg-color;
     font-weight: $font-weight-normal;
 
     &, &:hover {
       color: $sidebar-item-active-color;
-    }
-
-    .icon{
-      border-radius: 50%;
-      background-color: $sidebar-item-active-color;
-      opacity: 1;
-
-      .fa, .glyphicon, .fi, .la {
-        color: $sidebar-bg-color;
-      }
     }
   }
 
@@ -317,17 +329,16 @@
 
   > li ul{
     padding: 0;
-    font-size: 13px;
+    font-size: $navbar-font-size;
     background-color: $sidebar-ul-background;
     list-style: none;
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-      font-size: 14px;
+      font-size: $navbar-font-size;
     }
 
     > li{
       > a{
-        padding: 10px 0 10px 40px;
         font-size: $font-size-mini;
       }
 
@@ -564,6 +575,7 @@
 }
 
 .chat-sidebar {
+  // display: none;
   position: fixed;
   top:0;
   bottom: 0;
@@ -875,6 +887,12 @@
 
 .page-title{
   margin: 0 0 2*$spacer;
+  font-weight: $font-weight-thin;
+
+  small{
+    font-weight: $font-weight-thin;
+    color: rgba($white, .7);
+  }
 }
 
 .notifications{
@@ -1220,7 +1238,7 @@ input[type=search], input.search {
   &, .input-group-lg > &, .input-group-sm > &{
     padding-left: 26px;
   }
-  background-color: $input-bg;
+  background-color: $widget-bg-color;
   background:url(../img/search.png) 5px 60% no-repeat $input-bg;
 }
 
@@ -2335,7 +2353,7 @@ input[type=search], input.search {
         font-size: 1.4rem;
         font-weight: $font-weight-thin;
         padding: 0;
-        background: $white;
+        background: transparent;
   
         @include media-breakpoint-down (sm) {
           font-size: $font-size-larger !important;
