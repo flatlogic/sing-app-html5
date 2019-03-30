@@ -1,6 +1,31 @@
+/***********************************/
+/**          LOGO                **/
+/**********************************/
+
+.logo{
+  @include box-sizing(content-box);
+  position: absolute;
+  @media (min-height: 940px) {
+    position: fixed;
+  }
+  left: 65px;
+  top: 17px;
+  z-index: 1;
+  a{
+    color: $white;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  strong{
+    color: $white;
+  }
+}
+
 /***********************/
 /*        Layout       */
 /***********************/
+
 
 .sidebar{
   position: absolute;
@@ -8,23 +33,38 @@
     position: fixed;
   }
   z-index: 1;
-  left: 0;
   top: 0;
-  bottom: 0;
   padding: 10px 0;
   width: $sidebar-width;
   // border-right: 1px solid $sidebar-border-color;
   background-color: $sidebar-bg-color;
   color: $sidebar-color;
-  margin: 0 0 0 25px;
-  font-weight: 300;
+  margin: 80px 0 0 25px;
+  font-weight: $font-weight-thin;
 
 
-  // .slimScrollBar{
-  //   @include border-radius(0 !important);
-  //   background-color: lighten($sidebar-color, 30%) !important;
-  //   right: 0 !important;
-  // }
+  .slimScrollBar{
+    display: none !important;
+  }
+
+  .settings{
+    margin-top: 10px;
+    text-align: center;
+
+    .btn-auto{
+      display: none;
+    }
+  }
+
+  .panel{
+    background: none;
+  }
+
+  &.collapse{
+    display: block;
+    visibility: visible;
+  }
+
 }
 
 .page-controls, .content-wrap, .loader-wrap{
@@ -177,53 +217,52 @@
 
   .content-footer {
     position: absolute;
-    bottom: -150px;
     color: darken($body-color, 15%);
   }
 }
 
-.logo {
-  position: relative;
-  z-index: 100;
-  margin: 0 0 1.54rem;
-  height: $navbar-height;
-  width: 100%;
-  line-height: $navbar-height;
-  text-align: center;
-  vertical-align: middle;
-  font-weight: $font-weight-normal;
-  font-size: $font-size-lg;
-  // letter-spacing: 1px;
+// .logo {
+//   position: relative;
+//   z-index: 100;
+//   margin: 0 0 1.54rem;
+//   height: $navbar-height;
+//   width: 100%;
+//   line-height: $navbar-height;
+//   text-align: center;
+//   vertical-align: middle;
+//   font-weight: $font-weight-normal;
+//   font-size: $font-size-lg;
+//   // letter-spacing: 1px;
   
-  .text-warning{
-    color: $white !important;
-    transition: color 0.2s;
-    font-weight: normal;
-  }
+//   .text-warning{
+//     color: $white !important;
+//     transition: color 0.2s;
+//     font-weight: normal;
+//   }
 
-  @include transition(width $sidebar-transition-time ease-in-out);
-  > a {
-    display: block;
-    color: $logo-color;
-    text-decoration: none;
-    text-transform: capitalize;
-    white-space: nowrap;
-    padding: 0 2px;
-    font-weight: bold;
-    transition: color 0.2s;
-  }
+//   @include transition(width $sidebar-transition-time ease-in-out);
+//   > a {
+//     display: block;
+//     color: $logo-color;
+//     text-decoration: none;
+//     text-transform: capitalize;
+//     white-space: nowrap;
+//     padding: 0 2px;
+//     font-weight: bold;
+//     transition: color 0.2s;
+//   }
 
-  .nav-collapsed &{
-    width: $sidebar-icon-state-width;
-  }
+//   .nav-collapsed &{
+//     width: $sidebar-icon-state-width;
+//   }
 
-  .nav-static &{
-    @include media-breakpoint-up(lg) {
-      width: 100%;
-      @include transition(none);
-    }
-  }
-}
+//   .nav-static &{
+//     @include media-breakpoint-up(lg) {
+//       width: 100%;
+//       @include transition(none);
+//     }
+//   }
+// }
 
 .sidebar-nav{
   padding: 10px 0;
@@ -291,9 +330,8 @@
       left: 0;
       width: 16px;
       // height: 28px;
-      line-height: 20px;
       text-align: center;
-      font-size: 16px;
+      font-size: 13px;
       opacity: .4;
     }
 
@@ -316,7 +354,7 @@
   }
 
   > .active > a{
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-bold;
 
     &, &:hover {
       color: $sidebar-item-active-color;
@@ -984,27 +1022,45 @@
 /***********************/
 
 .widget {
+  border-radius: $border-radius;
+  @include box-sizing(content-box);
+  padding: $widget-padding;
+  color: $widget-color;
+  background: $widget-bg;
+  margin-bottom: $widget-mb;
   position: relative;
-  margin-bottom: $grid-gutter-width;
-  padding: $widget-padding-vertical $widget-padding-horizontal;
-  background: $widget-bg-color;
-  border-radius: $widget-border-radius;
-  box-shadow: $widget-shadow;
 
   > header{
-    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
-    padding: $widget-padding-vertical $widget-padding-horizontal;
+    position: relative;
+    background: none;
+    color: $widget-header-color;
+    // margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+    // padding: $widget-padding-vertical $widget-padding-horizontal;
+    
     h1,h2,h3,h4,h5,h6{
       margin: 0;
+      line-height: 20px;
+      font-weight: 600;
+      color: inherit;
 
-      .badge {
-        vertical-align: 2px;
+      small{
+        text-transform: lowercase;
+        color: $widget-header-smalls-color;
       }
+
+    h4{
+      font-size: $font-size-larger;
+    }
+
+      // .badge {
+      //   vertical-align: 2px;
+      // }
+
     }
 
     + .widget-body,
     + .widget-body.p-0{
-      margin-top: $widget-padding-vertical;
+      margin-top: 10px;
     }
   }
 
@@ -1049,6 +1105,23 @@
 
   .widget-table-overlay{
     margin: 0 (-$widget-padding-horizontal) (-$widget-padding-vertical);
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    .table > thead > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > th,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > th,
+    .table > tfoot > tr > td {
+      &:first-child {
+        padding-left: $widget-padding-horizontal;
+      }
+
+      &:last-child {
+        padding-right: $widget-padding-horizontal;
+      }
+    }
   }
 
   &.bg-transparent {
@@ -1061,8 +1134,8 @@
   z-index: 1;
   top: 0;
   right: 0;
-  padding: 14px;
   font-size: $font-size-sm;
+  word-spacing: 1px;
 
   &.left{
     left: 0;
@@ -1077,27 +1150,32 @@
   > a{
     padding: 1px 4px;
     border-radius: 4px;
-    color: rgba($black, .4);
+    color: $widget-controls-color;
     @include transition(color .15s ease-in-out);
 
     &:hover{
-      color: rgba($black, .1);
+      color: $widget-controls-hover-color;
       text-decoration: none;
     }
 
     > .glyphicon{
-      vertical-align: 0;
-      font-size: 12px;
+      vertical-align: -1px;
     }
 
     > .fa{
-      vertical-align: 1px;
+      vertical-align: middle;
     }
   }
 
   > .btn-group{
     vertical-align: baseline;
   }
+
+  .fa-refresh{
+    position: relative;
+    top: -1px;
+  }
+
 }
 
 .widget-card { min-height: 135px;}
@@ -1219,9 +1297,9 @@
 }
 
 .widget-placeholder{
-  background:  rgba($white, .4);
-  border: 1px dashed $gray-600;
-  margin: -1px -1px calc(#{$grid-gutter-width} - 1px) -1px;
+  background:  rgba($widget-bg-common, .2);
+  border: 1px dashed rgba(white, .6);
+  margin: -1px -1px ($widget-mb - 1px) -1px;
 }
 
 /***********************/
@@ -1229,9 +1307,10 @@
 /***********************/
 
 .form-actions{
-  margin: $spacer 0 0;
-  padding: $spacer;
-  background-color: $gray-100;
+  padding: ($line-height-computed - 1) 20px $line-height-computed;
+  margin-top: $line-height-computed;
+  background-color: $addition-bg;
+  @include clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
 input[type=search], input.search {
@@ -1245,6 +1324,30 @@ input[type=search], input.search {
 /***********************/
 /*       Buttons       */
 /***********************/
+
+.btn-transparent{
+  background: transparentize($text-transparent, .2);
+  color: $widget-header-color;
+  text-shadow: none;
+  @include box-shadow(none);
+
+  &:hover{
+    background: $text-transparent;
+    color: $widget-header-color;
+  }
+
+  &.active{
+    color: $widget-header-color;
+    background: rgba($widget-bg-common, .55);
+    &:hover{
+      background: rgba($widget-bg-common, .55);
+    }
+  }
+
+  .caret{
+    border-top-color: $widget-header-color;
+  }
+}
 
 .btn-inverse {
   @include button-variant($gray-700, darken($gray-700, 10%));
@@ -2684,5 +2787,285 @@ input[type=search], input.search {
         min-width: 110px;
       }
     }
+  }
+}
+
+/****************************/
+/*        Responsive        */
+/****************************/
+
+@media (max-width: 320px) {
+  .hidden-xs-portrait{
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .sidebar-hidden .sidebar{
+    display: none;
+  }
+}
+
+@media (max-width: $screen-xs-max){
+
+  .sidebar.nav-collapse,
+  .sidebar.nav-collapse.collapse {
+    overflow: hidden;
+    height: 0;
+  }
+
+  .sidebar.nav-collapse.collapse.in{
+    height: auto;
+  }
+
+  body{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .page-title{
+    margin-top: 6px;
+  }
+
+  .sidebar,
+  .sidebar-on-right .sidebar{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 90px 5%;
+    width: 90%;
+    padding: 0;
+
+    .side-nav{
+      margin: 10px 0;
+    }
+
+  }
+
+  .sidebar + .wrap, .sidebar-on-right .sidebar + .wrap{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .nv-controlsWrap{
+    display: none;
+  }
+
+  .logo,
+  .sidebar-on-right .logo,
+  .sidebar-hidden .logo{
+    display: block;
+    left: 1.6%;
+    right: auto;
+    padding-right: 5px;
+    width: 40px;
+    top: 4px;
+  }
+
+  .widget-404-search, .widget-404{
+    width: 402px;
+  }
+
+  .widget-404{
+    padding: 0;
+    .body{
+      margin-top: 0;
+    }
+  }
+
+  .single-widget-container .widget-404-search{
+    margin-top: 0;
+
+    .search-field{
+      width: 285px;
+    }
+  }
+
+  .single-widget-container.error-page{
+    margin-top: -170px;
+  }
+
+  .navbar .nav > li > .dropdown-menu.messages,
+  .navbar .nav > li > .dropdown-menu.support{
+    margin-right: -68px;
+
+    &:after{
+      right: 85px;
+    }
+  }
+
+  .notifications{
+    position: absolute;
+    right: 0;
+    top: 46px;
+    margin: 0;
+
+    @include transition(top .3s ease);
+  }
+
+  .mailbox{
+    .folder-title{
+      float: none;
+    }
+    .form-search{
+      margin-top: $line-height-computed / 2;
+      label{
+        display: block;
+      }
+
+      .input-search{
+        width: 100%;
+        height: 30px;
+        @include box-sizing(border-box);
+        &:hover{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .mailbox-content{
+    margin-top: 0;
+  }
+
+  .client-details{
+    text-align: left;
+  }
+
+  .landing{
+    .logo{
+      width: auto;
+
+      small{
+        display: none;
+      }
+    }
+
+    .features{
+      + .features{
+        margin-top: 0;
+      }
+    }
+
+    .feature{
+      margin-bottom: 20px;
+    }
+  }
+
+  .carousel-landing{
+    height: 215px;
+    margin-bottom: -24px;
+    h1{
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-min){
+
+  .sidebar,
+  .sidebar-on-right .sidebar{
+    margin: 90px 2.5641%;
+    width: 94.8718%;
+  }
+
+  .form-condensed .controls{
+    margin-left: 0;
+  }
+
+// Remove the horizontal form styles
+  .form-horizontal {
+    .control-label {
+      float: none;
+      width: auto;
+      padding-top: 0;
+      text-align: left;
+    }
+    // Move over all input controls and content
+    .controls {
+      margin-left: 0;
+    }
+    // Move the options list down to align with labels
+    .control-list {
+      padding-top: 0; // has to be padding because margin collaspes
+    }
+    // Move over buttons in .form-actions to align with .controls
+    .form-actions {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  body{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .login-widget, .registration-widget{
+    width: 260px;
+  }
+
+  .widget-404-search, .widget-404{
+    width: 260px;
+  }
+
+  .widget-404{
+    h1{
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    h3{
+      font-size: $font-size-larger;
+      line-height: $line-height-computed + 2;
+    }
+  }
+
+  .single-widget-container .widget-404-search{
+    margin-top: 0;
+
+    .search-field{
+      width: 143px;
+    }
+  }
+
+  .single-widget-container.error-page{
+    margin-top: -129px;
+  }
+
+  .navbar .nav > li > .dropdown-menu.messages{
+    margin-right: -112px;
+
+    &:after{
+      right: 129px;
+    }
+  }
+
+  .chat-footer .btn{
+    padding: 4px 0;
+  }
+
+  .page-header .navbar-form{
+    margin: 10px 0 0;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    @include transition(height .3s ease);
+  }
+
+  .page-header .search-query{
+    @include input-block-level();
+    &:focus{
+      width: 100%;
+    }
+  }
+
+  .visible-phone-landscape{
+    display: block !important;
+  }
+
+  .hidden-phone-landscape{
+    display: none !important;
   }
 }

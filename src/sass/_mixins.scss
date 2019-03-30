@@ -28,6 +28,13 @@
   }
 }
 
+@mixin box-sizing($fmt) {
+  -webkit-box-sizing: $fmt;
+     -moz-box-sizing: $fmt;
+          box-sizing: $fmt;
+}
+
+
 // Generates single property classes
 // -------------------------
 @mixin property-variants($base, $property, $variants: ()){
@@ -119,4 +126,12 @@
   );
   background-size: cover;
   background-attachment: fixed;
+}
+
+// Block level inputs
+@mixin input-block-level {
+  display: block;
+  width: 100%;
+  min-height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
 }

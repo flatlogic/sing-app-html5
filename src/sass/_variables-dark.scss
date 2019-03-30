@@ -72,8 +72,6 @@ $theme-colors: (
 $body-bg: #f9fbfd !default;
 $body-bg-light: lighten($body-bg, 3%);
 
-$addition-bg: $gray-100 !default;
-
 $logo-color: #fff;
 
 $bg-gradient-color-1:   #414e60;
@@ -83,6 +81,8 @@ $bg-gradient-color-2:   #94a3b1;
 // -------------------------
 
 $body-color:            $gray-700 !default;
+$body-color-bold: lighten($body-color, 3%);
+$body-color-muted: darken($body-color, 15%) !default;
 //$body-color: #57534A; //a bit brown?
 
 $font-size-initial:       14px; // reset default browser value from 16px to 13px
@@ -103,6 +103,7 @@ $font-size-smaller: 85% !default;
 
 $line-height-base:        1.55 !default;
 $link-color: #218BC3 !default;
+$line-height-computed:    floor(($line-height-base * $line-height-base)) !default; // ~20px
 
 // Layout
 // -------------------------
@@ -149,13 +150,25 @@ $screen-lg-height: 670px !default;
 // Widgets
 // -------------------------
 
-$widget-padding-vertical: 20px !default;
-$widget-padding-horizontal: 20px !default;
-$widget-bg-color: $white;
+$widget-padding-vertical: 12px !default;
+$widget-padding-horizontal: 17px !default;
+$widget-bg-common: #333 !default;
+$widget-padding: $widget-padding-vertical $widget-padding-horizontal;
+$addition-bg: rgba($widget-bg-common, .3) !default;
+$widget-bg: rgba($widget-bg-common, .425);
+$widget-mb:        30px;
+$widget-color:     $body-color;
+$widget-header-color: lighten($widget-color, 5%);
+$widget-header-smalls-color: $body-color-muted;
+$widget-controls-color: rgba($white, .45);
+$widget-controls-hover-color: rgba($white, .6);
+$widget-bg-color: rgba($widget-bg-common, .425);
 $widget-shadow: 0 23px 20px -20px rgba(darken($body-bg, 35%),0.1), 0 0 15px rgba(darken($body-bg, 35%),0.06);
-
 $widget-shadow-designated: -1px 0 8px rgba(0,0,0,.2);
-$widget-border-radius: $border-radius-lg;
+$widget-border-radius: $border-radius;
+
+$text-transparent: rgba($widget-bg-common, .5);
+
 
 $chart-spacer-y: 0.65rem !default;
 
@@ -179,10 +192,34 @@ $font-family-sans-serif: 'Montserrat', sans-serif !default;
 
 $headings-font-weight: 400 !default;
 
+// Components
+// -------------------------
+
+$padding-base-vertical:          5px !default;
+$padding-base-horizontal:        12px !default;
+
+$padding-small-vertical:         4px !default;
+$padding-small-horizontal:       10px !default;
+
+$line-height-large:              1.33 !default;
+$line-height-small:              1.5 !default;
+
 //== Forms
 //
-$legend-color:                   lighten($body-color, 15%) !default;
+$legend-color:                   $white !default;
 $cursor-disabled:                not-allowed !default;
+
+$input-color:                    $gray-dark;
+$input-border:                   #ccc !default;
+$input-border-focus:             #66afe9 !default;
+
+$input-group-addon-bg:           $addition-bg;
+$input-group-addon-border-color: transparent;
+
+// recalculate input heights
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-small:             (floor(($font-size-initial - 1) * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
 
 //== Tables
 //
@@ -331,6 +368,17 @@ $alert-transparent: 0.25;
 //
 
 $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/" !default;
+
+//-- Responsive
+//
+
+$screen-xs-min:  480px;
+$screen-xs-max:  767px;
+$screen-sm-min:  768px;
+$screen-sm-max:  991px;
+$screen-md-min:  992px;
+$screen-md-max:  1199px;
+$screen-lg-min:  1200px;
 
 // Font Awesome variables
 // ------------------------
