@@ -22,6 +22,28 @@
   }
 }
 
+.nav-collapsed{
+  .sidebar, .logo{
+    display: none;
+  }
+
+  .wrap{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.nav-static{
+  .sidebar, .logo{
+    display: block;
+  }
+
+  .wrap{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
 /***********************/
 /*        Layout       */
 /***********************/
@@ -185,7 +207,7 @@
   }
   .navbar-nav .nav-link {
     .fa, .la {
-      font-size: 13px;
+      font-size: 19.5px;
       color: #333;
       &:hover{
         color: $white;
@@ -265,19 +287,18 @@
 // }
 
 .sidebar-nav{
-  padding: 10px 0;
-  font-size: 13px;
+  font-size: $font-size-base;
   font-weight: $sidebar-font-weight;
 
   li{
     list-style-type: none;
-    padding: 10px 20px;
   }
 
   li a {
     display: block;
     color: $sidebar-color;
     text-decoration: none;
+    padding: 10px 20px;
 
     .toggle{
       float: right;
@@ -325,13 +346,12 @@
       }
 
       display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
+      margin-right: 8px;
+      float: left;
       width: 16px;
-      // height: 28px;
+      line-height: 20px;
       text-align: center;
-      font-size: 13px;
+      font-size: 16px;
       opacity: .4;
     }
 
@@ -366,18 +386,18 @@
    */
 
   > li ul{
-    padding: 0;
-    font-size: $navbar-font-size;
-    background-color: $sidebar-ul-background;
+    font-size: $font-size-base;
     list-style: none;
 
     @media (min-width: map_get($grid-breakpoints, lg)) and (min-height: $screen-lg-height), (max-width: map_get($grid-breakpoints, md) - 1px){
-      font-size: $navbar-font-size;
+      font-size: $font-size-base;
     }
 
     > li{
       > a{
-        font-size: $font-size-mini;
+        padding: 4px 20px;
+        padding-left: 50px;
+        font-size: $font-size-base;
       }
 
       &.active{
@@ -388,7 +408,7 @@
 
       /* third submenu */
       ul > li > a{
-        padding-left: 55px;
+        padding-left: 50px;
       }
     }
   }
