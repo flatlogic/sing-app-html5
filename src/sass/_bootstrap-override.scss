@@ -40,23 +40,37 @@ small, .small {
 // --------------------------------------------------
 
 
+label,
+input,
+button,
+select,
+textarea {
+  font-weight: $font-weight-base;
+}
+
 .form-control {
-  font-weight: $font-weight-normal;
-  @include box-shadow(none);
-  &:focus{
-    @include box-shadow(none);
+  @include transition(border linear .2s, box-shadow linear .2s);
+
+  &[type=search], &.search{
+    padding-left: 26px;
   }
 }
 
-label {
-  font-weight: $font-weight-normal;
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.input-group-btn > .btn{
+  z-index: 2;
 }
 
 .help-block{
   margin-top: 5px;
   font-size: $font-size-smaller;
   color: $text-muted;
-  display: block;
 }
 
 legend {
@@ -73,7 +87,7 @@ legend {
 }
 
 .form-group {
-  margin-bottom: $spacer;
+  margin-bottom: $line-height-computed;
 }
 
 .input-group-addon{
@@ -131,15 +145,21 @@ legend {
 //
 // Tables
 // --------------------------------------------------
+.text-muted{
+  color: #d2d2d2 !important;
+}
+
+.table .table{
+  background-color: $addition-bg;
+}
 
 .table td > .abc-checkbox,
 .table th > .abc-checkbox{
+  position: relative;
+  left: 3px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
-
-  > label {
-    padding-left: 0;
-  }
-
   > label:before,
   > label:after{
     margin-left: 0;
@@ -151,7 +171,8 @@ legend {
 }
 
 .table > thead > tr > th{
-  font-weight: $font-weight-semi-bold;
+  border-bottom: none;
+  font-weight: 600;
   text-transform: uppercase;
   border-bottom-width: 1px;
 }
@@ -186,13 +207,21 @@ legend {
   }
 }
 
-.table-hover > tbody > tr:hover .progress{
-  background-color: $white;
+.table-hover {
+  tbody {
+    td, th{
+      @include transition(background-color .2s);
+    }
+  }
 }
 
-.table th, .table td {
-  padding: 0.55rem;
-}
+// .table-hover > tbody > tr:hover .progress{
+//   background-color: $white;
+// }
+
+// .table th, .table td {
+//   padding: 0.55rem;
+// }
 
 //
 // Dropdown menus
@@ -222,12 +251,10 @@ legend {
 }
 
 .dropdown-menu{
-  font-size: $font-size-mini;
-  border-radius: 0;
+  border-radius: $border-radius-lg;
 
   & > li > a{
-    padding-top: 5px;
-    padding-bottom: 5px;
+  font-weight: $font-weight-base;
   }
 }
 
@@ -336,6 +363,27 @@ legend {
   display: block;
 }
 
+// BOTTOM
+// ------
+
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+.tabs-below > .nav-tabs > li > a {
+  border-radius: 0 0 $border-radius $border-radius;
+  &:hover,
+  &:focus {
+    border-bottom-color: transparent;
+    border-top-color: #ddd;
+  }
+}
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: $nav-tabs-active-item-border;
+  border-top-color: $nav-tabs-active-item-border-bottom;
+}
 // LEFT & RIGHT
 // ------------
 
@@ -359,28 +407,48 @@ legend {
 // Tabs on the left
 .tabs-left > .nav-tabs {
   float: left;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: $border-radius;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
-  @include border-radius(4px 0 0 4px);
+  border-radius: $border-radius 0 0 $border-radius;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: $gray-lighter #ddd $gray-lighter $gray-lighter;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
 }
 
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: $border-radius;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
-  @include border-radius(0 4px 4px 0);
+  border-radius: 0 $border-radius $border-radius 0;
 }
 
-.tabs-right > .nav-tabs > li.active > a{
-  @include box-shadow(-1px 1px 2px #ccc);
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: $gray-lighter $gray-lighter $gray-lighter #ddd;
 }
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+}
+
+// .tabs-right > .nav-tabs > li.active > a{
+//   @include box-shadow(-1px 1px 2px #ccc);
+// }
 
 
 //
@@ -404,33 +472,33 @@ legend {
 }
 
 .navbar-form {
+  float: right;
+
   .input-group {
-    width: 200px;
-    // display: flex;
-    float: right;
-    background-color: $widget-bg-color;
-    margin: 5px 15px 0 0;
- 
+    color: $widget-color;
+    border: none;
+    background: url(../img/search-white.png) 5px 5px no-repeat transparentize($text-transparent, .1);
+    padding-left: 26px;
+    @include transition(width .2s);
 
     .form-control {
-      order: 2;
-      background-color: $widget-bg-color;
+      background-color: transparent;
       font-size: $font-size-base;
-      border-top-right-radius: $border-radius !important;
-      border-bottom-right-radius: $border-radius !important;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
+      color: $white;
+      width: 200px;
+
+      &:focus{
+        width: 240px;
+        @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+        background-color: transparent !important;
+        }
+
     }
 
     .input-group-text {
       order: 1;
-      background-color: $widget-bg-color;
       color: $navbar-dashboard-link-color;
       padding: 0.6rem 0.85rem;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: $border-radius;
-      border-top-left-radius: $border-radius;
     }
   }
 }
@@ -641,9 +709,31 @@ legend {
 // Buttons
 // --------------------------------------------------
 
+.btn:focus {
+  outline: none;
+}
+
 .btn {
-  // add tiny gradient to background
-  background-image: linear-gradient(to right, #ffffff26, #fff0);
+  color: $white;
+  text-shadow: none;
+
+  @include box-shadow(none);
+
+  &:hover,
+  &:focus {
+    color: $white;
+    @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
+  }
+
+  &.active:hover{
+    color: $white;
+    @include box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+  }
+
+  &.disabled,
+  &[disabled] {
+    color: $white;
+  }
 }
 
 .btn .glyphicon {
@@ -692,13 +782,30 @@ legend {
 // Button groups
 // --------------------------------------------------
 
-.btn-toolbar{
-  margin-top: $spacer/2;
-  margin-bottom: $spacer/2;
+.btn-group > .btn + .btn {
+  margin-left: 0;
+}
 
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
+  z-index: auto;
+}
+
+.btn-group > .btn + .dropdown-toggle {
+  @include box-shadow(none);
+}
+
+
+.btn-toolbar{
+  font-size: 0; // Hack to remove whitespace that results from using inline-block
+  margin-top: $line-height-base / 2;
+  margin-bottom: $line-height-base / 2;
   > .btn + .btn,
-  > .btn-group + .btn-group {
-    margin-left: $spacer / 2;
+  > .btn-group + .btn,
+  > .btn + .btn-group {
+    margin-left: 5px;
   }
 }
 
@@ -711,10 +818,11 @@ legend {
 }
 
 .progress{
-  @include box-shadow(none);
-  transition: width 0.6s ease;
-  height: 1.3rem;
-  border-radius: $border-radius;
+  // @include box-shadow(none);
+  // transition: width 0.6s ease;
+  // height: 1.3rem;
+  // border-radius: $border-radius;
+  background: rgba(black, .15);
 }
 
 .progress-bar{
@@ -724,12 +832,12 @@ legend {
 
 .progress-sm{
   height: 10px;
-  margin-bottom: $spacer/2;
+  margin-bottom: $line-height-computed/2;
 }
 
 .progress-xs{
   height: 5px;
-  margin-bottom: $spacer/2;
+  margin-bottom: $line-height-computed/2;
 }
 
 
@@ -768,6 +876,14 @@ legend {
 }
 
 .list-group{
+  margin-bottom: 0;
+  .widget > &{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+    
+    .list-group-item:first-child{
+      border-top: 1px solid $addition-bg;
+    }
+  }
   .widget-body.p-0 > &{
     margin: 0;
 
@@ -778,6 +894,17 @@ legend {
 }
 
 .list-group-item{
+  border: none;
+  @include transition(background-color .2s ease-out);
+  color: $widget-color;
+
+  .widget &{
+    background: none;
+    + .list-group-item{
+      border-top: 1px solid $addition-bg;
+    }
+  }
+
   &,
   &:hover {
     color: $body-color;
@@ -806,7 +933,8 @@ legend {
 // --------------------------------------------------
 
 .tooltip-inner{
-  box-shadow: 0 0 20px rgba(darken($body-bg, 75%),0.2), 0 0 15px rgba(darken($body-bg, 35%),0.06);
+  padding: 4px;
+  white-space: nowrap;
 }
 //
 // Alerts
@@ -913,8 +1041,11 @@ legend {
 // Popovers
 
 .popover{
-  border: none;
-  @include box-shadow(none);
+  color: $body-color;
+  border-radius: $border-radius;
+  h1,h2,h3,h4,h5,h6{
+    color: $body-color;
+  }
 }
 
 .popover-content {
@@ -942,6 +1073,12 @@ legend {
 }
 
 .modal {
+  color: $gray-dark;
+  border-radius: $border-radius;
+
+  h1,h2,h3,h4,h5,h6{
+    color: $gray-dark;
+  }
   .close {
     opacity: 0.2;
 
@@ -956,7 +1093,7 @@ legend {
 // --------------------------------------------------
 
 .pagination{
-  margin-top: $spacer;
+  font-weight: $font-weight-normal;
 
   .page-item {
     .page-link,
@@ -994,6 +1131,13 @@ legend {
 // --------------------------------------------------
 
 .jumbotron {
+  .widget > &{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+  }
+
+  h1, .h1{
+    line-height: 1;
+  }
   @include media-breakpoint-up(md){
     padding-left: $jumbotron-padding;
     padding-right: $jumbotron-padding;
@@ -1096,12 +1240,12 @@ legend {
   }
 
   .navbar-header {
-    &.mobile-hidden {
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
-      justify-content: space-between;
-    }
+    // &.mobile-hidden {
+    //   display: flex;
+    //   flex-grow: 1;
+    //   align-items: center;
+    //   justify-content: space-between;
+    // }
 
     @include media-breakpoint-down(sm) {
       width: 100%;
@@ -1238,12 +1382,12 @@ legend {
 // -----------------
 
 pre {
-  padding: 6.5px;
-  margin: 0 0 ($spacer / 2);
-  line-height: $spacer;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: $pre-bg;
+  // padding: 6.5px;
+  // margin: 0 0 ($spacer / 2);
+  // line-height: $spacer;
+  // word-break: break-all;
+  // word-wrap: break-word;
+  // background-color: $pre-bg;
   border-radius: $border-radius;
 
   code {
@@ -1251,32 +1395,37 @@ pre {
   }
 }
 
-code {
-  background: theme-color('danger-light');
-}
+// code {
+//   background: theme-color('danger-light');
+// }
 
 //
 // Badges
 // --------------------------------------------------
+
+.label,
 .badge {
   display: inline-block;
   padding: 2px 4px;
   line-height: 14px; // ensure proper line-height if floated
   text-shadow: none;
-  font-weight: $font-weight-bold;
-  font-size: 11px;
-  color: white;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-sm - 1;
 
-  &.bg-default {
-    color: $body-color;
-  }
+  // &.bg-default {
+  //   color: $body-color;
+  // }
+}
+
+.badge{
+  padding: 2px 9px;
 }
 
 a.badge {
   &:hover,
   &:active {
     text-decoration: none;
-    color: white;
+    // color: white;
   }
 }
 

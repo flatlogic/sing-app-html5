@@ -47,21 +47,6 @@
         <div class="js-sidebar-content">
             <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
                  looks good, so adding it and enhancing with notifications -->
-            <div class="sidebar-status d-md-none">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="thumb-sm avatar float-right">
-                        <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
-                    </span>
-                    <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
-                         should be used with bg-* and text-* classes for colors -->
-                    <span class="circle bg-warning fw-bold text-gray-dark">
-                        13
-                    </span>
-                    &nbsp;
-                    Philip <strong>Smith</strong>
-                </a>
-                <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
-            </div>
             <!-- main notification links are placed inside of .sidebar-nav -->
             <ul class="sidebar-nav">
                 <li class="">
@@ -353,24 +338,10 @@
                                     <i class="la la-bars"></i>
                                 </a>
                                 <!-- shown on xs & sm screen. collapses and expands navigation -->
-                                <a class="d-lg-none nav-link" id="nav-collapse-toggle" href="#">
-                                    <span class="square square-lg bg-gray text-white d-md-none"><i class="la la-bars"></i></span>
-                                    <i class="la la-bars d-none d-md-block"></i>
-                                </a>
                             </li>
                             <li class="nav-item d-none d-md-block"><a href="#" class="nav-link"><i class="la la-refresh"></i></a></li>
                             <li class="nav-item ml-n-xs d-none d-md-block"><a href="#" class="nav-link"><i class="la la-times"></i></a></li>
                         </ul>
-                        <!-- xs & sm screen logo -->
-                        <a class="navbar-brand d-md-none" href="../dashboard/index.html">
-                            <i class="fa fa-circle text-gray mr-n-sm"></i>
-                            <i class="fa fa-circle text-warning"></i>
-                            &nbsp;
-                            sing
-                            &nbsp;
-                            <i class="fa fa-circle text-warning mr-n-sm"></i>
-                            <i class="fa fa-circle text-gray"></i>
-                        </a>
                     </div>
             
                     <!-- this part is hidden for xs screens -->
@@ -379,12 +350,7 @@
                         <form class="navbar-form" role="search">
                             <div class="form-group">
                                 <div class="input-group input-group-no-border">
-                                    <input class="form-control" type="text" placeholder="Search Dashboard">
-                                    <span class="input-group-append">
-                                        <span class="input-group-text">
-                                            <i class="la la-search"></i>
-                                        </span>
-                                    </span>
+                                    <input class="form-control" type="text" placeholder="Search ...">
                                 </div>
                             </div>
                         </form>
