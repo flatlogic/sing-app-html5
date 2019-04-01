@@ -1321,6 +1321,23 @@ input[type=search], input.search {
   background:url(../img/search.png) 5px 60% no-repeat $input-bg;
 }
 
+.form-control{
+  border: none;
+  color: $body-color;
+  background-color: $widget-bg;
+
+  &:focus{
+    color: $body-color;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.2));
+  }
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    background-color: lighten($widget-bg, 10%);
+  }
+}
+
 /***********************/
 /*       Buttons       */
 /***********************/
