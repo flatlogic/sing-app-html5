@@ -48,6 +48,7 @@ $yellow:  #ffc247 !default;
 $green:   #68ca66 !default;
 $teal:    #3abf94 !default;
 $cyan:    #17a2b8 !default;
+$lime:    #8cbf26 !default;
 
 $theme-colors: (
         primary: $blue,
@@ -88,9 +89,9 @@ $body-color-muted: darken($body-color, 15%) !default;
 $font-size-initial:       14px; // reset default browser value from 16px to 13px
 $font-size-base:          1rem !default;
 $font-size-lg:            1.25rem !default;
-$font-size-sm:            0.875rem !default;
-$font-size-larger:        1.1rem;
-$font-size-mini:          0.9rem;
+$font-size-sm:            0.92rem !default;
+$font-size-larger:        1.769rem;
+$font-size-mini:          0.75rem;
 $font-size-index:         0.7rem;
 
 $font-weight-bold: 700 !default;
