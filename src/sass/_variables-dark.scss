@@ -38,17 +38,19 @@ $gray-lighter:          lighten(#000, 93.5%) !default; // #eee
 $gray-semi-light:       #777;
 $gray-semi-lighter:     #ddd;
 
-$blue:    #547fff !default;
-$indigo:  #7f3ddb !default;
-$purple:  #9964e3 !default;
-$pink:    #e54e9a !default;
-$red:     #f55d5d !default;
-$orange:  #ff7d47 !default;
-$yellow:  #ffc247 !default;
-$green:   #68ca66 !default;
-$teal:    #3abf94 !default;
-$cyan:    #17a2b8 !default;
-$lime:    #8cbf26 !default;
+$blue:          #547fff !default;
+$indigo:        #7f3ddb !default;
+$purple:        #9964e3 !default;
+$pink:          #e54e9a !default;
+$red:           #f55d5d !default;
+$orange:        #ff7d47 !default;
+$yellow:        #ffc247 !default;
+$green:         #68ca66 !default;
+$teal:          #3abf94 !default;
+$cyan:          #17a2b8 !default;
+$lime:          #8cbf26 !default;
+$white-dark:    #f8f8f8 !default;
+
 
 $theme-colors: (
         primary: $blue,
@@ -67,6 +69,12 @@ $theme-colors: (
         gray: $gray-300,
         default: #e9ecef
 );
+
+// Layout
+// -------------------------
+
+$wrap-margin: 185px;
+$sidebar-mt: 80px;
 
 //== Scaffolding
 //
@@ -297,6 +305,9 @@ $navbar-dashboard-toggle-hover-bg:           #ddd !default;
 $navbar-dashboard-toggle-icon-bar-bg:        #888 !default;
 $navbar-dashboard-toggle-border-color:       #ddd !default;
 
+// Messages //
+$header-dropdown-bg:  rgba(51, 51, 51, 0.85) !default;
+$header-dropdown-shadow: none;
 
 
 //== Form states and alerts

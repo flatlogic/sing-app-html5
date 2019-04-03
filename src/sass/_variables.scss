@@ -71,6 +71,12 @@ $theme-colors: (
 $bg-gradient-color-1: #414e60 !default;
 $bg-gradient-color-2: #94a3b1 !default;
 
+// Layout
+// -------------------------
+
+$wrap-margin: 185px;
+$sidebar-mt: 80px;
+
 //== Scaffolding
 //
 $body-bg: $bg-gradient-color-1 !default;
@@ -297,6 +303,9 @@ $navbar-dashboard-toggle-hover-bg:           #ddd !default;
 $navbar-dashboard-toggle-icon-bar-bg:        #888 !default;
 $navbar-dashboard-toggle-border-color:       #ddd !default;
 
+// Messages //
+ $header-dropdown-bg:  rgba(51, 51, 51, 0.85) !default;
+ $header-dropdown-shadow: none;
 
 
 //== Form states and alerts
