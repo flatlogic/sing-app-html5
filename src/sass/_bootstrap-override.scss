@@ -226,13 +226,23 @@ legend {
   }
 }
 
-// .table-hover > tbody > tr:hover .progress{
-//   background-color: $white;
-// }
+/***************************/
+/*        Dropdowns        */
+/***************************/
 
-// .table th, .table td {
-//   padding: 0.55rem;
-// }
+.dropdown-menu{
+  border-radius: $border-radius-lg;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #666;
+  white-space: nowrap;
+}
 
 //
 // Dropdown menus
@@ -241,20 +251,6 @@ legend {
 .dropdown-toggle {
   &::after {
     display: none;
-    // font-family: LineAwesome;
-    // content: "\F110";
-    // border: none;
-    // width: auto;
-    // height: auto;
-    // vertical-align: baseline;
-    // opacity: .8;
-    // font-size: 85%;
-
-    // .dropup & {
-    //   content: "\F113";
-    //   border: none;
-    //   vertical-align: baseline;
-    // }
   }
 
   &.no-caret::after {
@@ -262,22 +258,22 @@ legend {
   }
 }
 
-.dropdown-menu{
-  border-radius: $border-radius-lg;
+// .dropdown-menu{
+//   border-radius: $border-radius-lg;
 
-  & > li > a{
-  font-weight: $font-weight-base;
-  }
-}
+//   & > li > a{
+//   font-weight: $font-weight-base;
+//   }
+// }
 
-.navbar-nav .dropdown-menu {
-  position: absolute;
+// .navbar-nav .dropdown-menu {
+//   position: absolute;
 
-  &.dropdown-menu-right {
-    right: 0;
-    left: auto;
-  }
-}
+//   &.dropdown-menu-right {
+//     right: 0;
+//     left: auto;
+//   }
+// }
 // //
 // // Navs
 // // --------------------------------------------------
@@ -501,6 +497,49 @@ legend {
 }
 
 
+/***************************/
+/*         Navbars         */
+/***************************/
+
+.navbar{
+  margin: 0;
+
+  .btn-navbar {
+    border: none;
+    @include box-shadow(none);
+  }
+}
+
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background: none;
+  @include box-shadow(none);
+}
+
+.navbar-nav {
+  margin: -7px;
+
+  > li > a {
+    padding-top:    10px;
+    padding-bottom: 10px;
+    line-height: $line-height-computed;
+  }
+
+  @media (max-width: $screen-xs-max) {
+  // Dropdowns get custom display when collapsed
+    .open .dropdown-menu {
+      position: absolute;
+      float: left;
+      margin: 2px 0 0;
+      background-color: $popover-bg;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}
+
 
 // LEFT & RIGHT
 // ------------
@@ -618,10 +657,6 @@ legend {
 .tabs-right > .nav-tabs .active > a:focus {
   border-color: #ddd #ddd #ddd transparent;
 }
-
-// .tabs-right > .nav-tabs > li.active > a{
-//   @include box-shadow(-1px 1px 2px #ccc);
-// }
 
 
 //
