@@ -529,7 +529,7 @@ legend {
 
   @media (max-width: $screen-xs-max) {
   // Dropdowns get custom display when collapsed
-    .open .dropdown-menu {
+    .show .dropdown-menu {
       position: absolute;
       float: left;
       margin: 2px 0 0;
@@ -920,10 +920,6 @@ legend {
 
 .progress-bar-gray {
   background-color: $gray-300;
-}
-
-.progress-bar-gray-light {
-  background-color: $gray-600;
 }
 
 .progress-primary {
