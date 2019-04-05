@@ -444,35 +444,35 @@ function getMainChartData() {
 
 $(function(){
     function pageLoad(){
-        nv.addGraph(function() {
-            var chart = nv.models.lineChart()
-                .useInteractiveGuideline(true)
-                .margin({top: 0, bottom: 25, left: 25, right: 0})
-                //.showLegend(false)
-                .color([
-                    '#6294c9', '#59bc79'
-                ]);
+        // nv.addGraph(function() {
+        //     var chart = nv.models.lineChart()
+        //         .useInteractiveGuideline(true)
+        //         .margin({top: 0, bottom: 25, left: 25, right: 0})
+        //         //.showLegend(false)
+        //         .color([
+        //             '#6294c9', '#59bc79'
+        //         ]);
 
-            chart.legend.margin({top: 3});
+        //     chart.legend.margin({top: 3});
 
-            chart.yAxis
-                .showMaxMin(false)
-                .tickFormat(d3.format(',.f'));
+        //     chart.yAxis
+        //         .showMaxMin(false)
+        //         .tickFormat(d3.format(',.f'));
 
-            chart.xAxis
-                .showMaxMin(false)
-                .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
-            var data = testData(['Unique', 'Visits'], 30);
-            data[0].area = true;
-            d3.select('#visits-chart svg')
-                .datum(data)
-                .transition().duration(500)
-                .call(chart);
+        //     chart.xAxis
+        //         .showMaxMin(false)
+        //         .tickFormat(function(d) { return d3.time.format('%b %d')(new Date(d)) });
+        //     var data = testData(['Unique', 'Visits'], 30);
+        //     data[0].area = true;
+        //     d3.select('#visits-chart svg')
+        //         .datum(data)
+        //         .transition().duration(500)
+        //         .call(chart);
 
-            PjaxApp.onResize(chart.update);
+        //     PjaxApp.onResize(chart.update);
 
-            return chart;
-        });
+        //     return chart;
+        // });
 
         /* Sparklines can also take their values from the first argument
          passed to the sparkline() function */
@@ -483,11 +483,11 @@ $(function(){
             options = {
                 width: '150px',
                 height: '30px',
-                lineColor: $white,
+                lineColor: '#fff',
                 lineWidth: '2',
                 spotRadius: '2',
-                highlightLineColor: $gray,
-                highlightSpotColor: $gray,
+                highlightLineColor: '#666',
+                highlightSpotColor: '#666',
                 spotColor: false,
                 minSpotColor: false,
                 maxSpotColor: false
@@ -498,19 +498,19 @@ $(function(){
         }
 
         function drawSparkLines(){
-            options.lineColor = $green;
+            options.lineColor = '#57b955';
             options.fillColor = 'rgba(86, 188, 118, 0.1)';
             $('#direct-trend').sparkline(values[0], options );
-            options.lineColor = $orange;
+            options.lineColor = '#f0af03';
             options.fillColor = 'rgba(234, 200, 94, 0.1)';
             $('#refer-trend').sparkline(values[1], options );
-            options.lineColor = $blue;
+            options.lineColor = '#4e85bd';
             options.fillColor = 'rgba(106, 141, 167, 0.1)';
             $('#social-trend').sparkline(values[2], options );
-            options.lineColor = $red;
+            options.lineColor = '#db4912';
             options.fillColor = 'rgba(229, 96, 59, 0.1)';
             $('#search-trend').sparkline(values[3], options );
-            options.lineColor = $white;
+            options.lineColor = '#fff';
             options.fillColor = 'rgba(255, 255, 255, 0.1)';
             $('#internal-trend').sparkline(values[4], options );
         }

@@ -17,25 +17,25 @@ $(function(){
             'gray-700': '#495057',
             'gray-800': '#343a40',
             'gray-900': '#212529',
-            'brand-primary': '#547fff',
-            'brand-success': '#3abf94',
-            'brand-warning': '#ffc247',
-            'brand-danger': '#f55d5d',
-            'brand-info': '#9964e3',
-            'body-bg': '#fafbff'
+            'brand-primary': '#4e85bd',
+            'brand-success': '#57b955',
+            'brand-warning': '#f0af03',
+            'brand-danger': '#db4912',
+            'brand-info': '#4ebfbb',
+            'body-bg': '#414e60'
         },
 
         // Brand colors modifications
         palette: {
-            'brand-primary-light': '#a7beff',
+            'brand-primary-light': '#dee4ee',
             'brand-primary-pale': '#d1dcff',
-            'brand-info-light': '#b7b3ff',
+            'brand-info-light': '#f2fafa',
             'brand-info-pale': '#e2e1ff',
-            'brand-danger-light': '#f59f9f',
+            'brand-danger-light': '#fff2ef',
             'brand-danger-pale': '#ffd7de',
-            'brand-success-light': '#8fe5d4',
+            'brand-success-light': '#ecfaec',
             'brand-success-pale': '#ace5d1',
-            'brand-warning-light': '#ffebb2',
+            'brand-warning-light': '#fdf7e6',
             'brand-warning-pale': '#fff8e3',
         },
 
@@ -181,6 +181,17 @@ $(function(){
     window.SingSettings = new SingSettingsBundle();
 });
 
+function triggerChartsResize(){
+    try {
+        if (window.onresize){
+            window.onresize();
+        }
+    } catch (e){
+        //just swallow it
+    }
+    $(window).trigger('resize');
+}
+
 $(function(){
     //settings
     var $settings = $("#settings"),
@@ -218,9 +229,9 @@ $(function(){
             }
             $sidebarSettings.html(_.template($template.html())({sidebarState: state}));
             if (state == "auto"){
-                $(".sidebar, .side-nav, .wrap, .logo").removeClass("sidebar-icons");
+                $(".sidebar, .side-nav, .content-wrap, .logo").removeClass("sidebar-icons");
             } else {
-                $(".sidebar, .side-nav, .wrap, .logo").addClass("sidebar-icons");
+                $(".sidebar, .side-nav, .content-wrap, .logo").addClass("sidebar-icons");
             }
             if (triggerResize){
                 triggerChartsResize();
