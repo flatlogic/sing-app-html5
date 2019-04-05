@@ -509,7 +509,7 @@ legend {
     @include box-shadow(none);
   }
 }
-
+// 
 // Active nav items
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
@@ -520,6 +520,11 @@ legend {
 
 .navbar-nav {
   margin: -7px;
+  
+  .dropdown-menu {
+    position: absolute;
+    float: left;
+  }
 
   > li > a {
     padding-top:    10px;
@@ -682,6 +687,7 @@ legend {
 
 .navbar-nav {
   display: block;
+
   > li > a {
     padding-top:    10px;
     padding-bottom: 10px;
@@ -1481,7 +1487,7 @@ code {
   line-height: 14px; // ensure proper line-height if floated
   text-shadow: none;
   font-weight: $font-weight-semi-bold;
-  font-size: $font-size-sm - 1;
+  font-size: $font-size-initial - 1;
 
   // &.bg-default {
   //   color: $body-color;
@@ -1500,9 +1506,122 @@ a.badge {
   }
 }
 
+.badge-default {
+  background-color: #999999;
+}
+
+.badge-default[href]:hover,
+.badge-default[href]:focus {
+  background-color: #808080;
+}
+
+.badge-primary {
+  background-color: #4e85bd;
+}
+
+.badge-primary[href]:hover,
+.badge-primary[href]:focus {
+  background-color: #3b6c9d;
+}
+
+.badge-success {
+  background-color: #57b955;
+}
+
+.badge-success[href]:hover,
+.badge-success[href]:focus {
+  background-color: #429b40;
+}
+
+.badge-info {
+  background-color: #4ebfbb;
+}
+
+.badge-info[href]:hover,
+.badge-info[href]:focus {
+  background-color: #3aa09c;
+}
+
+.badge-warning {
+  background-color: #f0af03;
+}
+
+.badge-warning[href]:hover,
+.badge-warning[href]:focus {
+  background-color: #be8a02;
+}
+
+.badge-danger {
+  background-color: #db4912;
+}
+
+.badge-danger[href]:hover,
+.badge-danger[href]:focus {
+  background-color: #ac390e;
+}
+
 .badge-pill {
   padding: 2px 6px;
 }
+
+.label-default, .label-inverse {
+  background-color: #999999;
+}
+
+.label-default[href]:hover,
+[href].label-inverse:hover, 
+.label-default[href]:focus, 
+[href].label-inverse:focus {
+  background-color: gray;
+}
+
+.label-primary {
+  background-color: #4e85bd;
+}
+
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #3b6c9d;
+}
+
+.label-success {
+  background-color: #57b955;
+}
+
+.label-success[href]:hover, 
+.label-success[href]:focus {
+  background-color: #429b40;
+}
+
+.label-info {
+  background-color: #4ebfbb;
+}
+
+.label-info[href]:hover, 
+.label-info[href]:focus {
+  background-color: #3aa09c;
+}
+
+.label-warning {
+  background-color: #f0af03;
+}
+
+.label-warning[href]:hover, 
+.label-warning[href]:focus {
+  background-color: #be8a02;
+}
+
+.label-danger, .label-important {
+  background-color: #db4912;
+}
+
+.label-danger[href]:hover, 
+[href].label-important:hover, 
+.label-danger[href]:focus, 
+[href].label-important:focus {
+  background-color: #ac390e;
+}
+
 
 //
 // Accordion

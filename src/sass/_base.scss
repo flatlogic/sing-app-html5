@@ -189,6 +189,11 @@
       left: auto;
       right: 12px;
     }
+    &:after {
+      left: auto;
+      right: 13px;
+    }
+
     .dropdown-menu {
       left: auto;
       right: 100%;
@@ -335,6 +340,7 @@
     font-size: 12px;
   }
 }
+
 
 /***********************************/
 /**          SETTINGS             **/

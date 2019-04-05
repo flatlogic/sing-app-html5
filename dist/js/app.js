@@ -13,14 +13,18 @@ window.DEBUG = false;
  * Plugins configuration options
  */
 
+//turn off charts is needed
+var chartsOff = false;
+if (chartsOff){
+    nv.addGraph = function(){};
+}
 /**
  * Setting Widgster's body selector to theme specific
  * @type {string}
  */
 $.fn.widgster.Constructor.DEFAULTS.bodySelector = '.widget-body';
 
-// $(function(){
-
+$(function(){
     /**
      * Main app class that handles page switching, async script loading, resize & pageLoad callbacks.
      * Events:
@@ -267,11 +271,11 @@ $.fn.widgster.Constructor.DEFAULTS.bodySelector = '.widget-body';
         $('body').addClass('nav-static');
     };
 
-    *
+    /**
      * Turns on collapsing navigation state.
      * Collapsing navigation state - navigation automatically collapse when mouse leaves it and expand when enters.
      * Static navigation state - navigation stays always open.
-     
+     */
     SingAppView.prototype.collapsingNavigationState = function(){
         this.settings.set('nav-static', false).save();
         $('body').removeClass('nav-static');
