@@ -8,10 +8,10 @@
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "~3.9.0",
-    "gulp-hb": "^7.0.1",
+    "gulp-hb": "^7.1.0",
     "gulp-rename": "1.2.2",
-    "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.5",
     "handlebars-layouts": "^3.1.4",
     "run-sequence": "^2.2.1"
   },

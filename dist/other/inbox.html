@@ -7,7 +7,8 @@
         <!--[if IE 9]>
         <link href="css/application-ie9-part2.css" rel="stylesheet">
         <![endif]-->
-        <link rel="shortcut icon" href="img/favicon.png">
+<!--         <link rel="shortcut icon" href="../img/favicon.png">
+ -->        
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="description" content="Sing App - Bootstrap 4 Admin Dashboard Template">
         <meta name="keywords" content="bootstrap admin template,admin template,admin dashboard,admin dashboard template,admin,dashboard,bootstrap,template">
@@ -42,16 +43,15 @@
             * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
             * Static - stays always open.
         -->
-        <nav id="sidebar" class="sidebar nav-collapse collapse" role="navigation">
-            <!-- need this .js class to initiate slimscroll -->
-            <div class="js-sidebar-content">
+        <nav id="sidebar" class="sidebar" role="navigation">
+            <div id="side-nav" class="js-sidebar-content">
                 <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
                      looks good, so adding it and enhancing with notifications -->
                 <!-- main notification links are placed inside of .sidebar-nav -->
-                <ul class="sidebar-nav">
+                <ul id="sidebar-nav" class="sidebar-nav">
                     <li class="">
                         <!-- an example of nested submenu. basic bootstrap collapse component -->
-                        <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                        <a class="accordion-toggle" href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                             <span class="icon">
                                 <i class="fi flaticon-home"></i>
                             </span>
@@ -730,9 +730,9 @@
         <!-- common libraries. required for every page-->
         <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
         <script src="../../bower_components/jquery-pjax/jquery.pjax.js"></script>
-        <script src="../../bower_components/jquery-pjax/jquery.pjax.js"></script>
         <script src="../../bower_components/popper.js/dist/umd/popper.js"></script>
         <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="../../bower_components/bootstrap/js/dist/util.js"></script>
         <script src="../../bower_components/slimScroll/jquery.slimscroll.js"></script>
         <script src="../../bower_components/widgster/widgster.js"></script>

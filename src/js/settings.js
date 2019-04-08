@@ -229,9 +229,9 @@ $(function(){
             }
             $sidebarSettings.html(_.template($template.html())({sidebarState: state}));
             if (state == "auto"){
-                $(".sidebar, .side-nav, .content-wrap, .logo").removeClass("sidebar-icons");
+                $(".sidebar, .js-sidebar-content, .content-wrap, .logo").removeClass("sidebar-icons");
             } else {
-                $(".sidebar, .side-nav, .content-wrap, .logo").addClass("sidebar-icons");
+                $(".sidebar, .js-sidebar-content, .content-wrap, .logo").addClass("sidebar-icons");
             }
             if (triggerResize){
                 triggerChartsResize();

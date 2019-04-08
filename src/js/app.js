@@ -41,8 +41,6 @@ $(function(){
         this.$sidebar = $('#sidebar');
         this.$content = $('#content');
         this.$loaderWrap = $('.loader-wrap');
-        this.$navigationStateToggle = $('#nav-state-toggle');
-        this.$navigationCollapseToggle = $('#nav-collapse-toggle');
         this.settings = window.SingSettings;
         this.pageLoadCallbacks = {};
         this.resizeCallbacks = [];
@@ -68,7 +66,7 @@ $(function(){
         //we don't need this cool feature for big boys
         if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
             ('ontouchstart' in window) && this.$content
-                .hammer()
+                // .hammer()
                 .bind('swipeleft', $.proxy(this._contentSwipeLeft, this))
                 .bind('swiperight', $.proxy(this._contentSwipeRight, this));
         }
@@ -96,9 +94,6 @@ $(function(){
             $(document).on('sing-app:loaded', $.proxy(this.hideLoader, this));
             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
         }
-
-        this.$navigationStateToggle.on('click', $.proxy(this.toggleNavigationState, this));
-        this.$navigationCollapseToggle.on('click', $.proxy(this.toggleNavigationCollapseState, this));
 
         /* reimplementing bs.collapse data-parent here as we don't want to use BS .panel*/
         this.$sidebar.find('.collapse').on('show.bs.collapse', function(e){
@@ -553,9 +548,9 @@ $(function(){
 //    SingApp.expandNavigation();
 
     initAppPlugins();
-    initAppFunctions();
+    // initAppFunctions();
     initAppFixes();
-    initDemoFunctions();
+    // initDemoFunctions();
 });
 
 /**
@@ -635,198 +630,198 @@ function initAppPlugins(){
 /**
  * Sing required js functions
  */
-function initAppFunctions(){
-    !function($){
-        /**
-         * Change to loading state when fetching notifications
-         */
-        var $loadNotificationsBtn = $('#load-notifications-btn');
-        $loadNotificationsBtn.on('ajax-load:start', function (e) {
-            $loadNotificationsBtn.button('loading');
-        });
-        $loadNotificationsBtn.on('ajax-load:end', function () {
-            $loadNotificationsBtn.button('reset');
-        });
+// function initAppFunctions(){
+//     !function($){
+//         /**
+//          * Change to loading state when fetching notifications
+//          */
+//         var $loadNotificationsBtn = $('#load-notifications-btn');
+//         $loadNotificationsBtn.on('ajax-load:start', function (e) {
+//             $loadNotificationsBtn.button('loading');
+//         });
+//         $loadNotificationsBtn.on('ajax-load:end', function () {
+//             $loadNotificationsBtn.button('reset');
+//         });
 
-        /**
-         * Move notifications dropdown to sidebar when/if screen goes sm
-         * and back when leaves sm
-         */
-        function moveNotificationsDropdown(){
-            $('.sidebar-status .dropdown-toggle').after($('#notifications-dropdown-menu').detach());
-        }
+//         /**
+//          * Move notifications dropdown to sidebar when/if screen goes sm
+//          * and back when leaves sm
+//          */
+//         function moveNotificationsDropdown(){
+//             $('.sidebar-status .dropdown-toggle').after($('#notifications-dropdown-menu').detach());
+//         }
 
-        function moveBackNotificationsDropdown(){
-            $('#notifications-dropdown-toggle').after($('#notifications-dropdown-menu').detach());
-        }
+//         function moveBackNotificationsDropdown(){
+//             $('#notifications-dropdown-toggle').after($('#notifications-dropdown-menu').detach());
+//         }
 
-        SingApp.onScreenSize(['sm','xs'], moveNotificationsDropdown);
-        SingApp.onScreenSize(['sm','xs'], moveBackNotificationsDropdown, false);
+//         SingApp.onScreenSize(['sm','xs'], moveNotificationsDropdown);
+//         SingApp.onScreenSize(['sm','xs'], moveBackNotificationsDropdown, false);
 
-        Sing.isScreen('sm') && moveNotificationsDropdown();
-        Sing.isScreen('xs') && moveNotificationsDropdown();
+//         Sing.isScreen('sm') && moveNotificationsDropdown();
+//         Sing.isScreen('xs') && moveNotificationsDropdown();
 
-        /**
-         * Set Sidebar zindex higher than .content and .page-controls so the notifications dropdown is seen
-         */
-        $('.sidebar-status').on('show.bs.dropdown', function(){
-            $('#sidebar').css('z-index', 2);
-        }).on('hidden.bs.dropdown', function(){
-            $('#sidebar').css('z-index', '');
-        });
+//         /**
+//          * Set Sidebar zindex higher than .content and .page-controls so the notifications dropdown is seen
+//          */
+//         $('.sidebar-status').on('show.bs.dropdown', function(){
+//             $('#sidebar').css('z-index', 2);
+//         }).on('hidden.bs.dropdown', function(){
+//             $('#sidebar').css('z-index', '');
+//         });
 
-        /**
-         * Show help tooltips
-         */
-        $('[data-toggle="tooltip"]').tooltip();
+//         /**
+//          * Show help tooltips
+//          */
+//         $('[data-toggle="tooltip"]').tooltip();
 
-        function initSidebarScroll(){
-            var $sidebarContent = $('.js-sidebar-content');
-            if ($('#sidebar').find('.slimScrollDiv').length != 0){
-                $sidebarContent.slimscroll({
-                    destroy: true
-                })
-            }
-            $sidebarContent.slimscroll({
-                height: '100vh',
-                size: '4px'
-            });
-        }
+//         function initSidebarScroll(){
+//             var $sidebarContent = $('.js-sidebar-content');
+//             if ($('#sidebar').find('.slimScrollDiv').length != 0){
+//                 $sidebarContent.slimscroll({
+//                     destroy: true
+//                 })
+//             }
+//             $sidebarContent.slimscroll({
+//                 height: '100vh',
+//                 size: '4px'
+//             });
+//         }
 
-        // SingApp.onResize(initSidebarScroll, true);
-        initSidebarScroll();
+//         // SingApp.onResize(initSidebarScroll, true);
+//         initSidebarScroll();
 
-        /*
-         When widget is closed remove its parent if it is .col-*
-         */
-        $(document).on('close.widgster', function(e){
-            var $colWrap = $(e.target).closest('.content > .row > [class*="col-"]:not(.widget-container)');
+//         /*
+//          When widget is closed remove its parent if it is .col-*
+//          */
+//         $(document).on('close.widgster', function(e){
+//             var $colWrap = $(e.target).closest('.content > .row > [class*="col-"]:not(.widget-container)');
 
-            // remove colWrap only if there are no more widgets inside
-            if (!$colWrap.find('.widget').not(e.target).length){
-                $colWrap.remove();
-            }
-        });
+//             // remove colWrap only if there are no more widgets inside
+//             if (!$colWrap.find('.widget').not(e.target).length){
+//                 $colWrap.remove();
+//             }
+//         });
 
-    }(jQuery);
+//     }(jQuery);
 
-    /* ========================================================================
-     * Chat Sidebar
-     * ========================================================================
-     */
-    !function($){
-        //.chat-sidebar-container contains all needed styles so we don't pollute body{ }
-        var $chatContainer = $('body').addClass('chat-sidebar-container');
-        $(document).on('click', '[data-toggle=chat-sidebar]', function(){
-            $chatContainer.toggleClass('chat-sidebar-opened');
-            $(this).find('.chat-notification-sing').remove();
-        });
+//     /* ========================================================================
+//      * Chat Sidebar
+//      * ========================================================================
+//      */
+//     !function($){
+//         //.chat-sidebar-container contains all needed styles so we don't pollute body{ }
+//         var $chatContainer = $('body').addClass('chat-sidebar-container');
+//         $(document).on('click', '[data-toggle=chat-sidebar]', function(){
+//             $chatContainer.toggleClass('chat-sidebar-opened');
+//             $(this).find('.chat-notification-sing').remove();
+//         });
 
-        /*
-         * Open chat on swipe left but first check if navigation is collapsed
-         * otherwise do nothing
-         */
-        if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
-            ('ontouchstart' in window) && this.$content
-                .hammer()
-                .bind('swipeleft', function(e){
-                if ($('body').is('.nav-collapsed')){
-                    $chatContainer.addClass('chat-sidebar-opened');
-                }
-            })
+//         /*
+//          * Open chat on swipe left but first check if navigation is collapsed
+//          * otherwise do nothing
+//          */
+//         if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
+//             ('ontouchstart' in window) && this.$content
+//                 .hammer()
+//                 .bind('swipeleft', function(e){
+//                 if ($('body').is('.nav-collapsed')){
+//                     $chatContainer.addClass('chat-sidebar-opened');
+//                 }
+//             })
 
-            /*
-             * Hide chat on swipe right but first check if navigation is collapsed
-             * otherwise do nothing
-             */
-                .bind('swiperight', function(e){
-                    if ($('body').is('.nav-collapsed.chat-sidebar-opened')){
-                        $chatContainer.removeClass('chat-sidebar-opened')
-                        // as there is no way to cancel swipeLeft handlers attached to
-                        // .content making this hack with temporary class which will be
-                        // used by SingApp to check whether it is permitted to open navigation
-                        // on swipeRight
-                            .addClass('chat-sidebar-closing').one(Util.TRANSITION_END, function () {
-                            $('body').removeClass('chat-sidebar-closing');
-                        }).emulateTransitionEnd(300);
-                    }
-                });
-        }
+//             /*
+//              * Hide chat on swipe right but first check if navigation is collapsed
+//              * otherwise do nothing
+//              */
+//                 .bind('swiperight', function(e){
+//                     if ($('body').is('.nav-collapsed.chat-sidebar-opened')){
+//                         $chatContainer.removeClass('chat-sidebar-opened')
+//                         // as there is no way to cancel swipeLeft handlers attached to
+//                         // .content making this hack with temporary class which will be
+//                         // used by SingApp to check whether it is permitted to open navigation
+//                         // on swipeRight
+//                             .addClass('chat-sidebar-closing').one(Util.TRANSITION_END, function () {
+//                             $('body').removeClass('chat-sidebar-closing');
+//                         }).emulateTransitionEnd(300);
+//                     }
+//                 });
+//         }
 
-        $(document).on('click', '.chat-sidebar-user-group > a', function(){
-            var $this = $(this),
-                $target = $($this.attr('href')),
-                $targetTitle = $target.find('.title');
-            $this.removeClass('active').find('.label').remove();
-            $target.addClass('open');
-            $('.chat-sidebar-contacts').removeClass('open');
-            $('.chat-sidebar-footer').addClass('open');
-            $('.message-list', $target).slimscroll({
-                height: $target.height() - $targetTitle.height()
-                    - parseInt($targetTitle.css('margin-top'))
-                    - parseInt($targetTitle.css('margin-bottom')),
-                width: '',
-                size: '4px'
-            });
-            return false;
-        });
+//         $(document).on('click', '.chat-sidebar-user-group > a', function(){
+//             var $this = $(this),
+//                 $target = $($this.attr('href')),
+//                 $targetTitle = $target.find('.title');
+//             $this.removeClass('active').find('.label').remove();
+//             $target.addClass('open');
+//             $('.chat-sidebar-contacts').removeClass('open');
+//             $('.chat-sidebar-footer').addClass('open');
+//             $('.message-list', $target).slimscroll({
+//                 height: $target.height() - $targetTitle.height()
+//                     - parseInt($targetTitle.css('margin-top'))
+//                     - parseInt($targetTitle.css('margin-bottom')),
+//                 width: '',
+//                 size: '4px'
+//             });
+//             return false;
+//         });
 
-        $(document).on('click', '.chat-sidebar-chat .js-back', function(){
-            var $chat = $(this).closest('.chat-sidebar-chat').removeClass('open');
-            var $sidebarContacts = $('.chat-sidebar-contacts').addClass('open');
-            $('.chat-sidebar-footer').removeClass('open');
+//         $(document).on('click', '.chat-sidebar-chat .js-back', function(){
+//             var $chat = $(this).closest('.chat-sidebar-chat').removeClass('open');
+//             var $sidebarContacts = $('.chat-sidebar-contacts').addClass('open');
+//             $('.chat-sidebar-footer').removeClass('open');
 
-            return false;
-        });
+//             return false;
+//         });
 
-        $('#chat-sidebar-input').keyup(function(e){
-            if(e.keyCode != 13) return;
-            var val;
-            if ((val = $(this).val().trim()) == '') return;
+//         $('#chat-sidebar-input').keyup(function(e){
+//             if(e.keyCode != 13) return;
+//             var val;
+//             if ((val = $(this).val().trim()) == '') return;
 
-            var $currentMessageList = $('.chat-sidebar-chat.open .message-list'),
-                $message = $('<li class="message from-me">' +
-                    '<span class="thumb-sm"><img class="rounded-circle" src="../img/avatar.png" alt="..."></span>' +
-                    '<div class="message-body"></div>' +
-                    '</li>');
-            $message.appendTo($currentMessageList).find('.message-body').text(val);
-            $(this).val('');
-        });
+//             var $currentMessageList = $('.chat-sidebar-chat.open .message-list'),
+//                 $message = $('<li class="message from-me">' +
+//                     '<span class="thumb-sm"><img class="rounded-circle" src="../img/avatar.png" alt="..."></span>' +
+//                     '<div class="message-body"></div>' +
+//                     '</li>');
+//             $message.appendTo($currentMessageList).find('.message-body').text(val);
+//             $(this).val('');
+//         });
 
-        $('#chat-sidebar-search').keyup(function(){
-            var $contacts = $('.chat-sidebar-contacts.open'),
-                $chat = $('.chat-sidebar-chat.open'),
-                val = $(this).val().trim().toUpperCase();
-            if ($contacts.length){
-                $('.chat-sidebar-user-group .list-group-item').addClass('hide').filter(function(){
-                    return val == '' ? true : ($(this).find('.message-sender').text().toUpperCase().indexOf(val) != -1)
-                }).removeClass('hide');
-            }
-            if ($chat.length){
-                $('.chat-sidebar-chat.open .message-list .message').addClass('hide').filter(function(){
-                    return val == '' ? true : ($(this).find('.message-body').text().toUpperCase().indexOf(val) != -1)
-                }).removeClass('hide');
-            }
-        });
+//         $('#chat-sidebar-search').keyup(function(){
+//             var $contacts = $('.chat-sidebar-contacts.open'),
+//                 $chat = $('.chat-sidebar-chat.open'),
+//                 val = $(this).val().trim().toUpperCase();
+//             if ($contacts.length){
+//                 $('.chat-sidebar-user-group .list-group-item').addClass('hide').filter(function(){
+//                     return val == '' ? true : ($(this).find('.message-sender').text().toUpperCase().indexOf(val) != -1)
+//                 }).removeClass('hide');
+//             }
+//             if ($chat.length){
+//                 $('.chat-sidebar-chat.open .message-list .message').addClass('hide').filter(function(){
+//                     return val == '' ? true : ($(this).find('.message-body').text().toUpperCase().indexOf(val) != -1)
+//                 }).removeClass('hide');
+//             }
+//         });
 
-        function initChatSidebarScroll(){
-            var $sidebarContent = $('.chat-sidebar-contacts');
-            if ($('#chat').find('.slimScrollDiv').length != 0){
-                $sidebarContent.slimscroll({
-                    destroy: true
-                })
-            }
-            $sidebarContent.slimscroll({
-                height: window.innerHeight,
-                width: '',
-                size: '4px'
-            });
-        }
+//         function initChatSidebarScroll(){
+//             var $sidebarContent = $('.chat-sidebar-contacts');
+//             if ($('#chat').find('.slimScrollDiv').length != 0){
+//                 $sidebarContent.slimscroll({
+//                     destroy: true
+//                 })
+//             }
+//             $sidebarContent.slimscroll({
+//                 height: window.innerHeight,
+//                 width: '',
+//                 size: '4px'
+//             });
+//         }
 
-        SingApp.onResize(initChatSidebarScroll, true);
-        initChatSidebarScroll();
-    }(jQuery);
-}
+//         SingApp.onResize(initChatSidebarScroll, true);
+//         initChatSidebarScroll();
+//     }(jQuery);
+// }
 
 
 
@@ -839,80 +834,21 @@ function initAppFixes(){
     }
 }
 
+
 /**
- * Demo-only functions. Does not affect the core Sing functionality.
- * Should be removed when used in real app.
+ * Sidebar-functions
  */
-function initDemoFunctions(){
-    !function($){
-        $('.theme-helper-toggler').click(() => {
-            $('.theme-helper').toggleClass('theme-helper-opened');
-        });
-        $('#load-notifications-btn').on('ajax-load:end', function () {
-            setTimeout(function(){
-                $('#notifications-list').find('.bg-attention').removeClass('bg-attention');
-            }, 10000)
-        });
-        $('#notifications-toggle').find('input').on('ajax-load:end', function(){
-            $('#notifications-list').find('[data-toggle=tooltip]').tooltip();
-        });
 
-        $('[data-toggle="chat-sidebar"]').one('click', function(){
-            setTimeout(function(){
-                $('.chat-sidebar-user-group:first-of-type .list-group-item:first-child').addClass('active')
-                    .find('.fa-circle').before('<span class="badge badge-pill badge-danger float-right animated bounceInDown ml-auto">3</span>');
-            }, 1000)
-        });
-
-        // theme switcher
-        let $darkStyles;
-        $('#css-dark').click(function () {
-            if (!$darkStyles) {
-                $darkStyles = $('<link href="../css/application-dark.min.css" rel="stylesheet">').appendTo($('head'));
-            }
-
-            if ($darkStyles[0].disabled)
-                $darkStyles[0].disabled = false;
-        });
-
-        $('#css-light').click(function () {
-            if (!$darkStyles[0].disabled)
-                $darkStyles[0].disabled = true;
-        });
-
-
-        setTimeout(function(){
-            var $chatNotification = $('#chat-notification');
-            $chatNotification.removeClass('hide').addClass('animated fadeIn')
-                .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $chatNotification.removeClass('animated fadeIn');
-                    setTimeout(function(){
-                        $chatNotification.addClass('animated fadeOut')
-                            .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                              $chatNotification.addClass('hide');
-                            });
-                    }, 4000);
-                });
-            $chatNotification.siblings('[data-toggle="chat-sidebar"]').append('<i class="chat-notification-sing animated bounceIn"></i>')
-        }, 4000)
-
-    }(jQuery);
-}
-
-
-
-//Sidebar-functions//
-
-function closeNavigation(){
-    var $accordion = $('#side-nav').find('.panel-collapse.in');
-    $accordion.collapse('hide');
-    $accordion.siblings(".accordion-toggle").addClass("collapsed");
-    resetContentMargin();
-    var $sidebar = $('#sidebar');
-    if ($(window).width() < 768 && $sidebar.is('.in')){
-        $sidebar.collapse('hide');
-    }
-}
+// function closeNavigation(){
+//     var $accordion = $('#sidebar-nav').find('.panel-collapse.in');
+//     $accordion.collapse('hide');
+//     $accordion.siblings(".accordion-toggle").addClass("collapsed");
+//     resetContentMargin();
+//     var $sidebar = $('#sidebar');
+//     if ($(window).width() < 768 && $sidebar.is('.in')){
+//         $sidebar.collapse('hide');
+//     }
+// }
 
 function resetContentMargin(){
     if ($(window).width() > 767){
@@ -921,274 +857,274 @@ function resetContentMargin(){
 }
 
 
-function initPjax(){
-    var PjaxApp = function(){
-        this.pjaxEnabled = window.PJAX_ENABLED;
-        this.debug = window.DEBUG;
-        this.$sidebar = $('#sidebar');
-        this.$content = $('.content');
-        this.$loaderWrap = $('.loader-wrap');
-        this.pageLoadCallbacks = {};
-        this.loading = false;
+// function initPjax(){
+//     var PjaxApp = function(){
+//         this.pjaxEnabled = window.PJAX_ENABLED;
+//         this.debug = window.DEBUG;
+//         this.$sidebar = $('#sidebar');
+//         this.$content = $('.content');
+//         this.$loaderWrap = $('.loader-wrap');
+//         this.pageLoadCallbacks = {};
+//         this.loading = false;
 
-        this._resetResizeCallbacks();
-        this._initOnResizeCallbacks();
+//         this._resetResizeCallbacks();
+//         this._initOnResizeCallbacks();
 
-        if (this.pjaxEnabled){
+//         if (this.pjaxEnabled){
 
-            //prevent pjaxing if already loading
-            this.$sidebar.find('a:not(.accordion-toggle):not([data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
-            $(document).pjax('#sidebar a:not(.accordion-toggle):not([data-no-pjax])', '.content', {
-                fragment: '.content',
-                type: 'GET', //use POST to prevent caching when debugging,
-                timeout: 10000
-            });
-            $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
-            $(document).on('pjax:start', $.proxy(this._resetResizeCallbacks, this));
-            $(document).on('pjax:send', $.proxy(this.showLoader, this));
-            $(document).on('pjax:success', $.proxy(this._loadScripts, this));
-            //custom event which fires when all scripts are actually loaded
-            $(document).on('pjax-app:loaded', $.proxy(this._loadingFinished, this));
-            $(document).on('pjax-app:loaded', $.proxy(this.hideLoader, this));
-            $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
-            window.onerror = $.proxy(this._logErrors, this);
-        }
-    };
+//             //prevent pjaxing if already loading
+//             this.$sidebar.find('a:not(.accordion-toggle):not([data-no-pjax])').on('click', $.proxy(this._checkLoading, this));
+//             $(document).pjax('#sidebar a:not(.accordion-toggle):not([data-no-pjax])', '.content', {
+//                 fragment: '.content',
+//                 type: 'GET', //use POST to prevent caching when debugging,
+//                 timeout: 10000
+//             });
+//             $(document).on('pjax:start', $.proxy(this._changeActiveNavigationItem, this));
+//             $(document).on('pjax:start', $.proxy(this._resetResizeCallbacks, this));
+//             $(document).on('pjax:send', $.proxy(this.showLoader, this));
+//             $(document).on('pjax:success', $.proxy(this._loadScripts, this));
+//             //custom event which fires when all scripts are actually loaded
+//             $(document).on('pjax-app:loaded', $.proxy(this._loadingFinished, this));
+//             $(document).on('pjax-app:loaded', $.proxy(this.hideLoader, this));
+//             $(document).on('pjax:end', $.proxy(this.pageLoaded, this));
+//             window.onerror = $.proxy(this._logErrors, this);
+//         }
+//     };
 
-    PjaxApp.prototype._initOnResizeCallbacks = function(){
-        var resizeTimeout,
-            view = this;
+//     PjaxApp.prototype._initOnResizeCallbacks = function(){
+//         var resizeTimeout,
+//             view = this;
 
-        $(window).resize(function() {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(function(){
-                view._runPageCallbacks(view.resizeCallbacks);
-            }, 100);
-        });
-    };
+//         $(window).resize(function() {
+//             clearTimeout(resizeTimeout);
+//             resizeTimeout = setTimeout(function(){
+//                 view._runPageCallbacks(view.resizeCallbacks);
+//             }, 100);
+//         });
+//     };
 
-    PjaxApp.prototype._resetResizeCallbacks = function(){
-        this.resizeCallbacks = {};
-    };
+//     PjaxApp.prototype._resetResizeCallbacks = function(){
+//         this.resizeCallbacks = {};
+//     };
 
-    PjaxApp.prototype._changeActiveNavigationItem = function(event, xhr, options){
-        this.$sidebar.find('li.active').removeClass('active');
+//     PjaxApp.prototype._changeActiveNavigationItem = function(event, xhr, options){
+//         this.$sidebar.find('li.active').removeClass('active');
 
-        this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
-            if (this.href === options.url){
-                $(this).closest('li').addClass('active')
-                    .closest('.panel').addClass('active');
-            }
-        });
-    };
+//         this.$sidebar.find('a[href*="' + this.extractPageName(options.url) + '"]').each(function(){
+//             if (this.href === options.url){
+//                 $(this).closest('li').addClass('active')
+//                     .closest('.panel').addClass('active');
+//             }
+//         });
+//     };
 
-    PjaxApp.prototype.showLoader = function(){
-        var view = this;
-        this.showLoaderTimeout = setTimeout(function(){
-            view.$content.addClass('hiding');
-            view.$loaderWrap.removeClass('hide');
-            setTimeout(function(){
-                view.$loaderWrap.removeClass('hiding');
-            }, 0)
-        }, 200);
-    };
+//     PjaxApp.prototype.showLoader = function(){
+//         var view = this;
+//         this.showLoaderTimeout = setTimeout(function(){
+//             view.$content.addClass('hiding');
+//             view.$loaderWrap.removeClass('hide');
+//             setTimeout(function(){
+//                 view.$loaderWrap.removeClass('hiding');
+//             }, 0)
+//         }, 200);
+//     };
 
-    PjaxApp.prototype.hideLoader = function(){
-        clearTimeout(this.showLoaderTimeout);
-        this.$loaderWrap.addClass('hiding');
-        this.$content.removeClass('hiding');
-        var view = this;
-        this.$loaderWrap.one($.support.transition.end, function () {
-            view.$loaderWrap.addClass('hide');
-            view.$content.removeClass('hiding');
-        }).emulateTransitionEnd(200)
-    };
+//     PjaxApp.prototype.hideLoader = function(){
+//         clearTimeout(this.showLoaderTimeout);
+//         this.$loaderWrap.addClass('hiding');
+//         this.$content.removeClass('hiding');
+//         var view = this;
+//         this.$loaderWrap.one($.support.transition.end, function () {
+//             view.$loaderWrap.addClass('hide');
+//             view.$content.removeClass('hiding');
+//         }).emulateTransitionEnd(200)
+//     };
 
-    /**
-     * Specify a function to execute when window was resized.
-     * Runs maximum once in 100 milliseconds.
-     * @param fn A function to execute
-     */
-    PjaxApp.prototype.onResize = function(fn){
-        this._addPageCallback(this.resizeCallbacks, fn);
-    };
+//     /**
+//      * Specify a function to execute when window was resized.
+//      * Runs maximum once in 100 milliseconds.
+//      * @param fn A function to execute
+//      */
+//     PjaxApp.prototype.onResize = function(fn){
+//         this._addPageCallback(this.resizeCallbacks, fn);
+//     };
 
-    /**
-     * Specify a function to execute when page was reloaded with pjax.
-     * @param fn A function to execute
-     */
-    PjaxApp.prototype.onPageLoad = function(fn){
-        this._addPageCallback(this.pageLoadCallbacks, fn);
-    };
+//     /**
+//      * Specify a function to execute when page was reloaded with pjax.
+//      * @param fn A function to execute
+//      */
+//     PjaxApp.prototype.onPageLoad = function(fn){
+//         this._addPageCallback(this.pageLoadCallbacks, fn);
+//     };
 
-    PjaxApp.prototype.pageLoaded = function(){
-        this._runPageCallbacks(this.pageLoadCallbacks);
-    };
+//     PjaxApp.prototype.pageLoaded = function(){
+//         this._runPageCallbacks(this.pageLoadCallbacks);
+//     };
 
-    PjaxApp.prototype._addPageCallback = function(callbacks, fn){
-        var pageName = this.extractPageName(location.href);
-        if (!callbacks[pageName]){
-            callbacks[pageName] = [];
-        }
-        callbacks[pageName].push(fn);
-    };
+//     PjaxApp.prototype._addPageCallback = function(callbacks, fn){
+//         var pageName = this.extractPageName(location.href);
+//         if (!callbacks[pageName]){
+//             callbacks[pageName] = [];
+//         }
+//         callbacks[pageName].push(fn);
+//     };
 
-    PjaxApp.prototype._runPageCallbacks = function(callbacks){
-        var pageName = this.extractPageName(location.href);
-        if (callbacks[pageName]){
-            _(callbacks[pageName]).each(function(fn){
-                fn();
-            })
-        }
-    };
+//     PjaxApp.prototype._runPageCallbacks = function(callbacks){
+//         var pageName = this.extractPageName(location.href);
+//         if (callbacks[pageName]){
+//             _(callbacks[pageName]).each(function(fn){
+//                 fn();
+//             })
+//         }
+//     };
 
-    PjaxApp.prototype._loadScripts = function(event, data, status, xhr, options){
-        var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
-            $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
-            $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
-            $existingScripts = $('script[src]'),
-            $existingTemplates = $('script[type="text/template"]');
+//     PjaxApp.prototype._loadScripts = function(event, data, status, xhr, options){
+//         var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
+//             $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
+//             $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
+//             $existingScripts = $('script[src]'),
+//             $existingTemplates = $('script[type="text/template"]');
 
-        //append templates first as they are used by scripts
-        $templates.each(function() {
-            var id = this.id;
-            var matchedTemplates = $existingTemplates.filter(function() {
-                //noinspection JSPotentiallyInvalidUsageOfThis
-                return this.id === id;
-            });
-            if (matchedTemplates.length) return;
+//         //append templates first as they are used by scripts
+//         $templates.each(function() {
+//             var id = this.id;
+//             var matchedTemplates = $existingTemplates.filter(function() {
+//                 //noinspection JSPotentiallyInvalidUsageOfThis
+//                 return this.id === id;
+//             });
+//             if (matchedTemplates.length) return;
 
-            var script = document.createElement('script');
-            script.id = $(this).attr('id');
-            script.type = $(this).attr('type');
-            script.innerHTML = this.innerHTML;
-            document.body.appendChild(script);
-        });
-
-
-
-        //ensure synchronous loading
-        var $previous = {
-            load: function(fn){
-                fn();
-            }
-        };
-
-        $scripts.each(function() {
-            var src = this.src;
-            var matchedScripts = $existingScripts.filter(function() {
-                //noinspection JSPotentiallyInvalidUsageOfThis
-                return this.src === src;
-            });
-            if (matchedScripts.length) return;
-
-            var script = document.createElement('script');
-            script.src = $(this).attr('src');
-            $previous.load(function(){
-                document.body.appendChild(script);
-            });
-
-            $previous = $(script);
-        });
-
-        var view = this;
-        $previous.load(function(){
-            $(document).trigger('pjax-app:loaded');
-            view.log('scripts loaded.');
-        })
-    };
-
-    PjaxApp.prototype.extractPageName = function(url){
-        //credit: http://stackoverflow.com/a/8497143/1298418
-        var pageName = url.split('#')[0].substring(url.lastIndexOf("/") + 1).split('?')[0];
-        return pageName === '' ? 'index.html' : pageName;
-    };
-
-    PjaxApp.prototype._checkLoading = function(e){
-        var oldLoading = this.loading;
-        this.loading = true;
-        if (oldLoading){
-            this.log('attempt to load page while already loading; preventing.');
-            e.preventDefault();
-        } else {
-            this.log(e.currentTarget.href + ' loading started.');
-        }
-        //prevent default if already loading
-        return !oldLoading;
-    };
-
-    PjaxApp.prototype._loadingFinished = function(){
-        this.loading = false;
-    };
-
-    PjaxApp.prototype._logErrors = function(){
-        var errors = JSON.parse(localStorage.getItem('lb-errors')) || {};
-        errors[new Date().getTime()] = arguments;
-        localStorage.setItem('lb-errors', JSON.stringify(errors));
-    };
-
-    PjaxApp.prototype.log = function(message){
-        if (this.debug){
-            console.log(message
-                    + " - " + arguments.callee.caller.toString().slice(0, 30).split('\n')[0]
-                    + " - " + this.extractPageName(location.href)
-            );
-        }
-    };
-
-    window.PjaxApp = new PjaxApp();
-}
+//             var script = document.createElement('script');
+//             script.id = $(this).attr('id');
+//             script.type = $(this).attr('type');
+//             script.innerHTML = this.innerHTML;
+//             document.body.appendChild(script);
+//         });
 
 
-function initDemoFunctions(){
-    $(document).one('pjax:end', function(){
-//        alert('The page was loaded with pjax!');
-    });
-}
 
-function initAppPlugins(){
-    /* ========================================================================
-     * Table head check all checkboxes
-     * ========================================================================
-     */
-    !function($){
-        $(document).on('click', 'table th [data-check-all]', function () {
-            $(this).closest('table').find('input[type=checkbox]')
-                .not(this).prop('checked', $(this).prop('checked'));
-        });
-    }(jQuery);
+//         //ensure synchronous loading
+//         var $previous = {
+//             load: function(fn){
+//                 fn();
+//             }
+//         };
 
-    /* ========================================================================
-     * Animate Progress Bars
-     * ========================================================================
-     */
-    !function($){
+//         $scripts.each(function() {
+//             var src = this.src;
+//             var matchedScripts = $existingScripts.filter(function() {
+//                 //noinspection JSPotentiallyInvalidUsageOfThis
+//                 return this.src === src;
+//             });
+//             if (matchedScripts.length) return;
 
-        $.fn.animateProgressBar = function () {
-            return this.each(function () {
-                var $bar = $(this).find('.progress-bar');
-                setTimeout(function(){
-                    $bar.css('width', $bar.data('width'));
-                }, 0)
-            })
-        };
+//             var script = document.createElement('script');
+//             script.src = $(this).attr('src');
+//             $previous.load(function(){
+//                 document.body.appendChild(script);
+//             });
 
-        $('.js-progress-animate').animateProgressBar();
-    }(jQuery);
-}
+//             $previous = $(script);
+//         });
+
+//         var view = this;
+//         $previous.load(function(){
+//             $(document).trigger('pjax-app:loaded');
+//             view.log('scripts loaded.');
+//         })
+//     };
+
+//     PjaxApp.prototype.extractPageName = function(url){
+//         //credit: http://stackoverflow.com/a/8497143/1298418
+//         var pageName = url.split('#')[0].substring(url.lastIndexOf("/") + 1).split('?')[0];
+//         return pageName === '' ? 'index.html' : pageName;
+//     };
+
+//     PjaxApp.prototype._checkLoading = function(e){
+//         var oldLoading = this.loading;
+//         this.loading = true;
+//         if (oldLoading){
+//             this.log('attempt to load page while already loading; preventing.');
+//             e.preventDefault();
+//         } else {
+//             this.log(e.currentTarget.href + ' loading started.');
+//         }
+//         //prevent default if already loading
+//         return !oldLoading;
+//     };
+
+//     PjaxApp.prototype._loadingFinished = function(){
+//         this.loading = false;
+//     };
+
+//     PjaxApp.prototype._logErrors = function(){
+//         var errors = JSON.parse(localStorage.getItem('lb-errors')) || {};
+//         errors[new Date().getTime()] = arguments;
+//         localStorage.setItem('lb-errors', JSON.stringify(errors));
+//     };
+
+//     PjaxApp.prototype.log = function(message){
+//         if (this.debug){
+//             console.log(message
+//                     + " - " + arguments.callee.caller.toString().slice(0, 30).split('\n')[0]
+//                     + " - " + this.extractPageName(location.href)
+//             );
+//         }
+//     };
+
+//     window.PjaxApp = new PjaxApp();
+// }
+
+
+// function initDemoFunctions(){
+//     $(document).one('pjax:end', function(){
+// //        alert('The page was loaded with pjax!');
+//     });
+// }
+
+// function initAppPlugins(){
+//     /* ========================================================================
+//      * Table head check all checkboxes
+//      * ========================================================================
+//      */
+//     !function($){
+//         $(document).on('click', 'table th [data-check-all]', function () {
+//             $(this).closest('table').find('input[type=checkbox]')
+//                 .not(this).prop('checked', $(this).prop('checked'));
+//         });
+//     }(jQuery);
+
+//      ========================================================================
+//      * Animate Progress Bars
+//      * ========================================================================
+     
+//     !function($){
+
+//         $.fn.animateProgressBar = function () {
+//             return this.each(function () {
+//                 var $bar = $(this).find('.progress-bar');
+//                 setTimeout(function(){
+//                     $bar.css('width', $bar.data('width'));
+//                 }, 0)
+//             })
+//         };
+
+//         $('.js-progress-animate').animateProgressBar();
+//     }(jQuery);
+// }
 
 
 $(function(){
 
     var $sidebar = $('#sidebar');
 
-    $sidebar.on("mouseleave",function(){
-        if (($(this).is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
-            setTimeout(function(){
-                closeNavigation();
-            }, 300); // some timeout for animation
-        }
-    });
+    // $sidebar.on("mouseleave",function(){
+    //     if (($(this).is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
+    //         setTimeout(function(){
+    //             closeNavigation();
+    //         }, 300); // some timeout for animation
+    //     }
+    // });
 
     //need some class to present right after click
     $sidebar.on('show.bs.collapse', function(e){
@@ -1202,41 +1138,41 @@ $(function(){
         }
     });
 
-    $(window).resize(function(){
-        //if ($(window).width() < 768){
-            closeNavigation();
-        //}
-    });
+    // $(window).resize(function(){
+    //     //if ($(window).width() < 768){
+    //         closeNavigation();
+    //     //}
+    // });
 
-    $(document).on('pjax-app:loaded', function(){
-        if ($(window).width() < 768){
-            closeNavigation();
-        }
-    })
+    // $(document).on('pjax-app:loaded', function(){
+    //     if ($(window).width() < 768){
+    //         closeNavigation();
+    //     }
+    // })
 
     //class-switch for button-groups
-    $(".btn-group > .btn[data-toggle-class]").click(function(){
-        var $this = $(this),
-            isRadio = $this.find('input').is('[type=radio]'),
-            $parent = $this.parent();
+    // $(".btn-group > .btn[data-toggle-class]").click(function(){
+    //     var $this = $(this),
+    //         isRadio = $this.find('input').is('[type=radio]'),
+    //         $parent = $this.parent();
 
-        if (isRadio){
-            $parent.children(".btn[data-toggle-class]").removeClass(function(){
-                return $(this).data("toggle-class")
-            }).addClass(function(){
-                return $(this).data("toggle-passive-class")
-            });
-            $this.removeClass($(this).data("toggle-passive-class")).addClass($this.data("toggle-class"));
-        } else {
-            $this.toggleClass($(this).data("toggle-passive-class")).toggleClass($this.data("toggle-class"));
-        }
-    });
+    //     if (isRadio){
+    //         $parent.children(".btn[data-toggle-class]").removeClass(function(){
+    //             return $(this).data("toggle-class")
+    //         }).addClass(function(){
+    //             return $(this).data("toggle-passive-class")
+    //         });
+    //         $this.removeClass($(this).data("toggle-passive-class")).addClass($this.data("toggle-class"));
+    //     } else {
+    //         $this.toggleClass($(this).data("toggle-passive-class")).toggleClass($this.data("toggle-class"));
+    //     }
+    // });
 
 
     $("#search-toggle").click(function(){
         //first hide menu if open
 
-        if ($sidebar.data('bs.collapse')){
+        if ($sidebar.data('show.bs.collapse')){
             $sidebar.collapse('hide');
         }
 
@@ -1256,7 +1192,7 @@ $(function(){
     });
 
 
-    //hide search field if open
+    // hide search field if open
     $sidebar.on('show.bs.collapse', function () {
         var $notifications = $('.notifications'),
             notificationsPresent = !$notifications.is(':empty');
@@ -1265,7 +1201,7 @@ $(function(){
     });
 
     /*   Move content down when second-level menu opened */
-    $("#side-nav").find("a.accordion-toggle").on('click',function(){
+    $("#side-nav").find('a.accordion-toggle').on('click',function(){
         if ($(window).width() < 768){
             var $this = $(this),
                 $sideNav = $('#side-nav'),
@@ -1276,8 +1212,8 @@ $(function(){
                 subMenuHeight = $.map($subMenuChildren, function(child){ return $(child).height()})
                     .reduce(function(sum, el){ return sum + el}),
                 $content = $(".content");
-            if (!$secondLevelMenu.is(".in")){ //when open
-                $content.css("margin-top", (contentMargin + subMenuHeight - $this.closest('ul').find('> .panel > .panel-collapse.open').height()) + 'px');
+            if (!$secondLevelMenu.is(".show")){ //when open
+                $content.css("margin-top", (contentMargin + subMenuHeight - $this.closest('li').find('.open').height()) + 'px');
             } else { //when close
                 $content.css("margin-top", contentMargin - subMenuHeight + 'px');
             }
@@ -1295,22 +1231,23 @@ $(function(){
         }
     });
 
-    //need some class to present right after click for submenu
-    var $subMenus = $sidebar.find('.panel-collapse');
-    $subMenus.on('show.bs.collapse', function(e){
-        if (e.target == this){
-            $(this).addClass('open');
-        }
-    });
+    // //need some class to present right after click for submenu
+    // var $subMenus = $sidebar.find('.panel-collapse');
+    // $subMenus.on('show.bs.collapse', function(e){
+    //     if (e.target == this){
+    //         $(this).addClass('open');
+    //     }
+    // });
 
-    $subMenus.on('hide.bs.collapse', function(e){
-        if (e.target == this){
-            $(this).removeClass('open');
-        }
-    });
+    // $subMenus.on('hide.bs.collapse', function(e){
+    //     if (e.target == this){
+    //         $(this).removeClass('open');
+    //     }
+    // });
 
-    initPjax();
-    initDemoFunctions();
-    initAppPlugins();
+    // initPjax();
+    // initDemoFunctions();
+    // initAppPlugins();
 
 });
+
