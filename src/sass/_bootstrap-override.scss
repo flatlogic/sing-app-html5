@@ -2,13 +2,24 @@
 // Typography
 // --------------------------------------------------
 
-.blockquote-sm{
-  padding: 3px 15px;
-  font-size: $font-size-base;
+ul, ol {
+  margin: 0;
+}
+
+hr {
+  border-top: none;
 }
 
 blockquote{
-  font-size: $font-size-lg;
+
+  &.blockquote-sm{
+    padding: 0 0 0 15px;
+    font-size: $font-size-base;
+  }
+  p{
+    font-size: inherit;
+    margin-bottom: $line-height-computed / 2;
+  }
 
   footer {
     font-size: 80%;
@@ -17,46 +28,60 @@ blockquote{
     }
   }
 }
+
+
+
 // Headings
 // -------------------------
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6{
-  small,
-  .small {
-    font-weight: $headings-font-weight;
-    font-size: 75%;
-    color: $text-muted;
-  }
-}
+h1 { font-size: $font-size-base * 2.75; } // 35.75px
+h2 { font-size: $font-size-base * 2.25; } // 29.25px
+h3 { font-size: $font-size-base * 1.75; } // 22.75px
+h4 { font-size: $font-size-base * 1.25; } // 16.25px
+h5 { font-size: $font-size-base; }
+h6 { font-size: $font-size-base * 0.85; } // 11.05px
 
-small, .small {
-  font-size: 85%;
-}
-
+h1 small { font-size: $font-size-base * 1.75; } // 22.75px
+h2 small { font-size: $font-size-base * 1.25; } // 16.25px
+h3 small { font-size: $font-size-base; }
+h4 small { font-size: $font-size-base; }
 
 //
 // Forms
 // --------------------------------------------------
 
 
+label,
+input,
+button,
+select,
+textarea {
+  font-weight: $font-weight-base;
+}
+
 .form-control {
-  font-weight: $font-weight-normal;
-  @include box-shadow(none);
-  &:focus{
-    @include box-shadow(none);
+  @include transition(border linear .2s, box-shadow linear .2s);
+
+  &[type=search], &.search{
+    padding-left: 26px;
   }
 }
 
-label {
-  font-weight: $font-weight-normal;
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.input-group-btn > .btn{
+  z-index: 2;
 }
 
 .help-block{
   margin-top: 5px;
   font-size: $font-size-smaller;
   color: $text-muted;
-  display: block;
 }
 
 legend {
@@ -73,7 +98,7 @@ legend {
 }
 
 .form-group {
-  margin-bottom: $spacer;
+  margin-bottom: $line-height-computed;
 }
 
 .input-group-addon{
@@ -131,15 +156,21 @@ legend {
 //
 // Tables
 // --------------------------------------------------
+.text-muted{
+  color: #d2d2d2 !important;
+}
+
+.table .table{
+  background-color: $addition-bg;
+}
 
 .table td > .abc-checkbox,
 .table th > .abc-checkbox{
+  position: relative;
+  left: 3px;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
-
-  > label {
-    padding-left: 0;
-  }
-
   > label:before,
   > label:after{
     margin-left: 0;
@@ -151,7 +182,8 @@ legend {
 }
 
 .table > thead > tr > th{
-  font-weight: $font-weight-semi-bold;
+  border-bottom: none;
+  font-weight: 600;
   text-transform: uppercase;
   border-bottom-width: 1px;
 }
@@ -186,12 +218,30 @@ legend {
   }
 }
 
-.table-hover > tbody > tr:hover .progress{
-  background-color: $white;
+.table-hover {
+  tbody {
+    td, th{
+      @include transition(background-color .2s);
+    }
+  }
 }
 
-.table th, .table td {
-  padding: 0.55rem;
+/***************************/
+/*        Dropdowns        */
+/***************************/
+
+.dropdown-menu{
+  border-radius: $border-radius-lg;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #666;
+  white-space: nowrap;
 }
 
 //
@@ -200,20 +250,7 @@ legend {
 
 .dropdown-toggle {
   &::after {
-    font-family: LineAwesome;
-    content: "\F110";
-    border: none;
-    width: auto;
-    height: auto;
-    vertical-align: baseline;
-    opacity: .8;
-    font-size: 85%;
-
-    .dropup & {
-      content: "\F113";
-      border: none;
-      vertical-align: baseline;
-    }
+    display: none;
   }
 
   &.no-caret::after {
@@ -221,86 +258,293 @@ legend {
   }
 }
 
-.dropdown-menu{
-  font-size: $font-size-mini;
-  border-radius: 0;
+// .dropdown-menu{
+//   border-radius: $border-radius-lg;
 
-  & > li > a{
-    padding-top: 5px;
-    padding-bottom: 5px;
+//   & > li > a{
+//   font-weight: $font-weight-base;
+//   }
+// }
+
+// .navbar-nav .dropdown-menu {
+//   position: absolute;
+
+//   &.dropdown-menu-right {
+//     right: 0;
+//     left: auto;
+//   }
+// }
+// //
+// // Navs
+// // --------------------------------------------------
+
+// .nav-pills .nav-item + .nav-item {
+//   margin-left: 0;
+// }
+
+// .nav-tabs {
+//   & .nav-item+.nav-item { margin-left: 0}
+//   border-bottom: none;
+//   background-color: $gray-light;
+//   border-top-left-radius: $border-radius;
+//   border-top-right-radius: $border-radius;
+//   > .nav-item {
+//     margin-bottom: -2px;
+//     > .nav-link {
+//       padding: 12px 18px;
+//       border: none;
+//       color: $text-muted;
+
+//       .badge {
+//         margin-bottom: -2px;
+//       }
+
+//       @include transition(color .15s ease-in-out);
+//       &:hover {
+//         background-color: transparent;
+//         color: $body-color;
+//       }
+//     }
+
+//     .nav-link.open {
+//       &,
+//       &:hover,
+//       &:focus{
+//         background-color: $nav-tabs-active-link-hover-bg;
+//         color: $nav-tabs-active-link-hover-color;
+//       }
+//     }
+
+//     .nav-link.active {
+//       &,
+//       &:hover,
+//       &:focus {
+//         background-color: $nav-tabs-active-link-hover-bg;
+//         color: $nav-tabs-active-link-hover-color;
+//         border: none;
+//         @include box-shadow(1px 1px 2px #ccc);
+//       }
+//     }
+//   }
+// }
+
+// .tab-content {
+//   position: relative;
+//   z-index: 1;
+//   background-color: $white;
+//   > .tab-pane {
+//     padding: $spacer*2 $spacer*2;
+//   }
+// }
+
+/***************************/
+/*          Navs           */
+/***************************/
+
+.nav {
+  margin-bottom: 0;
+
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      border-color: transparent;
+    }
   }
 }
 
-.navbar-nav .dropdown-menu {
-  position: absolute;
+.nav > li > a{
+  @include transition(background-color .2s);
+}
 
-  &.dropdown-menu-right {
-    right: 0;
-    left: auto;
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus{
+  background-color: rgba($widget-bg-common, .25);
+}
+
+.nav-tabs > li > a {
+  border-radius: $border-radius $border-radius 0 0;
+  color: $nav-tabs-link-color;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  &:hover,
+  &:focus {
+    border-color: transparent;
   }
 }
-//
-// Navs
-// --------------------------------------------------
 
-.nav-pills .nav-item + .nav-item {
+.nav-tabs > .active{
+  margin-bottom: $nav-tabs-active-item-margin;
+}
+
+.nav-tabs{
+  border-bottom: $nav-tabs-border;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: $widget-color;
+  background-color: $nav-tabs-tab-content-bg;
+  border-color: $nav-tabs-active-item-border;
+  border-bottom-color: $nav-tabs-active-item-border-bottom;
+}
+
+.nav-tabs .dropdown-menu {
+  border-radius: 0 0 $border-radius $border-radius; // remove the top rounded corners here since there is a hard edge above the menu
+}
+.nav-pills .dropdown-menu {
+  border-radius: $border-radius; // make rounded corners match the pills
+}
+.tabs-below > .nav-tabs {
+  border-top: $nav-tabs-border;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  border-radius: 0 0 $border-radius $border-radius;
+}
+
+.tabs-left > .nav-tabs {
+  margin-right: 0;
+  border-right: $nav-tabs-border;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  border-radius: $border-radius 0 0 $border-radius;
+}
+
+.tabs-right > .nav-tabs {
+  margin-left: 0;
+  border-left: $nav-tabs-border;
+}
+.tabs-right > .nav-tabs > li > a {
+  border-radius: 0 $border-radius $border-radius 0;
+}
+
+.tabs-below > .nav-tabs > li {
+  margin-top: $nav-tabs-active-item-margin;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  &:hover,
+  &:focus {
+    border-top-color: transparent;
+  }
+}
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+//  border-color: transparent;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: 0;
+}
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: transparent;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: $nav-tabs-active-item-border;
+  border-right-color: $nav-tabs-active-item-border-bottom;
+}
+
+.tabs-left > .nav-tabs .active{
+  margin-right: $nav-tabs-active-item-margin;
+}
+
+.tabs-right > .nav-tabs .active{
+  margin-left: $nav-tabs-active-item-margin;
+}
+
+.tabs-right > .nav-tabs > li > a {
   margin-left: 0;
 }
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: transparent;
+}
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: $nav-tabs-active-item-border;
+  border-left-color: $nav-tabs-active-item-border-bottom;
+}
 
-.nav-tabs {
-  & .nav-item+.nav-item { margin-left: 0}
-  border-bottom: none;
-  background-color: $gray-light;
-  border-top-left-radius: $border-radius;
-  border-top-right-radius: $border-radius;
-  > .nav-item {
-    margin-bottom: -2px;
-    > .nav-link {
-      padding: 12px 18px;
-      border: none;
-      color: $text-muted;
+.nav-pills > li > a {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: $border-radius;
+  background: $addition-bg;
+}
 
-      .badge {
-        margin-bottom: -2px;
-      }
+// Active state
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: $widget-header-color;
+  background: none;
+}
 
-      @include transition(color .15s ease-in-out);
-      &:hover {
-        background-color: transparent;
-        color: $body-color;
-      }
-    }
+.nav-justified > li {
+  padding: 0 1.28%;
+}
 
-    .nav-link.open {
-      &,
-      &:hover,
-      &:focus{
-        background-color: $nav-tabs-active-link-hover-bg;
-        color: $nav-tabs-active-link-hover-color;
-      }
-    }
 
-    .nav-link.active {
-      &,
-      &:hover,
-      &:focus {
-        background-color: $nav-tabs-active-link-hover-bg;
-        color: $nav-tabs-active-link-hover-color;
-        border: none;
-        @include box-shadow(1px 1px 2px #ccc);
-      }
+/***************************/
+/*         Navbars         */
+/***************************/
+
+.navbar{
+  margin: 0;
+
+  .btn-navbar {
+    border: none;
+    @include box-shadow(none);
+  }
+}
+// 
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background: none;
+  @include box-shadow(none);
+}
+
+.navbar-nav {
+  margin: -7px;
+  
+  .dropdown-menu {
+    position: absolute;
+    float: left;
+  }
+
+  > li > a {
+    padding-top:    10px;
+    padding-bottom: 10px;
+    line-height: $line-height-computed;
+  }
+
+  @media (max-width: $screen-xs-max) {
+  // Dropdowns get custom display when collapsed
+    .show .dropdown-menu {
+      position: absolute;
+      float: left;
+      margin: 2px 0 0;
+      background-color: $popover-bg;
+      border: 0;
+      box-shadow: none;
     }
   }
 }
 
-.tab-content {
-  position: relative;
-  z-index: 1;
-  background-color: $white;
-  > .tab-pane {
-    padding: $spacer*2 $spacer*2;
-  }
-}
 
 // LEFT & RIGHT
 // ------------
@@ -336,6 +580,27 @@ legend {
   display: block;
 }
 
+// BOTTOM
+// ------
+
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+.tabs-below > .nav-tabs > li > a {
+  border-radius: 0 0 $border-radius $border-radius;
+  &:hover,
+  &:focus {
+    border-bottom-color: transparent;
+    border-top-color: #ddd;
+  }
+}
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: $nav-tabs-active-item-border;
+  border-top-color: $nav-tabs-active-item-border-bottom;
+}
 // LEFT & RIGHT
 // ------------
 
@@ -359,27 +624,43 @@ legend {
 // Tabs on the left
 .tabs-left > .nav-tabs {
   float: left;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: $border-radius;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
-  @include border-radius(4px 0 0 4px);
+  border-radius: $border-radius 0 0 $border-radius;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: $gray-lighter #ddd $gray-lighter $gray-lighter;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
 }
 
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: $border-radius;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
-  @include border-radius(0 4px 4px 0);
+  border-radius: 0 $border-radius $border-radius 0;
 }
 
-.tabs-right > .nav-tabs > li.active > a{
-  @include box-shadow(-1px 1px 2px #ccc);
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: $gray-lighter $gray-lighter $gray-lighter #ddd;
+}
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
 }
 
 
@@ -387,233 +668,102 @@ legend {
 // Navbars
 // --------------------------------------------------
 
-.navbar {
-  border: none;
-  font-size: $navbar-font-size;
-  min-height: 50px;
-  margin-bottom: 0;
-  padding: 0;
+.navbar{
+  margin: 0;
 
-  h5{
-    font-size: $navbar-font-size;
-  }
-
-  .deemphasize{
-    font-size: $font-size-sm;
+  .btn-navbar {
+    border: none;
+    @include box-shadow(none);
   }
 }
 
-.navbar-form {
-  .input-group {
-    width: 245px;
-    display: flex;
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background: none;
+  @include box-shadow(none);
+}
 
-    .form-control {
-      order: 2;
-      font-size: $font-size-base;
-      padding: 0.6rem 0.85rem 0.6rem 0;
-      border-top-right-radius: $border-radius !important;
-      border-bottom-right-radius: $border-radius !important;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-    }
+.navbar-nav {
+  display: block;
 
-    .input-group-text {
-      order: 1;
-      color: $navbar-dashboard-link-color;
-      padding: 0.6rem 0.85rem;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: $border-radius;
-      border-top-left-radius: $border-radius;
+  > li > a {
+    padding-top:    10px;
+    padding-bottom: 10px;
+    line-height: $line-height-computed;
+  }
+
+  @media (max-width: $screen-xs-max) {
+  // Dropdowns get custom display when collapsed
+    .open .dropdown-menu {
+      position: absolute;
+      float: left;
+      margin: 2px 0 0;
+      background-color: $popover-bg;
+      border: 0;
+      box-shadow: none;
     }
   }
 }
 
-.navbar-header > .navbar-nav{
-  float: left;
+// .landing .navbar {
+//   margin: 1.75rem 0;
 
-  &.navbar-right{
-    float: right;
+//   @include media-breakpoint-down(sm) {
+//     margin: 0;
+//   }
 
-    @include media-breakpoint-down(sm) {
-      > li > a {
-        padding-right: 0;
-      }
-    }
-  }
+//   .navbar-collapse {
+//     @include media-breakpoint-down(sm) {
+//       background: $white;
+//       margin: 0 -1.4rem;
+//       box-shadow: 0 0 .75rem 0 rgba(0, 0, 0, 0.15);
+//       padding: 1rem;
+//     }
+//   }
 
-  @include media-breakpoint-down(sm) {
-    margin-left: $spacer / 2;
+//   .navbar-brand {
+//     color: $body-color;
+//     font-size: 1.7rem;
 
-    + .navbar-brand{
-      height: 60px;
-      line-height: 35px;
-    }
-  }
-}
+//     @include media-breakpoint-down(sm) {
+//       font-size: 1.3rem;
+//     }
+//   }
 
-@media (min-width: map_get($grid-breakpoints, md)) {
-  .navbar-nav.navbar-right:last-child {
-    margin-right: 0;
-  }
-}
+//   .navbar-toggler {
+//     padding: 0;
 
-.navbar-collapse {
-  overflow-x: visible;
-  padding-right: $spacer;
-  padding-left:  $spacer;
-  border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
-  @include clearfix;
+//     &:focus {
+//       outline: none;
+//     }
+//   }
 
-  &.in {
-    overflow-y: auto;
-  }
+//   .navbar-nav {
+//     .nav-item {
+//       margin: .3rem 0 0 1rem;
+//       font-size: $font-size-lg;
 
-  @media (min-width: map_get($grid-breakpoints, md)) {
-    width: auto;
-    border-top: 0;
-    box-shadow: none;
+//       @include media-breakpoint-down(sm) {
+//         margin: 0;
+//         padding: 1rem 0;
+//         display: flex;
+//         justify-content: center;
+//       }
 
-    &.collapse {
-      display: block !important;
-      height: auto !important;
-      padding-bottom: 0; // Override default setting
-      overflow: visible !important;
-    }
+//       .nav-link {
+//         color: $body-color;
+//         font-weight: $font-weight-normal;
 
-    &.in {
-      overflow-y: visible;
-    }
-
-    // Undo the collapse side padding for navbars with containers to ensure
-    // alignment of right-aligned contents.
-    .navbar-fixed-top &,
-    .navbar-static-top &,
-    .navbar-fixed-bottom & {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-
-  .nav.navbar-nav > li {
-    margin-left: 0;
-  }
-
-  .nav.navbar-nav > li > a {
-    padding: 16px 14px 14px 14px;
-  }
-
-  .nav.navbar-nav > li:first-child .dropdown-toggle {
-
-    .circle {
-      color: $gray-700;
-    }
-  }
-
-  .nav.navbar-nav .nav-item {
-    li:first-child .dropdown-item {
-      padding-top: 10px;
-    }
-
-    li:last-child .dropdown-item {
-      padding-bottom: 10px;
-    }
-  }
-
-  .nav.navbar-nav li:nth-child(2) > a:after {
-    content: none;
-  }
-
-  .nav.navbar-nav a[data-toggle="chat-sidebar"] {
-    position: relative;
-  }
-
-  .navbar-nav {
-
-    .dropdown-menu {
-      margin-top: 0px;
-      padding: 0;
-    }
-  }
-}
-
-.navbar-nav .nav-item {
-  .nav-link {
-    padding: 0 $spacer/2;
-  }
-
-  &:first-child {
-    .nav-link {
-      padding-left: 0;
-    }
-  }
-
-  &:last-child {
-    .nav-link {
-      padding-right: 0;
-    }
-  }
-}
-
-.landing .navbar {
-  margin: 1.75rem 0;
-
-  @include media-breakpoint-down(sm) {
-    margin: 0;
-  }
-
-  .navbar-collapse {
-    @include media-breakpoint-down(sm) {
-      background: $white;
-      margin: 0 -1.4rem;
-      box-shadow: 0 0 .75rem 0 rgba(0, 0, 0, 0.15);
-      padding: 1rem;
-    }
-  }
-
-  .navbar-brand {
-    color: $body-color;
-    font-size: 1.7rem;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 1.3rem;
-    }
-  }
-
-  .navbar-toggler {
-    padding: 0;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .navbar-nav {
-    .nav-item {
-      margin: .3rem 0 0 1rem;
-      font-size: $font-size-lg;
-
-      @include media-breakpoint-down(sm) {
-        margin: 0;
-        padding: 1rem 0;
-        display: flex;
-        justify-content: center;
-      }
-
-      .nav-link {
-        color: $body-color;
-        font-weight: $font-weight-normal;
-
-        &:hover {
-          color: theme-color('warning');
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
+//         &:hover {
+//           color: theme-color('warning');
+//           text-decoration: none;
+//         }
+//       }
+//     }
+//   }
+// }
 
 //
 // Breadcrumbs
@@ -636,9 +786,31 @@ legend {
 // Buttons
 // --------------------------------------------------
 
+.btn:focus {
+  outline: none;
+}
+
 .btn {
-  // add tiny gradient to background
-  background-image: linear-gradient(to right, #ffffff26, #fff0);
+  color: $white;
+  text-shadow: none;
+
+  @include box-shadow(none);
+
+  &:hover,
+  &:focus {
+    color: $white;
+    @include box-shadow(inset 0 1px 5px rgba(0, 0, 0, 0.08));
+  }
+
+  &.active:hover{
+    color: $white;
+    @include box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+  }
+
+  &.disabled,
+  &[disabled] {
+    color: $white;
+  }
 }
 
 .btn .glyphicon {
@@ -649,6 +821,12 @@ legend {
   &:not(.active) {
     box-shadow: none !important;
   }
+}
+
+.btn-default {
+  color: $white;
+  background-color: #666;
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .btn-sm {
@@ -687,13 +865,30 @@ legend {
 // Button groups
 // --------------------------------------------------
 
-.btn-toolbar{
-  margin-top: $spacer/2;
-  margin-bottom: $spacer/2;
+.btn-group > .btn + .btn {
+  margin-left: 0;
+}
 
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active {
+  z-index: auto;
+}
+
+.btn-group > .btn + .dropdown-toggle {
+  @include box-shadow(none);
+}
+
+
+.btn-toolbar{
+  font-size: 0; // Hack to remove whitespace that results from using inline-block
+  margin-top: $line-height-base / 2;
+  margin-bottom: $line-height-base / 2;
   > .btn + .btn,
-  > .btn-group + .btn-group {
-    margin-left: $spacer / 2;
+  > .btn-group + .btn,
+  > .btn + .btn-group {
+    margin-left: 5px;
   }
 }
 
@@ -706,10 +901,11 @@ legend {
 }
 
 .progress{
-  @include box-shadow(none);
-  transition: width 0.6s ease;
-  height: 1.3rem;
-  border-radius: $border-radius;
+  // @include box-shadow(none);
+  // transition: width 0.6s ease;
+  // height: 1.3rem;
+  // border-radius: $border-radius;
+  background: rgba(black, .15);
 }
 
 .progress-bar{
@@ -719,21 +915,17 @@ legend {
 
 .progress-sm{
   height: 10px;
-  margin-bottom: $spacer/2;
+  margin-bottom: $line-height-computed/2;
 }
 
 .progress-xs{
   height: 5px;
-  margin-bottom: $spacer/2;
+  margin-bottom: $line-height-computed/2;
 }
 
 
 .progress-bar-gray {
   background-color: $gray-300;
-}
-
-.progress-bar-gray-light {
-  background-color: $gray-600;
 }
 
 .progress-primary {
@@ -763,6 +955,14 @@ legend {
 }
 
 .list-group{
+  margin-bottom: 0;
+  .widget > &{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+    
+    .list-group-item:first-child{
+      border-top: 1px solid $addition-bg;
+    }
+  }
   .widget-body.p-0 > &{
     margin: 0;
 
@@ -773,6 +973,17 @@ legend {
 }
 
 .list-group-item{
+  border: none;
+  @include transition(background-color .2s ease-out);
+  color: $widget-color;
+
+  .widget &{
+    background: none;
+    + .list-group-item{
+      border-top: 1px solid $addition-bg;
+    }
+  }
+
   &,
   &:hover {
     color: $body-color;
@@ -801,7 +1012,8 @@ legend {
 // --------------------------------------------------
 
 .tooltip-inner{
-  box-shadow: 0 0 20px rgba(darken($body-bg, 75%),0.2), 0 0 15px rgba(darken($body-bg, 35%),0.06);
+  padding: 4px;
+  white-space: nowrap;
 }
 //
 // Alerts
@@ -908,8 +1120,11 @@ legend {
 // Popovers
 
 .popover{
-  border: none;
-  @include box-shadow(none);
+  color: $body-color;
+  border-radius: $border-radius;
+  h1,h2,h3,h4,h5,h6{
+    color: $body-color;
+  }
 }
 
 .popover-content {
@@ -931,12 +1146,18 @@ legend {
     }
 
     .sidebar{
-      z-index: -1;
+      display: none;;
     }
   }
 }
 
 .modal {
+  color: $gray-dark;
+  border-radius: $border-radius;
+
+  h1,h2,h3,h4,h5,h6{
+    color: $gray-dark;
+  }
   .close {
     opacity: 0.2;
 
@@ -951,7 +1172,7 @@ legend {
 // --------------------------------------------------
 
 .pagination{
-  margin-top: $spacer;
+  font-weight: $font-weight-normal;
 
   .page-item {
     .page-link,
@@ -989,6 +1210,13 @@ legend {
 // --------------------------------------------------
 
 .jumbotron {
+  .widget > &{
+    margin: (-$widget-padding-vertical) (-$widget-padding-horizontal);
+  }
+
+  h1, .h1{
+    line-height: 1;
+  }
   @include media-breakpoint-up(md){
     padding-left: $jumbotron-padding;
     padding-right: $jumbotron-padding;
@@ -1075,146 +1303,146 @@ legend {
   }
 }
 
-//
-// Navbar Dasboard
-// --------------------------------------------------
+// //
+// // Navbar Dasboard
+// // --------------------------------------------------
 
-.navbar-dashboard {
-  background-color: $navbar-dashboard-bg;
-  border-color: $navbar-dashboard-border;
+// .navbar-dashboard {
+//   background-color: $navbar-dashboard-bg;
+//   border-color: $navbar-dashboard-border;
 
-  .container-fluid {
-    flex-wrap: unset;
-    @include media-breakpoint-up(md) {
-      padding: 0 $content-padding-horizontal;
-    }
-  }
+//   .container-fluid {
+//     flex-wrap: unset;
+//     @include media-breakpoint-up(md) {
+//       padding: 0 $content-padding-horizontal;
+//     }
+//   }
 
-  .navbar-header {
-    &.mobile-hidden {
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
-      justify-content: space-between;
-    }
+//   .navbar-header {
+//     // &.mobile-hidden {
+//     //   display: flex;
+//     //   flex-grow: 1;
+//     //   align-items: center;
+//     //   justify-content: space-between;
+//     // }
 
-    @include media-breakpoint-down(sm) {
-      width: 100%;
+//     @include media-breakpoint-down(sm) {
+//       width: 100%;
 
-      &.mobile-hidden {
-        display: none;
-      }
-    }
-  }
+//       &.mobile-hidden {
+//         display: none;
+//       }
+//     }
+//   }
 
-  .navbar-brand {
-    color: $navbar-dashboard-brand-color;
-    margin-right: 0;
-    padding-top: 10px;
-    font-size: $font-size-lg;
-    &:hover,
-    &:focus {
-      color: $navbar-dashboard-brand-hover-color;
-      background-color: $navbar-dashboard-brand-hover-bg;
-    }
-  }
+//   .navbar-brand {
+//     color: $navbar-dashboard-brand-color;
+//     margin-right: 0;
+//     padding-top: 10px;
+//     font-size: $font-size-lg;
+//     &:hover,
+//     &:focus {
+//       color: $navbar-dashboard-brand-hover-color;
+//       background-color: $navbar-dashboard-brand-hover-bg;
+//     }
+//   }
 
-  .navbar-text {
-    color: $navbar-dashboard-color;
-  }
+//   .navbar-text {
+//     color: $navbar-dashboard-color;
+//   }
 
-  .navbar-nav {
-    flex-direction: row;
+//   .navbar-nav {
+//     flex-direction: row;
 
-    > li > a {
-      position: relative;
-      color: $navbar-dashboard-link-color;
+//     > li > a {
+//       position: relative;
+//       color: rgba(51, 51, 51, .5);
 
-      &:hover,
-      &:focus {
-        color: $navbar-dashboard-link-hover-color;
-        background-color: $navbar-dashboard-link-hover-bg;
-      }
-    }
-    > .active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $navbar-dashboard-link-active-color;
-        background-color: $navbar-dashboard-link-active-bg;
-      }
-    }
-    > .disabled > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $navbar-dashboard-link-disabled-color;
-        background-color: $navbar-dashboard-link-disabled-bg;
-      }
-    }
-  }
+//       &:hover,
+//       &:focus {
+//         color: $white;
+//         background-color: transparent;
+//       }
+//     }
+//     > .active > a {
+//       &,
+//       &:hover,
+//       &:focus {
+//         color: $white;
+//         background-color: transparent;
+//       }
+//     }
+//     > .disabled > a {
+//       &,
+//       &:hover,
+//       &:focus {
+//         color: $navbar-dashboard-link-disabled-color;
+//         background-color: $navbar-dashboard-link-disabled-bg;
+//       }
+//     }
+//   }
 
-  .navbar-nav {
-    // Remove background color from open dropdown
-    > .open > a {
-      &,
-      &:hover,
-      &:focus {
-        background-color: $navbar-dashboard-link-active-bg;
-        color: $navbar-dashboard-link-active-color;
-      }
-    }
+//   .navbar-nav {
+//     // Remove background color from open dropdown
+//     > .open > a {
+//       &,
+//       &:hover,
+//       &:focus {
+//         background-color: $navbar-dashboard-link-active-bg;
+//         color: $navbar-dashboard-link-active-color;
+//       }
+//     }
 
-    @media (max-width: map_get($grid-breakpoints, md) - 1px) {
-      // Dropdowns get custom display when collapsed
-      .open .dropdown-menu {
-        > li > a {
-          color: $navbar-dashboard-link-color;
-          &:hover,
-          &:focus {
-            color: $navbar-dashboard-link-hover-color;
-            background-color: $navbar-dashboard-link-hover-bg;
-          }
-        }
-        > .active > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $navbar-dashboard-link-active-color;
-            background-color: $navbar-dashboard-link-active-bg;
-          }
-        }
-        > .disabled > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $navbar-dashboard-link-disabled-color;
-            background-color: $navbar-dashboard-link-disabled-bg;
-          }
-        }
-      }
-    }
-  }
+//     @media (max-width: map_get($grid-breakpoints, md) - 1px) {
+//       // Dropdowns get custom display when collapsed
+//       .open .dropdown-menu {
+//         > li > a {
+//           color: $navbar-dashboard-link-color;
+//           &:hover,
+//           &:focus {
+//             color: $navbar-dashboard-link-hover-color;
+//             background-color: $navbar-dashboard-link-hover-bg;
+//           }
+//         }
+//         > .active > a {
+//           &,
+//           &:hover,
+//           &:focus {
+//             color: $navbar-dashboard-link-active-color;
+//             background-color: $navbar-dashboard-link-active-bg;
+//           }
+//         }
+//         > .disabled > a {
+//           &,
+//           &:hover,
+//           &:focus {
+//             color: $navbar-dashboard-link-disabled-color;
+//             background-color: $navbar-dashboard-link-disabled-bg;
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  // Links in navbars
-  //
-  // Add a class to ensure links outside the navbar nav are colored correctly.
+//   // Links in navbars
+//   //
+//   // Add a class to ensure links outside the navbar nav are colored correctly.
 
-  .btn-link {
-    color: $navbar-dashboard-link-color;
-    &:hover,
-    &:focus {
-      color: $navbar-dashboard-link-hover-color;
-    }
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus {
-        color: $navbar-dashboard-link-disabled-color;
-      }
-    }
-  }
-}
+//   .btn-link {
+//     color: $navbar-dashboard-link-color;
+//     &:hover,
+//     &:focus {
+//       color: $navbar-dashboard-link-hover-color;
+//     }
+//     &[disabled],
+//     fieldset[disabled] & {
+//       &:hover,
+//       &:focus {
+//         color: $navbar-dashboard-link-disabled-color;
+//       }
+//     }
+//   }
+// }
 
 
 @mixin bg-variant($parent, $color) {
@@ -1232,52 +1460,168 @@ legend {
 // Code
 // -----------------
 
-pre {
-  padding: 6.5px;
-  margin: 0 0 ($spacer / 2);
-  line-height: $spacer;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: $pre-bg;
+code, pre {
   border-radius: $border-radius;
-
-  code {
-    background: transparent;
-  }
 }
 
 code {
-  background: theme-color('danger-light');
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 3px;
 }
+
+// code {
+//   background: theme-color('danger-light');
+// }
 
 //
 // Badges
 // --------------------------------------------------
+
+.label,
 .badge {
   display: inline-block;
   padding: 2px 4px;
   line-height: 14px; // ensure proper line-height if floated
   text-shadow: none;
-  font-weight: $font-weight-bold;
-  font-size: 11px;
-  color: white;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-initial - 1;
 
-  &.bg-default {
-    color: $body-color;
-  }
+  // &.bg-default {
+  //   color: $body-color;
+  // }
+}
+
+.badge{
+  padding: 2px 9px;
 }
 
 a.badge {
   &:hover,
   &:active {
     text-decoration: none;
-    color: white;
+    // color: white;
   }
+}
+
+.badge-default {
+  background-color: #999999;
+}
+
+.badge-default[href]:hover,
+.badge-default[href]:focus {
+  background-color: #808080;
+}
+
+.badge-primary {
+  background-color: #4e85bd;
+}
+
+.badge-primary[href]:hover,
+.badge-primary[href]:focus {
+  background-color: #3b6c9d;
+}
+
+.badge-success {
+  background-color: #57b955;
+}
+
+.badge-success[href]:hover,
+.badge-success[href]:focus {
+  background-color: #429b40;
+}
+
+.badge-info {
+  background-color: #4ebfbb;
+}
+
+.badge-info[href]:hover,
+.badge-info[href]:focus {
+  background-color: #3aa09c;
+}
+
+.badge-warning {
+  background-color: #f0af03;
+}
+
+.badge-warning[href]:hover,
+.badge-warning[href]:focus {
+  background-color: #be8a02;
+}
+
+.badge-danger {
+  background-color: #db4912;
+}
+
+.badge-danger[href]:hover,
+.badge-danger[href]:focus {
+  background-color: #ac390e;
 }
 
 .badge-pill {
   padding: 2px 6px;
 }
+
+.label-default, .label-inverse {
+  background-color: #999999;
+}
+
+.label-default[href]:hover,
+[href].label-inverse:hover, 
+.label-default[href]:focus, 
+[href].label-inverse:focus {
+  background-color: gray;
+}
+
+.label-primary {
+  background-color: #4e85bd;
+}
+
+.label-primary[href]:hover,
+.label-primary[href]:focus {
+  background-color: #3b6c9d;
+}
+
+.label-success {
+  background-color: #57b955;
+}
+
+.label-success[href]:hover, 
+.label-success[href]:focus {
+  background-color: #429b40;
+}
+
+.label-info {
+  background-color: #4ebfbb;
+}
+
+.label-info[href]:hover, 
+.label-info[href]:focus {
+  background-color: #3aa09c;
+}
+
+.label-warning {
+  background-color: #f0af03;
+}
+
+.label-warning[href]:hover, 
+.label-warning[href]:focus {
+  background-color: #be8a02;
+}
+
+.label-danger, .label-important {
+  background-color: #db4912;
+}
+
+.label-danger[href]:hover, 
+[href].label-important:hover, 
+.label-danger[href]:focus, 
+[href].label-important:focus {
+  background-color: #ac390e;
+}
+
 
 //
 // Accordion

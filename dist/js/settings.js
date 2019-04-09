@@ -17,25 +17,25 @@ $(function(){
             'gray-700': '#495057',
             'gray-800': '#343a40',
             'gray-900': '#212529',
-            'brand-primary': '#547fff',
-            'brand-success': '#3abf94',
-            'brand-warning': '#ffc247',
-            'brand-danger': '#f55d5d',
-            'brand-info': '#9964e3',
-            'body-bg': '#fafbff'
+            'brand-primary': '#4e85bd',
+            'brand-success': '#57b955',
+            'brand-warning': '#f0af03',
+            'brand-danger': '#db4912',
+            'brand-info': '#4ebfbb',
+            'body-bg': '#414e60'
         },
 
         // Brand colors modifications
         palette: {
-            'brand-primary-light': '#a7beff',
+            'brand-primary-light': '#dee4ee',
             'brand-primary-pale': '#d1dcff',
-            'brand-info-light': '#b7b3ff',
+            'brand-info-light': '#f2fafa',
             'brand-info-pale': '#e2e1ff',
-            'brand-danger-light': '#f59f9f',
+            'brand-danger-light': '#fff2ef',
             'brand-danger-pale': '#ffd7de',
-            'brand-success-light': '#8fe5d4',
+            'brand-success-light': '#ecfaec',
             'brand-success-pale': '#ace5d1',
-            'brand-warning-light': '#ffebb2',
+            'brand-warning-light': '#fdf7e6',
             'brand-warning-pale': '#fff8e3',
         },
 
@@ -180,3 +180,154 @@ $(function(){
 
     window.SingSettings = new SingSettingsBundle();
 });
+
+function triggerChartsResize(){
+    try {
+        if (window.onresize){
+            window.onresize();
+        }
+    } catch (e){
+        //just swallow it
+    }
+    $(window).trigger('resize');
+}
+
+$(function(){
+    //settings
+    var $settings = $("#settings"),
+        $sidebarSettings = $("#sidebar-settings"),
+        settingsState = JSON.parse(localStorage.getItem("settings-state")) || {
+            sidebar: 'left',
+            sidebarState: 'auto',
+            displaySidebar: true
+        },
+        $pageHeader = $(".page-header"),
+        $body = $("body"),
+        popoverReallyHide = function(){
+            $settings.data('bs.popover').hoverState = 'out'; //yeah. cool BS3 fix. popover programmatic APi works only on HOVER
+            $settings.popover('hide');
+        },
+        popoverClose = function(e){
+            var $popover = $settings.siblings(".popover");
+            if($popover.length && !$.contains($popover[0], e.target)){
+                popoverReallyHide();
+                $(document).off("click", popoverClose);
+            }
+        },
+        sidebarSide = function(side){
+            if (side == "right"){
+                $body.addClass("sidebar-on-right")
+            } else {
+                $body.removeClass("sidebar-on-right")
+            }
+        },
+        sidebarState = function(state, triggerResize){
+            var $template = $('#sidebar-settings-template');
+            triggerResize = triggerResize == undefined ? true : false;
+            if (!$template[0]){
+                return;
+            }
+            $sidebarSettings.html(_.template($template.html())({sidebarState: state}));
+            if (state == "auto"){
+                $(".sidebar, .js-sidebar-content, .content-wrap, .logo").removeClass("sidebar-icons");
+            } else {
+                $(".sidebar, .js-sidebar-content, .content-wrap, .logo").addClass("sidebar-icons");
+            }
+            if (triggerResize){
+                triggerChartsResize();
+            }
+
+        },
+        displaySidebar = function(display, triggerResize){
+            triggerResize = triggerResize == undefined ? true : false;
+            if (display == true){
+                $body.removeClass("sidebar-hidden")
+            } else {
+                $body.addClass("sidebar-hidden")
+            }
+            if (triggerResize){
+                triggerChartsResize();
+            }
+        };
+
+    sidebarSide(settingsState.sidebar);
+    sidebarState(settingsState.sidebarState, false);
+    displaySidebar(settingsState.displaySidebar, false);
+
+    if (!$settings[0]){
+        return;
+    }
+
+    $settings.popover({
+        template: '<div class="popover settings-popover">' +
+            '<div class="arrow"></div>' +
+            '<div class="popover-inner">' +
+            '<div class="popover-content"></div>' +
+            '</div>' +
+            '</div>',
+        html: true,
+        animation: false,
+        placement: 'bottom',
+        content: function(){
+            return _.template($('#settings-template').html())(settingsState);
+        }
+    }).click(function(e){
+            //close all open dropdowns
+            $('.page-header .dropdown.open .dropdown-toggle').dropdown('toggle');
+            // need to remove popover on anywhere-click
+            $(document).on("click", popoverClose);
+            $(this).focus();
+            return false;
+        });
+
+    $(".page-header .dropdown-toggle").click(function(){
+        popoverReallyHide()
+        $(document).off("click", popoverClose);
+    });
+    //sidevar left/right
+    $pageHeader.on("click", ".popover #sidebar-toggle .btn", function(){
+        var $this = $(this),
+            side = $this.data("value");
+        sidebarSide(side);
+        settingsState.sidebar = side;
+        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+    });
+
+    //sidebar visibility
+    $pageHeader.on("click", ".popover #display-sidebar-toggle .btn", function(){
+        var $this = $(this),
+            display = $this.data("value");
+        displaySidebar(display);
+        settingsState.displaySidebar = display;
+        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+    });
+
+    //sidebar state {active, icons}
+    $sidebarSettings.on("click", ".btn", function(){
+        var $this = $(this),
+            state = $this.data("value");
+        if (state == 'icons'){
+            closeNavigation();
+        }
+        sidebarState(state);
+        settingsState.sidebarState = state;
+        localStorage.setItem("settings-state", JSON.stringify(settingsState));
+    });
+
+    //close navigation if sidebar in icons state
+    if (($("#sidebar").is(".sidebar-icons") || $(window).width() < 1049) && $(window).width() > 767){
+        closeNavigation();
+    }
+
+    //imitate buttons radio behavior
+    $pageHeader.on("click", ".popover [data-toggle='buttons-radio'] .btn:not(.active)", function(){
+        var $this = $(this),
+            $buttons = $this.parent().find('.btn');
+        $buttons.removeClass('active');
+        setTimeout(function(){
+            $this.addClass('active');
+        }, 0)
+    });
+});
+
+

@@ -28,18 +28,29 @@ $gray-700: #495057 !default;
 $gray-800: #3c484f !default;
 $gray-900: #29323a !default;
 $black:    #000 !default;
-$gray-light: $gray-100 !default;
 
-$blue:    #547fff !default;
-$indigo:  #7f3ddb !default;
-$purple:  #9964e3 !default;
-$pink:    #e54e9a !default;
-$red:     #f55d5d !default;
-$orange:  #ff7d47 !default;
-$yellow:  #ffc247 !default;
-$green:   #68ca66 !default;
-$teal:    #3abf94 !default;
-$cyan:    #17a2b8 !default;
+$gray:     #666 !default;
+$gray-darker:           lighten(#000, 13.5%) !default; // #222
+$gray-dark:             #555 !default;
+$gray:                  #666;
+$gray-light:            lighten(#000, 60%) !default;   // #999
+$gray-lighter:          lighten(#000, 93.5%) !default; // #eee
+$gray-semi-light:       #777;
+$gray-semi-lighter:     #ddd;
+
+$blue:          #547fff !default;
+$indigo:        #7f3ddb !default;
+$purple:        #9964e3 !default;
+$pink:          #e54e9a !default;
+$red:           #f55d5d !default;
+$orange:        #ff7d47 !default;
+$yellow:        #ffc247 !default;
+$green:         #68ca66 !default;
+$teal:          #3abf94 !default;
+$cyan:          #17a2b8 !default;
+$lime:          #8cbf26 !default;
+$white-dark:    #f8f8f8 !default;
+
 
 $theme-colors: (
         primary: $blue,
@@ -59,27 +70,36 @@ $theme-colors: (
         default: #e9ecef
 );
 
+// Layout
+// -------------------------
+
+$wrap-margin: 185px;
+$sidebar-mt: 80px;
+
 //== Scaffolding
 //
 $body-bg: #f9fbfd !default;
 $body-bg-light: lighten($body-bg, 3%);
 
-$addition-bg: $gray-100 !default;
-
 $logo-color: #fff;
+
+$bg-gradient-color-1:   #414e60;
+$bg-gradient-color-2:   #94a3b1;
 
 // Typography
 // -------------------------
 
 $body-color:            $gray-700 !default;
+$body-color-bold: lighten($body-color, 3%);
+$body-color-muted: darken($body-color, 15%) !default;
 //$body-color: #57534A; //a bit brown?
 
 $font-size-initial:       14px; // reset default browser value from 16px to 13px
 $font-size-base:          1rem !default;
 $font-size-lg:            1.25rem !default;
-$font-size-sm:            0.875rem !default;
-$font-size-larger:        1.1rem;
-$font-size-mini:          0.9rem;
+$font-size-sm:            0.92rem !default;
+$font-size-larger:        1.769rem;
+$font-size-mini:          0.75rem;
 $font-size-index:         0.7rem;
 
 $font-weight-bold: 700 !default;
@@ -92,6 +112,7 @@ $font-size-smaller: 85% !default;
 
 $line-height-base:        1.55 !default;
 $link-color: #218BC3 !default;
+$line-height-computed:    floor(($line-height-base * $line-height-base)) !default; // ~20px
 
 // Layout
 // -------------------------
@@ -138,16 +159,48 @@ $screen-lg-height: 670px !default;
 // Widgets
 // -------------------------
 
-$widget-padding-vertical: 20px !default;
-$widget-padding-horizontal: 20px !default;
-$widget-bg-color: $white;
+$widget-padding-vertical: 12px !default;
+$widget-padding-horizontal: 17px !default;
+$widget-bg-common: #333 !default;
+$widget-padding: $widget-padding-vertical $widget-padding-horizontal;
+$addition-bg: rgba($widget-bg-common, .3) !default;
+$widget-bg: rgba($widget-bg-common, .425);
+$widget-mb:        30px;
+$widget-color:     $body-color;
+$widget-header-color: lighten($widget-color, 5%);
+$widget-header-smalls-color: $body-color-muted;
+$widget-controls-color: rgba($white, .45);
+$widget-controls-hover-color: rgba($white, .6);
+$widget-bg-color: rgba($widget-bg-common, .425);
 $widget-shadow: 0 23px 20px -20px rgba(darken($body-bg, 35%),0.1), 0 0 15px rgba(darken($body-bg, 35%),0.06);
-
 $widget-shadow-designated: -1px 0 8px rgba(0,0,0,.2);
-$widget-border-radius: $border-radius-lg;
+$widget-border-radius: $border-radius;
+
+$text-transparent: rgba($widget-bg-common, .5);
+$basic-border-color: transparent;
 
 $chart-spacer-y: 0.65rem !default;
 
+$feed-item-bg: $widget-bg;
+$feed-item-color: $white;
+$feed-item-line-color: transparent;
+
+$nav-tabs-link-color: $widget-color;
+$nav-tabs-active-item-margin: 0;
+$nav-tabs-active-item-border: $basic-border-color;
+$nav-tabs-active-item-border-bottom: $basic-border-color;
+$nav-tabs-border: none;
+$nav-tabs-tab-content-bg: $addition-bg;
+
+$tabs-widget-active-item-hover-bg: rgba(darken($widget-bg-common, 10%), .4);
+
+$location-selector-bg: $addition-bg;
+$location-selector-border-color: #eee;
+$messenger-spinner-bg: $white;
+
+$calendar-border: rgba($white, .33);
+
+$dropzone-color:         #eee;
 
 // Bootstrap variables
 // ------------------------
@@ -168,10 +221,34 @@ $font-family-sans-serif: 'Montserrat', sans-serif !default;
 
 $headings-font-weight: 400 !default;
 
+// Components
+// -------------------------
+
+$padding-base-vertical:          5px !default;
+$padding-base-horizontal:        12px !default;
+
+$padding-small-vertical:         4px !default;
+$padding-small-horizontal:       10px !default;
+
+$line-height-large:              1.33 !default;
+$line-height-small:              1.5 !default;
+
 //== Forms
 //
-$legend-color:                   lighten($body-color, 15%) !default;
+$legend-color:                   $white !default;
 $cursor-disabled:                not-allowed !default;
+
+$input-color:                    $gray-dark;
+$input-border:                   #ccc !default;
+$input-border-focus:             #66afe9 !default;
+
+$input-group-addon-bg:           $addition-bg;
+$input-group-addon-border-color: transparent;
+
+// recalculate input heights
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-small:             (floor(($font-size-initial - 1) * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
 
 //== Tables
 //
@@ -228,6 +305,9 @@ $navbar-dashboard-toggle-hover-bg:           #ddd !default;
 $navbar-dashboard-toggle-icon-bar-bg:        #888 !default;
 $navbar-dashboard-toggle-border-color:       #ddd !default;
 
+// Messages //
+$header-dropdown-bg:  rgba(51, 51, 51, 0.85) !default;
+$header-dropdown-shadow: none;
 
 
 //== Form states and alerts
@@ -320,6 +400,17 @@ $alert-transparent: 0.25;
 //
 
 $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/" !default;
+
+//-- Responsive
+//
+
+$screen-xs-min:  480px;
+$screen-xs-max:  767px;
+$screen-sm-min:  768px;
+$screen-sm-max:  991px;
+$screen-md-min:  992px;
+$screen-md-max:  1199px;
+$screen-lg-min:  1200px;
 
 // Font Awesome variables
 // ------------------------

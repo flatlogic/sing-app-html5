@@ -7,7 +7,8 @@
         <!--[if IE 9]>
         <link href="css/application-ie9-part2.css" rel="stylesheet">
         <![endif]-->
-        <link rel="shortcut icon" href="img/favicon.png">
+<!--         <link rel="shortcut icon" href="../img/favicon.png">
+ -->        
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="description" content="Sing App - Bootstrap 4 Admin Dashboard Template">
         <meta name="keywords" content="bootstrap admin template,admin template,admin dashboard,admin dashboard template,admin,dashboard,bootstrap,template">
@@ -21,81 +22,205 @@
             */
         </script>
         <script src="../js/charts/d3-version-wrapper.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36759672-9"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-36759672-9');
+        </script>
+        <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(48020168, "init", { id:48020168, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true, ecommerce:"dataLayer" }); </script> <!-- /Yandex.Metrika counter -->
     </head>
     <body class="error-page">
-            <div class="theme-helper">
-                <section class="widget theme-helper-content">
-                    <header class="theme-helper-header d-flex p-0">
-                        <div class="theme-helper-toggler">
-                            <div class="theme-helper-spinner bg-warning text-white">
-                                <i class="la la-cog"></i>
-                                <i class="la la-cog fs-smaller"></i>
-                            </div>
-                        </div>
-                        <h6>Configuration</h6>
-                    </header>
-                    <div class="widget-body mt-3">
-                        <div class="theme-switcher d-flex justify-content-center">
-                            <div class="form-check abc-radio abc-radio-warning form-check-inline">
-                                <input class="form-check-input" type="radio" id="css-light" value="option2" name="css-light" checked aria-label="Sing Light">
-                                <label class="form-check-label" for="css-light"></label>
-                            </div>
-                            <div class="form-check abc-radio abc-radio-secondary mr-0 form-check-inline">
-                                <input class="form-check-input" type="radio" id="css-dark" value="option1" name="css-light" aria-label="Single Dark">
-                                <label class="form-check-label" for="css-dark"></label>
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <a href="https://flatlogic.com/admin-dashboards/sing-app-html5"
-                               target="_blank"
-                               role="button"
-                               class="btn btn-warning btn-rounded-f btn-block fs-mini text-white">
-                                Purchase
-                            </a>
-                            <a href="http://demo.flatlogic.com/sing-app/documentation/"
-                               target="_blank"
-                               role="button"
-                               class="btn btn-secondary btn-rounded-f btn-block fs-mini">
-                                Documentation
-                            </a>
-                        </div>
-                        <div class="d-flex justify-content-between mt-lg">
-                            <a role="button"
-                               target="_blank"
-                               href="https://flatlogic.com/contact"
-                               class="btn btn-outline-default btn-rounded-f fs-mini text-muted">
-                                <i class="glyphicon glyphicon-headphones mr-xs"></i>
-                                Support
-                            </a>
-                            <a role="button"
-                               target="_blank"
-                               href="https://github.com/flatlogic/sing-app"
-                               class="btn btn-outline-default btn-rounded-f fs-mini text-muted">
-                                <i class="fa fa-github mr-xs"></i>
-                                Github
-                            </a>
-                        </div>
-                        <div class="mt-lg d-flex flex-column align-items-center theme-sharing">
-                            <span class="fs-sm">
-                                Thank you for sharing!
-                            </span>
-                            <div class="d-flex justify-content-center text-light mt-2">
-                                <a target="_blank"
-                                   href="https://twitter.com/intent/tweet?text=Admin%20dashboard%20template%20built%20with%20NodeJS,%20React%20and%20Bootstrap%204!&url=https://demo.flatlogic.com/sing-app/html-bs4/&via=flatlogic">
-                                    <i class="fa fa-twitter pr-1"></i>
+        <div class="logo">
+            <h4><a href="https://demo.flatlogic.com/sing-app/">Light <strong>Sing</strong></a></h4>
+        </div>
+
+        <div class="error-wrapper">
+                <header class="page-header">
+                    <div class="navbar">
+                        <ul class="nav navbar-nav navbar-right pull-right">
+                            <li class="visible-phone-landscape">
+                                <a href="#" id="search-toggle">
+                                    <i class="fa fa-search"></i>
                                 </a>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://demo.flatlogic.com/sing-app/html-bs4/"
-                                   target="_blank">
-                                    <i class="fa fa-facebook pl-1"></i>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" title="Messages" id="messages"
+                                   class="dropdown-toggle"
+                                   data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-comment"></i>
                                 </a>
+                                <ul id="messages-menu" class="dropdown-menu messages" role="menu">
+                                    <li role="presentation">
+                                        <a href="#" class="message">
+                                            <img src="../img/1.png" alt="">
+                                            <div class="details">
+                                                <div class="sender">Jane Hew</div>
+                                                <div class="text">
+                                                    Hey, John! How is it going? ...
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="message">
+                                            <img src="../img/2.png" alt="">
+                                            <div class="details">
+                                                <div class="sender">Alies Rumiancaŭ</div>
+                                                <div class="text">
+                                                    I'll definitely buy this template
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="message">
+                                            <img src="../img/3.png" alt="">
+                                            <div class="details">
+                                                <div class="sender">Michał Rumiancaŭ</div>
+                                                <div class="text">
+                                                    Is it really Lore ipsum? Lore ...
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="text-align-center see-all">
+                                            See all messages <i class="fa fa-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" title="8 support tickets"
+                                   class="dropdown-toggle"
+                                   data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-globe"></i>
+                                    <span class="count">8</span>
+                                </a>
+                                <ul id="support-menu" class="dropdown-menu support" role="menu">
+                                    <li role="presentation">
+                                        <a href="#" class="support-ticket">
+                                            <div class="picture">
+                                                <span class="label label-important"><i class="fa fa-bell-o"></i></span>
+                                            </div>
+                                            <div class="details">
+                                                Check out this awesome ticket
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="support-ticket">
+                                            <div class="picture">
+                                                <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
+                                            </div>
+                                            <div class="details">
+                                                "What is the best way to get ...
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="support-ticket">
+                                            <div class="picture">
+                                                <span class="label label-success"><i class="fa fa-tag"></i></span>
+                                            </div>
+                                            <div class="details">
+                                                This is just a simple notification
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="support-ticket">
+                                            <div class="picture">
+                                                <span class="label label-info"><i class="fa fa-info-circle"></i></span>
+                                            </div>
+                                            <div class="details">
+                                                12 new orders has arrived today
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="support-ticket">
+                                            <div class="picture">
+                                                <span class="label label-important"><i class="fa fa-plus"></i></span>
+                                            </div>
+                                            <div class="details">
+                                                One more thing that just happened
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="text-align-center see-all">
+                                            See all tickets <i class="fa fa-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="hidden-xs">
+                                <a href="#" id="settings"
+                                   title="Settings"
+                                   data-toggle="popover"
+                                   data-placement="bottom">
+                                    <i class="glyphicon glyphicon-cog"></i>
+                                </a>
+                            </li>
+                            <li class="hidden-xs dropdown">
+                                <a href="#" title="Account" id="account"
+                                   class="dropdown-toggle"
+                                   data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                </a>
+                                <ul id="account-menu" class="dropdown-menu account" role="menu">
+                                    <li role="presentation" class="account-picture">
+                                        <img src="../img/2.png" alt="">
+                                        Philip Daineka
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="form_account.html" class="link">
+                                            <i class="fa fa-user"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="component_calendar.html" class="link">
+                                            <i class="fa fa-calendar"></i>
+                                            Calendar
+                                        </a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#" class="link">
+                                            <i class="fa fa-inbox"></i>
+                                            Inbox
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="visible-xs">
+                                <a href="#"
+                                   class="btn-navbar"
+                                   data-toggle="collapse"
+                                   data-target=".sidebar"
+                                   title="">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </li>
+                            <li class="hidden-xs"><a href="../extra/login.html"><i class="glyphicon glyphicon-off"></i></a></li>
+                        </ul>
+                        <form id="search-form" class="navbar-form pull-right" role="search">
+                            <input type="search" class="form-control search-query" placeholder="Search...">
+                        </form>
+                        <div class="notifications pull-right">
+                            <div class="alert pull-right">
+                                <a href="#" class="close ml-xs" data-dismiss="alert">&times;</a>
+                                <i class="fa fa-info-circle mr-xs"></i> Check out Sing App <a id="notification-link" href="#">settings</a> on the right!
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
-
-        <div class="error-wrapper">
-            <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
+                </header>            <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
             <main id="content" class="error-container" role="main">
                 <!-- Page content -->
         <div class="row">
@@ -132,18 +257,67 @@
         <script src="../../bower_components/jquery-pjax/jquery.pjax.js"></script>
         <script src="../../bower_components/popper.js/dist/umd/popper.js"></script>
         <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="../../bower_components/bootstrap/js/dist/util.js"></script>
         <script src="../../bower_components/slimScroll/jquery.slimscroll.js"></script>
         <script src="../../bower_components/widgster/widgster.js"></script>
+        <script src="../../bower_components/underscore/underscore.js"></script>
         <script src="../../bower_components/pace.js/pace.js" data-pace-options='{ "target": ".content-wrap", "ghostTime": 1000 }'></script>
-        <script src="../../bower_components/hammerjs/hammer.js"></script>
+<!--         <script src="../../bower_components/hammerjs/hammer.js"></script>
         <script src="../../bower_components/jquery-hammerjs/jquery.hammer.js"></script>
-
+ -->
 
         <!-- common app js -->
         <script src="../js/settings.js"></script>
         <script src="../js/app.js"></script>
 
+<!-- common templates -->
+        <script type="text/template" id="settings-template">
+            <div class="setting clearfix">
+                <div>Sidebar on the</div>
+                <div id="sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+                    <% onRight = sidebar == 'right'%>
+                    <button type="button" data-value="left" class="btn btn-sm btn-default <%= onRight? '' : 'active' %>">Left</button>
+                    <button type="button" data-value="right" class="btn btn-sm btn-default <%= onRight? 'active' : '' %>">Right</button>
+                </div>
+            </div>
+            <div class="setting clearfix">
+                <div>Sidebar</div>
+                <div id="display-sidebar-toggle" class="pull-left btn-group" data-toggle="buttons-radio">
+                    <% display = displaySidebar%>
+                    <button type="button" data-value="true" class="btn btn-sm btn-default <%= display? 'active' : '' %>">Show</button>
+                    <button type="button" data-value="false" class="btn btn-sm btn-default <%= display? '' : 'active' %>">Hide</button>
+                </div>
+            </div>
+            <div class="setting clearfix">
+                <div>Light Version</div>
+                <div>
+                    <a href="#" class="btn btn-sm btn-default">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="setting clearfix">
+                <div>White Version</div>
+                <div>
+                    <a href="#" class="btn btn-sm btn-default">&nbsp; Switch &nbsp;   <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="sidebar-settings-template">
+            <% auto = sidebarState == 'auto'%>
+            <% if (auto) {%>
+            <button type="button"
+                    data-value="icons"
+                    class="btn-icons btn btn-transparent btn-sm">Icons</button>
+            <button type="button"
+                    data-value="auto"
+                    class="btn-auto btn btn-transparent btn-sm">Auto</button>
+            <%} else {%>
+            <button type="button"
+                    data-value="auto"
+                    class="btn btn-transparent btn-sm">Auto</button>
+            <% } %>
+        </script>
         <!-- Page scripts -->
     </body>
 </html>

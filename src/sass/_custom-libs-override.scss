@@ -6,6 +6,98 @@
  * Datetimepicker for Bootstrap v3
  */
 .bootstrap-datetimepicker-widget {
+  border-radius: $border-radius;
+  color: $gray;
+  td,
+  th
+  {
+    border-radius: $border-radius;
+  }
+
+  td
+  {
+    &.day:hover,
+    &.hour:hover,
+    &.minute:hover,
+    &.second:hover
+    {
+      background: $gray-lighter;
+    }
+
+    &.old,
+    &.new
+    {
+      color: $gray-light;
+    }
+
+    &.active,
+    &.active:hover
+    {
+      background-color: $btn-default-bg;
+      text-shadow: none;
+    }
+
+    &.disabled,
+    &.disabled:hover
+    {
+      color: $gray-light;
+    }
+
+    span
+    {
+      border-radius: $border-radius;
+
+      &:hover
+      {
+        background: $gray-lighter;
+      }
+
+      &.active
+      {
+        background-color: $btn-default-bg;
+      }
+
+      &.old
+      {
+        color: $gray-light;
+      }
+
+      &.disabled,
+      &.disabled:hover
+      {
+        color: $gray-light;
+      }
+    }
+  }
+  th
+  {
+    &.next,
+    &.prev
+    {
+      font-size: $font-size-base * 1.5;
+    }
+    &.disabled,
+    &.disabled:hover
+    {
+      color: $gray-light;
+    }
+  }
+  thead tr:first-child th
+  {
+    &:hover
+    {
+      background: $gray-lighter;
+    }
+  }
+
+  .btn:not(.btn-primary){
+    color: darken($link-color, 20%);
+
+    &:hover{
+      @include box-shadow(none);
+    }
+  }
+
   &.dropdown-menu {
     width: auto;
   }
@@ -197,7 +289,7 @@
  * nvd3
  */
 .nvtooltip {
-  padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
+  padding: $padding-small-vertical $padding-small-horizontal;
   font-family: $font-family-base;
   font-size: $font-size-sm;
   text-align: center;
@@ -213,11 +305,14 @@
   }
 }
 
-svg text {
+svg text,
+.nvd3 text{
   font: $font-weight-base $font-size-sm $font-family-base;
-  fill: $gray-400;
-  font-size: $font-size-larger;
-  font-weight: 100;
+  fill: $body-color;
+
+  .widget &{
+    fill: $widget-color;
+  }
 }
 
 svg .title {
@@ -239,6 +334,79 @@ svg .title {
     fill: #666 !important;
     stroke: #666 !important;
   }
+}
+
+.nvd3 .nv-legend .disabled circle {
+  fill-opacity: 0;
+}
+
+.nvd3 .nv-axis line{
+  stroke: #000;
+  stroke-opacity: .1;
+}
+
+.nvtooltip h3{
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+.stat-widget header .nvd3.nv-multibar .nv-group{
+  fill-opacity: 1 !important;
+}
+
+.nvd3.nv-stackedarea path.nv-area {
+  fill-opacity: .8;
+}
+
+.nvd3.nv-stackedarea path.nv-area.hover {
+  fill-opacity: .95;
+}
+
+.nvd3 .nv-axis path.domain{
+  display: none;
+}
+
+.nvtooltip{
+  padding: 5px;
+  position: absolute;
+  background-color: rgba($widget-bg-common, .6);
+  color: $widget-color;
+  border: none;
+  z-index: 10000;
+
+  font-family: inherit;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+  transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+
+.nvtooltip {
+  h3, h4{
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-base;
+    text-align: center;
+  }
+}
+
+.nvd3 .nv-axis line.zero{
+  display: none;
+}
+
+/*!
+ * Bootstrap-select
+ */
+.bootstrap-select .btn:focus{
+  outline: 0 !important;
 }
 
 /**
@@ -360,7 +528,7 @@ $slider-handle-size: 26px;
         border-width: $slider-line-height/2 0 $slider-line-height/2 $slider-line-height/2;
         width: 1px;
         height: 1px;
-        border-left-color: theme-color('primary');
+        border-left-color: #0480be;
         margin-left: 0;
       }
     }
@@ -388,7 +556,7 @@ $slider-handle-size: 26px;
 .slider-track {
   position: absolute;
   cursor: pointer;
-  @include gradient-y(#eee, #f8f8f8);
+  @include gradient-y(rgba(0,0,0,.15), rgba(0,0,0,.1));
 
   @include box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
   border-radius: $border-radius;
@@ -413,7 +581,7 @@ $slider-handle-size: 26px;
     background-color: theme-color('info');
   }
   .slider-inverse &{
-    background-color: $gray-700;
+    background-color: $widget-color;
   }
 }
 .slider-handle {
@@ -735,7 +903,7 @@ input.parsley-error{
     font-weight: $font-weight-normal;
     display: inline-block;
     padding-left: 0;
-    margin: $spacer 0;
+    margin: $line-height-computed 0;
     border-radius: $border-radius;
 
     > li {
@@ -868,7 +1036,7 @@ table.dataTable tfoot th{
 .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate{
   font-size: $font-size-mini;
-  color: $gray-600;
+  color: $body-color;
 }
 
 .dataTables_wrapper .dataTables_paginate .pagination {
@@ -1345,9 +1513,10 @@ ul.messenger-theme-air {
 ul.messenger-theme-air .messenger-message {
   transition: background-color 0.4s;
   border-radius: 5px;
+  border-color: transparent;
   box-shadow: inset 0 0 0 1px white, inset 0 2px white, 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.2);
-  border: 0px;
-  background-color: rgba(255, 255, 255, 0.8);
+  // border: 0px;
+  background-color: lighten($widget-bg, .2);
   position: relative;
   margin-bottom: 1em;
   font-size: 13px;
@@ -1544,7 +1713,7 @@ ul.messenger-theme-air .messenger-message{
 
 
 .chart-tooltip{
-  position: fixed;
+  // position: fixed;
   padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
   border: 1px solid $gray-light;
   font-size: $font-size-mini;
@@ -1594,17 +1763,21 @@ ul.messenger-theme-air .messenger-message{
   padding: 2px 3px;
   border: none;
   font-weight: $font-weight-normal;
-  background-color: $gray-light;
+  background-color: $gray-semi-lighter;
   color: $body-color;
 }
 
 .fc-today{
-  background-color: #fff1b8;
+  background-color: rgba(#fff1b8, .35);
 }
 
 a.fc-event{
   height: auto;
-  line-height: $line-height-base;
+  line-height: 20px;
+}
+
+.fc-event, .fc-event:hover, .ui-widget .fc-event{
+  color: $gray;
 }
 
 /***********************/
@@ -1618,7 +1791,7 @@ a.fc-event{
   height: auto;
   width: 100%;
   margin: 0;
-  color: inherit;
+  color: $body-color;
 
   &.fade{
     opacity: 1;
@@ -1761,7 +1934,7 @@ a.fc-event{
 .abc-radio {
   label {
     &::before, &::after {
-      margin-top: -10px;
+      // margin-top: -10px;
     }
   }
 }

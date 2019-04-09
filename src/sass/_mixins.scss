@@ -28,6 +28,13 @@
   }
 }
 
+@mixin box-sizing($fmt) {
+  -webkit-box-sizing: $fmt;
+     -moz-box-sizing: $fmt;
+          box-sizing: $fmt;
+}
+
+
 // Generates single property classes
 // -------------------------
 @mixin property-variants($base, $property, $variants: ()){
@@ -91,3 +98,56 @@
 @mixin reset-filter() {
   filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
 }
+
+@mixin background-radial-gradient($figure, $type, $position_x, $position_y, $color_1, $color_2){
+  //there is a built-in compass radial-gradient function, but it does not provide enough compatibility, so need to imitate it
+  //it also has an option $experimental-support-for-svg which should generate correct svg for IE, but it works incorrect, so
+  //fixing it
+  //issue id - https://github.com/chriseppstein/compass/issues/1225
+  background-color: $color_1;
+  //final w3c
+  background-image: url(../img/bg-pattern.svg), radial-gradient(
+                  $type $figure at $position_x $position_y,
+                  $color_1,
+                  $color_2
+  );
+  //webkit-specific
+  background-image: url(../img/bg-pattern.svg), -webkit-radial-gradient(
+                  $position_x $position_y, $type $figure,
+                  $color_1,
+                  $color_2
+  );
+
+  //moz-specific
+  background-image: url(../img/bg-pattern.svg), -moz-radial-gradient(
+                  $position_x $position_y, $type $figure,
+                  $color_1,
+                  $color_2
+  );
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+// Block level inputs
+@mixin input-block-level {
+  display: block;
+  width: 100%;
+  min-height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
+}
+
+/// Applies padding to an element, taking the current element-margin value into account.
+/// @param {mixed} $tb Top/bottom padding.
+/// @param {mixed} $lr Left/right padding.
+/// @param {list} $pad Optional extra padding (in the following order top, right, bottom, left)
+/// @param {bool} $important If true, adds !important.
+@mixin padding($tb, $lr, $pad: (0,0,0,0), $important: null) {
+
+  @if $important {
+    $important: '!important';
+  }
+
+  padding: ($tb + nth($pad,1)) ($lr + nth($pad,2)) max(0.1em, $tb - _size(element-margin) + nth($pad,3)) ($lr + nth($pad,4)) #{$important};
+
+}
+

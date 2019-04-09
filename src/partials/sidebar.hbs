@@ -5,14 +5,10 @@
     * Static - stays always open.
 -->
 <nav id="sidebar" class="sidebar" role="navigation">
-    <!-- need this .js class to initiate slimscroll -->
-    <div class="js-sidebar-content">
-        <header class="logo d-none d-md-block">
-            <a href="https://demo.flatlogic.com/sing-app/"><span class="text-warning">sing</span> app</a>
-        </header>
+    <div id="side-nav" class="js-sidebar-content">
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
-        <div class="sidebar-status d-md-none">
+        {{!-- <div class="sidebar-status d-md-none">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="thumb-sm avatar float-right">
                     <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
@@ -26,12 +22,12 @@
                 Philip <strong>Smith</strong>
             </a>
             <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
-        </div>
+        </div> --}}
         <!-- main notification links are placed inside of .sidebar-nav -->
-        <ul class="sidebar-nav">
+        <ul id="sidebar-nav" class="sidebar-nav">
             <li class="{{#activeClass active "dashboard_analytics dashboard_visits dashboard_widgets"}} active {{/activeClass}}">
                 <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                <a class="accordion-toggle" href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
                     <span class="icon">
                         <i class="fi flaticon-home"></i>
                     </span>
@@ -109,9 +105,9 @@
                         <i class="fi flaticon-layers"></i>
                     </span>
                     UI Elements
-                    <sup class="text-warning fw-semi-bold">
+                    {{!--<sup class="text-warning fw-semi-bold">
                         new
-                    </sup>
+                    </sup> --}}
                     <i class="toggle fa fa-angle-down"></i>
                 </a>
                 <ul id="sidebar-ui" class="collapse {{#activeClass active "ui_modal ui_navbar ui_jumbotron ui_nav ui_carousel ui_components ui_notifications ui_icons ui_buttons ui_tabs_accordion ui_list_groups ui_card ui_alerts ui_badge ui_progress ui_popovers_tooltips ui_toasts"}} show {{/activeClass}}">
