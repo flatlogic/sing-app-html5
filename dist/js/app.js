@@ -861,19 +861,29 @@ function initDemoFunctions(){
         });
 
         // theme switcher
-        let $darkStyles;
-        $('#css-dark').click(function () {
+        let $darkStyles,
+            $cssDark = $('#css-dark'),
+            $cssLight = $('#css-light');
+        $cssDark.click(function () {
             if (!$darkStyles) {
                 $darkStyles = $('<link href="../css/application-dark.min.css" rel="stylesheet">').appendTo($('head'));
             }
 
-            if ($darkStyles[0].disabled)
+            if ($darkStyles[0].disabled) {
                 $darkStyles[0].disabled = false;
+                $cssDark.addClass('active');
+                $cssLight.removeClass('active');
+            }
+
         });
 
-        $('#css-light').click(function () {
-            if (!$darkStyles[0].disabled)
+        $cssLight.click(function () {
+            if (!$darkStyles[0].disabled) {
                 $darkStyles[0].disabled = true;
+                $cssLight.addClass('active');
+                $cssDark.removeClass('active');
+            }
+
         });
 
 

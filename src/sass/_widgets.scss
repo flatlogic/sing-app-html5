@@ -1387,7 +1387,7 @@
     border-radius: 0;
   }
 
-  .theme-sharing, .theme-switcher {
+  .theme-sharing {
     font-size: $font-size-lg;
     cursor: pointer;
   }
@@ -1415,6 +1415,15 @@
     }
     50% {
       transform: rotate(-360deg);
+    }
+  }
+
+  .theme-preview {
+    display: block;
+    margin-bottom: 1rem;
+
+    &.active {
+      cursor: not-allowed;
     }
   }
 }
