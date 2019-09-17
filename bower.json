@@ -1,7 +1,7 @@
 {
   "name": "sing",
-  "version": "4.1.0",
-  "description": "Sing Dashboard App",
+  "version": "4.3.0",
+  "description": "Sing App Admin Template",
   "main": "index.html",
   "authors": [
     "okendoken flatlogic.com"
@@ -18,7 +18,7 @@
     "widgster": "^0.0.3",
     "pace.js": "https://github.com/HubSpot/pace.git#v0.7.1",
     "animate.css": "^3.7.0",
-    "awesome-bootstrap-checkbox": "^1.0.1",
+    "awesome-bootstrap-checkbox": "https://github.com/flatlogic/awesome-bootstrap-checkbox.git#aed2fe22dfe167eae190b6f53a1e648bfd8dce89",
     "backbone": "^1.3.3",
     "backbone.paginator": "^2.0.8",
     "backgrid": "^0.3.8",
@@ -62,7 +62,7 @@
     "jquery-animateNumber": "^0.0.14",
     "MetroJS": "https://github.com/drewgreenwell/MetroJS.git#349ab828fe4deecff40496357d5bcba06f470413",
     "skycons": "https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed",
-    "bootstrap": "4.2.1",
+    "bootstrap": "4.3.1",
     "bootstrap-markdown": "^2.10.0",
     "slick-carousel": "^1.8.1",
     "hammerjs": "^2.0.8",
