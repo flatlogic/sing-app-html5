@@ -39,318 +39,317 @@
 </head>
 
 <body class="">
-<!--
-  Main sidebar seen on the left. may be static or collapsing depending on selected state.
-
-    * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
-    * Static - stays always open.
--->
-<nav id="sidebar" class="sidebar" role="navigation">
-    <!-- need this .js class to initiate slimscroll -->
-    <div class="js-sidebar-content">
-        <header class="logo d-none d-md-block">
-            <a href="https://demo.flatlogic.com/sing-app/"><span>sing</span> app</a>
-        </header>
-        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
-             looks good, so adding it and enhancing with notifications -->
-        <div class="sidebar-status d-md-none">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="thumb-sm avatar float-right">
-                    <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
-                </span>
-                <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
-                     should be used with bg-* and text-* classes for colors -->
-                <span class="circle bg-warning fw-bold text-gray-dark">
-                    13
-                </span>
-                &nbsp;
-                Philip <strong>Smith</strong>
-            </a>
-            <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
-        </div>
-        <!-- main notification links are placed inside of .sidebar-nav -->
-        <ul class="sidebar-nav">
-            <li class="">
-                <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-home"></i>
-                    </span>
-                    Dashboard
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-dashboard" class="collapse ">
-                    <li class=""><a href="../dashboard/index.html">Analytics</a></li>
-                    <li class=""><a href="../dashboard/visits.html">Visits</a></li>
-                    <li class=""><a href="../dashboard/widgets.html">Widgets</a></li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="../other/package.html">
-                    <span class="icon">
-                      <i class="fi flaticon-database-1"></i>
-                    </span>
-                    Sing Package
-                </a>
-            </li>
-            <li class="">
-                <a href="../other/profile.html">
-                    <span class="icon">
-                        <i class="fi flaticon-user"></i>
-                    </span>
-                    Profile
-                </a>
-            </li>
-            <li class="">
-                <a href="../other/inbox.html">
-                    <span class="icon">
-                        <i class="fi flaticon-paper-plane"></i>
-                    </span>
-                    Email
-                    <span class="badge badge-primary">
-                        9
-                    </span>
-                </a>
-            </li>
-            <li class="">
-                <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-diamond"></i>
-                    </span>
-                    E-commerce
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-pages" class="collapse ">
-                    <li class=""><a href="../e-commerce/product_detail.html">Product Detail</a></li>
-                    <li class=""><a href="../e-commerce/product_grid.html">Product Grid</a></li>
-                </ul>
-            </li>
-        </ul>
-        <!-- every .sidebar-nav may have a title -->
-        <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
-        <ul class="sidebar-nav">
-            <li class="">
-                <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-network"></i>
-                    </span>
-                    Core
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-core" class="collapse ">
-                    <li class=""><a href="../core/core_typography.html">Typography</a></li>
-                    <li class=""><a href="../core/core_colors.html">Colors</a></li>
-                    <li class=""><a href="../core/core_grid.html">Grid</a></li>
-                </ul> 
-            </li>
-            <li class="">
-                <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-layers"></i>
-                    </span>
-                    UI Elements
-                    <sup class="text-success fw-semi-bold">
-                        new
-                    </sup>
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-ui" class="collapse ">
-                    <li class=""><a href="../components/ui_alerts.html">Alerts</a></li>
-                    <li class=""><a href="../components/ui_badge.html">Badge</a></li>
-                    <li class=""><a href="../components/ui_buttons.html">Buttons</a></li>
-                    <li class=""><a href="../components/ui_card.html">Card</a></li>
-                    <li class=""><a href="../components/ui_carousel.html">Carousel</a></li>
-                    <li class=""><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
-                    <li class=""><a href="../components/ui_icons.html">Icons</a></li>
-                    <li class=""><a href="../components/ui_list_groups.html">List Groups</a></li>
-                    <li class=""><a href="../components/ui_modal.html">Modal</a></li>
-                    <li class=""><a href="../components/ui_nav.html">Nav</a></li>
-                    <li class=""><a href="../components/ui_navbar.html">Navbar</a></li>
-                    <li class=""><a href="../components/ui_notifications.html">Notifications</a></li>
-                    <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
-                    <li class=""><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
-                    <li class=""><a href="../components/ui_progress.html">Progress</a></li>
-                    <li class=""><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
-                    <li class=""><a href="../components/ui_toasts.html">Toasts
-                        <sup class="text-success fw-semi-bold">
-                            new
-                        </sup></a></li>
-                </ul>
-            </li>
-            <li class="">
-                <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-list"></i>
-                    </span>
-                    Forms
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-forms" class="collapse ">
-                    <li class=""><a href="../form/form_elements.html">Form Elements</a></li>
-                    <li class=""><a href="../form/form_validation.html">Form Validation</a></li>
-                    <li class=""><a href="../form/form_wizard.html">Form Wizard</a></li>
-                </ul>
-            </li>
-            <li class=" active ">
-                <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a class="collapsed" href="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-controls"></i>
-                    </span>
-                    Charts
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-charts"
-                    class="collapse  show ">
+        <!--
+          Main sidebar seen on the left. may be static or collapsing depending on selected state.
+        
+            * Collapsing - navigation automatically collapse when mouse leaves it and expand when enters.
+            * Static - stays always open.
+        -->
+        <nav id="sidebar" class="sidebar" role="navigation">
+            <!-- need this .js class to initiate slimscroll -->
+            <div class="js-sidebar-content">
+                <header class="logo d-none d-md-block">
+                    <a href="https://demo.flatlogic.com/sing-app/"><span class="text-warning">sing</span> app</a>
+                </header>
+                <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+                     looks good, so adding it and enhancing with notifications -->
+                <div class="sidebar-status d-md-none">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="thumb-sm avatar float-right">
+                            <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
+                        </span>
+                        <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
+                             should be used with bg-* and text-* classes for colors -->
+                        <span class="circle bg-warning fw-bold text-gray-dark">
+                            13
+                        </span>
+                        &nbsp;
+                        Philip <strong>Smith</strong>
+                    </a>
+                    <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
+                </div>
+                <!-- main notification links are placed inside of .sidebar-nav -->
+                <ul class="sidebar-nav">
                     <li class="">
-                        <a href="../charts/charts.html">Charts Overview</a>
-                    </li>
-                    <li class="">
-                        <a href="../charts/flot.html">Flot Charts</a>
-                    </li>
-                    <li class=" active ">
-                        <a href="../charts/morris.html">Morris Charts</a>
-                    </li>
-                    <li class="">
-                        <a href="../charts/rickshaw.html">Rickshaw Charts</a>
-                    </li>
-                    <li class="">
-                        <a href="../charts/sparkline.html">Sparkline Charts</a>
-                    </li>
-                    <li class="">
-                        <a class="no-pjax" href="../charts/d3_plain.html">D3 version 5 Charts</a>
-                    </li>
-                    <li class="">
-                        <a href="../charts/easy_pie.html">Easy Pie Charts</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="">
-                <a href="../other/grid.html">
-                    <span class="icon">
-                        <i class="fi flaticon-menu-4"></i>
-                    </span>
-                    Grid
-                </a>
-            </li>
-            <li class="">
-                <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-map-location"></i>
-                    </span>
-                    Maps
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-maps" class="collapse ">
-                    <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
-                         target page -->
-                    <li class=""><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
-                    <li class=""><a href="../maps/maps_vector.html">Vector Maps</a></li>
-                </ul>
-            </li>
-            <li class="">
-                <!-- an example of nested submenu. basic bootstrap collapse component -->
-                <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-equal-1"></i>
-                    </span>
-                    Tables
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-tables" class="collapse ">
-                    <li class=""><a href="../tables/tables_basic.html">Tables Basic</a></li>
-                    <li class=""><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
-                </ul>
-            </li>
-            <li class="">
-                <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-star"></i>
-                    </span>
-                    Extra
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-extra" class="collapse ">
-                    <li class=""><a href="../extra/calendar.html">Calendar</a></li>
-                    <li class=""><a href="../extra/invoice.html">Invoice</a></li>
-                    <li class=""><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
-                    <li class=""><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
-                    <li class=""><a href="../extra/gallery.html">Gallery</a></li>
-                    <li class=""><a href="../extra/search.html">Search Results</a></li>
-                    <li class=""><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
-                </ul>
-            </li>
-            <li>
-                <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
-                    <span class="icon">
-                        <i class="fi flaticon-folder-10"></i>
-                    </span>
-                    Menu Levels
-                    <i class="toggle fa fa-angle-down"></i>
-                </a>
-                <ul id="sidebar-levels" class="collapse">
-                    <li><a href="#">Level 1</a></li>
-                    <li>
-                        <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
-                            Level 2
+                        <!-- an example of nested submenu. basic bootstrap collapse component -->
+                        <a href="#sidebar-dashboard" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-home"></i>
+                            </span>
+                            Dashboard
                             <i class="toggle fa fa-angle-down"></i>
                         </a>
-                        <ul id="sidebar-sub-levels" class="collapse">
-                            <li><a href="#">Level 3</a></li>
-                            <li><a href="#">Level 3</a></li>
+                        <ul id="sidebar-dashboard" class="collapse ">
+                            <li class=""><a href="../dashboard/index.html">Analytics</a></li>
+                            <li class=""><a href="../dashboard/visits.html">Visits</a></li>
+                            <li class=""><a href="../dashboard/widgets.html">Widgets</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="../other/package.html">
+                            <span class="icon">
+                              <i class="fi flaticon-database-1"></i>
+                            </span>
+                            Sing Package
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="../other/profile.html">
+                            <span class="icon">
+                                <i class="fi flaticon-user"></i>
+                            </span>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="../other/inbox.html">
+                            <span class="icon">
+                                <i class="fi flaticon-paper-plane"></i>
+                            </span>
+                            Email
+                            <span class="badge bg-warning">
+                                9
+                            </span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="collapsed" href="#sidebar-pages" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-diamond"></i>
+                            </span>
+                            E-commerce
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-pages" class="collapse ">
+                            <li class=""><a href="../e-commerce/product_detail.html">Product Detail</a></li>
+                            <li class=""><a href="../e-commerce/product_grid.html">Product Grid</a></li>
                         </ul>
                     </li>
                 </ul>
-            </li>
-        </ul>
-        <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
-        <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
-        <ul class="sidebar-labels">
-            <li>
-                <a href="#">
-                    <!-- yep, .circle again -->
-                    <i class="fa fa-circle text-danger mr-xs"></i>
-                    <span class="label-name">My Recent</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-circle text-primary mr-xs"></i>
-                    <span class="label-name">Starred</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-circle mr-xs"></i>
-                    <span class="label-name">Background</span>
-                </a>
-            </li>
-        </ul>
-        <h5 class="sidebar-nav-title">Projects</h5>
-        <!-- A place for sidebar notifications & alerts -->
-        <div class="sidebar-alerts">
-            <div class="alert">
-                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-                <span class="fw-normal">Sales Report</span> <br>
-                <div class="progress progress-xs mt-2">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                <!-- every .sidebar-nav may have a title -->
+                <h5 class="sidebar-nav-title">Template <a class="action-link" href="#"><i class="glyphicon glyphicon-refresh"></i></a></h5>
+                <ul class="sidebar-nav">
+                    <li class="">
+                        <!-- an example of nested submenu. basic bootstrap collapse component -->
+                        <a class="collapsed" href="#sidebar-core" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-network"></i>
+                            </span>
+                            Core
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-core" class="collapse ">
+                            <li class=""><a href="../core/core_typography.html">Typography</a></li>
+                            <li class=""><a href="../core/core_colors.html">Colors</a></li>
+                            <li class=""><a href="../core/core_grid.html">Grid</a></li>
+                        </ul> 
+                    </li>
+                    <li class="">
+                        <a class="collapsed" href="#sidebar-ui" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-layers"></i>
+                            </span>
+                            UI Elements
+                            <sup class="text-warning fw-semi-bold">
+                                new
+                            </sup>
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-ui" class="collapse ">
+                            <li class=""><a href="../components/ui_alerts.html">Alerts</a></li>
+                            <li class=""><a href="../components/ui_badge.html">Badge</a></li>
+                            <li class=""><a href="../components/ui_buttons.html">Buttons</a></li>
+                            <li class=""><a href="../components/ui_card.html">Card</a></li>
+                            <li class=""><a href="../components/ui_carousel.html">Carousel</a></li>
+                            <li class=""><a href="../components/ui_jumbotron.html">Jumbotron</a></li>
+                            <li class=""><a href="../components/ui_icons.html">Icons</a></li>
+                            <li class=""><a href="../components/ui_list_groups.html">List Groups</a></li>
+                            <li class=""><a href="../components/ui_modal.html">Modal</a></li>
+                            <li class=""><a href="../components/ui_nav.html">Nav</a></li>
+                            <li class=""><a href="../components/ui_navbar.html">Navbar</a></li>
+                            <li class=""><a href="../components/ui_notifications.html">Notifications</a></li>
+                            <li><a href="../tables/tables_dynamic.html">Pagination</a></li>
+                            <li class=""><a href="../components/ui_popovers_tooltips.html">Popovers & Tooltips</a></li>
+                            <li class=""><a href="../components/ui_progress.html">Progress</a></li>
+                            <li class=""><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
+                            <li class=""><a href="../components/ui_toasts.html">Toasts
+                                <sup class="text-warning fw-semi-bold">
+                                    new
+                                </sup></a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <!-- an example of nested submenu. basic bootstrap collapse component -->
+                        <a class="collapsed" href="#sidebar-forms" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-list"></i>
+                            </span>
+                            Forms
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-forms" class="collapse ">
+                            <li class=""><a href="../form/form_elements.html">Form Elements</a></li>
+                            <li class=""><a href="../form/form_validation.html">Form Validation</a></li>
+                            <li class=""><a href="../form/form_wizard.html">Form Wizard</a></li>
+                        </ul>
+                    </li>
+                    <li class=" active ">
+                        <!-- an example of nested submenu. basic bootstrap collapse component -->
+                        <a class="collapsed" href="#sidebar-charts" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-controls"></i>
+                            </span>
+                            Charts
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-charts"
+                            class="collapse  show ">
+                            <li class="">
+                                <a href="../charts/charts.html">Charts Overview</a>
+                            </li>
+                            <li class="">
+                                <a href="../charts/flot.html">Flot Charts</a>
+                            </li>
+                            <li class=" active ">
+                                <a href="../charts/morris.html">Morris Charts</a>
+                            </li>
+                            <li class="">
+                                <a href="../charts/rickshaw.html">Rickshaw Charts</a>
+                            </li>
+                            <li class="">
+                                <a href="../charts/sparkline.html">Sparkline Charts</a>
+                            </li>
+                            <li class="">
+                                <a class="no-pjax" href="../charts/d3_plain.html">D3 version 5 Charts</a>
+                            </li>
+                            <li class="">
+                                <a href="../charts/easy_pie.html">Easy Pie Charts</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="../other/grid.html">
+                            <span class="icon">
+                                <i class="fi flaticon-menu-4"></i>
+                            </span>
+                            Grid
+                        </a>
+                    </li>
+                    <li class="">
+                        <a class="collapsed" href="#sidebar-maps" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-map-location"></i>
+                            </span>
+                            Maps
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-maps" class="collapse ">
+                            <!-- data-no-pjax turns off pjax loading for this link. Use in case of complicated js loading on the
+                                 target page -->
+                            <li class=""><a href="../maps/maps_google.html" data-no-pjax>Google Maps</a></li>
+                            <li class=""><a href="../maps/maps_vector.html">Vector Maps</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <!-- an example of nested submenu. basic bootstrap collapse component -->
+                        <a class="collapsed" href="#sidebar-tables" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-equal-1"></i>
+                            </span>
+                            Tables
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-tables" class="collapse ">
+                            <li class=""><a href="../tables/tables_basic.html">Tables Basic</a></li>
+                            <li class=""><a href="../tables/tables_dynamic.html">Tables Dynamic</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a class="collapsed" href="#sidebar-extra" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-star"></i>
+                            </span>
+                            Extra
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-extra" class="collapse ">
+                            <li class=""><a href="../extra/calendar.html">Calendar</a></li>
+                            <li class=""><a href="../extra/invoice.html">Invoice</a></li>
+                            <li class=""><a href="../extra/login.html" target="_blank" data-no-pjax>Login Page</a></li>
+                            <li class=""><a href="../extra/error.html" target="_blank" data-no-pjax>Error Page</a></li>
+                            <li class=""><a href="../extra/gallery.html">Gallery</a></li>
+                            <li class=""><a href="../extra/search.html">Search Results</a></li>
+                            <li class=""><a href="../extra/time_line.html" data-no-pjax>Time Line</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="collapsed" href="#sidebar-levels" data-toggle="collapse" data-parent="#sidebar">
+                            <span class="icon">
+                                <i class="fi flaticon-folder-10"></i>
+                            </span>
+                            Menu Levels
+                            <i class="toggle fa fa-angle-down"></i>
+                        </a>
+                        <ul id="sidebar-levels" class="collapse">
+                            <li><a href="#">Level 1</a></li>
+                            <li>
+                                <a class="collapsed" href="#sidebar-sub-levels" data-toggle="collapse" data-parent="#sidebar-levels">
+                                    Level 2
+                                    <i class="toggle fa fa-angle-down"></i>
+                                </a>
+                                <ul id="sidebar-sub-levels" class="collapse">
+                                    <li><a href="#">Level 3</a></li>
+                                    <li><a href="#">Level 3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h5 class="sidebar-nav-title">Labels <a class="action-link" href="#"><i class="glyphicon glyphicon-plus"></i></a></h5>
+                <!-- some styled links in sidebar. ready to use as links to email folders, projects, groups, etc -->
+                <ul class="sidebar-labels">
+                    <li>
+                        <a href="#">
+                            <!-- yep, .circle again -->
+                            <i class="fa fa-circle text-warning mr-xs"></i>
+                            <span class="label-name">My Recent</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle text-gray mr-xs"></i>
+                            <span class="label-name">Starred</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle text-danger mr-xs"></i>
+                            <span class="label-name">Background</span>
+                        </a>
+                    </li>
+                </ul>
+                <h5 class="sidebar-nav-title">Projects</h5>
+                <!-- A place for sidebar notifications & alerts -->
+                <div class="sidebar-alerts">
+                    <div class="alert">
+                        <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                        <span class="fw-normal">Sales Report</span> <br>
+                        <div class="progress progress-xs mt-2">
+                            <div class="progress-bar progress-bar-gray-light" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small>Calculating x-axis bias... 65%</small>
+                    </div>
+                    <div class="alert">
+                        <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                        <span class="fw-normal">Personal Responsibility</span> <br>
+                        <div class="progress progress-xs mt-2">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <small>Provide required notes</small>
+                    </div>
                 </div>
-                <small>Calculating x-axis bias... 65%</small>
             </div>
-            <div class="alert">
-                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
-                <span class="fw-normal">Personal Responsibility</span> <br>
-                <div class="progress progress-xs mt-2">
-                    <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <small>Provide required notes</small>
-            </div>
-        </div>
-    </div>
-</nav>
-    <!-- This is the white navigation bar seen on the top. A bit enhanced BS navbar. See .page-controls in _base.scss. -->
+        </nav>    <!-- This is the white navigation bar seen on the top. A bit enhanced BS navbar. See .page-controls in _base.scss. -->
     <nav class="page-controls navbar navbar-dashboard">
        
         <div class="container-fluid">
@@ -360,23 +359,22 @@
                     <li class="nav-item">
                         <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
                         <a class="d-none d-lg-block nav-link" id="nav-state-toggle" href="#">
-                            <i class="la la-bars" data-step='1' data-intro='You can adjust sidebar, or leave it closed 🙂'></i>
+                            <i class="la la-bars"></i>
                         </a>
                         <!-- shown on xs & sm screen. collapses and expands navigation -->
-    
                         <a class="d-lg-none nav-link" id="nav-collapse-toggle" href="#">
-                            <span class="square square-lg d-md-none"><i class="la la-bars"></i></span>
+                            <span class="square square-lg bg-gray text-white d-md-none"><i class="la la-bars"></i></span>
                             <i class="la la-bars d-none d-md-block"></i>
                         </a>
                     </li>
-                    <li class="nav-item d-none d-md-block ml-3"><a href="#" class="nav-link"><i class="la la-refresh"></i></a></li>
-                    <li class="nav-item ml-n-xs d-none d-md-block ml-3"><a href="#" class="nav-link"><i class="la la-times"></i></a></li>
+                    <li class="nav-item d-none d-md-block"><a href="#" class="nav-link"><i class="la la-refresh"></i></a></li>
+                    <li class="nav-item ml-n-xs d-none d-md-block"><a href="#" class="nav-link"><i class="la la-times"></i></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right d-md-none">
                     <li class="nav-item">
                         <!-- toggles chat -->
                         <a class="nav-link" href="#" data-toggle="chat-sidebar">
-                            <span class="square square-lg"><i class="la la-globe"></i></span>
+                            <span class="square square-lg bg-gray text-white"><i class="la la-globe"></i></span>
                         </a>
                     </li>
                 </ul>
@@ -397,8 +395,8 @@
                 <!-- search form! link it to your search server -->
                 <form class="navbar-form" role="search">
                     <div class="form-group">
-                        <div class="input-group input-group-no-border ml-4">
-                            <input class="form-control" id="main-search" type="text" placeholder="Search Dashboard">
+                        <div class="input-group input-group-no-border">
+                            <input class="form-control" type="text" placeholder="Search Dashboard">
                             <span class="input-group-append">
                                 <span class="input-group-text">
                                     <i class="la la-search"></i>
@@ -417,16 +415,13 @@
                                 data-toggle="dropdown"
                                 aria-haspopup="true"
                                 aria-expanded="false"
-                                data-position="bottom-middle-aligned"
-                                data-disable-interaction="false"
-                                data-step='2' data-intro='Admin can check out his messages and tasks easily&nbsp;😃'
                         >
                             <span class="thumb-sm avatar float-left">
-                                <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="..." >
+                                <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
                             </span>
                             &nbsp;
                             Philip <strong>Smith</strong>&nbsp;
-                            <span class="circle bg-primary fw-bold text-white">
+                            <span class="circle bg-warning fw-bold text-white">
                                 15
                             </span>
                         </a>
@@ -563,9 +558,9 @@
                             </section>
                         </div>
                     </li>
-                    <li class="dropdown nav-item" >
+                    <li class="dropdown nav-item">
                         <a href="#" class="dropdown-toggle no-caret nav-link" data-toggle="dropdown">
-                            <i class="la la-cog" data-step='3' data-intro='Clickable cog can provide you with link to important pages 😄'></i>
+                            <i class="la la-cog"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a class="dropdown-item" href="../other/profile.html"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
@@ -837,70 +832,32 @@
     </div>    <div class="theme-helper">
         <section class="widget theme-helper-content">
             <header class="theme-helper-header d-flex p-0">
-                <div class="theme-helper-toggler hidden-print" data-step='4' data-position="left" data-intro="It's a theme customizer sidebar, go inside it! 😃️">
-                    <div class="theme-helper-spinner bg-primary text-white">
+                <div class="theme-helper-toggler">
+                    <div class="theme-helper-spinner bg-warning text-white">
                         <i class="la la-cog"></i>
                         <i class="la la-cog fs-smaller"></i>
                     </div>
                 </div>
-                <h5>Configuration</h5>
+                <h6>Configuration</h6>
             </header>
             <div class="widget-body mt-3">
-                <h6>Navbar Type</h6>
-                <div class="form-group row justify-content-around">
-                    <div class="abc-radio">
-                        <input type="radio" checked name="navbar-type" id="navbar_static" value="static">
-                        <label for="navbar_static">Static</label>
-                    </div>
-                    <div class="abc-radio">
-                        <input type="radio" name="navbar-type" id="navbar_floating" value="floating">
-                        <label for="navbar_floating">Floating</label>
-                    </div>
-                </div>
-                <h6>Navbar Color</h6>
-                <ul class="colors-list">
-                    <li class="color-box-nav-bar" style="background-color: rgb(0, 43, 73);" data-style="first"></li>
-                    <li class="color-box-nav-bar active" style="background-color: rgb(255, 255, 255);" data-style="second"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(0, 68, 114);" data-style="third"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(233, 235, 239);" data-style="fourth"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(209, 231, 245);" data-style="fifth"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(204, 221, 233);" data-style="sixth"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(214, 223, 230);" data-style="seventh"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(19, 25, 29);" data-style="eighth"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(32, 174, 140);" data-style="ninth"></li>
-                </ul>
-                <h6>Sidebar Type</h6>
-                <div class="form-group row justify-content-around">
-                    <div class="abc-radio"><input type="radio" checked name="sidebar-type" id="sidebar_transparent" value="transparent">
-                    <label for="sidebar_transparent">Transparent</label>
-                    </div>
-                    <div class="abc-radio"><input type="radio" name="sidebar-type" id="sidebar_solid" value="solid" checked>
-                    <label for="sidebar_solid">Solid</label>
-                </div>
-                </div>
-                <h6>Sidebar Color</h6>
-                <ul class="colors-list">
-                    <li class="color-box-side-bar active" style="background-color: rgb(0, 43, 73);" data-style="first"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(255, 255, 255);" data-style="second"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(0, 68, 114);" data-style="third"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(233, 235, 239);" data-style="fourth"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(209, 231, 245);" data-style="fifth"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(204, 221, 233);" data-style="sixth"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(214, 223, 230);" data-style="seventh"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(19, 25, 29);" data-style="eighth"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(32, 174, 140);" data-style="ninth"></li>
-                </ul>
+                <a href="#" class="theme-preview active" id="css-light">
+                    <img src="../demo/img/theme-light.png" alt="Light Theme" class="img-thumbnail">
+                </a>
+                <a href="#" class="theme-preview" id="css-dark">
+                    <img src="../demo/img/theme-dark.png" alt="Dark Theme" class="img-thumbnail">
+                </a>
                 <div class="mt-4">
                     <a href="https://flatlogic.com/admin-dashboards/sing-app-html5"
                        target="_blank"
                        role="button"
-                       class="btn btn-info btn-rounded-f btn-block fs-mini text-white">
+                       class="btn btn-warning btn-rounded-f btn-block fs-mini text-white">
                         Purchase
                     </a>
                     <a href="http://demo.flatlogic.com/sing-app/documentation/"
                        target="_blank"
                        role="button"
-                       class="btn btn-primary btn-rounded-f btn-block fs-mini">
+                       class="btn btn-secondary btn-rounded-f btn-block fs-mini">
                         Documentation
                     </a>
                 </div>
@@ -943,168 +900,174 @@
         <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
         <main id="content" class="content" role="main">
             <!-- Page content -->
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">YOU ARE HERE</li>
-    <li class="breadcrumb-item">Charts</li>
-    <li class="breadcrumb-item active">Morris</li>
-</ol>
-<h1 class="page-title">Visual - <span class="fw-semi-bold">Chart</span></h1>
-<div class="row">
-    <div class="col-lg-6">
-        <section class="widget">
-            <header>
-                <h5>
-                    Morris <span class="fw-semi-bold">Line Chart</span>
-                </h5>
-                <div class="widget-controls">
-                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a data-widgster="collapse" title="Collapse" href="#"><i
-                            class="glyphicon glyphicon-chevron-down"></i></a>
-                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <p class="fs-mini text-muted">
-                    Good-looking charts shouldn't be difficult.
-                    The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
-                    where options is an object containing some of the following configuration options.
-                </p>
-                <div id="morris1" style="height: 343px">
-                </div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item">Charts</li>
+            <li class="breadcrumb-item active">Morris</li>
+        </ol>
+        <h1 class="page-title">Visual - <span class="fw-semi-bold">Chart</span></h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Morris <span class="fw-semi-bold">Line Chart</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p class="fs-mini text-muted">
+                            Good-looking charts shouldn't be difficult.
+                            The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
+                            where options is an object containing some of the following configuration options.
+                        </p>
+                        <div id="morris1" style="height: 343px">
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-    </div>
-    <div class="col-lg-6">
-        <section class="widget">
-            <header>
-                <h5>
-                    Morris <span class="fw-semi-bold">Area Chart</span>
-                </h5>
-                <div class="widget-controls">
-                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a data-widgster="collapse" title="Collapse" href="#"><i
-                            class="glyphicon glyphicon-chevron-down"></i></a>
-                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <p class="fs-mini text-muted">
-                    Good-looking charts shouldn't be difficult.
-                    The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
-                    where options is an object containing some of the following configuration options.
-                </p>
-                <div id="morris2" style="height: 343px">
-                </div>
+            <div class="col-lg-6">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Morris <span class="fw-semi-bold">Area Chart</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <p class="fs-mini text-muted">
+                            Good-looking charts shouldn't be difficult.
+                            The public API is terribly simple. It's just one function: <code>Morris.Line(options)</code>,
+                            where options is an object containing some of the following configuration options.
+                        </p>
+                        <div id="morris2" style="height: 343px">
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-5 col-xl-5">
-        <section class="widget">
-            <header>
-                <h5>
-                    Morris <span class="fw-semi-bold">Bar Chart</span>
-                </h5>
-                <div class="widget-controls">
-                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a data-widgster="collapse" title="Collapse" href="#"><i
-                            class="glyphicon glyphicon-chevron-down"></i></a>
-                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <div id="morris4" style="height: 260px"></div>
-                <p class="fs-mini text-muted">
-                    Bar charts are also commonly referred to as a column charts. If you was trying to compare
-                    the
-                    height of something then intuitvely you would represent this by using columns.
-                    This really couldn't be easier. Create a Bar chart using <code>Morris.Bar(options)</code>,
-                    with only few options.
-                </p>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-xl-5">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Morris <span class="fw-semi-bold">Bar Chart</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div id="morris4" style="height: 260px"></div>
+                        <p class="fs-mini text-muted">
+                            Bar charts are also commonly referred to as a column charts. If you was trying to compare
+                            the
+                            height of something then intuitvely you would represent this by using columns.
+                            This really couldn't be easier. Create a Bar chart using <code>Morris.Bar(options)</code>,
+                            with only few options.
+                        </p>
+                    </div>
+                </section>
             </div>
-        </section>
-    </div>
-    <div class="col-lg-3 col-xl-3">
-        <section class="widget">
-            <header>
-                <h5>
-                    Morris <span class="fw-semi-bold">Donut Chart</span>
-                </h5>
-                <div class="widget-controls">
-                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a data-widgster="collapse" title="Collapse" href="#"><i
-                            class="glyphicon glyphicon-chevron-down"></i></a>
-                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <div id="morris3" style="height: 180px">
-                </div>
-                <p class="fs-mini text-muted">
-                    Donuts a great for representing some parted information like traffice sources,
-                    disk partitions, etc.
-                    This really couldn't be easier. Create a Donut chart using
-                    <code>Morris.Donut(options)</code>,
-                    with only few options.
-                </p>
+            <div class="col-lg-3 col-xl-3">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Morris <span class="fw-semi-bold">Donut Chart</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div id="morris3" style="height: 180px">
+                        </div>
+                        <p class="fs-mini text-muted">
+                            Donuts a great for representing some parted information like traffice sources,
+                            disk partitions, etc.
+                            This really couldn't be easier. Create a Donut chart using
+                            <code>Morris.Donut(options)</code>,
+                            with only few options.
+                        </p>
+                    </div>
+                </section>
             </div>
-        </section>
-    </div>
-    <div class="col-lg-4 col-xl-4">
-        <section class="widget">
-            <header>
-                <h5>
-                    Morris <span class="fw-semi-bold">Bar Chart 2</span>
-                </h5>
-                <div class="widget-controls">
-                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a data-widgster="collapse" title="Collapse" href="#"><i
-                            class="glyphicon glyphicon-chevron-down"></i></a>
-                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <div id="morris6" style="height: 180px"></div>
-                <p class="fs-mini text-muted">
-                    This is generally a good chart to choose for all comparison based analysis but if you were
-                    to display
-                    a data set with negative values a column would be the best to represent this.
-                    This really couldn't be easier. Create a Bar chart using <code>Morris.Bar(options)</code>,
-                    with only few options.
-                </p>
+            <div class="col-lg-4 col-xl-4">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Morris <span class="fw-semi-bold">Bar Chart 2</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div id="morris6" style="height: 180px"></div>
+                        <p class="fs-mini text-muted">
+                            This is generally a good chart to choose for all comparison based analysis but if you were
+                            to display
+                            a data set with negative values a column would be the best to represent this.
+                            This really couldn't be easier. Create a Bar chart using <code>Morris.Bar(options)</code>,
+                            with only few options.
+                        </p>
+                    </div>
+                </section>
             </div>
-        </section>
-    </div>
-    <div class="col-lg-12">
-        <section class="widget">
-            <header>
-                <h5>
-                    Morris <span class="fw-semi-bold">Stacked Bar Chart</span>
-                </h5>
-                <div class="widget-controls">
-                    <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a data-widgster="collapse" title="Collapse" href="#"><i
-                            class="glyphicon glyphicon-chevron-down"></i></a>
-                    <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
-                </div>
-            </header>
-            <div class="widget-body">
-                <div id="morris5" style="height: 200px">
-                </div>
-                <p class="fs-mini text-muted">
-                    Stacked charts are excellent to track some dynamics within declared categories.
-                    An example of this can be seen above.
-                    To create a Stacked Bar chart use <code>Morris.Bar(options)</code> and set
-                    <code>stacked</code>,
-                    option to <code>true</code>.
-                </p>
+            <div class="col-lg-12">
+                <section class="widget">
+                    <header>
+                        <h5>
+                            Morris <span class="fw-semi-bold">Stacked Bar Chart</span>
+                        </h5>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i
+                                    class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i
+                                    class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div id="morris5" style="height: 200px">
+                        </div>
+                        <p class="fs-mini text-muted">
+                            Stacked charts are excellent to track some dynamics within declared categories.
+                            An example of this can be seen above.
+                            To create a Stacked Bar chart use <code>Morris.Bar(options)</code> and set
+                            <code>stacked</code>,
+                            option to <code>true</code>.
+                        </p>
+                    </div>
+                </section>
             </div>
-        </section>
-    </div>
 
-</div>
-            <footer class="content-footer hidden-print">
+        </div>
+            <footer class="content-footer">
                 Sing App - Bootstrap 4.2.1 Admin Dashboard Template - Made by <a href="https://flatlogic.com"
                     rel="nofollow" target="_blank">Flatlogic</a>
             </footer>
@@ -1116,8 +1079,7 @@
     </div>
 
     <!-- common libraries. required for every page-->
-
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>ы
     <script src="../../node_modules/jquery-pjax/jquery.pjax.js"></script>
     <script src='../../node_modules/popper.js/dist/umd/popper.js'></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -1135,11 +1097,11 @@
     <script src="../js/app.js"></script>
 
     <!-- Page scripts -->
-<script src="../../node_modules/raphael/raphael.min.js"></script>
-<script src="../../node_modules/morris.js/morris.min.js"></script>
+        <script src="../../bower_components/jQuery-Mapael/js/raphael/raphael-min.js"></script>
+        <script src="../../bower_components/morris.js/morris.min.js"></script>
 
-<!-- page specific js -->
-<script src="../js/charts/morris.js"></script>
+        <!-- page specific js -->
+        <script src="../js/charts/morris.js"></script>
 </body>
 
 </html>
