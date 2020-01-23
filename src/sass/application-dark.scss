@@ -1,14 +1,14 @@
 @import "variables-dark";
 @import "mixins";
 
-@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-@import '../fonts/flaticon/flaticon';
-@import "../../bower_components/font-awesome/scss/font-awesome";
+@import "../fonts/flaticon/flaticon";
+@import "../../node_modules/font-awesome/scss/font-awesome.scss";
 @import "../../node_modules/line-awesome/dist/css/line-awesome.css";
-@import "../../bower_components/animate.css/animate";
-@import "../../bower_components/bootstrap-select/dist/css/bootstrap-select";
-@import "../../bower_components/select2/dist/css/select2"; //import as css to keep image urls correct
+@import "../../node_modules/animate.css/animate";
+@import "../../node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "../../node_modules/select2/dist/css/select2"; //import as css to keep image urls correct
 @import "../../bower_components/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
 @import "../../bower_components/pace.js/themes/pace-theme-minimal";
 @import "../../bower_components/glyphicons-halflings/scss/glyphicons-halflings";
@@ -41,8 +41,8 @@
 @import "../../bower_components/MetroJS/release/MetroJs.Full/MetroJs";
 @import "../../bower_components/bootstrap-markdown/css/bootstrap-markdown.min";
 @import "../../bower_components/jasny-bootstrap/dist/css/jasny-bootstrap";
-@import '../../bower_components/slick-carousel/slick/slick.scss';
-@import '../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css';
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css";
 
 @import "custom-libs-override";
 

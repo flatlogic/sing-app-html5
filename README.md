@@ -1,5 +1,4 @@
-Sing App - HTML5 Version
-====================================================
+# Sing App - HTML5 Version
 
 ## Quick Start
 
@@ -25,9 +24,10 @@ This command will build the app from the source files (`/src`) into the output
 
 Now you can open your web app in a browser, on mobile devices and start
 hacking. Then open `dist/dashboard/index.html` in your browser. The page must be served from a web server, e.g. apache,
- nginx, WebStorm built-in web server, etc., otherwise some features may not work properly.
+nginx, WebStorm built-in web server, etc., otherwise some features may not work properly.
 
 #### 3. Run `gulp watch`
+
 This command will watch for changes in `/src` and recompile handlebars' templates & scss styles on the fly into html & css accordingly.
 
 For more information please refer to full [documentation](https://demo.flatlogic.com/sing-app/documentation).

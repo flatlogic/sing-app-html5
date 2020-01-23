@@ -3,9 +3,7 @@
   "version": "4.5.0",
   "description": "Sing App Admin Template",
   "main": "index.html",
-  "authors": [
-    "okendoken flatlogic.com"
-  ],
+  "authors": ["okendoken flatlogic.com"],
   "dependencies": {
     "jquery": "^3.3.1",
     "jquery-pjax": "^2.0.1",
@@ -75,10 +73,7 @@
     "bootstrap-wysihtml5": "bootstrap3-wysihtml5#*"
   },
   "private": true,
-  "ignore": [
-    "**/.*",
-    "vendor"
-  ],
+  "ignore": ["**/.*", "vendor"],
   "resolutions": {
     "jquery": "~2.1.3",
     "d3": "~3.5.4",
