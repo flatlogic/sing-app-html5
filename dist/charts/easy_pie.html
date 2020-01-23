@@ -49,7 +49,7 @@
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
         <header class="logo d-none d-md-block">
-            <a href="https://demo.flatlogic.com/sing-app/"><span>sing</span> app</a>
+            <a href="https://demo.flatlogic.com/sing-app/"><span class="text-warning">sing</span> app</a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
@@ -107,7 +107,7 @@
                         <i class="fi flaticon-paper-plane"></i>
                     </span>
                     Email
-                    <span class="badge badge-primary">
+                    <span class="badge bg-warning">
                         9
                     </span>
                 </a>
@@ -150,7 +150,7 @@
                         <i class="fi flaticon-layers"></i>
                     </span>
                     UI Elements
-                    <sup class="text-success fw-semi-bold">
+                    <sup class="text-warning fw-semi-bold">
                         new
                     </sup>
                     <i class="toggle fa fa-angle-down"></i>
@@ -173,7 +173,7 @@
                     <li class=""><a href="../components/ui_progress.html">Progress</a></li>
                     <li class=""><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
                     <li class=""><a href="../components/ui_toasts.html">Toasts
-                        <sup class="text-success fw-semi-bold">
+                        <sup class="text-warning fw-semi-bold">
                             new
                         </sup></a></li>
                 </ul>
@@ -311,19 +311,19 @@
             <li>
                 <a href="#">
                     <!-- yep, .circle again -->
-                    <i class="fa fa-circle text-danger mr-xs"></i>
+                    <i class="fa fa-circle text-warning mr-xs"></i>
                     <span class="label-name">My Recent</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-circle text-primary mr-xs"></i>
+                    <i class="fa fa-circle text-gray mr-xs"></i>
                     <span class="label-name">Starred</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-circle mr-xs"></i>
+                    <i class="fa fa-circle text-danger mr-xs"></i>
                     <span class="label-name">Background</span>
                 </a>
             </li>
@@ -335,7 +335,7 @@
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="fw-normal">Sales Report</span> <br>
                 <div class="progress progress-xs mt-2">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-gray-light" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <small>Calculating x-axis bias... 65%</small>
             </div>
@@ -343,14 +343,13 @@
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="fw-normal">Personal Responsibility</span> <br>
                 <div class="progress progress-xs mt-2">
-                    <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <small>Provide required notes</small>
             </div>
         </div>
     </div>
-</nav>
-    <!-- This is the white navigation bar seen on the top. A bit enhanced BS navbar. See .page-controls in _base.scss. -->
+</nav>    <!-- This is the white navigation bar seen on the top. A bit enhanced BS navbar. See .page-controls in _base.scss. -->
     <nav class="page-controls navbar navbar-dashboard">
        
         <div class="container-fluid">
@@ -360,23 +359,22 @@
                     <li class="nav-item">
                         <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
                         <a class="d-none d-lg-block nav-link" id="nav-state-toggle" href="#">
-                            <i class="la la-bars" data-step='1' data-intro='You can adjust sidebar, or leave it closed 🙂'></i>
+                            <i class="la la-bars"></i>
                         </a>
                         <!-- shown on xs & sm screen. collapses and expands navigation -->
-    
                         <a class="d-lg-none nav-link" id="nav-collapse-toggle" href="#">
-                            <span class="square square-lg d-md-none"><i class="la la-bars"></i></span>
+                            <span class="square square-lg bg-gray text-white d-md-none"><i class="la la-bars"></i></span>
                             <i class="la la-bars d-none d-md-block"></i>
                         </a>
                     </li>
-                    <li class="nav-item d-none d-md-block ml-3"><a href="#" class="nav-link"><i class="la la-refresh"></i></a></li>
-                    <li class="nav-item ml-n-xs d-none d-md-block ml-3"><a href="#" class="nav-link"><i class="la la-times"></i></a></li>
+                    <li class="nav-item d-none d-md-block"><a href="#" class="nav-link"><i class="la la-refresh"></i></a></li>
+                    <li class="nav-item ml-n-xs d-none d-md-block"><a href="#" class="nav-link"><i class="la la-times"></i></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right d-md-none">
                     <li class="nav-item">
                         <!-- toggles chat -->
                         <a class="nav-link" href="#" data-toggle="chat-sidebar">
-                            <span class="square square-lg"><i class="la la-globe"></i></span>
+                            <span class="square square-lg bg-gray text-white"><i class="la la-globe"></i></span>
                         </a>
                     </li>
                 </ul>
@@ -397,8 +395,8 @@
                 <!-- search form! link it to your search server -->
                 <form class="navbar-form" role="search">
                     <div class="form-group">
-                        <div class="input-group input-group-no-border ml-4">
-                            <input class="form-control" id="main-search" type="text" placeholder="Search Dashboard">
+                        <div class="input-group input-group-no-border">
+                            <input class="form-control" type="text" placeholder="Search Dashboard">
                             <span class="input-group-append">
                                 <span class="input-group-text">
                                     <i class="la la-search"></i>
@@ -417,16 +415,13 @@
                                 data-toggle="dropdown"
                                 aria-haspopup="true"
                                 aria-expanded="false"
-                                data-position="bottom-middle-aligned"
-                                data-disable-interaction="false"
-                                data-step='2' data-intro='Admin can check out his messages and tasks easily&nbsp;😃'
                         >
                             <span class="thumb-sm avatar float-left">
-                                <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="..." >
+                                <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
                             </span>
                             &nbsp;
                             Philip <strong>Smith</strong>&nbsp;
-                            <span class="circle bg-primary fw-bold text-white">
+                            <span class="circle bg-warning fw-bold text-white">
                                 15
                             </span>
                         </a>
@@ -563,9 +558,9 @@
                             </section>
                         </div>
                     </li>
-                    <li class="dropdown nav-item" >
+                    <li class="dropdown nav-item">
                         <a href="#" class="dropdown-toggle no-caret nav-link" data-toggle="dropdown">
-                            <i class="la la-cog" data-step='3' data-intro='Clickable cog can provide you with link to important pages 😄'></i>
+                            <i class="la la-cog"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a class="dropdown-item" href="../other/profile.html"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
@@ -837,70 +832,32 @@
     </div>    <div class="theme-helper">
         <section class="widget theme-helper-content">
             <header class="theme-helper-header d-flex p-0">
-                <div class="theme-helper-toggler hidden-print" data-step='4' data-position="left" data-intro="It's a theme customizer sidebar, go inside it! 😃️">
-                    <div class="theme-helper-spinner bg-primary text-white">
+                <div class="theme-helper-toggler">
+                    <div class="theme-helper-spinner bg-warning text-white">
                         <i class="la la-cog"></i>
                         <i class="la la-cog fs-smaller"></i>
                     </div>
                 </div>
-                <h5>Configuration</h5>
+                <h6>Configuration</h6>
             </header>
             <div class="widget-body mt-3">
-                <h6>Navbar Type</h6>
-                <div class="form-group row justify-content-around">
-                    <div class="abc-radio">
-                        <input type="radio" checked name="navbar-type" id="navbar_static" value="static">
-                        <label for="navbar_static">Static</label>
-                    </div>
-                    <div class="abc-radio">
-                        <input type="radio" name="navbar-type" id="navbar_floating" value="floating">
-                        <label for="navbar_floating">Floating</label>
-                    </div>
-                </div>
-                <h6>Navbar Color</h6>
-                <ul class="colors-list">
-                    <li class="color-box-nav-bar" style="background-color: rgb(0, 43, 73);" data-style="first"></li>
-                    <li class="color-box-nav-bar active" style="background-color: rgb(255, 255, 255);" data-style="second"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(0, 68, 114);" data-style="third"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(233, 235, 239);" data-style="fourth"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(209, 231, 245);" data-style="fifth"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(204, 221, 233);" data-style="sixth"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(214, 223, 230);" data-style="seventh"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(19, 25, 29);" data-style="eighth"></li>
-                    <li class="color-box-nav-bar" style="background-color: rgb(32, 174, 140);" data-style="ninth"></li>
-                </ul>
-                <h6>Sidebar Type</h6>
-                <div class="form-group row justify-content-around">
-                    <div class="abc-radio"><input type="radio" checked name="sidebar-type" id="sidebar_transparent" value="transparent">
-                    <label for="sidebar_transparent">Transparent</label>
-                    </div>
-                    <div class="abc-radio"><input type="radio" name="sidebar-type" id="sidebar_solid" value="solid" checked>
-                    <label for="sidebar_solid">Solid</label>
-                </div>
-                </div>
-                <h6>Sidebar Color</h6>
-                <ul class="colors-list">
-                    <li class="color-box-side-bar active" style="background-color: rgb(0, 43, 73);" data-style="first"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(255, 255, 255);" data-style="second"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(0, 68, 114);" data-style="third"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(233, 235, 239);" data-style="fourth"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(209, 231, 245);" data-style="fifth"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(204, 221, 233);" data-style="sixth"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(214, 223, 230);" data-style="seventh"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(19, 25, 29);" data-style="eighth"></li>
-                    <li class="color-box-side-bar" style="background-color: rgb(32, 174, 140);" data-style="ninth"></li>
-                </ul>
+                <a href="#" class="theme-preview active" id="css-light">
+                    <img src="../demo/img/theme-light.png" alt="Light Theme" class="img-thumbnail">
+                </a>
+                <a href="#" class="theme-preview" id="css-dark">
+                    <img src="../demo/img/theme-dark.png" alt="Dark Theme" class="img-thumbnail">
+                </a>
                 <div class="mt-4">
                     <a href="https://flatlogic.com/admin-dashboards/sing-app-html5"
                        target="_blank"
                        role="button"
-                       class="btn btn-info btn-rounded-f btn-block fs-mini text-white">
+                       class="btn btn-warning btn-rounded-f btn-block fs-mini text-white">
                         Purchase
                     </a>
                     <a href="http://demo.flatlogic.com/sing-app/documentation/"
                        target="_blank"
                        role="button"
-                       class="btn btn-primary btn-rounded-f btn-block fs-mini">
+                       class="btn btn-secondary btn-rounded-f btn-block fs-mini">
                         Documentation
                     </a>
                 </div>
@@ -1042,7 +999,7 @@
         </section>
     </div>
 </div>
-            <footer class="content-footer hidden-print">
+            <footer class="content-footer">
                 Sing App - Bootstrap 4.2.1 Admin Dashboard Template - Made by <a href="https://flatlogic.com"
                     rel="nofollow" target="_blank">Flatlogic</a>
             </footer>
@@ -1054,8 +1011,7 @@
     </div>
 
     <!-- common libraries. required for every page-->
-
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>ы
     <script src="../../node_modules/jquery-pjax/jquery.pjax.js"></script>
     <script src='../../node_modules/popper.js/dist/umd/popper.js'></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
