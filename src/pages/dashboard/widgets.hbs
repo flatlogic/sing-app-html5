@@ -3,21 +3,22 @@
 {{> sidebar active="dashboard_widgets"}}
 {{/content}}
 {{#content "content" mode="replace"}}
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">YOU ARE HERE</li>
-    <li class="breadcrumb-item active">Widgets</li>
-</ol>
+<!--<ol class="breadcrumb">-->
+<!--<li class="breadcrumb-item">YOU ARE HERE</li>-->
+<!--<li class="active">Widgets</li>-->
+<!--</ol>-->
+<!--<h2 class="page-title">Widgets - <span class="fw-semi-bold">Options</span></h2>-->
 <div class="row">
     <div class="col-lg-3 col-md-6">
         <section class="widget widget-card">
             <div class="widget-body clearfix">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-3">
                         <span class="widget-icon">
                             <i class="fi flaticon-like text-primary"></i>
                         </span>
                     </div>
-                    <div class="col">
+                    <div class="col-9">
                         <h6 class="no-margin">USERS GROWTH</h6>
                         <p class="h2 no-margin fw-normal">4,332</p>
                     </div>
@@ -39,20 +40,20 @@
         <section class="widget widget-card">
             <div class="widget-body clearfix">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-3">
                         <span class="widget-icon">
-                            <i class="fi flaticon-magic-wand text-danger"></i>
+                            <i class="fi flaticon-magic-wand text-info"></i>
                         </span>
                     </div>
-                    <div class="col">
+                    <div class="col-9">
                         <div class="live-tile" data-mode="carousel" data-speed="750" data-delay="3000" data-height="57">
                             <div>
                                 <h6 class="no-margin">VISITS TODAY</h6>
-                                <p class="h3 no-margin fw-normal">12,324</p>
+                                <p class="h2 no-margin fw-normal">12,324</p>
                             </div>
                             <div>
                                 <h6 class="no-margin">VISITS YESTERDAY</h6>
-                                <p class="h3 no-margin fw-normal">11,885</p>
+                                <p class="h2 no-margin fw-normal">11,885</p>
                             </div>
                         </div>
                     </div>
@@ -90,12 +91,12 @@
                 <div class="live-tile" data-mode="fade" data-speed="750" data-delay="4000" data-height="100">
                     <div class="bg-white">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-3">
                                 <span class="widget-icon">
-                                    <i class="fi flaticon-notebook-4 text-primary"></i>
+                                    <i class="fi flaticon-notebook-4"></i>
                                 </span>
                             </div>
-                            <div class="col">
+                            <div class="col-9">
                                 <h6 class="no-margin">ORDERS</h6>
                                 <p class="h2 no-margin fw-normal">82,765</p>
                             </div>
@@ -113,12 +114,12 @@
                     </div>
                     <div class="bg-white">
                         <div class="row">
-                            <div class="col">
+                            <div class="col-3">
                                 <span class="widget-icon">
-                                    <i class="fi flaticon-shuffle text-primary"></i>
+                                    <i class="fi flaticon-shuffle"></i>
                                 </span>
                             </div>
-                            <div class="col">
+                            <div class="col-9">
                                 <h6 class="no-margin">PICKED ORDERS</h6>
                                 <p class="h2 no-margin fw-normal">13.8%</p>
                             </div>
@@ -142,12 +143,12 @@
         <section class="widget widget-card">
             <div class="widget-body clearfix">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-3">
                         <span class="widget-icon">
                             <i class="fi flaticon-diamond text-success"></i>
                         </span>
                     </div>
-                    <div class="col">
+                    <div class="col-9">
                         <h6 class="no-margin">TOTAL PROFIT</h6>
                         <p class="h2 no-margin fw-normal">$7,448</p>
                     </div>
@@ -196,7 +197,7 @@
             <div class="widget-body">
                 <div class="chart-stats">
                     <p class="text-muted fs-mini mt-xs">
-                        <i class="fa fa-map-marker fa-5x float-left mr-3"></i>
+                        <i class="fi flaticon-placeholder fa-5x float-left mr-3 mt-n-sm"></i>
                         <span class="fw-semi-bold text-gray-dark">Jess:</span> Seems like statically it's getting
                         impossible to achieve any sort of
                         results in nearest future. The only thing we can hope for is pressing one of these two buttons:
@@ -270,7 +271,7 @@
                     <div class="stats">
                         <h6 class="text-gray-dark">YEARLY <span class="fw-semi-bold">DISTRIBUTIONS</span></h6>
                         <span class="float-left mr-xs">
-                            <small><span class="circle bg-primary text-white"><i
+                            <small><span class="circle bg-warning text-gray-dark"><i
                                         class="fa fa-plus"></i></span></small>
                         </span>
                         <p class="h5 no-margin">
@@ -360,7 +361,7 @@
         </section>
     </div>
     <div class="col-lg-4">
-        <section class="widget">
+        <section class="widget bg-gray-dark text-white">
             <div class="widget-body">
                 <h5 class="mb-lg">Recent <span class="fw-semi-bold">Update</span></h5>
                 <h6>Node.js <span class="fw-semi-bold">4.0.1 distribution</span></h6>
@@ -368,11 +369,11 @@
                     <div class="progress-bar progress-xs bg-danger" style="width: 77%"></div>
                 </div>
                 <p class="mt-sm mb">
-                    <small><span class="circle bg-primary text-white"><i
+                    <small><span class="circle bg-warning text-gray-dark"><i
                                 class="la la-chevron-up"></i></span></small>
                     <strong>17% higher</strong>
                     than last month</p>
-                <p class="fs-smaller mb-0">Remaining hours</p>
+                <p class="fs-smaller text-gray-lighter mb-0">Remaining hours</p>
                 <a class="btn btn-sm btn-gray float-right ml-xs" href="#">
                     <i class="fa fa-compress"></i> track
                 </a>
@@ -394,7 +395,7 @@
                 <a href="#" data-widgster="close"><i class="la la-remove"></i></a>
             </div>
             <div class="widget-body">
-                <div class="widget-top-overlay widget-padding-md clearfix bg-info text-white">
+                <div class="widget-top-overlay widget-padding-md clearfix bg-warning text-white">
                     <h3 class="mt-lg mb-lg">Sing - <span class="fw-semi-bold">Next Generation</span> Admin Dashboard
                         Template</h3>
                     <ul class="tags text-white float-right">
@@ -410,7 +411,7 @@
                     <p class="fs-mini text-muted"><time>25 mins</time> &nbsp; <i class="fa fa-map-marker"></i> &nbsp;
                         near Amsterdam</p>
                 </div>
-                <p class="text-light fs-mini mt-lg">Lots of cool stuff is happening around you. Just calm down for a sec and
+                <p class="text-light fs-mini">Lots of cool stuff is happening around you. Just calm down for a sec and
                     listen. Colors, sounds,
                     thoughts, ideas. </p>
             </div>
@@ -498,7 +499,7 @@
                         <li><a href="#">design</a></li>
                     </ul>
                 </div>
-                <p class="text-light fs-mini">Lots of cool stuff is happening around you. Just calm down for a sec
+                <p class="text-light fs-mini mt-sm">Lots of cool stuff is happening around you. Just calm down for a sec
                     and listen. Colors, sounds,
                     thoughts, ideas. </p>
             </div>
@@ -568,7 +569,7 @@
                 <section class="widget p-0 text-center">
                     <div class="row no-margin display-flex">
                         <div class="col-5 bg-danger btlr bblr">
-                            <canvas class="mt-3" id="clear-day-1" width="62" height="62"></canvas></br>
+                            <canvas class="mt-3" id="clear-day-1" width="62" height="62"></canvas>
                             <h6 class="text-white display-inline-block fw-normal">FRIDAY</h6>
                         </div>
                         <div class="col-7">
@@ -706,7 +707,7 @@
 </div>
 <div class="row">
     <div class="col-lg-3">
-        <section class="widget widget-padding-lg">
+        <section class="widget windget-padding-lg">
             <div class="widget-body clearfix">
                 <div class="live-tile" data-mode="carousel" data-speed="750" data-delay="3000" data-height="313">
                     <div>
@@ -733,7 +734,7 @@
                         <div class="widget-footer-bottom">
                             <p>Attention to what's really important</p>
                             <button class="btn btn-inverse btn-block mt"><span
-                                    class="fw-semi-bold">Ready?</span></button>
+                                    class="fw-semi-bold text-warning">Ready?</span></button>
                         </div>
                     </div>
                 </div>
@@ -782,7 +783,7 @@
         </section>
     </div>
     <div class="col-lg-3">
-        <section class="widget widget-padding-lg bg-info text-white">
+        <section class="widget windget-padding-lg bg-primary text-white">
             <div class="widget-body clearfix">
                 <div class="live-tile" data-mode="carousel" data-speed="300" data-delay="3000" data-height="313">
                     <div>
@@ -823,7 +824,7 @@
         <div class="live-tile" data-mode="flip" data-direction="horizontal" data-speed="600" data-delay="3000"
             data-height="373" data-play-onhover="true">
             <div>
-                <section class="widget widget-padding-lg widget-md bg-primary text-white">
+                <section class="widget windget-padding-lg widget-md bg-gray-dark text-white">
                     <div class="widget-body widget-body-container">
                         <div class="text-center">
                             <i class="fa fa-child text-warning fa-5x"></i>
@@ -837,7 +838,7 @@
                 </section>
             </div>
             <div>
-                <section class="widget widget-padding-lg widget-md">
+                <section class="widget windget-padding-lg widget-md">
                     <div class="widget-body widget-body-container">
                         <div class="text-center">
                             <i class="fa fa-globe text-primary fa-5x"></i>
@@ -860,11 +861,10 @@
 <script src="../../node_modules/jquery-sparkline/jquery.sparkline.js"></script>
 <script src="../../node_modules/d3/d3.min.js"></script>
 <script src="../../node_modules/rickshaw/rickshaw.min.js"></script>
-
-<script src="../../node_modules/jquery-mapael-0.7.1/js/raphael/raphael-min.js"></script>
-<script src="../../node_modules/jquery-mapael-0.7.1/js/jquery.mapael.js"></script>
-<script src="../../node_modules/jquery-mapael-0.7.1/js/maps/usa_states.js"></script>
-<script src="../../node_modules/jquery-mapael-0.7.1/js/maps/world_countries.js"></script>
+<script src="../../node_modules/raphael/raphael.min.js"></script>
+<script src="../../node_modules/jquery-mapael/js/jquery.mapael.js"></script>
+<script src="../../node_modules/jquery-mapael/js/maps/usa_states.js"></script>
+<script src="../../node_modules/jquery-mapael/js/maps/world_countries.js"></script>
 <script src="../../node_modules/flot/jquery.flot.js"></script>
 <script src="../../node_modules/metrojs/release/MetroJs.Full/MetroJs.js"></script>
 <script src="../../node_modules/skycons/skycons.js"></script>
