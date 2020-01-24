@@ -113,6 +113,11 @@ ajv@^5.3.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
+almond@~0.3.1:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/almond/-/almond-0.3.3.tgz#a0e7c95ac7624d6417b4494b1e68bff693168a20"
+  integrity sha1-oOfJWsdiTWQXtElLHmi/9pMWiiA=
+
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
@@ -408,19 +413,16 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bootstrap-calendar@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/bootstrap-calendar/-/bootstrap-calendar-0.2.4.tgz#4af891a0f20fdf03a86f2ebfbf867f3dc92cee6e"
-  integrity sha1-SviRoPIP3wOoby6/v4Z/Pcks7m4=
+"bootstrap-application-wizard@https://github.com/amoffat/bootstrap-application-wizard.git":
+  version "0.0.0"
+  resolved "https://github.com/amoffat/bootstrap-application-wizard.git#91c9ba33efa3929be46b68616a128da4470f552e"
 
-bootstrap-colorpicker@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/bootstrap-colorpicker/-/bootstrap-colorpicker-3.2.0.tgz#42b053b865a866b2674527813cd59f90137b9704"
-  integrity sha512-twW93EFLf4MzZ/st+MkfdLCWEEA7r43WPlPnGckzm3Lj2FsbmVS/qgJH2c9IcmO3re5Q1320NO9bhuViwHR9Qw==
+bootstrap-colorpicker@^2.3.0:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/bootstrap-colorpicker/-/bootstrap-colorpicker-2.5.3.tgz#b50aff8590fbaa6b5aa63a5624e4213f1659a49d"
+  integrity sha512-xdllX8LSMvKULs3b8JrgRXTvyvjkSMHHHVuHjjN5FNMqr6kRe5NPiMHFmeAFjlgDF73MspikudLuEwR28LbzLw==
   dependencies:
-    bootstrap ">=4.0"
-    jquery ">=2.1.0"
-    popper.js ">=1.10"
+    jquery ">=1.10"
 
 bootstrap-markdown@^2.10.0:
   version "2.10.0"
@@ -432,15 +434,19 @@ bootstrap-select@^1.13.12:
   resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.12.tgz#81b9f1394cb8d7151aea16fb9030c112330dbf98"
   integrity sha512-epsPt6WpgmL9Q9Y22JFntajdhhqvCwV/JKiBZF3YFvMHK9YzzDPQft/Cjqvsgq0bhF32BlvG03Qs3qA/pVRAqQ==
 
-bootstrap-slider@^10.6.2:
-  version "10.6.2"
-  resolved "https://registry.yarnpkg.com/bootstrap-slider/-/bootstrap-slider-10.6.2.tgz#7341f468c012bdaa6a1d8625d989fdeb8ed7dd38"
-  integrity sha512-8JTPZB9QVOdrGzYF3YgC3YW6ssfPeBvBwZnXffiZ7YH/zz1D0EKlZvmQsm/w3N0XjVNYQEoQ0ax+jHrErV4K1Q==
+bootstrap-slider@10.2.1:
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-slider/-/bootstrap-slider-10.2.1.tgz#c07d7a7d817ba794ac69b56ae1280974e39b63ff"
+  integrity sha512-sajEjunOzQyUqzFPTfXIiCMWaNzktFPze0DdHHYE07aXzNFHNjp+iB5r1DmK6PaRuSEUXnmr2siS9x1Fx8R+Tg==
 
 bootstrap-wizard@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/bootstrap-wizard/-/bootstrap-wizard-1.4.2.tgz#89611d6dd13aebd92f7424684d120f23c7a56d17"
   integrity sha512-1W05bYvDOuD3xyliFZaLRasu2mIB+AekDDfbzu4hCNb24vWQZ8g/1rjbEypzsgI7eml/yjIZah3uEjg5opI6Jw==
+
+"bootstrap-wysihtml5@https://github.com/jhollingworth/bootstrap-wysihtml5.git":
+  version "0.0.0"
+  resolved "https://github.com/jhollingworth/bootstrap-wysihtml5.git#1b2506a98f481afd511ddee7803c9495108e0e0d"
 
 bootstrap3-wysihtml5-npm@^0.3.3-npm.12:
   version "0.3.3-npm.12"
@@ -450,7 +456,7 @@ bootstrap3-wysihtml5-npm@^0.3.3-npm.12:
     handlebars "^1.3.0"
     wysihtml "^0.6.0-beta1"
 
-bootstrap@>=4.0, bootstrap@>=4.1.2, bootstrap@^4.3.1:
+bootstrap@>=4.1.2, bootstrap@^4.3.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.4.1.tgz#8582960eea0c5cd2bede84d8b0baf3789c3e8b01"
   integrity sha512-tbx5cHubwE6e2ZG7nqM3g/FZ5PQEDMWmMGNrCUBVRPHXTJaH7CBDdsLeu3eCh3B1tzAxTnAbtmrzvWEvT2NNEA==
@@ -460,9 +466,9 @@ bootstrap@^3.3:
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
   integrity sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==
 
-"bootstrap_calendar@https://github.com/xero/bootstrap_calendar.git":
+"bootstrap_calendar@https://github.com/xero/bootstrap_calendar#v1.0.1":
   version "0.0.0"
-  resolved "https://github.com/xero/bootstrap_calendar.git#9b888813031253189894f1b1c1e58aaf97c41c60"
+  resolved "https://github.com/xero/bootstrap_calendar#796c6621ce7e50865be72871f87e6c732906d6fa"
 
 brace-expansion@^1.0.0, brace-expansion@^1.1.7:
   version "1.1.11"
@@ -666,6 +672,11 @@ component-emitter@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
 
+components-jqueryui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/components-jqueryui/-/components-jqueryui-1.12.1.tgz#617076f128f3be4c265f3e2db50471ef96cd9cee"
+  integrity sha1-YXB28SjzvkwmXz4ttQRx75bNnO4=
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -705,13 +716,6 @@ css@2.X, css@^2.2.1:
     source-map "^0.6.1"
     source-map-resolve "^0.5.2"
     urix "^0.1.0"
-
-cssify@~0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/cssify/-/cssify-0.3.0.tgz#22c84b5a2aa96cbec4a9f2b8dddd6c6ca357f329"
-  integrity sha1-IshLWiqpbL7EqfK43d1sbKNX8yk=
-  dependencies:
-    through "~2.3.4"
 
 cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   version "0.3.8"
@@ -1742,6 +1746,11 @@ glogg@^1.0.0:
   dependencies:
     sparkles "^1.0.0"
 
+glyphicons-halflings@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/glyphicons-halflings/-/glyphicons-halflings-1.9.1.tgz#18e72f20034240038a5e884383bb7945e2dd262a"
+  integrity sha1-GOcvIANCQAOKXohDg7t5ReLdJio=
+
 gmaps@^0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/gmaps/-/gmaps-0.4.24.tgz#07f22f0cfc3e4e32498950ffafd7ca635ffc100c"
@@ -2311,10 +2320,19 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
+"jQuery-Mapael@https://github.com/neveldo/jQuery-Mapael#v0.7.1":
+  version "0.0.0"
+  resolved "https://github.com/neveldo/jQuery-Mapael#556cd9d3ca8944f263c8efe02fd9f700c53563be"
+
 jasny-bootstrap@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/jasny-bootstrap/-/jasny-bootstrap-3.1.3.tgz#b072a681d50c649762c9543c7a6093d9baa2f87b"
   integrity sha1-sHKmgdUMZJdiyVQ8emCT2bqi+Hs=
+
+jquery-autosize@^1.18.18:
+  version "1.18.18"
+  resolved "https://registry.yarnpkg.com/jquery-autosize/-/jquery-autosize-1.18.18.tgz#28fcdfd671cbf3ee661ca484c19ee7aaa65e825a"
+  integrity sha1-KPzf1nHL8+5mHKSEwZ7nqqZeglo=
 
 jquery-bootstrap-wizard@^1.4.2:
   version "1.4.2"
@@ -2329,10 +2347,10 @@ jquery-hammerjs@^2.0.0:
     hammerjs "2.0.x"
     jquery "2.1.x"
 
-jquery-mapael@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/jquery-mapael/-/jquery-mapael-1.1.0.tgz#6093270ba894333e48cd81a2207ff7d294193a54"
-  integrity sha1-YJMnC6iUMz5IzYGiIH/30pQZOlQ=
+jquery-mousewheel@~3.1.13:
+  version "3.1.13"
+  resolved "https://registry.yarnpkg.com/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz#06f0335f16e353a695e7206bf50503cb523a6ee5"
+  integrity sha1-BvAzXxbjU6aV5yBr9QUDy1I6buU=
 
 jquery-nestable@^0.8.0:
   version "0.8.0"
@@ -2373,12 +2391,12 @@ jquery.animate-number@0.0.14:
   dependencies:
     jquery ">= 1.7.0"
 
-jquery@2.1.x:
+jquery@2.1.4, jquery@2.1.x:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
   integrity sha1-IoveaYoMYUMdwmMKahVPFYkNIxc=
 
-"jquery@>= 1.7", "jquery@>= 1.7.0", jquery@>=1.3.2, jquery@>=1.5, jquery@>=1.7, jquery@>=1.8.0, jquery@>=1.8.3, jquery@>=2.1.0, "jquery@^1.8.3 || ^2.0 || ^3.0", jquery@^3.0, jquery@^3.3.1:
+"jquery@>= 1.7", "jquery@>= 1.7.0", jquery@>=1.10, jquery@>=1.3.2, jquery@>=1.7, jquery@>=1.8.0, jquery@>=1.8.3, "jquery@^1.8.3 || ^2.0 || ^3.0", jquery@^3.0:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
@@ -2453,12 +2471,9 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jvectormap@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/jvectormap/-/jvectormap-2.0.4.tgz#7913e1577285c156eda156430f90ed5ada068e4b"
-  integrity sha1-eRPhV3KFwVbtoVZDD5DtWtoGjks=
-  dependencies:
-    jquery ">=1.5"
+"jvectormap@https://github.com/bjornd/jvectormap#v2.0.3":
+  version "0.0.0"
+  resolved "https://github.com/bjornd/jvectormap#8beb9191610a017d828213729d62b093b25e2519"
 
 kind-of@^1.1.0:
   version "1.1.0"
@@ -2745,6 +2760,10 @@ merge2@^1.2.3, merge2@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.3.0.tgz#5b366ee83b2f1582c48f87e47cf1a9352103ca81"
   integrity sha512-2j4DAdlBOkiSZIsaXk4mTE3sRS02yBHAtfy127xRV3bQUFqXkjHCHLW6Scv7DwNRbIWNHH8zpnz9zMaKXIdvYw==
+
+"messenger@https://github.com/HubSpot/messenger.git":
+  version "1.5.0"
+  resolved "https://github.com/HubSpot/messenger.git#b1b176185276464f45bf6be3d28c4064a82198c7"
 
 metrojs@^0.9.77:
   version "0.9.77"
@@ -3279,7 +3298,7 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-popper.js@>=1.10, popper.js@^1.14.3:
+popper.js@^1.14.3:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
@@ -3635,10 +3654,13 @@ select2-bootstrap-css@^1.4.6:
   resolved "https://registry.yarnpkg.com/select2-bootstrap-css/-/select2-bootstrap-css-1.4.6.tgz#5cfb68246f5299ca1858e01efd788804c734997e"
   integrity sha1-XPtoJG9SmcoYWOAe/XiIBMc0mX4=
 
-select2@^4.0.12:
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/select2/-/select2-4.0.12.tgz#9c0492d4d06948f2bd079f6e14718a41c7eaa60e"
-  integrity sha512-mbXC05AvjCboZcRlgJqN4mlI2qmqshpRC76sKNAdxS1lPLOh2m/NTyfL6xsvGoY6eIhjaya4dbumN99MudVQ2w==
+select2@4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/select2/-/select2-4.0.5.tgz#7aac50692561985b34d3b82ec55e226f8960d40a"
+  integrity sha1-eqxQaSVhmFs007guxV4ib4lg1Ao=
+  dependencies:
+    almond "~0.3.1"
+    jquery-mousewheel "~3.1.13"
 
 "semver@2 || 3 || 4 || 5":
   version "5.6.0"
@@ -3707,10 +3729,9 @@ signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-skycons@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/skycons/-/skycons-1.0.0.tgz#afb160c5901470aae84676fbc38bbd7dd5b69d8f"
-  integrity sha1-r7FgxZAUcKroRnb7w4u9fdW2nY8=
+"skycons@https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed":
+  version "0.0.0"
+  resolved "https://github.com/darkskyapp/skycons.git#60d41374ea97c5da1f92622ddcecca6dd1d9beed"
 
 slash@^3.0.0:
   version "3.0.0"
@@ -3946,12 +3967,9 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-switchery@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/switchery/-/switchery-0.0.2.tgz#8d522c4eb3258bacc6c91bec980e0e46e312d06e"
-  integrity sha1-jVIsTrMli6zGyRvsmA4ORuMS0G4=
-  dependencies:
-    cssify "~0.3.0"
+"switchery@https://github.com/abpetkov/switchery.git":
+  version "0.8.2"
+  resolved "https://github.com/abpetkov/switchery.git#778104eb5bd2579a24f4d9bd124592dcdb8598aa"
 
 symbol-tree@^3.2.2:
   version "3.2.4"
@@ -4004,11 +4022,6 @@ through2@^3.0.0:
   integrity sha512-M96dvTalPT3YbYLaKaCuwu+j06D/8Jfib0o/PxbVt6Amhv3dUAtW6rTV1jPgJSBG83I/e04Y6xkVdVhSRhi0ww==
   dependencies:
     readable-stream "2 || 3"
-
-through@~2.3.4:
-  version "2.3.8"
-  resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
-  integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
 tildify@^1.0.0:
   version "1.2.0"
@@ -4111,6 +4124,10 @@ turndown@^5.0.3:
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
+
+"twitter-bootstrap-wizard@https://github.com/VinceG/twitter-bootstrap-wizard#1.4.2":
+  version "0.0.0"
+  resolved "https://github.com/VinceG/twitter-bootstrap-wizard#d79e9a2e90c07e5360a980690b94144063367f17"
 
 type-check@~0.3.2:
   version "0.3.2"

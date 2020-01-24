@@ -25,22 +25,20 @@ $gray-400: #c1ccd3 !default;
 $gray-500: #a3aeb7 !default;
 $gray-600: #798892 !default;
 $gray-700: #495057 !default;
-$gray-750: #F6F6E9 !default;
 $gray-800: #3c484f !default;
 $gray-900: #29323a !default;
 $black: #000 !default;
 $gray-light: $gray-100 !default;
 
-$blue: #005792 !default;
-$skyblue: #1A86D0 !default;
+$blue: #547fff !default;
 $indigo: #7f3ddb !default;
 $purple: #9964e3 !default;
 $pink: #e54e9a !default;
-$red: #fd5f00 !default;
+$red: #f55d5d !default;
 $orange: #ff7d47 !default;
-$yellow: #fda700 !default;
+$yellow: #ffc247 !default;
 $green: #68ca66 !default;
-$teal: #21AE8C !default;
+$teal: #3abf94 !default;
 $cyan: #17a2b8 !default;
 
 $theme-colors: (
@@ -52,12 +50,12 @@ $theme-colors: (
   info-light: #f2fafa,
   warning-light: #fdf7e6,
   danger-light: #fff2ef,
-  info: $skyblue,
+  info: $purple,
   warning: $yellow,
   danger: $red,
   dark: $gray-800,
-  inverse: #002B49,
-  gray: #d7dfe6,
+  inverse: $gray-700,
+  gray: $gray-300,
   default: #e9ecef
 );
 
@@ -66,9 +64,9 @@ $theme-colors: (
 $body-bg: #f9fbfd !default;
 $body-bg-light: lighten($body-bg, 3%);
 
-$addition-bg: $gray-200 !default;
+$addition-bg: $gray-100 !default;
 
-$logo-color: $gray-750;
+$logo-color: $gray-800;
 
 // Typography
 // -------------------------
@@ -104,12 +102,12 @@ $sidebar-width: 220px + $sidebar-slim-scroll-width !default;
 
 $sidebar-transition-time: 0.3s !default;
 
-$sidebar-action-bg: #042338 !default;
-$sidebar-bg-color: #002B49 !default;
-$sidebar-color: #c2c2c2 !default;
+$sidebar-action-bg: #f9fafe !default;
+$sidebar-bg-color: #fff !default;
+$sidebar-color: #6c757d !default;
 $sidebar-font-weight: 300;
 $sidebar-item-border-color: transparent !default;
-$sidebar-item-active-color: $gray-750 !default;
+$sidebar-item-active-color: $yellow !default;
 $sidebar-item-hover-color: lighten($sidebar-color, 10%);
 $sidebar-item-hover-bg-color: $sidebar-action-bg;
 $sidebar-ul-background: $sidebar-action-bg;
@@ -143,9 +141,8 @@ $screen-lg-height: 670px !default;
 $widget-padding-vertical: 20px !default;
 $widget-padding-horizontal: 20px !default;
 $widget-bg-color: $white;
-$widget-shadow-color: 75,102,171;
-$widget-shadow: 4px 4px 30px 0px rgba(75,102,171,0.2);
-$widget-card-shadow: 4px 4px 10px 0px rgba(75,102,171,0.2);
+$widget-shadow: 0 23px 20px -20px rgba(darken($body-bg, 35%), 0.1),
+  0 0 15px rgba(darken($body-bg, 35%), 0.06);
 
 $widget-shadow-designated: -1px 0 8px rgba(0, 0, 0, 0.2);
 $widget-border-radius: $border-radius-lg;
