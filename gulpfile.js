@@ -29,25 +29,28 @@ const srcPaths = {
 
 hb.handlebars.registerHelper(layouts(hb.handlebars));
 
-gulp.task("clean", () => {
+function clean() {
+  // gulp.task("clean", async function() {
   return del(["dist/*"]);
-});
+}
 
 // Copy demo, img, js, fonts folders from src to dist
-gulp.task("copy", ["copy:js"], function() {
+function copy() {
+  // gulp.task("copy", ["copy:js"], function() {
   return gulp
     .src([...srcPaths.static, ...srcPaths.images, ...srcPaths.fonts], {
       base: "./src"
     })
     .pipe(gulp.dest("dist"));
-});
-
-gulp.task("copy:js", function() {
+}
+function copyJS() {
+  // gulp.task("copy:js", function() {
   return gulp.src(srcPaths.scripts).pipe(gulp.dest("dist/js"));
-});
+}
 
 // Handle handlebars
-gulp.task("hbs", function() {
+function hbs() {
+  // gulp.task("hbs", function() {
   return gulp
     .src(srcPaths.templates)
     .pipe(
@@ -58,10 +61,11 @@ gulp.task("hbs", function() {
     )
     .pipe(rename({ extname: ".html" }))
     .pipe(gulp.dest("dist"));
-});
+}
 
 // Handle sass
-gulp.task("styles", function() {
+function styles() {
+  //gulp.task("styles", function() {
   return gulp
     .src(srcPaths.styles)
     .pipe(sourcemaps.init())
@@ -74,22 +78,24 @@ gulp.task("styles", function() {
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("./maps"))
     .pipe(gulp.dest("./dist/css"));
-});
+}
 
 // Development
-gulp.task("watch", ["build"], function() {
-  gulp.watch(srcPaths.scripts, ["copy:js"]);
-  gulp.watch(srcPaths.styles, ["styles"]);
-  gulp.watch([...srcPaths.templates, ...srcPaths.partials], ["hbs"]);
+exports.watch = function watch() {
+  // gulp.task("watch", ["build"], function() {
+  gulp.watch(srcPaths.scripts, gulp.series(copyJS));
+  gulp.watch(srcPaths.styles, gulp.series(styles));
+  gulp.watch([...srcPaths.templates, ...srcPaths.partials], gulp.series(hbs));
   gulp.watch(
     [...srcPaths.static, ...srcPaths.images, ...srcPaths.fonts],
-    ["copy"]
+    gulp.series(copy)
   );
-});
+  browserSync.reload;
+};
 
-gulp.task("build", ["hbs", "styles", "copy"]);
+gulp.task("build", gulp.parallel(hbs, styles, copy, copyJS));
 
 // Default Task
 gulp.task("default", function(callback) {
-  return runSequence("clean", "build", callback);
+  return runSequence(clean, "build", callback);
 });

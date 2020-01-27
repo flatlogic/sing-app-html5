@@ -46,7 +46,7 @@ $(function() {
           data: seriesData.shift().map(function(d) {
             return { x: d.x, y: d.y };
           }),
-          color: Sing.lighten(Sing.colors["brand-info"], 0.09),
+          color: Sing.lighten(Sing.colors["brand-success"], 0.09),
           renderer: "bar"
         },
         {
@@ -183,7 +183,7 @@ $(function() {
             borderWidth: 0
           },
           colors: [
-            Sing.darken(Sing.colors["brand-warning"], 0.05),
+            Sing.darken(Sing.colors["gray-200"], 0.05),
             Sing.colors["brand-danger"]
           ]
         }
@@ -255,7 +255,7 @@ $(function() {
             tickColor: "rgba(255,255,255,1)",
             borderWidth: 0
           },
-          colors: [Sing.colors["brand-info"], Sing.colors["brand-warning"]]
+          colors: ["#777", Sing.colors["brand-warning"]]
         }
       );
     }
@@ -281,12 +281,12 @@ $(function() {
       renderer: "area",
       series: [
         {
-          color: Sing.colors["brand-info"],
+          color: Sing.colors["gray-800"],
           data: seriesData[0],
           name: "Uploads"
         },
         {
-          color: Sing.colors["brand-warning"],
+          color: Sing.colors["gray-600"],
           data: seriesData[1],
           name: "Downloads"
         }
@@ -334,12 +334,12 @@ $(function() {
         name: "world_countries",
         defaultArea: {
           attrs: {
-            fill: "#d1e7f6",
-            stroke: "#7cb2d7",
+            fill: Sing.colors["gray-200"],
+            stroke: Sing.colors["gray-600"],
             "stroke-width": 0.25
           },
           attrsHover: {
-            fill: "#8dc3e8",
+            fill: Sing.colors["gray-100"],
             animDuration: 100
           }
         },
@@ -369,7 +369,7 @@ $(function() {
             {
               max: 5000000,
               attrs: {
-                fill: "#bedcf0"
+                fill: Sing.lighten("#ebeff1", 0.04)
               },
               label: "Less than 5M"
             },
@@ -377,7 +377,7 @@ $(function() {
               min: 5000000,
               max: 10000000,
               attrs: {
-                fill: "#95c7e9"
+                fill: "#ebeff1"
               },
               label: "Between 5M and 10M"
             },
@@ -385,14 +385,14 @@ $(function() {
               min: 10000000,
               max: 50000000,
               attrs: {
-                fill: "#d1e7f6"
+                fill: Sing.colors["gray-200"]
               },
               label: "Between 10M and 50M"
             },
             {
               min: 50000000,
               attrs: {
-                fill: "#8dc3e8"
+                fill: Sing.darken("#ebeff1", 0.1)
               },
               label: "More than 50M"
             }
@@ -456,7 +456,7 @@ $(function() {
     icons.play();
 
     icons = new Skycons({
-      color: Sing.lighten(Sing.colors["brand-danger"], 0.4)
+      color: Sing.lighten(Sing.colors["brand-warning"], 0.1)
     });
     icons.set("clear-day-3", "clear-day");
     icons.play();
