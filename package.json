@@ -87,7 +87,7 @@
   },
   "devDependencies": {
     "del": "^5.1.0",
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-hb": "^8.0.0",
     "gulp-rename": "2.0.0",
     "gulp-sass": "^4.0.2",
