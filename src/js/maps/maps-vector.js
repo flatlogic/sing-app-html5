@@ -13,8 +13,8 @@ $(function() {
       hoverColor: false,
       regionStyle: {
         initial: {
-          fill: "#1a86d0",
-          "fill-opacity": 0.2,
+          fill: "#bdbdbd",
+          "fill-opacity": 1,
           stroke: "#bdbdbd",
           "stroke-width": 0.25,
           "stroke-opacity": 1
@@ -25,8 +25,8 @@ $(function() {
       },
       markerStyle: {
         initial: {
-          fill: Sing.colors["brand-info"],
-          stroke: Sing.darken(Sing.colors["brand-info"], 0.1),
+          fill: Sing.colors["brand-danger"],
+          stroke: Sing.darken(Sing.colors["brand-danger"], 0.1),
           "fill-opacity": 1,
           "stroke-width": 4,
           "stroke-opacity": 0.2,
@@ -37,7 +37,7 @@ $(function() {
           "stroke-width": 5
         }
       },
-      backgroundColor: "#fff",
+      backgroundColor: "#eee",
       markers: [
         { latLng: [41.9, 12.45], name: "Vatican City" },
         { latLng: [43.73, 7.41], name: "Monaco" },
