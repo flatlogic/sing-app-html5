@@ -90,7 +90,6 @@ exports.watch = function watch() {
     [...srcPaths.static, ...srcPaths.images, ...srcPaths.fonts],
     gulp.series(copy)
   );
-  browserSync.reload;
 };
 
 gulp.task("build", gulp.parallel(hbs, styles, copy, copyJS));
