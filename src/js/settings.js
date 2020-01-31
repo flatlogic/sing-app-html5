@@ -19,9 +19,9 @@ $(function(){
             'gray-900': '#212529',
             'brand-primary': '#547fff',
             'brand-success': '#3abf94',
-            'brand-warning': '#ffc247',
-            'brand-danger': '#f55d5d',
-            'brand-info': '#9964e3',
+            'brand-warning': '#1a86d0',
+            'brand-danger': '#fd5f00',
+            'brand-info': '#005792',
             'body-bg': '#fafbff'
         },
 

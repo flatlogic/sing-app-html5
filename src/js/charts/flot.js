@@ -345,7 +345,7 @@ $(function () {
                     pie: {
                         innerRadius: 0.5,
                         show: true,
-                        fill: 0.7
+                        fill: 0.1
                     }
                 },
                 colors: COLORS.donutChart,

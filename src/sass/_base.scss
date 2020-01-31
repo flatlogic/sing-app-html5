@@ -2638,6 +2638,7 @@ input[type=search], input.search {
   .sparkline-wrapper {
     display: flex;
     justify-content: center;
+    overflow: hidden;
     min-width: calc(100% - 150px);
   }
 

@@ -15,9 +15,9 @@ $(function () {
             return $.plot(this.$chartContainer, data, {
                 series: {
                     pie: {
-                        innerRadius: 0.8,
+                        innerRadius: 0.6,
                         show: true,
-                        fill: 0.5
+                        fill: 1
                     }
                 },
                 colors: [
@@ -43,7 +43,7 @@ $(function () {
         createChart(color) {
             const randomData = [];
 
-            for (let i = 0; i < 77; i++) {
+            for (let i = 0; i < 40; i++) {
                 randomData.push((i/9+Math.sin(i/6)*8+Math.random() * 2).toFixed(2));
             }
 
