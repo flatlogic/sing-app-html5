@@ -17,10 +17,7 @@ $(function () {
                     pie: {
                         innerRadius: 0.6,
                         show: true,
-                        fill: 1,
-                        stroke: {
-                            width: 0
-                        }
+                        fill: 1
                     }
                 },
                 colors: [
@@ -94,11 +91,11 @@ $(function () {
                 data: data[0],
                 lines: {
                     show: true,
-                    fill: .45,
+                    fill: .3,
                     lineWidth: 0
                 },
                 points: {
-                    fillColor: Sing.palette['brand-primary'],
+                    fillColor: Sing.palette['brand-primary-light'],
                     symbol: (ctx, x, y, radius, shadow, i) => {
                         // count for every 8nd point to show on line
                         if (counter % 8 === 0)
@@ -111,8 +108,13 @@ $(function () {
             }, {
                 label: "RNS App",
                 data: data[1],
+                dashes: {
+                    show: true,
+                    lineWidth: 1.5,
+                    dashLength: [5, 2]
+                },
                 points: {
-                    fillColor: Sing.colors['brand-danger']
+                    fillColor: Sing.colors['brand-success']
                 },
                 shadowSize: 0
             }, {
@@ -120,7 +122,7 @@ $(function () {
                 data: data[2],
                 lines: {
                     show: true,
-                    lineWidth: 2.5
+                    lineWidth: 1.5
                 },
                 points: {
                     fillColor: Sing.colors['brand-warning'],
@@ -129,7 +131,6 @@ $(function () {
                 shadowSize: 0
             }], {
                 xaxis: {
-                    tickColor: "#fafbfc",
                     tickSize: tickInterval,
                     tickFormatter: (i) => {
                         return ticks[i / tickInterval];
@@ -141,12 +142,25 @@ $(function () {
                     }
                 },
                 yaxis: {
-
+                    tickColor: Sing.colors['gray-100'],
                     max: 5,
                     font: {
                         lineHeight: 11,
                         weight: 400,
                         color: FONT_COLOR
+                    }
+                },
+                points: {
+                    show: true,
+                    fill: true,
+                    lineWidth: 1,
+                    radius: 1,
+                    symbol: (ctx, x, y, radius, shadow, i) => {
+                        // show every 5th point on line
+                        if (counter % 5 === 0)
+                            ctx.arc(x, y, 2, 0, Math.PI * 2, false);
+
+                        counter++;
                     }
                 },
                 grid: {
@@ -165,9 +179,9 @@ $(function () {
                     container: this.$legend
                 },
                 colors: [
-                    "#1a88d0",
-                    Sing.colors['brand-primary'],
-                    Sing.colors['brand-danger']
+                    Sing.palette['brand-info-pale'],
+                    Sing.colors['brand-success'],
+                    Sing.colors['brand-warning']
                 ],
                 hooks: {
                     draw: [this.onDrawHook.bind(this)]
@@ -224,9 +238,9 @@ $(function () {
 
     function createCharts() {
         new DonutChart(getPieChartData());
-        new LineChart('brand-danger', '#sparkline');
-        new LineChart('brand-primary', '#sparkline-1');
-        new LineChart('brand-info', '#sparkline-2');
+        new LineChart('brand-warning', '#sparkline');
+        new LineChart('brand-info', '#sparkline-1');
+        new LineChart('brand-success', '#sparkline-2');
         new MainChart(getMainChartData(), $("#main-chart"), $('#main-chart-tooltip'), $('#main-chart-legend'));
     }
 
@@ -426,26 +440,3 @@ function getMainChartData() {
 
     return [d1, d2, d3];
 }
-
-let myIntro = introJs();
-myIntro.setOptions({
-    skipLabel: "<button class='btn btn-outline-secondary btn-xs'>Stop</button>",
-    doneLabel: "<button class='btn btn-outline-secondary btn-xs'>Done</button>",
-    nextLabel: "<button class='btn btn-success btn-xs'>Next</button>",
-    prevLabel: "<button class='btn btn-outline-secondary btn-xs'>Back</button>",
-    tooltipPosition: "auto",
-    hidePrev: true,
-    hideNext: true,
-    overlayOpacity: 0,
-    showBullets: false
-});
-
-
-setTimeout(() => {
-
-    myIntro.start();
-
-}, 3000);
-
-
-
