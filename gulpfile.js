@@ -29,23 +29,28 @@ const srcPaths = {
 
 hb.handlebars.registerHelper(layouts(hb.handlebars));
 
-function clean() {
+async function clean(cb) {
   // gulp.task("clean", async function() {
   return del(["dist/*"]);
+  cb();
 }
 
 // Copy demo, img, js, fonts folders from src to dist
-function copy() {
+async function copy(cb) {
   // gulp.task("copy", ["copy:js"], function() {
   return gulp
     .src([...srcPaths.static, ...srcPaths.images, ...srcPaths.fonts], {
       base: "./src"
     })
     .pipe(gulp.dest("dist"));
+
+  cb();
 }
-function copyJS() {
+
+async function copyJS(cb) {
   // gulp.task("copy:js", function() {
   return gulp.src(srcPaths.scripts).pipe(gulp.dest("dist/js"));
+  cb();
 }
 
 // Handle handlebars
@@ -94,7 +99,15 @@ exports.watch = function watch() {
 
 gulp.task("build", gulp.parallel(hbs, styles, copy, copyJS));
 
+// Build Task
+function build(cb) {
+  return gulp.parallel(clean, "build");
+  cb();
+}
+// exports.watch = build;
+// gulp.task("default", function(callback) {
+//   runSequence(clean, "build", callback);
+// });
+
 // Default Task
-gulp.task("default", function(callback) {
-  return runSequence(clean, "build", callback);
-});
+gulp.task("default", gulp.parallel(clean, "build"));
