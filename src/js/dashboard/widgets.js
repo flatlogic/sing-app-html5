@@ -183,7 +183,7 @@ $(function() {
             borderWidth: 0
           },
           colors: [
-            Sing.darken(Sing.colors["gray-200"], 0.05),
+            Sing.darken(Sing.colors["blue"], 0.05),
             Sing.colors["brand-danger"]
           ]
         }
