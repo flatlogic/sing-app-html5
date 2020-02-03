@@ -91,11 +91,11 @@ $(function () {
                 data: data[0],
                 lines: {
                     show: true,
-                    fill: .3,
+                    fill: .8,
                     lineWidth: 0
                 },
                 points: {
-                    fillColor: Sing.palette['brand-primary-light'],
+                    fillColor: Sing.palette['brand-primary'],
                     symbol: (ctx, x, y, radius, shadow, i) => {
                         // count for every 8nd point to show on line
                         if (counter % 8 === 0)
@@ -114,7 +114,7 @@ $(function () {
                     dashLength: [5, 2]
                 },
                 points: {
-                    fillColor: Sing.colors['brand-success']
+                    fillColor: Sing.colors['brand-danger']
                 },
                 shadowSize: 0
             }, {
@@ -180,7 +180,7 @@ $(function () {
                 },
                 colors: [
                     Sing.palette['brand-info-pale'],
-                    Sing.colors['brand-success'],
+                    Sing.colors['brand-info'],
                     Sing.colors['brand-warning']
                 ],
                 hooks: {
@@ -238,9 +238,9 @@ $(function () {
 
     function createCharts() {
         new DonutChart(getPieChartData());
-        new LineChart('brand-warning', '#sparkline');
-        new LineChart('brand-info', '#sparkline-1');
-        new LineChart('brand-success', '#sparkline-2');
+        new LineChart('brand-danger', '#sparkline');
+        new LineChart('brand-primary', '#sparkline-1');
+        new LineChart('brand-info', '#sparkline-2');
         new MainChart(getMainChartData(), $("#main-chart"), $('#main-chart-tooltip'), $('#main-chart-legend'));
     }
 

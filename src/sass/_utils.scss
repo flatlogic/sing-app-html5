@@ -196,6 +196,7 @@
 
   .form-control,
   .input-group-text {
+    background: rgba(0,0,0,0.1);
     @extend .input-no-border;
   }
 
@@ -288,7 +289,7 @@ $i: 0;
   .value#{$i}{
     margin: 0;
     font-size: $font-size;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-semi-bold;
   }
   $i: $i + 1 !global;
 }

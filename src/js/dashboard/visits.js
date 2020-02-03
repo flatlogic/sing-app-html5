@@ -8,11 +8,11 @@ $(function(){
                 name : "usa_states",
                 defaultArea : {
                     attrs: {
-                        fill: '#e4eaf1',
-                        stroke: '#ccd8e3',
+                        fill: '#d1e7f6',
+                        stroke: '#ffffff',
                     },
                     attrsHover: {
-                        fill: '#e9ebf6',
+                        fill: '#8dc3e8',
                         animDuration : 100
                     },
                     tooltip: {
@@ -204,11 +204,11 @@ $(function(){
             renderer: 'area',
             series: [
                 {
-                    color: Sing.colors['brand-danger'],
+                    color: Sing.colors['brand-warning'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: Sing.lighten(Sing.colors['brand-danger'], .5),
+                    color: Sing.lighten(Sing.colors['brand-info'], .5),
                     data: seriesData[1],
                     name: 'Downloads'
                 }
