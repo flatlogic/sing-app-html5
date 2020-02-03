@@ -208,7 +208,7 @@ $(function(){
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: Sing.colors['brand-info'],
+                    color: Sing.lighten(Sing.colors['brand-info'], .5),
                     data: seriesData[1],
                     name: 'Downloads'
                 }
