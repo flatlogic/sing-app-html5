@@ -13,8 +13,8 @@ $(function() {
       hoverColor: false,
       regionStyle: {
         initial: {
-          fill: "#bdbdbd",
-          "fill-opacity": 1,
+          fill: "#1a86d0",
+          "fill-opacity": 0.2,
           stroke: "#bdbdbd",
           "stroke-width": 0.25,
           "stroke-opacity": 1
@@ -25,8 +25,8 @@ $(function() {
       },
       markerStyle: {
         initial: {
-          fill: Sing.colors["brand-danger"],
-          stroke: Sing.darken(Sing.colors["brand-danger"], 0.1),
+          fill: Sing.colors["brand-info"],
+          stroke: Sing.darken(Sing.colors["brand-info"], 0.1),
           "fill-opacity": 1,
           "stroke-width": 4,
           "stroke-opacity": 0.2,
