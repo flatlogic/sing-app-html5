@@ -1546,7 +1546,7 @@ input[type=search], input.search {
 }
 
 .price {
-  font-size: $font-size-base;
+  font-size: $font-size-larger;
   font-weight: $font-weight-semi-bold;
 
   &.price-sale {
@@ -1646,13 +1646,15 @@ input[type=search], input.search {
 
   .info-title {
     margin-top: $spacer;
-    font-weight: $font-weight-semi-bold;
+    font-weight: $font-weight-normal;
     text-transform: uppercase;
+    font-size: $font-size-lg;
   }
 
   .info-description {
     color: $text-muted;
     font-weight: $font-weight-normal;
+    font-size: $font-size-lg;
     text-transform: capitalize;
     margin: 5px 0 25px;
   }
@@ -1751,8 +1753,9 @@ input[type=search], input.search {
 .product-page-title {
   width: 100%;
   text-align: center;
-  font-weight: $font-weight-semi-bold;
+  font-weight: $font-weight-normal;
   margin: 75px 0 35px;
+  color: $gray-800;
 
   @include media-breakpoint-down(sm) {
     display: none;
@@ -1838,7 +1841,11 @@ input[type=search], input.search {
     @include media-breakpoint-down(sm) {
       display: none;
     }
-
+    h3{
+      font-size: 1.4rem;
+      font-weight: $font-weight-normal;
+      color: #3c484f;
+    }
     h5 {
       font-weight: $font-weight-semi-bold;
       margin: 0 0 15px;
