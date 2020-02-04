@@ -139,7 +139,7 @@
  */
 
 .mapTooltip {
-  position: absolute;
+  position: fixed;
   padding: 2px;
   z-index: 1000;
   max-width: 200px;
