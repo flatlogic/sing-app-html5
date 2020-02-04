@@ -740,7 +740,6 @@
 .stats-row-profile {
   .stat-item {
     border-left: 0;
-    padding-left: 15px;
     text-align: center;
 
     @include media-breakpoint-up(lg){
@@ -959,7 +958,7 @@
   font-weight: $font-weight-semi-bold;
   > a {
     text-decoration: none;
-    color: $gray-700;
+    color: $skyblue;
   }
   > small{
     font-weight: $font-weight-semi-bold;
