@@ -5,11 +5,11 @@ $(function () {
         lineChart: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-primary']],
         barChart: Object.values(Sing.colors).slice(13),
         trackingChart: [Sing.colors['brand-danger'], Sing.colors['brand-info']],
-        pieChart: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-success'], Sing.colors['brand-danger']],
+        pieChart: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-primary']],
         markers: Object.values(Sing.colors).slice(11),
         donutChart: Object.values(Sing.colors).slice(12),
         fontColor: Sing.colors['gray-400'],
-        gridBorder: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-primary']]
+        gridBorder: Sing.colors['white']
     };
     let debouncedTmeout = 0;
 
@@ -371,7 +371,7 @@ $(function () {
                         show: true,
                         barWidth: 0.45,
                         lineWidth: 1,
-                        fill: 1
+                        fill: 0.75
                     }
                 },
                 grid: {
