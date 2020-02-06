@@ -30,14 +30,12 @@ const srcPaths = {
 hb.handlebars.registerHelper(layouts(hb.handlebars));
 
 async function clean(cb) {
-  // gulp.task("clean", async function() {
   return del(["dist/*"]);
   cb();
 }
 
 // Copy demo, img, js, fonts folders from src to dist
 async function copy(cb) {
-  // gulp.task("copy", ["copy:js"], function() {
   return gulp
     .src([...srcPaths.static, ...srcPaths.images, ...srcPaths.fonts], {
       base: "./src"
@@ -48,7 +46,6 @@ async function copy(cb) {
 }
 
 async function copyJS(cb) {
-  // gulp.task("copy:js", function() {
   return gulp.src(srcPaths.scripts).pipe(gulp.dest("dist/js"));
   cb();
 }
@@ -70,7 +67,6 @@ function hbs() {
 
 // Handle sass
 function styles() {
-  //gulp.task("styles", function() {
   return gulp
     .src(srcPaths.styles)
     .pipe(sourcemaps.init())
@@ -87,7 +83,6 @@ function styles() {
 
 // Development
 exports.watch = function watch() {
-  // gulp.task("watch", ["build"], function() {
   gulp.watch(srcPaths.scripts, gulp.series(copyJS));
   gulp.watch(srcPaths.styles, gulp.series(styles));
   gulp.watch([...srcPaths.templates, ...srcPaths.partials], gulp.series(hbs));
@@ -104,10 +99,7 @@ function build(cb) {
   return gulp.parallel(clean, "build");
   cb();
 }
-// exports.watch = build;
-// gulp.task("default", function(callback) {
-//   runSequence(clean, "build", callback);
-// });
+
 
 // Default Task
 gulp.task("default", gulp.parallel(clean, "build"));
