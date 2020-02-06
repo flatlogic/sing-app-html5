@@ -32,7 +32,7 @@ $(function() {
                 labels: ['Users A', 'Series B'],
                 lineColors: [
                     Sing.colors['brand-info'],
-                    Sing.colors['brand-warning']
+                    Sing.colors['brand-primary']
                 ],
                 lineWidth: 0
             });

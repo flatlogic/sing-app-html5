@@ -179,9 +179,9 @@ $(function () {
                     container: this.$legend
                 },
                 colors: [
-                    Sing.palette['brand-info-pale'],
                     Sing.colors['brand-info'],
-                    Sing.colors['brand-warning']
+                    Sing.colors['brand-primary'],
+                    Sing.colors['brand-danger']
                 ],
                 hooks: {
                     draw: [this.onDrawHook.bind(this)]
@@ -440,3 +440,16 @@ function getMainChartData() {
 
     return [d1, d2, d3];
 }
+
+let myIntro = introJs();
+myIntro.setOptions({ skipLabel: "Done", tooltipPosition: "auto", hidePrev: true, hideNext: true, nextLabel: "Next", prevLabel: "Back", overlayOpacity: 0, showBullets: false });
+
+
+setTimeout(() => {
+
+    myIntro.start();
+
+}, 3000)
+
+
+

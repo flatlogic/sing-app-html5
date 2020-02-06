@@ -39,7 +39,7 @@ $(function() {
                     fill: 1,
                     lineWidth: 0
                 },
-                color: Sing.colors['brand-warning']
+                color: Sing.palette['brand-warning-pale']
             },{
                 label: "Traffic",
                 data: data2,
@@ -47,7 +47,7 @@ $(function() {
                     fill: 1,
                     lineWidth: 0
                 },
-                color:[Sing.colors['brand-info']]
+                color:[Sing.palette['brand-warning-light']]
             },{
                 label: "Traffic",
                 data: data1,
@@ -130,7 +130,7 @@ $(function() {
             sliceColors: [
                 Sing.colors['brand-info'],
                 Sing.colors['brand-danger'],
-                Sing.colors['brand-warning'],
+                Sing.colors['gray-100'],
             ]
         });
     }
@@ -186,7 +186,7 @@ $(function() {
         nv.addGraph(function() {
             var chart = nv.models.multiBarChart()
                 .margin({left: 28, bottom: 30, right: 0})
-                .color([Sing.colors['brand-info'], Sing.colors['brand-danger']]);
+                .color([Sing.colors['brand-info'], Sing.colors['brand-primary']]);
 
             chart.xAxis
                 .showMaxMin(false)
@@ -227,11 +227,11 @@ $(function() {
             renderer: 'stack',
             series: [
                 {
-                    color: Sing.colors['brand-warning'],
+                    color: Sing.colors['brand-info'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: Sing.colors['brand-info'],
+                    color: Sing.colors['brand-primary'],
                     data: seriesData[1],
                     name: 'Downloads'
                 }
@@ -289,10 +289,10 @@ $(function() {
             xkey: 'y',
             ykeys: ['a', 'b'],
             labels: ['Series A', 'Series B'],
-            lineColors: [Sing.colors['brand-info'], Sing.colors['brand-warning']],
+            lineColors: [Sing.colors['brand-info'], Sing.colors['brand-primary']],
             lineWidth: 0,
             pointSize: 0,
-            fillOpacity: 1
+            fillOpacity: 0.6
         });
     }
 
@@ -328,13 +328,13 @@ $(function() {
                 spotColor: Sing.palette[7],
                 minSpotColor: null,
                 maxSpotColor: null,
-                highlightSpotColor: Sing.colors['brand-warning'],
-                highlightLineColor: Sing.colors['brand-info'],
+                highlightSpotColor: Sing.palette['brand-warning-light'],
+                highlightLineColor: Sing.palette['brand-warning-light'],
             }).sparkline([5,3,7,8,3,6,2,4,6,2,7],{
                 composite: true,
                 lineColor: 'transparent',
                 spotColor: Sing.palette['brand-info-light'],
-                fillColor: Sing.colors['brand-warning'],
+                fillColor: Sing.colors['brand-primary'],
                 minSpotColor: null,
                 maxSpotColor: null,
                 highlightSpotColor: Sing.palette['brand-info-light'],
@@ -442,7 +442,7 @@ $(function() {
                 colors: [
                     Sing.colors['brand-danger'],
                     Sing.colors['brand-info'],
-                    Sing.colors['brand-warning']
+                    Sing.colors['brand-primary']
                 ]
             });
         }
