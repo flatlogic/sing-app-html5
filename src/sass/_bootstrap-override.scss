@@ -157,7 +157,6 @@ legend {
 }
 
 .table-bordered th{
-  border: none;
   background-color: #005792;
   color: #f6f6e9;
 }
@@ -252,8 +251,7 @@ legend {
 .nav-tabs {
   & .nav-item+.nav-item { margin-left: 0}
   border-bottom: none;
-  background-color: $gray-200;
-
+  background-color: $gray-light;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   > .nav-item {
@@ -410,12 +408,6 @@ legend {
   .input-group {
     width: 300px;
     display: flex;
-    .form-control{
-      &:focus {
-        background-color: rgba(0, 0, 0, .1);
-      }
-    }
-
 
     .form-control {
       order: 2;
@@ -436,16 +428,13 @@ legend {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: $border-radius;
       border-top-left-radius: $border-radius;
-      background-color: rgba(0, 0, 0, .1)!important;
     }
   }
 }
 
 .navbar-header > .navbar-nav{
   float: left;
-  @include media-breakpoint-down(sm) {
-    margin-bottom: -6px;
-  }
+
   &.navbar-right{
     float: right;
 
@@ -461,7 +450,7 @@ legend {
 
     + .navbar-brand{
       height: 60px;
-      line-height: 28px;
+      line-height: 35px;
     }
   }
 }
@@ -651,7 +640,7 @@ legend {
 
 .btn {
   // add tiny gradient to background
-  //background-image: linear-gradient(to right, #ffffff26, #fff0);
+  background-image: linear-gradient(to right, #ffffff26, #fff0);
 }
 
 .btn .glyphicon {
@@ -673,7 +662,7 @@ legend {
   @include border-radius(6px);
 
   &-f {
-    @include border-radius(50px!important);
+    @include border-radius(50px);
   }
 }
 
@@ -1092,46 +1081,6 @@ legend {
 // Navbar Dasboard
 // --------------------------------------------------
 
-.navbar-first {
-  @include nav-style($sidebar-bg-color!important, $white, $white, rgba(0,0,0,.1), rgba(0,0,0,.1), $white);
-}
-
-.navbar-secont {
-  @include nav-style($white!important, $navbar-dashboard-link-color, $white, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
-}
-
-.navbar-third {
-  @include nav-style($sidebar-first-color !important, $white, $white, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
-}
-
-.navbar-fourth {
-  @include nav-style($sidebar-second-color-bg!important, $navbar-dashboard-link-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
-}
-
-.navbar-fifth {
-  @include nav-style($sidebar-third-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
-}
-
-.navbar-sixth {
-  @include nav-style($sidebar-fourth-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
-}
-
-.navbar-seventh {
-  @include nav-style($sidebar-fifth-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
-}
-
-.navbar-eighth {
-  @include nav-style($sidebar-sixth-color-bg!important, $white, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
-}
-
-.navbar-ninth {
-  @include nav-style($sidebar-seventh-color-bg!important, $white, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
-}
-
-.header-dark{
-  color: #fff!important;
-}
-
 .navbar-dashboard {
   background-color: $navbar-dashboard-bg;
   border-color: $navbar-dashboard-border;
@@ -1291,7 +1240,6 @@ pre {
   line-height: $spacer;
   word-break: break-all;
   word-wrap: break-word;
-  white-space: pre-wrap;
   background-color: $pre-bg;
   border-radius: $border-radius;
 
