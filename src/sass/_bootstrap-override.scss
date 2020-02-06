@@ -157,7 +157,8 @@ legend {
 }
 
 .table-bordered th{
-  background-color: $gray-200;
+  background-color: #005792;
+  color: #f6f6e9;
 }
 
 .table-lg {
@@ -405,7 +406,7 @@ legend {
 
 .navbar-form {
   .input-group {
-    width: 245px;
+    width: 300px;
     display: flex;
 
     .form-control {

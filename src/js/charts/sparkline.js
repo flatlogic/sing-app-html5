@@ -3,7 +3,7 @@ $(function () {
     function initSparkline1() {
         $('#sparkline1').sparkline(generateRandomArr(5), {
             width: '100%',
-            fillColor: Sing.palette['brand-warning-light'],
+            fillColor: Sing.colors['brand-warning'],
             height: '100px',
             lineColor: 'transparent',
             spotColor: '#c0d0f0',
@@ -15,7 +15,7 @@ $(function () {
             composite: true,
             lineColor: 'transparent',
             spotColor: '#c0d0f0',
-            fillColor: Sing.palette['brand-success-pale'],
+            fillColor: Sing.colors['brand-danger'],
             minSpotColor: null,
             maxSpotColor: null,
             highlightSpotColor: '#ddd',
@@ -29,7 +29,7 @@ $(function () {
             type: 'pie',
             width: '200px',
             height: '200px',
-            sliceColors: Object.values(Sing.palette).slice(5),
+            sliceColors: Object.values(Sing.colors).slice(12),
             highlightLighten: 1.05
         });
     }
@@ -39,10 +39,10 @@ $(function () {
             type: 'line',
             width: '100%',
             height: '200px',
-            lineColor: Sing.palette['brand-primary-light'],
-            fillColor: Sing.palette['brand-primary-pale'],
+            lineColor: Sing.colors['brand-primary'],
+            fillColor: Sing.colors['brand-info'],
             lineWidth: 2,
-            spotColor: Sing.palette['brand-primary-pale'],
+            spotColor: Sing.colors['brand-primary'],
             minSpotColor: Sing.palette['brand-warning-light'],
             maxSpotColor: Sing.colors['brand-warning'],
             highlightSpotColor: Sing.palette['brand-primary-pale'],
@@ -64,8 +64,8 @@ $(function () {
             width: '100%',
             barWidth: 6,
             barSpacing: 3,
-            barColor: Sing.palette['brand-warning-light'],
-            negBarColor: Sing.palette['brand-danger-light']
+            barColor: Sing.colors['brand-warning'],
+            negBarColor: Sing.colors['brand-danger']
         });
 
         // Chrome and Safari fix for to set correct width to chart
@@ -79,8 +79,8 @@ $(function () {
             type: 'tristate',
             height: '100px',
             width: '100%',
-            posBarColor: Sing.palette['brand-warning-light'],
-            negBarColor: Sing.palette['brand-info-light'],
+            posBarColor: Sing.colors['brand-warning'],
+            negBarColor: Sing.colors['brand-info'],
             zeroBarColor: Sing.colors['gray-300'],
             barWidth: 5,
             barSpacing: 7,
@@ -106,7 +106,7 @@ $(function () {
             type: 'pie',
             width: '100px',
             height: '100px',
-            sliceColors: [Sing.palette['brand-danger-light'], Sing.palette['brand-danger-pale']],
+            sliceColors: [Sing.colors['brand-danger'], Sing.colors['brand-warning']],
             highlightLighten: 1.1
         });
     }

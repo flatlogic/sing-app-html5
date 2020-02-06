@@ -27,12 +27,13 @@ $(function(){
 
         // Brand colors modifications
         palette: {
-            'brand-primary-light': '#a7beff',
-            'brand-primary-pale': '#d1dcff',
-            'brand-info-light': '#b7b3ff',
-            'brand-info-pale': '#e2e1ff',
-            'brand-danger-light': '#f59f9f',
-            'brand-danger-pale': '#ffd7de',
+            'brand-primary-light': '#547fff',
+            'brand-primary-pale': '#3abf94',
+            'brand-info-light': '#1a86d0',
+            'brand-info-pale': '#fd5f00',
+            'brand-danger-light': '#005792',
+            'brand-green': '#68ca66',
+            'brand-danger-pale': '#fd5f00',
             'brand-success-light': '#8fe5d4',
             'brand-success-pale': '#ace5d1',
             'brand-warning-light': '#ffebb2',
