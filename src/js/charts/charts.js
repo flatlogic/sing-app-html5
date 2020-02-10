@@ -227,11 +227,11 @@ $(function() {
             renderer: 'stack',
             series: [
                 {
-                    color: Sing.colors['brand-info'],
+                    color: Sing.colors['brand-warning'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: Sing.colors['brand-primary'],
+                    color: Sing.colors['brand-info'],
                     data: seriesData[1],
                     name: 'Downloads'
                 }

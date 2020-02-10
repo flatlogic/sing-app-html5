@@ -1,6 +1,28 @@
 /**
  * override custom libs styles. This files is not required for core sing functionality and may be removed
  */
+.btn-inverse {
+  color: #fff;
+  background-color: #002b49;
+  border-color: #002b49;
+}
+.btn-warning{
+  color: #fff;
+}
+
+.btn-gray{
+  color: #29323a;
+  background-color: #b8c6d2;
+  border-color: #b0c0cd;
+  &:hover{
+    background-color: #bfccd7;
+    border-color: #b8c6d2;
+  }
+}
+
+.badge-light{
+  color: #29323a;
+}
 
 /**
  * Datetimepicker for Bootstrap v3
@@ -139,7 +161,7 @@
  */
 
 .mapTooltip {
-  position: fixed;
+  position: absolute;
   padding: 2px;
   z-index: 1000;
   max-width: 200px;
@@ -480,8 +502,8 @@ $slider-handle-size: 26px;
   color: $gray-600;
 }
 .calendar .event {
-  color: white;
-  font-weight: bold;
+  //color: white;
+  //font-weight: bold;
   background-color: transparent;
 
   &:hover {
@@ -846,6 +868,7 @@ table.dataTable thead th,
 table.dataTable thead td,
 table.dataTable.no-footer {
   border-bottom-color: transparent;
+  margin-top: $sidebar-padding-horizontal;
 }
 
 table.dataTable thead th,
@@ -1638,6 +1661,10 @@ ul.messenger-theme-air .messenger-message {
 /***********************/
 /*    Full Calendar    */
 /***********************/
+
+.fc-event-container{
+  overflow: hidden;
+}
 
 .fc-grid th {
   text-transform: uppercase;
