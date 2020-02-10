@@ -108,11 +108,6 @@ $(function () {
             }, {
                 label: "RNS App",
                 data: data[1],
-                dashes: {
-                    show: true,
-                    lineWidth: 1.5,
-                    dashLength: [5, 2]
-                },
                 points: {
                     fillColor: Sing.colors['brand-danger']
                 },
@@ -122,7 +117,7 @@ $(function () {
                 data: data[2],
                 lines: {
                     show: true,
-                    lineWidth: 1.5
+                    lineWidth: 2.5
                 },
                 points: {
                     fillColor: Sing.colors['brand-warning'],
@@ -150,19 +145,6 @@ $(function () {
                         color: FONT_COLOR
                     }
                 },
-                points: {
-                    show: true,
-                    fill: true,
-                    lineWidth: 1,
-                    radius: 1,
-                    symbol: (ctx, x, y, radius, shadow, i) => {
-                        // show every 5th point on line
-                        if (counter % 5 === 0)
-                            ctx.arc(x, y, 2, 0, Math.PI * 2, false);
-
-                        counter++;
-                    }
-                },
                 grid: {
                     backgroundColor: {colors: [Sing.colors['white'], Sing.colors['white']]},
                     borderWidth: 1,
@@ -179,7 +161,7 @@ $(function () {
                     container: this.$legend
                 },
                 colors: [
-                    Sing.colors['brand-info'],
+                    "#1a88d0",
                     Sing.colors['brand-primary'],
                     Sing.colors['brand-danger']
                 ],
@@ -449,7 +431,7 @@ setTimeout(() => {
 
     myIntro.start();
 
-}, 3000)
+}, 3000);
 
 
 
