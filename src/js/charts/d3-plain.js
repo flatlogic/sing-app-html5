@@ -2,7 +2,7 @@ $(function () {
 
     'use strict';
 
-    const COLORS = Object.values(Sing.palette);
+    const COLORS = Object.values(Sing.newPalette);
 
     function initD3_2(d3) {
         let container = document.getElementById('d3-2');
