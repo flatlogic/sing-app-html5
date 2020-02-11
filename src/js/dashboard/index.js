@@ -17,7 +17,10 @@ $(function () {
                     pie: {
                         innerRadius: 0.6,
                         show: true,
-                        fill: 1
+                        fill: 1,
+                        stroke: {
+                            width: 0
+                        }
                     }
                 },
                 colors: [
