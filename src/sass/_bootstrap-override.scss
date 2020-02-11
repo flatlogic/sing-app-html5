@@ -1288,6 +1288,7 @@ pre {
   line-height: $spacer;
   word-break: break-all;
   word-wrap: break-word;
+  white-space: pre-wrap;
   background-color: $pre-bg;
   border-radius: $border-radius;
 
