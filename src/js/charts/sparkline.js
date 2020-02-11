@@ -15,7 +15,7 @@ $(function () {
             composite: true,
             lineColor: 'transparent',
             spotColor: '#c0d0f0',
-            fillColor: Sing.colors['brand-danger'],
+            fillColor: Sing.colors['brand-info'],
             minSpotColor: null,
             maxSpotColor: null,
             highlightSpotColor: '#ddd',
@@ -50,7 +50,7 @@ $(function () {
             spotRadius: 1,
             chartRangeMin: 5,
             chartRangeMax: 7,
-            normalRangeColor: Sing.colors['brand-primary'],
+            normalRangeColor: Sing.colors['brand-danger'],
             drawNormalOnTop: true
         });
     }
