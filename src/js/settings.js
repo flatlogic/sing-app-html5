@@ -40,6 +40,18 @@ $(function(){
             'brand-warning-pale': '#fff8e3',
         },
 
+        newPalette: {
+            'brand-primary': '#547fff',
+            'brand-success': '#3abf94',
+            'brand-warning': '#1a86d0',
+            'brand-danger': '#fd5f00',
+            'brand-info': '#005792',
+            'brand-info-light': '#1a86d0',
+            'brand-green': '#68ca66',
+            'brand-primary-light': '#547fff',
+            'brand-danger-pale': '#fd5f00'
+        },
+
         screens: {
             'xs-max': 575,
             'sm-min': 576,
