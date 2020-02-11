@@ -472,7 +472,7 @@ $slider-handle-size: 26px;
 .calendar td > a {
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
+  display: block;
   height: 30px;
   line-height: 30px;
   position: relative;
@@ -548,7 +548,9 @@ $slider-handle-size: 26px;
 .dropdown-menu .calendar td a {
   padding: 0px;
 }
-
+.fc-event .fc-content{
+  text-overflow: ellipsis;
+}
 /***********************************/
 /**            PARSLEY            **/
 /***********************************/
