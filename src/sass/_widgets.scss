@@ -462,6 +462,12 @@
 /**          Post Links           **/
 /***********************************/
 
+.calendar{
+  .event{
+    font-weight: $font-weight-semi-bold;
+  }
+}
+
 .post-links{
   margin-bottom: 0;
   font-size: $font-size-sm;

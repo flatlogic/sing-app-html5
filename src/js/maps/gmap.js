@@ -4,11 +4,14 @@ $(function(){
             el: '#gmap',
             lat: -37.813179,
             lng: 144.950259,
-            zoomControl : false,
+            zoomControl : true,
             panControl : false,
             streetViewControl : false,
             mapTypeControl: false,
-            overviewMapControl: false
+            overviewMapControl: false,
+            disableDefaultUI: true,
+            scaleControl: false,
+
         });
 
         map.setContextMenu({
