@@ -427,7 +427,7 @@ function getMainChartData() {
 }
 
 let myIntro = introJs();
-myIntro.setOptions({ skipLabel: "Done", tooltipPosition: "auto", hidePrev: true, hideNext: true, nextLabel: "Next", prevLabel: "Back", overlayOpacity: 0, showBullets: false });
+myIntro.setOptions({ skipLabel: "Stop", tooltipPosition: "auto", hidePrev: true, hideNext: true, nextLabel: "Next", prevLabel: "Back", overlayOpacity: 0, showBullets: false });
 
 
 setTimeout(() => {

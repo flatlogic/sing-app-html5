@@ -1869,8 +1869,15 @@ a.fc-event {
 }
 
 /**********************************/
-/*             IntroJS            */
+/*           IntroJS             */
 /**********************************/
+
+@import "../../node_modules/bootstrap/scss/_buttons.scss";
+
+.introjs-button{
+  @extend .btn;
+}
+
 .introjs-tooltiptext{
   text-align: center;
 }
@@ -1881,5 +1888,39 @@ a.fc-event {
   z-index: 1!important;
 }
 .introjs-helperLayer{
- background-color: rgba(255,255,255,.1) !important;
+  display: none;
+}
+
+.introjs-skipbutton,
+.introjs-donebutton,
+.introjs-prevbutton,
+.introjs-donebutton{
+  @extend .btn-outline-secondary, .btn-sm;
+  float: left;
+  text-shadow: none;
+  &:hover{
+    color: #fff!important;
+  }
+}
+
+.introjs-hidden{
+  display: none!important;
+}
+
+.introjs-nextbutton{
+  @extend .btn, .btn-sm, .btn-success;
+  background-image: none!important;
+  text-shadow: none;
+  &:hover{
+    color: #fff!important;
+  }
+}
+
+
+.introjs-prevbutton{
+  float: none;
+  margin-right: 7px;
+}
+.introjs-donebutton{
+  border: 1px solid #798892;
 }
