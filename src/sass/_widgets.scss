@@ -814,7 +814,7 @@
     width: 8px;
     content: " ";
     margin-left: -4px;
-    background-color: $white;
+    background-color: $gray-200;
 
     @include media-breakpoint-up(lg){
       left: 50%;

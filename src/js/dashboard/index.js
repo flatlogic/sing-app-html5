@@ -94,7 +94,7 @@ $(function () {
                 data: data[0],
                 lines: {
                     show: true,
-                    fill: .8,
+                    fill: .45,
                     lineWidth: 0
                 },
                 points: {
@@ -129,6 +129,7 @@ $(function () {
                 shadowSize: 0
             }], {
                 xaxis: {
+                    tickColor: "#fafbfc",
                     tickSize: tickInterval,
                     tickFormatter: (i) => {
                         return ticks[i / tickInterval];
@@ -140,7 +141,7 @@ $(function () {
                     }
                 },
                 yaxis: {
-                    tickColor: Sing.colors['gray-100'],
+
                     max: 5,
                     font: {
                         lineHeight: 11,
