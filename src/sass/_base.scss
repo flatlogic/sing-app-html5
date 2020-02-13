@@ -1457,7 +1457,7 @@ input[type=search], input.search {
     background-size: cover;
     background-position: center;
     position: relative;
-    box-shadow: $widget-shadow;
+    box-shadow: $widget-card-shadow;
 
     @include media-breakpoint-down(sm) {
       height: 200px;
@@ -1494,20 +1494,6 @@ input[type=search], input.search {
       position: absolute;
       right: 14px;
       top: 14px;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 1;
-      }
-
-      &--fill {
-        opacity: 1;
-      }
-
-      .fa {
-        color: $gray-800;
-      }
-      
     }
   }
 
