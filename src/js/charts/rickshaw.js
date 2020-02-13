@@ -207,11 +207,11 @@ $(function () {
         ]);
         let areaChart = new RickshawAreaChart(2, 30, [
             Sing.colors['brand-info'],
-            Sing.colors['brand-primary'],
+            Sing.colors['brand-warning'],
         ]);
         let stackedBarChart = new BarChart(3, 10, [
             Sing.colors['brand-info'],
-            Sing.colors['brand-primary'],
+            Sing.colors['brand-success'],
             Sing.colors['brand-warning']
         ], {stacked: true, padding: {left: 0.03}});
         let barChart = new BarChart(2, 15, [
