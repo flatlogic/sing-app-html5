@@ -157,6 +157,7 @@ legend {
 }
 
 .table-bordered th{
+  border: none;
   background-color: #005792;
   color: #f6f6e9;
 }
@@ -251,7 +252,8 @@ legend {
 .nav-tabs {
   & .nav-item+.nav-item { margin-left: 0}
   border-bottom: none;
-  background-color: $gray-light;
+  background-color: $gray-200;
+
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   > .nav-item {
@@ -648,7 +650,7 @@ legend {
 
 .btn {
   // add tiny gradient to background
-  background-image: linear-gradient(to right, #ffffff26, #fff0);
+  //background-image: linear-gradient(to right, #ffffff26, #fff0);
 }
 
 .btn .glyphicon {
@@ -670,7 +672,7 @@ legend {
   @include border-radius(6px);
 
   &-f {
-    @include border-radius(50px);
+    @include border-radius(50px!important);
   }
 }
 
