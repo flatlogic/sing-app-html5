@@ -329,7 +329,7 @@ $(function() {
                 minSpotColor: null,
                 maxSpotColor: null,
                 highlightSpotColor: Sing.colors['brand-warning'],
-                highlightLineColor: Sing.colors['brand-danger'],
+                highlightLineColor: Sing.colors['brand-info'],
             }).sparkline([5,3,7,8,3,6,2,4,6,2,7],{
                 composite: true,
                 lineColor: 'transparent',

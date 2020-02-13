@@ -7,7 +7,13 @@
   border-color: #002b49;
 }
 .btn-warning{
-  color: #fff;
+  color: #fff!important;
+}
+
+.btn-outline-warning{
+  &:hover{
+  color: #fff!important;
+  }
 }
 
 .btn-gray{
@@ -435,7 +441,7 @@ $slider-handle-size: 26px;
     background-color: theme-color("info");
   }
   .slider-inverse & {
-    background-color: $gray-700;
+    //background-color: $gray-700;
   }
 }
 .slider-handle {
@@ -466,6 +472,12 @@ $slider-handle-size: 26px;
  */
 
 .calendar {
+  a{
+    border-radius: 50%;
+    &:hover{
+      background-color: $gray-200;
+    }
+  }
   font-size: $font-size-mini;
   padding: $spacer/2 0;
 }
@@ -864,6 +876,13 @@ table.dataTable thead .sorting_asc_disabled {
 table.dataTable thead .sorting_desc_disabled {
   background: url("#{$vendor-folder}/datatables/media/images/sort_desc_disabled.png")
     no-repeat center right;
+}
+
+
+.table.dataTable thead{
+  background: #005792;
+  border: none;
+  color: white;
 }
 
 table.dataTable thead th,
@@ -1875,7 +1894,7 @@ a.fc-event {
 @import "../../node_modules/bootstrap/scss/_buttons.scss";
 
 .introjs-button{
-  @extend .btn;
+ // @extend .btn;
 }
 
 .introjs-tooltiptext{
@@ -1895,7 +1914,7 @@ a.fc-event {
 .introjs-donebutton,
 .introjs-prevbutton,
 .introjs-donebutton{
-  @extend .btn-outline-secondary, .btn-sm;
+  //@extend .btn-outline-secondary, .btn-sm;
   float: left;
   text-shadow: none;
   &:hover{
@@ -1908,15 +1927,19 @@ a.fc-event {
 }
 
 .introjs-nextbutton{
-  @extend .btn, .btn-sm, .btn-success;
+  //@extend .btn, .btn-sm, .btn-success;
+  background-color: #21ae8c!important;
   background-image: none!important;
   text-shadow: none;
   &:hover{
     color: #fff!important;
+    background-color: #1b8e72;
   }
 }
 
-
+.introjs-donebutton{
+  background-image: none!important;
+}
 .introjs-prevbutton{
   float: none;
   margin-right: 7px;
