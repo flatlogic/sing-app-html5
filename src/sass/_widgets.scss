@@ -582,6 +582,7 @@
     a{
       display: inline-block;
       max-width: 100%;
+      overflow: hidden;
 
       > img{
         transition: transform .15s ease;
