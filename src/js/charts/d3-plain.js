@@ -287,7 +287,7 @@ $(function () {
 
         bar.filter((d) => d.class === "negative")
             .selectAll("rect")
-            .attr("fill", () => Sing.colors['brand-primary']);
+            .attr("fill", () => Sing.colors['brand-warning']);
 
         bar.filter((d) => d.class === "total")
             .selectAll("rect")
@@ -587,7 +587,7 @@ $(function () {
             .rangeRound([height, 0]);
 
         let z = d3.scaleOrdinal()
-            .range(COLORS.slice(0,3).concat(COLORS.slice(5)));
+            .range(COLORS.slice(0,5).concat(COLORS.slice(5)));
 
         x.domain(data.map(function (d) {
             return d.state;

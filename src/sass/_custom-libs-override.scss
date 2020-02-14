@@ -471,7 +471,7 @@ $slider-handle-size: 26px;
  * Bootstrap calendar
  */
 
-.calendar {
+#events-calendar {
   a{
     border-radius: 50%;
     &:hover{
@@ -1700,7 +1700,7 @@ ul.messenger-theme-air .messenger-message {
 }
 
 .fc-today {
-  background-color: #fff1b8;
+  background-color: #d1e7f6!important;
 }
 
 a.fc-event {
@@ -1914,7 +1914,7 @@ a.fc-event {
 .introjs-donebutton,
 .introjs-prevbutton,
 .introjs-donebutton{
-  //@extend .btn-outline-secondary, .btn-sm;
+  background-color: #fff!important;
   float: left;
   text-shadow: none;
   &:hover{
@@ -1926,11 +1926,12 @@ a.fc-event {
   display: none!important;
 }
 
-.introjs-nextbutton{
-  //@extend .btn, .btn-sm, .btn-success;
+.introjs-nextbutton, .introjs-fullbutton{
+  color: #fff!important;
   background-color: #21ae8c!important;
   background-image: none!important;
   text-shadow: none;
+
   &:hover{
     color: #fff!important;
     background-color: #1b8e72;
