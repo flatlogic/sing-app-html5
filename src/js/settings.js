@@ -41,15 +41,12 @@ $(function(){
         },
 
         newPalette: {
-            'brand-success-pale': '#ace5d1',
-            'brand-warning-light': '#ffebb2',
-            'brand-warning-pale': '#fff8e3',
-            'brand-info': '#005792',
-            'brand-warning': '#1a86d0',
-            'brand-primary': '#547fff',
-            'brand-success': '#3abf94',
+            'brand-primary': '#005792',
+            'brand-success': '#21ae8c',
+            'brand-warning': '#Fda700',
             'brand-danger': '#fd5f00',
-            'brand-info-light': '#1a86d0'
+            'brand-info': '#1a86d0',
+            'brand-inverse': '#002B49'
         },
 
         screens: {

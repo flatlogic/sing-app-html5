@@ -581,12 +581,12 @@
 
     a{
       display: inline-block;
-      overflow: hidden;
       max-width: 100%;
 
       > img{
         transition: transform .15s ease;
         max-width: 100%;
+
       }
     }
     &:hover{
