@@ -428,7 +428,17 @@ function getMainChartData() {
 }
 
 let myIntro = introJs();
-myIntro.setOptions({ skipLabel: "Stop", tooltipPosition: "auto", hidePrev: true, hideNext: true, nextLabel: "Next", prevLabel: "Back", overlayOpacity: 0, showBullets: false });
+myIntro.setOptions({
+    skipLabel: "<button class='btn btn-outline-secondary btn-xs'>Stop</button>",
+    doneLabel: "<button class='btn btn-outline-secondary btn-xs'>Done</button>",
+    nextLabel: "<button class='btn btn-success btn-xs'>Next</button>",
+    prevLabel: "<button class='btn btn-outline-secondary btn-xs'>Back</button>",
+    tooltipPosition: "auto",
+    hidePrev: true,
+    hideNext: true,
+    overlayOpacity: 0,
+    showBullets: false
+});
 
 
 setTimeout(() => {
