@@ -1195,9 +1195,13 @@
 /**         Widgets Grid          **/
 /***********************************/
 
+
 .widget-container{
   min-height: 30px;
 
+  .fullscreened .jumbotron{
+    height: 100vh;
+  }
   .widget:not(.fullscreened) > header{
     cursor: move;
   }
