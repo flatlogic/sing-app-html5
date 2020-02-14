@@ -1914,16 +1914,15 @@ a.fc-event {
 .introjs-donebutton,
 .introjs-prevbutton,
 .introjs-donebutton{
-  color: #798892;
-  border-color: #798892;
-  border: 1px solid #d4d4d4;
-  background-image: none;
-  background-color: #fff!important;
+  background-image: none!important;
+  background-color: transparent;
+  padding: 0;
+  margin: 14px 0 0 0;
+  border: 0!important;
+  font-size: 12px;
   float: left;
-  text-shadow: none;
+
   &:hover{
-    background-color: #798892!important;
-    color: #fff!important;
   }
 }
 
@@ -1931,12 +1930,11 @@ a.fc-event {
   display: none!important;
 }
 
-.introjs-nextbutton, .introjs-fullbutton{
-  color: #fff!important;
-  background-color: #21ae8c!important;
-  background-image: none!important;
-  text-shadow: none;
-  border-color: #21ae8c;
+.introjs-nextbutton{
+  padding: 0;
+  margin: 14px 0 0 0;
+  border: none;
+  font-size: 12px;
 
   &:hover{
     color: #fff!important;
@@ -1945,13 +1943,8 @@ a.fc-event {
   }
 }
 
-.introjs-donebutton{
-  background-image: none!important;
-}
 .introjs-prevbutton{
   float: none;
   margin-right: 7px;
 }
-.introjs-donebutton{
-  border: 1px solid #798892;
-}
+
