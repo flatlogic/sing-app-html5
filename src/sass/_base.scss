@@ -1201,6 +1201,7 @@
 
   .fullscreened .jumbotron{
     height: 100vh;
+    border-radius: 0;
   }
   .widget:not(.fullscreened) > header{
     cursor: move;
