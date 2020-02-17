@@ -861,9 +861,32 @@ function initDemoFunctions(){
         });
 
         // theme switcher
+        function delClass(selector){
+            let colorBox = $(`.${selector}`);
+            for(let i=0; i < colorBox.length; i++) {
+                if ($($(`.${selector}`)[i]).hasClass('active')) {
+                    $($(`.${selector}`)[i]).removeClass('active');
+                }
+            }
+        };
+
+        $('.colors-list .color-box-nav-bar').click(function(e) {
+            delClass('color-box-nav-bar');
+            $(".navbar").css('background-color', $(e.target).css('background-color'));
+            $(e.target).addClass('active');
+        });
+
+        $('.colors-list .color-box-side-bar').click(function(e) {
+            delClass('color-box-side-bar');
+            $(".sidebar").css('background-color', $(e.target).css('background-color'));
+            $(e.target).addClass('active');
+        });
+
+
         let $darkStyles,
             $cssDark = $('#css-dark'),
             $cssLight = $('#css-light');
+
         $cssDark.click(function () {
             if (!$darkStyles) {
                 $darkStyles = $('<link href="../css/application-dark.min.css" rel="stylesheet">').appendTo($('head'));
@@ -874,7 +897,6 @@ function initDemoFunctions(){
                 $cssDark.addClass('active');
                 $cssLight.removeClass('active');
             }
-
         });
 
         $cssLight.click(function () {
@@ -883,7 +905,6 @@ function initDemoFunctions(){
                 $cssLight.addClass('active');
                 $cssDark.removeClass('active');
             }
-
         });
 
 
