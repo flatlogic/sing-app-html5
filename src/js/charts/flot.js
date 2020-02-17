@@ -311,6 +311,9 @@ $(function () {
                     pie: {
                         show: true,
                         radius: 1,
+                        stroke: {
+                            width: 0
+                        },
                         label: {
                             show: true,
                             radius: 2 / 3,
@@ -345,7 +348,10 @@ $(function () {
                     pie: {
                         innerRadius: 0.5,
                         show: true,
-                        fill: 0.1
+                        fill: 0.1,
+                        stroke: {
+                            width: 0
+                        }
                     }
                 },
                 colors: COLORS.donutChart,
