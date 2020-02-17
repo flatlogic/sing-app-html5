@@ -214,7 +214,6 @@ $(function(){
         $('body').addClass('nav-collapsed');
         this.$sidebar.find('.collapse.show').collapse('hide')
             .siblings('[data-toggle=collapse]').addClass('collapsed');
-
     };
 
     SingAppView.prototype.expandNavigation = function(){
@@ -862,64 +861,52 @@ function initDemoFunctions(){
         });
 
         // theme switcher
-
-        const sidebar = $(".sidebar");
-        const chat = $("#chat");
-        const navbar = $(".navbar");
-        const sup = $("sup");
-        const circle = $(".circle");
-        const styles = ["navbar-first ", "second ", "third ", "fourth ", "fifth ", "sixth ", "seventh ", "eighth ", "ninth "];
-
-        $("[name=navbar-type]").change(function() {
-            if (this.value === 'floating') {
-                navbar.addClass('navbar-floating-type');
-            } else {
-                navbar.removeClass('navbar-floating-type');
+        function delClass(selector){
+            let colorBox = $(`.${selector}`);
+            for(let i=0; i < colorBox.length; i++) {
+                if ($($(`.${selector}`)[i]).hasClass('active')) {
+                    $($(`.${selector}`)[i]).removeClass('active');
+                }
             }
-        });
-
-        $("[name=sidebar-type]").change( function() {
-            if (this.value === "transparent") { (sidebar).addClass('sidebar-transparent') }
-            else {(sidebar).removeClass('sidebar-transparent')}
-        });
-
+        };
 
         $('.colors-list .color-box-nav-bar').click(function(e) {
-            const target = $(e.target);
-            const darkBG = ["first", "third", "eighth"];
-
-            $('.color-box-nav-bar').removeClass('active');
-            target.addClass('active');
-            navbar.removeClass(styles.join("navbar-")).addClass(`navbar-${target.data('style')}`);
-            circle.removeClass().addClass(`circle bg-${ darkBG.indexOf(target.data('style')) >= 0 ? "success" : "primary" } fw-bold text-white`);
+            delClass('color-box-nav-bar');
+            $(".navbar").css('background-color', $(e.target).css('background-color'));
+            $(e.target).addClass('active');
         });
 
         $('.colors-list .color-box-side-bar').click(function(e) {
-            const target = $(e.target);
-            $('.color-box-side-bar').removeClass('active');
-            sidebar.removeClass("sidebar-first");
-            sidebar.removeClass(styles.join("sidebar-")).addClass(`sidebar sidebar-${target.data('style')}`);
-            chat.removeClass().addClass(`chat-sidebar chat-sidebar-${target.data('style')}`);
-
-            switch(target.data('style')) {
-                case "first":
-                case "second":
-                case "fourth":
-                case "eighth":
-                    sup.removeClass().addClass("text-success fw-semi-bold");
-                    break;
-                case "third":
-                case "fifth":
-                case "sixth":
-                case "seventh":
-                    sup.removeClass().addClass("text-info fw-semi-bold");
-                    break;
-                case "ninth":
-                    sup.removeClass().addClass("text-primary fw-semi-bold");
-                    break;
-            }
-            target.addClass('active');
+            delClass('color-box-side-bar');
+            $(".sidebar").css('background-color', $(e.target).css('background-color'));
+            $(e.target).addClass('active');
         });
+
+
+        let $darkStyles,
+            $cssDark = $('#css-dark'),
+            $cssLight = $('#css-light');
+
+        $cssDark.click(function () {
+            if (!$darkStyles) {
+                $darkStyles = $('<link href="../css/application-dark.min.css" rel="stylesheet">').appendTo($('head'));
+            }
+
+            if ($darkStyles[0].disabled) {
+                $darkStyles[0].disabled = false;
+                $cssDark.addClass('active');
+                $cssLight.removeClass('active');
+            }
+        });
+
+        $cssLight.click(function () {
+            if (!$darkStyles[0].disabled) {
+                $darkStyles[0].disabled = true;
+                $cssLight.addClass('active');
+                $cssDark.removeClass('active');
+            }
+        });
+
 
         setTimeout(function(){
             var $chatNotification = $('#chat-notification');
