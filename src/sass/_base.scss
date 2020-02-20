@@ -77,9 +77,10 @@
 .page-controls {
   position: absolute;
   z-index: 1;
-  background: $navbar-bg;
+  //background: $navbar-bg;
   box-shadow: $navbar-shadow;
   height: $navbar-height;
+  box-shadow: 4px 4px 30px 0px rgba(75,102,171,0.2);
 
 
   @include media-breakpoint-down(sm) {
@@ -182,7 +183,6 @@
   vertical-align: middle;
   font-weight: $font-weight-normal;
   font-size: 18px;
-  letter-spacing: 1px;
 
   @include transition(width $sidebar-transition-time ease-in-out);
   > a {
@@ -191,7 +191,11 @@
     text-decoration: none;
     text-transform: capitalize;
     white-space: nowrap;
-    padding: 0 2px;
+    padding: 0 5px;
+    font-weight: 300;
+    span{
+      font-weight: $font-weight-normal;
+    }
   }
 
   .nav-collapsed &{
@@ -1085,7 +1089,6 @@
 .widget-card { min-height: 135px;}
 
 .widget-icon{
-  opacity: .5;
   font-size: 42px;
   height: 70px;
 
@@ -1192,9 +1195,14 @@
 /**         Widgets Grid          **/
 /***********************************/
 
+
 .widget-container{
   min-height: 30px;
 
+  .fullscreened .jumbotron{
+    height: 100vh;
+    border-radius: 0;
+  }
   .widget:not(.fullscreened) > header{
     cursor: move;
   }
@@ -1227,10 +1235,6 @@ input[type=search], input.search {
 /***********************/
 /*       Buttons       */
 /***********************/
-
-.btn-inverse {
-  @include button-variant($gray-700, darken($gray-700, 10%));
-}
 
 .btn-outline {
   &-default {
@@ -1458,7 +1462,7 @@ input[type=search], input.search {
     background-size: cover;
     background-position: center;
     position: relative;
-    box-shadow: $widget-shadow;
+    box-shadow: $widget-card-shadow;
 
     @include media-breakpoint-down(sm) {
       height: 200px;
@@ -1495,20 +1499,6 @@ input[type=search], input.search {
       position: absolute;
       right: 14px;
       top: 14px;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 1;
-      }
-
-      &--fill {
-        opacity: 1;
-      }
-
-      .fa {
-        color: $gray-800;
-      }
-      
     }
   }
 
@@ -1543,7 +1533,7 @@ input[type=search], input.search {
 }
 
 .price {
-  font-size: $font-size-base;
+  font-size: $font-size-larger;
   font-weight: $font-weight-semi-bold;
 
   &.price-sale {
@@ -1643,13 +1633,15 @@ input[type=search], input.search {
 
   .info-title {
     margin-top: $spacer;
-    font-weight: $font-weight-semi-bold;
+    font-weight: $font-weight-normal;
     text-transform: uppercase;
+    font-size: $font-size-lg;
   }
 
   .info-description {
     color: $text-muted;
     font-weight: $font-weight-normal;
+    font-size: $font-size-lg;
     text-transform: capitalize;
     margin: 5px 0 25px;
   }
@@ -1748,8 +1740,9 @@ input[type=search], input.search {
 .product-page-title {
   width: 100%;
   text-align: center;
-  font-weight: $font-weight-semi-bold;
+  font-weight: $font-weight-normal;
   margin: 75px 0 35px;
+  color: $gray-800;
 
   @include media-breakpoint-down(sm) {
     display: none;
@@ -1835,7 +1828,11 @@ input[type=search], input.search {
     @include media-breakpoint-down(sm) {
       display: none;
     }
-
+    h3{
+      font-size: 1.4rem;
+      font-weight: $font-weight-normal;
+      color: #3c484f;
+    }
     h5 {
       font-weight: $font-weight-semi-bold;
       margin: 0 0 15px;
@@ -2638,6 +2635,7 @@ input[type=search], input.search {
   .sparkline-wrapper {
     display: flex;
     justify-content: center;
+    overflow: hidden;
     min-width: calc(100% - 150px);
   }
 

@@ -89,19 +89,23 @@ $(function(){
                 {
                     title: 'All Day Event',
                     start: new Date(y, m, 1),
-                    backgroundColor: Sing.colors['brand-primary'],
+                    backgroundColor: Sing.colors['brand-warning'],
                     textColor: '#fff'
                 },
                 {
                     title: 'Long Event',
                     start: new Date(y, m, d+5),
-                    end: new Date(y, m, d+7)
+                    end: new Date(y, m, d+7),
+                    backgroundColor: Sing.colors['brand-info'],
+                    textColor: '#fff'
                 },
                 {
                     id: 999,
                     title: 'Repeating Event',
                     start: new Date(y, m, d-3, 16, 0),
-                    allDay: false
+                    allDay: false,
+                    backgroundColor: Sing.colors['brand-success'],
+                    textColor: '#fff'
                 },
                 {
                     title: 'Click for Flatlogic',

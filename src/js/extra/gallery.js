@@ -9,6 +9,7 @@ $(function(){
                 shuffleInstance = new Shuffle($grid, {
                     itemSelector: '.gallery-item',
                     sizer: $sizer // could also be a selector: '.my-sizer-element'
+
                 });
 
                 var init = function() {

@@ -157,7 +157,9 @@ legend {
 }
 
 .table-bordered th{
-  background-color: $gray-200;
+  border: none;
+  background-color: #005792;
+  color: #f6f6e9;
 }
 
 .table-lg {
@@ -250,7 +252,8 @@ legend {
 .nav-tabs {
   & .nav-item+.nav-item { margin-left: 0}
   border-bottom: none;
-  background-color: $gray-light;
+  background-color: $gray-200;
+
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
   > .nav-item {
@@ -405,7 +408,7 @@ legend {
 
 .navbar-form {
   .input-group {
-    width: 245px;
+    width: 300px;
     display: flex;
 
     .form-control {
@@ -416,6 +419,7 @@ legend {
       border-bottom-right-radius: $border-radius !important;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
+      background: rgba(0,0,0,.1);
     }
 
     .input-group-text {
@@ -638,7 +642,7 @@ legend {
 
 .btn {
   // add tiny gradient to background
-  background-image: linear-gradient(to right, #ffffff26, #fff0);
+  //background-image: linear-gradient(to right, #ffffff26, #fff0);
 }
 
 .btn .glyphicon {
@@ -660,7 +664,7 @@ legend {
   @include border-radius(6px);
 
   &-f {
-    @include border-radius(50px);
+    @include border-radius(50px!important);
   }
 }
 
@@ -1238,6 +1242,7 @@ pre {
   line-height: $spacer;
   word-break: break-all;
   word-wrap: break-word;
+  white-space: pre-wrap;
   background-color: $pre-bg;
   border-radius: $border-radius;
 

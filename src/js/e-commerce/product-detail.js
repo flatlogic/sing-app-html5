@@ -13,26 +13,7 @@ $(function () {
     });
   }
 
-  function _initStarController() {
-    $(".star, .btn-star").on("click", function () {
-      var starred = $(this).children().hasClass("fa-star");
-
-      if (starred) {
-        $(this)
-          .children()
-          .removeClass("fa-star")
-          .addClass("fa-star-o");
-      } else {
-        $(this)
-          .children()
-          .removeClass("fa-star-o")
-          .addClass("fa-star");
-      }
-    });
-  }
-
   function pageLoad() {
-    _initStarController();
     _initCarousel();
   }
 

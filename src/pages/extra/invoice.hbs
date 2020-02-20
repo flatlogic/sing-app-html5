@@ -3,6 +3,10 @@
     {{> sidebar active="invoice"}}
     {{/content}}
     {{#content "content" mode="replace"}}
+    <ol class="breadcrumb hidden-print">
+        <li class="breadcrumb-item">YOU ARE HERE</li>
+        <li class="breadcrumb-item active">Invoice</li>
+    </ol>
         <div class="row">
             <div class="col-lg-11">
                 <section class="widget widget-invoice">
@@ -140,11 +144,11 @@
                                 &nbsp;&nbsp;
                                 Print
                             </button>
-                            <button class="btn btn-danger mb-2">
+                            <button class="btn btn-success mb-2">
                                 Proceed with Payment
                                 &nbsp;
                                 <span class="circle bg-white">
-                                    <i class="fa fa-arrow-right text-danger"></i>
+                                    <i class="fa fa-arrow-right text-success"></i>
                                 </span>
                             </button>
                         </div>

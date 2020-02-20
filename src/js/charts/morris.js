@@ -31,8 +31,8 @@ $(function() {
                 ykeys: ['a', 'b'],
                 labels: ['Users A', 'Series B'],
                 lineColors: [
-                    Sing.palette['brand-success-light'],
-                    Sing.palette['brand-danger-pale']
+                    Sing.colors['brand-info'],
+                    Sing.colors['brand-warning']
                 ],
                 lineWidth: 0
             });
@@ -55,8 +55,8 @@ $(function() {
                 ykeys: ['a', 'b'],
                 labels: ['Series A', 'Series B'],
                 lineColors: [
-                    Sing.palette['brand-success-light'],
-                    Sing.palette['brand-warning-light']
+                    Sing.colors['brand-info'],
+                    Sing.colors['brand-warning']
                 ]
             });
         }
@@ -71,9 +71,9 @@ $(function() {
                     {label: "Mail-Order Sales", value: 20}
                 ],
                 colors:[
-                    Sing.palette['brand-danger-pale'],
-                    Sing.palette['brand-warning-light'],
-                    Sing.palette['brand-info-pale']
+                    Sing.colors['brand-danger'],
+                    Sing.colors['brand-warning'],
+                    Sing.colors['brand-info']
                 ]
             });
         }
@@ -91,7 +91,7 @@ $(function() {
                 xkey: 'x',
                 ykeys: ['y'],
                 labels: ['OS Users, %'],
-                barColors: [Sing.palette['brand-info-light']],
+                barColors: [Sing.colors['brand-info']],
                 gridTextColor: Sing.colors['gray-400']
             });
         }
@@ -119,8 +119,8 @@ $(function() {
                 labels: ['Total Income', 'Total Outcome'],
                 hideHover: 'auto',
                 barColors: [
-                    Sing.palette['brand-success-light'],
-                    Sing.palette['brand-danger-light']
+                    Sing.colors['brand-info'],
+                    Sing.colors['brand-danger']
                 ],
                 gridTextColor: Sing.colors['gray-100']
             });
@@ -143,10 +143,10 @@ $(function() {
                 xkey: 'y',
                 ykeys: ['a', 'b', 'c', 'd'],
                 barColors: [
-                    Sing.palette['brand-primary-light'],
-                    Sing.palette['brand-info-pale'],
-                    Sing.palette['brand-warning-pale'],
-                    Sing.palette['brand-danger-pale']
+                    Sing.colors['brand-info'],
+                    Sing.colors['brand-primary'],
+                    Sing.colors['brand-warning'],
+                    Sing.colors['brand-danger']
                 ],
                 labels: ['Linux', 'MacOS', 'Windows', 'Other'],
                 hoverCallback: function (index, options, content, row) {

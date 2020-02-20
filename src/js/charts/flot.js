@@ -2,14 +2,14 @@ $(function () {
     'use strict';
 
     const COLORS = {
-        lineChart: [Sing.palette['brand-warning-light'], Sing.palette['brand-warning-pale'], Sing.colors['brand-warning']],
-        barChart: [Sing.palette['brand-primary-light'], Sing.palette['brand-success-pale'], Sing.palette['brand-danger-pale']],
-        trackingChart: [Sing.palette['brand-success-light'], Sing.palette['brand-danger-pale']],
-        pieChart: Object.values(Sing.palette).slice(5),
-        markers: Object.values(Sing.palette).slice(3),
-        donutChart: Object.values(Sing.palette).slice(6),
+        lineChart: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-primary']],
+        barChart: Object.values(Sing.colors).slice(13),
+        trackingChart: [Sing.colors['brand-danger'], Sing.colors['brand-info']],
+        pieChart: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-success'], Sing.colors['brand-danger']],
+        markers: Object.values(Sing.colors).slice(11),
+        donutChart: Object.values(Sing.colors).slice(12),
         fontColor: Sing.colors['gray-400'],
-        gridBorder: Sing.colors['white']
+        gridBorder: [Sing.colors['brand-warning'], Sing.colors['brand-info'], Sing.colors['brand-primary']]
     };
     let debouncedTmeout = 0;
 
@@ -211,7 +211,7 @@ $(function () {
                 colors: COLORS.trackingChart,
                 crosshair: {
                     mode: "x",
-                    color: Sing.palette['brand-danger-pale']
+                    color: Sing.colors['brand-danger']
                 },
                 grid: {
                     hoverable: true,
@@ -345,7 +345,7 @@ $(function () {
                     pie: {
                         innerRadius: 0.5,
                         show: true,
-                        fill: 0.7
+                        fill: 0.1
                     }
                 },
                 colors: COLORS.donutChart,
@@ -371,7 +371,7 @@ $(function () {
                         show: true,
                         barWidth: 0.45,
                         lineWidth: 1,
-                        fill: 0.75
+                        fill: 1
                     }
                 },
                 grid: {
@@ -392,7 +392,7 @@ $(function () {
                     axisLabelFontSizePixels: 13,
                     axisLabelPadding: 15
                 },
-                colors: Object.values(Sing.palette).slice(1)
+                colors: Object.values(Sing.colors).slice(14)
             });
         }
     }

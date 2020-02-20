@@ -462,6 +462,12 @@
 /**          Post Links           **/
 /***********************************/
 
+.calendar{
+  .event{
+    font-weight: $font-weight-semi-bold;
+  }
+}
+
 .post-links{
   margin-bottom: 0;
   font-size: $font-size-sm;
@@ -530,7 +536,7 @@
   .author{
     margin-top: 0;
     margin-bottom: 2px;
-    color: $gray-600;
+    color: #1A86D0;
   }
 
   .comment-body{
@@ -575,12 +581,13 @@
 
     a{
       display: inline-block;
-      overflow: hidden;
       max-width: 100%;
+      overflow: hidden;
 
       > img{
         transition: transform .15s ease;
         max-width: 100%;
+
       }
     }
     &:hover{
@@ -740,7 +747,6 @@
 .stats-row-profile {
   .stat-item {
     border-left: 0;
-    padding-left: 15px;
     text-align: center;
 
     @include media-breakpoint-up(lg){
@@ -809,7 +815,7 @@
     width: 8px;
     content: " ";
     margin-left: -4px;
-    background-color: $white;
+    background-color: $gray-200;
 
     @include media-breakpoint-up(lg){
       left: 50%;
@@ -959,7 +965,7 @@
   font-weight: $font-weight-semi-bold;
   > a {
     text-decoration: none;
-    color: $gray-700;
+    color: $skyblue;
   }
   > small{
     font-weight: $font-weight-semi-bold;
@@ -979,8 +985,10 @@
   margin: 0 -20px -20px;
   max-height: 260px;
   overflow: hidden;
-  > img{
+  a{
+  img{
     max-width: 100%;
+    }
   }
 }
 
@@ -1142,7 +1150,7 @@
     }
 
     .fa-star{
-      color: theme-color('warning');
+      color: theme-color('primary');
     }
   }
 }

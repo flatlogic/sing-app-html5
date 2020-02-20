@@ -202,25 +202,25 @@ $(function () {
         $('.widget').widgster();
 
         let scatterplotChart = new RickshawScatterplotChart(2, 200, [
-            Sing.palette['brand-danger-pale'],
-            Sing.palette['brand-success-light']
+            Sing.colors['brand-danger'],
+            Sing.colors['brand-info']
         ]);
         let areaChart = new RickshawAreaChart(2, 30, [
-            Sing.palette['brand-primary-pale'],
-            Sing.colors['brand-primary'],
+            Sing.colors['brand-info'],
+            Sing.colors['brand-warning'],
         ]);
         let stackedBarChart = new BarChart(3, 10, [
-            Sing.palette['brand-primary-light'],
-            Sing.palette['brand-primary-pale'],
-            Sing.palette['brand-warning-light']
+            Sing.colors['brand-info'],
+            Sing.colors['brand-success'],
+            Sing.colors['brand-warning']
         ], {stacked: true, padding: {left: 0.03}});
         let barChart = new BarChart(2, 15, [
-            Sing.palette['brand-success-pale'],
-            Sing.palette['brand-warning-light']
+            Sing.colors['brand-success'],
+            Sing.colors['brand-warning']
         ], {padding: {left: 0.02}});
         let lineChart = new LineChart(2, 50, [
-            Sing.palette['brand-info-light'],
-            Sing.palette['brand-info-pale']
+            Sing.colors['brand-info'],
+            Sing.colors['brand-primary']
         ]);
 
         scatterplotChart
