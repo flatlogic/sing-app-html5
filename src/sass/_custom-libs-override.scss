@@ -1891,7 +1891,15 @@ a.fc-event {
 /*           IntroJS             */
 /**********************************/
 
-@import "../../node_modules/bootstrap/scss/_buttons.scss";
+.introjs-overlay{
+  display: none;
+}
+
+@media (max-width: 768px){
+  .introjs-helperLayer, .introjs-tooltipReferenceLayer{
+  display: none;
+  }
+}
 
 .introjs-button{
  // @extend .btn;
