@@ -861,6 +861,43 @@ function initDemoFunctions(){
         });
 
         // theme switcher
+
+        $("#navbar_static").click(() => {
+            if (($(".navbar")).hasClass('navbar-floating-type')){
+                (($(".navbar")).removeClass('navbar-floating-type'))
+            }
+        });
+
+        $("#navbar_floating").click(() => {
+            if (!($(".navbar")).hasClass('navbar-floating-type')){
+                (($(".navbar")).addClass('navbar-floating-type'))
+            }
+        });
+
+        let obj = [
+            $(".la-bars"),
+            $(".la-refresh"),
+            $(".la-times"),
+            $(".la-search"),
+            $(".nav-link"),
+            $("#main-search")
+        ];
+
+        function changeTheme(color){
+            if (color === "white") {
+                for (let i = 0; i < 5; i++){
+                    obj[i].css('color', "rgb(255,255,255)");
+                }
+                obj[5].addClass("placeholder-white");
+
+            } else if(color === "dark") {
+                for (let i = 0; i < 5; i++){
+                    obj[i].css('color', "rgb(102, 102, 102)");
+                }
+                obj[5].removeClass("placeholder-white");
+            }
+        }
+
         function delClass(selector){
             let colorBox = $(`.${selector}`);
             for(let i=0; i < colorBox.length; i++) {
@@ -874,13 +911,46 @@ function initDemoFunctions(){
             delClass('color-box-nav-bar');
             $(".navbar").css('background-color', $(e.target).css('background-color'));
             $(e.target).addClass('active');
+
+            switch($(e.target).css('background-color')) {
+                case "rgb(0, 43, 73)":
+                case "rgb(0, 68, 114)":
+                case "rgb(19, 25, 29)":
+                case "rgb(32, 174, 140)":
+                    changeTheme('white');
+                    break;
+
+                case "rgb(255, 255, 255)":
+                case "rgb(233, 235, 239)":
+                case "rgb(209, 231, 245)":
+                case "rgb(204, 221, 233)":
+                case "rgb(214, 223, 230)":
+                    changeTheme('dark');
+                    break;
+            }
         });
 
         $('.colors-list .color-box-side-bar').click(function(e) {
-            delClass('color-box-side-bar');
-            $(".sidebar").css('background-color', $(e.target).css('background-color'));
+            delClass("color-box-side-bar");
+
+            $(".sidebar").css({"color": "rgb(108, 117, 125)", "border-right": "none","background-color": $(e.target).css("background-color")});
+            $(".sidebar-nav li a").addClass("hover-white");
+            $(".open a").addClass("hover-white");
+            $(".sidebar-nav li a:hover").css({"background-color": "transparate"});
+            $(".logo a").css("color", "rgb(108, 117, 125)");
+            $(".active a").css("background-color", "rgb(255, 255, 255)");
+            $(".progress").addClass("bg-white");
+            $(".sidebar-nav-title").css("color", "rgb(108, 117, 125)");
+            $(".label-name").css("color", "rgb(108, 117, 125)");
+            $(".sidebar-alerts").css("color", "rgb(108, 117, 125)");
+            $(".sidebar ul").css("background-color", "rgb(255, 255, 255)");
+            $(".sidebar-nav>.active>a .icon").css({"background-color": "rgb(108, 117, 125)", "color": "rgb(255, 255, 255)"});
+
+            $("#sidebar-dashboard").css("background-color", "rgb(255, 255, 255)");
+
             $(e.target).addClass('active');
         });
+
 
 
         let $darkStyles,

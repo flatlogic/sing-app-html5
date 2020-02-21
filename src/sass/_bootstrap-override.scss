@@ -1090,6 +1090,19 @@ legend {
 //
 // Navbar Dasboard
 // --------------------------------------------------
+.navbar-floating-type{
+  margin: 1rem 40px 0;
+  border-radius: .5rem;
+  left: 20px!important;
+}
+.placeholder-white{
+  &::placeholder{
+    color: #fff;
+  }
+}
+.header-dark{
+  color: #fff!important;
+}
 
 .navbar-first {
   @include nav-style($sidebar-bg-color!important, $white, $white, rgba(0,0,0,.1), rgba(0,0,0,.1), $white);
