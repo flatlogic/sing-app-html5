@@ -210,11 +210,22 @@
   }
 }
 
+.sidebar-white{
+  background-color: $white;
+}
+
 .sidebar-nav{
   padding: 10px 0;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: $sidebar-font-weight;
 
+  .hover-white{
+    background-color: white!important;
+    color: #6c757d!important;
+    &:hover{
+      background-color: transparent;
+    }
+  }
   li a {
     display: block;
     color: $sidebar-color;
