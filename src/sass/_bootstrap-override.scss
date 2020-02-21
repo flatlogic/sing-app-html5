@@ -1082,6 +1082,19 @@ legend {
 //
 // Navbar Dasboard
 // --------------------------------------------------
+.navbar-floating-type{
+  margin: 1rem 40px 0;
+  border-radius: .5rem;
+  left: 20px!important;
+}
+.placeholder-white{
+  &::placeholder{
+    color: #fff;
+  }
+}
+.header-dark{
+  color: #fff!important;
+}
 
 .navbar-dashboard {
   background-color: $navbar-dashboard-bg;
