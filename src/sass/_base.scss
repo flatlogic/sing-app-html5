@@ -20,6 +20,418 @@
   }
 }
 
+.sidebar-white {
+  color: $sidebar-white-color;
+  border-right: none;
+  background-color: #fff;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $sidebar-white-color;
+    }
+    .logo > a{
+      color: $sidebar-white-color;
+    }
+    .sidebar-nav>.open>a{
+      background-color: transparent;
+    }
+    .sidebar-nav{
+      li{
+        a{
+          color: $sidebar-white-color!important;
+          &:hover{
+            background-color: transparent;
+          }
+        }
+      }
+      .active a{
+        background-color: #fff;
+        color: $sidebar-white-color;
+        span{
+          background-color: $sidebar-white-color;
+          i{
+            color: white;
+          }
+        }
+      }
+        ul{
+          background-color: #fff;
+        }
+    }
+    .sidebar-labels>li>a{
+      color: $sidebar-white-color;
+    }
+    .sidebar-alerts{
+      .progress{
+       background-color: $white;
+      }
+    }
+  }
+}
+
+.sidebar-first{
+  color: #fff;
+  border-right: none;
+  background-color: $sidebar-first-color;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: #fff;
+    }
+    .logo > a{
+      color: #fff;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $sidebar-first-color;
+    }
+    .sidebar-nav{
+      li{
+        a{
+          color: #fff!important;
+          &:hover{
+            background-color: #00395f;
+          }
+        }
+      }
+      .active a{
+        background-color: #00395f;
+        color: #fff;
+        span{
+          background-color: #fff;
+          i{
+            color: #004472;
+          }
+        }
+      }
+      ul{
+        background-color: #00395f;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: #fff;
+    }
+    .sidebar-alerts{
+      .progress{
+
+      }
+    }
+  }
+}
+
+.sidebar-second{
+  color: $sidebar-second-color;
+  border-right: none;
+  background-color: $sidebar-second-color-bg;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $sidebar-second-color;
+    }
+    .logo > a{
+      color: $sidebar-second-color;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $sidebar-second-color-bg;
+    }
+    .sidebar-nav{
+      ul{
+        background-color: $sidebar-second-color-bg;
+      }
+      li{
+        a{
+          color: $sidebar-second-color!important;
+          &:hover{
+            background-color: #dbdee4;
+          }
+        }
+      }
+      .active a{
+        background-color: #dbdee4;
+        color: $sidebar-second-color;
+        span{
+          background-color: $sidebar-second-color;
+
+          i{
+            color: white;
+          }
+        }
+      }
+      ul{
+        background-color: #dbdee4;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: $sidebar-second-color;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: #042338;
+      }
+    }
+  }
+}
+
+.sidebar-third{
+  color: $sidebar-third-color;
+  border-right: none;
+  background-color: $sidebar-third-color-bg;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $sidebar-third-color;
+    }
+    .logo > a{
+      color: $sidebar-third-color;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $sidebar-third-color-bg-active;
+    }
+    .sidebar-nav{
+      ul{
+        background-color: $sidebar-third-color-bg;
+      }
+      li{
+        a{
+          color: $sidebar-third-color;
+          &:hover{
+            background-color: $sidebar-third-color-bg-active;
+          }
+        }
+      }
+      .active a{
+        background-color: $sidebar-third-color-bg-active;
+        color: $sidebar-third-color;
+        span{
+          background-color: $sidebar-third-color;
+
+          i{
+            color: $sidebar-third-color-bg;
+          }
+        }
+      }
+      ul{
+        background-color: $sidebar-third-color-bg-active;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: $sidebar-third-color;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: $sidebar-third-color-bg-active;
+      }
+    }
+  }
+}
+
+.sidebar-fourth{
+  color: $sidebar-third-color;
+  border-right: none;
+  background-color: $sidebar-fourth-color-bg;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $sidebar-third-color;
+    }
+    .logo > a{
+      color: $sidebar-third-color;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $sidebar-fourth-color-bg-active;
+    }
+    .sidebar-nav{
+      ul{
+        background-color: $sidebar-fourth-color-bg;
+      }
+      li{
+        a{
+          color: $sidebar-third-color;
+          &:hover{
+            background-color: $sidebar-fourth-color-bg-active;
+          }
+        }
+      }
+      .active a{
+        background-color: $sidebar-fourth-color-bg-active;
+        color: $sidebar-third-color;
+        span{
+          background-color: $sidebar-third-color;
+
+          i{
+            color: $sidebar-fourth-color-bg;
+          }
+        }
+      }
+      ul{
+        background-color: $sidebar-fourth-color-bg-active;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: $sidebar-third-color;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: $sidebar-fourth-color-bg-active;
+      }
+    }
+  }
+}
+
+.sidebar-fifth{
+  color: $sidebar-third-color;
+  border-right: none;
+  background-color: $sidebar-fifth-color-bg;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $sidebar-third-color;
+    }
+    .logo > a{
+      color: $sidebar-third-color;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $sidebar-fifth-color-bg-active;
+    }
+    .sidebar-nav{
+      ul{
+        background-color: $sidebar-fifth-color-bg;
+      }
+      li{
+        a{
+          color: $sidebar-third-color;
+          &:hover{
+            background-color: $sidebar-fifth-color-bg-active;
+          }
+        }
+      }
+      .active a{
+        background-color: $sidebar-fifth-color-bg-active;
+        color: $sidebar-third-color;
+        span{
+          background-color: $sidebar-third-color;
+
+          i{
+            color: $sidebar-fifth-color-bg;
+          }
+        }
+      }
+      ul{
+        background-color: $sidebar-fifth-color-bg-active;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: $sidebar-third-color;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: $sidebar-fifth-color-bg-active;
+      }
+    }
+  }
+}
+
+.sidebar-sixth{
+  color: white;
+  border-right: none;
+  background-color: $sidebar-sixth-color-bg;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: white;
+    }
+    .logo > a{
+      color: white;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $sidebar-sixth-color-bg-active;
+    }
+    .sidebar-nav{
+      ul{
+        background-color: $sidebar-sixth-color-bg;
+      }
+      li{
+        a{
+          color: white;
+          &:hover{
+            background-color: $sidebar-sixth-color-bg-active;
+          }
+        }
+      }
+      .active a{
+        background-color: $sidebar-sixth-color-bg-active;
+        color: white;
+        span{
+          background-color: white;
+
+          i{
+            color: $sidebar-sixth-color-bg;
+          }
+        }
+      }
+      ul{
+        background-color: $sidebar-sixth-color-bg-active;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: white;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: $sidebar-sixth-color-bg-active;
+      }
+    }
+  }
+}
+
+.sidebar-seventh{
+  color: $sidebar-seventh-color;
+  border-right: none;
+  background-color: $sidebar-seventh-color-bg;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $sidebar-seventh-color;
+    }
+    .logo > a{
+      color: $sidebar-seventh-color;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $sidebar-seventh-color-bg-active;
+    }
+    .sidebar-nav{
+      ul{
+        background-color: $sidebar-seventh-color-bg;
+      }
+      li{
+        a{
+          color: $sidebar-seventh-color;
+          &:hover{
+            background-color: $sidebar-seventh-color-bg-active;
+          }
+        }
+      }
+      .active a{
+        background-color: $sidebar-seventh-color-bg-active;
+        color: $sidebar-seventh-color;
+        span{
+          background-color: $sidebar-seventh-color;
+
+          i{
+            color: $sidebar-seventh-color-bg;
+          }
+        }
+      }
+      ul{
+        background-color: $sidebar-seventh-color-bg-active;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: $sidebar-seventh-color;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: $sidebar-seventh-color-bg-active;
+      }
+    }
+  }
+}
+
+.sidebar-transparent{
+  
+}
+
 .page-controls, .content-wrap, .loader-wrap{
   left: $sidebar-width;
   @include transition(left $sidebar-transition-time ease-in-out);
