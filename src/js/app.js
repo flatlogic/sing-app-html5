@@ -884,8 +884,9 @@ function initDemoFunctions(){
         ];
 
         function changeTheme(color){
+            let length = obj.length;
             if (color === "white") {
-                for (let i = 0; i < 5; i++){
+                for (let i = 0; i < length; i++){
                     obj[i].css('color', "rgb(255,255,255)");
                 }
                 obj[5].addClass("placeholder-white");
@@ -933,21 +934,35 @@ function initDemoFunctions(){
         $('.colors-list .color-box-side-bar').click(function(e) {
             delClass("color-box-side-bar");
 
-            $(".sidebar").css({"color": "rgb(108, 117, 125)", "border-right": "none","background-color": $(e.target).css("background-color")});
-            $(".sidebar-nav li a").addClass("hover-white");
-            $(".open a").addClass("hover-white");
-            $(".sidebar-nav li a:hover").css({"background-color": "transparate"});
-            $(".logo a").css("color", "rgb(108, 117, 125)");
-            $(".active a").css("background-color", "rgb(255, 255, 255)");
-            $(".progress").addClass("bg-white");
-            $(".sidebar-nav-title").css("color", "rgb(108, 117, 125)");
-            $(".label-name").css("color", "rgb(108, 117, 125)");
-            $(".sidebar-alerts").css("color", "rgb(108, 117, 125)");
-            $(".sidebar ul").css("background-color", "rgb(255, 255, 255)");
-            $(".sidebar-nav>.active>a .icon").css({"background-color": "rgb(108, 117, 125)", "color": "rgb(255, 255, 255)"});
-
-            $("#sidebar-dashboard").css("background-color", "rgb(255, 255, 255)");
-
+            switch($(e.target).css('background-color')) {
+                case "rgb(0, 43, 73)":
+                    $(".sidebar").removeClass().addClass("sidebar");
+                    break;
+                case "rgb(255, 255, 255)":
+                    $(".sidebar").removeClass().addClass("sidebar sidebar-white");
+                    break;
+                case "rgb(0, 68, 114)":
+                    $(".sidebar").removeClass().addClass("sidebar sidebar-first");
+                    break;
+                case "rgb(233, 235, 239)":
+                    $(".sidebar").removeClass().addClass("sidebar sidebar-second");
+                    break;
+                case "rgb(209, 231, 245)":
+                    $(".sidebar").removeClass().addClass("sidebar sidebar-third");
+                    break;
+                case "rgb(204, 221, 233)":
+                    $(".sidebar").removeClass().addClass("sidebar sidebar-fourth");
+                    break;
+                case "rgb(214, 223, 230)":
+                    $(".sidebar").removeClass().addClass("sidebar sidebar-fifth");
+                    break;
+                case "rgb(19, 25, 29)":
+                    $(".sidebar").removeClass().addClass("sidebar sidebar-sixth");
+                    break;
+                case "rgb(32, 174, 140)":
+                    $(".sidebar").removeClass().addClass("sidebar sidebar-seventh");
+                    break;
+            }
             $(e.target).addClass('active');
         });
 
