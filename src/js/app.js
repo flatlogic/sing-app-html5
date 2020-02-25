@@ -924,6 +924,23 @@ function initDemoFunctions(){
             }
         }
 
+        function clearClassChat(className){
+            let arr = [
+                "chat-sidebar-white",
+                "chat-sidebar-first",
+                "chat-sidebar-second",
+                "chat-sidebar-third",
+                "chat-sidebar-fourth",
+                "chat-sidebar-fifth",
+                "chat-sidebar-sixth",
+                "chat-sidebar-seventh"
+            ];
+            for (let i = 0; i < arr.length; i++){
+                $(".chat-sidebar").removeClass(arr[i]);
+            }
+            $(".chat-sidebar").addClass(className);
+        }
+
         function clearClass(className){
             let arr = [
                 "sidebar-white",
@@ -1011,38 +1028,47 @@ function initDemoFunctions(){
             switch($(e.target).css('background-color')) {
                 case "rgb(0, 43, 73)":
                     clearClass();
+                    $("#chat").removeClass().addClass("chat-sidebar");
                     $("sup").removeClass().addClass("text-success fw-semi-bold");
                     break;
                 case "rgb(255, 255, 255)":
                     clearClass("sidebar-white");
+                    clearClassChat("chat-sidebar-white");
                     $("sup").removeClass().addClass("text-success fw-semi-bold");
                     break;
                 case "rgb(0, 68, 114)":
                     clearClass("sidebar-first");
+                    clearClassChat("chat-sidebar-first");
                     $("sup").removeClass().addClass("text-info fw-semi-bold");
                     break;
                 case "rgb(233, 235, 239)":
                     clearClass("sidebar-second");
+                    clearClassChat("chat-sidebar-second");
                     $("sup").removeClass().addClass("text-success fw-semi-bold");
                     break;
                 case "rgb(209, 231, 245)":
                     clearClass("sidebar-third");
+                    clearClassChat("chat-sidebar-third");
                     $("sup").removeClass().addClass("text-info fw-semi-bold");
                     break;
                 case "rgb(204, 221, 233)":
                     clearClass("sidebar-fourth");
+                    clearClassChat("chat-sidebar-fourth");
                     $("sup").removeClass().addClass("text-info fw-semi-bold");
                     break;
                 case "rgb(214, 223, 230)":
                     clearClass("sidebar-fifth");
+                    clearClassChat("chat-sidebar-fifth");
                     $("sup").removeClass().addClass("text-info fw-semi-bold");
                     break;
                 case "rgb(19, 25, 29)":
                     clearClass("sidebar-sixth");
+                    clearClassChat("chat-sidebar-sixth");
                     $("sup").removeClass().addClass("text-success fw-semi-bold");
                     break;
                 case "rgb(32, 174, 140)":
                     clearClass("sidebar-seventh");
+                    clearClassChat("chat-sidebar-seventh");
                     $("sup").removeClass().addClass("text-primary fw-semi-bold");
                     break;
             }
