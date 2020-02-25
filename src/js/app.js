@@ -1035,32 +1035,6 @@ function initDemoFunctions(){
             $(e.target).addClass('active');
         });
 
-
-        let $darkStyles,
-            $cssDark = $('#css-dark'),
-            $cssLight = $('#css-light');
-
-        $cssDark.click(function () {
-            if (!$darkStyles) {
-                $darkStyles = $('<link href="../css/application-dark.min.css" rel="stylesheet">').appendTo($('head'));
-            }
-
-            if ($darkStyles[0].disabled) {
-                $darkStyles[0].disabled = false;
-                $cssDark.addClass('active');
-                $cssLight.removeClass('active');
-            }
-        });
-
-        $cssLight.click(function () {
-            if (!$darkStyles[0].disabled) {
-                $darkStyles[0].disabled = true;
-                $cssLight.addClass('active');
-                $cssDark.removeClass('active');
-            }
-        });
-
-
         setTimeout(function(){
             var $chatNotification = $('#chat-notification');
             $chatNotification.removeClass('hide').addClass('animated fadeIn')
