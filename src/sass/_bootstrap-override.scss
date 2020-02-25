@@ -410,6 +410,12 @@ legend {
   .input-group {
     width: 300px;
     display: flex;
+    .form-control{
+      &:focus {
+        background-color: rgba(0, 0, 0, .1);
+      }
+    }
+
 
     .form-control {
       order: 2;
@@ -419,7 +425,6 @@ legend {
       border-bottom-right-radius: $border-radius !important;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      background: rgba(0,0,0,.1);
     }
 
     .input-group-text {
@@ -430,6 +435,7 @@ legend {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: $border-radius;
       border-top-left-radius: $border-radius;
+      background-color: rgba(0, 0, 0, .1)!important;
     }
   }
 }
@@ -1083,11 +1089,19 @@ legend {
 // Navbar Dasboard
 // --------------------------------------------------
 .navbar-floating-type{
-  margin: 1rem 40px 0;
+  margin: 1rem 40px 0 calc(#{$sidebar-icon-state-width} + 40px)!important;
   border-radius: .5rem;
-  left: 20px!important;
+}
+
+.navbar-floating-type-static{
+  margin: 1rem 40px 0 calc(#{$sidebar-width} + 40px)!important;
+  border-radius: .5rem;
 }
 .placeholder-white{
+  background: rgba(0,0,0,.1);
+  &:focus{
+    background-color: rgba(0,0,0,.1)!important;
+  }
   &::placeholder{
     color: #fff;
   }
