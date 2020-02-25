@@ -428,8 +428,53 @@
   }
 }
 
-.sidebar-transparent{
-  
+.sidebar-transparent {
+  color: $sidebar-white-color;
+  border-right: none;
+  background-color: transparent;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $sidebar-white-color;
+    }
+    .logo > a{
+      color: $sidebar-white-color;
+    }
+    .sidebar-nav>.open>a{
+      background-color: transparent;
+    }
+    .sidebar-nav{
+      li{
+        a{
+          background-color: transparent;
+          color: $sidebar-white-color!important;
+          &:hover{
+            background-color: transparent;
+          }
+        }
+      }
+      .active a{
+        background-color: transparent;
+        color: $sidebar-white-color;
+        span{
+          background-color: $sidebar-white-color;
+          i{
+            color: white;
+          }
+        }
+      }
+      ul{
+        background-color: transparent;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: $sidebar-white-color;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: $white;
+      }
+    }
+  }
 }
 
 .page-controls, .content-wrap, .loader-wrap{
