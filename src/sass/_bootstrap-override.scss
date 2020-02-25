@@ -1091,11 +1091,19 @@ legend {
 // Navbar Dasboard
 // --------------------------------------------------
 .navbar-floating-type{
-  margin: 1rem 40px 0;
+  margin: 1rem 40px 0 calc(#{$sidebar-icon-state-width} + 40px)!important;
   border-radius: .5rem;
-  left: 20px!important;
+}
+
+.navbar-floating-type-static{
+  margin: 1rem 40px 0 calc(#{$sidebar-width} + 40px)!important;
+  border-radius: .5rem;
 }
 .placeholder-white{
+  background: rgba(0,0,0,.1);
+  &:focus{
+    background-color: rgba(0,0,0,.1)!important;
+  }
   &::placeholder{
     color: #fff;
   }
