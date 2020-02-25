@@ -487,12 +487,13 @@
   }
 
   .nav-collapsed &{
-    left: 0
+    left: 0;
+    transition: all $sidebar-transition-time ease-in-out;
   }
 
   .nav-static & {
     @include media-breakpoint-up(lg) {
-      @include transition(none);
+      transition: margin $sidebar-transition-time ease-in-out;
       left: 0;
       margin-left: $sidebar-width;
     }
@@ -516,7 +517,8 @@
 .page-controls{
   @include transition(
           left $sidebar-transition-time ease-in-out,
-          right $sidebar-transition-time ease-in-out
+          right $sidebar-transition-time ease-in-out,
+          margin $sidebar-transition-time ease-in-out
   );
   right: -$sidebar-width;
 
@@ -657,6 +659,7 @@
 
   .nav-collapsed &{
     width: $sidebar-icon-state-width;
+    @include transition(left $sidebar-transition-time ease-in-out);
   }
 
   .nav-static &{
