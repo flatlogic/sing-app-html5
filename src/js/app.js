@@ -874,29 +874,57 @@ function initDemoFunctions(){
             }
         });
 
-        let obj = [
-            $(".la-bars"),
-            $(".la-refresh"),
-            $(".la-times"),
-            $(".la-search"),
-            $(".nav-link"),
-            $("#main-search")
-        ];
+        $("#sidebar_transparent").click(() => {
+            if (!($(".sidebar")).hasClass('sidebar-transparent')){
+                (($(".sidebar")).addClass('sidebar-transparent'))
+            }
+        });
+
+        $("#sidebar_solid").click(() => {
+            if (($(".sidebar")).hasClass('sidebar-transparent')){
+                (($(".sidebar")).removeClass('sidebar-transparent'))
+            }
+        });
 
         function changeTheme(color){
+            let obj = [
+                $(".la-bars"),
+                $(".la-refresh"),
+                $(".la-times"),
+                $(".la-search"),
+                $(".nav-link"),
+                $("#main-search")
+            ];
             let length = obj.length;
             if (color === "white") {
                 for (let i = 0; i < length; i++){
                     obj[i].css('color', "rgb(255,255,255)");
                 }
-                obj[5].addClass("placeholder-white");
+                obj[length-1].addClass("placeholder-white");
 
             } else if(color === "dark") {
                 for (let i = 0; i < 5; i++){
                     obj[i].css('color', "rgb(102, 102, 102)");
                 }
-                obj[5].removeClass("placeholder-white");
+                obj[length-1].removeClass("placeholder-white");
             }
+        }
+
+        function clearClass(className){
+            let arr = [
+                "sidebar-white",
+                "sidebar-first",
+                "sidebar-second",
+                "sidebar-third",
+                "sidebar-fourth",
+                "sidebar-fifth",
+                "sidebar-sixth",
+                "sidebar-seventh"
+            ];
+            for (let i = 0; i < arr.length; i++){
+                $(".sidebar").removeClass(arr[i]);
+            }
+            $(".sidebar").addClass(className);
         }
 
         function delClass(selector){
@@ -915,18 +943,50 @@ function initDemoFunctions(){
 
             switch($(e.target).css('background-color')) {
                 case "rgb(0, 43, 73)":
+                    changeTheme('white');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
+                    $(".circle").removeClass().addClass("circle bg-success fw-bold text-white");
+                    break;
                 case "rgb(0, 68, 114)":
+                    changeTheme('white');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
+                    $(".circle").removeClass().addClass("circle bg-success fw-bold text-white");
+                    break;
                 case "rgb(19, 25, 29)":
+                    changeTheme('white');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
+                    $(".circle").removeClass().addClass("circle bg-success fw-bold text-white");
+                    break;
                 case "rgb(32, 174, 140)":
                     changeTheme('white');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
+                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
                     break;
 
                 case "rgb(255, 255, 255)":
+                    changeTheme('dark');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
+                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+                    break;
                 case "rgb(233, 235, 239)":
+                    changeTheme('dark');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
+                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+                    break;
                 case "rgb(209, 231, 245)":
+                    changeTheme('dark');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn bg-success");
+                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+                    break;
                 case "rgb(204, 221, 233)":
+                    changeTheme('dark');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn bg-success");
+                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+                    break;
                 case "rgb(214, 223, 230)":
                     changeTheme('dark');
+                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
+                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
                     break;
             }
         });
@@ -936,36 +996,44 @@ function initDemoFunctions(){
 
             switch($(e.target).css('background-color')) {
                 case "rgb(0, 43, 73)":
-                    $(".sidebar").removeClass().addClass("sidebar");
+                    clearClass();
+                    $("sup").removeClass().addClass("text-success fw-semi-bold");
                     break;
                 case "rgb(255, 255, 255)":
-                    $(".sidebar").removeClass().addClass("sidebar sidebar-white");
+                    clearClass("sidebar-white");
+                    $("sup").removeClass().addClass("text-success fw-semi-bold");
                     break;
                 case "rgb(0, 68, 114)":
-                    $(".sidebar").removeClass().addClass("sidebar sidebar-first");
+                    clearClass("sidebar-first");
+                    $("sup").removeClass().addClass("text-info fw-semi-bold");
                     break;
                 case "rgb(233, 235, 239)":
-                    $(".sidebar").removeClass().addClass("sidebar sidebar-second");
+                    clearClass("sidebar-second");
+                    $("sup").removeClass().addClass("text-success fw-semi-bold");
                     break;
                 case "rgb(209, 231, 245)":
-                    $(".sidebar").removeClass().addClass("sidebar sidebar-third");
+                    clearClass("sidebar-third");
+                    $("sup").removeClass().addClass("text-info fw-semi-bold");
                     break;
                 case "rgb(204, 221, 233)":
-                    $(".sidebar").removeClass().addClass("sidebar sidebar-fourth");
+                    clearClass("sidebar-fourth");
+                    $("sup").removeClass().addClass("text-info fw-semi-bold");
                     break;
                 case "rgb(214, 223, 230)":
-                    $(".sidebar").removeClass().addClass("sidebar sidebar-fifth");
+                    clearClass("sidebar-fifth");
+                    $("sup").removeClass().addClass("text-info fw-semi-bold");
                     break;
                 case "rgb(19, 25, 29)":
-                    $(".sidebar").removeClass().addClass("sidebar sidebar-sixth");
+                    clearClass("sidebar-sixth");
+                    $("sup").removeClass().addClass("text-success fw-semi-bold");
                     break;
                 case "rgb(32, 174, 140)":
-                    $(".sidebar").removeClass().addClass("sidebar sidebar-seventh");
+                    clearClass("sidebar-seventh");
+                    $("sup").removeClass().addClass("text-primary fw-semi-bold");
                     break;
             }
             $(e.target).addClass('active');
         });
-
 
 
         let $darkStyles,
