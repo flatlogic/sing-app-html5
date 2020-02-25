@@ -214,6 +214,7 @@ $(function(){
         $('body').addClass('nav-collapsed');
         this.$sidebar.find('.collapse.show').collapse('hide')
             .siblings('[data-toggle=collapse]').addClass('collapsed');
+
     };
 
     SingAppView.prototype.expandNavigation = function(){
@@ -265,6 +266,10 @@ $(function(){
     SingAppView.prototype.staticNavigationState = function(){
         this.settings.set('nav-static', true).save();
         $('body').addClass('nav-static');
+
+        if ($(".navbar").hasClass("navbar-floating-type-static") || ($(".navbar").hasClass("navbar-floating-type"))){
+            $(".navbar").removeClass().addClass("page-controls navbar navbar-dashboard navbar-floating-type-static");
+        }
     };
 
     /**
@@ -275,6 +280,9 @@ $(function(){
     SingAppView.prototype.collapsingNavigationState = function(){
         this.settings.set('nav-static', false).save();
         $('body').removeClass('nav-static');
+        if ($(".navbar").hasClass("navbar-floating-type-static") || ($(".navbar").hasClass("navbar-floating-type"))){
+            $(".navbar").removeClass().addClass("page-controls navbar navbar-dashboard navbar-floating-type");
+        }
         this.collapseNavigation();
     };
 
@@ -862,15 +870,21 @@ function initDemoFunctions(){
 
         // theme switcher
 
+        function clearNavbar(){
+            $(".navbar").removeClass().addClass("page-controls navbar navbar-dashboard");
+        };
+
         $("#navbar_static").click(() => {
-            if (($(".navbar")).hasClass('navbar-floating-type')){
-                (($(".navbar")).removeClass('navbar-floating-type'))
-            }
+            clearNavbar()
         });
 
         $("#navbar_floating").click(() => {
-            if (!($(".navbar")).hasClass('navbar-floating-type')){
-                (($(".navbar")).addClass('navbar-floating-type'))
+            if ($(".nav-static").length > 0) {
+                clearNavbar();
+                ($(".navbar")).addClass('navbar-floating-type-static');
+            } else {
+                clearNavbar();
+                ($(".navbar")).addClass('navbar-floating-type');
             }
         });
 
