@@ -870,8 +870,14 @@ function initDemoFunctions(){
 
         // theme switcher
 
+        const sidebar = $(".sidebar");
+        const chat = $("#chat");
+        const navbar = $(".navbar");
+        const sup = $("sup");
+        const circle = $(".circle");
+
         function clearNavbar(){
-            $(".navbar").removeClass().addClass("page-controls navbar navbar-dashboard");
+            navbar.removeClass().addClass("page-controls navbar navbar-dashboard");
         };
 
         $("#navbar_static").click(() => {
@@ -881,198 +887,126 @@ function initDemoFunctions(){
         $("#navbar_floating").click(() => {
             if ($(".nav-static").length > 0) {
                 clearNavbar();
-                ($(".navbar")).addClass('navbar-floating-type-static');
+                navbar.addClass('navbar-floating-type-static');
             } else {
                 clearNavbar();
-                ($(".navbar")).addClass('navbar-floating-type');
+                navbar.addClass('navbar-floating-type');
             }
         });
 
         $("#sidebar_transparent").click(() => {
-            if (!($(".sidebar")).hasClass('sidebar-transparent')){
-                (($(".sidebar")).addClass('sidebar-transparent'))
+            if (!(sidebar).hasClass('sidebar-transparent')){
+                (sidebar).addClass('sidebar-transparent')
             }
         });
 
         $("#sidebar_solid").click(() => {
-            if (($(".sidebar")).hasClass('sidebar-transparent')){
-                (($(".sidebar")).removeClass('sidebar-transparent'))
-            }
+            sidebar.removeClass('sidebar-transparent')
         });
 
-        function changeTheme(color){
-            let obj = [
-                $(".la-bars"),
-                $(".la-refresh"),
-                $(".la-times"),
-                $(".la-search"),
-                $(".nav-link"),
-                $("#main-search")
-            ];
-            let length = obj.length;
-            if (color === "white") {
-                for (let i = 0; i < length; i++){
-                    obj[i].css('color', "rgb(255,255,255)");
-                }
-                obj[length-1].addClass("placeholder-white");
-
-            } else if(color === "dark") {
-                for (let i = 0; i < 5; i++){
-                    obj[i].css('color', "rgb(102, 102, 102)");
-                }
-                obj[length-1].removeClass("placeholder-white");
-            }
-        }
-
-        function clearClassChat(className){
-            let arr = [
-                "chat-sidebar-white",
-                "chat-sidebar-first",
-                "chat-sidebar-second",
-                "chat-sidebar-third",
-                "chat-sidebar-fourth",
-                "chat-sidebar-fifth",
-                "chat-sidebar-sixth",
-                "chat-sidebar-seventh"
-            ];
-            for (let i = 0; i < arr.length; i++){
-                $(".chat-sidebar").removeClass(arr[i]);
-            }
-            $(".chat-sidebar").addClass(className);
-        }
-
-        function clearClass(className){
-            let arr = [
-                "sidebar-white",
-                "sidebar-first",
-                "sidebar-second",
-                "sidebar-third",
-                "sidebar-fourth",
-                "sidebar-fifth",
-                "sidebar-sixth",
-                "sidebar-seventh"
-            ];
-            for (let i = 0; i < arr.length; i++){
-                $(".sidebar").removeClass(arr[i]);
-            }
-            $(".sidebar").addClass(className);
-        }
-
-        function delClass(selector){
-            let colorBox = $(`.${selector}`);
-            for(let i=0; i < colorBox.length; i++) {
-                if ($($(`.${selector}`)[i]).hasClass('active')) {
-                    $($(`.${selector}`)[i]).removeClass('active');
-                }
-            }
-        };
-
         $('.colors-list .color-box-nav-bar').click(function(e) {
-            delClass('color-box-nav-bar');
-            $(".navbar").css('background-color', $(e.target).css('background-color'));
-            $(e.target).addClass('active');
-
-            switch($(e.target).css('background-color')) {
-                case "rgb(0, 43, 73)":
-                    changeTheme('white');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
-                    $(".circle").removeClass().addClass("circle bg-success fw-bold text-white");
-                    break;
-                case "rgb(0, 68, 114)":
-                    changeTheme('white');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
-                    $(".circle").removeClass().addClass("circle bg-success fw-bold text-white");
-                    break;
-                case "rgb(19, 25, 29)":
-                    changeTheme('white');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
-                    $(".circle").removeClass().addClass("circle bg-success fw-bold text-white");
-                    break;
-                case "rgb(32, 174, 140)":
-                    changeTheme('white');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
-                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+            const target = $(e.target);
+            $('.color-box-nav-bar').removeClass('active');
+            target.addClass('active');
+            switch(target.data('style')) {
+                case "first":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-first");
+                    circle.removeClass().addClass("circle bg-success fw-bold text-white");
                     break;
 
-                case "rgb(255, 255, 255)":
-                    changeTheme('dark');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
-                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+                case "second":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-second");
+                    circle.removeClass().addClass("circle bg-primary fw-bold text-white");
                     break;
-                case "rgb(233, 235, 239)":
-                    changeTheme('dark');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
-                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+
+                case "third":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-third");
+                    circle.removeClass().addClass("circle bg-success fw-bold text-white");
                     break;
-                case "rgb(209, 231, 245)":
-                    changeTheme('dark');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn bg-success");
-                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+
+                case "fourth":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-fourth");
+                    circle.removeClass().addClass("circle bg-primary fw-bold text-white");
                     break;
-                case "rgb(204, 221, 233)":
-                    changeTheme('dark');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn bg-success");
-                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+
+                case "fifth":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-fifth");
+                    circle.removeClass().addClass("circle bg-primary fw-bold text-white");
                     break;
-                case "rgb(214, 223, 230)":
-                    changeTheme('dark');
-                    $(".chat-notification-sing").removeClass().addClass("chat-notification-sing animated bounceIn");
-                    $(".circle").removeClass().addClass("circle bg-primary fw-bold text-white");
+
+                case "sixth":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-sixth");
+                    circle.removeClass().addClass("circle bg-primary fw-bold text-white");
+                    break;
+
+                case "seventh":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-seventh");
+                    circle.removeClass().addClass("circle bg-primary fw-bold text-white");
+                    break;
+
+                case "eighth":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-eighth");
+                    circle.removeClass().addClass("circle bg-success fw-bold text-white");
+                    break;
+
+                case "ninth":
+                    navbar.removeClass().addClass("page-controls navbar navbar-dashboard navbar-ninth");
+                    circle.removeClass().addClass("circle bg-primary fw-bold text-white");
                     break;
             }
         });
 
         $('.colors-list .color-box-side-bar').click(function(e) {
-            delClass("color-box-side-bar");
-
-            switch($(e.target).css('background-color')) {
-                case "rgb(0, 43, 73)":
-                    clearClass();
-                    $("#chat").removeClass().addClass("chat-sidebar");
-                    $("sup").removeClass().addClass("text-success fw-semi-bold");
+            const target = $(e.target);
+            $('.color-box-side-bar').removeClass('active');
+            switch(target.data('style')) {
+                case "first":
+                    sidebar.removeClass().addClass("sidebar");
+                    chat.removeClass().addClass("chat-sidebar");
+                    sup.removeClass().addClass("text-success fw-semi-bold");
                     break;
-                case "rgb(255, 255, 255)":
-                    clearClass("sidebar-white");
-                    clearClassChat("chat-sidebar-white");
-                    $("sup").removeClass().addClass("text-success fw-semi-bold");
+                case "second":
+                    sidebar.removeClass().addClass("sidebar sidebar-second");
+                    chat.removeClass().addClass("chat-sidebar chat-sidebar-second");
+                    sup.removeClass().addClass("text-success fw-semi-bold");
                     break;
-                case "rgb(0, 68, 114)":
-                    clearClass("sidebar-first");
-                    clearClassChat("chat-sidebar-first");
-                    $("sup").removeClass().addClass("text-info fw-semi-bold");
+                case "third":
+                    sidebar.removeClass().addClass("sidebar sidebar-third");
+                    chat.removeClass().addClass("chat-sidebar chat-sidebar-third");
+                    sup.removeClass().addClass("text-info fw-semi-bold");
                     break;
-                case "rgb(233, 235, 239)":
-                    clearClass("sidebar-second");
-                    clearClassChat("chat-sidebar-second");
-                    $("sup").removeClass().addClass("text-success fw-semi-bold");
+                case "fourth":
+                    sidebar.removeClass().addClass("sidebar sidebar-fourth");
+                    chat.removeClass().addClass("chat-sidebar chat-sidebar-fourth");
+                    sup.removeClass().addClass("text-success fw-semi-bold");
                     break;
-                case "rgb(209, 231, 245)":
-                    clearClass("sidebar-third");
-                    clearClassChat("chat-sidebar-third");
-                    $("sup").removeClass().addClass("text-info fw-semi-bold");
+                case "fifth":
+                    sidebar.removeClass().addClass("sidebar sidebar-fifth");
+                    chat.removeClass().addClass("chat-sidebar chat-sidebar-fifth");
+                    sup.removeClass().addClass("text-info fw-semi-bold");
                     break;
-                case "rgb(204, 221, 233)":
-                    clearClass("sidebar-fourth");
-                    clearClassChat("chat-sidebar-fourth");
-                    $("sup").removeClass().addClass("text-info fw-semi-bold");
+                case "sixth":
+                    sidebar.removeClass().addClass("sidebar sidebar-sixth");
+                    chat.removeClass().addClass("chat-sidebar chat-sidebar-sixth");
+                    sup.removeClass().addClass("text-info fw-semi-bold");
                     break;
-                case "rgb(214, 223, 230)":
-                    clearClass("sidebar-fifth");
-                    clearClassChat("chat-sidebar-fifth");
-                    $("sup").removeClass().addClass("text-info fw-semi-bold");
+                case "seventh":
+                    sidebar.removeClass().addClass("sidebar sidebar-seventh");
+                    chat.removeClass().addClass("chat-sidebar chat-sidebar-seventh");
+                    sup.removeClass().addClass("text-info fw-semi-bold");
                     break;
-                case "rgb(19, 25, 29)":
-                    clearClass("sidebar-sixth");
-                    clearClassChat("chat-sidebar-sixth");
-                    $("sup").removeClass().addClass("text-success fw-semi-bold");
+                case "eighth":
+                    sidebar.removeClass().addClass("sidebar sidebar-eighth");
+                    chat.removeClass().addClass("chat-sidebar chat-sidebar-eighth");
+                    sup.removeClass().addClass("text-success fw-semi-bold");
                     break;
-                case "rgb(32, 174, 140)":
-                    clearClass("sidebar-seventh");
-                    clearClassChat("chat-sidebar-seventh");
-                    $("sup").removeClass().addClass("text-primary fw-semi-bold");
+                case "ninth":
+                    sidebar.removeClass().addClass("sidebar sidebar-ninth");
+                    chat.removeClass().addClass("chat-sidebar chat-sidebar-ninth");
+                    sup.removeClass().addClass("text-primary fw-semi-bold");
                     break;
             }
-            $(e.target).addClass('active');
+            target.addClass('active');
         });
 
         setTimeout(function(){
