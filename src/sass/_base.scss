@@ -20,16 +20,16 @@
   }
 }
 
-.sidebar-white {
-  color: $sidebar-white-color;
+@mixin sidebar-style($mainColor, $mainBGColor, $iconColor, $hoverColor, $pbColor ) {
+  color: $mainColor;
   border-right: none;
-  background-color: #fff;
+  background-color: $mainBGColor;
   .slimScrollDiv{
     .sidebar-nav-title{
-      color: $sidebar-white-color;
+      color: $mainColor;
     }
     .logo > a{
-      color: $sidebar-white-color;
+      color: $mainColor;
     }
     .sidebar-nav>.open>a{
       background-color: transparent;
@@ -37,38 +37,42 @@
     .sidebar-nav{
       li{
         a{
-          color: $sidebar-white-color!important;
+          color: $mainColor!important;
           &:hover{
-            background-color: transparent;
+            background-color: $hoverColor;
           }
         }
       }
       .active a{
-        background-color: #fff;
-        color: $sidebar-white-color;
+        background-color: $mainBGColor;
+        color: $mainColor;
         span{
-          background-color: $sidebar-white-color;
+          background-color: $mainColor;
           i{
-            color: white;
+            color: $iconColor;
           }
         }
       }
-        ul{
-          background-color: #fff;
-        }
+      ul{
+        background-color: $mainBGColor;
+      }
     }
     .sidebar-labels>li>a{
-      color: $sidebar-white-color;
+      color: $mainColor;
     }
     .sidebar-alerts{
       .progress{
-       background-color: $white;
+        background-color: $pbColor;
       }
     }
   }
 }
 
-.sidebar-first{
+.sidebar-second {
+  @include sidebar-style($sidebar-white-color, $white, $white, transparent, $white);
+}
+
+.sidebar-third{
   color: #fff;
   border-right: none;
   background-color: $sidebar-first-color;
@@ -116,7 +120,7 @@
   }
 }
 
-.sidebar-second{
+.sidebar-fourth{
   color: $sidebar-second-color;
   border-right: none;
   background-color: $sidebar-second-color-bg;
@@ -168,7 +172,7 @@
   }
 }
 
-.sidebar-third{
+.sidebar-fifth{
   color: $sidebar-third-color;
   border-right: none;
   background-color: $sidebar-third-color-bg;
@@ -220,7 +224,7 @@
   }
 }
 
-.sidebar-fourth{
+.sidebar-sixth{
   color: $sidebar-third-color;
   border-right: none;
   background-color: $sidebar-fourth-color-bg;
@@ -272,7 +276,7 @@
   }
 }
 
-.sidebar-fifth{
+.sidebar-seventh{
   color: $sidebar-third-color;
   border-right: none;
   background-color: $sidebar-fifth-color-bg;
@@ -324,7 +328,7 @@
   }
 }
 
-.sidebar-sixth{
+.sidebar-eighth{
   color: white;
   border-right: none;
   background-color: $sidebar-sixth-color-bg;
@@ -376,7 +380,7 @@
   }
 }
 
-.sidebar-seventh{
+.sidebar-ninth{
   color: $sidebar-seventh-color;
   border-right: none;
   background-color: $sidebar-seventh-color-bg;
@@ -1410,8 +1414,8 @@
     text-decoration: none;
   }
 }
-
-.chat-sidebar-white{
+// TODO replace with mixin
+.chat-sidebar-second{
   border-left: none;
   color: $sidebar-white-color;
   background-color: #fff;
@@ -1463,7 +1467,8 @@
     }
   }
 }
-.chat-sidebar-first{
+
+.chat-sidebar-third{
   border-left: none;
   color: white;
   background-color: $sidebar-first-color;
@@ -1515,7 +1520,8 @@
     }
   }
 }
-.chat-sidebar-second{
+
+.chat-sidebar-fourth{
   border-left: none;
   color: $sidebar-second-color;
   background-color: $sidebar-second-color-bg;
@@ -1567,7 +1573,8 @@
     }
   }
 }
-.chat-sidebar-third{
+
+.chat-sidebar-fifth{
   border-left: none;
   color: $sidebar-third-color;
   background-color: $sidebar-third-color-bg;
@@ -1619,7 +1626,8 @@
     }
   }
 }
-.chat-sidebar-fourth{
+
+.chat-sidebar-sixth {
   border-left: none;
   color: $sidebar-third-color;
   background-color: $sidebar-fourth-color-bg;
@@ -1671,7 +1679,8 @@
     }
   }
 }
-.chat-sidebar-fifth{
+
+.chat-sidebar-seventh{
   border-left: none;
   color: $sidebar-third-color;
   background-color: $sidebar-fifth-color-bg;
@@ -1723,7 +1732,8 @@
     }
   }
 }
-.chat-sidebar-sixth{
+
+.chat-sidebar-eighth{
   border-left: none;
   color: white;
   background-color: $sidebar-sixth-color-bg;
@@ -1775,7 +1785,8 @@
     }
   }
 }
-.chat-sidebar-seventh{
+
+.chat-sidebar-ninth{
   border-left: none;
   color: $sidebar-seventh-color;
   background-color: $sidebar-seventh-color-bg;
@@ -1827,6 +1838,7 @@
     }
   }
 }
+
 /***********************/
 /*        Loader       */
 /***********************/
