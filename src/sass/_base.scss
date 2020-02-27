@@ -20,7 +20,7 @@
   }
 }
 
-@mixin sidebar-style($mainColor, $mainBGColor, $iconColor, $hoverColor, $pbColor ) {
+@mixin sidebar-style($mainColor, $mainBGColor, $iconColor, $hoverColor, $pbColor, $activeColor ) {
   color: $mainColor;
   border-right: none;
   background-color: $mainBGColor;
@@ -32,7 +32,7 @@
       color: $mainColor;
     }
     .sidebar-nav>.open>a{
-      background-color: transparent;
+      background-color: $activeColor;
     }
     .sidebar-nav{
       li{
@@ -44,7 +44,7 @@
         }
       }
       .active a{
-        background-color: $mainBGColor;
+        background-color: $activeColor;
         color: $mainColor;
         span{
           background-color: $mainColor;
@@ -54,7 +54,7 @@
         }
       }
       ul{
-        background-color: $mainBGColor;
+        background-color: $activeColor;
       }
     }
     .sidebar-labels>li>a{
@@ -69,416 +69,39 @@
 }
 
 .sidebar-second {
-  @include sidebar-style($sidebar-white-color, $white, $white, transparent, $white);
+  @include sidebar-style($sidebar-white-color, $white, $white, transparent, $white, $white);
 }
 
-.sidebar-third{
-  color: #fff;
-  border-right: none;
-  background-color: $sidebar-first-color;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: #fff;
-    }
-    .logo > a{
-      color: #fff;
-    }
-    .sidebar-nav>.open>a{
-      background-color: $sidebar-first-color;
-    }
-    .sidebar-nav{
-      li{
-        a{
-          color: #fff!important;
-          &:hover{
-            background-color: #00395f;
-          }
-        }
-      }
-      .active a{
-        background-color: #00395f;
-        color: #fff;
-        span{
-          background-color: #fff;
-          i{
-            color: #004472;
-          }
-        }
-      }
-      ul{
-        background-color: #00395f;
-      }
-    }
-    .sidebar-labels>li>a{
-      color: #fff;
-    }
-    .sidebar-alerts{
-      .progress{
-
-      }
-    }
-  }
+.sidebar-third {
+  @include sidebar-style($white, $sidebar-first-color, $sidebar-first-color, $sidebar-first-color-bg, $sidebar-first-color-bg, $sidebar-first-color-bg!important);
 }
 
-.sidebar-fourth{
-  color: $sidebar-second-color;
-  border-right: none;
-  background-color: $sidebar-second-color-bg;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: $sidebar-second-color;
-    }
-    .logo > a{
-      color: $sidebar-second-color;
-    }
-    .sidebar-nav>.open>a{
-      background-color: $sidebar-second-color-bg;
-    }
-    .sidebar-nav{
-      ul{
-        background-color: $sidebar-second-color-bg;
-      }
-      li{
-        a{
-          color: $sidebar-second-color!important;
-          &:hover{
-            background-color: #dbdee4;
-          }
-        }
-      }
-      .active a{
-        background-color: #dbdee4;
-        color: $sidebar-second-color;
-        span{
-          background-color: $sidebar-second-color;
-
-          i{
-            color: white;
-          }
-        }
-      }
-      ul{
-        background-color: #dbdee4;
-      }
-    }
-    .sidebar-labels>li>a{
-      color: $sidebar-second-color;
-    }
-    .sidebar-alerts{
-      .progress{
-        background-color: #042338;
-      }
-    }
-  }
+.sidebar-fourth {
+  @include sidebar-style($sidebar-second-color, $sidebar-second-color-bg, $white, $sidebar-second-color-bg-active, $sidebar-second-color-bg-active, $sidebar-second-color-bg-active);
 }
 
-.sidebar-fifth{
-  color: $sidebar-third-color;
-  border-right: none;
-  background-color: $sidebar-third-color-bg;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: $sidebar-third-color;
-    }
-    .logo > a{
-      color: $sidebar-third-color;
-    }
-    .sidebar-nav>.open>a{
-      background-color: $sidebar-third-color-bg-active;
-    }
-    .sidebar-nav{
-      ul{
-        background-color: $sidebar-third-color-bg;
-      }
-      li{
-        a{
-          color: $sidebar-third-color;
-          &:hover{
-            background-color: $sidebar-third-color-bg-active;
-          }
-        }
-      }
-      .active a{
-        background-color: $sidebar-third-color-bg-active;
-        color: $sidebar-third-color;
-        span{
-          background-color: $sidebar-third-color;
-
-          i{
-            color: $sidebar-third-color-bg;
-          }
-        }
-      }
-      ul{
-        background-color: $sidebar-third-color-bg-active;
-      }
-    }
-    .sidebar-labels>li>a{
-      color: $sidebar-third-color;
-    }
-    .sidebar-alerts{
-      .progress{
-        background-color: $sidebar-third-color-bg-active;
-      }
-    }
-  }
+.sidebar-fifth {
+  @include sidebar-style($sidebar-third-color, $sidebar-third-color-bg, $sidebar-third-color-bg, $sidebar-third-color-bg-active, $sidebar-third-color-bg-active, $sidebar-third-color-bg-active);
 }
 
-.sidebar-sixth{
-  color: $sidebar-third-color;
-  border-right: none;
-  background-color: $sidebar-fourth-color-bg;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: $sidebar-third-color;
-    }
-    .logo > a{
-      color: $sidebar-third-color;
-    }
-    .sidebar-nav>.open>a{
-      background-color: $sidebar-fourth-color-bg-active;
-    }
-    .sidebar-nav{
-      ul{
-        background-color: $sidebar-fourth-color-bg;
-      }
-      li{
-        a{
-          color: $sidebar-third-color;
-          &:hover{
-            background-color: $sidebar-fourth-color-bg-active;
-          }
-        }
-      }
-      .active a{
-        background-color: $sidebar-fourth-color-bg-active;
-        color: $sidebar-third-color;
-        span{
-          background-color: $sidebar-third-color;
-
-          i{
-            color: $sidebar-fourth-color-bg;
-          }
-        }
-      }
-      ul{
-        background-color: $sidebar-fourth-color-bg-active;
-      }
-    }
-    .sidebar-labels>li>a{
-      color: $sidebar-third-color;
-    }
-    .sidebar-alerts{
-      .progress{
-        background-color: $sidebar-fourth-color-bg-active;
-      }
-    }
-  }
+.sidebar-sixth {
+  @include sidebar-style($sidebar-third-color, $sidebar-fourth-color-bg, $sidebar-fourth-color-bg, $sidebar-fourth-color-bg-active, $sidebar-fourth-color-bg-active, $sidebar-fourth-color-bg-active);
 }
 
-.sidebar-seventh{
-  color: $sidebar-third-color;
-  border-right: none;
-  background-color: $sidebar-fifth-color-bg;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: $sidebar-third-color;
-    }
-    .logo > a{
-      color: $sidebar-third-color;
-    }
-    .sidebar-nav>.open>a{
-      background-color: $sidebar-fifth-color-bg-active;
-    }
-    .sidebar-nav{
-      ul{
-        background-color: $sidebar-fifth-color-bg;
-      }
-      li{
-        a{
-          color: $sidebar-third-color;
-          &:hover{
-            background-color: $sidebar-fifth-color-bg-active;
-          }
-        }
-      }
-      .active a{
-        background-color: $sidebar-fifth-color-bg-active;
-        color: $sidebar-third-color;
-        span{
-          background-color: $sidebar-third-color;
-
-          i{
-            color: $sidebar-fifth-color-bg;
-          }
-        }
-      }
-      ul{
-        background-color: $sidebar-fifth-color-bg-active;
-      }
-    }
-    .sidebar-labels>li>a{
-      color: $sidebar-third-color;
-    }
-    .sidebar-alerts{
-      .progress{
-        background-color: $sidebar-fifth-color-bg-active;
-      }
-    }
-  }
+.sidebar-seventh {
+  @include sidebar-style($sidebar-third-color, $sidebar-fifth-color-bg, $sidebar-fifth-color-bg, $sidebar-fifth-color-bg-active, $sidebar-fifth-color-bg-active, $sidebar-fifth-color-bg-active);
 }
 
-.sidebar-eighth{
-  color: white;
-  border-right: none;
-  background-color: $sidebar-sixth-color-bg;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: white;
-    }
-    .logo > a{
-      color: white;
-    }
-    .sidebar-nav>.open>a{
-      background-color: $sidebar-sixth-color-bg-active;
-    }
-    .sidebar-nav{
-      ul{
-        background-color: $sidebar-sixth-color-bg;
-      }
-      li{
-        a{
-          color: white;
-          &:hover{
-            background-color: $sidebar-sixth-color-bg-active;
-          }
-        }
-      }
-      .active a{
-        background-color: $sidebar-sixth-color-bg-active;
-        color: white;
-        span{
-          background-color: white;
-
-          i{
-            color: $sidebar-sixth-color-bg;
-          }
-        }
-      }
-      ul{
-        background-color: $sidebar-sixth-color-bg-active;
-      }
-    }
-    .sidebar-labels>li>a{
-      color: white;
-    }
-    .sidebar-alerts{
-      .progress{
-        background-color: $sidebar-sixth-color-bg-active;
-      }
-    }
-  }
+.sidebar-eighth {
+  @include sidebar-style($white, $sidebar-sixth-color-bg, $sidebar-sixth-color-bg, $sidebar-sixth-color-bg-active, $sidebar-sixth-color-bg-active, $sidebar-sixth-color-bg-active);
 }
 
-.sidebar-ninth{
-  color: $sidebar-seventh-color;
-  border-right: none;
-  background-color: $sidebar-seventh-color-bg;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: $sidebar-seventh-color;
-    }
-    .logo > a{
-      color: $sidebar-seventh-color;
-    }
-    .sidebar-nav>.open>a{
-      background-color: $sidebar-seventh-color-bg-active;
-    }
-    .sidebar-nav{
-      ul{
-        background-color: $sidebar-seventh-color-bg;
-      }
-      li{
-        a{
-          color: $sidebar-seventh-color;
-          &:hover{
-            background-color: $sidebar-seventh-color-bg-active;
-          }
-        }
-      }
-      .active a{
-        background-color: $sidebar-seventh-color-bg-active;
-        color: $sidebar-seventh-color;
-        span{
-          background-color: $sidebar-seventh-color;
-
-          i{
-            color: $sidebar-seventh-color-bg;
-          }
-        }
-      }
-      ul{
-        background-color: $sidebar-seventh-color-bg-active;
-      }
-    }
-    .sidebar-labels>li>a{
-      color: $sidebar-seventh-color;
-    }
-    .sidebar-alerts{
-      .progress{
-        background-color: $sidebar-seventh-color-bg-active;
-      }
-    }
-  }
+.sidebar-ninth {
+  @include sidebar-style($sidebar-seventh-color, $sidebar-seventh-color-bg, $sidebar-seventh-color-bg, $sidebar-seventh-color-bg-active, $sidebar-seventh-color-bg-active, $sidebar-seventh-color-bg-active);
 }
 
 .sidebar-transparent {
-  color: $sidebar-white-color;
-  border-right: none;
-  background-color: transparent;
-  .slimScrollDiv{
-    .sidebar-nav-title{
-      color: $sidebar-white-color;
-    }
-    .logo > a{
-      color: $sidebar-white-color;
-    }
-    .sidebar-nav>.open>a{
-      background-color: transparent;
-    }
-    .sidebar-nav{
-      li{
-        a{
-          background-color: transparent;
-          color: $sidebar-white-color!important;
-          &:hover{
-            background-color: transparent;
-          }
-        }
-      }
-      .active a{
-        background-color: transparent;
-        color: $sidebar-white-color;
-        span{
-          background-color: $sidebar-white-color;
-          i{
-            color: white;
-          }
-        }
-      }
-      ul{
-        background-color: transparent;
-      }
-    }
-    .sidebar-labels>li>a{
-      color: $sidebar-white-color;
-    }
-    .sidebar-alerts{
-      .progress{
-        background-color: $white;
-      }
-    }
-  }
+  @include sidebar-style($sidebar-white-color, transparent, $white, transparent, transparent, transparent);
 }
 
 .page-controls, .content-wrap, .loader-wrap{
@@ -1414,52 +1037,52 @@
     text-decoration: none;
   }
 }
-// TODO replace with mixin
-.chat-sidebar-second{
+
+@mixin chat-sidebar-style($mainColor, $mainBGColor, $hoverColor, $inputBG, $inputColor, $placeHolderColor) {
   border-left: none;
-  color: $sidebar-white-color;
-  background-color: #fff;
+  color: $mainColor;
+  background-color: $mainBGColor;
   .chat-sidebar-content{
     .chat-sidebar-header{
-      background-color: #fff;
+      background-color: $mainBGColor;
       .chat-sidebar-title{
-        color: $sidebar-white-color;
+        color: $mainColor;
       }
       .input-group-text{
-        background-color: rgba(0,0,0,0.1);
+        background-color: $inputBG;
         border: none;
       }
       #chat-sidebar-search {
-        color: rgba(0,0,0,0.9);
+        color: $inputColor;
         &::placeholder {
-
+          color: $placeHolderColor
         }
       }
     }
     .slimScrollDiv{
       .chat-sidebar-contacts{
         .sidebar-nav-title{
-          color: $sidebar-white-color;
+          color: $mainColor;
         }
         .list-group{
           .active{
             a{
-              background-color: #fff;
+              background-color: $mainBGColor;
               &:hover{
-                background-color: transparent;
+                background-color: $hoverColor;
               }
               .message-sender, .message-preview{
-                color: $sidebar-white-color;
+                color: $mainColor;
               }
             }
           }
           a{
-            background-color: #fff;
+            background-color: $mainBGColor;
             &:hover{
-              background-color: transparent;
-          }
+              background-color: $hoverColor;
+            }
             .message-sender, .message-preview{
-              color: $sidebar-white-color;
+              color: $mainColor;
             }
           }
         }
@@ -1468,375 +1091,37 @@
   }
 }
 
-.chat-sidebar-third{
-  border-left: none;
-  color: white;
-  background-color: $sidebar-first-color;
-  .chat-sidebar-content{
-    .chat-sidebar-header{
-      background-color: $sidebar-first-color;
-      .chat-sidebar-title{
-        color: white;
-      }
-      .input-group-text{
-        background-color: rgba(0,0,0,0.1);
-        border: none;
-      }
-      #chat-sidebar-search {
-        color: white;
-        &::placeholder {
-          color: white;
-        }
-      }
-    }
-    .slimScrollDiv{
-      .chat-sidebar-contacts{
-        .sidebar-nav-title{
-          color: #fff;
-        }
-        .list-group{
-          .active{
-            a{
-              background-color: $sidebar-first-color;
-              &:hover{
-                background-color: #00395f;
-              }
-              .message-sender, .message-preview{
-                color: white;
-              }
-            }
-          }
-          a{
-            background-color: $sidebar-first-color;
-            &:hover{
-              background-color: #00395f;
-            }
-            .message-sender, .message-preview{
-              color: white;
-            }
-          }
-        }
-      }
-    }
-  }
+
+.chat-sidebar-second {
+  @include chat-sidebar-style($sidebar-white-color, $white, transparent, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
 }
 
-.chat-sidebar-fourth{
-  border-left: none;
-  color: $sidebar-second-color;
-  background-color: $sidebar-second-color-bg;
-  .chat-sidebar-content{
-    .chat-sidebar-header{
-      background-color: $sidebar-second-color-bg;
-      .chat-sidebar-title{
-        color: $sidebar-second-color;
-      }
-      .input-group-text{
-        background-color: rgba(0,0,0,0.1);
-        border: none;
-      }
-      #chat-sidebar-search {
-        color: rgba(0,0,0,0.9);
-        &::placeholder {
-
-        }
-      }
-    }
-    .slimScrollDiv{
-      .chat-sidebar-contacts{
-        .sidebar-nav-title{
-          color: $sidebar-second-color;
-        }
-        .list-group{
-          .active{
-            a{
-              background-color: #dbdee4;
-              &:hover{
-                background-color: #00395f;
-              }
-              .message-sender, .message-preview{
-                color: $sidebar-second-color;
-              }
-            }
-          }
-          a{
-            background-color: $sidebar-second-color-bg;
-            &:hover{
-              background-color: #dbdee4;
-            }
-            .message-sender, .message-preview{
-              color: $sidebar-second-color;
-            }
-          }
-        }
-      }
-    }
-  }
+.chat-sidebar-third {
+  @include chat-sidebar-style($white, $sidebar-first-color, $sidebar-first-color-bg, rgba(0,0,0,0.1), $white, $white );
 }
 
-.chat-sidebar-fifth{
-  border-left: none;
-  color: $sidebar-third-color;
-  background-color: $sidebar-third-color-bg;
-  .chat-sidebar-content{
-    .chat-sidebar-header{
-      background-color: $sidebar-third-color-bg;
-      .chat-sidebar-title{
-        color: $sidebar-third-color;
-      }
-      .input-group-text{
-        background-color: rgba(0,0,0,0.1);
-        border: none;
-      }
-      #chat-sidebar-search {
-        color: rgba(0,0,0,0.9);
-        &::placeholder {
+.chat-sidebar-fourth {
+  @include chat-sidebar-style($sidebar-second-color, $sidebar-second-color-bg, $sidebar-first-color-bg, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
+}
 
-        }
-      }
-    }
-    .slimScrollDiv{
-      .chat-sidebar-contacts{
-        .sidebar-nav-title{
-          color: $sidebar-third-color;
-        }
-        .list-group{
-          .active{
-            a{
-              background-color: $sidebar-third-color-bg;
-              &:hover{
-                background-color: $sidebar-third-color-bg-active;
-              }
-              .message-sender, .message-preview{
-                color: $sidebar-third-color;
-              }
-            }
-          }
-          a{
-            background-color: $sidebar-third-color-bg;
-            &:hover{
-              background-color: $sidebar-third-color-bg-active;
-            }
-            .message-sender, .message-preview{
-              color: $sidebar-third-color;
-            }
-          }
-        }
-      }
-    }
-  }
+.chat-sidebar-fifth {
+  @include chat-sidebar-style($sidebar-third-color, $sidebar-third-color-bg, $sidebar-third-color-bg-active, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
 }
 
 .chat-sidebar-sixth {
-  border-left: none;
-  color: $sidebar-third-color;
-  background-color: $sidebar-fourth-color-bg;
-  .chat-sidebar-content{
-    .chat-sidebar-header{
-      background-color: $sidebar-fourth-color-bg;
-      .chat-sidebar-title{
-        color: $sidebar-third-color;
-      }
-      .input-group-text{
-        background-color: rgba(0,0,0,0.1);
-        border: none;
-      }
-      #chat-sidebar-search {
-        color: rgba(0,0,0,0.9);
-        &::placeholder {
-
-        }
-      }
-    }
-    .slimScrollDiv{
-      .chat-sidebar-contacts{
-        .sidebar-nav-title{
-          color: $sidebar-third-color;
-        }
-        .list-group{
-          .active{
-            a{
-              background-color: $sidebar-fourth-color-bg;
-              &:hover{
-                background-color: $sidebar-fourth-color-bg-active;
-              }
-              .message-sender, .message-preview{
-                color: $sidebar-third-color;
-              }
-            }
-          }
-          a{
-            background-color: $sidebar-fourth-color-bg;
-            &:hover{
-              background-color: $sidebar-fourth-color-bg-active;
-            }
-            .message-sender, .message-preview{
-              color: $sidebar-third-color;
-            }
-          }
-        }
-      }
-    }
-  }
+  @include chat-sidebar-style($sidebar-third-color, $sidebar-fourth-color-bg, $sidebar-fourth-color-bg-active, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
 }
 
-.chat-sidebar-seventh{
-  border-left: none;
-  color: $sidebar-third-color;
-  background-color: $sidebar-fifth-color-bg;
-  .chat-sidebar-content{
-    .chat-sidebar-header{
-      background-color: $sidebar-fifth-color-bg;
-      .chat-sidebar-title{
-        color: $sidebar-third-color;
-      }
-      .input-group-text{
-        background-color: rgba(0,0,0,0.1);
-        border: none;
-      }
-      #chat-sidebar-search {
-        color: rgba(0,0,0,0.9);
-        &::placeholder {
-
-        }
-      }
-    }
-    .slimScrollDiv{
-      .chat-sidebar-contacts{
-        .sidebar-nav-title{
-          color: $sidebar-third-color;
-        }
-        .list-group{
-          .active{
-            a{
-              background-color: $sidebar-fifth-color-bg;
-              &:hover{
-                background-color: $sidebar-fifth-color-bg-active;
-              }
-              .message-sender, .message-preview{
-                color: $sidebar-third-color;
-              }
-            }
-          }
-          a{
-            background-color: $sidebar-fifth-color-bg;
-            &:hover{
-              background-color: $sidebar-fifth-color-bg-active;
-            }
-            .message-sender, .message-preview{
-              color: $sidebar-third-color;
-            }
-          }
-        }
-      }
-    }
-  }
+.chat-sidebar-seventh {
+  @include chat-sidebar-style($sidebar-third-color, $sidebar-fifth-color-bg, $sidebar-fifth-color-bg-active, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
 }
 
-.chat-sidebar-eighth{
-  border-left: none;
-  color: white;
-  background-color: $sidebar-sixth-color-bg;
-  .chat-sidebar-content{
-    .chat-sidebar-header{
-      background-color: $sidebar-sixth-color-bg;
-      .chat-sidebar-title{
-        color: white;
-      }
-      .input-group-text{
-        background-color: rgba(0,0,0,0.1);
-        border: none;
-      }
-      #chat-sidebar-search {
-        color: white;
-        &::placeholder {
-          color: white;
-        }
-      }
-    }
-    .slimScrollDiv{
-      .chat-sidebar-contacts{
-        .sidebar-nav-title{
-          color: white;
-        }
-        .list-group{
-          .active{
-            a{
-              background-color: $sidebar-sixth-color-bg;
-              &:hover{
-                background-color: $sidebar-sixth-color-bg-active;
-              }
-              .message-sender, .message-preview{
-                color: white;
-              }
-            }
-          }
-          a{
-            background-color: $sidebar-sixth-color-bg;
-            &:hover{
-              background-color: $sidebar-sixth-color-bg-active;
-            }
-            .message-sender, .message-preview{
-              color: white;
-            }
-          }
-        }
-      }
-    }
-  }
+.chat-sidebar-eighth {
+  @include chat-sidebar-style($white, $sidebar-sixth-color-bg, $sidebar-sixth-color-bg-active, rgba(0,0,0,0.1), $white, $white );
 }
 
-.chat-sidebar-ninth{
-  border-left: none;
-  color: $sidebar-seventh-color;
-  background-color: $sidebar-seventh-color-bg;
-  .chat-sidebar-content{
-    .chat-sidebar-header{
-      background-color: $sidebar-seventh-color-bg;
-      .chat-sidebar-title{
-        color: $sidebar-seventh-color;
-      }
-      .input-group-text{
-        background-color: rgba(0,0,0,0.1);
-        border: none;
-      }
-      #chat-sidebar-search {
-        color: white;
-        &::placeholder {
-          color: white;
-        }
-      }
-    }
-    .slimScrollDiv{
-      .chat-sidebar-contacts{
-        .sidebar-nav-title{
-          color: $sidebar-seventh-color;
-        }
-        .list-group{
-          .active{
-            a{
-              background-color: $sidebar-seventh-color-bg;
-              &:hover{
-                background-color: $sidebar-seventh-color-bg-active;
-              }
-              .message-sender, .message-preview{
-                color: $sidebar-seventh-color;
-              }
-            }
-          }
-          a{
-            background-color: $sidebar-seventh-color-bg;
-            &:hover{
-              background-color: $sidebar-seventh-color-bg-active;
-            }
-            .message-sender, .message-preview{
-              color: $sidebar-seventh-color;
-            }
-          }
-        }
-      }
-    }
-  }
+.chat-sidebar-ninth {
+  @include chat-sidebar-style($sidebar-seventh-color, $sidebar-seventh-color-bg, $sidebar-seventh-color-bg-active, rgba(0,0,0,0.1), $white, $white );
 }
 
 /***********************/
