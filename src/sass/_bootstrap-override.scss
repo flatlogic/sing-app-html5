@@ -1100,36 +1100,6 @@ legend {
   border-radius: .5rem;
 }
 
-@mixin nav-style($bgcolor, $color, $sColor, $sBgColor, $sBgFColor, $sPColor){
-  background-color: $bgcolor;
-  .container-fluid {
-    .navbar-header {
-      .la-refresh, .la-times, .la-search, .la-bars {
-        color: $color;
-      }
-      .navbar-nav {
-        .nav-item {
-          a {
-            color: $color;
-          }
-        }
-      }
-    }
-    #main-search {
-      color: $sColor;
-      background: $sBgColor;
-
-      &:focus {
-        background-color: $sBgFColor!important;
-      }
-
-      &::placeholder {
-        color: $sPColor;
-      }
-    }
-  }
-};
-
 .navbar-first {
   @include nav-style($sidebar-bg-color!important, $white, $white, rgba(0,0,0,.1), rgba(0,0,0,.1), $white);
 }
