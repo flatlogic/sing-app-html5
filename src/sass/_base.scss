@@ -1042,7 +1042,7 @@
   border-left: none;
   color: $mainColor;
   background-color: $mainBGColor;
-  .chat-sidebar-content{
+  .chat-sidebar-content {
     .chat-sidebar-header{
       background-color: $mainBGColor;
       .chat-sidebar-title{
@@ -1057,6 +1057,15 @@
         &::placeholder {
           color: $placeHolderColor
         }
+      }
+    }
+    .chat-sidebar-chat.chat-sidebar-panel.open {
+      background-color: $mainBGColor;
+      .title>a {
+        color: $mainColor;
+      }
+      .message-list {
+        background-color: $mainBGColor;
       }
     }
     .slimScrollDiv{
@@ -1090,7 +1099,6 @@
     }
   }
 }
-
 
 .chat-sidebar-second {
   @include chat-sidebar-style($sidebar-white-color, $white, transparent, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
