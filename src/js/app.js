@@ -875,35 +875,23 @@ function initDemoFunctions(){
         const navbar = $(".navbar");
         const sup = $("sup");
         const circle = $(".circle");
-        const body = $("body");
-        const navBarType = ["navbar-floating-type-static", "navbar-floating-type"];
+        const styles = ["navbar-first", "navbar-second", "navbar-third", "navbar-fourth", "navbar-fifth", "navbar-sixth", "navbar-seventh", "navbar-eighth", "navbar-ninth"];
 
-        function navbarClass() {
-            if (navbar.hasClass("navbar-floating-type-static"))
-            {return "navbar-floating-type-static"}
-            else if (navbar.hasClass("navbar-floating-type")){
-                return "navbar-floating-type"
-            }
-            else return ""
-        };
-
-        function addStylyToNavBar(){
+        function addStyleToNavBar(){
             const style = $('.colors-list .color-box-nav-bar.active').data("style");
             navbar.removeClass().addClass(`page-controls navbar navbar-dashboard navbar-${style}`);
         };
 
         $("#navbar_static").click(() => {
-            addStylyToNavBar();
-            console.log( navbarClass());
+            addStyleToNavBar();
         });
 
         $("#navbar_floating").click(() => {
-            console.log( navbarClass());
             if ($(".nav-static").length > 0) {
-                addStylyToNavBar();
+                addStyleToNavBar();
                 navbar.addClass('navbar-floating-type-static');
             } else {
-                addStylyToNavBar();
+                addStyleToNavBar();
                 navbar.addClass('navbar-floating-type');
             }
         });
@@ -924,7 +912,7 @@ function initDemoFunctions(){
 
             $('.color-box-nav-bar').removeClass('active');
             target.addClass('active');
-            navbar.removeClass().addClass(`page-controls navbar navbar-dashboard navbar-${target.data('style')} ${navbarClass()}`);
+            navbar.removeClass(styles.join(" ")).addClass(`navbar-${target.data('style')}`);
             circle.removeClass().addClass(`circle bg-${ darkBG.indexOf(target.data('style')) >= 0 ? "success" : "primary" } fw-bold text-white`);
         });
 
