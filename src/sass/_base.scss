@@ -115,6 +115,9 @@
 .navbar-floating-type{
   margin: 1rem 40px 0 calc(#{$sidebar-icon-state-width} + 40px);
   border-radius: .5rem;
+  @include media-breakpoint-down(sm) {
+    margin: $spacer $spacer 0;
+  }
   .nav-static & {
     margin-left: calc(#{$sidebar-width} + 40px);
     @include media-breakpoint-down(sm) {
