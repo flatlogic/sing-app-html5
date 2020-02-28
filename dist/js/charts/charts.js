@@ -39,7 +39,7 @@ $(function() {
                     fill: 1,
                     lineWidth: 0
                 },
-                color: Sing.palette['brand-warning-pale']
+                color: Sing.colors['brand-warning']
             },{
                 label: "Traffic",
                 data: data2,
@@ -47,7 +47,7 @@ $(function() {
                     fill: 1,
                     lineWidth: 0
                 },
-                color:[Sing.palette['brand-warning-light']]
+                color:[Sing.colors['brand-info']]
             },{
                 label: "Traffic",
                 data: data1,
@@ -113,7 +113,7 @@ $(function() {
 
     function initEasyPie() {
         $('#easy-pie1').easyPieChart({
-            barColor: Sing.palette['brand-success-pale'],
+            barColor: Sing.colors['brand-info'],
             trackColor: Sing.colors['gray-200'],
             scaleColor: false,
             lineWidth: 8,
@@ -128,9 +128,9 @@ $(function() {
             height: '100px',
             highlightLighten: 1.05,
             sliceColors: [
-                Sing.palette['brand-info-light'],
-                Sing.palette['brand-warning-light'],
-                Sing.colors['gray-100'],
+                Sing.colors['brand-info'],
+                Sing.colors['brand-danger'],
+                Sing.colors['brand-warning'],
             ]
         });
     }
@@ -155,7 +155,7 @@ $(function() {
             var chart = nv.models.lineChart()
                 .useInteractiveGuideline(true)
                 .margin({left: 28, bottom: 30, right: 0})
-                .color([Sing.palette['brand-danger-pale'], Sing.palette['brand-info-pale']]);
+                .color([Sing.colors['brand-danger'], Sing.colors['brand-info']]);
 
             chart.xAxis
                 .showMaxMin(false)
@@ -186,7 +186,7 @@ $(function() {
         nv.addGraph(function() {
             var chart = nv.models.multiBarChart()
                 .margin({left: 28, bottom: 30, right: 0})
-                .color([Sing.palette['brand-success-light'], Sing.palette['brand-danger-pale']]);
+                .color([Sing.colors['brand-info'], Sing.colors['brand-danger']]);
 
             chart.xAxis
                 .showMaxMin(false)
@@ -227,11 +227,11 @@ $(function() {
             renderer: 'stack',
             series: [
                 {
-                    color: Sing.palette['brand-warning-light'],
+                    color: Sing.colors['brand-warning'],
                     data: seriesData[0],
                     name: 'Uploads'
                 }, {
-                    color: Sing.palette['brand-warning-pale'],
+                    color: Sing.colors['brand-info'],
                     data: seriesData[1],
                     name: 'Downloads'
                 }
@@ -289,10 +289,10 @@ $(function() {
             xkey: 'y',
             ykeys: ['a', 'b'],
             labels: ['Series A', 'Series B'],
-            lineColors: [Sing.palette['brand-danger-light'], Sing.colors['brand-danger']],
+            lineColors: [Sing.colors['brand-info'], Sing.colors['brand-warning']],
             lineWidth: 0,
             pointSize: 0,
-            fillOpacity: 0.6
+            fillOpacity: 1
         });
     }
 
@@ -313,7 +313,7 @@ $(function() {
             xkey: 'y',
             ykeys: ['a', 'b'],
             labels: ['Series A', 'Series B'],
-            lineColors: [Sing.palette['brand-success-light'], Sing.palette['brand-warning-light']],
+            lineColors: [Sing.colors['brand-primary'], Sing.colors['brand-danger']],
             pointSize: 0
         });
     }
@@ -322,19 +322,19 @@ $(function() {
         function _initChart() {
             $('#sparkline1').sparkline([2,4,6,2,7,5,3,7,8,3,6],{
                 width: '100%',
-                fillColor: Sing.palette['brand-info-pale'],
+                fillColor: Sing.colors['brand-info'],
                 height: '100px',
                 lineColor: 'transparent',
                 spotColor: Sing.palette[7],
                 minSpotColor: null,
                 maxSpotColor: null,
-                highlightSpotColor: Sing.palette['brand-warning-light'],
-                highlightLineColor: Sing.palette['brand-warning-light'],
+                highlightSpotColor: Sing.colors['brand-warning'],
+                highlightLineColor: Sing.colors['brand-info'],
             }).sparkline([5,3,7,8,3,6,2,4,6,2,7],{
                 composite: true,
                 lineColor: 'transparent',
                 spotColor: Sing.palette['brand-info-light'],
-                fillColor: Sing.palette['brand-info-light'],
+                fillColor: Sing.colors['brand-warning'],
                 minSpotColor: null,
                 maxSpotColor: null,
                 highlightSpotColor: Sing.palette['brand-info-light'],
@@ -440,9 +440,9 @@ $(function() {
                     labelBoxBorderColor: "none"
                 },
                 colors: [
-                    Sing.palette['brand-success-light'],
-                    Sing.palette['brand-info-light'],
-                    Sing.palette['brand-warning-light']
+                    Sing.colors['brand-danger'],
+                    Sing.colors['brand-info'],
+                    Sing.colors['brand-warning']
                 ]
             });
         }
@@ -461,7 +461,7 @@ $(function() {
                 {label: "In-Store Sales", value: 30},
                 {label: "Mail-Order Sales", value: 20}
             ],
-            colors: [Sing.palette['brand-danger-pale'], Sing.palette['brand-warning-light']],
+            colors: [Sing.colors['brand-danger'], Sing.colors['brand-info']],
         });
     }
 

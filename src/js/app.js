@@ -867,7 +867,7 @@ function initDemoFunctions(){
         const chat = $("#chat");
         const navbar = $(".navbar");
         const sup = $("sup");
-        const circle = $(".circle");
+        const circle = $(".nav .circle");
         const styles = ["navbar-first ", "second ", "third ", "fourth ", "fifth ", "sixth ", "seventh ", "eighth ", "ninth "];
 
         $("[name=navbar-type]").change(function() {

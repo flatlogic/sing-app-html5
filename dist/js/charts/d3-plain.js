@@ -2,7 +2,7 @@ $(function () {
 
     'use strict';
 
-    const COLORS = Object.values(Sing.palette);
+    const COLORS = Object.values(Sing.newPalette);
 
     function initD3_2(d3) {
         let container = document.getElementById('d3-2');
@@ -283,15 +283,15 @@ $(function () {
 
         bar.filter((d) => d.class === "positive")
             .selectAll("rect")
-            .attr("fill", () => Sing.palette['brand-success-light']);
+            .attr("fill", () => Sing.colors['brand-info']);
 
         bar.filter((d) => d.class === "negative")
             .selectAll("rect")
-            .attr("fill", () => Sing.palette['brand-warning-light']);
+            .attr("fill", () => Sing.colors['brand-warning']);
 
         bar.filter((d) => d.class === "total")
             .selectAll("rect")
-            .attr("fill", () => Sing.palette['brand-info-pale']);
+            .attr("fill", () => Sing.colors['brand-danger']);
 
         bar.selectAll("line.connector")
             .attr("stroke", () => Sing.colors['gray-400'])
@@ -419,7 +419,7 @@ $(function () {
             .attr("class", "line")
             .attr("d", valueline)
             .attr('fill', 'none')
-            .attr('stroke', Sing.palette['brand-primary-light'])
+            .attr('stroke', Sing.colors['brand-primary'])
             .attr('stroke-width', 2);
 
         // Add the valueline2 path.
@@ -428,7 +428,7 @@ $(function () {
             .attr("class", "line2")
             .attr("d", valueline2)
             .attr('fill', 'none')
-            .attr('stroke', Sing.palette['brand-primary-pale'])
+            .attr('stroke', Sing.colors['brand-info'])
             .attr('stroke-width', 2);
 
         // Add the x Axis
@@ -587,7 +587,7 @@ $(function () {
             .rangeRound([height, 0]);
 
         let z = d3.scaleOrdinal()
-            .range(COLORS.slice(0,3).concat(COLORS.slice(5)));
+            .range(COLORS.slice(0,5).concat(COLORS.slice(5)));
 
         x.domain(data.map(function (d) {
             return d.state;
