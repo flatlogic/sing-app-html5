@@ -875,12 +875,12 @@ function initDemoFunctions(){
         const navbar = $(".navbar");
         const sup = $("sup");
         const circle = $(".circle");
-        const styles = ["navbar-first", "navbar-second", "navbar-third", "navbar-fourth", "navbar-fifth", "navbar-sixth", "navbar-seventh", "navbar-eighth", "navbar-ninth"];
+        const styles = ["navbar-first ", "second ", "third ", "fourth ", "fifth ", "sixth ", "seventh ", "eighth ", "ninth "];
 
-        function addStyleToNavBar(){
+        function addStyleToNavBar() {
             const style = $('.colors-list .color-box-nav-bar.active').data("style");
             navbar.removeClass().addClass(`page-controls navbar navbar-dashboard navbar-${style}`);
-        };
+        }
 
         $("#navbar_static").click(() => {
             addStyleToNavBar();
@@ -912,14 +912,16 @@ function initDemoFunctions(){
 
             $('.color-box-nav-bar').removeClass('active');
             target.addClass('active');
-            navbar.removeClass(styles.join(" ")).addClass(`navbar-${target.data('style')}`);
+            console.log(styles.join("navbar-"));
+            navbar.removeClass(styles.join("navbar-")).addClass(`navbar-${target.data('style')}`);
             circle.removeClass().addClass(`circle bg-${ darkBG.indexOf(target.data('style')) >= 0 ? "success" : "primary" } fw-bold text-white`);
         });
 
         $('.colors-list .color-box-side-bar').click(function(e) {
             const target = $(e.target);
             $('.color-box-side-bar').removeClass('active');
-            sidebar.removeClass().addClass(`sidebar sidebar-${target.data('style')}`);
+            sidebar.removeClass("sidebar-first");
+            sidebar.removeClass(styles.join("sidebar-")).addClass(`sidebar sidebar-${target.data('style')}`);
             chat.removeClass().addClass(`chat-sidebar chat-sidebar-${target.data('style')}`);
 
             switch(target.data('style')) {
