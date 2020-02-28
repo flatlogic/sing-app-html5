@@ -870,11 +870,6 @@ function initDemoFunctions(){
         const circle = $(".circle");
         const styles = ["navbar-first ", "second ", "third ", "fourth ", "fifth ", "sixth ", "seventh ", "eighth ", "ninth "];
 
-        function addStyleToNavBar() {
-            const style = $('.colors-list .color-box-nav-bar.active').data("style");
-            navbar.removeClass().addClass(`page-controls navbar navbar-dashboard navbar-${style}`);
-        }
-
         $("[name=navbar-type]").change(function() {
             if (this.value === 'floating') {
                 navbar.addClass('navbar-floating-type');
