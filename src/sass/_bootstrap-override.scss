@@ -442,6 +442,7 @@ legend {
 
 .navbar-header > .navbar-nav{
   float: left;
+  margin-bottom: -6px;
 
   &.navbar-right{
     float: right;
@@ -458,7 +459,7 @@ legend {
 
     + .navbar-brand{
       height: 60px;
-      line-height: 22px;
+      line-height: 28px;
     }
   }
 }
