@@ -1,0 +1,35 @@
+{{#extend "layout" title="Sing App Dashboard - Profile"}}
+  {{#content "sidebar"}}
+    {{> sidebar active="chat"}}
+  {{/content}}
+  {{#content "content" mode="replace"}}
+      <div class="chat-page">
+        <div class="chat-list-section">
+        <section class="chat-section">
+            <div class="form-group mb-0">
+                <div class="input-group input-group-no-border">
+                    <input class="form-control" type="text" placeholder="Search">
+                    <span class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="la la-search"></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="chat-section group-chats d-none d-lg-block">
+
+        </section>
+        <section class="chat-section personal-chats mb-0 d-none d-lg-block">
+
+        </section>
+        </div>
+        <div class="chat-dialog-section d-flex flex-column">
+
+        </div>
+        <div class="chat-info-section">
+
+        </div>
+    </div>
+  {{/content}}
+{{/extend}}

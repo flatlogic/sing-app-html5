@@ -20,6 +20,42 @@
   }
 }
 
+.sidebar-second {
+  @include sidebar-style($sidebar-white-color, $white, $white, transparent, $white, $white);
+}
+
+.sidebar-third {
+  @include sidebar-style($white, $sidebar-first-color, $sidebar-first-color, $sidebar-first-color-bg, $sidebar-first-color-bg, $sidebar-first-color-bg!important);
+}
+
+.sidebar-fourth {
+  @include sidebar-style($sidebar-second-color, $sidebar-second-color-bg, $white, $sidebar-second-color-bg-active, $sidebar-second-color-bg-active, $sidebar-second-color-bg-active);
+}
+
+.sidebar-fifth {
+  @include sidebar-style($sidebar-third-color, $sidebar-third-color-bg, $sidebar-third-color-bg, $sidebar-third-color-bg-active, $sidebar-third-color-bg-active, $sidebar-third-color-bg-active);
+}
+
+.sidebar-sixth {
+  @include sidebar-style($sidebar-third-color, $sidebar-fourth-color-bg, $sidebar-fourth-color-bg, $sidebar-fourth-color-bg-active, $sidebar-fourth-color-bg-active, $sidebar-fourth-color-bg-active);
+}
+
+.sidebar-seventh {
+  @include sidebar-style($sidebar-third-color, $sidebar-fifth-color-bg, $sidebar-fifth-color-bg, $sidebar-fifth-color-bg-active, $sidebar-fifth-color-bg-active, $sidebar-fifth-color-bg-active);
+}
+
+.sidebar-eighth {
+  @include sidebar-style($white, $sidebar-sixth-color-bg, $sidebar-sixth-color-bg, $sidebar-sixth-color-bg-active, $sidebar-sixth-color-bg-active, $sidebar-sixth-color-bg-active);
+}
+
+.sidebar-ninth {
+  @include sidebar-style($sidebar-seventh-color, $sidebar-seventh-color-bg, $sidebar-seventh-color-bg, $sidebar-seventh-color-bg-active, $sidebar-seventh-color-bg-active, $sidebar-seventh-color-bg-active);
+}
+
+.sidebar-transparent {
+  @include sidebar-style($sidebar-white-color, transparent, $white, transparent, transparent, transparent);
+}
+
 .page-controls, .content-wrap, .loader-wrap{
   left: $sidebar-width;
   @include transition(left $sidebar-transition-time ease-in-out);
@@ -30,12 +66,13 @@
   }
 
   .nav-collapsed &{
-    left: 0
+    left: 0;
+    transition: all $sidebar-transition-time ease-in-out;
   }
 
   .nav-static & {
     @include media-breakpoint-up(lg) {
-      @include transition(none);
+      transition: margin $sidebar-transition-time ease-in-out;
       left: 0;
       margin-left: $sidebar-width;
     }
@@ -59,7 +96,8 @@
 .page-controls{
   @include transition(
           left $sidebar-transition-time ease-in-out,
-          right $sidebar-transition-time ease-in-out
+          right $sidebar-transition-time ease-in-out,
+          margin $sidebar-transition-time ease-in-out
   );
   right: -$sidebar-width;
 
@@ -70,6 +108,20 @@
   .nav-static & {
     @include media-breakpoint-up(lg) {
       right: 0;
+    }
+  }
+}
+
+.navbar-floating-type{
+  margin: 1rem 40px 0 calc(#{$sidebar-icon-state-width} + 40px);
+  border-radius: .5rem;
+  @include media-breakpoint-down(sm) {
+    margin: $spacer $spacer 0;
+  }
+  .nav-static & {
+    margin-left: calc(#{$sidebar-width} + 40px);
+    @include media-breakpoint-down(sm) {
+      margin: $spacer $spacer 0;
     }
   }
 }
@@ -140,6 +192,10 @@
   .navbar-nav .nav-link {
     .fa, .la {
       font-size: 20px;
+
+      @include media-breakpoint-down(md) {
+        font-size: 28px;
+      }
     }
   }
 }
@@ -200,6 +256,7 @@
 
   .nav-collapsed &{
     width: $sidebar-icon-state-width;
+    @include transition(left $sidebar-transition-time ease-in-out);
   }
 
   .nav-static &{
@@ -210,11 +267,22 @@
   }
 }
 
+.sidebar-white{
+  background-color: $white;
+}
+
 .sidebar-nav{
   padding: 10px 0;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: $sidebar-font-weight;
 
+  .hover-white{
+    background-color: white!important;
+    color: #6c757d!important;
+    &:hover{
+      background-color: transparent;
+    }
+  }
   li a {
     display: block;
     color: $sidebar-color;
@@ -576,6 +644,14 @@
   border-left: 1px solid $sidebar-border-color;
   background-color: $sidebar-bg-color;
   @include transition(right $sidebar-transition-time ease-in-out);
+  .input-group-text{
+    background-color: rgba(0,0,0,0.1);
+  }
+}
+#chat-sidebar-search{
+ background-color: rgba(0,0,0,0.1);
+  color: white;
+  border: none;
 }
 
 /* body tag is given this class */
@@ -596,6 +672,13 @@
   }
 }
 
+#chat{
+  .input-group-text{
+    background-color: rgba(0,0,0, 0.1);
+    border: none;
+  }
+}
+
 .chat-sidebar-header{
   position: absolute;
   top: 0;
@@ -612,7 +695,6 @@
 .chat-sidebar-content{
   color: $sidebar-color;
 }
-
 
 .chat-sidebar-contacts{
   padding: 20px 0;
@@ -923,6 +1005,38 @@
     border: none;
     text-decoration: none;
   }
+}
+
+.chat-sidebar-second {
+  @include chat-sidebar-style($sidebar-white-color, $white, transparent, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
+}
+
+.chat-sidebar-third {
+  @include chat-sidebar-style($white, $sidebar-first-color, $sidebar-first-color-bg, rgba(0,0,0,0.1), $white, $white );
+}
+
+.chat-sidebar-fourth {
+  @include chat-sidebar-style($sidebar-second-color, $sidebar-second-color-bg, $sidebar-first-color-bg, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
+}
+
+.chat-sidebar-fifth {
+  @include chat-sidebar-style($sidebar-third-color, $sidebar-third-color-bg, $sidebar-third-color-bg-active, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
+}
+
+.chat-sidebar-sixth {
+  @include chat-sidebar-style($sidebar-third-color, $sidebar-fourth-color-bg, $sidebar-fourth-color-bg-active, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
+}
+
+.chat-sidebar-seventh {
+  @include chat-sidebar-style($sidebar-third-color, $sidebar-fifth-color-bg, $sidebar-fifth-color-bg-active, rgba(0,0,0,0.1), rgba(0,0,0,0.9), rgba(0,0,0,0.9) );
+}
+
+.chat-sidebar-eighth {
+  @include chat-sidebar-style($white, $sidebar-sixth-color-bg, $sidebar-sixth-color-bg-active, rgba(0,0,0,0.1), $white, $white );
+}
+
+.chat-sidebar-ninth {
+  @include chat-sidebar-style($sidebar-seventh-color, $sidebar-seventh-color-bg, $sidebar-seventh-color-bg-active, rgba(0,0,0,0.1), $white, $white );
 }
 
 /***********************/
@@ -2664,5 +2778,42 @@ input[type=search], input.search {
         min-width: 110px;
       }
     }
+  }
+}
+
+//Char page
+.chat-page{
+  .chat-section{
+    box-shadow: $widget-shadow;
+    border-radius: .5rem;
+    background: #fff;
+    padding: 21px;
+    margin-bottom: 1rem;
+
+    input, span>span{
+      background-color: $gray-100;
+
+      i{
+        transform: rotate(-90deg);
+        font-size: 1.5rem;
+        color: $gray-600;
+      }
+    }
+  }
+
+  .chat-list-section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 330px;
+    width: 330px;
+
+
+  }
+  .chat-dialog-section{
+
+  }
+  .chat-info-section{
+
   }
 }

@@ -91,3 +91,288 @@
 @mixin reset-filter() {
   filter: "progid:DXImageTransform.Microsoft.gradient(enabled = false)";
 }
+
+@mixin chat-sidebar-style($mainColor, $mainBGColor, $hoverColor, $inputBG, $inputColor, $placeHolderColor) {
+  border-left: none;
+  color: $mainColor;
+  background-color: $mainBGColor;
+  .chat-sidebar-content {
+    .chat-sidebar-header{
+      background-color: $mainBGColor;
+      .chat-sidebar-title{
+        color: $mainColor;
+      }
+      .input-group-text{
+        background-color: $inputBG;
+        border: none;
+      }
+      #chat-sidebar-search {
+        color: $inputColor;
+        &::placeholder {
+          color: $placeHolderColor
+        }
+      }
+    }
+    .chat-sidebar-chat.chat-sidebar-panel.open {
+      background-color: $mainBGColor;
+      .title > a {
+        color: $mainColor;
+      }
+      .message-list {
+        background-color: $mainBGColor;
+      }
+    }
+    .slimScrollDiv{
+      .chat-sidebar-contacts{
+        .sidebar-nav-title{
+          color: $mainColor;
+        }
+        .list-group{
+          .active{
+            a{
+              background-color: $mainBGColor;
+              &:hover{
+                background-color: $hoverColor;
+              }
+              .message-sender, .message-preview{
+                color: $mainColor;
+              }
+            }
+          }
+          a{
+            background-color: $mainBGColor;
+            &:hover{
+              background-color: $hoverColor;
+            }
+            .message-sender, .message-preview{
+              color: $mainColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin nav-style($bgcolor, $color, $sColor, $sBgColor, $sBgFColor, $sPColor){
+  background-color: $bgcolor;
+  .container-fluid {
+    .navbar-header {
+      .navbar-brand {
+        color: $color;
+      }
+      .la-refresh, .la-times, .la-search, .la-bars {
+        color: $color;
+      }
+      .navbar-nav {
+        .nav-item {
+          a {
+            color: $color;
+          }
+        }
+      }
+    }
+    #main-search {
+      color: $sColor;
+      background: $sBgColor;
+
+      &:focus {
+        background-color: $sBgFColor!important;
+      }
+
+      &::placeholder {
+        color: $sPColor;
+      }
+    }
+  }
+};
+
+@mixin sidebar-style($mainColor, $mainBGColor, $iconColor, $hoverColor, $pbColor, $activeColor ) {
+  color: $mainColor;
+  border-right: none;
+  background-color: $mainBGColor;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $mainColor;
+    }
+    .logo > a{
+      color: $mainColor;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $activeColor;
+    }
+    .sidebar-nav{
+      li{
+        a{
+          color: $mainColor!important;
+          &:hover{
+            background-color: $hoverColor;
+          }
+        }
+      }
+      .active a{
+        background-color: $activeColor;
+        color: $mainColor;
+        span{
+          background-color: $mainColor;
+          i{
+            color: $iconColor;
+          }
+        }
+      }
+      ul{
+        background-color: $activeColor;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: $mainColor;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: $pbColor;
+      }
+    }
+  }
+}
+@mixin chat-sidebar-style($mainColor, $mainBGColor, $hoverColor, $inputBG, $inputColor, $placeHolderColor) {
+  border-left: none;
+  color: $mainColor;
+  background-color: $mainBGColor;
+  .chat-sidebar-content {
+    .chat-sidebar-header{
+      background-color: $mainBGColor;
+      .chat-sidebar-title{
+        color: $mainColor;
+      }
+      .input-group-text{
+        background-color: $inputBG;
+        border: none;
+      }
+      #chat-sidebar-search {
+        color: $inputColor;
+        &::placeholder {
+          color: $placeHolderColor
+        }
+      }
+    }
+    .chat-sidebar-chat.chat-sidebar-panel.open {
+      background-color: $mainBGColor;
+      .title > a {
+        color: $mainColor;
+      }
+      .message-list {
+        background-color: $mainBGColor;
+      }
+    }
+    .slimScrollDiv{
+      .chat-sidebar-contacts{
+        .sidebar-nav-title{
+          color: $mainColor;
+        }
+        .list-group{
+          .active{
+            a{
+              background-color: $mainBGColor;
+              &:hover{
+                background-color: $hoverColor;
+              }
+              .message-sender, .message-preview{
+                color: $mainColor;
+              }
+            }
+          }
+          a{
+            background-color: $mainBGColor;
+            &:hover{
+              background-color: $hoverColor;
+            }
+            .message-sender, .message-preview{
+              color: $mainColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin nav-style($bgcolor, $color, $sColor, $sBgColor, $sBgFColor, $sPColor){
+  background-color: $bgcolor;
+  .container-fluid {
+    .navbar-header {
+      .navbar-brand {
+        color: $color;
+      }
+      .la-refresh, .la-times, .la-search, .la-bars {
+        color: $color;
+      }
+      .navbar-nav {
+        .nav-item {
+          a {
+            color: $color;
+          }
+        }
+      }
+    }
+    #main-search {
+      color: $sColor;
+      background: $sBgColor;
+
+      &:focus {
+        background-color: $sBgFColor!important;
+      }
+
+      &::placeholder {
+        color: $sPColor;
+      }
+    }
+  }
+};
+
+@mixin sidebar-style($mainColor, $mainBGColor, $iconColor, $hoverColor, $pbColor, $activeColor ) {
+  color: $mainColor;
+  border-right: none;
+  background-color: $mainBGColor;
+  .slimScrollDiv{
+    .sidebar-nav-title{
+      color: $mainColor;
+    }
+    .logo > a{
+      color: $mainColor;
+    }
+    .sidebar-nav>.open>a{
+      background-color: $activeColor;
+    }
+    .sidebar-nav{
+      li{
+        a{
+          color: $mainColor!important;
+          &:hover{
+            background-color: $hoverColor;
+          }
+        }
+      }
+      .active a{
+        background-color: $activeColor;
+        color: $mainColor;
+        span{
+          background-color: $mainColor;
+          i{
+            color: $iconColor;
+          }
+        }
+      }
+      ul{
+        background-color: $activeColor;
+      }
+    }
+    .sidebar-labels>li>a{
+      color: $mainColor;
+    }
+    .sidebar-alerts{
+      .progress{
+        background-color: $pbColor;
+      }
+    }
+  }
+}

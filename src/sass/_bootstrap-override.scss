@@ -410,6 +410,12 @@ legend {
   .input-group {
     width: 300px;
     display: flex;
+    .form-control{
+      &:focus {
+        background-color: rgba(0, 0, 0, .1);
+      }
+    }
+
 
     .form-control {
       order: 2;
@@ -419,7 +425,6 @@ legend {
       border-bottom-right-radius: $border-radius !important;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      background: rgba(0,0,0,.1);
     }
 
     .input-group-text {
@@ -430,13 +435,16 @@ legend {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: $border-radius;
       border-top-left-radius: $border-radius;
+      background-color: rgba(0, 0, 0, .1)!important;
     }
   }
 }
 
 .navbar-header > .navbar-nav{
   float: left;
-
+  @include media-breakpoint-down(sm) {
+    margin-bottom: -6px;
+  }
   &.navbar-right{
     float: right;
 
@@ -452,7 +460,7 @@ legend {
 
     + .navbar-brand{
       height: 60px;
-      line-height: 35px;
+      line-height: 28px;
     }
   }
 }
@@ -1082,6 +1090,46 @@ legend {
 //
 // Navbar Dasboard
 // --------------------------------------------------
+
+.navbar-first {
+  @include nav-style($sidebar-bg-color!important, $white, $white, rgba(0,0,0,.1), rgba(0,0,0,.1), $white);
+}
+
+.navbar-secont {
+  @include nav-style($white!important, $navbar-dashboard-link-color, $white, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
+}
+
+.navbar-third {
+  @include nav-style($sidebar-first-color !important, $white, $white, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
+}
+
+.navbar-fourth {
+  @include nav-style($sidebar-second-color-bg!important, $navbar-dashboard-link-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
+}
+
+.navbar-fifth {
+  @include nav-style($sidebar-third-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
+}
+
+.navbar-sixth {
+  @include nav-style($sidebar-fourth-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
+}
+
+.navbar-seventh {
+  @include nav-style($sidebar-fifth-color-bg!important, $navbar-dashboard-color, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $navbar-dashboard-color);
+}
+
+.navbar-eighth {
+  @include nav-style($sidebar-sixth-color-bg!important, $white, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
+}
+
+.navbar-ninth {
+  @include nav-style($sidebar-seventh-color-bg!important, $white, $navbar-dashboard-color, rgba(0, 0, 0, .1), rgba(0,0,0,.1), $white);
+}
+
+.header-dark{
+  color: #fff!important;
+}
 
 .navbar-dashboard {
   background-color: $navbar-dashboard-bg;

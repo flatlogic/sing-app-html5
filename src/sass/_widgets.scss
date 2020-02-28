@@ -1350,6 +1350,25 @@
     right: 0;
   }
 
+  .colors-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    .color-box-nav-bar, .color-box-side-bar{
+      min-width: 25px;
+      height: 25px;
+      border: 1px solid #d7dfe6;
+      cursor: pointer;
+      margin: 3px;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+    .active{
+      border-color: #00395f;
+    }
+  }
+
   .theme-helper-toggler {
     width: $sidebar-width / 4;
     margin-left: -($sidebar-width / 4);
@@ -1385,7 +1404,7 @@
   .theme-helper-header {
     padding-top: 0;
 
-    h6 {
+    h6, h5 {
       margin: auto;
     }
   }
