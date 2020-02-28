@@ -112,6 +112,14 @@
   }
 }
 
+.navbar-floating-type{
+  margin: 1rem 40px 0 calc(#{$sidebar-icon-state-width} + 40px);
+  border-radius: .5rem;
+  .nav-static & {
+    margin-left: calc(#{$sidebar-width} + 40px);
+  }
+}
+
 .page-controls {
   position: absolute;
   z-index: 1;
@@ -2760,5 +2768,42 @@ input[type=search], input.search {
         min-width: 110px;
       }
     }
+  }
+}
+
+//Char page
+.chat-page{
+  .chat-section{
+    box-shadow: $widget-shadow;
+    border-radius: .5rem;
+    background: #fff;
+    padding: 21px;
+    margin-bottom: 1rem;
+
+    input, span>span{
+      background-color: $gray-100;
+
+      i{
+        transform: rotate(-90deg);
+        font-size: 1.5rem;
+        color: $gray-600;
+      }
+    }
+  }
+
+  .chat-list-section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 330px;
+    width: 330px;
+
+
+  }
+  .chat-dialog-section{
+
+  }
+  .chat-info-section{
+
   }
 }

@@ -1088,15 +1088,6 @@ legend {
 //
 // Navbar Dasboard
 // --------------------------------------------------
-.navbar-floating-type{
-  margin: 1rem 40px 0 calc(#{$sidebar-icon-state-width} + 40px)!important;
-  border-radius: .5rem;
-}
-
-.navbar-floating-type-static{
-  margin: 1rem 40px 0 calc(#{$sidebar-width} + 40px)!important;
-  border-radius: .5rem;
-}
 
 .navbar-first {
   @include nav-style($sidebar-bg-color!important, $white, $white, rgba(0,0,0,.1), rgba(0,0,0,.1), $white);
