@@ -266,10 +266,6 @@ $(function(){
     SingAppView.prototype.staticNavigationState = function(){
         this.settings.set('nav-static', true).save();
         $('body').addClass('nav-static');
-
-        if ($(".navbar").hasClass("navbar-floating-type-static") || ($(".navbar").hasClass("navbar-floating-type"))){
-            $(".navbar").removeClass().addClass("page-controls navbar navbar-dashboard navbar-floating-type-static");
-        }
     };
 
     /**
@@ -280,9 +276,6 @@ $(function(){
     SingAppView.prototype.collapsingNavigationState = function(){
         this.settings.set('nav-static', false).save();
         $('body').removeClass('nav-static');
-        if ($(".navbar").hasClass("navbar-floating-type-static") || ($(".navbar").hasClass("navbar-floating-type"))){
-            $(".navbar").removeClass().addClass("page-controls navbar navbar-dashboard navbar-floating-type");
-        }
         this.collapseNavigation();
     };
 
@@ -882,29 +875,19 @@ function initDemoFunctions(){
             navbar.removeClass().addClass(`page-controls navbar navbar-dashboard navbar-${style}`);
         }
 
-        $("#navbar_static").click(() => {
-            addStyleToNavBar();
-        });
-
-        $("#navbar_floating").click(() => {
-            if ($(".nav-static").length > 0) {
-                addStyleToNavBar();
-                navbar.addClass('navbar-floating-type-static');
-            } else {
-                addStyleToNavBar();
+        $("[name=navbar-type]").change(function() {
+            if (this.value === 'floating') {
                 navbar.addClass('navbar-floating-type');
+            } else {
+                navbar.removeClass('navbar-floating-type');
             }
         });
 
-        $("#sidebar_transparent").click(() => {
-            if (!(sidebar).hasClass('sidebar-transparent')){
-                (sidebar).addClass('sidebar-transparent')
-            }
+        $("[name=sidebar-type]").change( function() {
+            if (this.value === "transparent") { (sidebar).addClass('sidebar-transparent') }
+            else {(sidebar).removeClass('sidebar-transparent')}
         });
 
-        $("#sidebar_solid").click(() => {
-            sidebar.removeClass('sidebar-transparent')
-        });
 
         $('.colors-list .color-box-nav-bar').click(function(e) {
             const target = $(e.target);
@@ -912,7 +895,6 @@ function initDemoFunctions(){
 
             $('.color-box-nav-bar').removeClass('active');
             target.addClass('active');
-            console.log(styles.join("navbar-"));
             navbar.removeClass(styles.join("navbar-")).addClass(`navbar-${target.data('style')}`);
             circle.removeClass().addClass(`circle bg-${ darkBG.indexOf(target.data('style')) >= 0 ? "success" : "primary" } fw-bold text-white`);
         });
