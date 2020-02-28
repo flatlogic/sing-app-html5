@@ -158,6 +158,9 @@
   background-color: $bgcolor;
   .container-fluid {
     .navbar-header {
+      .navbar-brand {
+        color: $color;
+      }
       .la-refresh, .la-times, .la-search, .la-bars {
         color: $color;
       }
