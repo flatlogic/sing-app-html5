@@ -921,6 +921,18 @@ function initDemoFunctions(){
             target.addClass('active');
         });
 
+        /// Chat Page ///
+
+        const chatListItem = $(".chat-list-item");
+
+        chatListItem.on('click', function() {
+            chatListItem.removeClass("active");
+            $(this).addClass("active");
+        });
+
+
+        /// End Chat Page ///
+
         setTimeout(function(){
             var $chatNotification = $('#chat-notification');
             $chatNotification.removeClass('hide').addClass('animated fadeIn')
