@@ -3,7 +3,7 @@
     {{> sidebar active="chat"}}
   {{/content}}
   {{#content "content" mode="replace"}}
-  <div class="chat-page">
+  <div class="chat-page chat-state">
     <div class="chat-list-section">
     <section class="chat-section">
         <div class="form-group mb-0">
@@ -69,9 +69,9 @@
                     <ul class="avatars-column">
                         <li>
                             <div class="avatar mr-3" style="height: 35px; width: 35px; min-width: 35px;">
-                            <div class="image-wrapper stroke" style="font-size: 11.6667px;">
-                                <img src="../img/chat/avatars/3.png">
-                            </div>
+                                <div class="image-wrapper stroke" style="font-size: 11.6667px;">
+                                    <img src="../img/chat/avatars/3.png">
+                                </div>
                             </div>
                         </li>
                         </li>
@@ -159,7 +159,7 @@
     </section>
     <section class="chat-section personal-chats mb-0 d-none d-lg-block">
         <h5>Personal Chats</h5>
-        <ul class="chat-list chat-state">
+        <ul class="chat-list">
             <li class="chat-list-item">
                 <div class="chat-list-item-wrapper">
                     <div class="avatar mr-3">
@@ -278,7 +278,265 @@
             </li>
         </ul>
     </section>
-</div>
+    <section class="chat-section all-chats mb-0 d-lg-none">
+        <h5>Group Chats</h5>
+        <ul class="chat-list mb-3">
+            <li class="chat-list-item active">
+                <div class="chat-list-item-wrapper">
+                    <ul class="avatars-column">
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/1.png">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/2.png">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/3.png">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <section class="chat-item-main">
+                        <header class="d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="chat-title">
+                                <img src="../img/chat/peoples.svg" class="group-chat-icon mr-1">
+                                    Light Blue Group
+                                <span class="ml-1">(6)</span>
+                            </h6>
+                            <span class="ml-auto timestamp">
+                                3 Mar
+                            </span>
+                        </header>
+                        <p class="chat-last-message">
+                            <span class="owner-indicator mr-1">
+                                You:
+                            </span>
+                                Guys did you see the new update of the Sing App from our competitors?
+                        </p>
+                    </section>
+                </div>
+            </li>
+            <li class="chat-list-item">
+                <div class="chat-list-item-wrapper">
+                    <ul class="avatars-column">
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/4.png">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/5.png">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/6.png">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <section class="chat-item-main">
+                        <header class="d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="chat-title">
+                                <img src="../img/chat/peoples.svg" class="group-chat-icon mr-1">
+                                    React Native
+                                <span class="ml-1">(3)</span>
+                            </h6>
+                            <span class="ml-auto timestamp">
+                                2 Mar
+                            </span>
+                        </header>
+                        <p class="chat-last-message">
+                            <span class="owner-indicator mr-1">
+                                Jane:
+                            </span>
+                                Hi, @Darrell. It's too easy. I can explain it too you if you have some minutes.
+                        </p>
+                    </section>
+                </div>
+            </li>
+            <li class="chat-list-item">
+                <div class="chat-list-item-wrapper">
+                    <ul class="avatars-column">
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/3.png">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/4.png">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="avatar mr-3">
+                                <div class="image-wrapper stroke">
+                                    <img src="../img/chat/avatars/5.png">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <section class="chat-item-main">
+                        <header class="d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="chat-title">
+                                <img src="../img/chat/peoples.svg" class="group-chat-icon mr-1">
+                                    Common
+                                <span class="ml-1">(3)</span></h6><span class="ml-auto timestamp">
+                                    2 Mar
+                                </span>
+                        </header>
+                        <p class="chat-last-message">
+                            <span class="owner-indicator mr-1">
+                                Jane:
+                            </span>
+                                Hi, @Darrell. It's too easy. I can explain it too you if you have some minutes.
+                        </p>
+                    </section>
+                </div>
+            </li>
+        </ul>
+        <h5>Personal Chats</h5>
+        <ul class="chat-list">
+            <li class="chat-list-item">
+                <div class="chat-list-item-wrapper">
+                    <div class="avatar mr-3">
+                        <div class="image-wrapper">
+                            <img src="../img/chat/avatars/1.png">
+                        </div>
+                        <span class="status bg-success">
+                        </span>
+                    </div>
+                    <section class="chat-item-main">
+                        <header class="d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="chat-title">
+                                Jane Rowlis
+                            </h6>
+                            <span class="ml-auto timestamp">
+                                3 Mar
+                            </span>
+                        </header>
+                        <p class="chat-last-message">
+                            <span class="owner-indicator mr-1">
+                                You:
+                            </span>
+                                Modern admin is the responsive bootstrap 4 admin template!
+                            </p>
+                    </section>
+                </div>
+            </li>
+            <li class="chat-list-item">
+                <div class="chat-list-item-wrapper">
+                    <div class="avatar mr-3">
+                        <div class="image-wrapper">
+                            <img src="../img/chat/avatars/2.png">
+                        </div>
+                    </div>
+                    <section class="chat-item-main">
+                        <header class="d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="chat-title">
+                                Sam Fisher
+                            </h6>
+                            <span class="ml-auto timestamp">
+                                6 Mar
+                            </span>
+                        </header>
+                        <p class="chat-last-message">
+                            If it takes long you can mail m...
+                        </p>
+                    </section>
+                </div>
+            </li>
+            <li class="chat-list-item">
+                <div class="chat-list-item-wrapper">
+                    <div class="avatar mr-3">
+                        <div class="image-wrapper">
+                            <img src="../img/chat/avatars/3.png">
+                        </div>
+                    </div>
+                    <section class="chat-item-main">
+                        <header class="d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="chat-title">
+                                Jane Bredly
+                            </h6>
+                            <span class="ml-auto timestamp">
+                                10 Mar
+                            </span>
+                        </header>
+                        <p class="chat-last-message">
+                            If it takes long you can mail m...
+                        </p>
+                    </section>
+                </div>
+            </li>
+            <li class="chat-list-item">
+                <div class="chat-list-item-wrapper">
+                    <div class="avatar mr-3">
+                        <div class="image-wrapper">
+                            <img src="../img/chat/avatars/4.png">
+                        </div>
+                        <span class="status bg-success"></span>
+                    </div>
+                    <section class="chat-item-main">
+                        <header class="d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="chat-title">
+                                John Hubbard
+                            </h6>
+                            <span class="ml-auto timestamp">
+                                1 Mar
+                            </span>
+                        </header>
+                        <p class="chat-last-message">
+                            If it takes long you can mail m...
+                        </p>
+                    </section>
+                </div>
+            </li>
+            <li class="chat-list-item">
+                <div class="chat-list-item-wrapper">
+                    <div class="avatar mr-3">
+                        <div class="image-wrapper">
+                            <img src="../img/chat/avatars/5.png">
+                        </div>
+                        <span class="status bg-success"></span>
+                    </div>
+                    <section class="chat-item-main">
+                        <header class="d-flex align-items-center justify-content-between mb-1">
+                            <h6 class="chat-title">
+                                Darrell Jackson
+                            </h6>
+                            <span class="ml-auto timestamp">
+                                1 Mar
+                            </span>
+                        </header>
+                        <p class="chat-last-message">
+                            If it takes long you can mail m...
+                        </p>
+                    </section>
+                </div>
+            </li>
+        </ul>
+    </section>
+    </div>
     <div class="d-flex flex-column chat-dialog-section">
     <div class="d-lg-none chat-mobile-navigation px-0">
         <i class="la la-angle-left la-lg"></i>

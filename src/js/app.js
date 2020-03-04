@@ -923,19 +923,29 @@ function initDemoFunctions(){
 
         /// Chat Page ///
 
-        const chatMobileNav = $("chat-mobile-navigation");
-        const chatState = ["chat-state", "list-state", "info-state"];
-
-
-        chatMobileNav.on('click', () => {
-            chatMobileNav.removeClass(chatState.join(" "));
-        });
-
         const chatListItem = $(".chat-list-item");
+        const chatPage = $(".chat-page");
+        const chatMobileNav = "chat-mobile-navigation px-0";
+        const chatMobileNavInfo = "d-lg-none chat-mobile-navigation";
+        const infoIcon = "info-icon la la-ellipsis-v d-xl-none";
+        const chatStates = ["chat-state", "list-state", "info-state"];
+
+        chatPage.on("click", function (e) {
+
+            if ($(e.target).hasClass( infoIcon )) {
+                chatPage.removeClass(chatStates.join(" ")).addClass("info-state");
+            } else if ($(e.target).hasClass( chatMobileNav )) {
+                chatPage.removeClass(chatStates.join(" ")).addClass("list-state");
+            } else if ($(e.target).hasClass( chatMobileNavInfo )) {
+                chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
+            }
+        });
 
         chatListItem.on('click', function() {
             chatListItem.removeClass("active");
             $(this).addClass("active");
+
+            chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
         });
 
 
