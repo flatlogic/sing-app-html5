@@ -2786,6 +2786,17 @@ input[type=search], input.search {
   height: calc(100vh - 160px);
   position: relative;
 
+  .chat-mobile-navigation {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    color: $gray-600;
+
+    .la {
+      margin-right: .5rem;
+    }
+  }
+
   .avatar {
     @include chat-avatar(40px);
 

@@ -923,6 +923,14 @@ function initDemoFunctions(){
 
         /// Chat Page ///
 
+        const chatMobileNav = $("chat-mobile-navigation");
+        const chatState = ["chat-state", "list-state", "info-state"];
+
+
+        chatMobileNav.on('click', () => {
+            chatMobileNav.removeClass(chatState.join(" "));
+        });
+
         const chatListItem = $(".chat-list-item");
 
         chatListItem.on('click', function() {
