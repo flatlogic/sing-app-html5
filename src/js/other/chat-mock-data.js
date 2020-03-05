@@ -66,3 +66,154 @@ let users =
     }
     ];
 
+const chats = [
+    {
+        id: 1,
+        name: 'Light Blue Group',
+        users: [2,3,4,5,1,6],
+        createdBy: 3,
+        messages: [
+            {
+                id: 1,
+                userId: 6,
+                text: 'Hello, @John. Can you help me with Light Blue project? I cannot understand how it works.'
+            },
+            {
+                id: 2,
+                userId: 4,
+                text: 'Hi, @Darrell. It\'s too easy. I can explain it too you if you have some minutes.'
+            },
+            {
+                id: 3,
+                userId: 5,
+                text: '',
+                attachments: [
+                    {
+                        id: 1,
+                        type: 'image',
+                        src: awesome_image
+                    }
+                ]
+            },
+            {
+                id: 4,
+                userId: 1,
+                text: 'Guys did you see the new update of the Sing App from our competitors?',
+                timestamp: moment().subtract(2, 'm')
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: 'React Native',
+        users: [1, 4, 6],
+        createdBy: 4,
+        messages: [
+            {
+                id: 1,
+                userId: 6,
+                text: 'Hello, @John. Can you help me with Light Blue project? I cannot understand how it works.'
+            },
+            {
+                id: 2,
+                userId: 4,
+                text: 'Hi, @Darrell. It\'s too easy. I can explain it too you if you have some minutes.'
+            }
+        ]
+    },
+    {
+        id: 3,
+        name: 'Common',
+        users: [1, 4, 6],
+        createdBy: 6,
+        messages: [
+            {
+                id: 1,
+                userId: 6,
+                text: 'Hello, @John. Can you help me with Light Blue project? I cannot understand how it works.'
+            },
+            {
+                id: 2,
+                userId: 4,
+                text: 'Hi, @Darrell. It\'s too easy. I can explain it too you if you have some minutes.'
+            }
+        ]
+    },
+    {
+        id: 4,
+        users: [1, 2],
+        messages: [
+            {
+                id: 1,
+                userId: 1,
+                text: 'How can we help? We’re here for you!'
+            },
+            {
+                id: 2,
+                userId: 2,
+                text: 'Hey John, I am looking for the best admin template.\n' +
+                    'Could you help me to find it out?'
+            },
+            {
+                id: 3,
+                userId: 2,
+                text: 'It should be Bootstrap 4 compatible'
+            },
+            {
+                id: 4,
+                userId: 1,
+                text: 'Absolutely!'
+            },
+            {
+                id: 5,
+                userId: 1,
+                text: 'Modern admin is the responsive bootstrap 4 admin template!'
+            }
+        ]
+    },
+    {
+        id: 5,
+        users: [1, 3],
+        messages: [
+            {
+                id: 1,
+                userId: 3,
+                text: 'If it takes long you can mail m...'
+            }
+        ]
+    },
+    {
+        id: 6,
+        users: [1, 4],
+        messages: [
+            {
+                id: 1,
+                userId: 4,
+                text: 'If it takes long you can mail m...'
+            }
+        ]
+    },
+    {
+        id: 7,
+        users: [1, 5],
+        messages: [
+            {
+                id: 1,
+                userId: 5,
+                text: 'If it takes long you can mail m...'
+            }
+        ]
+    },
+    {
+        id: 8,
+        users: [1, 6],
+        messages: [
+            {
+                id: 1,
+                userId: 5,
+                text: 'If it takes long you can mail m...'
+            }
+        ]
+    },
+];
+

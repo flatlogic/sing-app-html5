@@ -861,7 +861,7 @@ function initDemoFunctions(){
             }, 1000)
         });
 
-        // theme switcher
+        // Theme Switcher
 
         const sidebar = $(".sidebar");
         const chat = $("#chat");
