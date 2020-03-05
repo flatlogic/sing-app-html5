@@ -20,7 +20,7 @@
     <section class="chat-section group-chats d-none d-lg-block">
         <h5>Group Chats</h5>
         <ul class="chat-list">
-            <li class="chat-list-item active">
+            <li class="chat-list-item">
                 <div class="chat-list-item-wrapper">
                     <ul class="avatars-column">
                         <li>
@@ -160,7 +160,7 @@
     <section class="chat-section personal-chats mb-0 d-none d-lg-block">
         <h5>Personal Chats</h5>
         <ul class="chat-list">
-            <li class="chat-list-item">
+            <li class="chat-list-item active" data-id="0">
                 <div class="chat-list-item-wrapper">
                     <div class="avatar mr-3">
                         <div class="image-wrapper" style="font-size: 15px;">
@@ -186,7 +186,7 @@
                     </section>
                 </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item" data-id="1">
                 <div class="chat-list-item-wrapper">
                     <div class="avatar mr-3">
                         <div class="image-wrapper" style="font-size: 15px;">
@@ -208,7 +208,7 @@
                     </section>
                 </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item" data-id="2">
                 <div class="chat-list-item-wrapper">
                     <div class="avatar mr-3">
                         <div class="image-wrapper" style="font-size: 15px;">
@@ -230,7 +230,7 @@
                     </section>
                 </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item" data-id="3">
                 <div class="chat-list-item-wrapper">
                     <div class="avatar mr-3">
                         <div class="image-wrapper" style="font-size: 15px;">
@@ -253,7 +253,7 @@
                     </section>
                 </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item" data-id="4">
                 <div class="chat-list-item-wrapper">
                     <div class="avatar mr-3">
                         <div class="image-wrapper" style="font-size: 15px;">
@@ -644,7 +644,7 @@
                   <header>
                       <h3 class="mb-3 fw-semi-bold">Jane Rowlis</h3>
                       <h5>HighPark Inc</h5>
-                      <h6>Accountant</h6>
+                      <h6>CEO & Founder</h6>
                   </header>
                   <div class="avatar ml-auto mr-3">
                       <div class="image-wrapper">
@@ -761,6 +761,7 @@
   </div>
   {{/content}}
   {{#content "scripts"}}
+      <script src="../js/other/chat-mock-data.js"></script>
       <script src="../../node_modules/switchery/dist/switchery.min.js"></script>
   {{/content}}
 {{/extend}}

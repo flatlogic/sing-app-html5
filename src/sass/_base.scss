@@ -3402,6 +3402,10 @@ input[type=search], input.search {
 
           #common-info {
             padding-left: 3rem;
+
+            .help-block {
+              margin-bottom: $spacer;
+            }
           }
         }
       }
