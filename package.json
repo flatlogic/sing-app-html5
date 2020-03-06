@@ -67,7 +67,7 @@
     "messenger": "https://github.com/HubSpot/messenger.git",
     "metrojs": "^0.9.77",
     "minimatch": "^3.0.4",
-    "moment": "^2.22.2",
+    "moment": "^2.24.0",
     "morris.js": "^0.5.0",
     "node-sass": "^4.13.1",
     "nvd3": "^1.8.6",
