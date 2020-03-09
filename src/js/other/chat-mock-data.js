@@ -63,7 +63,7 @@ const chats = [
     {
         id: 0,
         name: 'Light Blue Group',
-        users: [2,3,4,5,1,6],
+        users: [2,3,4,5,1],
         createdBy: 3,
         createdAt: moment().subtract(1, 'd').subtract(5, 'm'),
         messages: [
@@ -99,7 +99,7 @@ const chats = [
     {
         id: 1,
         name: 'React Native',
-        users: [1, 4, 6],
+        users: [1, 4, 5],
         createdBy: 4,
         createdAt: moment().subtract(1, 'd').subtract(5, 'm'),
         messages: [
@@ -118,7 +118,7 @@ const chats = [
     {
         id: 2,
         name: 'Common',
-        users: [1, 4, 6],
+        users: [1, 4, 5],
         createdBy: 6,
         createdAt: moment().subtract(1, 'd').subtract(5, 'm'),
         messages: [
@@ -222,18 +222,20 @@ function chatDialogGenerator(id) {
         'class': 'dialog-messages',
     });
 
-
     $(".chat-dialog-body").remove();
 
     dialog.forEach((item) => {
-        let chatMessage = `<div class="chat-message ${item.userId === 1 ? "owner" : null}">
+
+        let chatMessage = `<div class="chat-message ${item.userId === 1 ? "owner" : ''}">
                 <div class="avatar message-avatar">
                     <div class="image-wrapper">
                         <img src='../img/chat/avatars/${item.userId}.png'>
                     </div>
                 </div>
                 <p class="message-body">
-                    ${item.text}
+                    ${ item.attachments != undefined ?
+                    `<img src="../img/chat/awesome-meme.jpg">` :
+                    item.text}
                 </p>
                 <small class="d-block text-muted">
                     3:09 pm
@@ -246,253 +248,294 @@ function chatDialogGenerator(id) {
     $(".chat-dialog-header").after(chatDialogBody);
 }
 
-function chatInfoHeaderGenerator(id) {
-    $(".chat-info-header").remove();
-    $(".chat-section.chat-info-body").remove();
-    let el = ``;
+function chatInfoHeaderGenerator(gChatID, pChatID) {
+        $(".chat-info-header").remove();
+        $(".chat-section.chat-info-body").remove();
+        let el = ``;
 
-    if (id >= 0 && id <= 5) {
-        let name = users[id].name;
-        el = `<section class="chat-info-header chat-section bg-info">
-              <div class="d-flex mb-3">
-                  <header>
-                      <h3 class="mb-3 fw-semi-bold">${users[id].name} ${users[id].surname}</h3>
-                      <h5>HighPark Inc</h5>
-                      <h6>${users[id].jobtitle}</h6>
-                  </header>
-                  <div class="avatar ml-auto mr-3">
-                      <div class="image-wrapper">
-                          <img src="${users[id].avatar}"> 
+        if (gChatID === undefined) {
+            // personal chat
+
+            let name = users[pChatID].name;
+            let username = users[pChatID].username;
+            el = `<section class="chat-info-header chat-section bg-info">
+                  <div class="d-flex mb-3">
+                      <header>
+                          <h3 class="mb-3 fw-semi-bold">${users[pChatID].name} ${users[pChatID].surname}</h3>
+                          <h5>HighPark Inc</h5>
+                          <h6>${users[pChatID].jobtitle}</h6>
+                      </header>
+                      <div class="avatar ml-auto mr-3">
+                          <div class="image-wrapper">
+                              <img src="${users[pChatID].avatar}"> 
+                          </div>
                       </div>
                   </div>
-              </div>
-              <footer class="d-flex align-items-center justify-content-between">
-                  <a href="mailto:J_Rowlis@gmail.com" class="text-white mt-2">${users[id].username}@gmail.com</a>
-                  <ul class="social-links mt-2">
-                      <li class="social-link">
-                          <a href="https://www.facebook.com/${users[id].username}_lorem_ipsum">
-                              <i class="fa fa-facebook"></i>
-                          </a>
+                  <footer class="d-flex align-items-center justify-content-between">
+                      <a href="mailto:J_Rowlis@gmail.com" class="text-white mt-2">${username}@gmail.com</a>
+                      <ul class="social-links mt-2">
+                          <li class="social-link">
+                              <a href="https://www.facebook.com/${username}_lorem_ipsum">
+                                  <i class="fa fa-facebook"></i>
+                              </a>
+                          </li>
+                          <li class="social-link">
+                              <a href="https://twitter.com/${username}_lorem_ipsum">
+                                  <i class="fa fa-twitter"></i>
+                              </a>
+                          </li>
+                          <li class="social-link">
+                              <a href="https://www.linkedin.com/in/${username}_lorem_ipsum/">
+                                  <i class="fa fa-linkedin"></i>
+                              </a>
+                          </li>
+                      </ul>
+                  </footer>
+              </section>
+                    <section class="chat-section chat-info-body">
+                  <ul class="chat-info-list">
+                      <li class="chat-info-item">
+                          <header class="item-header" data-toggle="collapse" data-target="#common-info" role="button" aria-expanded="true">
+                              <img src="../img/chat/information.svg" class="icon">
+                              <h5 class="title">Information</h5>
+                              <i class="la la-angle-up ml-auto"></i>
+                          </header>
+                          <div id="common-info" class="item-body collapse show" role="tabpanel" style="">
+                              <div>
+                                  <p class="mb-0">${users[pChatID].tel}</p>
+                                  <span class="help-block">Mobile</span>
+                                  <p class="mb-0">@${name}</p>
+                                  <span class="help-block">${name}</span>
+                              </div>
+                          </div>
                       </li>
-                      <li class="social-link">
-                          <a href="https://twitter.com/${users[id].username}_lorem_ipsum">
-                              <i class="fa fa-twitter"></i>
-                          </a>
+                      <li class="chat-info-item">
+                          <header class="item-header">
+                              <img src="../img/chat/notifications.svg" class="icon">
+                              <h5 class="title">Notifications</h5>
+                              <label for="checkbox-ios1" class="switch ml-auto mb-0">
+                                  <input type="checkbox" id="checkbox-ios1" class="ios form-check-input">
+                                  <i></i>
+                              </label>
+                          </header>
                       </li>
-                      <li class="social-link">
-                          <a href="https://www.linkedin.com/in/${users[id].username}_lorem_ipsum/">
-                              <i class="fa fa-linkedin"></i>
-                          </a>
+                      <li class="chat-info-item">
+                          <header class="item-header collapsed" data-toggle="collapse" data-target="#images" role="button" aria-expanded="false">
+                              <img src="../img/chat/images.svg" class="icon">
+                              <h5 class="title">Images</h5>
+                              <i class="la la-angle-up ml-auto"></i>
+                          </header>
+                          <div id="images" class="item-body collapse" role="tabpanel" style="">
+                              <p class="text-muted">
+                                  <i>No images</i>
+                              </p>
+                          </div>
+                      </li>
+                      <li class="chat-info-item">
+                          <header class="item-header collapsed" data-toggle="collapse" data-target="#links" role="button">
+                              <img src="../img/chat/links.svg" class="icon">
+                              <h5 class="title">Links</h5>
+                              <i class="la la-angle-up ml-auto"></i>
+                          </header>
+                          <div id="links" class="item-body collapse" role="tabpanel">
+                              <p class="text-muted">
+                                  <i>No links</i>
+                              </p>
+                          </div>
+                      </li>
+                      <li class="chat-info-item">
+                          <header class="item-header collapsed" data-toggle="collapse" data-target="#files" role="button">
+                              <img src="../img/chat/files.svg" class="icon">
+                              <h5 class="title">Files</h5>
+                              <i class="la la-angle-up ml-auto"></i>
+                          </header>
+                          <div id="files" class="item-body collapse" role="tabpanel">
+                              <ul class="files-list">
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Diagram_0126.jpg">Diagram_0126.jpg</a>
+                                  </li>
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Diagram_0127.jpg">Diagram_0127.jpg</a>
+                                  </li>
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Diagram_0128.jpg">Diagram_0128.jpg</a>
+                                  </li>
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Dynamic_tables_result.pdf">Dynamic_tables_result.pdf</a>
+                                  </li>
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Diagram_product_management.pdf">Diagram_product_management.pdf</a>
+                                  </li>
+                              </ul>
+                          </div>
                       </li>
                   </ul>
-              </footer>
-          </section>
-                <section class="chat-section chat-info-body">
-              <ul class="chat-info-list">
-                  <li class="chat-info-item">
-                      <header class="item-header" data-toggle="collapse" data-target="#common-info" role="button" aria-expanded="true">
-                          <img src="../img/chat/information.svg" class="icon">
-                          <h5 class="title">Information</h5>
-                          <i class="la la-angle-up ml-auto"></i>
-                      </header>
-                      <div id="common-info" class="item-body collapse show" role="tabpanel" style="">
-                          <div>
-                              <p class="mb-0">${users[id].tel}</p>
-                              <span class="help-block">Mobile</span>
-                              <p class="mb-0">@${name}</p>
-                              <span class="help-block">${name}</span>
-                          </div>
-                      </div>
-                  </li>
-                  <li class="chat-info-item">
-                      <header class="item-header">
-                          <img src="../img/chat/notifications.svg" class="icon">
-                          <h5 class="title">Notifications</h5>
-                          <label for="checkbox-ios1" class="switch ml-auto mb-0">
-                              <input type="checkbox" id="checkbox-ios1" class="ios form-check-input">
-                              <i></i>
-                          </label>
-                      </header>
-                  </li>
-                  <li class="chat-info-item">
-                      <header class="item-header collapsed" data-toggle="collapse" data-target="#images" role="button" aria-expanded="false">
-                          <img src="../img/chat/images.svg" class="icon">
-                          <h5 class="title">Images</h5>
-                          <i class="la la-angle-up ml-auto"></i>
-                      </header>
-                      <div id="images" class="item-body collapse" role="tabpanel" style="">
-                          <p class="text-muted">
-                              <i>No images</i>
-                          </p>
-                      </div>
-                  </li>
-                  <li class="chat-info-item">
-                      <header class="item-header collapsed" data-toggle="collapse" data-target="#links" role="button">
-                          <img src="../img/chat/links.svg" class="icon">
-                          <h5 class="title">Links</h5>
-                          <i class="la la-angle-up ml-auto"></i>
-                      </header>
-                      <div id="links" class="item-body collapse" role="tabpanel">
-                          <p class="text-muted">
-                              <i>No links</i>
-                          </p>
-                      </div>
-                  </li>
-                  <li class="chat-info-item">
-                      <header class="item-header collapsed" data-toggle="collapse" data-target="#files" role="button">
-                          <img src="../img/chat/files.svg" class="icon">
-                          <h5 class="title">Files</h5>
-                          <i class="la la-angle-up ml-auto"></i>
-                      </header>
-                      <div id="files" class="item-body collapse" role="tabpanel">
-                          <ul class="files-list">
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Diagram_0126.jpg">Diagram_0126.jpg</a>
-                              </li>
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Diagram_0127.jpg">Diagram_0127.jpg</a>
-                              </li>
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Diagram_0128.jpg">Diagram_0128.jpg</a>
-                              </li>
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Dynamic_tables_result.pdf">Dynamic_tables_result.pdf</a>
-                              </li>
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Diagram_product_management.pdf">Diagram_product_management.pdf</a>
-                              </li>
-                          </ul>
-                      </div>
-                  </li>
-              </ul>
-          </section>`
-    } else {
-        let chat = chats[id-6];
-        let name = chat.name;
-        el = `<section class="chat-info-header chat-section bg-info">
-    <div class="d-flex align-items-center mb-3">
-        <h4 class="mb-0 fw-semi-bold">${name}</h4>
-            <ul class="avatars-row ml-auto">
-                <li>
-                    <div class="avatar">
-                        <div class="image-wrapper stroke">
-                            <img src='../img/chat/avatars/${chat.users[0]}.png'>
+              </section>`
+        } else {
+            // group chat
+
+            let chat = chats[gChatID];
+            let name = chat.name;
+
+            el = `<section class="chat-info-header chat-section bg-info">
+        <div class="d-flex align-items-center mb-3">
+            <h4 class="mb-0 fw-semi-bold">${name}</h4>
+                <ul class="avatars-row ml-auto">
+                    <li>
+                        <div class="avatar">
+                            <div class="image-wrapper stroke">
+                                <img src='../img/chat/avatars/${chat.users[0]}.png'>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="avatar">
-                        <div class="image-wrapper stroke">
-                            <img src='../img/chat/avatars/${chat.users[1]}.png'>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <div class="image-wrapper stroke">
+                                <img src='../img/chat/avatars/${chat.users[1]}.png'>
+                             </div>
                          </div>
-                     </div>
-                </li>
-                <li>
-                    <div class="avatar">
-                        <div class="image-wrapper stroke">
-                        <img src='../img/chat/avatars/${chat.users[2]}.png'>
+                    </li>
+                    <li>
+                        <div class="avatar">
+                            <div class="image-wrapper stroke">
+                            <img src='../img/chat/avatars/${chat.users[2]}.png'>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <footer class="d-flex align-items-center justify-content-between">
-            <a>
-                <h5 class="text-white mb-0">${chat.users.length} members</h5>
-            </a>
-            <button type="button" class="btn bg-white text-info fw-semi-bold">Add people</button>
-        </footer>
-    </section>
-                <section class="chat-section chat-info-body">
-              <ul class="chat-info-list">
-                  <li class="chat-info-item">
-                      <header class="item-header" data-toggle="collapse" data-target="#common-info" role="button" aria-expanded="true">
-                          <img src="../img/chat/information.svg" class="icon">
-                          <h5 class="title">Information</h5>
-                          <i class="la la-angle-up ml-auto"></i>
-                      </header>
-                      <div id="common-info" class="item-body collapse show" role="tabpanel" style="">
-                          <div>
-                              <p class="mb-0">${chat.name}</p>
-                              <span class="help-block">Name</span>
-                              <p class="mb-0">by ${users[id-6].name}</p>
-                              <span class="help-block">Created</span>
+                    </li>
+                </ul>
+            </div>
+            <footer class="d-flex align-items-center justify-content-between">
+                <a data-toggle="modal" data-target="#group-modal">
+                    <h5 class="text-white mb-0">${chat.users.length} members</h5>
+                </a>
+                <button type="button" class="btn bg-white text-info fw-semi-bold">Add people</button>
+            </footer>
+        </section>
+                    <section class="chat-section chat-info-body">
+                  <ul class="chat-info-list">
+                      <li class="chat-info-item">
+                          <header class="item-header" data-toggle="collapse" data-target="#common-info" role="button" aria-expanded="true">
+                              <img src="../img/chat/information.svg" class="icon">
+                              <h5 class="title">Information</h5>
+                              <i class="la la-angle-up ml-auto"></i>
+                          </header>
+                          <div id="common-info" class="item-body collapse show" role="tabpanel" style="">
+                              <div>
+                                  <p class="mb-0">${name}</p>
+                                  <span class="help-block">Name</span>
+                                  <p class="mb-0">by ${users[gChatID].name}</p>
+                                  <span class="help-block">Created</span>
+                              </div>
                           </div>
-                      </div>
-                  </li>
-                  <li class="chat-info-item">
-                      <header class="item-header">
-                          <img src="../img/chat/notifications.svg" class="icon">
-                          <h5 class="title">Notifications</h5>
-                          <label for="checkbox-ios1" class="switch ml-auto mb-0">
-                              <input type="checkbox" id="checkbox-ios1" class="ios form-check-input">
-                              <i></i>
-                          </label>
-                      </header>
-                  </li>
-                  <li class="chat-info-item">
-                      <header class="item-header collapsed" data-toggle="collapse" data-target="#images" role="button" aria-expanded="false">
-                          <img src="../img/chat/images.svg" class="icon">
-                          <h5 class="title">Images</h5>
-                          <i class="la la-angle-up ml-auto"></i>
-                      </header>
-                      <div id="images" class="item-body collapse" role="tabpanel" style="">
-                          <p class="text-muted">
-                              <i>No images</i>
-                          </p>
-                      </div>
-                  </li>
-                  <li class="chat-info-item">
-                      <header class="item-header collapsed" data-toggle="collapse" data-target="#links" role="button">
-                          <img src="../img/chat/links.svg" class="icon">
-                          <h5 class="title">Links</h5>
-                          <i class="la la-angle-up ml-auto"></i>
-                      </header>
-                      <div id="links" class="item-body collapse" role="tabpanel">
-                          <p class="text-muted">
-                              <i>No links</i>
-                          </p>
-                      </div>
-                  </li>
-                  <li class="chat-info-item">
-                      <header class="item-header collapsed" data-toggle="collapse" data-target="#files" role="button">
-                          <img src="../img/chat/files.svg" class="icon">
-                          <h5 class="title">Files</h5>
-                          <i class="la la-angle-up ml-auto"></i>
-                      </header>
-                      <div id="files" class="item-body collapse" role="tabpanel">
-                          <ul class="files-list">
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Diagram_0126.jpg">Diagram_0126.jpg</a>
-                              </li>
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Diagram_0127.jpg">Diagram_0127.jpg</a>
-                              </li>
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Diagram_0128.jpg">Diagram_0128.jpg</a>
-                              </li>
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Dynamic_tables_result.pdf">Dynamic_tables_result.pdf</a>
-                              </li>
-                              <li class="file-item">
-                                  <img src="../img/chat/download.svg" class="download-icon">
-                                  <a href="Diagram_product_management.pdf">Diagram_product_management.pdf</a>
-                              </li>
-                          </ul>
-                      </div>
-                  </li>
-              </ul>
-          </section>`
+                      </li>
+                      <li class="chat-info-item">
+                          <header class="item-header">
+                              <img src="../img/chat/notifications.svg" class="icon">
+                              <h5 class="title">Notifications</h5>
+                              <label for="checkbox-ios1" class="switch ml-auto mb-0">
+                                  <input type="checkbox" id="checkbox-ios1" class="ios form-check-input">
+                                  <i></i>
+                              </label>
+                          </header>
+                      </li>
+                      <li class="chat-info-item">
+                          <header class="item-header collapsed" data-toggle="collapse" data-target="#images" role="button" aria-expanded="false">
+                              <img src="../img/chat/images.svg" class="icon">
+                              <h5 class="title">Images</h5>
+                              <i class="la la-angle-up ml-auto"></i>
+                          </header>
+                          <div id="images" class="item-body collapse" role="tabpanel" style="">
+                              <p class="text-muted">
+                                  <i>No images</i>
+                              </p>
+                          </div>
+                      </li>
+                      <li class="chat-info-item">
+                          <header class="item-header collapsed" data-toggle="collapse" data-target="#links" role="button">
+                              <img src="../img/chat/links.svg" class="icon">
+                              <h5 class="title">Links</h5>
+                              <i class="la la-angle-up ml-auto"></i>
+                          </header>
+                          <div id="links" class="item-body collapse" role="tabpanel">
+                              <p class="text-muted">
+                                  <i>No links</i>
+                              </p>
+                          </div>
+                      </li>
+                      <li class="chat-info-item">
+                          <header class="item-header collapsed" data-toggle="collapse" data-target="#files" role="button">
+                              <img src="../img/chat/files.svg" class="icon">
+                              <h5 class="title">Files</h5>
+                              <i class="la la-angle-up ml-auto"></i>
+                          </header>
+                          <div id="files" class="item-body collapse" role="tabpanel">
+                              <ul class="files-list">
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Diagram_0126.jpg">Diagram_0126.jpg</a>
+                                  </li>
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Diagram_0127.jpg">Diagram_0127.jpg</a>
+                                  </li>
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Diagram_0128.jpg">Diagram_0128.jpg</a>
+                                  </li>
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Dynamic_tables_result.pdf">Dynamic_tables_result.pdf</a>
+                                  </li>
+                                  <li class="file-item">
+                                      <img src="../img/chat/download.svg" class="download-icon">
+                                      <a href="Diagram_product_management.pdf">Diagram_product_management.pdf</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </li>
+                  </ul>
+              </section>`
+        }
+
+        $(".chat-info-section .d-lg-none.chat-mobile-navigation").after(el);
     }
 
-    $(".chat-info-section .d-lg-none.chat-mobile-navigation").after(el);
-}
+function modalGenerator(usersList, chatID) {
+
+        if (chatID <= 3) {
+            let groupList = $('<ul>', {
+                'class': 'group-list'
+            });
+
+            $(".group-list-header h5").text(`${usersList.length} members`)
+
+            $(".modal-content .group-list").remove();
+
+            usersList.forEach( item => {
+                let user = `<li>
+                  <div class="avatar mr-2">
+                      <div class="image-wrapper">
+                          <img src="../img/chat/avatars/${item}.png">
+                      </div>
+                  </div>
+                  <div>
+                      <p class="mb-0">${users[item-1].name} ${users[item-1].surname}</p>
+                      <small>
+                          <p class="text-muted mb-0">
+                              <span>Last seen today at 11:22 AM</span>
+                          </p>
+                      </small>
+                  </div>
+              </li>`
+                groupList.append(user);
+            })
+
+            $(".group-list-modal.chat-section").append(groupList);
+        } else return;
+
+    }

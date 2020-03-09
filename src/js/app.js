@@ -938,22 +938,62 @@ function initDemoFunctions(){
                 chatPage.removeClass(chatStates.join(" ")).addClass("list-state");
             } else if ($(e.target).hasClass( chatMobileNavInfo )) {
                 chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
+            } else if ($(e.target).hasClass("la la-times la-lg")) {
+                $('#group-modal').modal('hide');
             }
         });
 
-
         chatListItem.on('click', function(e) {
-            const id =  $(this).data("id");
-
+            const chatID = $(this).data("chatid");
+            const gChatID = $(this).data("gchat");
+            const pChatID = $(this).data("pchat");
             chatListItem.removeClass("active");
             $(this).addClass("active");
-
             chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
 
-            chatDialogGenerator(id);
-            chatInfoHeaderGenerator(id);
+
+            chatDialogGenerator(chatID);
+            chatInfoHeaderGenerator(gChatID, pChatID);
+            modalGenerator(chats[chatID].users, chatID);
         });
 
+        $(".new-message-btn").on("click", (e) => {
+
+            e.preventDefault();
+            let inputText = $(".new-message input");
+            let newMessage = `<div class="chat-message owner">
+                                <div class="avatar message-avatar">
+                                    <div class="image-wrapper">
+                                        <img src="../img/chat/avatars/5.png">
+                                    </div>
+                                </div>
+                                <p class="message-body">
+                                    ${inputText.val()}
+                                </p>
+                                <small class="d-block text-muted">
+                                    ${moment().format('h:mm a')}
+                                </small>
+                            </div>`;
+            let dialogMessage = $(".dialog-messages");
+            let spinner = `<div class="data-loader">
+                            <i class="la la-spinner la-spin"></i>
+                           </div>`;
+            let span = `<span>Send</span>`;
+
+            if (inputText.val() != '') {
+                $(".new-message-btn span").remove();
+                $(".new-message-btn").append(spinner);
+
+                setTimeout( (cd) => {
+                    dialogMessage.last().append(newMessage);
+                    inputText.val('');
+                    $(".new-message-btn div").remove();
+                    $(".new-message-btn").append(span);
+
+                    $(".chat-dialog-body").animate({ scrollTop: 999 }, 500);
+                }, 1500);
+            }
+        })
         /// End Chat Page ///
 
         setTimeout(function(){
