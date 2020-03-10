@@ -2778,7 +2778,7 @@ input[type=search], input.search {
   }
 }
 
-//Char page
+//Chat page
 
 .chat-page.list-state {
 
@@ -2904,8 +2904,8 @@ input[type=search], input.search {
     overflow-y: auto;
 
     @include media-breakpoint-down(md){
-      left: 0;
-      top: 0;
+      left: 20vw;
+      top: 20vh;
     }
 
     .modal-content {
@@ -2952,6 +2952,10 @@ input[type=search], input.search {
             align-items: center;
             border-radius: .5rem;
             padding: .5rem;
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }
@@ -3501,6 +3505,9 @@ input[type=search], input.search {
             .la {
               transition: all .2s ease-in-out;
               font-size: 1.25rem;
+            }
+            .la-angle-up.down {
+              transform: rotate(-180deg);
             }
 
             .switch {

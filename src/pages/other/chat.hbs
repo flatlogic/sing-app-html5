@@ -281,7 +281,7 @@
     <section class="chat-section all-chats mb-0 d-lg-none">
         <h5>Group Chats</h5>
         <ul class="chat-list mb-3">
-            <li class="chat-list-item active" data-gChat="0" data-chatID="0">
+            <li class="chat-list-item" data-gChat="0" data-chatID="0">
                 <div class="chat-list-item-wrapper">
                     <ul class="avatars-column">
                         <li>
@@ -417,7 +417,7 @@
         </ul>
         <h5>Personal Chats</h5>
         <ul class="chat-list">
-            <li class="chat-list-item" data-pChat="0" data-chatID="3">
+            <li class="chat-list-item active" data-pChat="0" data-chatID="3">
                 <div class="chat-list-item-wrapper">
                     <div class="avatar mr-3">
                         <div class="image-wrapper">
@@ -679,7 +679,7 @@
                       <header class="item-header" data-toggle="collapse" data-target="#common-info" role="button">
                           <img src="../img/chat/information.svg" class="icon">
                           <h5 class="title">Information</h5>
-                          <i class="la la-angle-up ml-auto"></i>
+                          <i class="la la-angle-up ml-auto down"></i>
                       </header>
                       <div id="common-info" class="item-body collapse show" role="tabpanel">
                           <div>
@@ -695,7 +695,7 @@
                           <img src="../img/chat/notifications.svg" class="icon">
                           <h5 class="title">Notifications</h5>
                           <label for="checkbox-ios1" class="switch ml-auto mb-0">
-                              <input type="checkbox" id="checkbox-ios1" class="ios form-check-input">
+                              <input type="checkbox" id="checkbox-ios1" class="ios form-check-input" checked>
                               <i></i>
                           </label>
                       </header>
@@ -829,7 +829,7 @@
   {{/content}}
   {{#content "scripts"}}
       <script src="../../node_modules/moment/moment.js"></script>
-      <script src="../js/other/chat-mock-data.js"></script>
       <script src="../../node_modules/switchery/dist/switchery.min.js"></script>
+      <script src="../js/other/chat-mock-data.js"></script>
   {{/content}}
 {{/extend}}

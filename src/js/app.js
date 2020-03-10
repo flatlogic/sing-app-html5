@@ -928,10 +928,10 @@ function initDemoFunctions(){
         const chatMobileNav = "chat-mobile-navigation px-0";
         const chatMobileNavInfo = "d-lg-none chat-mobile-navigation";
         const infoIcon = "info-icon la la-ellipsis-v d-xl-none";
+        const newMessageButton =  $(".new-message-btn");
         const chatStates = ["chat-state", "list-state", "info-state"];
 
         chatPage.on("click", function (e) {
-
             if ($(e.target).hasClass( infoIcon )) {
                 chatPage.removeClass(chatStates.join(" ")).addClass("info-state");
             } else if ($(e.target).hasClass( chatMobileNav )) {
@@ -940,6 +940,8 @@ function initDemoFunctions(){
                 chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
             } else if ($(e.target).hasClass("la la-times la-lg")) {
                 $('#group-modal').modal('hide');
+            } else if ($(e.target).hasClass("title")) {
+                $(e.target).next().toggleClass("down");
             }
         });
 
@@ -957,7 +959,7 @@ function initDemoFunctions(){
             modalGenerator(chats[chatID].users, chatID);
         });
 
-        $(".new-message-btn").on("click", (e) => {
+        newMessageButton.on("click", (e) => {
 
             e.preventDefault();
             let inputText = $(".new-message input");
@@ -994,6 +996,7 @@ function initDemoFunctions(){
                 }, 1500);
             }
         })
+
         /// End Chat Page ///
 
         setTimeout(function(){
