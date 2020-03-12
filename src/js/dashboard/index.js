@@ -8,66 +8,66 @@ $(function () {
     class DonutChart {
         constructor(data) {
             this.$chartContainer = $('#flot-donut');
-            this.chart = this.createChart(data);
+            // this.chart = this.createChart(data);
         }
 
-        createChart(data) {
-            return $.plot(this.$chartContainer, data, {
-                series: {
-                    pie: {
-                        innerRadius: 0.6,
-                        show: true,
-                        fill: 1,
-                        stroke: {
-                            width: 0
-                        }
-                    }
-                },
-                colors: [
-                    Sing.colors['brand-warning'],
-                    Sing.colors['brand-danger'],
-                    Sing.colors['brand-info']
-                ],
-                legend: {
-                    noColumns: 1,
-                    container: $('#flot-donut-legend'),
-                    labelBoxBorderColor: Sing.colors['white']
-                }
-            });
-        }
+        // createChart(data) {
+        //     return $.plot(this.$chartContainer, data, {
+        //         series: {
+        //             pie: {
+        //                 innerRadius: 0.6,
+        //                 show: true,
+        //                 fill: 1,
+        //                 stroke: {
+        //                     width: 0
+        //                 }
+        //             }
+        //         },
+        //         colors: [
+        //             Sing.colors['brand-warning'],
+        //             Sing.colors['brand-danger'],
+        //             Sing.colors['brand-info']
+        //         ],
+        //         legend: {
+        //             noColumns: 1,
+        //             container: $('#flot-donut-legend'),
+        //             labelBoxBorderColor: Sing.colors['white']
+        //         }
+        //     });
+        // }
     }
 
-    class LineChart {
-        constructor(color, containerId) {
-            this.$container = $(containerId);
-            this.chart = this.createChart(color);
-        }
-
-        createChart(color) {
-            const randomData = [];
-
-            for (let i = 0; i < 40; i++) {
-                randomData.push((i/9+Math.sin(i/6)*8+Math.random() * 2).toFixed(2));
-            }
-
-            return this.$container.sparkline(randomData, {
-                type: 'line',
-                lineWidth: 1.67,
-                lineColor: Sing.colors[color],
-                normalRangeMin: '10px',
-                width: '160px',
-                height: '20px',
-                fillColor: false,
-                spotColor: false,
-                minSpotColor: false,
-                maxSpotColor: false,
-                highlightSpotColor: false,
-                highlightLineColor: false,
-                drawNormalOnTop: false,
-                tooltipClassname: 'line-chart-tooltip'
-            });
-        }
-    }
+    // class LineChart {
+    //     constructor(color, containerId) {
+    //         this.$container = $(containerId);
+    //         this.chart = this.createChart(color);
+    //     }
+    //
+    //     // createChart(color) {
+    //     //     const randomData = [];
+    //     //
+    //     //     for (let i = 0; i < 40; i++) {
+    //     //         randomData.push((i/9+Math.sin(i/6)*8+Math.random() * 2).toFixed(2));
+    //     //     }
+    //     //
+    //     //     return this.$container.sparkline(randomData, {
+    //     //         type: 'line',
+    //     //         lineWidth: 1.67,
+    //     //         lineColor: Sing.colors[color],
+    //     //         normalRangeMin: '10px',
+    //     //         width: '160px',
+    //     //         height: '20px',
+    //     //         fillColor: false,
+    //     //         spotColor: false,
+    //     //         minSpotColor: false,
+    //     //         maxSpotColor: false,
+    //     //         highlightSpotColor: false,
+    //     //         highlightLineColor: false,
+    //     //         drawNormalOnTop: false,
+    //     //         tooltipClassname: 'line-chart-tooltip'
+    //     //     });
+    //     // }
+    // }
 
     class MainChart {
         constructor(data, container, tooltipContainer, legendContainer) {
@@ -222,13 +222,13 @@ $(function () {
         }
     }
 
-    function createCharts() {
-        new DonutChart(getPieChartData());
-        new LineChart('brand-danger', '#sparkline');
-        new LineChart('brand-primary', '#sparkline-1');
-        new LineChart('brand-info', '#sparkline-2');
-        new MainChart(getMainChartData(), $("#main-chart"), $('#main-chart-tooltip'), $('#main-chart-legend'));
-    }
+    // function createCharts() {
+    //     new DonutChart(getPieChartData());
+    //     // new LineChart('brand-danger', '#sparkline');
+    //     new LineChart('brand-primary', '#sparkline-1');
+    //     new LineChart('brand-info', '#sparkline-2');
+    //     new MainChart(getMainChartData(), $("#main-chart"), $('#main-chart-tooltip'), $('#main-chart-legend'));
+    // }
 
     function resizeCharts() {
         if (!debouncedTimeout) {
@@ -277,18 +277,18 @@ $(function () {
             ]
         ];
         var $calendar = $('#events-calendar');
-        $calendar.calendar({
-            months: monthNames,
-            days: dayNames,
-            events: events,
-            popover_options: {
-                placement: 'top',
-                html: true
-            }
-        });
+        // $calendar.calendar({
+        //     months: monthNames,
+        //     days: dayNames,
+        //     events: events,
+        //     popover_options: {
+        //         placement: 'top',
+        //         html: true
+        //     }
+        // });
 
-        $calendar.find('.icon-arrow-left').addClass('fa fa-angle-left ml-xs');
-        $calendar.find('.icon-arrow-right').addClass('fa fa-angle-right mr-xs');
+        // $calendar.find('.icon-arrow-left').addClass('fa fa-angle-left ml-xs');
+        // $calendar.find('.icon-arrow-right').addClass('fa fa-angle-right mr-xs');
 
         function restyleCalendar() {
             $calendar.find('.event').each(function () {
@@ -306,7 +306,7 @@ $(function () {
     function initTasks() {
         const $tasksContainer = $('.task-container');
         const $tasksStat = $('.tasks-stat')[0];
-        changeTasksStat();
+        // changeTasksStat();
 
         $('.task').on('change', function () {
             const $task = $(this);
@@ -317,18 +317,18 @@ $(function () {
             changeTasksStat();
         });
 
-        function changeTasksStat() {
-            const numberOfCompleted = $tasksContainer.children('.checked').length;
-
-            $tasksStat.innerHTML = `${numberOfCompleted} of 11 completed`;
-        }
+        // function changeTasksStat() {
+        //     const numberOfCompleted = $tasksContainer.children('.checked').length;
+        //
+        //     $tasksStat.innerHTML = `${numberOfCompleted} of 11 completed`;
+        // }
     }
 
     function pageLoad() {
         $('.widget').widgster();
-        $('.selectpicker').selectpicker();
+        //$('.selectpicker').selectpicker();
 
-        createCharts();
+        // createCharts();
         initCalendar();
         initTasks();
     }
@@ -426,26 +426,6 @@ function getMainChartData() {
 
     return [d1, d2, d3];
 }
-
-let myIntro = introJs();
-myIntro.setOptions({
-    skipLabel: "<button class='btn btn-outline-secondary btn-xs'>Stop</button>",
-    doneLabel: "<button class='btn btn-outline-secondary btn-xs'>Done</button>",
-    nextLabel: "<button class='btn btn-success btn-xs'>Next</button>",
-    prevLabel: "<button class='btn btn-outline-secondary btn-xs'>Back</button>",
-    tooltipPosition: "auto",
-    hidePrev: true,
-    hideNext: true,
-    overlayOpacity: 0,
-    showBullets: false
-});
-
-
-setTimeout(() => {
-
-    myIntro.start();
-
-}, 3000);
 
 
 
