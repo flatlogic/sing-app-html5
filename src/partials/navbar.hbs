@@ -59,13 +59,8 @@
                             href="#"
                             role="button"
                             class="dropdown-toggle dropdown-toggle-notifications nav-link"
-                            id="notifications-dropdown-toggle"
-                            data-toggle="dropdown"
                             aria-haspopup="true"
                             aria-expanded="false"
-                            data-position="bottom-middle-aligned"
-                            data-disable-interaction="false"
-                            data-step='2' data-intro='Admin can check out his messages and tasks easily&nbsp;😃'
                     >
                         <span class="thumb-sm avatar float-left">
                             <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="..." >
@@ -79,151 +74,13 @@
                     <div
                             class="dropdown-menu dropdown-menu-right animated fadeInUp py-0"
                             aria-labelledby="notifications-dropdown-toggle"
-                            id="notifications-dropdown-menu"
                     >
-                        <section class="card notifications">
-                            <header class="card-header">
-                                <div class="text-center mb-sm">
-                                    <strong>You have 13 notifications</strong>
-                                </div>
-                                <div class="btn-group btn-group-sm btn-group-toggle" id="notifications-toggle" data-toggle="buttons">
-                                    <label class="btn btn-default active">
-                                        <!-- ajax-load plugin in action. setting data-ajax-load & data-ajax-target is the
-                                             only requirement for async reloading -->
-                                        <input type="radio" checked
-                                               data-ajax-trigger="change"
-                                               data-ajax-load="../demo/ajax/notifications.html"
-                                               data-ajax-target="#notifications-list"> Notifications
-                                    </label>
-                                    <label class="btn btn-default">
-                                        <input type="radio"
-                                               data-ajax-trigger="change"
-                                               data-ajax-load="../demo/ajax/messages.html"
-                                               data-ajax-target="#notifications-list"> Messages
-                                    </label>
-                                    <label class="btn btn-default">
-                                        <input type="radio"
-                                               data-ajax-trigger="change"
-                                               data-ajax-load="../demo/ajax/progress.html"
-                                               data-ajax-target="#notifications-list"> Progress
-                                    </label>
-                                </div>
-                            </header>
-                            <!-- notification list with .thin-scroll which styles scrollbar for webkit -->
-                            <div id="notifications-list" class="list-group thin-scroll">
-                                <div class="list-group-item">
-                                <span class="thumb-sm float-left mr clearfix">
-                                    <img class="rounded-circle" src="../demo/img/people/a3.jpg" alt="...">
-                                </span>
-                                    <p class="no-margin overflow-hidden">
-                                        1 new user just signed up! Check out
-                                        <a href="#">Monica Smith</a>'s account.
-                                        <time class="help-block no-margin">
-                                            2 mins ago
-                                        </time>
-                                    </p>
-                                </div>
-                                <a class="list-group-item" href="#">
-                                <span class="thumb-sm float-left mr">
-                                    <i class="glyphicon glyphicon-upload fa-lg"></i>
-                                </span>
-                                    <p class="text-ellipsis no-margin">
-                                        2.1.0-pre-alpha just released. </p>
-                                    <time class="help-block no-margin">
-                                        5h ago
-                                    </time>
-                                </a>
-                                <a class="list-group-item" href="#">
-                                <span class="thumb-sm float-left mr">
-                                    <i class="fa fa-bolt fa-lg"></i>
-                                </span>
-                                    <p class="text-ellipsis no-margin">
-                                        Server load limited. </p>
-                                    <time class="help-block no-margin">
-                                        7h ago
-                                    </time>
-                                </a>
-                                <div class="list-group-item">
-                                <span class="thumb-sm float-left mr clearfix">
-                                    <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
-                                </span>
-                                    <p class="no-margin overflow-hidden">
-                                        User <a href="#">Jeff</a> registered
-                                        &nbsp;&nbsp;
-                                        <button class="btn btn-xs btn-success">Allow</button>
-                                        <button class="btn btn-xs btn-danger">Deny</button>
-                                        <time class="help-block no-margin">
-                                            12:18 AM
-                                        </time>
-                                    </p>
-                                </div>
-                                <div class="list-group-item">
-                                    <span class="thumb-sm float-left mr">
-                                        <i class="fa fa-shield fa-lg"></i>
-                                    </span>
-                                    <p class="no-margin overflow-hidden">
-                                        Instructions for changing your Envato Account password. Please
-                                        check your account <a href="#">security page</a>.
-                                        <time class="help-block no-margin">
-                                            12:18 AM
-                                        </time>
-                                    </p>
-                                </div>
-                                <a class="list-group-item" href="#">
-                                <span class="thumb-sm float-left mr">
-                                    <span class="square bg-primary square-lg">
-                                        <i class="fa fa-facebook text-white"></i>
-                                    </span>
-                                </span>
-                                    <p class="text-ellipsis no-margin">
-                                        New <strong>76</strong> facebook likes received.</p>
-                                    <time class="help-block no-margin">
-                                        15 Apr 2014
-                                    </time>
-                                </a>
-                                <a class="list-group-item" href="#">
-                                <span class="thumb-sm float-left mr">
-                                    <span class="circle circle-lg bg-gray-dark">
-                                        <i class="fa fa-circle-o text-white"></i>
-                                    </span>
-                                </span>
-                                    <p class="text-ellipsis no-margin">
-                                        Dark matter detected.</p>
-                                    <time class="help-block no-margin">
-                                        15 Apr 2014
-                                    </time>
-                                </a>
-                            </div>
-                            <footer class="card-footer text-sm">
-                                <!-- ajax-load button. loads demo/ajax/notifications.php to #notifications-list
-                                     when clicked -->
-                                <button class="btn-label btn-link float-right"
-                                        id="load-notifications-btn"
-                                        data-ajax-load="../demo/ajax/notifications.php"
-                                        data-ajax-target="#notifications-list"
-                                        data-loading-text="<i class='la la-refresh fa-spin mr-xs'></i> Loading...">
-                                    <i class="la la-refresh"></i>
-                                </button>
-                                <span class="card-footer-text">Synced at: 21 Apr 2014 18:36</span>
-                            </footer>
-                        </section>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link" data-toggle="chat-sidebar">
                         <i class="la la-globe"></i>
                     </a>
-                    <div id="chat-notification" class="chat-notification hide">
-                        <div class="chat-notification-inner">
-                            <h6 class="title">
-                                <span class="thumb-xs">
-                                    <img src="../demo/img/people/a6.jpg" class="rounded-circle mr-xs float-left">
-                                </span>
-                                Jess Smith
-                            </h6>
-                            <p class="text">Hey! What's up?</p>
-                        </div>
-                    </div>
                 </li>
             </ul>
         </div>

@@ -95,11 +95,6 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
-animate.css@^3.7.0:
-  version "3.7.2"
-  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.2.tgz#e73e0d50e92cb1cfef1597d9b38a9481020e08ea"
-  integrity sha512-0bE8zYo7C0KvgOYrSVfrzkbYk6IOTVPNqkiHg2cbyF4Pq/PXzilz4BRWA3hwEUBoMp5VBgrC29lQIZyhRWdBTw==
-
 ansi-colors@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
@@ -324,11 +319,6 @@ async-settle@^1.0.0:
   dependencies:
     async-done "^1.2.2"
 
-async@~0.2.6:
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/async/-/async-0.2.10.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
-  integrity sha1-trvgsGdLnXGXCMo43owjfLUmw9E=
-
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -336,16 +326,6 @@ asynckit@^0.4.0:
 atob@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
-
-autosize@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/autosize/-/autosize-4.0.2.tgz#073cfd07c8bf45da4b9fd153437f5bafbba1e4c9"
-  integrity sha512-jnSyH2d+qdfPGpWlcuhGiHmqBJ6g3X+8T+iRwFrHPLVcdoGJE/x6Qicm6aDHfTsbgZKxyV8UU/YB2p4cjKDRRA==
-
-awesome-bootstrap-checkbox@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/awesome-bootstrap-checkbox/-/awesome-bootstrap-checkbox-1.0.1.tgz#dab10146b6001129ab0a0ec1e54bb77c6c30457a"
-  integrity sha1-2rEBRrYAESmrCg7B5Uu3fGwwRXo=
 
 aws-sign2@~0.7.0:
   version "0.7.0"
@@ -369,46 +349,6 @@ bach@^1.0.0:
     async-done "^1.2.2"
     async-settle "^1.0.0"
     now-and-later "^2.0.0"
-
-backbone.paginator@^2.0.5, backbone.paginator@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/backbone.paginator/-/backbone.paginator-2.0.8.tgz#3a7e34f0a8b97b096333587ed3048556b9eafdcb"
-  integrity sha512-8XS2CTbjnwMbJ/3Traa1te2RPecOGbZ9tc52T89pzo6NXlVEJDFnC++dp7CQLBUZpgk3g0veX8mUbEF4wbD2NQ==
-  dependencies:
-    backbone "1.1.2 || 1.2.3 || ^1.3.2"
-    underscore "^1.8.0"
-
-"backbone@1.1.2 || 1.2.3 || ^1.3.2", backbone@^1.3.3:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/backbone/-/backbone-1.4.0.tgz#54db4de9df7c3811c3f032f34749a4cd27f3bd12"
-  integrity sha512-RLmDrRXkVdouTg38jcgHhyQ/2zjg7a8E6sz2zxfz21Hh17xDJYUHBZimVIt5fUyS8vbfpeSmTL3gUjTEvUV3qQ==
-  dependencies:
-    underscore ">=1.8.3"
-
-"backbone@1.1.2 || 1.2.3 || ~1.3.2":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/backbone/-/backbone-1.3.3.tgz#4cc80ea7cb1631ac474889ce40f2f8bc683b2999"
-  integrity sha1-TMgOp8sWMaxHSInOQPL4vGg7KZk=
-  dependencies:
-    underscore ">=1.8.3"
-
-backgrid-paginator@^0.3.9:
-  version "0.3.9"
-  resolved "https://registry.yarnpkg.com/backgrid-paginator/-/backgrid-paginator-0.3.9.tgz#daf661146c137665a0a8dea27cdad1f238269378"
-  integrity sha1-2vZhFGwTdmWgqN6ifNrR8jgmk3g=
-  dependencies:
-    backbone "1.1.2 || 1.2.3 || ~1.3.2"
-    backbone.paginator "^2.0.5"
-    backgrid "~0.3.7"
-    underscore "^1.8.0"
-
-backgrid@^0.3.8, backgrid@~0.3.7:
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/backgrid/-/backgrid-0.3.8.tgz#7d26816742d72c859cad39b13f19c9f27baffed7"
-  integrity sha1-fSaBZ0LXLIWcrTmxPxnJ8nuv/tc=
-  dependencies:
-    backbone "1.1.2 || 1.2.3 || ~1.3.2"
-    underscore "^1.8.0"
 
 balanced-match@^1.0.0:
   version "1.0.0"
@@ -450,62 +390,10 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-"bootstrap-application-wizard@https://github.com/amoffat/bootstrap-application-wizard.git":
-  version "0.0.0"
-  resolved "https://github.com/amoffat/bootstrap-application-wizard.git#91c9ba33efa3929be46b68616a128da4470f552e"
-
-bootstrap-colorpicker@^2.3.0:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/bootstrap-colorpicker/-/bootstrap-colorpicker-2.5.3.tgz#b50aff8590fbaa6b5aa63a5624e4213f1659a49d"
-  integrity sha512-xdllX8LSMvKULs3b8JrgRXTvyvjkSMHHHVuHjjN5FNMqr6kRe5NPiMHFmeAFjlgDF73MspikudLuEwR28LbzLw==
-  dependencies:
-    jquery ">=1.10"
-
-bootstrap-markdown@^2.10.0:
-  version "2.10.0"
-  resolved "https://registry.yarnpkg.com/bootstrap-markdown/-/bootstrap-markdown-2.10.0.tgz#65234277840454ee1adc7482b2f4a5e3975dace5"
-  integrity sha1-ZSNCd4QEVO4a3HSCsvSl45ddrOU=
-
-bootstrap-select@^1.13.12:
-  version "1.13.12"
-  resolved "https://registry.yarnpkg.com/bootstrap-select/-/bootstrap-select-1.13.12.tgz#81b9f1394cb8d7151aea16fb9030c112330dbf98"
-  integrity sha512-epsPt6WpgmL9Q9Y22JFntajdhhqvCwV/JKiBZF3YFvMHK9YzzDPQft/Cjqvsgq0bhF32BlvG03Qs3qA/pVRAqQ==
-
-bootstrap-slider@10.2.1:
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/bootstrap-slider/-/bootstrap-slider-10.2.1.tgz#c07d7a7d817ba794ac69b56ae1280974e39b63ff"
-  integrity sha512-sajEjunOzQyUqzFPTfXIiCMWaNzktFPze0DdHHYE07aXzNFHNjp+iB5r1DmK6PaRuSEUXnmr2siS9x1Fx8R+Tg==
-
-bootstrap-wizard@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/bootstrap-wizard/-/bootstrap-wizard-1.4.2.tgz#89611d6dd13aebd92f7424684d120f23c7a56d17"
-  integrity sha512-1W05bYvDOuD3xyliFZaLRasu2mIB+AekDDfbzu4hCNb24vWQZ8g/1rjbEypzsgI7eml/yjIZah3uEjg5opI6Jw==
-
-"bootstrap-wysihtml5@https://github.com/jhollingworth/bootstrap-wysihtml5.git":
-  version "0.0.0"
-  resolved "https://github.com/jhollingworth/bootstrap-wysihtml5.git#1b2506a98f481afd511ddee7803c9495108e0e0d"
-
-bootstrap3-wysihtml5-npm@^0.3.3-npm.12:
-  version "0.3.3-npm.12"
-  resolved "https://registry.yarnpkg.com/bootstrap3-wysihtml5-npm/-/bootstrap3-wysihtml5-npm-0.3.3-npm.12.tgz#e4d86a10960ca83610a55ec94e9e38a7142c5991"
-  integrity sha1-5NhqEJYMqDYQpV7JTp44pxQsWZE=
-  dependencies:
-    handlebars "^1.3.0"
-    wysihtml "^0.6.0-beta1"
-
-bootstrap@^3.3:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.4.1.tgz#c3a347d419e289ad11f4033e3c4132b87c081d72"
-  integrity sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==
-
 bootstrap@^4.3.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.4.1.tgz#8582960eea0c5cd2bede84d8b0baf3789c3e8b01"
   integrity sha512-tbx5cHubwE6e2ZG7nqM3g/FZ5PQEDMWmMGNrCUBVRPHXTJaH7CBDdsLeu3eCh3B1tzAxTnAbtmrzvWEvT2NNEA==
-
-"bootstrap_calendar@git://github.com/xero/bootstrap_calendar#v1.0.1":
-  version "0.0.0"
-  resolved "git://github.com/xero/bootstrap_calendar#796c6621ce7e50865be72871f87e6c732906d6fa"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -736,11 +624,6 @@ component-emitter@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
 
-components-jqueryui@^1.12.1:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/components-jqueryui/-/components-jqueryui-1.12.1.tgz#617076f128f3be4c265f3e2db50471ef96cd9cee"
-  integrity sha1-YXB28SjzvkwmXz4ttQRx75bNnO4=
-
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -831,13 +714,6 @@ dashdash@^1.12.0:
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
-
-datatables@^1.10.18:
-  version "1.10.18"
-  resolved "https://registry.yarnpkg.com/datatables/-/datatables-1.10.18.tgz#fee16e82aa70b17c5faf1a6954ac68f404f33a70"
-  integrity sha512-ntatMgS9NN6UMpwbmO+QkYJuKlVeMA2Mi0Gu/QxyIh+dW7ZjLSDhPT2tWlzjpIWEkDYgieDzS9Nu7bdQCW0sbQ==
-  dependencies:
-    jquery ">=1.7"
 
 debug-fabulous@1.X:
   version "1.1.0"
@@ -975,16 +851,6 @@ end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   integrity sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
   dependencies:
     once "^1.4.0"
-
-eonasdan-bootstrap-datetimepicker@^4.17.47:
-  version "4.17.47"
-  resolved "https://registry.yarnpkg.com/eonasdan-bootstrap-datetimepicker/-/eonasdan-bootstrap-datetimepicker-4.17.47.tgz#7a49970044065276e7965efd16f822735219e735"
-  integrity sha1-ekmXAEQGUnbnll79Fvgic1IZ5zU=
-  dependencies:
-    bootstrap "^3.3"
-    jquery "^1.8.3 || ^2.0 || ^3.0"
-    moment "^2.10"
-    moment-timezone "^0.4.0"
 
 error-ex@^1.2.0:
   version "1.3.2"
@@ -1385,7 +1251,7 @@ glob-watcher@^5.0.3:
     just-debounce "^1.0.0"
     object.defaults "^1.1.0"
 
-glob@^7.0.0, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.6, glob@~7.1.1:
+glob@^7.0.0, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@~7.1.1:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
   integrity sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==
@@ -1579,16 +1445,7 @@ handlebars-wax@^6.1.0:
     object-assign "^4.1.1"
     require-glob "^3.2.0"
 
-handlebars@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-1.3.0.tgz#9e9b130a93e389491322d975cf3ec1818c37ce34"
-  integrity sha1-npsTCpPjiUkTItl1zz7BgYw3zjQ=
-  dependencies:
-    optimist "~0.3"
-  optionalDependencies:
-    uglify-js "~2.3"
-
-handlebars@^4.1.0, handlebars@^4.7.2:
+handlebars@^4.1.0:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.2.tgz#01127b3840156a0927058779482031afe0e730d7"
   integrity sha512-4PwqDL2laXtTWZghzzCtunQUTLbo31pcCJrd/B/9JP8XbhVzpS5ZXuKqlOzsd1rtcaLo4KqAn8nl8mkknS4MHw==
@@ -1931,31 +1788,6 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jasny-bootstrap@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/jasny-bootstrap/-/jasny-bootstrap-3.1.3.tgz#b072a681d50c649762c9543c7a6093d9baa2f87b"
-  integrity sha1-sHKmgdUMZJdiyVQ8emCT2bqi+Hs=
-
-jquery-autosize@^1.18.18:
-  version "1.18.18"
-  resolved "https://registry.yarnpkg.com/jquery-autosize/-/jquery-autosize-1.18.18.tgz#28fcdfd671cbf3ee661ca484c19ee7aaa65e825a"
-  integrity sha1-KPzf1nHL8+5mHKSEwZ7nqqZeglo=
-
-jquery-bootstrap-wizard@^1.4.2:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/jquery-bootstrap-wizard/-/jquery-bootstrap-wizard-1.4.2.tgz#97ebe75b8c642fb969e2e639d1f8af7ec14ec371"
-  integrity sha512-LgcibYMDGsgupa/Ze6X/M/GeZbOv/vAp+tCAvga7Vs6Ifw7yl8esIgHtCEA4qOSxq2HvH7/Q6pf9Sws3dsIZ8A==
-
-jquery-nestable@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/jquery-nestable/-/jquery-nestable-0.8.0.tgz#c29d791ca7662837e11dcb50ef7dda28f1731b77"
-  integrity sha1-wp15HKdmKDfhHctQ733aKPFzG3c=
-
-jquery-pjax@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/jquery-pjax/-/jquery-pjax-2.0.1.tgz#6b3a1ba16e644e624bdcfe72eb6b3d96a846f5f2"
-  integrity sha1-azoboW5kTmJL3P5y62s9lqhG9fI=
-
 jquery-slimscroll@^1.3.8:
   version "1.3.8"
   resolved "https://registry.yarnpkg.com/jquery-slimscroll/-/jquery-slimscroll-1.3.8.tgz#8481c44e7a47687653908a28f7f70aed64c84e36"
@@ -1963,22 +1795,12 @@ jquery-slimscroll@^1.3.8:
   dependencies:
     jquery ">= 1.7"
 
-jquery-ui-touch-punch@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/jquery-ui-touch-punch/-/jquery-ui-touch-punch-0.2.3.tgz#eed82242733ba243f46b3e87c1841b308191da68"
-  integrity sha1-7tgiQnM7okP0az6HwYQbMIGR2mg=
-
-jquery-ui@^1.12.1:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
-  integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
-
 jquery@2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
   integrity sha1-IoveaYoMYUMdwmMKahVPFYkNIxc=
 
-"jquery@>= 1.7", jquery@>=1.10, jquery@>=1.7, jquery@>=1.8.0, "jquery@^1.8.3 || ^2.0 || ^3.0":
+"jquery@>= 1.7":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
@@ -2135,11 +1957,6 @@ lru-queue@0.1:
   dependencies:
     es5-ext "~0.10.2"
 
-magnific-popup@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/magnific-popup/-/magnific-popup-1.1.0.tgz#3e7362c5bd18f6785fe99e59d013e20af33d3049"
-  integrity sha1-PnNixb0Y9nhf6Z5Z0BPiCvM9MEk=
-
 make-iterator@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/make-iterator/-/make-iterator-1.0.1.tgz#29b33f312aa8f547c4a5e490f56afcec99133ad6"
@@ -2159,13 +1976,6 @@ map-visit@^1.0.0:
   resolved "https://registry.yarnpkg.com/map-visit/-/map-visit-1.0.0.tgz#ecdca8f13144e660f1b5bd41f12f3479d98dfb8f"
   dependencies:
     object-visit "^1.0.0"
-
-markdown@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/markdown/-/markdown-0.5.0.tgz#28205b565a8ae7592de207463d6637dc182722b2"
-  integrity sha1-KCBbVlqK51kt4gdGPWY33BgnIrI=
-  dependencies:
-    nopt "~2.1.1"
 
 matchdep@^2.0.0:
   version "2.0.0"
@@ -2210,10 +2020,6 @@ merge2@^1.2.3, merge2@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.3.0.tgz#5b366ee83b2f1582c48f87e47cf1a9352103ca81"
   integrity sha512-2j4DAdlBOkiSZIsaXk4mTE3sRS02yBHAtfy127xRV3bQUFqXkjHCHLW6Scv7DwNRbIWNHH8zpnz9zMaKXIdvYw==
-
-"messenger@https://github.com/HubSpot/messenger.git":
-  version "1.5.0"
-  resolved "https://github.com/HubSpot/messenger.git#b1b176185276464f45bf6be3d28c4064a82198c7"
 
 micromatch@^3.0.4, micromatch@^3.1.10, micromatch@^3.1.4:
   version "3.1.10"
@@ -2284,18 +2090,6 @@ mixin-deep@^1.2.0:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
-
-moment-timezone@^0.4.0:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.4.1.tgz#81f598c3ad5e22cdad796b67ecd8d88d0f5baa06"
-  integrity sha1-gfWYw61eIs2teWtn7NjYjQ9bqgY=
-  dependencies:
-    moment ">= 2.6.0"
-
-"moment@>= 2.6.0", moment@^2.10:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 ms@2.0.0:
   version "2.0.0"
@@ -2385,13 +2179,6 @@ node-sass@^4.13.1, node-sass@^4.8.3:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
   integrity sha1-xkZdvwirzU2zWTF/eaxopkayj/k=
-  dependencies:
-    abbrev "1"
-
-nopt@~2.1.1:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/nopt/-/nopt-2.1.2.tgz#6cccd977b80132a07731d6e8ce58c2c8303cf9af"
-  integrity sha1-bMzZd7gBMqB3MdbozljCyDA8+a8=
   dependencies:
     abbrev "1"
 
@@ -2516,13 +2303,6 @@ optimist@^0.6.1:
     minimist "~0.0.1"
     wordwrap "~0.0.2"
 
-optimist@~0.3, optimist@~0.3.5:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/optimist/-/optimist-0.3.7.tgz#c90941ad59e4273328923074d2cf2e7cbc6ec0d9"
-  integrity sha1-yQlBrVnkJzMokjB00s8ufLxuwNk=
-  dependencies:
-    wordwrap "~0.0.2"
-
 ordered-read-streams@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ordered-read-streams/-/ordered-read-streams-1.0.1.tgz#77c0cb37c41525d64166d990ffad7ec6a0e1363e"
@@ -2560,10 +2340,6 @@ p-map@^3.0.0:
   dependencies:
     aggregate-error "^3.0.0"
 
-"pace@git+https://github.com/HubSpot/pace.git#v0.7.1":
-  version "0.7.1"
-  resolved "git+https://github.com/HubSpot/pace.git#6ecca7c3f3343cc9d05d50a0010c909c2bad06b1"
-
 parent-module@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-0.1.0.tgz#b5292863a1e8c476ecf857e7d75c98920b24b8a6"
@@ -2587,13 +2363,6 @@ parse-json@^2.2.0:
 parse-passwd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/parse-passwd/-/parse-passwd-1.0.0.tgz#6d5b934a456993b23d37f40a382d6f1666a8e5c6"
-
-parsleyjs@^2.8.1:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/parsleyjs/-/parsleyjs-2.9.2.tgz#67c96961d371821f2623965fa2cc81a4522874cb"
-  integrity sha512-DKS2XXTjEUZ1BJWUzgXAr+550kFBZrom2WYweubqdV7WzdNC1hjOajZDfeBPoAZMkXumJPlB3v37IKatbiW8zQ==
-  dependencies:
-    jquery ">=1.8.0"
 
 pascalcase@^0.1.1:
   version "0.1.1"
@@ -2682,11 +2451,6 @@ plugin-error@^1.0.1:
     arr-diff "^4.0.0"
     arr-union "^3.1.0"
     extend-shallow "^3.0.2"
-
-popper.js@^1.14.3:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
-  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
@@ -3118,13 +2882,6 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
 
-source-map@~0.1.7:
-  version "0.1.43"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
-  integrity sha1-wkvBRspRfBRx9drL4lcbK3+eM0Y=
-  dependencies:
-    amdefine ">=0.0.4"
-
 sparkles@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/sparkles/-/sparkles-1.0.1.tgz#008db65edce6c50eec0c5e228e1945061dd0437c"
@@ -3421,23 +3178,9 @@ uglify-js@^3.1.4:
     commander "~2.17.1"
     source-map "~0.6.1"
 
-uglify-js@~2.3:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-2.3.6.tgz#fa0984770b428b7a9b2a8058f46355d14fef211a"
-  integrity sha1-+gmEdwtCi3qbKoBY9GNV0U/vIRo=
-  dependencies:
-    async "~0.2.6"
-    optimist "~0.3.5"
-    source-map "~0.1.7"
-
 unc-path-regex@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
-
-underscore@>=1.8.3, underscore@^1.8.0:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.9.2.tgz#0c8d6f536d6f378a5af264a72f7bec50feb7cf2f"
-  integrity sha512-D39qtimx0c1fI3ya1Lnhk3E9nONswSKhnffBI0gME9C99fYOkNi04xs8K6pePLhvl1frbDemkaBQ5ikWllR2HQ==
 
 undertaker-registry@^1.0.0:
   version "1.0.1"
@@ -3606,11 +3349,6 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
-widgster@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/widgster/-/widgster-1.0.0.tgz#75aceb4e67cf46dfc4fd7e56c639922354ffcd72"
-  integrity sha1-dazrTmfPRt/E/X5WxjmSI1T/zXI=
-
 wordwrap@~0.0.2:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
@@ -3626,11 +3364,6 @@ wrap-ansi@^2.0.0:
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
-
-wysihtml@^0.6.0-beta1:
-  version "0.6.0-beta1"
-  resolved "https://registry.yarnpkg.com/wysihtml/-/wysihtml-0.6.0-beta1.tgz#8ffa073bb5a2f22d8d307f7496205ba32dd15b44"
-  integrity sha1-j/oHO7Wi8i2NMH90liBboy3RW0Q=
 
 xtend@~4.0.0:
   version "4.0.2"
