@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.7.1]
+
+### Updated
+
+- Updated seed version
+- Updated documentation
+
 ## [4.7.0]
 
 ### Fixed
