@@ -232,11 +232,9 @@ function chatDialogGenerator(id) {
                         <img src='../img/chat/avatars/${item.userId}.png'>
                     </div>
                 </div>
-                <p class="message-body">
                     ${ item.attachments != undefined ?
-                    `<img src="../img/chat/awesome-meme.jpg">` :
-                    item.text}
-                </p>
+                    `<p><img src=${item.attachments[0].src}></p>` :
+                    `<p class="message-body">${item.text}</p>`}
                 <small class="d-block text-muted">
                     3:09 pm
                 </small>

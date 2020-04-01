@@ -126,10 +126,8 @@
 .page-controls {
   position: absolute;
   z-index: 1;
-  //background: $navbar-bg;
   box-shadow: $navbar-shadow;
   height: $navbar-height;
-  box-shadow: 4px 4px 30px 0px rgba(75,102,171,0.2);
 
 
   @include media-breakpoint-down(sm) {
@@ -2826,6 +2824,9 @@ input[type=search], input.search {
     left: 0;
     z-index: 1;
     transition: left .3s ease-in-out, opacity .2s ease-in-out;
+    @include media-breakpoint-down(sm){
+      padding: 0;
+    }
   }
   .chat-info-section {
     opacity: 1;
@@ -2903,9 +2904,9 @@ input[type=search], input.search {
     overflow: auto;
     overflow-y: auto;
 
-    @include media-breakpoint-down(md){
-      left: 20vw;
-      top: 20vh;
+    @include media-breakpoint-down(sm){
+      left: 2vw;
+      right: 2vh;
     }
 
     .modal-content {
@@ -2916,7 +2917,7 @@ input[type=search], input.search {
       .group-list-modal {
         overflow-y: auto;
         max-height: 450px;
-        width: 300px;
+        width: 100%;
         color: $gray-800;
 
         .group-list-header {
@@ -3002,17 +3003,18 @@ input[type=search], input.search {
 
       &::-webkit-scrollbar {
         width: 0;
-        background: transparent;
+        background: rgba(0,0,0,.1);
+
       }
 
       &::-webkit-scrollbar-thumb {
         border: none;
         border-radius: .5rem;
-        background-color: transparent;
+        background: rgba(0,0,0,.1);
       }
 
       &::-webkit-scrollbar-track {
-        background: transparent;
+        background: rgba(0,0,0,.1);
       }
     }
 
@@ -3223,7 +3225,7 @@ input[type=search], input.search {
       &:hover {
         &::-webkit-scrollbar-thumb {
           border: none;
-          background-color: $gray-600;
+          background-color: $gray-200;
         }
       }
       .dialog-divider {
