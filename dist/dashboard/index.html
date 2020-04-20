@@ -49,7 +49,7 @@
     <!-- need this .js class to initiate slimscroll -->
     <div class="js-sidebar-content">
         <header class="logo d-none d-md-block">
-            <a href="https://demo.flatlogic.com/sing-app/"><span class="text-warning">sing</span> app</a>
+            <a href="https://demo.flatlogic.com/sing-app/"><span>sing</span> app</a>
         </header>
         <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
              looks good, so adding it and enhancing with notifications -->
@@ -86,6 +86,15 @@
                 </ul>
             </li>
             <li class="">
+                <a href="../other/chat.html">
+                    <span class="icon">
+                      <i class="fi flaticon-users"></i>
+                    </span>
+                    Chat
+                    <sup class="headerLabel text-info">awesome</sup>
+                </a>
+            </li>
+            <li class="">
                 <a href="../other/package.html">
                     <span class="icon">
                       <i class="fi flaticon-database-1"></i>
@@ -107,7 +116,7 @@
                         <i class="fi flaticon-paper-plane"></i>
                     </span>
                     Email
-                    <span class="badge bg-warning">
+                    <span class="badge badge-primary">
                         9
                     </span>
                 </a>
@@ -150,7 +159,7 @@
                         <i class="fi flaticon-layers"></i>
                     </span>
                     UI Elements
-                    <sup class="text-warning fw-semi-bold">
+                    <sup class="text-success fw-semi-bold">
                         new
                     </sup>
                     <i class="toggle fa fa-angle-down"></i>
@@ -173,7 +182,7 @@
                     <li class=""><a href="../components/ui_progress.html">Progress</a></li>
                     <li class=""><a href="../components/ui_tabs_accordion.html">Tabs & Accordion</a></li>
                     <li class=""><a href="../components/ui_toasts.html">Toasts
-                        <sup class="text-warning fw-semi-bold">
+                        <sup class="text-success fw-semi-bold">
                             new
                         </sup></a></li>
                 </ul>
@@ -311,19 +320,19 @@
             <li>
                 <a href="#">
                     <!-- yep, .circle again -->
-                    <i class="fa fa-circle text-warning mr-xs"></i>
+                    <i class="fa fa-circle text-danger mr-xs"></i>
                     <span class="label-name">My Recent</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-circle text-gray mr-xs"></i>
+                    <i class="fa fa-circle text-primary mr-xs"></i>
                     <span class="label-name">Starred</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-circle text-danger mr-xs"></i>
+                    <i class="fa fa-circle mr-xs"></i>
                     <span class="label-name">Background</span>
                 </a>
             </li>
@@ -335,7 +344,7 @@
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="fw-normal">Sales Report</span> <br>
                 <div class="progress progress-xs mt-2">
-                    <div class="progress-bar progress-bar-gray-light" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 16%" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <small>Calculating x-axis bias... 65%</small>
             </div>
@@ -343,13 +352,14 @@
                 <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
                 <span class="fw-normal">Personal Responsibility</span> <br>
                 <div class="progress progress-xs mt-2">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 23%" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <small>Provide required notes</small>
             </div>
         </div>
     </div>
-</nav>    <!-- This is the white navigation bar seen on the top. A bit enhanced BS navbar. See .page-controls in _base.scss. -->
+</nav>
+    <!-- This is the white navigation bar seen on the top. A bit enhanced BS navbar. See .page-controls in _base.scss. -->
     <nav class="page-controls navbar navbar-dashboard">
        
         <div class="container-fluid">
@@ -359,34 +369,33 @@
                     <li class="nav-item">
                         <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
                         <a class="d-none d-lg-block nav-link" id="nav-state-toggle" href="#">
-                            <i class="la la-bars"></i>
+                            <i class="la la-bars" data-step='1' data-intro='You can adjust sidebar, or leave it closed 🙂'></i>
                         </a>
                         <!-- shown on xs & sm screen. collapses and expands navigation -->
+    
                         <a class="d-lg-none nav-link" id="nav-collapse-toggle" href="#">
-                            <span class="square square-lg bg-gray text-white d-md-none"><i class="la la-bars"></i></span>
+                            <span class="square square-lg d-md-none"><i class="la la-bars"></i></span>
                             <i class="la la-bars d-none d-md-block"></i>
                         </a>
                     </li>
-                    <li class="nav-item d-none d-md-block"><a href="#" class="nav-link"><i class="la la-refresh"></i></a></li>
-                    <li class="nav-item ml-n-xs d-none d-md-block"><a href="#" class="nav-link"><i class="la la-times"></i></a></li>
+                    <li class="nav-item d-none d-md-block ml-3"><a href="#" class="nav-link"><i class="la la-refresh"></i></a></li>
+                    <li class="nav-item ml-n-xs d-none d-md-block ml-3"><a href="#" class="nav-link"><i class="la la-times"></i></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right d-md-none">
                     <li class="nav-item">
                         <!-- toggles chat -->
                         <a class="nav-link" href="#" data-toggle="chat-sidebar">
-                            <span class="square square-lg bg-gray text-white"><i class="la la-globe"></i></span>
+                            <span class="square square-lg"><i class="la la-globe"></i></span>
                         </a>
                     </li>
                 </ul>
                 <!-- xs & sm screen logo -->
                 <a class="navbar-brand d-md-none" href="../dashboard/index.html">
-                    <i class="fa fa-circle text-gray mr-n-sm"></i>
-                    <i class="fa fa-circle text-warning"></i>
+                    <i class="fa fa-circle text-primary"></i>
                     &nbsp;
                     sing
                     &nbsp;
-                    <i class="fa fa-circle text-warning mr-n-sm"></i>
-                    <i class="fa fa-circle text-gray"></i>
+                    <i class="fa fa-circle text-danger"></i>
                 </a>
             </div>
     
@@ -395,8 +404,8 @@
                 <!-- search form! link it to your search server -->
                 <form class="navbar-form" role="search">
                     <div class="form-group">
-                        <div class="input-group input-group-no-border">
-                            <input class="form-control" type="text" placeholder="Search Dashboard">
+                        <div class="input-group input-group-no-border ml-4">
+                            <input class="form-control" id="main-search" type="text" placeholder="Search Dashboard">
                             <span class="input-group-append">
                                 <span class="input-group-text">
                                     <i class="la la-search"></i>
@@ -415,13 +424,16 @@
                                 data-toggle="dropdown"
                                 aria-haspopup="true"
                                 aria-expanded="false"
+                                data-position="bottom-middle-aligned"
+                                data-disable-interaction="false"
+                                data-step='2' data-intro='Admin can check out his messages and tasks easily&nbsp;😃'
                         >
                             <span class="thumb-sm avatar float-left">
-                                <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="...">
+                                <img class="rounded-circle" src="../demo/img/people/a5.jpg" alt="..." >
                             </span>
                             &nbsp;
                             Philip <strong>Smith</strong>&nbsp;
-                            <span class="circle bg-warning fw-bold text-white">
+                            <span class="circle bg-primary fw-bold text-white">
                                 15
                             </span>
                         </a>
@@ -558,9 +570,9 @@
                             </section>
                         </div>
                     </li>
-                    <li class="dropdown nav-item">
+                    <li class="dropdown nav-item" >
                         <a href="#" class="dropdown-toggle no-caret nav-link" data-toggle="dropdown">
-                            <i class="la la-cog"></i>
+                            <i class="la la-cog" data-step='3' data-intro='Clickable cog can provide you with link to important pages 😄'></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a class="dropdown-item" href="../other/profile.html"><i class="glyphicon glyphicon-user"></i> &nbsp; My Account</a></li>
@@ -832,32 +844,70 @@
     </div>    <div class="theme-helper">
         <section class="widget theme-helper-content">
             <header class="theme-helper-header d-flex p-0">
-                <div class="theme-helper-toggler">
-                    <div class="theme-helper-spinner bg-warning text-white">
+                <div class="theme-helper-toggler hidden-print" data-step='4' data-position="left" data-intro="It's a theme customizer sidebar, go inside it! 😃️">
+                    <div class="theme-helper-spinner bg-primary text-white">
                         <i class="la la-cog"></i>
                         <i class="la la-cog fs-smaller"></i>
                     </div>
                 </div>
-                <h6>Configuration</h6>
+                <h5>Configuration</h5>
             </header>
             <div class="widget-body mt-3">
-                <a href="#" class="theme-preview active" id="css-light">
-                    <img src="../demo/img/theme-light.png" alt="Light Theme" class="img-thumbnail">
-                </a>
-                <a href="#" class="theme-preview" id="css-dark">
-                    <img src="../demo/img/theme-dark.png" alt="Dark Theme" class="img-thumbnail">
-                </a>
+                <h6>Navbar Type</h6>
+                <div class="form-group row justify-content-around">
+                    <div class="abc-radio">
+                        <input type="radio" checked name="navbar-type" id="navbar_static" value="static">
+                        <label for="navbar_static">Static</label>
+                    </div>
+                    <div class="abc-radio">
+                        <input type="radio" name="navbar-type" id="navbar_floating" value="floating">
+                        <label for="navbar_floating">Floating</label>
+                    </div>
+                </div>
+                <h6>Navbar Color</h6>
+                <ul class="colors-list">
+                    <li class="color-box-nav-bar" style="background-color: rgb(0, 43, 73);" data-style="first"></li>
+                    <li class="color-box-nav-bar active" style="background-color: rgb(255, 255, 255);" data-style="second"></li>
+                    <li class="color-box-nav-bar" style="background-color: rgb(0, 68, 114);" data-style="third"></li>
+                    <li class="color-box-nav-bar" style="background-color: rgb(233, 235, 239);" data-style="fourth"></li>
+                    <li class="color-box-nav-bar" style="background-color: rgb(209, 231, 245);" data-style="fifth"></li>
+                    <li class="color-box-nav-bar" style="background-color: rgb(204, 221, 233);" data-style="sixth"></li>
+                    <li class="color-box-nav-bar" style="background-color: rgb(214, 223, 230);" data-style="seventh"></li>
+                    <li class="color-box-nav-bar" style="background-color: rgb(19, 25, 29);" data-style="eighth"></li>
+                    <li class="color-box-nav-bar" style="background-color: rgb(32, 174, 140);" data-style="ninth"></li>
+                </ul>
+                <h6>Sidebar Type</h6>
+                <div class="form-group row justify-content-around">
+                    <div class="abc-radio"><input type="radio" checked name="sidebar-type" id="sidebar_transparent" value="transparent">
+                    <label for="sidebar_transparent">Transparent</label>
+                    </div>
+                    <div class="abc-radio"><input type="radio" name="sidebar-type" id="sidebar_solid" value="solid" checked>
+                    <label for="sidebar_solid">Solid</label>
+                </div>
+                </div>
+                <h6>Sidebar Color</h6>
+                <ul class="colors-list">
+                    <li class="color-box-side-bar active" style="background-color: rgb(0, 43, 73);" data-style="first"></li>
+                    <li class="color-box-side-bar" style="background-color: rgb(255, 255, 255);" data-style="second"></li>
+                    <li class="color-box-side-bar" style="background-color: rgb(0, 68, 114);" data-style="third"></li>
+                    <li class="color-box-side-bar" style="background-color: rgb(233, 235, 239);" data-style="fourth"></li>
+                    <li class="color-box-side-bar" style="background-color: rgb(209, 231, 245);" data-style="fifth"></li>
+                    <li class="color-box-side-bar" style="background-color: rgb(204, 221, 233);" data-style="sixth"></li>
+                    <li class="color-box-side-bar" style="background-color: rgb(214, 223, 230);" data-style="seventh"></li>
+                    <li class="color-box-side-bar" style="background-color: rgb(19, 25, 29);" data-style="eighth"></li>
+                    <li class="color-box-side-bar" style="background-color: rgb(32, 174, 140);" data-style="ninth"></li>
+                </ul>
                 <div class="mt-4">
                     <a href="https://flatlogic.com/admin-dashboards/sing-app-html5"
                        target="_blank"
                        role="button"
-                       class="btn btn-warning btn-rounded-f btn-block fs-mini text-white">
+                       class="btn btn-info btn-rounded-f btn-block fs-mini text-white">
                         Purchase
                     </a>
                     <a href="http://demo.flatlogic.com/sing-app/documentation/"
                        target="_blank"
                        role="button"
-                       class="btn btn-secondary btn-rounded-f btn-block fs-mini">
+                       class="btn btn-primary btn-rounded-f btn-block fs-mini">
                         Documentation
                     </a>
                 </div>
@@ -900,6 +950,10 @@
         <!-- main page content. the place to put widgets in. usually consists of .row > .col-lg-* > .widget.  -->
         <main id="content" class="content" role="main">
             <!-- Page content -->
+<ol class="breadcrumb">
+            <li class="breadcrumb-item">YOU ARE HERE</li>
+            <li class="breadcrumb-item active">Analytics</li>
+        </ol>
 <h1 class="page-title">
     Analytics
     <small>
@@ -913,7 +967,7 @@
                 <div class="pb-xlg h-100">
                     <section class="widget mb-0 h-100">
                         <header>
-                            <h4>Visits Today</h4>
+                            <h5>Visits Today</h5>
                             <div class="widget-controls">
                                 <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
                             </div>
@@ -921,7 +975,7 @@
                         <div class="widget-body">
                             <div class="d-flex justify-content-between align-items-center mb-lg">
                                 <h2 data-toggle="tooltip" data-placement="right" title="+20% vs Yesterday">4,332</h2>
-                                <i class="la la-arrow-right text-success rotate-315"></i>
+                                <i class="la la-lg la-arrow-right text-primary rotate-315"></i>
                             </div>
                             <div class="d-flex flex-wrap justify-content-between">
                                 <div class="mt visit-element" data-toggle="tooltip" data-placement="top"
@@ -948,7 +1002,7 @@
                 <div class="pb-xlg h-100">
                     <section class="widget mb-0 h-100">
                         <header>
-                            <h4>Revenue Breakdown</h4>
+                            <h5>Revenue Breakdown</h5>
                             <div class="widget-controls">
                                 <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
                             </div>
@@ -968,7 +1022,7 @@
                 <div class="pb-xlg h-100">
                     <section class="widget mb-0 h-100">
                         <header>
-                            <h4>App Performance</h4>
+                            <h5>App Performance</h5>
                             <div class="widget-controls">
                                 <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
                             </div>
@@ -977,31 +1031,31 @@
                             <p class="text-muted d-flex flex-wrap">
                                 <small class="mr-lg d-flex align-items-center" data-toggle="tooltip"
                                     data-placement="top" title="Year 2019">
-                                    <span class="circle bg-success text-success mr-xs" style="font-size: 4px;">.</span>
+                                    <span class="circle bg-danger text-danger mr-xs" style="font-size: 4px;">.</span>
                                     This Period
                                 </small>
                                 <small class="mr-lg d-flex align-items-center" data-toggle="tooltip"
                                     data-placement="top" title="Year 2019">
-                                    <span class="circle bg-warning text-warning mr-xs" style="font-size: 4px;">.</span>
+                                    <span class="circle bg-primary text-primary mr-xs" style="font-size: 4px;">.</span>
                                     Last Period
                                 </small>
                             </p>
                             <h6>SDK</h6>
-                            <div class="progress progress-xs mb-sm">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%;"
+                            <div class="progress progress-xs mb-xs">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 60%;"
                                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div class="progress progress-xs">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 30%;"
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 30%;"
                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <h6 class="mt-sm">Integration</h6>
-                            <div class="progress progress-xs mb-sm">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 40%;"
+                            <div class="progress progress-xs mb-xs">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 40%;"
                                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div class="progress progress-xs">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 55%;"
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 55%;"
                                     aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
@@ -1012,30 +1066,31 @@
                 <div class="pb-xlg h-100">
                     <section class="widget mb-0 h-100">
                         <header>
-                            <h4>Server Overview</h4>
+                            <h5>Server Overview</h5>
                             <div class="widget-controls">
                                 <a data-widgster="close" title="Close" href="#"><i class="la la-remove"></i></a>
                             </div>
                         </header>
+
                         <div class="widget-body">
-                            <div class="d-flex justify-content-between flex-wrap mb-sm">
+                            <div class="d-flex align-items-center mb-sm">
                                 <p class="width-150" data-toggle="tooltip" data-placement="top"
                                     title="+23% vs last period"><small>60% / 37°С / 3.3 Ghz</small></p>
-                                <div class="sparkline-wrapper">
+                                <div class="sparkline-wrapper" style="width: calc(100% - 150px);">
                                     <div id="sparkline"></div>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-between flex-wrap mb-sm">
+                            <div class="d-flex align-items-center mb-sm">
                                 <p class="width-150" data-toggle="tooltip" data-placement="top"
                                     title="+30% vs last period"><small>54% / 31°С / 3.3 Ghz</small></p>
-                                <div class="sparkline-wrapper">
+                                <div class="sparkline-wrapper" style="width: calc(100% - 150px);">
                                     <div id="sparkline-1"></div>
                                 </div>
                             </div>
-                            <div class="d-none justify-content-between flex-wrap">
+                            <div class="d-flex align-items-center mb-sm">
                                 <p class="width-150" data-toggle="tooltip" data-placement="top"
                                     title="+21% vs last period"><small>57% / 21°С / 3.3 Ghz</small></p>
-                                <div class="sparkline-wrapper">
+                                <div class="sparkline-wrapper" style="width: calc(100% - 150px);">
                                     <div id="sparkline-2"></div>
                                 </div>
                             </div>
@@ -1070,7 +1125,7 @@
                                 <span class="circle bg-primary mr-sm" style="font-size: 6px;"></span>
                                 Statistic <span class="fw-normal ml-xs">Light Blue</span>
                             </h4>
-                            <select class="selectpicker" data-style="btn-gray" data-width="auto" tabindex="-1"
+                            <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1"
                                 id="simple-select">
                                 <option class="dropdown-item" value="1">Weekly</option>
                                 <option class="dropdown-item" value="2">Daily</option>
@@ -1083,14 +1138,14 @@
                                 <div class="w-50 border-right p-3 px-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>+830</h6>
-                                        <i class="la la-arrow-right text-success rotate-315"></i>
+                                        <i class="la la-arrow-right la-lg text-primary rotate-315"></i>
                                     </div>
                                     <p class="text-muted mb-0 mr"><small>Registrations</small></p>
                                 </div>
                                 <div class="w-50 p-3 px-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>4.5%</h6>
-                                        <i class="la la-arrow-right text-danger rotate-45"></i>
+                                        <i class="la la-arrow-right la-lg text-danger rotate-45"></i>
                                     </div>
                                     <p class="text-muted mb-0 mr"><small>Bounce Rate</small></p>
                                 </div>
@@ -1104,10 +1159,10 @@
                     <section class="widget mb-0 h-100">
                         <header class="d-flex justify-content-between flex-wrap">
                             <h4 class="d-flex align-items-center pb-1 big-stat-title">
-                                <span class="circle bg-warning mr-sm" style="font-size: 6px;"></span>
+                                <span class="circle bg-danger mr-sm" style="font-size: 6px;"></span>
                                 Statistic <span class="fw-normal ml-xs">Sing App</span>
                             </h4>
-                            <select class="selectpicker" data-style="btn-gray" data-width="auto" tabindex="-1"
+                            <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1"
                                 id="simple-select">
                                 <option class="dropdown-item" value="1">Weekly</option>
                                 <option class="dropdown-item" value="2">Daily</option>
@@ -1120,14 +1175,14 @@
                                 <div class="w-50 border-right p-3 px-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>+30</h6>
-                                        <i class="la la-arrow-right text-success rotate-315"></i>
+                                        <i class="la la-arrow-right la-lg text-primary rotate-315"></i>
                                     </div>
                                     <p class="text-muted mb-0 mr"><small>Registrations</small></p>
                                 </div>
                                 <div class="w-50 p-3 px-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>2.5%</h6>
-                                        <i class="la la-arrow-right text-success rotate-315"></i>
+                                        <i class="la la-arrow-right la-lg text-primary rotate-315"></i>
                                     </div>
                                     <p class="text-muted mb-0 mr"><small>Bounce Rate</small></p>
                                 </div>
@@ -1144,7 +1199,7 @@
                                 <span class="circle bg-info mr-sm" style="font-size: 6px;"></span>
                                 Statistic <span class="fw-normal ml-xs">RNS</span>
                             </h4>
-                            <select class="selectpicker" data-style="btn-gray" data-width="auto" tabindex="-1"
+                            <select class="selectpicker" data-style="btn-default" data-width="auto" tabindex="-1"
                                 id="simple-select">
                                 <option class="dropdown-item" value="1">Weekly</option>
                                 <option class="dropdown-item" value="2">Daily</option>
@@ -1157,14 +1212,14 @@
                                 <div class="w-50 border-right p-3 px-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>+230</h6>
-                                        <i class="la la-arrow-right text-success rotate-315"></i>
+                                        <i class="la la-arrow-right la-lg text-primary rotate-315"></i>
                                     </div>
                                     <p class="text-muted mb-0 mr"><small>Registrations</small></p>
                                 </div>
                                 <div class="w-50 p-3 px-4">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h6>21.5%</h6>
-                                        <i class="la la-arrow-right text-danger rotate-45"></i>
+                                        <i class="la la-arrow-right la-lg text-danger rotate-45"></i>
                                     </div>
                                     <p class="text-muted mb-0 mr"><small>Bounce Rate</small></p>
                                 </div>
@@ -1263,7 +1318,7 @@
                 <section class="widget pb-2 mb-xlg">
                     <header>
                         <h4>Today's Tasks <span
-                                class="badge badge-pill badge-success fw-normal pull-right mt-xs">11</span></h4>
+                                class="badge badge-pill badge-primary fw-normal pull-right mt-xs">11</span></h4>
                         <p class="text-primary mb-0"><small class="tasks-stat"></small></p>
                     </header>
                     <div class="widget-body task-container">
@@ -1320,27 +1375,27 @@
                 <section class="widget">
                     <header>
                         <h4>Notifications <span
-                                class="badge badge-pill badge-success fw-normal pull-right mt-xs">6</span></h4>
+                                class="badge badge-pill badge-primary fw-normal pull-right mt-xs">6</span></h4>
                     </header>
                     <div class="widget-body w-100 notifications">
                         <div class="d-flex align-items-start">
-                            <i class="la la-thumbs-up mr text-primary"></i>
+                            <i class="la la-thumbs-up mr text-info"></i>
                             <p>Ken <span class="fw-semi-bold">accepts</span> your invitation</p>
                         </div>
                         <div class="d-flex w-100">
-                            <i class="la la-file mr text-success"></i>
+                            <i class="la la-file mr text-info"></i>
                             <p>Report from LT Company</p>
                         </div>
                         <div class="d-flex w-100">
-                            <i class="la la-envelope mr text-danger"></i>
+                            <i class="la la-envelope mr text-info"></i>
                             <p>4 <span class="fw-semi-bold">Private</span> Mails</p>
                         </div>
                         <div class="d-flex w-100">
-                            <i class="la la-comment mr text-success"></i>
+                            <i class="la la-comment mr text-info"></i>
                             <p>3 <span class="fw-semi-bold">Comments</span> to your Post</p>
                         </div>
                         <div class="d-flex w-100">
-                            <i class="la la-cog mr text-light"></i>
+                            <i class="la la-cog mr text-info"></i>
                             <p>New <span class="fw-semi-bold">Version</span> of RNS app</p>
                         </div>
                         <div class="d-flex w-100">
@@ -1353,7 +1408,7 @@
         </div>
     </div>
 </div>
-            <footer class="content-footer">
+            <footer class="content-footer hidden-print">
                 Sing App - Bootstrap 4.2.1 Admin Dashboard Template - Made by <a href="https://flatlogic.com"
                     rel="nofollow" target="_blank">Flatlogic</a>
             </footer>
@@ -1384,6 +1439,7 @@
     <script src="../js/app.js"></script>
 
     <!-- Page scripts -->
+
 <script src='../../node_modules/flotanimator/jquery.flot.animator.min.js'></script>
 <script src="../../node_modules/flot/jquery.flot.js"></script>
 <script src="../../node_modules/flot-orderbars/js/jquery.flot.orderBars.js"></script>
@@ -1398,6 +1454,7 @@
 <script src="../../node_modules/bootstrap_calendar/bootstrap_calendar/js/bootstrap_calendar.min.js"></script>
 
 <script src="../../node_modules/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="../../node_modules/intro.js/intro.js"></script>
 
 <!-- page specific js -->
 <script src="../js/dashboard/index.js"></script>

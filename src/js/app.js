@@ -119,7 +119,6 @@ $(function(){
 
                 $(this).closest('li').removeClass('open');
             });
-
         window.onerror = $.proxy(this._logErrors, this);
     };
 
@@ -545,6 +544,83 @@ $(function(){
     };
 
 
+    /// Chat Page ///
+
+    const chatListItem = $(".chat-list-item");
+    const chatPage = $(".chat-page");
+    const chatMobileNav = "chat-mobile-navigation px-0";
+    const chatMobileNavInfo = "d-lg-none chat-mobile-navigation";
+    const infoIcon = "info-icon la la-ellipsis-v d-xl-none";
+    const newMessageButton =  $(".new-message-btn");
+    const chatStates = ["chat-state", "list-state", "info-state"];
+
+    chatPage.on("click", function (e) {
+        if ($(e.target).hasClass( infoIcon )) {
+            chatPage.removeClass(chatStates.join(" ")).addClass("info-state");
+        } else if ($(e.target).hasClass( chatMobileNav )) {
+            chatPage.removeClass(chatStates.join(" ")).addClass("list-state");
+        } else if ($(e.target).hasClass( chatMobileNavInfo )) {
+            chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
+        } else if ($(e.target).hasClass("la la-times la-lg")) {
+            $('#group-modal').modal('hide');
+        } else if ($(e.target).hasClass("title")) {
+            $(e.target).next().toggleClass("down");
+        }
+    });
+
+    chatListItem.on('click', function(e) {
+        const chatID = $(this).data("chatid");
+        const gChatID = $(this).data("gchat");
+        const pChatID = $(this).data("pchat");
+        chatListItem.removeClass("active");
+        $(this).addClass("active");
+        chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
+
+        chatDialogGenerator(chatID);
+        chatInfoHeaderGenerator(gChatID, pChatID);
+        modalGenerator(chats[chatID].users, chatID);
+    });
+
+    newMessageButton.on("click", (e) => {
+
+        e.preventDefault();
+        let inputText = $(".new-message input");
+        let newMessage = `<div class="chat-message owner">
+                                <div class="avatar message-avatar">
+                                    <div class="image-wrapper">
+                                        <img src="../img/chat/avatars/5.png">
+                                    </div>
+                                </div>
+                                <p class="message-body">
+                                    ${inputText.val()}
+                                </p>
+                                <small class="d-block text-muted">
+                                    ${moment().format('h:mm a')}
+                                </small>
+                            </div>`;
+        let dialogMessage = $(".dialog-messages");
+        let spinner = `<div class="data-loader">
+                            <i class="la la-spinner la-spin"></i>
+                           </div>`;
+        let span = `<span>Send</span>`;
+
+        if (inputText.val() != '') {
+            $(".new-message-btn span").remove();
+            $(".new-message-btn").append(spinner);
+
+            setTimeout( (cd) => {
+                dialogMessage.last().append(newMessage);
+                inputText.val('');
+                $(".new-message-btn div").remove();
+                $(".new-message-btn").append(span);
+
+                $(".chat-dialog-body").animate({ scrollTop: 999 }, 500);
+            }, 1500);
+        }
+    })
+
+/// End Chat Page ///
+
     window.SingApp = new SingAppView();
 
 //    SingApp.expandNavigation();
@@ -632,6 +708,7 @@ function initAppPlugins(){
 /**
  * Sing required js functions
  */
+
 function initAppFunctions(){
     !function($){
         /**
@@ -825,11 +902,10 @@ function initAppFunctions(){
     }(jQuery);
 }
 
-
-
 /**
  * Sing browser fixes. It's always something broken somewhere
  */
+
 function initAppFixes(){
     var isWebkit = 'WebkitAppearance' in document.documentElement.style;
     if (isWebkit){
@@ -840,6 +916,7 @@ function initAppFixes(){
  * Demo-only functions. Does not affect the core Sing functionality.
  * Should be removed when used in real app.
  */
+
 function initDemoFunctions(){
     !function($){
         $('.theme-helper-toggler').click(() => {
@@ -883,7 +960,6 @@ function initDemoFunctions(){
             else {(sidebar).removeClass('sidebar-transparent')}
         });
 
-
         $('.colors-list .color-box-nav-bar').click(function(e) {
             const target = $(e.target);
             const darkBG = ["first", "third", "eighth"];
@@ -921,84 +997,6 @@ function initDemoFunctions(){
             target.addClass('active');
         });
 
-        /// Chat Page ///
-
-        const chatListItem = $(".chat-list-item");
-        const chatPage = $(".chat-page");
-        const chatMobileNav = "chat-mobile-navigation px-0";
-        const chatMobileNavInfo = "d-lg-none chat-mobile-navigation";
-        const infoIcon = "info-icon la la-ellipsis-v d-xl-none";
-        const newMessageButton =  $(".new-message-btn");
-        const chatStates = ["chat-state", "list-state", "info-state"];
-
-        chatPage.on("click", function (e) {
-            if ($(e.target).hasClass( infoIcon )) {
-                chatPage.removeClass(chatStates.join(" ")).addClass("info-state");
-            } else if ($(e.target).hasClass( chatMobileNav )) {
-                chatPage.removeClass(chatStates.join(" ")).addClass("list-state");
-            } else if ($(e.target).hasClass( chatMobileNavInfo )) {
-                chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
-            } else if ($(e.target).hasClass("la la-times la-lg")) {
-                $('#group-modal').modal('hide');
-            } else if ($(e.target).hasClass("title")) {
-                $(e.target).next().toggleClass("down");
-            }
-        });
-
-        chatListItem.on('click', function(e) {
-            const chatID = $(this).data("chatid");
-            const gChatID = $(this).data("gchat");
-            const pChatID = $(this).data("pchat");
-            chatListItem.removeClass("active");
-            $(this).addClass("active");
-            chatPage.removeClass(chatStates.join(" ")).addClass("chat-state");
-
-
-            chatDialogGenerator(chatID);
-            chatInfoHeaderGenerator(gChatID, pChatID);
-            modalGenerator(chats[chatID].users, chatID);
-        });
-
-        newMessageButton.on("click", (e) => {
-
-            e.preventDefault();
-            let inputText = $(".new-message input");
-            let newMessage = `<div class="chat-message owner">
-                                <div class="avatar message-avatar">
-                                    <div class="image-wrapper">
-                                        <img src="../img/chat/avatars/5.png">
-                                    </div>
-                                </div>
-                                <p class="message-body">
-                                    ${inputText.val()}
-                                </p>
-                                <small class="d-block text-muted">
-                                    ${moment().format('h:mm a')}
-                                </small>
-                            </div>`;
-            let dialogMessage = $(".dialog-messages");
-            let spinner = `<div class="data-loader">
-                            <i class="la la-spinner la-spin"></i>
-                           </div>`;
-            let span = `<span>Send</span>`;
-
-            if (inputText.val() != '') {
-                $(".new-message-btn span").remove();
-                $(".new-message-btn").append(spinner);
-
-                setTimeout( (cd) => {
-                    dialogMessage.last().append(newMessage);
-                    inputText.val('');
-                    $(".new-message-btn div").remove();
-                    $(".new-message-btn").append(span);
-
-                    $(".chat-dialog-body").animate({ scrollTop: 999 }, 500);
-                }, 1500);
-            }
-        })
-
-        /// End Chat Page ///
-
         setTimeout(function(){
             var $chatNotification = $('#chat-notification');
             $chatNotification.removeClass('hide').addClass('animated fadeIn')
@@ -1006,7 +1004,7 @@ function initDemoFunctions(){
                     $chatNotification.removeClass('animated fadeIn');
                     setTimeout(function(){
                         $chatNotification.addClass('animated fadeOut')
-                            .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                            .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd onanimationend animationend', function(){
                               $chatNotification.addClass('hide');
                             });
                     }, 4000);
