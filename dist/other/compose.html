@@ -86,6 +86,15 @@
                         </ul>
                     </li>
                     <li class="">
+                        <a href="../other/chat.html">
+                            <span class="icon">
+                              <i class="fi flaticon-users"></i>
+                            </span>
+                            Chat
+                            <sup class="headerLabel text-info">awesome</sup>
+                        </a>
+                    </li>
+                    <li class="">
                         <a href="../other/package.html">
                             <span class="icon">
                               <i class="fi flaticon-database-1"></i>
@@ -382,13 +391,11 @@
                 </ul>
                 <!-- xs & sm screen logo -->
                 <a class="navbar-brand d-md-none" href="../dashboard/index.html">
-                    <i class="fa fa-circle text-gray mr-n-sm"></i>
-                    <i class="fa fa-circle text-warning"></i>
+                    <i class="fa fa-circle text-primary"></i>
                     &nbsp;
                     sing
                     &nbsp;
-                    <i class="fa fa-circle text-warning mr-n-sm"></i>
-                    <i class="fa fa-circle text-gray"></i>
+                    <i class="fa fa-circle text-danger"></i>
                 </a>
             </div>
     
@@ -1005,7 +1012,7 @@
                                 <input type="text" id="input-subject" placeholder="Subject" class="input-transparent form-control" value="">
                             </div>
                             <div class="form-group">
-                                <textarea rows="10" class="form-control" id="wysiwyg" placeholder="Message"></textarea>
+                                <div id="summernote"></div>
                             </div>
                             <div class="clearfix">
                                 <div class="btn-toolbar float-right">
@@ -1050,8 +1057,7 @@
     <script src="../js/app.js"></script>
 
     <!-- Page scripts -->
-      <script src="../../node_modules/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js"></script>
-      <script src="../../node_modules/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
+        <script src="../../node_modules/summernote/dist/summernote.js"></script>
       <!-- page specific js -->
       <script src="../js/other/compose.js"></script>
 </body>

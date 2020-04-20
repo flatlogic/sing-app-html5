@@ -139,6 +139,9 @@ $navbar-shadow: 0 15px 20px -20px rgba(darken($body-bg, 35%), 0.1),
   0 0 15px rgba(darken($body-bg, 35%), 0.06);
 
 $chat-sidebar-width: 270px + $sidebar-slim-scroll-width !default;
+$chat-active-bg-color: #4eaae9 !default;
+$chat-avatar-bg: #fd5f00 !default;
+$chat-img-hw: 35px !default;
 
 $content-padding-vertical: 42px !default;
 $content-padding-top: $content-padding-vertical + $navbar-height !default;

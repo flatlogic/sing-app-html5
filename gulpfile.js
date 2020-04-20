@@ -6,7 +6,6 @@ const sass = require("gulp-sass");
 const rename = require("gulp-rename");
 const hb = require("gulp-hb");
 const layouts = require("handlebars-layouts");
-const runSequence = require("run-sequence");
 const sourcemaps = require("gulp-sourcemaps");
 
 const srcPaths = {
