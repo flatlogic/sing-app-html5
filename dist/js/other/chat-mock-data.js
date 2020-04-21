@@ -233,7 +233,7 @@ function chatDialogGenerator(id) {
                     </div>
                 </div>
                     ${ item.attachments != undefined ?
-                    `<p><img src=${item.attachments[0].src}></p>` :
+                    `<p><img class="img-fluid" src=${item.attachments[0].src}></p>` :
                     `<p class="message-body">${item.text}</p>`}
                 <small class="d-block text-muted">
                     3:09 pm
