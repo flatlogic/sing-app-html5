@@ -1,5 +1,11 @@
 # Changelog
 
+## [4.7.5]
+
+### Updated
+
+- Add chat
+
 ## [4.7.1]
 
 ### Updated
