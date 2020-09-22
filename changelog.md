@@ -1,4 +1,9 @@
 # Changelog
+## [4.7.6]
+
+### Updated
+
+- Update dependencies
 
 ## [4.7.5]
 
