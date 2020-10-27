@@ -2727,6 +2727,12 @@ input[type=search], input.search {
   .visit-element {
     width: 33%;
     text-align: center;
+    &.first {
+      text-align: start;
+    }
+    &.third {
+      text-align: end;
+    }
   }
 
   .big-stat-title {
