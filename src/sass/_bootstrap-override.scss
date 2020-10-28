@@ -1308,11 +1308,11 @@ code {
 // --------------------------------------------------
 .badge {
   display: inline-block;
-  padding: 2px 4px;
-  line-height: 14px; // ensure proper line-height if floated
+  padding: 4px 8px;
+  line-height: 19px; // ensure proper line-height if floated
   text-shadow: none;
-  font-weight: $font-weight-bold;
-  font-size: 11px;
+  font-weight: $font-weight-semi-bold;
+  font-size: 12px;
   color: white;
 
   &.bg-default {
@@ -1326,10 +1326,6 @@ a.badge {
     text-decoration: none;
     color: white;
   }
-}
-
-.badge-pill {
-  padding: 2px 6px;
 }
 
 //
