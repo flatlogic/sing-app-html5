@@ -1098,7 +1098,9 @@
 
 .widget-email {
   header {
-
+    .btn-group .btn i::before {
+      display: none;
+    }
     .form-control {
       font-size: 0.8571rem;
     }
