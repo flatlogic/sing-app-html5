@@ -1,7 +1,7 @@
 $(function(){
 
     function initMap(){
-        var $map = $('#map'),
+        let $map = $('#map'),
             state;
         $map.mapael({
             map:{
@@ -127,15 +127,15 @@ $(function(){
 
     function initCalendar(){
 
-        var monthNames = ["January", "February", "March", "April", "May", "June",  "July", "August", "September", "October", "November", "December"];
+        let monthNames = ["January", "February", "March", "April", "May", "June",  "July", "August", "September", "October", "November", "December"];
 
-        var dayNames = ["S", "M", "T", "W", "T", "F", "S"];
+        let dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
-        var now = new Date(),
+        let now = new Date(),
             month = now.getMonth() + 1,
             year = now.getFullYear();
 
-        var events = [
+        let events = [
             [
                     "2/"+month+"/"+year,
                 'The flower bed',
@@ -164,7 +164,7 @@ $(function(){
                 Sing.colors['brand-danger']
             ]
         ];
-        var $calendar = $('#events-calendar');
+        let $calendar = $('#events-calendar');
         $calendar.calendar({
             months: monthNames,
             days: dayNames,
@@ -174,11 +174,11 @@ $(function(){
                 html: true
             }
         });
-        $calendar.find('.icon-arrow-left').addClass('fa fa-arrow-left');
-        $calendar.find('.icon-arrow-right').addClass('fa fa-arrow-right');
+        $calendar.find('.icon-arrow-left').addClass('la la-arrow-left');
+        $calendar.find('.icon-arrow-right').addClass('la la-arrow-right');
         function restyleCalendar(){
             $calendar.find('.event').each(function(){
-                var $this = $(this),
+                let $this = $(this),
                     $eventIndicator = $('<span></span>');
                 $eventIndicator.css('background-color', $this.css('background-color')).appendTo($this.find('a'));
                 $this.css('background-color', '');
@@ -191,14 +191,14 @@ $(function(){
     function initRickshaw(){
         "use strict";
 
-        var seriesData = [ [], [] ];
-        var random = new Rickshaw.Fixtures.RandomData(30);
+        let seriesData = [ [], [] ];
+        let random = new Rickshaw.Fixtures.RandomData(30);
 
-        for (var i = 0; i < 30; i++) {
+        for (let i = 0; i < 30; i++) {
             random.addData(seriesData);
         }
 
-        var graph = new Rickshaw.Graph( {
+        let graph = new Rickshaw.Graph( {
             element: document.getElementById("rickshaw"),
             height: 100,
             renderer: 'area',
@@ -216,7 +216,7 @@ $(function(){
         } );
 
         function onResize(){
-            var $chart = $('#rickshaw');
+            let $chart = $('#rickshaw');
             graph.configure({
                 width: $chart.width(),
                 height: 100
@@ -230,7 +230,7 @@ $(function(){
         onResize();
 
 
-        var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+        let hoverDetail = new Rickshaw.Graph.HoverDetail( {
             graph: graph,
             xFormatter: function(x) {
                 return new Date(x * 1000).toString();
