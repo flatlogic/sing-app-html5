@@ -220,7 +220,7 @@ $(function () {
         ], {padding: {left: 0.02}});
         let lineChart = new LineChart(2, 50, [
             Sing.colors['brand-info'],
-            Sing.colors['brand-primary']
+            Sing.colors['brand-success']
         ]);
 
         scatterplotChart

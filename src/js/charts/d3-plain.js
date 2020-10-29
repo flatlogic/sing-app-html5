@@ -428,7 +428,7 @@ $(function () {
             .attr("class", "line2")
             .attr("d", valueline2)
             .attr('fill', 'none')
-            .attr('stroke', Sing.colors['brand-info'])
+            .attr('stroke', Sing.colors['brand-success'])
             .attr('stroke-width', 2);
 
         // Add the x Axis
