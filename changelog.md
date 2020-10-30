@@ -1,4 +1,9 @@
 # Changelog
+## [4.7.7]
+
+### Updated
+Much work has been done to improve and correct a lot of small bugs :)
+
 ## [4.7.6]
 
 ### Updated
