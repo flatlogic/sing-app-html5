@@ -81,19 +81,22 @@
 
 .page-controls {
   .dropdown-toggle-notifications {
-    .rounded-circle {
-      margin-top: 6px;
-    }
-
+    display: flex;
+    align-items: center;
     .circle {
       width: #{$line-height-base}rem;
       height: #{$line-height-base}rem;
       line-height: #{$line-height-base}rem;
     }
   }
+  .nav-item {
+    i.la {
+      line-height: inherit;
+    }
+  }
 }
 
-.page-controls{
+.page-controls {
   @include transition(
           left $sidebar-transition-time ease-in-out,
           right $sidebar-transition-time ease-in-out,
@@ -133,7 +136,7 @@
   @include media-breakpoint-down(sm) {
     font-size: $font-size-lg;
 
-    .navbar-brand{
+    .navbar-brand {
       position: absolute;
       left: 0;
       right: 0;
@@ -147,15 +150,14 @@
       }
     }
 
-    .navbar-nav{
+    .navbar-nav {
       position: relative;
       z-index: 1;
     }
   }
 
-  .avatar{
+  .avatar {
     width: 30px;
-    margin-top: -12px;
     &.float-left,
     &.pull-left{
       margin-right: 5px;
@@ -936,16 +938,16 @@
     }
   }
 
-  .text{
+  .text {
     margin-top: 5px;
     margin-bottom: 0;
     color: $gray-600;
   }
 }
 
-.chat-notification-sing{
+.chat-notification-sing {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 6px;
   display: inline-block;
   width: 8px;
