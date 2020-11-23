@@ -2748,10 +2748,15 @@ input[type=search], input.search {
     margin-right: 0.5 * $spacer;
   }
 
-  .task.checked {
-    p, h6 {
-      opacity: 0.8;
-      text-decoration: line-through;
+  .task {
+    .form-check label {
+      padding-left: 10px;
+    }
+    .checked {
+      p, h6 {
+        opacity: 0.8;
+        text-decoration: line-through;
+      }
     }
   }
 

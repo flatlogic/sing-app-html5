@@ -1,4 +1,8 @@
 # Changelog
+## [4.7.8]
+### Updated
+Update login footer
+
 ## [4.7.7]
 
 ### Updated
