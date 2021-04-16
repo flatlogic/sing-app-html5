@@ -1,6 +1,6 @@
 {
-  "name": "Sing",
-  "version": "4.7.8",
+  "name": "sing",
+  "version": "4.7.10",
   "description": "Sing App - Bootstrap 4.5 Admin Dashboard",
   "scripts": {
     "build": "gulp build",
@@ -14,7 +14,7 @@
     "backbone.paginator": "^2.0.8",
     "backgrid": "^0.3.8",
     "backgrid-paginator": "^0.3.9",
-    "bootstrap": "^4.5.3",
+    "bootstrap": "4.3.1",
     "bootstrap-application-wizard": "https://github.com/amoffat/bootstrap-application-wizard.git",
     "bootstrap-colorpicker": "^2.5.3",
     "bootstrap-markdown": "^2.10.0",

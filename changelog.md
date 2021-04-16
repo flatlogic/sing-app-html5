@@ -1,4 +1,15 @@
 # Changelog
+
+## [4.7.10] - 04/16/2021
+
+### Fixed 
+- links in top dropdown menu
+
+## [4.7.9] - 04/12/2021
+
+### Updated 
+Update support links
+
 ## [4.7.8]
 ### Updated
 Update login footer
