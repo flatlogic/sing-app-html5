@@ -1,5 +1,10 @@
 # Changelog
 
+## [4.7.11] - 26/11/2024
+
+- Updated dependencies
+- Fixed scripts
+
 ## [4.7.10] - 04/16/2021
 
 ### Fixed 
