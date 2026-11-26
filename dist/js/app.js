@@ -63,10 +63,11 @@ $(function(){
         $(document).on('click', '.nav-collapsed #sidebar', $.proxy(this.expandNavigation, this));
         //we don't need this cool feature for big boys
         if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
-            ('ontouchstart' in window) && this.$content
-                .hammer()
-                .bind('swipeleft', $.proxy(this._contentSwipeLeft, this))
-                .bind('swiperight', $.proxy(this._contentSwipeRight, this));
+            if ('ontouchstart' in window) {
+                var gestures = new Hammer(this.$content[0]);
+                gestures.on('swipeleft', $.proxy(this._contentSwipeLeft, this))
+                .on('swiperight', $.proxy(this._contentSwipeRight, this));
+            }
         }
 
         this.checkNavigationState();
@@ -75,8 +76,8 @@ $(function(){
             /**
              * Initialize pjax & attaching all related events
              */
-            this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href=#])').on('click', $.proxy(this._checkLoading, this));
-            $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href=#], .no-pjax)', '#content', {
+            this.$sidebar.find('.sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href="#"])').on('click', $.proxy(this._checkLoading, this));
+            $(document).pjax('#sidebar .sidebar-nav a:not([data-toggle=collapse], [data-no-pjax], [href="#"], .no-pjax)', '#content', {
                 fragment: '#content',
                 type: 'GET', //this.debug ? 'POST' : 'GET' //GET - for production, POST - for debug.
                 timeout: 4000
@@ -453,7 +454,7 @@ $(function(){
         var $bodyContents = $($.parseHTML(data.match(/<body[^>]*>([\s\S.]*)<\/body>/i)[0], document, true)),
             $scripts = $bodyContents.filter('script[src]').add($bodyContents.find('script[src]')),
             $templates = $bodyContents.filter('script[type="text/template"]').add($bodyContents.find('script[type="text/template"]')),
-            $existingScripts = $('script[src]'),
+            existingUrls = new Set(Array.from(document.querySelectorAll('script[src]'), function(script) { return script.src; })),
             $existingTemplates = $('script[type="text/template"]');
 
         //append templates first as they are used by scripts
@@ -472,35 +473,31 @@ $(function(){
             document.body.appendChild(script);
         });
 
-        //ensure synchronous loading
-        var $previous = {
-            load: function(fn){
-                fn();
-            }
-        };
-
-        $scripts.each(function() {
-            var src = this.src;
-            var matchedScripts = $existingScripts.filter(function() {
-                //noinspection JSPotentiallyInvalidUsageOfThis
-                return this.src === src;
-            });
-            if (matchedScripts.length) return;
-
-            var script = document.createElement('script');
-            script.src = $(this).attr('src');
-            $previous.load(function(){
-                document.body.appendChild(script);
-            });
-
-            $previous = $(script);
+        var pendingScripts = $scripts.toArray().filter(function(element) {
+            return !existingUrls.has(element.src);
         });
 
-        var view = this;
-        $previous.load(function(){
-            $(document).trigger('sing-app:loaded');
-            view.log('scripts loaded.');
-        })
+        var pageUrl = location.href;
+        function loadNext() {
+            if (location.href !== pageUrl) return;
+
+            var next = pendingScripts.shift();
+            if (!next) {
+                $(document).trigger('sing-app:loaded');
+                return;
+            }
+
+            var script = document.createElement('script');
+            script.onload = loadNext;
+            script.onerror = function() {
+                // Restore navigation through a full page load if a dependency failed.
+                window.location.assign(options.url);
+            };
+            script.src = next.src;
+            document.body.appendChild(script);
+        }
+
+        loadNext();
     };
 
     SingAppView.prototype.extractPageName = function(url){
@@ -801,9 +798,8 @@ function initAppFunctions(){
          * otherwise do nothing
          */
         if (Sing.isScreen('xs') || Sing.isScreen('sm')) {
-            ('ontouchstart' in window) && this.$content
-                .hammer()
-                .bind('swipeleft', function(e){
+            ('ontouchstart' in window) && new Hammer(this.$content[0])
+                .on('swipeleft', function(e){
                 if ($('body').is('.nav-collapsed')){
                     $chatContainer.addClass('chat-sidebar-opened');
                 }
@@ -813,7 +809,7 @@ function initAppFunctions(){
              * Hide chat on swipe right but first check if navigation is collapsed
              * otherwise do nothing
              */
-                .bind('swiperight', function(e){
+                .on('swiperight', function(e){
                     if ($('body').is('.nav-collapsed.chat-sidebar-opened')){
                         $chatContainer.removeClass('chat-sidebar-opened')
                         // as there is no way to cancel swipeLeft handlers attached to

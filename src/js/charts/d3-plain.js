@@ -675,23 +675,23 @@ $(function () {
     }
 
     function init() {
-        const d3v5 = window.d3VersionWrapper.d3v5;
+        const d3v7 = window.SingD3;
 
         $('.widget').widgster();
 
-        initD3_1(d3v5);
-        initD3_2(d3v5);
-        initD3_3(d3v5);
-        initD3_4(d3v5);
-        initD3_5(d3v5);
-        initD3_6(d3v5);
+        initD3_1(d3v7);
+        initD3_2(d3v7);
+        initD3_3(d3v7);
+        initD3_4(d3v7);
+        initD3_5(d3v7);
+        initD3_6(d3v7);
 
         // Set colors for yScale and xScale
-        d3v5.selectAll('.domain')
+        d3v7.selectAll('.domain')
             .attr("stroke", Sing.colors['gray-400']);
 
         // Set colors for yScale ticks and xScale ticks
-        d3v5.selectAll('.tick line')
+        d3v7.selectAll('.tick line')
             .attr("stroke", Sing.colors['gray-400']);
     }
 

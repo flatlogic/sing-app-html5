@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.8.0] - 26/11/2026
+
+- Update the Handlebars compiler to 4.7.10, jQuery to 3.8.0 and Bootstrap to 4.6.2.
+- Use Dart Sass, Gulp 5 and a single Yarn Classic lockfile for reproducible builds on Node.js 22.13 or later.
+- Replace the Markdown preview renderer with markdown-it and DOMPurify. Update chart tooltip handling and the expiration-month field.
+- Restore calendar event details and keep the dashboard navigation, form controls and searchable tables working with jQuery 3.
+- Bundle D3 7 for the D3 examples while preserving D3 3 for legacy charts. Restore the chat attachment illustration to the source tree.
+
 ## [4.7.11] - 26/11/2024
 
 - Updated dependencies

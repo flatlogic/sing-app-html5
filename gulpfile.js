@@ -1,12 +1,10 @@
 "use strict";
 
 const gulp = require("gulp");
-const del = require("del");
 const sass = require("gulp-sass")(require('sass'));
 const rename = require("gulp-rename");
 const hb = require("gulp-hb");
 const layouts = require("handlebars-layouts");
-const sourcemaps = require("gulp-sourcemaps");
 
 const srcPaths = {
   scripts: ["./src/js/**/*"],
@@ -28,25 +26,22 @@ const srcPaths = {
 
 hb.handlebars.registerHelper(layouts(hb.handlebars));
 
-async function clean(cb) {
-  return del(["dist/*"]);
-  cb();
+function clean() {
+  return require("node:fs/promises").rm("dist", { recursive: true, force: true });
 }
 
 // Copy demo, img, js, fonts folders from src to dist
-async function copy(cb) {
+function copy() {
   return gulp
     .src([...srcPaths.static, ...srcPaths.images, ...srcPaths.fonts], {
-      base: "./src"
+      base: "./src", encoding: false
     })
     .pipe(gulp.dest("dist"));
 
-  cb();
 }
 
-async function copyJS(cb) {
+function copyJS() {
   return gulp.src(srcPaths.scripts).pipe(gulp.dest("dist/js"));
-  cb();
 }
 
 // Handle handlebars
@@ -67,17 +62,17 @@ function hbs() {
 // Handle sass
 function styles() {
   return gulp
-    .src(srcPaths.styles)
-    .pipe(sourcemaps.init())
+    .src(srcPaths.styles, { sourcemaps: true })
+
     .pipe(
       sass({
         precision: 10,
         outputStyle: "compressed"
-      }).on("error", sass.logError)
+      })
     )
     .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemaps.write("./maps"))
-    .pipe(gulp.dest("./dist/css"));
+
+    .pipe(gulp.dest("./dist/css", { sourcemaps: "./maps" }));
 }
 
 // Development
@@ -91,14 +86,17 @@ exports.watch = function watch() {
   );
 };
 
-gulp.task("build", gulp.parallel(hbs, styles, copy, copyJS));
-
-// Build Task
-function build(cb) {
-  return gulp.parallel(clean, "build");
-  cb();
+function modernCharts() {
+  return require("esbuild").build({
+    stdin: { contents: 'export * from "d3v7"', resolveDir: __dirname },
+    bundle: true,
+    format: "iife",
+    globalName: "SingD3",
+    minify: true,
+    outfile: "dist/js/charts/d3-modern.js"
+  });
 }
 
-
-// Default Task
-gulp.task("default", gulp.parallel(clean, "build"));
+const build = gulp.parallel(hbs, styles, copy, copyJS, modernCharts);
+exports.build = build;
+exports.default = gulp.series(clean, build);

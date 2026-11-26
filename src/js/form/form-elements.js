@@ -25,13 +25,19 @@ $(function(){
         $("#mask-int-phone").inputmask({mask: "+999 999 999 999"});
         $("#mask-time").inputmask({mask: "99:99"});
 
-        $('#markdown').markdown();
+        $('#markdown').markdown({
+            onPreview: function(editor) {
+                return DOMPurify.sanitize(markdownit({html: false}).render(editor.getContent()));
+            }
+        });
 
         $('.js-slider').slider();
 
         // Prevent Dropzone from auto discovering this element:
         Dropzone.options.myAwesomeDropzone = false;
-        $('#my-awesome-dropzone').dropzone();
+        if (!document.getElementById('my-awesome-dropzone').dropzone) {
+            $('#my-awesome-dropzone').dropzone();
+        }
         Holder.run();
         /**
          * Holder js hack. removing holder's data to prevent onresize callbacks execution

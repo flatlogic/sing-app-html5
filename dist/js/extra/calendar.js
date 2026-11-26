@@ -1,4 +1,19 @@
 $(function(){
+    // Keep the dialog above Bootstrap's backdrop, then return it to the PJAX page.
+    function showModal($modal) {
+        var parent = $modal.parent();
+        function closeModal() {
+            $modal.modal('hide');
+        }
+
+        $modal.appendTo(document.body).one('hidden.bs.modal', function() {
+            $(document).off('pjax:beforeReplace', closeModal);
+            $modal.appendTo(parent);
+        });
+        $(document).one('pjax:beforeReplace', closeModal);
+        $modal.modal('show');
+    }
+
     function pageLoad(){
         $('#external-events').find('div.external-event').each(function() {
 
@@ -33,7 +48,7 @@ $(function(){
 
             selectable: true,
             selectHelper: true,
-            select: function(start, end, allDay) {
+            select: function(start, end) {
                 var $modal = $("#edit-modal"),
                     $btn = $('#create-event');
                 $btn.off('click');
@@ -45,7 +60,7 @@ $(function(){
                                 title: title,
                                 start: start,
                                 end: end,
-                                allDay: allDay,
+                                allDay: !start.hasTime(),
                                 backgroundColor: Sing.colors['brand-success'],
                                 textColor: '#fff'
                             },
@@ -54,7 +69,7 @@ $(function(){
                     }
                     $calendar.fullCalendar('unselect');
                 });
-                $modal.modal('show');
+                showModal($modal);
                 $calendar.fullCalendar('unselect');
             },
             editable: true,
@@ -88,6 +103,7 @@ $(function(){
             events: [
                 {
                     title: 'All Day Event',
+                    allDay: true,
                     start: new Date(y, m, 1),
                     backgroundColor: Sing.colors['brand-warning'],
                     textColor: '#fff'
@@ -123,18 +139,18 @@ $(function(){
                     window.open(event.url, 'gcalevent', 'width=700,height=600');
                     return false
                 } else {
-                    var $modal = $("#myModal"),
-                        $modalLabel = $("#myModalLabel");
-                    $modalLabel.html(event.title);
-                    $modal.find(".modal-body p").html(function(){
-                        if (event.allDay){
-                            return "All day event"
-                        } else {
-                            return "Start At: <strong>" + event.start.getHours() + ":" + (event.start.getMinutes() == 0 ? "00" : event.start.getMinutes()) + "</strong></br>"
-                                + (event.end == null ? "" : "End At: <strong>" + event.end.getHours() + ":" + (event.end.getMinutes() == 0 ? "00" : event.end.getMinutes()) + "</strong>")
+                    var $modal = $("#myModal");
+                    $modal.find(".modal-title").text(event.title);
+                    var $details = $modal.find(".modal-body p").empty();
+                    if (event.allDay) {
+                        $details.text("All day event");
+                    } else {
+                        $details.append("Start At: ", $("<strong>").text(event.start.format("H:mm")));
+                        if (event.end) {
+                            $details.append("<br>", "End At: ", $("<strong>").text(event.end.format("H:mm")));
                         }
-                    }());
-                    $modal.modal('show');
+                    }
+                    showModal($modal);
                 }
             }
 

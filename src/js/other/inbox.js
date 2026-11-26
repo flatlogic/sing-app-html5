@@ -273,11 +273,7 @@ $(function(){
             },
 
             _initViewComponents: function(){
-                this.$("textarea").wysihtml5({
-                    html: true,
-                    customTemplates: bs3Wysihtml5Templates,
-                    stylesheets: []
-                });
+                this.$("textarea").summernote({ height: 160 });
             }
 
         });
